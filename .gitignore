@@ -1,0 +1,10 @@
+# IDE / 编辑器
+.vscode/
+.idea/
+
+# CodeBuddy 项目工作数据（不入库）
+.codebuddy/
+
+# 系统文件
+Thumbs.db
+Desktop.ini
