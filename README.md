@@ -54,3 +54,27 @@ topo-scripts/
 ```
 
 提交信息格式：`类型: 功能点`（如 `feat: 弹窗定位改为点击点标定法`）。
+
+## 常用 Git 命令
+
+远程仓库：`https://github.com/precisionFire/topo-scripts.git`（分支 `main`，已设上游跟踪）
+
+```powershell
+# 改动后提交并推送
+git add -A
+git commit -m "feat: 说明本次改动"
+git push
+
+# 图扑调试完同步回本地后，拉取远端最新
+git pull
+
+# 查看状态 / 历史
+git status
+git log --oneline
+```
+
+**本仓库网络注意事项**（已写入仓库级 git 配置，无需重复设置）：
+- 本机走系统代理 `127.0.0.1:8890`，git 已配置 `http.proxy` / `https.proxy`
+- 必须使用 `http.version HTTP/1.1`，否则经代理 TLS 握手失败
+- 大文件推送需 `http.postBuffer` / `http.lowSpeedLimit` 已调大
+- 首次使用 git 命令需重开终端（PATH 才会刷新）
