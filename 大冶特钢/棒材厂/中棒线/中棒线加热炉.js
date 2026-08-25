@@ -546,6 +546,34 @@ function tryRecognize(heatKey, furNo, newValue) {
     if (!cachedSystemId[heatKey]) setTimeout(doRecognition, 1000);
 }
 
+/**
+ * 从入炉检测数据中提取跟踪炉号（heatNo）
+ * @param {Object|Array} data - A1-in/A2-in 的 data 字段，可能是单对象或数组
+ * @returns {string}
+ */
+function extractHeatNo(data) {
+    if (!data) return '';
+    if (Array.isArray(data)) {
+        for (var i = 0; i < data.length; i++) {
+            if (data[i] && data[i].heatNo) return data[i].heatNo;
+        }
+        return '';
+    }
+    return data.heatNo || '';
+}
+
+/**
+ * 将文本值直接赋值到指定 tag 的文本节点
+ * @param {string} tag   - 节点 tag，如 '1#跟踪炉号'
+ * @param {string} value - 要显示的文本
+ */
+function setNodeText(tag, value) {
+    if (value === undefined || value === null || value === '') return;
+    var node = dm.getDataByTag(tag);
+    if (!node) return;
+    node.s('text', value);
+}
+
 
 // ================================================================
 //  九、数据监听分发（核心入口）
@@ -563,12 +591,14 @@ dataModel.addDataPropertyChangeListener(function (e) {
         }
     }
 
-    // ── 9.2 设备识别数据缓存 ──
+    // ── 9.2 设备识别数据缓存：炉前识别炉号赋值到对应节点 ──
     if (e.property === 'a:A1-systemIdentification') {
         cachedSystemId.A1 = e.newValue;
+        setNodeText('1#炉前识别炉号', e.newValue);
     }
     if (e.property === 'a:A2-systemIdentification') {
         cachedSystemId.A2 = e.newValue;
+        setNodeText('2#炉前识别炉号', e.newValue);
     }
 
     // ── 9.3 炉内流渲染 ──
@@ -658,14 +688,18 @@ dataModel.addDataPropertyChangeListener(function (e) {
         });
     }
 
-    // ── 9.6 炉前识别触发 ──
+    // ── 9.7 炉前识别触发：跟踪炉号赋值到对应节点 ──
     if (e.property === 'a:A1-in') {
         if (isMsgExpired(e.newValue?.msgTime, 30, 'A1-in')) return;
-        tryRecognize('A1', '1', e.newValue && e.newValue.data);
+        var a1InData = e.newValue && e.newValue.data;
+        tryRecognize('A1', '1', a1InData);
+        setNodeText('1#跟踪炉号', extractHeatNo(a1InData));
     }
     if (e.property === 'a:A2-in') {
         if (isMsgExpired(e.newValue?.msgTime, 30, 'A2-in')) return;
-        tryRecognize('A2', '2', e.newValue && e.newValue.data);
+        var a2InData = e.newValue && e.newValue.data;
+        tryRecognize('A2', '2', a2InData);
+        setNodeText('2#跟踪炉号', extractHeatNo(a2InData));
     }
 });
 
