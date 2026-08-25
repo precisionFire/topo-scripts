@@ -1,18 +1,22 @@
 /**
  * ================================================================
- *  中棒加热炉出入炉 — 实时可视化监控系统
+ *  大棒一号加热炉出入炉 — 实时可视化监控系统
  * ================================================================
  *
  * 【场景描述】
- *   多轨道（自动发现 roll-y* 节点），一根固定长度的钢坯从右至左运动。
+ *   单炉（1#炉 A1）监控：两根轨道，一根固定长度的钢坯从右至左运动。
  *   数据到达后解析位置并渲染；炉内为离散位置网格，炉外为连续坐标。
  *
+ * 【轨道结构】
+ *   roll-y1（轨道0）→ 1#炉入炉辊道
+ *   roll-y2（轨道1）→ 1#炉出炉辊道
+ *
  * 【架构概述】
- *   数据监听 → 四大子系统分发:
+ *   数据监听 → 五大子系统分发:
  *     1. 炉内流渲染（inside）        — 离散位置网格，颜色+钢坯号
  *     2. 出入炉轨道渲染（in/out）    — 连续坐标，热检→像素→Shape
  *     3. 表格系统（will-in/out）      — 待入/待出表格
- *     4. 计划表（dataSource触发）      — 炉内坯信息变化时按炉拉取计划
+ *     4. 计划表（dataSource触发）      — 炉内坯信息变化时拉取计划
  *     5. 出炉自动前进（插件）         — 尾到 OutletHotDetector2 后按辊道速度移动
  *
  * 【外部依赖】
@@ -21,8 +25,10 @@
  *   - requestGet  : 全局 HTTP GET 请求函数
  *   - showToast   : 全局 Toast 提示函数
  *
- * 【配套文档】
- *   中棒加热炉逻辑 — 架构设计与数据流全文档
+ * 【来源说明】
+ *   本文件由"中棒线加热炉"双炉（A1/A2）版本改造而来：
+ *   - 画面仅保留 1#炉（A1），已删除全部 A2 相关逻辑
+ *   - 轨道由三轨（y1入炉/y2入炉/y3出炉）改为两轨（y1入炉/y2出炉）
  * ================================================================
  */
 
@@ -65,7 +71,7 @@ var ROLL_Y_NODES = getRollYNodes();
 
 /**
  * 根据轨道索引获取 Y 坐标（带懒刷新）
- * @param {number} trackIndex - 轨道索引: 0→y1, 1→y2, 2→y3, ...
+ * @param {number} trackIndex - 轨道索引: 0→y1(入炉), 1→y2(出炉)
  * @returns {number}
  */
 function getYTrack(trackIndex) {
@@ -78,8 +84,8 @@ function getYTrack(trackIndex) {
 }
 
 // ── 2.2 热检坐标映射 ──
-// 统一 tag 格式: track-{轨道序号}-{热检名} → TRACK_POSITION_MAP[trackIndex][热检名] = X
-// 出炉轨道与入炉轨道共用该格式，不再区分 1#/2#炉热检位置
+// tag 格式: track-{轨道序号}-{热检名} → TRACK_POSITION_MAP[trackIndex][热检名] = X
+// 入炉轨道与出炉轨道共用该格式，同一轨道内热检名唯一
 function getTrackPositionMap() {
     var map = {};
     dm.each(function (item) {
@@ -109,19 +115,17 @@ var MILL_TOTAL_LENGTH = 1500;     // 轨道总像素长度
 var STEEL_FIXED_LENGTH = 202;     // 钢坯固定像素长度（默认值，实际按比例计算）
 
 // ── 钢坯长度按比例显示 ──
-// 中棒1#/2#炉最大钢坯长度均为 10000mm，对应钢坯图标 200px
+// 大棒1#炉最大钢坯长度为 10000mm，对应钢坯图标 200px（可调整）
 var FURNACE_MAX_LENGTH_MM = {
-    A1: 10000,   // 1#炉最大钢坯长度（毫米）
-    A2: 10000    // 2#炉最大钢坯长度（毫米）
+    A1: 10000    // 1#炉最大钢坯长度（毫米）
 };
 var FURNACE_STEEL_ICON_PX = {
-    A1: 200,     // 1#炉钢坯图标像素宽度
-    A2: 200      // 2#炉钢坯图标像素宽度
+    A1: 200      // 1#炉钢坯图标像素宽度
 };
 
 /**
  * 根据炉号和实际长度（毫米）计算对应的像素宽度
- * @param {string} furnaceKey - 炉号 'A1' | 'A2'
+ * @param {string} furnaceKey - 炉号 'A1'
  * @param {number} lengthMm   - 钢坯实际长度（毫米）
  * @returns {number} 像素宽度
  */
@@ -133,12 +137,10 @@ function calcSteelPixelLength(furnaceKey, lengthMm) {
 }
 
 // 属性与轨道的映射关系：监听到哪个属性，就用哪条轨道
-// a:chulu 已拆分为 a:A1-out / a:A2-out，各自携带 furnaceCode 供 label 显示炉号
+// 大棒单炉（A1）：入炉走 1#辊道(轨道0/y1)，出炉走 2#辊道(轨道1/y2)
 var PROPERTY_TRACK_MAP = {
-    'a:A1-in': 0,     // 1#炉入炉 → 轨道0 (y1)
-    'a:A2-in': 1,     // 2#炉入炉 → 轨道1 (y2)
-    'a:A1-out': 2,    // 1#炉出炉 → 轨道2 (y3) — 共用轨道
-    'a:A2-out': 2     // 2#炉出炉 → 轨道2 (y3) — 共用轨道
+    'a:A1-in': 0,     // 1#炉入炉 → 轨道0 (y1) 入炉辊道
+    'a:A1-out': 1     // 1#炉出炉 → 轨道1 (y2) 出炉辊道
 };
 // 钢坯颜色映射（轨道渲染用 hex）
 var COLOR_MAP = {
@@ -151,16 +153,15 @@ var COLOR_MAP = {
 // ================================================================
 
 // ── 4.1 炉内节点缓存 ──
-// 两套节点体系，按前缀缓存到 positionMap
+// One-0 ~ One-100 → 1#炉炉内位置节点
 const positionMap = {
-    A1: {},     // One-0 ~ One-100 → 1#炉炉内位置节点
-    A2: {}      // Two-0 ~ Two-100 → 2#炉炉内位置节点
+    A1: {}
 };
 
 /**
  * 缓存炉内位置节点映射
- * @param {string} furnaceKey - 炉号 'A1' | 'A2'
- * @param {string} prefix     - 节点tag前缀 'One' | 'Two'
+ * @param {string} furnaceKey - 炉号 'A1'
+ * @param {string} prefix     - 节点tag前缀 'One'
  */
 function cachePositionMap(furnaceKey, prefix) {
     const map = {};
@@ -174,7 +175,6 @@ function cachePositionMap(furnaceKey, prefix) {
 
 // 炉内节点初始化
 cachePositionMap('A1', 'One');
-cachePositionMap('A2', 'Two');
 
 // ── 4.2 炉内颜色映射（渲染用 RGB） ──
 function mapColorToRGB(color) {
@@ -194,8 +194,8 @@ function mapColorToRGB(color) {
  * 渲染炉内钢坯位置网格
  * 数据到达 → 逐位置设置节点属性 → 清理未占用节点
  *
- * @param {string} furnaceKey - 炉号 'A1' | 'A2'
- * @param {Array}  dataList   - 后端推送数据 [[pos, inMatNo, info, linecolor], ...]
+ * @param {string} furnaceKey - 炉号 'A1'
+ * @param {Array}  dataList   - 后端推送数据 [[pos, inMatNo, info, linecolor, lengthMm], ...]
  */
 function renderFurnaceInsideLayer(furnaceKey, dataList) {
     // 数据兜底
@@ -265,7 +265,6 @@ function renderFurnaceInsideLayer(furnaceKey, dataList) {
  */
 function applyPositionCorrection(item) {
     var trackIndex = item._trackIndex || 0;
-    // 出炉轨道与入炉轨道共用同一坐标表，不再按炉号区分热检位置
     var trackMap = TRACK_POSITION_MAP[trackIndex] || {};
 
     var headX = item.headPosition ? trackMap[item.headPosition] : undefined;
@@ -388,9 +387,7 @@ function renderSteels(steelList, trackIndex) {
 
 // ── 6.1 will-in / will-out 表格 ──
 let inTable_A1 = [];    // Onein-1 ~ Onein-10
-let inTable_A2 = [];    // Twoin-1 ~ Twoin-10
 let outTable_A1 = [];   // Oneout-1 ~ Oneout-10
-let outTable_A2 = [];   // Twoout-1 ~ Twoout-10
 
 // 表格节点初始化
 for (var i = 1; i <= 10; i++) {
@@ -400,14 +397,6 @@ for (var i = 1; i <= 10; i++) {
 for (var i = 1; i <= 10; i++) {
     let n = dm.getDataByTag('Oneout-' + i);
     if (n) outTable_A1.push(n);
-}
-for (var i = 1; i <= 10; i++) {
-    let n = dm.getDataByTag('Twoin-' + i);
-    if (n) inTable_A2.push(n);
-}
-for (var i = 1; i <= 10; i++) {
-    let n = dm.getDataByTag('Twoout-' + i);
-    if (n) outTable_A2.push(n);
 }
 
 /**
@@ -433,13 +422,12 @@ function updateTable(payload, table) {
 }
 
 // ── 6.2 计划表数据获取 ──
-// 由 1#BilletProduction / 2#BilletProduction 的 ht.dataSource 属性变化触发调用
+// 由 1#BilletProduction 的 ht.dataSource 属性变化触发调用
 let tableData1;
-let tableData2;
 
 /**
  * 获取计划表数据（由BilletProduction的ht.dataSource变化触发）
- * @param {string} [furnace] - 可选，指定炉号 'A1' | 'A2'；不传则拉取两个炉
+ * @param {string} [furnace] - 可选，指定炉号 'A1'
  */
 function fetchPlanData(furnace) {
     // 获取班组班次信息
@@ -456,19 +444,11 @@ function fetchPlanData(furnace) {
         });
 
     if (!furnace || furnace === 'A1') {
-        requestGet(`https://bar.dayesteel.com.cn/api/api/bdy/bptbusrollingplan/getreadyplans?wholeBacklogCode=B1&furNo=A1`)
+        requestGet(`https://bar.dayesteel.com.cn/api/api/bdy/bptbusrollingplan/getreadyplans?wholeBacklogCode=H8&furNo=A1`)
             .then(data => {
                 tableData1 = data.Data;
                 let table1 = graphView.dm().getDataByTag('1#plan');
                 if (table1) table1.a('ht.dataSource', tableData1);
-            });
-    }
-    if (!furnace || furnace === 'A2') {
-        requestGet(`https://bar.dayesteel.com.cn/api/api/bdy/bptbusrollingplan/getreadyplans?wholeBacklogCode=B1&furNo=A2`)
-            .then(data => {
-                tableData2 = data.Data;
-                let table2 = graphView.dm().getDataByTag('2#plan');
-                if (table2) table2.a('ht.dataSource', tableData2);
             });
     }
 }
@@ -509,8 +489,8 @@ var cachedSystemId = {};
 
 /**
  * 炉前识别：对比系统识别炉号与入炉检测炉号
- * @param {string} heatKey - 炉号 'A1' | 'A2'
- * @param {string} furNo   - 炉编号 '1' | '2'
+ * @param {string} heatKey - 炉号 'A1'
+ * @param {string} furNo   - 炉编号 '1'
  */
 function tryRecognize(heatKey, furNo, newValue) {
     if (!newValue) return;
@@ -558,8 +538,6 @@ dataModel.addDataPropertyChangeListener(function (e) {
         var tag = e.data && e.data.getTag();
         if (tag === '1#BilletProduction') {
             fetchPlanData('A1');
-        } else if (tag === '2#BilletProduction') {
-            fetchPlanData('A2');
         }
     }
 
@@ -567,16 +545,10 @@ dataModel.addDataPropertyChangeListener(function (e) {
     if (e.property === 'a:A1-systemIdentification') {
         cachedSystemId.A1 = e.newValue;
     }
-    if (e.property === 'a:A2-systemIdentification') {
-        cachedSystemId.A2 = e.newValue;
-    }
 
     // ── 9.3 炉内流渲染 ──
     if (e.property === 'a:A1-inside') {
         renderFurnaceInsideLayer('A1', e.newValue);
-    }
-    if (e.property === 'a:A2-inside') {
-        renderFurnaceInsideLayer('A2', e.newValue);
     }
 
     // ── 9.4 表格更新（will-in / will-out） ──
@@ -588,17 +560,9 @@ dataModel.addDataPropertyChangeListener(function (e) {
         if (isMsgExpired(e.newValue?.msgTime, 30, 'A1-willout')) return;
         updateTable(e.newValue, outTable_A1);
     }
-    if (e.property === 'a:A2-willin') {
-        if (isMsgExpired(e.newValue?.msgTime, 30, 'A2-willin')) return;
-        updateTable(e.newValue, inTable_A2);
-    }
-    if (e.property === 'a:A2-willout') {
-        if (isMsgExpired(e.newValue?.msgTime, 30, 'A2-willout')) return;
-        updateTable(e.newValue, outTable_A2);
-    }
 
-    // ── 9.5 异常事件监听（A1/A2-ABNORMAL） ──
-    if (e.property === 'a:A1-ABNORMAL' || e.property === 'a:A2-ABNORMAL') {
+    // ── 9.5 异常事件监听（A1-ABNORMAL） ──
+    if (e.property === 'a:A1-ABNORMAL') {
         var abnormalData = e.newValue?.data;
         if (abnormalData && abnormalData.abnormalType === 'SLAB_IN_POSITION_CARD_CONFLICT') {
             abnormalData.msgTime = e.newValue?.msgTime || '';
@@ -635,7 +599,7 @@ dataModel.addDataPropertyChangeListener(function (e) {
         if (topFurnaceCode && !item.furnaceCode) item.furnaceCode = topFurnaceCode;
 
         // 出炉自动前进标记：尾位置到 OutletHotDetector2 时启动自动前进
-        if (trackIndex === 2 && item.tailPosition === 'OutletHotDetector2' && item.rollerSpeed) {
+        if (trackIndex === 1 && item.tailPosition === 'OutletHotDetector2' && item.rollerSpeed) {
             item._autoAdvance = true;
             item._rollerSpeed = item.rollerSpeed;
         }
@@ -650,7 +614,7 @@ dataModel.addDataPropertyChangeListener(function (e) {
     renderSteels(steelList, trackIndex);
 
     // 出炉自动前进：尾到 OutletHotDetector2 的钢坯启动/继续前进动画
-    if (trackIndex === 2) {
+    if (trackIndex === 1) {
         steelList.forEach(function (steel) {
             if (steel._autoAdvance) {
                 startChuluAutoAdvance(steel);
@@ -658,14 +622,10 @@ dataModel.addDataPropertyChangeListener(function (e) {
         });
     }
 
-    // ── 9.6 炉前识别触发 ──
+    // ── 9.7 炉前识别触发 ──
     if (e.property === 'a:A1-in') {
         if (isMsgExpired(e.newValue?.msgTime, 30, 'A1-in')) return;
         tryRecognize('A1', '1', e.newValue && e.newValue.data);
-    }
-    if (e.property === 'a:A2-in') {
-        if (isMsgExpired(e.newValue?.msgTime, 30, 'A2-in')) return;
-        tryRecognize('A2', '2', e.newValue && e.newValue.data);
     }
 });
 
@@ -673,8 +633,7 @@ dataModel.addDataPropertyChangeListener(function (e) {
 // ================================================================
 //  十、交互系统（节点点击 + 右键菜单）
 //  选择模型: HT 内置 graphView.sm()，支持普通/ Ctrl / Shift 三种选择方式。
-//  菜单过滤: setVisibleFunc(item) 按选中数+跨炉检查控制显隐，multi=true 标记多选条目。
-//  跨炉保护: hasMixedFurnaces() 三层拦截（菜单可见性/确认多选/菜单点击）。
+//  菜单过滤: setVisibleFunc(item) 按选中数控制显隐，multi=true 标记多选条目。
 // ================================================================
 
 // ── 10.1 炉内节点选中样式 ──
@@ -763,8 +722,8 @@ view.addEventListener('contextmenu', function (event) {
     var node = graphView.getDataAt(event);
     if (node) {
         var tag = node.getTag();
-        if (tag && (tag.startsWith('One-') || tag.startsWith('Two-'))) {
-            var furnaceKey = tag.startsWith('One-') ? 'A1' : 'A2';
+        if (tag && tag.startsWith('One-')) {
+            var furnaceKey = 'A1';
             var pos = parseInt(tag.split('-')[1], 10);
             var furnaceNode = positionMap[furnaceKey]?.[pos];
             graphView._rightClickNode = furnaceNode || node;
@@ -816,8 +775,6 @@ contextmenu.setVisibleFunc(function (item) {
 
     // 多选：仅显示 multi=true 的条目（前移/后移）
     if (count > 1) {
-        // 跨炉检查：不允许同时操作1#、2#炉，不显示菜单
-        if (hasMixedFurnaces(datas)) return false;
         return item.multi === true;
     }
 
@@ -833,24 +790,7 @@ contextmenu.addTo(view);
 var selectedSteelNodes = [];
 
 /**
- * 检查选择集中是否同时包含 A1 和 A2 炉的节点（跨炉选择）
- * @param {ht.List} datas - 选择集
- * @returns {boolean}
- */
-function hasMixedFurnaces(datas) {
-    var hasA1 = false;
-    var hasA2 = false;
-    datas.each(function (node) {
-        var fk = node.a('furnace');
-        if (fk === 'A1') hasA1 = true;
-        if (fk === 'A2') hasA2 = true;
-    });
-    return hasA1 && hasA2;
-}
-
-/**
  * 确认多选：将当前选择集中的所有炉内钢坯节点存入 selectedSteelNodes
- * 不允许同时选择 1#炉 和 2#炉 的节点
  * @returns {Array} 选中的节点信息数组
  */
 function confirmMultiSelect() {
@@ -860,19 +800,12 @@ function confirmMultiSelect() {
         return selectedSteelNodes;
     }
 
-    // 跨炉检查：不允许同时操作1#、2#炉
-    if (datas.size() > 1 && hasMixedFurnaces(datas)) {
-        showToast('不允许同时操作1#、2#炉');
-        selectedSteelNodes = [];
-        return selectedSteelNodes;
-    }
-
     selectedSteelNodes = datas.toArray().map(function (node) {
         return {
             node: node,                          // HT 节点对象
             inMatNo: node.a('inMatNo') || '',    // 钢坯号
             pos: node.a('pos'),                  // 炉内位置
-            furnaceKey: node.a('furnace') || '', // 炉号 A1/A2
+            furnaceKey: node.a('furnace') || '', // 炉号 A1
             info: node.a('info') || '',          // 附加信息
             linecolor: node.a('linecolor') || '' // 颜色标签
         };
@@ -931,13 +864,6 @@ function handleMenuClick(type) {
     switch (type) {
         case "部分前移":
         case "部分后移": {
-            // 跨炉检查：不允许同时操作1#、2#炉
-            var sm = graphView.sm().toSelection();
-            if (sm.size() > 1 && hasMixedFurnaces(sm)) {
-                showToast('不允许同时操作1#、2#炉');
-                return;
-            }
-
             // 确认多选：将选中节点存入数组
             confirmMultiSelect();
 
@@ -970,11 +896,12 @@ function handleMenuClick(type) {
 //  十一、业务接口
 // ================================================================
 
-const API_BASE = "https://bar.dayesteel.com.cn/api125/BarHeatFurnaceg/TRACK_MIDDLE/FURNACE";
+// 大棒1#炉 API 基地址
+const API_BASE = "https://bar.dayesteel.com.cn/api124/BarHeatFurnaceg/TRACK_BIG/FURNACE";
 
 /**
  * 入炉退回（单支）
- * @param {string} furnaceCode - 炉号 'A1' | 'A2'
+ * @param {string} furnaceCode - 炉号 'A1'
  * @param {string} slabNo       - 钢坯号
  */
 function requestInRollback(furnaceCode, slabNo) {
@@ -986,7 +913,7 @@ function requestInRollback(furnaceCode, slabNo) {
 
 /**
  * 出炉撤回（单支）
- * @param {string} furnaceCode - 炉号 'A1' | 'A2'
+ * @param {string} furnaceCode - 炉号 'A1'
  * @param {string} slabNo       - 钢坯号
  */
 function requestOutRollback(furnaceCode, slabNo) {
@@ -998,7 +925,7 @@ function requestOutRollback(furnaceCode, slabNo) {
 
 /**
  * 部分前移/后移（多选批量）
- * @param {string} furnaceCode  - 炉号 'A1' | 'A2'
+ * @param {string} furnaceCode  - 炉号 'A1'
  * @param {string} direction    - 'forward' | 'backward'
  * @param {number} fromPosition - 起始位置
  * @param {number} toPosition   - 结束位置
@@ -1076,7 +1003,7 @@ function animateChuluLoop() {
             var leftX = Math.max(s.headX, 0);
             var rightX = Math.min(s.tailX, MILL_TOTAL_LENGTH);
             var shape = allSteelLines[inMatNo].shape;
-            var y = getYTrack(2);  // 出炉轨道 y3
+            var y = getYTrack(1);  // 出炉轨道 y2
             shape.setPoints(leftX < rightX ? [{ x: leftX, y: y }, { x: rightX, y: y }] : []);
         }
         hasActive = true;
@@ -1104,7 +1031,7 @@ function stopChuluAutoAdvance() {
 // ================================================================
 //  十三、启动
 // ================================================================
-// 计划表数据由 1#BilletProduction / 2#BilletProduction 的
+// 计划表数据由 1#BilletProduction 的
 // ht.dataSource 属性变化触发 fetchPlanData()，不再使用定时器轮询。
-// 首次加载时拉取两个炉的计划数据。
+// 首次加载时拉取计划数据。
 fetchPlanData();
