@@ -118,6 +118,7 @@ var FURNACE_STEEL_ICON_PX = {
     A1: 200,     // 1#炉钢坯图标像素宽度
     A2: 200      // 2#炉钢坯图标像素宽度
 };
+var SHORT_STEEL_LENGTH_MM = 8000;   // 短坯判定阈值：≤8000mm 视为短坯，炉内左右交替显示
 
 /**
  * 根据炉号和实际长度（毫米）计算对应的像素宽度
@@ -196,6 +197,7 @@ function mapColorToRGB(color) {
  *
  * @param {string} furnaceKey - 炉号 'A1' | 'A2'
  * @param {Array}  dataList   - 后端推送数据 [[pos, inMatNo, info, linecolor], ...]
+ *                               钢坯长度从 info 中解析 inMatLen:xxxx（与扁棒线/小棒线一致）
  */
 function renderFurnaceInsideLayer(furnaceKey, dataList) {
     // 数据兜底
@@ -204,13 +206,23 @@ function renderFurnaceInsideLayer(furnaceKey, dataList) {
 
     const occupied = new Set();
 
+    // 按 pos 升序排序，保证短坯左右交替顺序稳定
+    const sortedList = dataList.slice().sort((a, b) => Number(a[0]) - Number(b[0]));
+
+    let shortToggle = false;   // 短坯左右交替标志
+
     // 逐节点渲染
-    dataList.forEach(item => {
+    sortedList.forEach(item => {
         const pos = Number(item[0]);
         const inMatNo = item[1];
         const info = item[2];
         const linecolor = item[3];
-        const lengthMm = Number(item[4]) || 0;  // 钢坯实际长度（毫米）
+        // 钢坯实际长度（毫米）：从 info 字符串中解析 inMatLen:6800
+        var lengthMm = 0;
+        if (info) {
+            var lenMatch = String(info).match(/inMatLen:(\d+)/);
+            if (lenMatch) lengthMm = Number(lenMatch[1]);
+        }
 
         const node = positionMap[furnaceKey]?.[pos];
         if (!node) return;
@@ -230,10 +242,27 @@ function renderFurnaceInsideLayer(furnaceKey, dataList) {
         node.a('lengthMm', lengthMm);              // 实际长度（毫米）
         node.a('lengthPx', pixelLen);              // 像素宽度
 
-        // 按长度比例设置节点宽度
-        var curWidth = node.getWidth();
-        if (curWidth !== pixelLen) {
-            node.setWidth(pixelLen);
+        // 按长度比例缩放节点（与扁棒线/小棒线一致：以原始图标宽度为基准等比缩放）
+        var maxMm = FURNACE_MAX_LENGTH_MM[furnaceKey] || 10000;
+        var scaleX = lengthMm > 0 ? (lengthMm / maxMm) : 1;
+        node.setScaleX(scaleX);
+
+        // ── 短坯左右交替显示（≤8000mm 视为短坯）──
+        // 记录节点原始中心X（首次渲染缓存，供偏移与恢复使用）
+        if (node.a('_originX') === undefined) node.a('_originX', node.getX());
+        var ox = node.a('_originX');
+        var isShort = lengthMm > 0 && lengthMm <= SHORT_STEEL_LENGTH_MM;
+
+        if (isShort) {
+            // 短坯在原始钢坯位置范围内左右偏移：最大偏移 = (图标宽 - 短坯像素宽) / 2，不超出边界
+            shortToggle = !shortToggle;
+            var iconPx = FURNACE_STEEL_ICON_PX[furnaceKey] || 200;
+            var maxOffset = (iconPx - pixelLen) / 2;
+            var offset = shortToggle ? maxOffset : -maxOffset;
+            node.setX(ox + offset);
+        } else {
+            // 长坯居中显示，恢复原始位置
+            node.setX(ox);
         }
     });
 
@@ -246,6 +275,8 @@ function renderFurnaceInsideLayer(furnaceKey, dataList) {
             node.a('info', '');
             node.a('linecolor', '');
             node.a('Color', 'rgb(0,0,0)');
+            // 恢复原始位置（短坯交替偏移后，下次渲染重新计算）
+            if (node.a('_originX') !== undefined) node.setX(node.a('_originX'));
         }
     });
 }
