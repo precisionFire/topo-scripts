@@ -153,7 +153,7 @@ var COLOR_MAP = {
 // ================================================================
 
 // ── 4.1 炉内节点缓存 ──
-// Two-0 ~ Two-100 → 2#炉炉内位置节点
+// Two-0 ~ Two-200 → 2#炉炉内位置节点
 const positionMap = {
     A2: {}
 };
@@ -165,7 +165,7 @@ const positionMap = {
  */
 function cachePositionMap(furnaceKey, prefix) {
     const map = {};
-    for (let i = 0; i <= 100; i++) {
+    for (let i = 0; i <= 200; i++) {
         const tag = `${prefix}-${i}`;
         const node = dm.getDataByTag(tag);
         if (node) map[i] = node;
