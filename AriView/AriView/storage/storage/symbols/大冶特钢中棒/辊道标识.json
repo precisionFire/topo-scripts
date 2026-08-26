@@ -1,0 +1,69 @@
+{
+  "modified": "Tue Apr 14 2026 17:36:54 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "text",
+      "valueType": "String",
+      "name": "辊道名称"
+    },
+    {
+      "attr": "textcolor",
+      "valueType": "Color",
+      "name": "文字颜色"
+    }
+  ],
+  "width": 100,
+  "height": 10,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "image",
+      "name": "symbols/大冶特钢中棒/辊道边界.json",
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "center",
+      "displayName": "辊道边界",
+      "rect": [
+        0,
+        0,
+        5,
+        10
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/大冶特钢中棒/辊道边界.json",
+      "layoutH": "right",
+      "layoutV": "center",
+      "displayName": "辊道边界",
+      "scaleX": -1,
+      "rect": [
+        95,
+        0,
+        5,
+        10
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@text",
+        "value": "0.1"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@textcolor",
+        "value": "rgb(0,0,0)"
+      },
+      "verticalGap": 0,
+      "letterGap": 0,
+      "pixelPerfect": true,
+      "rect": [
+        49.999,
+        6.07887,
+        0.001,
+        0.001
+      ]
+    }
+  ]
+}

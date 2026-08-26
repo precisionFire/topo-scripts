@@ -1,0 +1,46 @@
+{
+  "modified": "Sat Feb 25 2023 09:46:43 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "status",
+      "valueType": "String",
+      "defaultValue": "炼铁",
+      "name": "状态"
+    }
+  ],
+  "width": 50,
+  "height": 100,
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_GL_02.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('status')==\"炼铁\"\n}"
+      },
+      "movable": false,
+      "displayName": "icon_GL_02",
+      "rect": [
+        0,
+        0,
+        50,
+        100
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_GL_01.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a(\"status\")==\"停炉\"\n}",
+        "value": false
+      },
+      "movable": false,
+      "displayName": "icon_GL_01",
+      "rect": [
+        0,
+        0,
+        50,
+        100
+      ]
+    }
+  ]
+}

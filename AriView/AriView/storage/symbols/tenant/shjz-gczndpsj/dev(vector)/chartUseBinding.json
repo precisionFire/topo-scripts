@@ -1,0 +1,371 @@
+{
+  "modified": "Tue Jul 01 2025 15:07:48 GMT+0800 (GMT+08:00)",
+  "background": "rgb(255,255,255)",
+  "dataBindings": [
+    {
+      "attr": "ht.series",
+      "valueType": "Object",
+      "name": "系列"
+    },
+    {
+      "attr": "ht.xAxis",
+      "valueType": "Object",
+      "name": "横轴"
+    },
+    {
+      "attr": "ht.yAxis",
+      "valueType": "Object",
+      "name": "纵轴"
+    },
+    {
+      "attr": "ht.colors",
+      "valueType": "ColorArray",
+      "name": "颜色数组"
+    },
+    {
+      "attr": "ht.background",
+      "valueType": "Color",
+      "name": "背景"
+    },
+    {
+      "attr": "ht.backgroundIncludeAxis",
+      "valueType": "Boolean",
+      "name": "坐标轴背景"
+    },
+    {
+      "attr": "ht.boundaryGap",
+      "valueType": "Boolean",
+      "name": "坐标轴留白"
+    },
+    {
+      "attr": "ht.onXAxisLabelClicked",
+      "valueType": "Function",
+      "name": "横轴文本点击事件",
+      "extraInfo": {
+        "arguments": [
+          "info",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "ht.onItemClicked",
+      "valueType": "Function",
+      "name": "点击移入区域",
+      "extraInfo": {
+        "arguments": [
+          "info",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "ht.tooltipFormatter",
+      "valueType": "Function",
+      "name": "格式化",
+      "extraInfo": {
+        "arguments": [
+          "info",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "dataSource",
+      "valueType": "Object",
+      "name": "数据"
+    },
+    {
+      "attr": "hGap",
+      "valueType": "Number",
+      "name": "横间距"
+    },
+    {
+      "attr": "iconWidth",
+      "valueType": "Number",
+      "name": "宽度"
+    },
+    {
+      "attr": "iconHeight",
+      "valueType": "Number",
+      "name": "高度"
+    },
+    {
+      "attr": "drawIcon",
+      "valueType": "Function",
+      "name": "自定义绘制",
+      "extraInfo": {
+        "arguments": [
+          "g",
+          "rect",
+          "item",
+          "itemIndex",
+          "color",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "textGap",
+      "valueType": "Number",
+      "name": "文字图标间距",
+      "group": "标签"
+    },
+    {
+      "attr": "labelColor",
+      "valueType": "Color",
+      "name": "颜色"
+    }
+  ],
+  "xAlignmentGuides": [
+    -93
+  ],
+  "width": 420,
+  "height": 320,
+  "boundExtend": 10,
+  "fitSize": true,
+  "interactive": true,
+  "pixelPerfect": false,
+  "attachStyle": "close",
+  "comps": [
+    {
+      "type": "components/system/vector/chart/chart.json",
+      "displayName": "chart",
+      "rect": [
+        0,
+        40,
+        420,
+        280
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "series": {
+        "func": "attr@ht.series",
+        "value": [
+          {
+            "type": "bar",
+            "name": "焦油",
+            "stack": "ht",
+            "barWidth": 0.3,
+            "color": {
+              "type": "linear",
+              "colorStops": [
+                {
+                  "offset": 0,
+                  "color": "rgb(255,211,110)"
+                },
+                {
+                  "offset": 1,
+                  "color": "rgba(255,177,94,0.5)"
+                }
+              ]
+            },
+            "data": [
+              200,
+              20,
+              80,
+              30
+            ]
+          },
+          {
+            "type": "bar",
+            "name": "粗笨",
+            "barWidth": 0.3,
+            "stack": "ht",
+            "color": {
+              "type": "linear",
+              "colorStops": [
+                {
+                  "offset": 0,
+                  "color": "rgb(87,227,255)"
+                },
+                {
+                  "offset": 1,
+                  "color": "rgba(148,218,255,0.5)"
+                }
+              ]
+            },
+            "data": [
+              100,
+              30,
+              20,
+              80
+            ]
+          },
+          {
+            "type": "line",
+            "name": "目标值",
+            "lineStyle": {
+              "color": "rgb(77,195,255)"
+            },
+            "itemStyle": {
+              "size": 5,
+              "drawItem": "__ht__function (g, seriesData, rect, option) {\n                let img = ht.Default.getImage('symbols/tenant/shjz-gczndpsj/点_01.json'),\n                    { x, y, width, height } = rect;\n                ht.Default.drawStretchImage(g, img, \"uniform\", x, y, width, height);\n            }"
+            },
+            "areaStyle": {
+              "color": {
+                "type": "linear",
+                "colorStops": [
+                  {
+                    "offset": 0,
+                    "color": "rgba(70,148,250,0.45)"
+                  },
+                  {
+                    "offset": 1,
+                    "color": "rgba(0,0,0, 0.00)"
+                  }
+                ]
+              }
+            },
+            "data": [
+              100,
+              40,
+              30,
+              20
+            ]
+          }
+        ]
+      },
+      "xAxis": {
+        "func": "attr@ht.xAxis",
+        "value": [
+          {
+            "axisLabel": {
+              "show": true,
+              "avoidLabelOverlap": false,
+              "interval": 1,
+              "font": "12px D-DIN-PRO-Medium,D-DIN-PRO-500-Medium",
+              "color": "rgba(255,255,255)",
+              "offsetX": 10,
+              "offsetY": 5
+            },
+            "axisTick": {
+              "show": false
+            },
+            "axisLine": {
+              "show": true,
+              "color": "#425a7b",
+              "width": 1,
+              "dashOffset": 0,
+              "onZero": true
+            },
+            "splitLine": {
+              "show": false,
+              "color": "rgba(145,175,255,0.30)"
+            },
+            "data": [
+              "01",
+              "02",
+              "03",
+              "04",
+              "05",
+              "06",
+              "07"
+            ]
+          }
+        ]
+      },
+      "yAxis": {
+        "func": "attr@ht.yAxis",
+        "value": {
+          "axisLabel": {
+            "rotate": 0,
+            "show": true,
+            "font": "12px arial, sans-serif",
+            "color": "rgb(83,136,185)",
+            "offsetX": 0,
+            "offsetY": 0
+          },
+          "axisTick": {
+            "show": false
+          },
+          "axisLine": {
+            "show": false,
+            "color": "rgba(0,128,255,0.50)"
+          },
+          "splitLine": {
+            "show": true,
+            "color": "rgba(255,255,255,0.10)",
+            "pattern": [
+              4,
+              4
+            ]
+          }
+        }
+      },
+      "colors": {
+        "func": "attr@ht.colors"
+      },
+      "background": {
+        "func": "attr@ht.background"
+      },
+      "backgroundIncludeAxis": {
+        "func": "attr@ht.backgroundIncludeAxis"
+      },
+      "boundaryGap": {
+        "func": "attr@ht.boundaryGap"
+      },
+      "onXAxisLabelClicked": {
+        "func": "attr@ht.onXAxisLabelClicked"
+      },
+      "onItemClicked": {
+        "func": "attr@ht.onItemClicked"
+      },
+      "tooltipLineColor": "rgba(74,155,219,0.6)",
+      "tooltipFormatter": {
+        "func": "attr@ht.tooltipFormatter"
+      }
+    },
+    {
+      "type": "components/system/vector/chart/chartLegend.json",
+      "displayName": "chartLegend",
+      "rect": [
+        0,
+        0,
+        420,
+        40
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartLegendInteractor.onDown.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartLegendInteractor.onMove.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartLegendInteractor.onLeave.apply(this, arguments);\n}",
+      "dataSource": {
+        "func": "attr@ht.series"
+      },
+      "colors": {
+        "func": "attr@ht.colors"
+      },
+      "align": "center",
+      "vAlign": "middle",
+      "hGap": {
+        "func": "attr@hGap"
+      },
+      "iconWidth": {
+        "func": "attr@iconWidth"
+      },
+      "iconHeight": {
+        "func": "attr@iconHeight"
+      },
+      "drawIcon": {
+        "func": "attr@drawIcon"
+      },
+      "textGap": {
+        "func": "attr@textGap"
+      },
+      "useItemColorOnLabel": false,
+      "labelColor": {
+        "func": "attr@labelColor"
+      }
+    }
+  ]
+}

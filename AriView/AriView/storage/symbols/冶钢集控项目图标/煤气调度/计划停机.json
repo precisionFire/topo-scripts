@@ -1,0 +1,481 @@
+{
+  "modified": "Thu Apr 20 2023 15:46:18 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "ht.columns",
+      "valueType": "Object",
+      "name": "列定义"
+    },
+    {
+      "attr": "ht.dataSource",
+      "valueType": "Object",
+      "name": "行数据"
+    },
+    {
+      "attr": "ht.borderWidth",
+      "valueType": "PositiveNumber",
+      "name": "边框宽度"
+    },
+    {
+      "attr": "ht.borderColor",
+      "valueType": "Color",
+      "name": "边框颜色"
+    },
+    {
+      "attr": "ht.columnLineColor",
+      "valueType": "Color",
+      "name": "列线颜色"
+    },
+    {
+      "attr": "ht.columnLineWidth",
+      "valueType": "PositiveNumber",
+      "name": "列线宽"
+    },
+    {
+      "attr": "ht.columnLinePattern",
+      "valueType": "NumberArray",
+      "name": "列线样式"
+    },
+    {
+      "attr": "ht.rowLineColor",
+      "valueType": "Color",
+      "name": "行线颜色"
+    },
+    {
+      "attr": "ht.rowLineWidth",
+      "valueType": "PositiveNumber",
+      "name": "行线宽"
+    },
+    {
+      "attr": "ht.showHead",
+      "valueType": "Boolean",
+      "name": "显示表头"
+    },
+    {
+      "attr": "ht.headHeight",
+      "valueType": "PositiveNumber",
+      "name": "表头行高"
+    },
+    {
+      "attr": "ht.headbackground",
+      "valueType": "Color",
+      "name": "表头背景色"
+    },
+    {
+      "attr": "ht.showHeadRowLine",
+      "valueType": "Boolean",
+      "name": "显示表头行线"
+    },
+    {
+      "attr": "ht.headTextColor",
+      "valueType": "Color",
+      "name": "表头文本颜色"
+    },
+    {
+      "attr": "ht.headFont",
+      "valueType": "Font",
+      "name": "表头字体"
+    },
+    {
+      "attr": "ht.rowHeight",
+      "valueType": "PositiveNumber",
+      "name": "表格行高"
+    },
+    {
+      "attr": "ht.bodyBackground",
+      "valueType": "Color",
+      "name": "表格背景色"
+    },
+    {
+      "attr": "ht.textLineHeight",
+      "valueType": "PositiveNumber",
+      "name": "文本行高"
+    },
+    {
+      "attr": "ht.bodyTextColor",
+      "valueType": "Color",
+      "name": "表格文本颜色"
+    },
+    {
+      "attr": "ht.cellPadding",
+      "valueType": "PositiveNumber",
+      "name": "单元格内边距"
+    },
+    {
+      "attr": "ht.bodyFont",
+      "valueType": "Font",
+      "name": "表格字体"
+    },
+    {
+      "attr": "ht.drawRow",
+      "valueType": "Function",
+      "name": "行绘制",
+      "extraInfo": {
+        "arguments": [
+          "g",
+          "row",
+          "rowIndex",
+          "rect",
+          "rawIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "ht.visibleFunc",
+      "valueType": "Function",
+      "name": "可见函数",
+      "extraInfo": {
+        "arguments": [
+          "row",
+          "rowIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "ht.columnVisibleFunc",
+      "valueType": "Function",
+      "name": "列可见函数",
+      "extraInfo": {
+        "arguments": [
+          "col",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "ht.multiple",
+      "valueType": "Boolean",
+      "name": "可多选",
+      "group": "选择"
+    },
+    {
+      "attr": "ht.hoverBackground",
+      "valueType": "Color",
+      "name": "悬停背景"
+    },
+    {
+      "attr": "ht.hoverColor",
+      "valueType": "Color",
+      "name": "悬停颜色"
+    },
+    {
+      "attr": "ht.selectBackground",
+      "valueType": "Color",
+      "name": "选中背景"
+    },
+    {
+      "attr": "ht.selectedIndex",
+      "valueType": "NumberArray",
+      "name": "选中行下标"
+    },
+    {
+      "attr": "ht.scrollable",
+      "valueType": "Boolean",
+      "name": "可滚动",
+      "group": "滚动"
+    },
+    {
+      "attr": "ht.translateX",
+      "valueType": "Number",
+      "name": "横偏移"
+    },
+    {
+      "attr": "ht.translateY",
+      "valueType": "Number",
+      "name": "纵偏移"
+    },
+    {
+      "attr": "ht.autoHideScrollBar",
+      "valueType": "Boolean",
+      "name": "自动隐藏滚动条"
+    },
+    {
+      "attr": "ht.scrollBarColor",
+      "valueType": "Color",
+      "name": "滚动条颜色"
+    },
+    {
+      "attr": "ht.scrollBarWidth",
+      "valueType": "PositiveNumber",
+      "name": "滚动条宽"
+    },
+    {
+      "attr": "ht.scrollBarInteractiveSize",
+      "valueType": "PositiveNumber",
+      "name": "滚动条交互大小"
+    },
+    {
+      "attr": "ht.onSelectRow",
+      "valueType": "Function",
+      "name": "行选择",
+      "extraInfo": {
+        "arguments": [
+          "row",
+          "data",
+          "view"
+        ]
+      },
+      "group": "事件"
+    },
+    {
+      "attr": "ht.onHoverCell",
+      "valueType": "Function",
+      "name": "单元格悬停",
+      "extraInfo": {
+        "arguments": [
+          "event",
+          "cell",
+          "row",
+          "column",
+          "rowIndex",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "ht.onClickCell",
+      "valueType": "Function",
+      "name": "单元格点击",
+      "extraInfo": {
+        "arguments": [
+          "event",
+          "cell",
+          "row",
+          "column",
+          "rowIndex",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "ht.onClickHeadCell",
+      "valueType": "Function",
+      "name": "表头单元格点击",
+      "extraInfo": {
+        "arguments": [
+          "event",
+          "column",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "ht.onClickCellImage",
+      "valueType": "Function",
+      "name": "单击自定义单元格",
+      "extraInfo": {
+        "arguments": [
+          "event",
+          "cellImageInfo",
+          "row",
+          "column",
+          "rowIndex",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "ht.handleCellImage",
+      "valueType": "Function",
+      "name": "自定义单元格事件",
+      "extraInfo": {
+        "arguments": [
+          "type",
+          "event",
+          "cellImageInfo",
+          "row",
+          "column",
+          "rowIndex",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    }
+  ],
+  "snapshotURL": "symbols/ht/snapshot/table.json",
+  "width": 420,
+  "height": 300,
+  "fitSize": true,
+  "scrollable": true,
+  "interactive": true,
+  "pixelPerfect": false,
+  "attachStyle": "close",
+  "comps": [
+    {
+      "type": "components/ht/ui/table.json",
+      "displayName": "table",
+      "rect": [
+        0,
+        0,
+        420,
+        300
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onMove.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onScroll.apply(this, arguments);\n}",
+      "columns": {
+        "func": "attr@ht.columns"
+      },
+      "dataSource": {
+        "func": "attr@ht.dataSource"
+      },
+      "borderWidth": {
+        "func": "attr@ht.borderWidth",
+        "value": 0
+      },
+      "borderColor": {
+        "func": "attr@ht.borderColor"
+      },
+      "columnLineColor": {
+        "func": "attr@ht.columnLineColor"
+      },
+      "columnLineWidth": {
+        "func": "attr@ht.columnLineWidth"
+      },
+      "columnLinePattern": {
+        "func": "attr@ht.columnLinePattern"
+      },
+      "rowLineColor": {
+        "func": "attr@ht.rowLineColor"
+      },
+      "rowLineWidth": {
+        "func": "attr@ht.rowLineWidth",
+        "value": 6
+      },
+      "showHead": {
+        "func": "attr@ht.showHead"
+      },
+      "thHeight": {
+        "func": "attr@ht.headHeight",
+        "value": 35
+      },
+      "thBackground": {
+        "func": "attr@ht.headbackground",
+        "value": "rgb(0,0,0)"
+      },
+      "showHeadRowLine": {
+        "func": "attr@ht.showHeadRowLine"
+      },
+      "thColor": {
+        "func": "attr@ht.headTextColor",
+        "value": "#60ACFC"
+      },
+      "thFont": {
+        "func": "attr@ht.headFont"
+      },
+      "resizable": true,
+      "tdHeight": {
+        "func": "attr@ht.rowHeight",
+        "value": 36
+      },
+      "tdBackground": {
+        "func": "attr@ht.bodyBackground",
+        "value": "rgb(0,32,87)"
+      },
+      "textLineHeight": {
+        "func": "attr@ht.textLineHeight"
+      },
+      "tdColor": {
+        "func": "attr@ht.bodyTextColor",
+        "value": "#32D3EB"
+      },
+      "cellPadding": {
+        "func": "attr@ht.cellPadding"
+      },
+      "tdFont": {
+        "func": "attr@ht.bodyFont"
+      },
+      "drawRow": {
+        "func": "attr@ht.drawRow"
+      },
+      "visibleFunc": {
+        "func": "attr@ht.visibleFunc"
+      },
+      "columnVisibleFunc": {
+        "func": "attr@ht.columnVisibleFunc"
+      },
+      "multiple": {
+        "func": "attr@ht.multiple"
+      },
+      "hoverBackground": {
+        "func": "attr@ht.hoverBackground",
+        "value": "rgba(51,153,255,0.15)"
+      },
+      "hoverColor": {
+        "func": "attr@ht.hoverColor",
+        "value": null
+      },
+      "selectBackground": {
+        "func": "attr@ht.selectBackground",
+        "value": "rgba(255,255,255,0.60)"
+      },
+      "selectColor": null,
+      "selectedIndex": {
+        "func": "attr@ht.selectedIndex"
+      },
+      "scrollable": {
+        "func": "attr@ht.scrollable"
+      },
+      "translateX": {
+        "func": "attr@ht.translateX"
+      },
+      "translateY": {
+        "func": "attr@ht.translateY"
+      },
+      "autoHideScrollBar": {
+        "func": "attr@ht.autoHideScrollBar"
+      },
+      "scrollBarColor": {
+        "func": "attr@ht.scrollBarColor",
+        "value": "rgba(255,255,255,0.67)"
+      },
+      "scrollBarWidth": {
+        "func": "attr@ht.scrollBarWidth",
+        "value": 5
+      },
+      "scrollBarWidthAbsolute": true,
+      "scrollBarInteractiveSize": {
+        "func": "attr@ht.scrollBarInteractiveSize"
+      },
+      "onSelectRow": {
+        "func": "attr@ht.onSelectRow",
+        "value": false
+      },
+      "onHoverCell": {
+        "func": "attr@ht.onHoverCell"
+      },
+      "onClickCell": {
+        "func": "attr@ht.onClickCell"
+      },
+      "onClickHeadCell": {
+        "func": "attr@ht.onClickHeadCell"
+      },
+      "onClickCellImage": {
+        "func": "attr@ht.onClickCellImage"
+      },
+      "handleCellImage": {
+        "func": "attr@ht.handleCellImage"
+      }
+    }
+  ]
+}

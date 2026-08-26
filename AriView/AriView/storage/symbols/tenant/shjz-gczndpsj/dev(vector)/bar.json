@@ -1,0 +1,484 @@
+{
+  "modified": "Fri Nov 07 2025 01:19:12 GMT+0800 (中国标准时间)",
+  "background": "rgb(0,0,0)",
+  "dataBindings": [
+    {
+      "attr": "series",
+      "valueType": "Object",
+      "defaultValue": [
+        {
+          "type": "bar",
+          "name": "能耗值",
+          "drawBar": "__ht__function (g, value, rect, option) {\n            let img = ht.Default.getImage('symbols/tenant/shjz-gczndpsj/柱状图-柱_02.json'),\n                back = ht.Default.getImage('symbols/tenant/shjz-gczndpsj/dev(vector)/背景柱.json'),\n                { x, y, width, height } = rect,\n                { boundary } = option;\n            ht.Default.drawStretchImage(g, img, \"uniform\", x + 6.5, y, width /2, height);\n            ht.Default.drawStretchImage(g, back, \"uniform\", boundary.x, boundary.y, boundary.width, boundary.height);\n        }",
+          "data": [
+            200,
+            70,
+            30,
+            60,
+            70,
+            70,
+            70,
+            70,
+            70,
+            70,
+            70,
+            70
+          ]
+        }
+      ],
+      "name": "系列"
+    },
+    {
+      "attr": "xAxis",
+      "valueType": "Object",
+      "defaultValue": [
+        {
+          "axisLabel": {
+            "rotate": 26,
+            "show": true,
+            "avoidLabelOverlap": false,
+            "interval": 1,
+            "font": "12px Trebuchet MS",
+            "color": "rgba(255,255,255,0.9)",
+            "angle": 25,
+            "axisGap": 8,
+            "offsetX": 10,
+            "offsetY": 5
+          },
+          "axisTick": {
+            "show": false
+          },
+          "axisLine": {
+            "show": true,
+            "color": "#425a7b",
+            "width": 1,
+            "dashOffset": 0,
+            "onZero": true
+          },
+          "splitLine": {
+            "show": false,
+            "color": "rgba(145,175,255,0.30)"
+          },
+          "data": [
+            "2024-01",
+            "2024-02",
+            "2024-03",
+            "2024-04",
+            "2024-05",
+            "2024-06",
+            "2024-07",
+            "2024-08",
+            "2024-09",
+            "2024-10",
+            "2024-11",
+            "2024-12"
+          ]
+        }
+      ],
+      "name": "横轴"
+    },
+    {
+      "attr": "yAxis",
+      "valueType": "Object",
+      "defaultValue": {
+        "axisLabel": {
+          "rotate": 0,
+          "show": true,
+          "font": "12px arial, sans-serif",
+          "color": "rgb(83,136,185)",
+          "offsetX": 0,
+          "offsetY": 0
+        },
+        "axisTick": {
+          "show": false
+        },
+        "axisLine": {
+          "show": false,
+          "color": "rgba(0,128,255,0.50)"
+        },
+        "splitLine": {
+          "show": true,
+          "color": "rgba(145,175,255,0.30)",
+          "pattern": [
+            4,
+            4
+          ]
+        },
+        "max": 240,
+        "min": 0
+      },
+      "name": "纵轴"
+    },
+    {
+      "attr": "colors",
+      "valueType": "ColorArray",
+      "defaultValue": [
+        "#69c1f2",
+        "rgb(66,117,255)",
+        "rgb(20,62,179)",
+        "rgb(255,216,59)",
+        "rgb(252,182,154)",
+        "rgb(98,245,242)",
+        "#68d48f",
+        "rgb(138,117,255)"
+      ],
+      "name": "颜色数组"
+    },
+    {
+      "attr": "background",
+      "valueType": "Color",
+      "defaultValue": null,
+      "name": "背景"
+    },
+    {
+      "attr": "backgroundIncludeAxis",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "坐标轴背景"
+    },
+    {
+      "attr": "boundaryGap",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "坐标轴留白"
+    },
+    {
+      "attr": "hoverDraw",
+      "valueType": "Function",
+      "name": "移入绘制",
+      "extraInfo": {
+        "arguments": [
+          "g",
+          "rect",
+          "data",
+          "view",
+          "option"
+        ]
+      }
+    },
+    {
+      "attr": "rectSelectBorderColor",
+      "valueType": "Color",
+      "defaultValue": "rgb(61,61,61)",
+      "name": "框选边框色",
+      "group": "选择"
+    },
+    {
+      "attr": "rectSelectBackground",
+      "valueType": "Color",
+      "defaultValue": "rgba(61,61,61,0.30)",
+      "name": "框选背景色"
+    },
+    {
+      "attr": "onRectSelected",
+      "valueType": "Function",
+      "name": "框选事件",
+      "extraInfo": {
+        "arguments": [
+          "ranges",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "onXAxisLabelClicked",
+      "valueType": "Function",
+      "name": "横轴文本点击事件",
+      "extraInfo": {
+        "arguments": [
+          "info",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "onItemClicked",
+      "valueType": "Function",
+      "name": "点击移入区域",
+      "extraInfo": {
+        "arguments": [
+          "info",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "tooltip",
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "提示",
+      "group": "提示"
+    },
+    {
+      "attr": "tooltipLineColor",
+      "valueType": "Color",
+      "defaultValue": "rgb(124,145,155)",
+      "name": "线颜色"
+    },
+    {
+      "attr": "tooltipLineWidth",
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "线宽"
+    },
+    {
+      "attr": "tooltipLinePattern",
+      "valueType": "NumberArray",
+      "name": "线虚线样式"
+    },
+    {
+      "attr": "tooltipPointerType",
+      "valueType": "String",
+      "defaultValue": "auto",
+      "name": "提示类型",
+      "extraInfo": {
+        "enum": {
+          "values": [
+            "auto",
+            "line",
+            "shadow"
+          ]
+        }
+      }
+    },
+    {
+      "attr": "tooltipFormatter",
+      "valueType": "Function",
+      "name": "格式化",
+      "extraInfo": {
+        "arguments": [
+          "info",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "drawTooltip",
+      "valueType": "Function",
+      "name": "自定义绘制",
+      "extraInfo": {
+        "arguments": [
+          "g",
+          "rect",
+          "option"
+        ]
+      }
+    },
+    {
+      "attr": "unit",
+      "valueType": "String",
+      "name": "单位"
+    }
+  ],
+  "gridLightColor": "rgba(176,39,39,0.20)",
+  "animation": {},
+  "width": 460,
+  "height": 220,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "components/system/vector/chart/chart.json",
+      "layoutH": "leftright",
+      "layoutV": "topbottom",
+      "displayName": "chart",
+      "rect": [
+        0,
+        17.3503,
+        460,
+        202.6497
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "series": {
+        "func": "attr@series",
+        "value": [
+          {
+            "type": "bar",
+            "name": "能耗值",
+            "drawBar": "__ht__function (g, value, rect, option) {\n            let img = ht.Default.getImage('symbols/tenant/shjz-gczndpsj/柱状图-柱_02.json'),\n                back = ht.Default.getImage('symbols/tenant/shjz-gczndpsj/dev(vector)/背景柱.json'),\n                { x, y, width, height } = rect,\n                { boundary } = option;\n            ht.Default.drawStretchImage(g, img, \"uniform\", x + 6.5, y, width /2, height);\n            ht.Default.drawStretchImage(g, back, \"uniform\", boundary.x, boundary.y, boundary.width, boundary.height);\n        }",
+            "data": [
+              200,
+              70,
+              30,
+              60,
+              70,
+              70,
+              70,
+              70,
+              70,
+              70,
+              70,
+              70
+            ]
+          }
+        ]
+      },
+      "xAxis": {
+        "func": "attr@xAxis",
+        "value": [
+          {
+            "axisLabel": {
+              "rotate": 26,
+              "show": true,
+              "avoidLabelOverlap": false,
+              "interval": 1,
+              "font": "12px Trebuchet MS",
+              "color": "rgba(255,255,255,0.9)",
+              "angle": 25,
+              "axisGap": 8,
+              "offsetX": 10,
+              "offsetY": 5
+            },
+            "axisTick": {
+              "show": false
+            },
+            "axisLine": {
+              "show": true,
+              "color": "#425a7b",
+              "width": 1,
+              "dashOffset": 0,
+              "onZero": true
+            },
+            "splitLine": {
+              "show": false,
+              "color": "rgba(145,175,255,0.30)"
+            },
+            "data": [
+              "2024-01",
+              "2024-02",
+              "2024-03",
+              "2024-04",
+              "2024-05",
+              "2024-06",
+              "2024-07",
+              "2024-08",
+              "2024-09",
+              "2024-10",
+              "2024-11",
+              "2024-12"
+            ]
+          }
+        ]
+      },
+      "yAxis": {
+        "func": "attr@yAxis",
+        "value": {
+          "axisLabel": {
+            "rotate": 0,
+            "show": true,
+            "font": "12px arial, sans-serif",
+            "color": "rgb(83,136,185)",
+            "offsetX": 0,
+            "offsetY": 0
+          },
+          "axisTick": {
+            "show": false
+          },
+          "axisLine": {
+            "show": false,
+            "color": "rgba(0,128,255,0.50)"
+          },
+          "splitLine": {
+            "show": true,
+            "color": "rgba(145,175,255,0.30)",
+            "pattern": [
+              4,
+              4
+            ]
+          },
+          "max": 240,
+          "min": 0
+        }
+      },
+      "colors": {
+        "func": "attr@colors",
+        "value": [
+          "#69c1f2",
+          "rgb(66,117,255)",
+          "rgb(20,62,179)",
+          "rgb(255,216,59)",
+          "rgb(252,182,154)",
+          "rgb(98,245,242)",
+          "#68d48f",
+          "rgb(138,117,255)"
+        ]
+      },
+      "background": {
+        "func": "attr@background"
+      },
+      "backgroundIncludeAxis": {
+        "func": "attr@backgroundIncludeAxis"
+      },
+      "boundaryGap": {
+        "func": "attr@boundaryGap"
+      },
+      "hoverDraw": {
+        "func": "attr@hoverDraw"
+      },
+      "rectSelectBorderColor": {
+        "func": "attr@rectSelectBorderColor"
+      },
+      "rectSelectBackground": {
+        "func": "attr@rectSelectBackground"
+      },
+      "onRectSelected": {
+        "func": "attr@onRectSelected"
+      },
+      "onXAxisLabelClicked": {
+        "func": "attr@onXAxisLabelClicked"
+      },
+      "onItemClicked": {
+        "func": "attr@onItemClicked"
+      },
+      "tooltip": {
+        "func": "attr@tooltip"
+      },
+      "tooltipLineColor": {
+        "func": "attr@tooltipLineColor",
+        "value": "rgba(74,155,219,0.6)"
+      },
+      "tooltipLineWidth": {
+        "func": "attr@tooltipLineWidth"
+      },
+      "tooltipLinePattern": {
+        "func": "attr@tooltipLinePattern"
+      },
+      "tooltipPointerType": {
+        "func": "attr@tooltipPointerType"
+      },
+      "tooltipFormatter": {
+        "func": "attr@tooltipFormatter"
+      },
+      "drawTooltip": {
+        "func": "attr@drawTooltip"
+      }
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@unit",
+        "value": "t"
+      },
+      "color": "#5388b9",
+      "layoutH": "left",
+      "layoutV": "top",
+      "rect": [
+        16.39949,
+        4.00855,
+        9.28017,
+        13.34175
+      ]
+    }
+  ]
+}

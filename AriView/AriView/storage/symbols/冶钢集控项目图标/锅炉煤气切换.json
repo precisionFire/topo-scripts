@@ -1,0 +1,1806 @@
+{
+  "modified": "Mon Oct 23 2023 18:01:18 GMT+0800 (中国标准时间)",
+  "background": "rgb(40,50,66)",
+  "dataBindings": [
+    {
+      "attr": "260tBFG_reality",
+      "valueType": "Object"
+    },
+    {
+      "attr": "260tBFG_ForecastHistory1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "260tBFG_Forecast1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "260tCOG_reality",
+      "valueType": "Object"
+    },
+    {
+      "attr": "260tCOG_ForecastHistory1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "260tCOG_Forecast1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "160tBFG_reality",
+      "valueType": "Object"
+    },
+    {
+      "attr": "160tBFG_ForecastHistory1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "160tBFG_Forecast1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "160tCOG_reality",
+      "valueType": "Object"
+    },
+    {
+      "attr": "160tCOG_ForecastHistory1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "160tCOG_Forecast1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "110tBFG_reality",
+      "valueType": "Object"
+    },
+    {
+      "attr": "110tBFG_ForecastHistory1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "110tBFG_Forecast1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "110tCOG_reality",
+      "valueType": "Object"
+    },
+    {
+      "attr": "110tCOG_ForecastHistory1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "110tCOG_Forecast1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "75tBFG_reality",
+      "valueType": "Object"
+    },
+    {
+      "attr": "75tBFG_ForecastHistory1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "75tBFG_Forecast1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "75tCOG_reality",
+      "valueType": "Object"
+    },
+    {
+      "attr": "75tCOG_ForecastHistory1H",
+      "valueType": "Object"
+    },
+    {
+      "attr": "75tCOG_Forecast1H",
+      "valueType": "Object"
+    }
+  ],
+  "stateEnum": [
+    {
+      "value": "state0",
+      "label": "260t"
+    },
+    {
+      "value": "state1",
+      "label": "160t"
+    },
+    {
+      "value": "state2",
+      "label": "110t"
+    },
+    {
+      "value": "state3",
+      "label": "75t"
+    }
+  ],
+  "state": "state0",
+  "width": 348,
+  "height": 218,
+  "interactive": true,
+  "comps": [
+    {
+      "type": "components/ht/chart/timeAxisChart.json",
+      "state": "state0",
+      "displayName": "timeAxisChart",
+      "rect": [
+        0.52332,
+        26.16465,
+        347.47668,
+        86.83535
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onScroll.apply(this, arguments);\n}",
+      "series": [
+        {
+          "type": "line",
+          "name": "实际",
+          "itemStyle": {
+            "size": 1
+          },
+          "data": {
+            "func": "attr@260tBFG_reality",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测历史",
+          "itemStyle": {
+            "size": 3
+          },
+          "data": {
+            "func": "attr@260tBFG_ForecastHistory1H",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测",
+          "itemStyle": {
+            "size": 3
+          },
+          "lineStyle": {
+            "pattern": [
+              5,
+              5
+            ],
+            "width": 2
+          },
+          "data": {
+            "func": "attr@260tBFG_Forecast1H",
+            "value": []
+          }
+        }
+      ],
+      "xAxis": [
+        {
+          "axisLabel": {
+            "rotate": 0,
+            "show": false
+          },
+          "axisTick": {
+            "show": false
+          }
+        }
+      ],
+      "yAxis": [
+        {
+          "splitLine": {
+            "pattern": [
+              4,
+              2
+            ]
+          },
+          "axisLine": {
+            "show": false
+          },
+          "axisLabel": {
+            "show": true,
+            "font": "12px arial",
+            "color": "rgb(222,222,222)"
+          }
+        }
+      ],
+      "colors": [
+        "rgb(222,82,82)",
+        "rgb(93,217,174)",
+        "#FEB64D",
+        "rgb(241,125,164)",
+        "rgb(135,144,204)",
+        "rgb(124,145,155)",
+        "rgb(48,242,120)",
+        "rgb(212,0,0)",
+        "#32D3EB",
+        "#c4ccd3"
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#0476bc",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state1",
+      "rect": [
+        55.99,
+        0.00001,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state1');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state1",
+      "displayName": "矩形",
+      "rect": [
+        0,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state0');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "260t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state1",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        28,
+        9.99001,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "160t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state1",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        83.99,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state1",
+      "displayName": "矩形",
+      "rect": [
+        112,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state2');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "110t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state1",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        139.99,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state1",
+      "displayName": "矩形",
+      "rect": [
+        168,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state3');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "75t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state1",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        196,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#0476bc",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state2",
+      "rect": [
+        112,
+        0.00001,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state2');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state2",
+      "displayName": "矩形",
+      "rect": [
+        56,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state1');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "260t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state2",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        28,
+        9.99001,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "160t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state2",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        83.99,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state2",
+      "displayName": "矩形",
+      "rect": [
+        0,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state0');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "110t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state2",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        139.99,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state2",
+      "displayName": "矩形",
+      "rect": [
+        168,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state3');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "75t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state2",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        196,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#0476bc",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state3",
+      "rect": [
+        168.01,
+        0.00001,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state3');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state3",
+      "displayName": "矩形",
+      "rect": [
+        56,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state1');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "260t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state3",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        28,
+        9.99001,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "160t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state3",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        83.99,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state3",
+      "displayName": "矩形",
+      "rect": [
+        112,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state2');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "110t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state3",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        139.99,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state3",
+      "displayName": "矩形",
+      "rect": [
+        0,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state2');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "75t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state3",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        196,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#0476bc",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state0",
+      "rect": [
+        0,
+        0.00001,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state0');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state0",
+      "displayName": "矩形",
+      "rect": [
+        56,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state1');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "260t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state0",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        28,
+        9.99001,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "160t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state0",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        83.99,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state0",
+      "displayName": "矩形",
+      "rect": [
+        112,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state2');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "110t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state0",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        139.99,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state0",
+      "displayName": "矩形",
+      "rect": [
+        168,
+        0,
+        56,
+        20
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state3');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "75t"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "state": "state0",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        196,
+        9.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "components/ht/chart/timeAxisChart.json",
+      "state": "state0",
+      "displayName": "timeAxisChart",
+      "rect": [
+        0.52332,
+        131.16465,
+        347.47668,
+        86.83535
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onScroll.apply(this, arguments);\n}",
+      "series": [
+        {
+          "type": "line",
+          "name": "实际",
+          "itemStyle": {
+            "size": 1
+          },
+          "data": {
+            "func": "attr@260tCOG_reality",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测历史",
+          "itemStyle": {
+            "size": 2
+          },
+          "data": {
+            "func": "attr@260tCOG_ForecastHistory1H",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测",
+          "itemStyle": {
+            "size": 2
+          },
+          "lineStyle": {
+            "pattern": [
+              5,
+              5
+            ],
+            "width": 1
+          },
+          "data": {
+            "func": "attr@260tCOG_Forecast1H",
+            "value": []
+          }
+        }
+      ],
+      "xAxis": [
+        {
+          "axisLabel": {
+            "rotate": 0,
+            "show": false
+          },
+          "axisTick": {
+            "show": false
+          }
+        }
+      ],
+      "yAxis": [
+        {
+          "splitLine": {
+            "pattern": [
+              4,
+              2
+            ]
+          },
+          "axisLine": {
+            "show": false
+          },
+          "axisLabel": {
+            "show": true,
+            "font": "12px arial",
+            "color": "rgb(222,222,222)"
+          }
+        }
+      ],
+      "colors": [
+        "rgb(222,82,82)",
+        "rgb(93,217,174)",
+        "#FEB64D",
+        "rgb(241,125,164)",
+        "rgb(135,144,204)",
+        "rgb(124,145,155)",
+        "rgb(48,242,120)",
+        "rgb(212,0,0)",
+        "#32D3EB",
+        "#c4ccd3"
+      ]
+    },
+    {
+      "type": "text",
+      "text": "高炉煤气",
+      "color": "rgba(255,255,255,0.9)",
+      "font": "10px arial, sans-serif",
+      "pixelPerfect": true,
+      "state": "state0",
+      "rect": [
+        299.81348,
+        26.16365,
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "text",
+      "text": "焦炉煤气",
+      "color": "rgba(255,255,255,0.9)",
+      "font": "10px arial, sans-serif",
+      "pixelPerfect": true,
+      "state": "state0",
+      "rect": [
+        299.81348,
+        131.16365,
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "components/ht/chart/timeAxisChart.json",
+      "state": "state1",
+      "displayName": "timeAxisChart",
+      "rect": [
+        0.52332,
+        26.16465,
+        347.47668,
+        86.83535
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onScroll.apply(this, arguments);\n}",
+      "series": [
+        {
+          "type": "line",
+          "name": "实际",
+          "itemStyle": {
+            "size": 1
+          },
+          "data": {
+            "func": "attr@160tBFG_reality",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测历史",
+          "itemStyle": {
+            "size": 2
+          },
+          "data": {
+            "func": "attr@160tBFG_ForecastHistory1H",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测",
+          "itemStyle": {
+            "size": 2
+          },
+          "lineStyle": {
+            "pattern": [
+              5,
+              5
+            ],
+            "width": 1
+          },
+          "data": {
+            "func": "attr@160tBFG_Forecast1H",
+            "value": []
+          }
+        }
+      ],
+      "xAxis": [
+        {
+          "axisLabel": {
+            "rotate": 0,
+            "show": false
+          },
+          "axisTick": {
+            "show": false
+          }
+        }
+      ],
+      "yAxis": [
+        {
+          "splitLine": {
+            "pattern": [
+              4,
+              2
+            ]
+          },
+          "axisLine": {
+            "show": false
+          },
+          "axisLabel": {
+            "show": true,
+            "font": "12px arial",
+            "color": "rgb(222,222,222)"
+          }
+        }
+      ],
+      "colors": [
+        "rgb(222,82,82)",
+        "rgb(93,217,174)",
+        "#FEB64D",
+        "rgb(241,125,164)",
+        "rgb(135,144,204)",
+        "rgb(124,145,155)",
+        "rgb(48,242,120)",
+        "rgb(212,0,0)",
+        "#32D3EB",
+        "#c4ccd3"
+      ]
+    },
+    {
+      "type": "components/ht/chart/timeAxisChart.json",
+      "state": "state1",
+      "displayName": "timeAxisChart",
+      "rect": [
+        0.52332,
+        131.16465,
+        347.47668,
+        86.83535
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onScroll.apply(this, arguments);\n}",
+      "series": [
+        {
+          "type": "line",
+          "name": "实际",
+          "itemStyle": {
+            "size": 1
+          },
+          "data": {
+            "func": "attr@160tCOG_reality",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测历史",
+          "itemStyle": {
+            "size": 2
+          },
+          "data": {
+            "func": "attr@160tCOG_ForecastHistory1H",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测",
+          "itemStyle": {
+            "size": 2
+          },
+          "lineStyle": {
+            "pattern": [
+              5,
+              5
+            ],
+            "width": 1
+          },
+          "data": {
+            "func": "attr@160tCOG_Forecast1H",
+            "value": []
+          }
+        }
+      ],
+      "xAxis": [
+        {
+          "axisLabel": {
+            "rotate": 0,
+            "show": false
+          },
+          "axisTick": {
+            "show": false
+          }
+        }
+      ],
+      "yAxis": [
+        {
+          "splitLine": {
+            "pattern": [
+              4,
+              2
+            ]
+          },
+          "axisLine": {
+            "show": false
+          },
+          "axisLabel": {
+            "show": true,
+            "font": "12px arial",
+            "color": "rgb(222,222,222)"
+          }
+        }
+      ],
+      "colors": [
+        "rgb(222,82,82)",
+        "rgb(93,217,174)",
+        "#FEB64D",
+        "rgb(241,125,164)",
+        "rgb(135,144,204)",
+        "rgb(124,145,155)",
+        "rgb(48,242,120)",
+        "rgb(212,0,0)",
+        "#32D3EB",
+        "#c4ccd3"
+      ]
+    },
+    {
+      "type": "text",
+      "text": "高炉煤气",
+      "color": "rgba(255,255,255,0.9)",
+      "font": "10px arial, sans-serif",
+      "pixelPerfect": true,
+      "state": "state1",
+      "rect": [
+        299.81348,
+        26.16365,
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "text",
+      "text": "焦炉煤气",
+      "color": "rgba(255,255,255,0.9)",
+      "font": "10px arial, sans-serif",
+      "pixelPerfect": true,
+      "state": "state1",
+      "rect": [
+        299.81348,
+        131.16365,
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "components/ht/chart/timeAxisChart.json",
+      "state": "state2",
+      "displayName": "timeAxisChart",
+      "rect": [
+        0.52332,
+        26.16465,
+        347.47668,
+        86.83535
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onScroll.apply(this, arguments);\n}",
+      "series": [
+        {
+          "type": "line",
+          "name": "实际",
+          "itemStyle": {
+            "size": 1
+          },
+          "data": {
+            "func": "attr@110tBFG_reality",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测历史",
+          "itemStyle": {
+            "size": 2
+          },
+          "data": {
+            "func": "attr@110tBFG_ForecastHistory1H",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测",
+          "itemStyle": {
+            "size": 2
+          },
+          "lineStyle": {
+            "pattern": [
+              5,
+              5
+            ],
+            "width": 1
+          },
+          "data": {
+            "func": "attr@110tBFG_Forecast1H",
+            "value": []
+          }
+        }
+      ],
+      "xAxis": [
+        {
+          "axisLabel": {
+            "rotate": 0,
+            "show": false
+          },
+          "axisTick": {
+            "show": false
+          }
+        }
+      ],
+      "yAxis": [
+        {
+          "splitLine": {
+            "pattern": [
+              4,
+              2
+            ]
+          },
+          "axisLine": {
+            "show": false
+          },
+          "axisLabel": {
+            "show": true,
+            "font": "12px arial",
+            "color": "rgb(222,222,222)"
+          }
+        }
+      ],
+      "colors": [
+        "rgb(222,82,82)",
+        "rgb(93,217,174)",
+        "#FEB64D",
+        "rgb(241,125,164)",
+        "rgb(135,144,204)",
+        "rgb(124,145,155)",
+        "rgb(48,242,120)",
+        "rgb(212,0,0)",
+        "#32D3EB",
+        "#c4ccd3"
+      ]
+    },
+    {
+      "type": "components/ht/chart/timeAxisChart.json",
+      "state": "state2",
+      "displayName": "timeAxisChart",
+      "rect": [
+        0.52332,
+        131.16465,
+        347.47668,
+        86.83535
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onScroll.apply(this, arguments);\n}",
+      "series": [
+        {
+          "type": "line",
+          "name": "实际",
+          "itemStyle": {
+            "size": 1
+          },
+          "data": {
+            "func": "attr@110tCOG_reality",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测历史",
+          "itemStyle": {
+            "size": 2
+          },
+          "data": {
+            "func": "attr@110tCOG_ForecastHistory1H",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测",
+          "itemStyle": {
+            "size": 2
+          },
+          "lineStyle": {
+            "pattern": [
+              5,
+              5
+            ],
+            "width": 1
+          },
+          "data": {
+            "func": "attr@110tCOG_Forecast1H",
+            "value": []
+          }
+        }
+      ],
+      "xAxis": [
+        {
+          "axisLabel": {
+            "rotate": 0,
+            "show": false
+          },
+          "axisTick": {
+            "show": false
+          }
+        }
+      ],
+      "yAxis": [
+        {
+          "splitLine": {
+            "pattern": [
+              4,
+              2
+            ]
+          },
+          "axisLine": {
+            "show": false
+          },
+          "axisLabel": {
+            "show": true,
+            "font": "12px arial",
+            "color": "rgb(222,222,222)"
+          }
+        }
+      ],
+      "colors": [
+        "rgb(222,82,82)",
+        "rgb(93,217,174)",
+        "#FEB64D",
+        "rgb(241,125,164)",
+        "rgb(135,144,204)",
+        "rgb(124,145,155)",
+        "rgb(48,242,120)",
+        "rgb(212,0,0)",
+        "#32D3EB",
+        "#c4ccd3"
+      ]
+    },
+    {
+      "type": "text",
+      "text": "高炉煤气",
+      "color": "rgba(255,255,255,0.9)",
+      "font": "10px arial, sans-serif",
+      "pixelPerfect": true,
+      "state": "state2",
+      "rect": [
+        299.81348,
+        26.16365,
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "text",
+      "text": "焦炉煤气",
+      "color": "rgba(255,255,255,0.9)",
+      "font": "10px arial, sans-serif",
+      "pixelPerfect": true,
+      "state": "state2",
+      "rect": [
+        299.81348,
+        131.16365,
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "components/ht/chart/timeAxisChart.json",
+      "state": "state3",
+      "displayName": "timeAxisChart",
+      "rect": [
+        0.52332,
+        26.16465,
+        347.47668,
+        86.83535
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onScroll.apply(this, arguments);\n}",
+      "series": [
+        {
+          "type": "line",
+          "name": "实际",
+          "itemStyle": {
+            "size": 1
+          },
+          "data": {
+            "func": "attr@75tBFG_reality",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测历史",
+          "itemStyle": {
+            "size": 2
+          },
+          "data": {
+            "func": "attr@75tBFG_ForecastHistory1H",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测",
+          "itemStyle": {
+            "size": 2
+          },
+          "lineStyle": {
+            "pattern": [
+              5,
+              5
+            ],
+            "width": 1
+          },
+          "data": {
+            "func": "attr@75tBFG_Forecast1H",
+            "value": []
+          }
+        }
+      ],
+      "xAxis": [
+        {
+          "axisLabel": {
+            "rotate": 0,
+            "show": false
+          },
+          "axisTick": {
+            "show": false
+          }
+        }
+      ],
+      "yAxis": [
+        {
+          "splitLine": {
+            "pattern": [
+              4,
+              2
+            ]
+          },
+          "axisLine": {
+            "show": false
+          },
+          "axisLabel": {
+            "show": true,
+            "font": "12px arial",
+            "color": "rgb(222,222,222)"
+          }
+        }
+      ],
+      "colors": [
+        "rgb(222,82,82)",
+        "rgb(93,217,174)",
+        "#FEB64D",
+        "rgb(241,125,164)",
+        "rgb(135,144,204)",
+        "rgb(124,145,155)",
+        "rgb(48,242,120)",
+        "rgb(212,0,0)",
+        "#32D3EB",
+        "#c4ccd3"
+      ]
+    },
+    {
+      "type": "components/ht/chart/timeAxisChart.json",
+      "state": "state3",
+      "displayName": "timeAxisChart",
+      "rect": [
+        0.52332,
+        131.16465,
+        347.47668,
+        86.83535
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onScroll.apply(this, arguments);\n}",
+      "series": [
+        {
+          "type": "line",
+          "name": "实际",
+          "itemStyle": {
+            "size": 1
+          },
+          "data": {
+            "func": "attr@75tCOG_reality",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测历史",
+          "itemStyle": {
+            "size": 2
+          },
+          "data": {
+            "func": "attr@75tCOG_ForecastHistory1H",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测",
+          "itemStyle": {
+            "size": 2
+          },
+          "lineStyle": {
+            "pattern": [
+              5,
+              5
+            ],
+            "width": 1
+          },
+          "data": {
+            "func": "attr@75tCOG_Forecast1H",
+            "value": []
+          }
+        }
+      ],
+      "xAxis": [
+        {
+          "axisLabel": {
+            "rotate": 0,
+            "show": false
+          },
+          "axisTick": {
+            "show": false
+          }
+        }
+      ],
+      "yAxis": [
+        {
+          "splitLine": {
+            "pattern": [
+              4,
+              2
+            ]
+          },
+          "axisLine": {
+            "show": false
+          },
+          "axisLabel": {
+            "show": true,
+            "font": "12px arial",
+            "color": "rgb(222,222,222)"
+          }
+        }
+      ],
+      "colors": [
+        "rgb(222,82,82)",
+        "rgb(93,217,174)",
+        "#FEB64D",
+        "rgb(241,125,164)",
+        "rgb(135,144,204)",
+        "rgb(124,145,155)",
+        "rgb(48,242,120)",
+        "rgb(212,0,0)",
+        "#32D3EB",
+        "#c4ccd3"
+      ]
+    },
+    {
+      "type": "text",
+      "text": "高炉煤气",
+      "color": "rgba(255,255,255,0.9)",
+      "font": "10px arial, sans-serif",
+      "pixelPerfect": true,
+      "state": "state3",
+      "rect": [
+        299.81348,
+        26.16365,
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "text",
+      "text": "焦炉煤气",
+      "color": "rgba(255,255,255,0.9)",
+      "font": "10px arial, sans-serif",
+      "pixelPerfect": true,
+      "state": "state3",
+      "rect": [
+        299.81348,
+        131.16365,
+        0.001,
+        0.001
+      ]
+    }
+  ]
+}

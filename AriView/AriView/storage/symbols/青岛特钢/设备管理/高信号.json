@@ -1,0 +1,18 @@
+{
+  "modified": "Fri Mar 07 2025 10:16:45 GMT+0800 (中国标准时间)",
+  "width": 65.77664,
+  "height": 39.17843,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": "rgb(4,0,255)",
+      "borderWidthAbsolute": true,
+      "rect": [
+        0,
+        0,
+        65.77664,
+        39.17843
+      ]
+    }
+  ]
+}

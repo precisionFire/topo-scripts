@@ -1,0 +1,93 @@
+{
+  "modified": "Fri Sep 26 2025 22:18:13 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "st",
+      "valueType": "String",
+      "name": "开关状态"
+    }
+  ],
+  "width": 30,
+  "height": 30,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": {
+        "func": "__ht__function(data, view) {\nconst value = data.a('st');\r\n\r\n// 匹配 true、\"true\"、\"True\"\r\nif (value === true || value === \"true\" || value === \"True\") {\r\n    return 'rgb(0,204,133)'; // 红色\r\n}\r\n// 匹配 false、\"false\"、\"False\"\r\nelse if (value === false || value === \"false\" || value === \"False\") {\r\n    return 'rgb(255,0,0)'; // 绿色\r\n}\r\n// （可选）处理既不是True也不是False的情况\r\nelse {\r\n    // 比如返回默认颜色或其他逻辑\r\n    return 'rgb(168,168,168)'; // 示例：白色\r\n}\n}",
+        "value": "rgb(168,168,168)"
+      },
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "gradient": "radial.center",
+      "gradientColor": "rgb(247,247,247)",
+      "layoutH": "scale",
+      "layoutV": "scale",
+      "rect": [
+        2.5,
+        2.5,
+        25,
+        25
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(255,255,255,0.57)",
+      "borderColor": "#979797",
+      "gradient": "linear.east",
+      "gradientColor": "rgba(255,255,255,0.00)",
+      "layoutH": "scale",
+      "layoutV": "scale",
+      "prefix": "reflect",
+      "points": [
+        10.10185,
+        6.76951,
+        10.10185,
+        5.10574,
+        13.56013,
+        4.00457,
+        14.07886,
+        5.63116,
+        10.60851,
+        7.53844,
+        14.07886,
+        6.22674,
+        14.07886,
+        7.53844,
+        16.59528,
+        8.4999,
+        20.06346,
+        10.05269,
+        22.46997,
+        13.0811,
+        24.41939,
+        13.0811,
+        24.41939,
+        8.4999,
+        21.83809,
+        5.49549,
+        15.2825,
+        4.00457,
+        16.59528,
+        8.4999
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    }
+  ]
+}

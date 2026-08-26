@@ -1,0 +1,42 @@
+{
+  "modified": "Sun May 25 2025 14:38:54 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "RollPieceID",
+      "valueType": "String"
+    }
+  ],
+  "width": 140,
+  "height": 15,
+  "fitSize": true,
+  "interactive": true,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": "rgb(186,112,0)",
+      "borderColor": "rgb(61,61,61)",
+      "pixelPerfect": true,
+      "rect": [
+        0,
+        0,
+        140,
+        15
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@RollPieceID",
+        "value": "文本"
+      },
+      "color": "rgb(255,255,255)",
+      "font": "bold 14px sans-serif, Arial",
+      "rect": [
+        0,
+        7.51094,
+        0.001,
+        0.001
+      ]
+    }
+  ]
+}

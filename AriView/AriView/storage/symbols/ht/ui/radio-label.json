@@ -1,0 +1,140 @@
+{
+  "modified": "Wed Apr 09 2025 15:39:14 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "ht.group",
+      "valueType": "String",
+      "name": "分组"
+    },
+    {
+      "attr": "ht.value",
+      "valueType": "String",
+      "name": "属性值"
+    },
+    {
+      "attr": "ht.label",
+      "valueType": "String",
+      "name": "文本"
+    },
+    {
+      "attr": "ht.checked",
+      "valueType": "Boolean",
+      "name": "选中"
+    },
+    {
+      "attr": "ht.disabled",
+      "valueType": "Boolean",
+      "name": "禁用"
+    },
+    {
+      "attr": "ht.normalColor",
+      "valueType": "Color",
+      "name": "颜色"
+    },
+    {
+      "attr": "ht.background",
+      "valueType": "Color",
+      "name": "背景"
+    },
+    {
+      "attr": "ht.activeColor",
+      "valueType": "Color",
+      "name": "选中颜色"
+    },
+    {
+      "attr": "ht.onChange",
+      "valueType": "Function",
+      "defaultValue": "__ht__function(val, data, view) {\n\n}",
+      "name": "改变事件",
+      "extraInfo": {
+        "arguments": [
+          "value",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "text.color",
+      "valueType": "Color",
+      "name": "文本颜色"
+    },
+    {
+      "attr": "text.font",
+      "valueType": "Font",
+      "name": "字体"
+    }
+  ],
+  "snapshotURL": "symbols/ht/snapshot/radio-label.json",
+  "width": 80,
+  "height": 20,
+  "boundExtend": 2,
+  "fitSize": true,
+  "interactive": true,
+  "disableSelectedBorder": true,
+  "pixelPerfect": false,
+  "attachStyle": "close",
+  "comps": [
+    {
+      "type": "components/ht/ui/radio.json",
+      "layoutH": "leftright",
+      "layoutV": "topbottom",
+      "displayName": "radio",
+      "rect": [
+        0,
+        2.5,
+        15,
+        15
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.radioInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.radioInteractor.onUp.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.radioInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.radioInteractor.onLeave.apply(this, arguments);\n}",
+      "checked": {
+        "func": "attr@ht.checked"
+      },
+      "group": {
+        "func": "attr@ht.group"
+      },
+      "value": {
+        "func": "attr@ht.value"
+      },
+      "disabled": {
+        "func": "attr@ht.disabled"
+      },
+      "normalColor": {
+        "func": "attr@ht.normalColor"
+      },
+      "background": {
+        "func": "attr@ht.background"
+      },
+      "activeColor": {
+        "func": "attr@ht.activeColor"
+      },
+      "onChange": {
+        "func": "attr@ht.onChange"
+      }
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@ht.label",
+        "value": "文本"
+      },
+      "color": {
+        "func": "attr@text.color"
+      },
+      "font": {
+        "func": "attr@text.font"
+      },
+      "layoutH": "right",
+      "layoutV": "topbottom",
+      "rect": [
+        20,
+        0,
+        60,
+        20
+      ]
+    }
+  ]
+}

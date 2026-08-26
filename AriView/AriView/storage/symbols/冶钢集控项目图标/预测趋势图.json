@@ -1,0 +1,131 @@
+{
+  "modified": "Fri Nov 10 2023 10:38:18 GMT+0800 (中国标准时间)",
+  "background": "rgb(19,38,61)",
+  "dataBindings": [
+    {
+      "attr": "reality",
+      "valueType": "Object",
+      "name": "实际"
+    },
+    {
+      "attr": "ForecastHistory1H",
+      "valueType": "Object",
+      "name": "预测历史1H"
+    },
+    {
+      "attr": "Forecast1H",
+      "valueType": "Object",
+      "name": "预测未来1H"
+    }
+  ],
+  "width": 347.47668,
+  "height": 86.83535,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "components/ht/chart/timeAxisChart.json",
+      "layoutH": "leftright",
+      "layoutV": "topbottom",
+      "displayName": "timeAxisChart",
+      "rect": [
+        0,
+        0,
+        347.47668,
+        86.83535
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onScroll.apply(this, arguments);\n}",
+      "series": [
+        {
+          "type": "line",
+          "name": "实际",
+          "itemStyle": {
+            "size": 1
+          },
+          "data": {
+            "func": "attr@reality",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测历史1H",
+          "itemStyle": {
+            "size": 2
+          },
+          "data": {
+            "func": "attr@ForecastHistory1H",
+            "value": []
+          }
+        },
+        {
+          "type": "line",
+          "name": "预测未来1H",
+          "itemStyle": {
+            "size": 2
+          },
+          "lineStyle": {
+            "pattern": [
+              5,
+              5
+            ],
+            "width": 2
+          },
+          "data": {
+            "func": "attr@Forecast1H",
+            "value": []
+          }
+        }
+      ],
+      "xAxis": [
+        {
+          "axisLabel": {
+            "rotate": 0,
+            "show": false
+          },
+          "axisTick": {
+            "show": false
+          }
+        }
+      ],
+      "yAxis": [
+        {
+          "splitLine": {
+            "pattern": [
+              4,
+              2
+            ]
+          },
+          "axisLine": {
+            "show": false
+          },
+          "axisLabel": {
+            "show": true,
+            "font": "12px arial",
+            "color": "rgb(222,222,222)"
+          }
+        }
+      ],
+      "colors": [
+        "rgb(222,82,82)",
+        "rgb(93,217,174)",
+        "#FEB64D",
+        "rgb(241,125,164)",
+        "rgb(135,144,204)",
+        "rgb(124,145,155)",
+        "rgb(48,242,120)",
+        "rgb(212,0,0)",
+        "#32D3EB",
+        "#c4ccd3"
+      ]
+    }
+  ]
+}

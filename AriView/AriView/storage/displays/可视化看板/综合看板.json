@@ -1,0 +1,2889 @@
+{
+  "v": "7.7.0",
+  "p": {
+    "layers": [
+      {
+        "name": "0",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "m_top",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "trend",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      }
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "pannable": true,
+    "zoomable": false,
+    "rectSelectable": false
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 5759,
+      "p": {
+        "displayName": "img_bg",
+        "image": "assets/冶钢集控项目icon/煤气调度/img_bg.jpg",
+        "position": {
+          "x": 960,
+          "y": 507
+        },
+        "width": 1920,
+        "height": 1014
+      },
+      "s": {
+        "2d.movable": false,
+        "text.font": "14px arial, sans-serif",
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5760,
+      "p": {
+        "position": {
+          "x": 266.94251,
+          "y": 900.62009
+        },
+        "width": 499,
+        "height": 181.5583,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(0,0,0,0.2)",
+        "shape.border.width": 1,
+        "shape.border.color": "rgba(255,255,255,0.2)",
+        "shape.border.width.absolute": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5761,
+      "p": {
+        "displayName": "Board_Header_img",
+        "image": "assets/冶钢看板/综合看板/Board_Header_img1.png",
+        "rotation": 6.28319,
+        "position": {
+          "x": 266.94264,
+          "y": 30.75592
+        },
+        "width": 499,
+        "height": 27
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5762,
+      "p": {
+        "displayName": "Board_Header_img",
+        "image": "assets/冶钢看板/综合看板/Board_Header_img1.png",
+        "rotation": 6.28319,
+        "position": {
+          "x": 266.94264,
+          "y": 303.79262
+        },
+        "width": 499,
+        "height": 27,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5763,
+      "p": {
+        "displayName": "Board_Header_img",
+        "image": "assets/冶钢看板/综合看板/Board_Header_img1.png",
+        "rotation": 6.28319,
+        "position": {
+          "x": 1655.09697,
+          "y": 30.75592
+        },
+        "width": 499,
+        "height": 27,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5764,
+      "p": {
+        "position": {
+          "x": 1652.09697,
+          "y": 226.15291
+        },
+        "width": 499,
+        "height": 360,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(0,0,0,0.2)",
+        "shape.border.width": 1,
+        "shape.border.color": "rgba(255,255,255,0.2)",
+        "shape.border.width.absolute": true,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5765,
+      "p": {
+        "displayName": "Board_Header_img",
+        "image": "assets/冶钢看板/综合看板/Board_Header_img1.png",
+        "rotation": 6.28319,
+        "position": {
+          "x": 266.94251,
+          "y": 581.12123
+        },
+        "width": 499,
+        "height": 27,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5766,
+      "p": {
+        "position": {
+          "x": 266.94251,
+          "y": 685.40155
+        },
+        "width": 499,
+        "height": 181.5583,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(0,0,0,0.2)",
+        "shape.border.width": 1,
+        "shape.border.color": "rgba(255,255,255,0.2)",
+        "shape.border.width.absolute": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5767,
+      "p": {
+        "displayName": "Board_img_1",
+        "image": "assets/冶钢看板/综合看板/Board_img_1.svg",
+        "position": {
+          "x": 1244.21828,
+          "y": 74.98965
+        },
+        "width": 260.3898,
+        "height": 88.53253
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5768,
+      "p": {
+        "displayName": "Board_img_2",
+        "image": "assets/冶钢看板/综合看板/Board_img_2.svg",
+        "position": {
+          "x": 960.03892,
+          "y": 74.98965
+        },
+        "width": 260.3898,
+        "height": 88.53253
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5769,
+      "p": {
+        "displayName": "Board_img_3",
+        "image": "assets/冶钢看板/综合看板/Board_img_3.svg",
+        "position": {
+          "x": 674.85956,
+          "y": 74.98965
+        },
+        "width": 260.3898,
+        "height": 88.53253
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5770,
+      "p": {
+        "displayName": "Board_img_5",
+        "image": "assets/冶钢看板/综合看板/Board_img_5.svg",
+        "position": {
+          "x": 949.5,
+          "y": 377.94056
+        },
+        "width": 812.35464,
+        "height": 81.23546
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5771,
+      "p": {
+        "displayName": "Board_img_4",
+        "image": "assets/冶钢看板/综合看板/Board_img_4.svg",
+        "position": {
+          "x": 636.56627,
+          "y": 325.12521
+        },
+        "width": 119,
+        "height": 131
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5772,
+      "p": {
+        "displayName": "Board_img_4",
+        "image": "assets/冶钢看板/综合看板/Board_img_4.svg",
+        "position": {
+          "x": 793.14143,
+          "y": 325.12521
+        },
+        "width": 119,
+        "height": 131,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5773,
+      "p": {
+        "displayName": "Board_img_4",
+        "image": "assets/冶钢看板/综合看板/Board_img_4.svg",
+        "position": {
+          "x": 949.71659,
+          "y": 325.12521
+        },
+        "width": 119,
+        "height": 131,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5774,
+      "p": {
+        "displayName": "Board_img_4",
+        "image": "assets/冶钢看板/综合看板/Board_img_4.svg",
+        "position": {
+          "x": 1106.29176,
+          "y": 325.12521
+        },
+        "width": 119,
+        "height": 131,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5775,
+      "p": {
+        "displayName": "Board_img_4",
+        "image": "assets/冶钢看板/综合看板/Board_img_4.svg",
+        "position": {
+          "x": 1262.86692,
+          "y": 325.12521
+        },
+        "width": 119,
+        "height": 131,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5776,
+      "p": {
+        "displayName": "Board_img_5",
+        "image": "assets/冶钢看板/综合看板/Board_img_5.svg",
+        "position": {
+          "x": 949.5,
+          "y": 636.30761
+        },
+        "width": 812.35464,
+        "height": 81.23546,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5777,
+      "p": {
+        "displayName": "Board_img_4",
+        "image": "assets/冶钢看板/综合看板/Board_img_4.svg",
+        "position": {
+          "x": 636.56627,
+          "y": 583.49226
+        },
+        "width": 119,
+        "height": 131,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5778,
+      "p": {
+        "displayName": "Board_img_4",
+        "image": "assets/冶钢看板/综合看板/Board_img_4.svg",
+        "position": {
+          "x": 793.14143,
+          "y": 583.49226
+        },
+        "width": 119,
+        "height": 131,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5779,
+      "p": {
+        "displayName": "Board_img_4",
+        "image": "assets/冶钢看板/综合看板/Board_img_4.svg",
+        "position": {
+          "x": 949.71659,
+          "y": 583.49226
+        },
+        "width": 119,
+        "height": 131,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5780,
+      "p": {
+        "displayName": "Board_img_4",
+        "image": "assets/冶钢看板/综合看板/Board_img_4.svg",
+        "position": {
+          "x": 1106.29176,
+          "y": 583.49226
+        },
+        "width": 119,
+        "height": 131,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5781,
+      "p": {
+        "displayName": "Board_img_4",
+        "image": "assets/冶钢看板/综合看板/Board_img_4.svg",
+        "position": {
+          "x": 1262.86692,
+          "y": 583.49226
+        },
+        "width": 119,
+        "height": 131,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5782,
+      "p": {
+        "displayName": "Board_icon_2",
+        "image": "assets/冶钢看板/综合看板/Board_icon_2.svg",
+        "position": {
+          "x": 1259.79449,
+          "y": 343.46079
+        },
+        "width": 36.97007,
+        "height": 49.95955
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5783,
+      "p": {
+        "displayName": "Board_icon_4",
+        "image": "assets/冶钢看板/综合看板/Board_icon_4.svg",
+        "position": {
+          "x": 1258.21259,
+          "y": 602.44085
+        },
+        "width": 37.91455,
+        "height": 49.45375
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5784,
+      "p": {
+        "displayName": "Board_icon_6",
+        "image": "assets/冶钢看板/综合看板/Board_icon_6.svg",
+        "position": {
+          "x": 949.71659,
+          "y": 347.04121
+        },
+        "width": 36.73298,
+        "height": 51.49483
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5785,
+      "p": {
+        "displayName": "Board_icon_5",
+        "image": "assets/冶钢看板/综合看板/Board_icon_5.svg",
+        "position": {
+          "x": 1107.93102,
+          "y": 349.61278
+        },
+        "width": 45.4087,
+        "height": 48.65218
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5786,
+      "p": {
+        "displayName": "Board_icon_1",
+        "image": "assets/冶钢看板/综合看板/Board_icon_1.svg",
+        "position": {
+          "x": 1106.29176,
+          "y": 607.7751
+        },
+        "width": 33.02466,
+        "height": 48.56568
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5787,
+      "p": {
+        "displayName": "Board_icon_3",
+        "image": "assets/冶钢看板/综合看板/Board_icon_3.svg",
+        "position": {
+          "x": 634.68972,
+          "y": 607.77284
+        },
+        "width": 36.25901,
+        "height": 48.56118
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5788,
+      "p": {
+        "displayName": "Board_icon_7",
+        "image": "assets/冶钢看板/综合看板/Board_icon_7.svg",
+        "position": {
+          "x": 793.5289,
+          "y": 347.97329
+        },
+        "width": 28.22937,
+        "height": 56.45874
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5789,
+      "p": {
+        "displayName": "Board_icon_8",
+        "image": "assets/冶钢看板/综合看板/Board_icon_8.svg",
+        "position": {
+          "x": 636.56627,
+          "y": 346.17077
+        },
+        "width": 32.50592,
+        "height": 49.75396
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5790,
+      "p": {
+        "displayName": "Board_icon_3",
+        "image": "assets/冶钢看板/综合看板/Board_icon_3.svg",
+        "position": {
+          "x": 793.14143,
+          "y": 607.77284
+        },
+        "width": 36.25901,
+        "height": 48.56118,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5791,
+      "p": {
+        "displayName": "Board_icon_3",
+        "image": "assets/冶钢看板/综合看板/Board_icon_3.svg",
+        "position": {
+          "x": 949.47961,
+          "y": 607.77284
+        },
+        "width": 36.25901,
+        "height": 48.56118,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5792,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 565.22154,
+          "y": 44.25642
+        },
+        "width": 0.001,
+        "height": 0.001
+      },
+      "s": {
+        "text": "吨钢综合能耗(kgce/t)",
+        "text.color": "rgb(30,152,226)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5793,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 852.64093,
+          "y": 44.25642
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "吨钢碳排放量(tCO2/t)",
+        "text.color": "rgb(255,240,37)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5794,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1138.9428,
+          "y": 44.25642
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "吨钢能源成本(元/t)",
+        "text.color": "rgb(2,191,186)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5795,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 565.22154,
+          "y": 74.98915
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 28px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5796,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 696.06677,
+          "y": 74.98915
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 28px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5797,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 567.22154,
+          "y": 95.2452
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "全月",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5798,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 698.06777,
+          "y": 95.2452
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "昨日",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5799,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 852.64093,
+          "y": 74.98915
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(255,240,37)",
+        "text.font": "bold 28px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5800,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 983.48616,
+          "y": 74.98915
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(255,240,37)",
+        "text.font": "bold 28px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5801,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 854.64093,
+          "y": 95.2452
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "全月",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5802,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 985.48716,
+          "y": 95.2452
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "昨日",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5803,
+      "p": {
+        "position": {
+          "x": 958.60645,
+          "y": 80.07148
+        },
+        "width": 0,
+        "height": 39.07139,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 958.60645,
+              "y": 60.53578
+            },
+            {
+              "x": 958.60645,
+              "y": 99.60717
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(151,151,151,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5804,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1136.9438,
+          "y": 74.98915
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(2,191,186)",
+        "text.font": "bold 28px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5805,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1267.78903,
+          "y": 74.98915
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(2,191,186)",
+        "text.font": "bold 28px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5806,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1138.9438,
+          "y": 95.2452
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "全月",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5807,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1269.79003,
+          "y": 95.2452
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "昨日",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5808,
+      "p": {
+        "position": {
+          "x": 1242.90932,
+          "y": 80.07148
+        },
+        "width": 0,
+        "height": 39.07139,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1242.90932,
+              "y": 60.53578
+            },
+            {
+              "x": 1242.90932,
+              "y": 99.60717
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(151,151,151,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5809,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 890.21709,
+          "y": 197.20416
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "昨 日 能 源 消耗",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "20px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5810,
+      "p": {
+        "position": {
+          "x": 708.87365,
+          "y": 197.20366
+        },
+        "width": 315.92286,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 866.83508,
+              "y": 197.20366
+            },
+            {
+              "x": 550.91222,
+              "y": 197.20366
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(30,152,226)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5811,
+      "p": {
+        "position": {
+          "x": 1216.45175,
+          "y": 197.20366
+        },
+        "width": 315.92286,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1374.41318,
+              "y": 197.20366
+            },
+            {
+              "x": 1058.49032,
+              "y": 197.20366
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(30,152,226)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5812,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 604.68706,
+          "y": 249.68705
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 23px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5813,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 627.95963,
+          "y": 271.43878
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "电",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5814,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 604.68806,
+          "y": 288.63858
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "（万kWh)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5815,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 761.37564,
+          "y": 249.68705
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 23px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5816,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 769.0566,
+          "y": 271.43878
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "高炉煤气",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5817,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 766.67838,
+          "y": 288.63858
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "（万m3)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5818,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 916.66864,
+          "y": 249.68705
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 23px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5819,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 924.3496,
+          "y": 271.43878
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "转炉煤气",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5820,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 921.97138,
+          "y": 288.63858
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "（万m3)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5821,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1074.5452,
+          "y": 249.68705
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 23px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5822,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1082.22616,
+          "y": 271.43878
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "焦炉煤气",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5823,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1079.84794,
+          "y": 288.63858
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "（万m3)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5824,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1231.57386,
+          "y": 249.68705
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 23px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5825,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1239.25482,
+          "y": 271.43878
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "天然气",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5826,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1236.8766,
+          "y": 288.63858
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "（万m3)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5827,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 604.68706,
+          "y": 508.67318
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 23px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5828,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 620.31381,
+          "y": 530.42491
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "氧气",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5829,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 604.68806,
+          "y": 547.62471
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "（万kWh)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5830,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 761.37564,
+          "y": 508.67318
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 23px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5831,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 779.41472,
+          "y": 530.42491
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "氮气",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5832,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 766.67838,
+          "y": 547.62471
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "（万m3)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5833,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 916.66864,
+          "y": 508.67318
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 23px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5834,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 935.3554,
+          "y": 530.42491
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "氩气",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5835,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 921.97138,
+          "y": 547.62471
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "（万m3)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5836,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1074.5452,
+          "y": 508.67318
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 23px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5837,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1082.22616,
+          "y": 530.42491
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "压缩空气",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5838,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1079.84794,
+          "y": 547.62471
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "（万m3)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5839,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1231.57386,
+          "y": 508.67318
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "519.3",
+        "text.color": "rgb(30,152,226)",
+        "text.font": "bold 23px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5840,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1236.8766,
+          "y": 547.62471
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "（万m3)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5841,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1246.21878,
+          "y": 530.42491
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "水源水",
+        "text.color": "rgba(255,255,255,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5842,
+      "p": {
+        "displayName": "Board_Header_img",
+        "image": "assets/冶钢看板/综合看板/Board_Header_img1.png",
+        "rotation": 6.28319,
+        "position": {
+          "x": 266.94251,
+          "y": 796.33977
+        },
+        "width": 499,
+        "height": 27,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5843,
+      "p": {
+        "displayName": "Board_Header_img2",
+        "image": "assets/冶钢看板/综合看板/Board_Header_img2.png",
+        "position": {
+          "x": 960.03892,
+          "y": 723.77048
+        },
+        "width": 855.33829,
+        "height": 26.8763
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5844,
+      "p": {
+        "displayName": "Board_Header_img",
+        "image": "assets/冶钢看板/综合看板/Board_Header_img1.png",
+        "rotation": 6.28319,
+        "position": {
+          "x": 1653.59694,
+          "y": 430.40546
+        },
+        "width": 499,
+        "height": 27,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5845,
+      "p": {
+        "position": {
+          "x": 960.03892,
+          "y": 865.39924
+        },
+        "width": 855.33829,
+        "height": 252,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(0,0,0,0.2)",
+        "shape.border.width": 1,
+        "shape.border.color": "rgba(255,255,255,0.2)",
+        "shape.border.width.absolute": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5846,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 51.56949,
+          "y": 30.75642
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "自发电(万kWh)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5847,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 51.56949,
+          "y": 303.79312
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "分时用电(万kWh)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5848,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1438.22379,
+          "y": 430.52966
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "工序能耗 (kgce/t)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5849,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1437.67236,
+          "y": 30.75642
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "各介质综合单耗 (m3/t)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5850,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 52.5179,
+          "y": 581.12073
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "煤气回收趋势 (m3/t)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5851,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 52.5179,
+          "y": 796.21557
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "煤气放散趋势 (m3/t)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5852,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 209.34531,
+          "y": 619.19838
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "吨铁BFG回收",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "10px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5853,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 308.4702,
+          "y": 619.19938
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "吨钢LDG回收",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "10px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5854,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 403.86892,
+          "y": 619.19938
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "吨焦COG回收",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "10px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5855,
+      "p": {
+        "position": {
+          "x": 286.98684,
+          "y": 619.19787
+        },
+        "width": 11,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 281.48684,
+              "y": 619.19787
+            },
+            {
+              "x": 292.48684,
+              "y": 619.19787
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(78,185,255)",
+        "shape.border.width": 3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5856,
+      "p": {
+        "position": {
+          "x": 384.98214,
+          "y": 619.19787
+        },
+        "width": 11,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 379.48214,
+              "y": 619.19787
+            },
+            {
+              "x": 390.48214,
+              "y": 619.19787
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(251,0,69)",
+        "shape.border.width": 3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5857,
+      "p": {
+        "position": {
+          "x": 481.97098,
+          "y": 619.19787
+        },
+        "width": 11,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 476.47098,
+              "y": 619.19787
+            },
+            {
+              "x": 487.47098,
+              "y": 619.19787
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(255,240,37)",
+        "shape.border.width": 3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5858,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 306.33415,
+          "y": 834.51198
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "高炉煤气放散",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "10px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5859,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 405.45904,
+          "y": 834.51298
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "焦炉煤气放散",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "10px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5860,
+      "p": {
+        "position": {
+          "x": 381.21375,
+          "y": 834.51148
+        },
+        "width": 11,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 375.71375,
+              "y": 834.51148
+            },
+            {
+              "x": 386.71375,
+              "y": 834.51148
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(78,185,255)",
+        "shape.border.width": 3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5861,
+      "p": {
+        "position": {
+          "x": 479.22214,
+          "y": 834.51148
+        },
+        "width": 11,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 473.72214,
+              "y": 834.51148
+            },
+            {
+              "x": 484.72214,
+              "y": 834.51148
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(251,0,69)",
+        "shape.border.width": 3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5862,
+      "p": {
+        "displayName": "GroupColumn",
+        "image": "symbols/可视化/echarts/ColumnCharts/GroupColumn2_DY_board.json",
+        "position": {
+          "x": 960.20991,
+          "y": 876.31259
+        },
+        "width": 831.0905,
+        "height": 212.95714
+      },
+      "s": {
+        "2d.movable": false
+      },
+      "a": {
+        "xAxis.data": [
+          "电",
+          "高炉煤气",
+          "焦炉煤气",
+          "混合煤气",
+          "天然气",
+          "氧气",
+          "氮气",
+          "氩气",
+          "压缩空气",
+          "水源水"
+        ],
+        "series0.data": [
+          120,
+          100,
+          150,
+          80,
+          70,
+          110,
+          130,
+          120,
+          110,
+          100
+        ],
+        "series1.data": [
+          120,
+          200,
+          150,
+          80,
+          70,
+          110,
+          130,
+          113,
+          90,
+          98
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5863,
+      "p": {
+        "displayName": "Bar1_DY_Board_ZongHe",
+        "image": "symbols/可视化/echarts/BarCharts/Bar1_DY_Board_ZongHe.json",
+        "position": {
+          "x": 1652.09697,
+          "y": 250.69881
+        },
+        "width": 470.02138,
+        "height": 310.90821
+      },
+      "s": {
+        "2d.movable": false
+      },
+      "a": {
+        "chart.backgroundColor": "rgba(255,255,255,0)",
+        "series0.data": [
+          150,
+          230,
+          224,
+          218,
+          135,
+          147,
+          260,
+          218,
+          218,
+          218
+        ],
+        "series1.data": [
+          120,
+          180,
+          210,
+          198,
+          133,
+          199,
+          23,
+          218,
+          218,
+          218
+        ],
+        "yAxis.data": [
+          "电",
+          "高炉煤气",
+          "转炉煤气",
+          "焦炉煤气",
+          "氧气",
+          "氮气",
+          "氩气",
+          "压缩空气",
+          "生产水",
+          "软水"
+        ]
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5864,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1775.6371,
+          "y": 68.53629
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "全月",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "10px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5865,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1831.71877,
+          "y": 68.53729
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "昨日",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "10px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5866,
+      "p": {
+        "position": {
+          "x": 1809.41143,
+          "y": 68.53579
+        },
+        "width": 11,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1803.91143,
+              "y": 68.53579
+            },
+            {
+              "x": 1814.91143,
+              "y": 68.53579
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(78,185,255)",
+        "shape.border.width": 3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5867,
+      "p": {
+        "position": {
+          "x": 1864.3766,
+          "y": 68.53579
+        },
+        "width": 11,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1858.8766,
+              "y": 68.53579
+            },
+            {
+              "x": 1869.8766,
+              "y": 68.53579
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(251,0,69)",
+        "shape.border.width": 3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5868,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1258.21309,
+          "y": 762.83452
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "全月",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "10px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5869,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 1314.29476,
+          "y": 762.83552
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "昨日",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "10px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5870,
+      "p": {
+        "position": {
+          "x": 1291.98742,
+          "y": 762.83402
+        },
+        "width": 11,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1286.48742,
+              "y": 762.83402
+            },
+            {
+              "x": 1297.48742,
+              "y": 762.83402
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(78,185,255)",
+        "shape.border.width": 3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 5871,
+      "p": {
+        "position": {
+          "x": 1346.95259,
+          "y": 762.83402
+        },
+        "width": 11,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1341.45259,
+              "y": 762.83402
+            },
+            {
+              "x": 1352.45259,
+              "y": 762.83402
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(251,0,69)",
+        "shape.border.width": 3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 5872,
+      "p": {
+        "displayName": "文本",
+        "position": {
+          "x": 567.22254,
+          "y": 723.83283
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "介质平衡率(kgce/t)",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5873,
+      "p": {
+        "displayName": "Area2_DY_board_ZongHe",
+        "image": "symbols/可视化/echarts/AreaCharts/Area2_DY_board_ZongHe.json",
+        "position": {
+          "x": 261.37562,
+          "y": 691.94035
+        },
+        "width": 446.69305,
+        "height": 155.78733
+      },
+      "s": {
+        "2d.movable": false
+      },
+      "a": {
+        "series1.data": [
+          30,
+          10,
+          20,
+          20,
+          33,
+          30,
+          20
+        ],
+        "series2.data": [
+          70,
+          90,
+          100,
+          60,
+          50,
+          70,
+          60
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5874,
+      "p": {
+        "displayName": "Area1_DY_board_ZongHe",
+        "image": "symbols/可视化/echarts/AreaCharts/Area1_DY_board_ZongHe.json",
+        "position": {
+          "x": 269.64855,
+          "y": 909.50274
+        },
+        "width": 447.99732,
+        "height": 149.97853
+      },
+      "s": {
+        "2d.movable": false
+      },
+      "a": {
+        "series1.data": [
+          70,
+          10,
+          100,
+          60,
+          50,
+          100,
+          110
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5875,
+      "p": {
+        "position": {
+          "x": 266.94264,
+          "y": 163.39504
+        },
+        "width": 499,
+        "height": 233.90896,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(0,0,0,0.2)",
+        "shape.border.width": 1,
+        "shape.border.color": "rgba(255,255,255,0.2)",
+        "shape.border.width.absolute": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5876,
+      "p": {
+        "position": {
+          "x": 266.94264,
+          "y": 434.24828
+        },
+        "width": 499,
+        "height": 233.90896,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(0,0,0,0.2)",
+        "shape.border.width": 1,
+        "shape.border.color": "rgba(255,255,255,0.2)",
+        "shape.border.width.absolute": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5877,
+      "p": {
+        "position": {
+          "x": 1653.597,
+          "y": 717.65294
+        },
+        "width": 495.99994,
+        "height": 547.4926,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(0,0,0,0.2)",
+        "shape.border.width": 1,
+        "shape.border.color": "rgba(255,255,255,0.2)",
+        "shape.border.width.absolute": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5878,
+      "p": {
+        "displayName": "table",
+        "image": "symbols/冶钢看板/table.json",
+        "position": {
+          "x": 1653.59694,
+          "y": 717.65294
+        },
+        "width": 496.00006,
+        "height": 547.4926,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "pixelPerfect": false
+      },
+      "a": {
+        "ht.headHeight": 40,
+        "ht.rowHeight": 30,
+        "ht.cellPadding": 6,
+        "ht.showHead": true,
+        "ht.dataSource": [
+          {
+            "key": "新焦化",
+            "desc": "饼图的半径, 数组的第一项是内半径, 第二项是外半径, 每一项的类型为 number, 如果设置值为0~1则按百分比分配，大于1代表绝对值",
+            "type": "array",
+            "defaultVaule": "[0, 0.25]"
+          },
+          {
+            "key": "265烧结",
+            "desc": "饼图的中心（圆心）坐标, 数组的第一项是横坐标, 第二项是纵坐标, 每一项的类型为 number, 如果设置值为0~1则按百分比分配大小，百分比为相对于宽高中较小的值，大于1代表绝对值",
+            "type": "array",
+            "defaultVaule": "[0.5, 0.5]"
+          },
+          {
+            "key": "220烧结",
+            "desc": "饼图图形颜色的取色板，itemstyle 没有传入 color 值时， 默认从 color 这个数组按顺序取颜色值",
+            "type": "array",
+            "defaultVaule": "[]"
+          },
+          {
+            "key": "1780高炉",
+            "desc": "起始角度",
+            "type": "number",
+            "defaultVaule": "0"
+          },
+          {
+            "key": "1280高炉",
+            "desc": "结束角度",
+            "type": "number",
+            "defaultVaule": "360"
+          },
+          {
+            "key": "转炉厂",
+            "desc": "最小扇区角度",
+            "type": "number",
+            "defaultVaule": "0"
+          },
+          {
+            "key": "转炉本体",
+            "desc": "是否展示成南丁格尔图, 通过半径区分数据大小。",
+            "type": "boolean",
+            "defaultVaule": "false"
+          },
+          {
+            "key": "大电炉",
+            "desc": "南丁格尔图最小半径",
+            "type": "number",
+            "defaultVaule": "0"
+          },
+          {
+            "key": "大电炉本体",
+            "desc": "系列名称",
+            "type": "string",
+            "defaultVaule": "饼图系列名"
+          },
+          {
+            "key": "小电炉",
+            "desc": "高亮扇区的偏移距离",
+            "type": "number",
+            "defaultVaule": "4"
+          },
+          {
+            "key": "电渣",
+            "desc": "提示框组件, 参数说明: \n  show: 是否显示提示框\n  formatter: 提示框内容格式, 字符串模板 模板变量有：（其它配置 formatter 格式相同, 可通过 <br> 或者 \\n 换行）\n    {a}：系列名\n    {b}：数据名\n    {c}：数据值\n    {d}：百分比",
+            "type": "object",
+            "defaultVaule": ""
+          },
+          {
+            "key": "750轧机",
+            "desc": "标签的视觉引导线, 分为\n  1. normal, 正常状态\n  2. emphasis, 高亮状态\n  每个状态参数相同, 参数说明:\n    show: 是否显示视觉引导线, 默认为 true\n    length: 视觉引导线第一段的长度\n    length2: 视觉引导项第二段的长度\n    formatter: 标签内容格式器\n    width: 引导线线宽\n    type: 引导线的类型\n    font: 文本字体\n    lineColor: 线颜色\n    textColor: 文本颜色",
+            "type": "object",
+            "defaultVaule": ""
+          },
+          {
+            "key": "650轧机",
+            "desc": "饼图文本标签, 分为\n  1. normal, 正常状态\n  2. emphasis, 高亮状态\n  每个状态参数相同, 参数说明:\n    show: 是否显示标签, 默认为 true\n    position: 标签的位置(inside | center)\n    color: 标签字体颜色\n    font: 标签字体样式\n    formatter: 标签内容格式器",
+            "type": "object",
+            "defaultVaule": ""
+          },
+          {
+            "key": "热处理",
+            "desc": "饼图数据, 参数说明:\n[{\n    name: 数据项的名称\n    value: 数据项值\n    itemStyle: 自定义特殊 itemStyle, 仅对该 item 有效\n      {\n        color: 图形颜色, 颜色可以使用 RGB 表示, 比如 'rgb(128, 128, 128)', 如果想要加上 alpha 通道表示不透明度, \n                可以使用 RGBA, 比如 'rgba(128, 128, 128, 0.5)', 也可以使用十六进制格式, 比如 '#ccc'。\n                除了纯色之外颜色也支持 线性 或者 径向 的渐变, 比如\n                {type: 'linear',// 线性渐变 colorStops: {offset: 0, color: 'red' // 0% 处的颜色}, {offset: 1, color: 'blue' // 100% 处的颜色}}\n                {type: 'radial',// 径向渐变 colorStops: {offset: 0, color: 'red' // 0% 处的颜色}, {offset: 1, color: 'blue' // 100% 处的颜色}}\n        borderWidth: 描边线宽。为 0 时无描边。\n        borderColor: 图形的描边颜色\n        borderType: 描边类型\n      }\n    labelLine: 自定义特殊 labelLine，仅对该 item 有效,参数内容与上面 labelLine 参数相同\n    label: 自定义特殊 label, 仅对该 item 有效, 参数内容与上面 label 参数相同\n}]",
+            "type": "array"
+          },
+          {
+            "key": "500轧机",
+            "desc": "饼图文本标签, 分为\n  1. normal, 正常状态\n  2. emphasis, 高亮状态\n  每个状态参数相同, 参数说明:\n    show: 是否显示标签, 默认为 true\n    position: 标签的位置(inside | center)\n    color: 标签字体颜色\n    font: 标签字体样式\n    formatter: 标签内容格式器",
+            "type": "object",
+            "defaultVaule": ""
+          },
+          {
+            "key": "中棒线",
+            "desc": "饼图文本标签, 分为\n  1. normal, 正常状态\n  2. emphasis, 高亮状态\n  每个状态参数相同, 参数说明:\n    show: 是否显示标签, 默认为 true\n    position: 标签的位置(inside | center)\n    color: 标签字体颜色\n    font: 标签字体样式\n    formatter: 标签内容格式器",
+            "type": "object",
+            "defaultVaule": ""
+          },
+          {
+            "key": "扁棒线",
+            "desc": "饼图文本标签, 分为\n  1. normal, 正常状态\n  2. emphasis, 高亮状态\n  每个状态参数相同, 参数说明:\n    show: 是否显示标签, 默认为 true\n    position: 标签的位置(inside | center)\n    color: 标签字体颜色\n    font: 标签字体样式\n    formatter: 标签内容格式器",
+            "type": "object",
+            "defaultVaule": ""
+          },
+          {
+            "key": "170钢管",
+            "desc": "饼图文本标签, 分为\n  1. normal, 正常状态\n  2. emphasis, 高亮状态\n  每个状态参数相同, 参数说明:\n    show: 是否显示标签, 默认为 true\n    position: 标签的位置(inside | center)\n    color: 标签字体颜色\n    font: 标签字体样式\n    formatter: 标签内容格式器",
+            "type": "object",
+            "defaultVaule": ""
+          },
+          {
+            "key": "108钢管",
+            "desc": "饼图文本标签, 分为\n  1. normal, 正常状态\n  2. emphasis, 高亮状态\n  每个状态参数相同, 参数说明:\n    show: 是否显示标签, 默认为 true\n    position: 标签的位置(inside | center)\n    color: 标签字体颜色\n    font: 标签字体样式\n    formatter: 标签内容格式器",
+            "type": "object",
+            "defaultVaule": ""
+          },
+          {
+            "key": "热处理钢管",
+            "desc": "饼图文本标签, 分为\n  1. normal, 正常状态\n  2. emphasis, 高亮状态\n  每个状态参数相同, 参数说明:\n    show: 是否显示标签, 默认为 true\n    position: 标签的位置(inside | center)\n    color: 标签字体颜色\n    font: 标签字体样式\n    formatter: 标签内容格式器",
+            "type": "object",
+            "defaultVaule": ""
+          },
+          {
+            "key": "460钢管",
+            "desc": "饼图文本标签, 分为\n  1. normal, 正常状态\n  2. emphasis, 高亮状态\n  每个状态参数相同, 参数说明:\n    show: 是否显示标签, 默认为 true\n    position: 标签的位置(inside | center)\n    color: 标签字体颜色\n    font: 标签字体样式\n    formatter: 标签内容格式器",
+            "type": "object",
+            "defaultVaule": ""
+          },
+          {
+            "key": "219钢管",
+            "desc": "饼图文本标签, 分为\n  1. normal, 正常状态\n  2. emphasis, 高亮状态\n  每个状态参数相同, 参数说明:\n    show: 是否显示标签, 默认为 true\n    position: 标签的位置(inside | center)\n    color: 标签字体颜色\n    font: 标签字体样式\n    formatter: 标签内容格式器",
+            "type": "object",
+            "defaultVaule": ""
+          },
+          {
+            "key": "锻造",
+            "desc": "饼图文本标签, 分为\n  1. normal, 正常状态\n  2. emphasis, 高亮状态\n  每个状态参数相同, 参数说明:\n    show: 是否显示标签, 默认为 true\n    position: 标签的位置(inside | center)\n    color: 标签字体颜色\n    font: 标签字体样式\n    formatter: 标签内容格式器",
+            "type": "object",
+            "defaultVaule": ""
+          }
+        ],
+        "ht.columns": [
+          {
+            "key": "key",
+            "displayName": "工序名称",
+            "width": 100,
+            "bodyColor": "rgb(51,153,255)"
+          },
+          {
+            "key": "type",
+            "displayName": "全月",
+            "width": 140
+          },
+          {
+            "key": "defaultVaule",
+            "displayName": "昨日",
+            "width": 150
+          }
+        ],
+        "ht.hoverBackground": "rgba(255,255,255,0.31)",
+        "ht.borderWidth": 0,
+        "ht.translateY": 0,
+        "ht.rowLineWidth": 1,
+        "ht.scrollBarWidth": 8,
+        "ht.translateX": 0,
+        "ht.showScrollBar": true,
+        "ht.scrollBarColor": "rgba(49,210,235,0.39)",
+        "ht.autoHideScrollBar": false,
+        "ht.columnLineWidth": 0,
+        "ht.bodyBackground": "rgba(255,255,255,0.01)",
+        "ht.bodyTextColor": "rgb(255,255,255)",
+        "ht.headTextColor": "rgb(255,255,255)",
+        "ht.headbackground": "rgba(19,79,128,0.57)",
+        "ht.headFont": "bold 14px sans-serif, arial",
+        "ht.bodyFont": "14px sans-serif, arial",
+        "ht.selectedIndex": [],
+        "ht.columnLinePattern": []
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5879,
+      "p": {
+        "displayName": "Pie2",
+        "image": "symbols/冶钢看板/Pie2.json",
+        "position": {
+          "x": 195.3265,
+          "y": 453.06846
+        },
+        "width": 337.68466,
+        "height": 269.1749
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 5880,
+      "p": {
+        "displayName": "Pie2",
+        "image": "symbols/冶钢看板/Pie2.json",
+        "position": {
+          "x": 195.3265,
+          "y": 178.84337
+        },
+        "width": 337.68466,
+        "height": 269.1749,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    }
+  ],
+  "modified": "Wed May 10 2023 14:00:02 GMT+0800 (中国标准时间)",
+  "contentRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1014
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "modified": "Tue Jun 24 2025 17:52:41 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "group",
+      "valueType": "String",
+      "name": "班组"
+    }
+  ],
+  "width": 5,
+  "height": 5,
+  "comps": []
+}

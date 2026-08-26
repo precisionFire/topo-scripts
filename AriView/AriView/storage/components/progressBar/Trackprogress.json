@@ -1,0 +1,71 @@
+{
+  "modified": "Mon Nov 06 2023 17:17:08 GMT+0800 (中国标准时间)",
+  "width": 120,
+  "height": 30,
+  "func": "__ht__function(g, rect, comp, data, view) {var x = rect.x;\nvar y = rect.y;\nvar width = rect.width;\nvar height = rect.height;\n\nvar borderColor = comp.getColor('borderColor');\nvar borderWidth = comp.getValue('borderWidth');\nvar background = comp.getColor('background');\nvar valueVisible = comp.getValue('valueVisible');\nvar valueColor = comp.getColor('valueColor');\nvar valueFont = comp.getValue('valueFont');\nvar maxValue = comp.getValue('maxValue');\n\n\n\nvar value = comp.getValue('value');\nvar foreColor = comp.getColor('foreColor');\n\n\n//valuewidth=[0.4*width,0.4*width];\n\n\n// draw background\nif (background) {\n    g.fillStyle = background;\n    g.beginPath();\n    g.rect(x, y, width, height);\n    g.fill();\n}\ndebugger\nvar theValue=0;\nvar theWidth=0;\nfor (var i = 0; i < value.length; i ++) {  //遍历数组\n    theValue+=value[i];\n    \n    g.fillStyle = valueColor[i];\n    g.beginPath();\n    g.rect(theWidth, y, value[i], height);   \n    g.fill();\n    if (valueVisible) {\n        ht.Default.drawText(g, value[i] + '', valueFont, foreColor, theWidth, y, value[i], height, 'center', 'middle');\n    }\n    theWidth=theValue/maxValue*width;\n}\n\n\n// draw border\nif (borderWidth && borderColor) {\n    ht.Default.drawBorder(g, borderColor, x, y, width, height, borderWidth);\n}}",
+  "properties": {
+    "maxValue": {
+      "valueType": "Number",
+      "defaultValue": 120,
+      "name": "最大值",
+      "group": "数值"
+    },
+    "value": {
+      "valueType": "NumberArray",
+      "defaultValue": [
+        20,
+        50,
+        25,
+        25
+      ],
+      "name": "PBValue",
+      "group": "数值"
+    },
+    "valueColor": {
+      "valueType": "ColorArray",
+      "defaultValue": [
+        "#FFFFFF",
+        "#00CFFF",
+        "#8800FF",
+        "#88CF00"
+      ],
+      "name": "块颜色",
+      "group": "数值"
+    },
+    "valueVisible": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "PBValueVisible",
+      "group": "数值"
+    },
+    "foreColor": {
+      "valueType": "Color",
+      "defaultValue": "#6EFE9F",
+      "name": "值颜色",
+      "group": "数值",
+      "description": "进度条渐进色描述"
+    },
+    "valueFont": {
+      "valueType": "String",
+      "defaultValue": "12px arial",
+      "name": "PBValueFont",
+      "group": "数值"
+    },
+    "background": {
+      "valueType": "Color",
+      "defaultValue": "#20384A",
+      "name": "PBBackground",
+      "group": "背景"
+    },
+    "borderColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(255,255,255)",
+      "name": "PBBorderColor"
+    },
+    "borderWidth": {
+      "valueType": "Number",
+      "defaultValue": 0,
+      "name": "PBBorderWidth"
+    }
+  }
+}

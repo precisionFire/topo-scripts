@@ -1,0 +1,302 @@
+{
+  "modified": "Mon Jun 16 2025 09:38:27 GMT+0800 (GMT+08:00)",
+  "background": "rgb(255,255,255)",
+  "dataBindings": [
+    {
+      "attr": "name",
+      "valueType": "String"
+    }
+  ],
+  "width": 250,
+  "height": 300,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": "rgb(212,212,212)",
+      "borderColor": "#979797",
+      "rect": [
+        2.27257,
+        1.6294,
+        247.72743,
+        298.3706
+      ]
+    },
+    {
+      "type": "roundRect",
+      "background": "rgb(22,81,140)",
+      "borderColor": "#979797",
+      "rect": [
+        0,
+        0,
+        247.14808,
+        296.50127
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderGradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(28, 111, 255, 0.5)",
+        0.5,
+        "rgba(28, 111, 255, 0.1)",
+        0.99,
+        "rgba(28, 111, 255, 0.5)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "shadow": true,
+      "shadowColor": "rgb(124,145,155)",
+      "displayName": "线2",
+      "points": [
+        17.19745,
+        16.97544,
+        251.47642,
+        16.97544
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@name",
+        "value": "异常录入"
+      },
+      "color": "rgb(232,232,232)",
+      "font": "12px KaiTi",
+      "rect": [
+        21.81547,
+        6.73877,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(255,255,255)",
+      "borderGradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(43,121,255,0.00)",
+        0.51304,
+        "rgb(176,223,255)",
+        1,
+        "rgba(43,121,255,0.00)"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.8,
+      "displayName": "不规则图形",
+      "points": [
+        223.22473,
+        296.50127,
+        20,
+        296.50127
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderGradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(0,94,255,0.50)",
+        0.5,
+        "rgba(133,177,255,0.10)",
+        0.99,
+        "rgba(28, 111, 255, 0.5)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "shadow": true,
+      "shadowColor": "rgb(247,247,247)",
+      "shadowBlur": 2,
+      "shadowOffsetX": 1,
+      "shadowOffsetY": 1,
+      "displayName": "线1",
+      "points": [
+        20.0496,
+        16.48672,
+        246.91584,
+        16.48672
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        -0.00165,
+        0.4995,
+        1.00082,
+        0.4995,
+        0,
+        "rgb(0,128,255)",
+        0.49565,
+        "rgba(145,191,255,0.50)",
+        1,
+        "rgba(96, 135, 245, 0)"
+      ],
+      "pixelPerfect": true,
+      "points": [
+        99.60151,
+        12.9649,
+        109.62101,
+        0,
+        118.89304,
+        0,
+        108.85763,
+        12.9649
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        -0.00165,
+        0.4995,
+        1.00082,
+        0.4995,
+        0,
+        "rgb(0,128,255)",
+        0.49565,
+        "rgba(145,191,255,0.50)",
+        1,
+        "rgba(96, 135, 245, 0)"
+      ],
+      "pixelPerfect": true,
+      "points": [
+        121.80347,
+        12.9649,
+        131.83888,
+        0,
+        141.09502,
+        0,
+        131.05959,
+        12.9649
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        -0.00165,
+        0.4995,
+        1.00082,
+        0.4995,
+        0,
+        "rgb(0,128,255)",
+        0.49565,
+        "rgba(145,191,255,0.50)",
+        1,
+        "rgba(96, 135, 245, 0)"
+      ],
+      "pixelPerfect": true,
+      "displayName": "不规则图形",
+      "points": [
+        144.00545,
+        12.9649,
+        154.04086,
+        0,
+        163.29698,
+        0,
+        153.27746,
+        12.9649
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        -0.00165,
+        0.4995,
+        1.00082,
+        0.4995,
+        0,
+        "rgb(0,128,255)",
+        0.49565,
+        "rgba(145,191,255,0.50)",
+        1,
+        "rgba(96, 135, 245, 0)"
+      ],
+      "pixelPerfect": true,
+      "points": [
+        166.20741,
+        12.9649,
+        176.24282,
+        0,
+        185.51485,
+        0,
+        175.47944,
+        12.9649
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        -0.00165,
+        0.4995,
+        1.00082,
+        0.4995,
+        0,
+        "rgb(0,128,255)",
+        0.49565,
+        "rgba(145,191,255,0.50)",
+        1,
+        "rgba(96, 135, 245, 0)"
+      ],
+      "pixelPerfect": true,
+      "points": [
+        188.42528,
+        12.9649,
+        198.4448,
+        0,
+        207.71681,
+        0,
+        197.6814,
+        12.9649
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/青岛特钢/圆盘1.json",
+      "displayName": "圆盘1",
+      "rect": [
+        2,
+        -1.02456,
+        18,
+        18
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/青岛特钢/图例-圆.json",
+      "displayName": "图例-圆",
+      "rect": [
+        7,
+        3.786,
+        8,
+        8
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "v": "7.7.0",
+  "p": {
+    "layers": [
+      {
+        "name": "0",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      }
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "onPreDeserialize": "__ht__function(json, dm, view) {dm.ListSubscribe={\r\n    'NumTag/OPCUA132/PM_IP2052_HT_PM01AG10_C':0,\t//转炉气柜柜高\r\n    'NumTag/OPCUA132/PM_IP2052_FT_PM01AG01':0,\t\t//转炉煤气供3#混合站流量\r\n    'NumTag/OPCUA132/PM_IP2052_PT_PM01AG01':0,\t\t//转炉煤气供3#混合站压力\r\n    'NumTag/OPCUA132/PM_IP2052_FT_PM01AG03':0,\t\t//3#混合站用焦炉煤气流量\r\n    'NumTag/OPCUA132/PM_IP2052_PT_PM01AG03':0,\t\t//3#混合站用焦炉煤气压力\r\n    'NumTag/MQDD/LCT/HHZ01_1MG_FRS':0,\t\t//3#混合站外供混合煤气流量\r\n    'NumTag/OPCUA132/PM_IP2052_PT_PM01AG07':0,\t\t//3#混合站外供混合煤气压力\r\n    'NumTag/OPCUA132/jisuanliang_Heat_value_3':0,\t\t//3#混合站外供混合煤气热值\r\n    'NumTag/OPCUA132/PM_IP5046_FT_PM02AG04_C':0,\t//2#混合站用焦炉煤气流量\r\n    'NumTag/OPCUA132/PM_IP5046_PT_PM02AG04':0,\t//2#混合站用焦炉煤气压力\r\n    'NumTag/OPCUA132/PM_IP5046_FT_PM02AG05_C':0,\t//2#混合站用BFG流量\r\n    'NumTag/OPCUA132/PM_IP5045_PT_PM02AG02':0,\t//2#混合站用BFG压力\r\n    'NumTag/OPCUA132/PM_IP5046_FT_PM02AG06_C':0,\t//2#混合站用天然气流量\r\n    'NumTag/OPCUA132/PM_IP5046_PT_PM02AG06':0,\t//2#混合站用天然气压力\r\n    'NumTag/MQDD/LCT/HHZ02_1MG_FRS':0,\t\t//2#混合站外供混合煤气流量\r\n    'NumTag/OPCUA132/PM_IP5046_PT_PM02AG07':0,\t\t//2#混合站外供混合煤气压力\r\n    'NumTag/OPCUA132/jisuanliang_Heat_value_2':0,\t\t//2#混合站外供混合煤气热值\r\n    'NumTag/OPCUA132/PM_IP5045_FT_PM02AG01_C':0,\t//1#混合站用焦炉煤气流量\r\n    'NumTag/OPCUA132/PM_IP5045_PT_PM02AG01':0,\t//1#混合站用焦炉煤气压力\r\n    'NumTag/OPCUA132/PM_IP5045_FT_PM02AG02_C':0,\t//1#混合站用BFG流量\r\n    'NumTag/OPCUA132/PM_IP5045_PT_PM02AG02':0,\t//1#混合站用BFG压力\r\n    'NumTag/OPCUA132/PM_IP5045_FT_PM02AG03_C':0,\t//1#混合站用天然气流量\r\n    'NumTag/OPCUA132/PM_IP5045_PT_PM02AG03':0,\t//1#混合站用天然气压力\r\n    'NumTag/MQDD/LCT/HHZ01_1MG_FRS':0,\t\t//1#混合站外供混合煤气流量\r\n    'NumTag/OPCUA132/PM_IP5045_PT_PM02AG07_C':0,\t\t//1#混合站外供混合煤气压力\r\n    'NumTag/OPCUA132/jisuanliang_Heat_value_1':0,\t\t//1#混合站外供混合煤气热值\r\n    'NumTag/OPCUA132/JH_IP5202_FT_JH10AG02_C':0,\t//焦炉煤气外供用户流量\r\n    'NumTag/OPCUA132/JH_IP5202_PT_JH10AG02_C':0,\t//焦炉煤气外供用户压力\r\n    'NumTag/OPCUA132/JH_IP5216_FT_JH00FS01_C':0,\t//焦炉煤气放散流量\r\n    'NumTag/OPCUA132/JH_IP5130_PT_JH03AG01_P':0,\t//焦炉煤气放散压力\r\n    'NumTag/OPCUA132/DB906_DBD576_PV':0,\t\t    //焦炉气柜柜高\r\n    'NumTag/OPCUA132/LT_IP3060_FT_1280GL01_C':0,\t//1280高炉煤气回收量\r\n    'NumTag/OPCUA132/LT_IP3060_PT_1280GL01_C':0,\t//1280高炉煤气总管压力\r\n    'NumTag/OPCUA132/LT_IP3064_FT_1280TRT01_C':0,\t//1280高炉TRT煤气流量\r\n    'NumTag/OPCUA132/LT_IP3060_FT_1280GL07_C':0,\t//1280高炉1#热风炉煤气用量\r\n    'NumTag/OPCUA132/LT_IP3060_FT_1280GL08_C':0,\t//1280高炉2#热风炉煤气用量\r\n    'NumTag/OPCUA132/LT_IP3060_FT_1280GL09_C':0,\t//1280高炉3#热风炉煤气用量\r\n    'NumTag/OPCUA132/LT_IP3093_FT_1280FS01_C':0,\t//1280高炉煤气放散流量\r\n    'NumTag/OPCUA132/LT_IP3093_PT_1280FS01_C':0,\t//1280高炉煤气放散压力\r\n    'NumTag/OPCUA132/LT_IP5057_FT_LT01DG03':0,\t\t//1780高炉煤气回收量\r\n    'NumTag/OPCUA132/LT_IP5057_PT_LT01DG03':0,\t\t//1780高炉煤气回收总管压力\r\n    'NumTag/OPCUA132/LT_IP5077_FT_1780TRT01_C':0,\t//1780高炉TRT煤气流量\r\n    'NumTag/OPCUA132/LT_IP5080_FT_LT01CG01':0,\t\t//1780高炉1#热风炉煤气用量\r\n    'NumTag/OPCUA132/LT_IP5080_FT_LT01CG02':0,\t\t//1780高炉2#热风炉煤气用量\r\n    'NumTag/OPCUA132/LT_IP5080_FT_LT01CG03':0,\t\t//1780高炉3#热风炉煤气用量\r\n    'NumTag/OPCUA132/LT_IP5057_FT_LT01DG01':0,\t\t//1780高炉煤气放散流量\r\n    'AriBind.MQDD.LCT.1780GL_BFG_FS_P':0,\t\t//1780高炉煤气放散压力\r\n    'NumTag/OPCUA132/PM_IP5045_HT_PM02AG02_C':0,\t//高炉气柜柜高\r\n    'NumTag/OPCUA132/PS_IP3058_FT_DL22AG02_C':0,    //160t 1#锅炉用高炉煤气流量\r\n    'NumTag/OPCUA132/PS_IP3058_FT_DL22GL10_C':0,    //160t 2#锅炉用高炉煤气流量\r\n    'NumTag/OPCUA132/PS_IP3058_PT_DL22AG02_C':0,    //160t 锅炉用高炉煤气压力\r\n    'NumTag/OPCUA132/PS_IP3058_FT_DL22AG01_C':0,    //160t 锅炉用焦炉煤气流量\r\n    'NumTag/OPCUA132/PS_IP3058_PT_DL22AG01_C':0,    //160t 锅炉用焦炉煤气压力\r\n    'NumTag/OPCUA132/PS_IP5137_FT_PS05AG01_C':0,    //75t 锅炉用高炉煤气流量\r\n    'NumTag/OPCUA132/PS_IP5137_PT_PS05AG01':0,    //75t 锅炉用高炉煤气压力\r\n    'NumTag/OPCUA132/PS_IP5137_FT_PS05AG02_C':0,    //75t 锅炉用焦炉煤气流量\r\n    'NumTag/OPCUA132/PS_IP5137_PT_PS05AG02':0,    //75t 锅炉用焦炉煤气压力\r\n    'NumTag/OPCUA132/PS_IP5139_FT_LT07AO01_C':0,    //110t 锅炉用高炉煤气流量\r\n    'NumTag/OPCUA132/PS_IP5139_PT_LT07AO01':0,    //110t 锅炉用高炉煤气压力\r\n    'NumTag/OPCUA132/PS_IP5139_FT_LT07AO03_C':0,    //110t 锅炉用焦炉煤气流量\r\n    'NumTag/OPCUA132/LT_IP5205_FT_DL80MW01_C':0,    //260t 锅炉用高炉煤气流量\r\n    'NumTag/OPCUA132/LT_IP5205_PT_DL80MW01_C':0,    //260t 锅炉用高炉煤气压力\r\n    'NumTag/OPCUA132/LT_IP5205_FT_DL80MW02_C':0,    //260t 锅炉用焦炉煤气流量\r\n    'NumTag/OPCUA132/LT_IP5205_PT_DL80MW02_C':0,    //260t 锅炉用焦炉煤气压力\r\n    'NumTag/OPCUA132/LT_IP5084_FT_LT06AG01':0,      //微粉用高炉煤气流量\r\n    'NumTag/OPCUA132/LT_IP5151_FT_LT62GS02':0,      //1280高炉喷煤用高炉煤气流量\r\n    'NumTag/OPCUA132/LT_IP5082_FT_LT01BG01':0,      //1780高炉喷煤用高炉煤气流量\r\n    'NumTag/OPCUA132/LT_IP5176_FT_220TLGQ01_C':0,      //220烧结脱硫脱硝用高炉煤气流量\r\n    'NumTag/OPCUA132/LT_IP5175_FT_220SF05_C':0,      //220烧结点火炉用高炉煤气流量\r\n    'NumTag/OPCUA132/LT_IP5179_FT_265SJTX005_C':0,      //265烧结脱硝用高炉煤气流量\r\n    'JSONTag/MQDD/Chart1/Line1':[156,111,33,44,100],\t//试验\r\n};\r\ndm.ListCal={\r\n    'NumTag/MQDD/LCT/JH_1COG_HS_FRS_copied':{\t//转炉煤气流量\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LT_IP3060_FT_1280GL07_C','NumTag/OPCUA132/LT_IP3060_FT_1280GL08_C','NumTag/OPCUA132/LT_IP3060_FT_1280GL09_C']\r\n    },\r\n    'NumTag/MQDD/LCT/HHZ01_1MG_FRS':{\t//1#掺混外供混气流量\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/PM_IP5045_FT_PM02AG01_C','NumTag/OPCUA132/PM_IP5045_FT_PM02AG02_C','NumTag/OPCUA132/PM_IP5045_FT_PM02AG03_C']\r\n    },\r\n    'NumTag/MQDD/LCT/HHZ02_1MG_FRS':{\t//2#掺混外供混气流量\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/PM_IP5046_FT_PM02AG04_C','NumTag/OPCUA132/PM_IP5045_FT_PM02AG02_C','NumTag/OPCUA132/PM_IP5046_FT_PM02AG06_C']\r\n    },\r\n    'NumTag/MQDD/LCT/HHZ03_1MG_FRS':{\t//3#掺混外供混气流量\r\n        formate:\"(parseFloat({0}+{1})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/PM_IP2052_FT_PM01AG01','NumTag/OPCUA132/PM_IP2052_FT_PM01AG03']\r\n    },\r\n    'NumTag/MQDD/LCT/160tGL_2BFG_FRS':{\t//160t锅炉用高炉煤气流量\r\n        formate:\"(parseFloat({0}+{1})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/PS_IP3058_FT_DL22AG02_C','NumTag/OPCUA132/PS_IP3058_FT_DL22GL10_C']\r\n    },\r\n    'NumTag/MQDD/LCT/SJ_2BFG_FRS':{\t//烧结用高炉煤气流量\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LT_IP5176_FT_220TLGQ01_C','NumTag/OPCUA132/LT_IP5175_FT_220SF05_C','NumTag/OPCUA132/LT_IP5179_FT_265SJTX005_C']\r\n    },\r\n    'NumTag/MQDD/LCT/GL_PM_2BFG_FRS':{\t//喷煤用高炉煤气流量\r\n        formate:\"(parseFloat({0}+{1})/10000).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LT_IP5151_FT_LT62GS02','NumTag/OPCUA132/LT_IP5082_FT_LT01BG01']\r\n    },\r\n    'NumTag/MQDD/LEFT1/GL_1BFG_FRS':{\t//高炉煤气发生总流量\r\n        formate:\"(parseFloat({0}*{1})/10000).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LT_IP5057_PT_LT01DG03','NumTag/OPCUA132/LT_IP5057_FT_LT01DG03']\r\n        },\r\n    'NumTag/MQDD/LEFT1/LDG_UtilizationRate':{\t//转炉煤气利用率\r\n        formate:\"(parseFloat({1})==0? 0: parseFloat({0}/{1})*100).toFixed(1)\",\r\n        datas:['NumTag/OPCUA132/PM_IP2052_FT_PM01AG01','NumTag/OPCUA132/LT_IP5057_PT_LT01DG03']\r\n       },\r\n};\r\n//\"(parseFloat({1})==0? 0: parseFloat({0}/{1})*100).toFixed(1)\"}"
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 9657,
+      "p": {
+        "displayName": "火苗状态",
+        "image": "symbols/冶钢集控项目图标/火苗状态.json",
+        "position": {
+          "x": 502.5,
+          "y": 327
+        },
+        "width": 207,
+        "height": 394
+      }
+    }
+  ],
+  "modified": "Tue May 16 2023 11:26:31 GMT+0800 (中国标准时间)",
+  "contentRect": {
+    "x": 399,
+    "y": 130,
+    "width": 207,
+    "height": 394
+  }
+}

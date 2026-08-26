@@ -1,0 +1,44 @@
+{
+  "modified": "Sat Nov 04 2023 14:58:05 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "run",
+      "valueType": "String",
+      "name": "状态",
+      "group": "状态",
+      "bindable": true
+    }
+  ],
+  "width": 55,
+  "height": 55,
+  "comps": [
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\nif(data.a('RUN')=='True')\r\n{\r\nreturn 'rgb(2,212,89)';\r\n}\r\nelse if(data.a('RUN')=='False')\r\n{\r\nreturn 'rgb(2,2,2)';\r\n}\n}",
+        "value": "rgb(145,145,145)"
+      },
+      "borderColor": "#979797",
+      "rect": [
+        0.14409,
+        0,
+        54.85591,
+        54.85591
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(2,212,89)",
+      "borderColor": "#979797",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('run')==1||data.a('run')=='True';\n}"
+      },
+      "rect": [
+        0.14409,
+        0,
+        54.85591,
+        54.85591
+      ]
+    }
+  ]
+}

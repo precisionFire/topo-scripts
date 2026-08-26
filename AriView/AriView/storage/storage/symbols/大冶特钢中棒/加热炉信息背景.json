@@ -1,0 +1,226 @@
+{
+  "modified": "Tue Apr 14 2026 17:36:57 GMT+0800 (GMT+08:00)",
+  "background": "#141414",
+  "dataBindings": [
+    {
+      "attr": "radius",
+      "valueType": "CornerRadius",
+      "extraInfo": {
+        "uvMode": true
+      }
+    },
+    {
+      "attr": "showTitle",
+      "valueType": "Opacity"
+    },
+    {
+      "attr": "title",
+      "valueType": "Multiline"
+    }
+  ],
+  "gridEnabled": true,
+  "gridBlockSize": 8,
+  "width": 320,
+  "height": 320,
+  "boundExtend": 32,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": "rgba(20,56,102,0.40)",
+      "borderWidth": 1,
+      "borderColor": "rgba(228, 231, 237, 0.10)",
+      "cornerRadius": {
+        "func": "attr@radius",
+        "value": 8
+      },
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "topbottom",
+      "shadow": true,
+      "shadowColor": "rgba(0,0,0,0.6)",
+      "shadowBlur": 16,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 12,
+      "rect": [
+        0.5,
+        0.5,
+        319,
+        319
+      ]
+    },
+    {
+      "type": "roundRect",
+      "borderWidth": 1,
+      "borderColor": "rgba(228, 231, 237, 0.10)",
+      "cornerRadius": {
+        "func": "attr@radius",
+        "value": 8
+      },
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "topbottom",
+      "shadow": true,
+      "shadowColor": "rgba(77,157,255,0.40)",
+      "shadowBlur": 32,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "rect": [
+        0.5,
+        0.5,
+        319,
+        319
+      ]
+    },
+    {
+      "type": "roundRect",
+      "borderColor": "rgba(228, 231, 237, 0.10)",
+      "cornerRadius": {
+        "func": "attr@radius",
+        "value": 8
+      },
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "topbottom",
+      "shadow": true,
+      "shadowColor": "rgba(99,151,194,0.25)",
+      "shadowBlur": 24,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "rect": [
+        0.5,
+        0.5,
+        319,
+        319
+      ]
+    },
+    {
+      "type": "shape",
+      "borderColor": "#979797",
+      "gradientPack": [
+        "radial",
+        0.5,
+        1,
+        1.27621,
+        0,
+        "rgba(120,160,255,0.2)",
+        1,
+        "rgba(42,76,150,0.00)"
+      ],
+      "opacity": {
+        "func": "attr@showTitle"
+      },
+      "layoutH": "center",
+      "layoutV": "top",
+      "scaleY": 0.2,
+      "points": [
+        48,
+        48,
+        72,
+        48,
+        80,
+        88,
+        240,
+        88,
+        248,
+        48,
+        272,
+        48,
+        272,
+        -32,
+        48,
+        -32,
+        48,
+        48
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "borderGradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(228,231,237,0)",
+        1,
+        "rgba(228,231,237,0.2)"
+      ],
+      "clipPercentage": {
+        "func": "attr@showTitle",
+        "value": 1.01
+      },
+      "clipDirection": "left",
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        8,
+        32,
+        72,
+        32,
+        80,
+        40,
+        160,
+        40
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "borderGradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(228,231,237,0.2)",
+        1,
+        "rgba(228,231,237,0)"
+      ],
+      "clipPercentage": {
+        "func": "attr@showTitle",
+        "value": 1.01
+      },
+      "clipDirection": "right",
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        312,
+        32,
+        248,
+        32,
+        240,
+        40,
+        160,
+        40
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "按钮"
+      },
+      "align": "center",
+      "color": "#E5EAF3",
+      "font": "18px SourceHanSansCN-Bold",
+      "pixelPerfect": true,
+      "opacity": {
+        "func": "attr@showTitle"
+      },
+      "layoutH": "center",
+      "layoutV": "top",
+      "rect": [
+        80,
+        8,
+        160,
+        24
+      ]
+    }
+  ]
+}

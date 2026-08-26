@@ -1,0 +1,204 @@
+{
+  "modified": "Tue Aug 26 2025 00:34:04 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "text",
+      "valueType": "String"
+    },
+    {
+      "attr": "text1",
+      "valueType": "String"
+    },
+    {
+      "attr": "timeout",
+      "valueType": "String",
+      "defaultValue": "10"
+    },
+    {
+      "attr": "id",
+      "valueType": "String"
+    }
+  ],
+  "width": 370,
+  "height": 132,
+  "disableSelectedBorder": true,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": "rgb(0,79,158)",
+      "borderWidth": 1,
+      "borderColor": "#60ACFC",
+      "cornerRadius": 8,
+      "selectable": false,
+      "opacity": 0.7,
+      "shadow": true,
+      "shadowColor": "rgb(0,0,0)",
+      "shadowBlur": 5,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "displayName": "圆角矩形",
+      "rect": [
+        5,
+        3.37706,
+        360,
+        125
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "rgba(255,38,38,0.00)",
+        0.28,
+        "rgba(255,112,112,0.02)",
+        0.56,
+        "rgba(64,61,255,0.07)",
+        0.85,
+        "rgba(153,255,243,0.15)",
+        1,
+        "rgba(148,255,201,0.20)"
+      ],
+      "selectable": false,
+      "opacity": 0.7,
+      "displayName": "",
+      "points": [
+        203.02764,
+        128.37706,
+        285.57849,
+        3.37706,
+        322.4369,
+        3.37706,
+        239.88618,
+        128.37706,
+        84.39387,
+        128.37706,
+        166.97236,
+        3.37706,
+        130.08618,
+        3.37706,
+        47.53536,
+        128.37706,
+        162.12615,
+        128.37706,
+        244.70462,
+        3.37706,
+        207.84618,
+        3.37706,
+        125.26772,
+        128.37706,
+        52.35382,
+        3.37706,
+        5,
+        75.08544,
+        5,
+        103.37702,
+        5.00476,
+        110.7884,
+        6.65212,
+        117.98973,
+        9.68,
+        123.8354,
+        89.21234,
+        3.37706,
+        317.61843,
+        128.37706,
+        365,
+        56.66873,
+        365,
+        36.71044,
+        364.98671,
+        27.26723,
+        362.30712,
+        18.26373,
+        357.63387,
+        11.96044,
+        280.76,
+        128.37706
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5,
+        1,
+        2,
+        2,
+        2,
+        5,
+        1,
+        2,
+        2,
+        2,
+        5,
+        1,
+        2,
+        2,
+        4,
+        2,
+        5,
+        1,
+        2,
+        2,
+        4,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@text1",
+        "value": "."
+      },
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgb(232,248,255)",
+        1,
+        "white"
+      ],
+      "font": "20px sans-serif, Arial",
+      "wrap": true,
+      "pixelPerfect": true,
+      "opacity": 0.9,
+      "shadowColor": "rgba(12,50,89,0.8)",
+      "shadowBlur": 3,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 1,
+      "rect": [
+        5,
+        53.37706,
+        360,
+        75.24588
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@text",
+        "value": "."
+      },
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "20px sans-serif, Arial",
+      "rect": [
+        5,
+        3.37706,
+        301.54926,
+        50
+      ]
+    }
+  ]
+}

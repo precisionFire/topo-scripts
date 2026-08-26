@@ -1,0 +1,4546 @@
+{
+  "v": "7.7.1",
+  "p": {
+    "layers": [
+      {
+        "name": "0",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "m_top",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "trend",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      }
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "zoomable": true,
+    "pannable": true,
+    "rectSelectable": false,
+    "onPreDeserialize": "__ht__function(json, dm, view) {dm.ListSubscribe={\r\n 'NumTag/OPCUA132/IP2057_FT_PG03AO01':0,  //空气表[自动]_二空外供净化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP2057_FT_PG03AO01_A':0,  //空气表[自动]_二空外供净化空气(累积流量)\r\n'NumTag/OPCUA132/IP2057_PT_PG03AO01':0,  //空气表[自动]_二空外供净化空气(压力)\r\n'NumTag/OPCUA132/IP2057_TE_PG03AO01':0,  //空气表[自动]_二空外供净化空气(温度)\r\n'NumTag/OPCUA132/IP2058_FT_PG03AO03':0,  //空气表[自动]_二空外供普通空气(瞬时流量)\r\n'NumTag/OPCUA132/IP2058_FT_PG03AO03_A':0,  //空气表[自动]_二空外供普通空气(累积流量)\r\n'NumTag/OPCUA132/IP2058_PT_PG03AO03':0,  //空气表[自动]_二空外供普通空气(压力)\r\n'NumTag/OPCUA132/IP2058_TE_PG03AO03':0,  //空气表[自动]_二空外供普通空气(温度)\r\n'NumTag/OPCUA132/IP2057_FT_PG03AO02':0,  //空气表[自动]_二空外供雾化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP2057_FT_PG03AO02_A':0,  //空气表[自动]_二空外供雾化空气(累积流量)\r\n'NumTag/OPCUA132/IP2057_PT_PG03AO02':0,  //空气表[自动]_二空外供雾化空气(压力)\r\n'NumTag/OPCUA132/IP2057_TE_PG03AO02':0,  //空气表[自动]_二空外供雾化空气(温度)\r\n'NumTag/OPCUA132/IP6061_FT_PG05AO02':0,  //空气表[自动]_钢管外供净化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP6061_FT_PG05AO02_A':0,  //空气表[自动]_钢管外供净化空气(累积流量)\r\n'NumTag/OPCUA132/IP6061_PT_PG05AO02':0,  //空气表[自动]_钢管外供净化空气(压力)\r\n'NumTag/OPCUA132/IP6061_TE_PG05AO02':0,  //空气表[自动]_钢管外供净化空气(温度)\r\n'NumTag/OPCUA132/IP6061_FT_PG05AO01':0,  //空气表[自动]_钢管外供普通空气(瞬时流量)\r\n'NumTag/OPCUA132/IP6061_FT_PG05AO01_A':0,  //空气表[自动]_钢管外供普通空气(累积流量)\r\n'NumTag/OPCUA132/IP6061_PT_PG05AO01':0,  //空气表[自动]_钢管外供普通空气(压力)\r\n'NumTag/OPCUA132/IP6061_TE_PG05AO01':0,  //空气表[自动]_钢管外供普通空气(温度)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO01':0,  //空气表[自动]_四空1#外供净化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO01_A':0,  //空气表[自动]_四空1#外供净化空气(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4037_PT_ZG03DO03_P':0,  //空气表[自动]_四空1#外供净化空气(压力)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO02':0,  //空气表[自动]_四空2#外供净化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO02_A':0,  //空气表[自动]_四空2#外供净化空气(累积流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO03':0,  //空气表[自动]_四空1#外供普通空气(瞬时流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO03_A':0,  //空气表[自动]_四空1#外供普通空气(累积流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO04':0,  //空气表[自动]_四空2#外供普通空气(瞬时流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO04_A':0,  //空气表[自动]_四空2#外供普通空气(累积流量)\r\n'NumTag/OPCUA132/IP3047_vfo6':0,  //空气表[自动]_四空外供雾化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP3047_vfo14':0,  //空气表[自动]_四空外供雾化空气(累积流量)\r\n'NumTag/OPCUA132/JH_IP5111_FT_JH02AO05_C':0,  //空气表[自动]_焦化厂_新化能干熄焦用空气_三级(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5111_FT_JH02AO05_A':0,  //空气表[自动]_焦化厂_新化能干熄焦用空气_三级(累积流量)\r\n'NumTag/OPCUA132/JH_IP5111_PT_JH02AO05_P':0,  //空气表[自动]_焦化厂_新化能干熄焦用空气_三级(压力)\r\n'NumTag/OPCUA132/JH_IP5111_TE_JH02AO05':0,  //空气表[自动]_焦化厂_新化能干熄焦用空气_三级(温度)\r\n'NumTag/OPCUA132/JH_IP5130_FT_JH03AO01_C':0,  //空气表[自动]_焦化厂_新化能用空气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5130_FT_JH03AO01_A':0,  //空气表[自动]_焦化厂_新化能用空气(累积流量)\r\n'NumTag/OPCUA132/JH_IP5130_PT_JH03AO01_P':0,  //空气表[自动]_焦化厂_新化能用空气(压力)\r\n'NumTag/OPCUA132/JH_IP5130_TE_JH03AO01':0,  //空气表[自动]_焦化厂_新化能用空气(温度)\r\n'NumTag/OPCUA132/JH_IP5202_FT_JH10AG04_C':0,  //空气表[自动]_焦化厂_进新焦化空气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5202_FT_JH10AG04_A':0,  //空气表[自动]_焦化厂_进新焦化空气(累积流量)\r\n'NumTag/OPCUA132/JH_IP5202_PT_JH10AG04_C':0,  //空气表[自动]_焦化厂_进新焦化空气(压力)\r\n'NumTag/OPCUA132/JH_IP5202_TT_JH10AG04_C':0,  //空气表[自动]_焦化厂_进新焦化空气(温度)\r\n'NumTag/OPCUA132/LT_IP5031_FT_LT04BO01':0,  //空气表[自动]_炼铁厂_265烧结用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5031_FT_LT04BO01_A':0,  //空气表[自动]_炼铁厂_265烧结用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5031_PT_LT04BO01':0,  //空气表[自动]_炼铁厂_265烧结用空气(压力)\r\n'NumTag/OPCUA132/LT_IP5031_TE_LT04BO01':0,  //空气表[自动]_炼铁厂_265烧结用空气(温度)\r\n'NumTag/OPCUA132/LT_IP5179_FT_265SJTX002_C':0,  //空气表[自动]_炼铁厂_265烧结脱硝用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5179_FT_265SJTX002_A':0,  //空气表[自动]_炼铁厂_265烧结脱硝用空气(累积流量)\r\n'NumTag/OPCUA132/HB_IP5035_FT_HB04AO17':0,  //空气表[自动]_炼铁厂_265烧结脱硫用空气(瞬时流量)\r\n'NumTag/OPCUA132/HB_IP5035_FT_HB04AO17_A':0,  //空气表[自动]_炼铁厂_265烧结脱硫用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5058_FT_LT01DO03':0,  //空气表[自动]_炼铁厂_1780高炉用净化空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5058_FT_LT01DO03_A':0,  //空气表[自动]_炼铁厂_1780高炉用净化空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5058_PT_LT01DO03':0,  //空气表[自动]_炼铁厂_1780高炉用净化空气(压力)\r\n'NumTag/OPCUA132/LT_IP5058_TE_LT01DO03':0,  //空气表[自动]_炼铁厂_1780高炉用净化空气(温度)\r\n'NumTag/OPCUA132/PM_IP5045_FT_shaojie_C':0,  //空气表[自动]_炼铁厂_1780高炉矿槽用空气(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP5045_FT_shaojie_A':0,  //空气表[自动]_炼铁厂_1780高炉矿槽用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5082_FT_LT01BO01':0,  //空气表[自动]_炼铁厂_1780高炉喷煤用空气_三级(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5082_FT_LT01BO01_A':0,  //空气表[自动]_炼铁厂_1780高炉喷煤用空气_三级(累积流量)\r\n'NumTag/OPCUA132/LT_IP5082_PT_LT01BO01':0,  //空气表[自动]_炼铁厂_1780高炉喷煤用空气_三级(压力)\r\n'NumTag/OPCUA132/LT_IP5058_TE_LT01DO04':0,  //空气表[自动]_炼铁厂_1780高炉喷煤用空气_三级(温度)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280FY03_C':0,  //空气表[自动]_炼铁厂_1780高炉电拖(1#)风机外送风量(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280FY03_A':0,  //空气表[自动]_炼铁厂_1780高炉电拖(1#)风机外送风量(累积流量)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280DT01_C':0,  //空气表[自动]_炼铁厂_1780高炉电拖(2#)风机外送风量(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280DT01_A':0,  //空气表[自动]_炼铁厂_1780高炉电拖(2#)风机外送风量(累积流量)\r\n'NumTag/OPCUA132/LT_IP2106_FT_LTQBJ02_C':0,  //空气表[自动]_炼铁厂_1780高炉炼铁砌包间用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP2106_FT_LTQBJ02_A':0,  //空气表[自动]_炼铁厂_1780高炉炼铁砌包间用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5088_FT_LT06AO01':0,  //空气表[自动]_炼铁厂_1780高炉炼铁原料场用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5088_FT_LT06AO01_A':0,  //空气表[自动]_炼铁厂_1780高炉炼铁原料场用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5088_PT_LT06AO01':0,  //空气表[自动]_炼铁厂_1780高炉炼铁原料场用空气(压力)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL05_C':0,  //空气表[自动]_炼铁厂_1280高炉用净化空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL05_A':0,  //空气表[自动]_炼铁厂_1280高炉用净化空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP3060_PT_1280GL05_C':0,  //空气表[自动]_炼铁厂_1280高炉用净化空气(压力)\r\n'NumTag/OPCUA132/LT_IP3060_TT_1280GL05_C':0,  //空气表[自动]_炼铁厂_1280高炉用净化空气(温度)\r\n'NumTag/OPCUA132/LT_IP3066_FT_1280KC01_C':0,  //空气表[自动]_炼铁厂_1280高炉矿槽用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3066_FT_1280KC01_A':0,  //空气表[自动]_炼铁厂_1280高炉矿槽用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5151_FT_LT62GS03':0,  //空气表[自动]_炼铁厂_1280高炉喷煤用普通空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5151_FT_LT62GS03_A':0,  //空气表[自动]_炼铁厂_1280高炉喷煤用普通空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5151_PT_LT62GS03':0,  //空气表[自动]_炼铁厂_1280高炉喷煤用普通空气(压力)\r\n'NumTag/OPCUA132/LT_IP5151_TT_LT62GS03':0,  //空气表[自动]_炼铁厂_1280高炉喷煤用普通空气(温度)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL15_C':0,  //空气表[自动]_炼铁厂_1280高炉冷风风量(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL15_A':0,  //空气表[自动]_炼铁厂_1280高炉冷风风量(累积流量)\r\n'NumTag/OPCUA132/LT_IP3060_PT_1280GL15_C':0,  //空气表[自动]_炼铁厂_1280高炉冷风风量(压力)\r\n'NumTag/OPCUA132/LT_IP3060_TT_1280GL15_C':0,  //空气表[自动]_炼铁厂_1280高炉冷风风量(温度)\r\n'NumTag/OPCUA132/LT_IP5084_FT_LT06AO02':0,  //空气表[自动]_炼铁厂_微粉用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5084_FT_LT06AO02_A':0,  //空气表[自动]_炼铁厂_微粉用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5175_FT_220SF03_C':0,  //空气表[自动]_炼铁厂_220烧结用普通空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5175_FT_220SF03_A':0,  //空气表[自动]_炼铁厂_220烧结用普通空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5175_PT_220SF03_C':0,  //空气表[自动]_炼铁厂_220烧结用普通空气(压力)\r\n'NumTag/OPCUA132/LT_IP5175_TT_220SF03_C':0,  //空气表[自动]_炼铁厂_220烧结用普通空气(温度)\r\n'NumTag/OPCUA132/2102FT_LGRH2O07_PV':0,  //空气表[自动]_转炉厂_转炉2#RH炉用普通空气总管_三级(瞬时流量)\r\n'NumTag/OPCUA132/2102FT_LGRH2O07_A_PV':0,  //空气表[自动]_转炉厂_转炉2#RH炉用普通空气总管_三级(累积流量)\r\n'NumTag/OPCUA132/LG_IP2191_FT_LG10AG03_C':0,  //空气表[自动]_转炉厂_转炉除尘用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2191_FT_LG10AG03_A':0,  //空气表[自动]_转炉厂_转炉除尘用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG000O01':0,  //空气表[自动]_转炉厂_转炉用净化空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG000O01_A':0,  //空气表[自动]_转炉厂_转炉用净化空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2031_PT_LG000O01':0,  //空气表[自动]_转炉厂_转炉用净化空气(压力)\r\n'NumTag/OPCUA132/LG_IP2031_TT_LG000O01':0,  //空气表[自动]_转炉厂_转炉用净化空气(温度)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG02CO03':0,  //空气表[自动]_转炉厂_转炉用普通空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG02CO03_A':0,  //空气表[自动]_转炉厂_转炉用普通空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2031_PT_LG02CO03':0,  //空气表[自动]_转炉厂_转炉用普通空气(压力)\r\n'NumTag/OPCUA132/LG_IP2031_TT_LG02CO02':0,  //空气表[自动]_转炉厂_转炉用普通空气(温度)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG000O02':0,  //空气表[自动]_转炉厂_转炉用雾化空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG000O02_A':0,  //空气表[自动]_转炉厂_转炉用雾化空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2031_PT_LG000O02':0,  //空气表[自动]_转炉厂_转炉用雾化空气(压力)\r\n'NumTag/OPCUA132/LG_IP2031_TT_LG000O02':0,  //空气表[自动]_转炉厂_转炉用雾化空气(温度)\r\n'NumTag/OPCUA132/LG_IP2072_FT_LG22AO05':0,  //空气表[自动]_特冶电炉_AOD炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2072_FT_LG22AO05_A':0,  //空气表[自动]_特冶电炉_AOD炉用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2074_FT_CC01AO01_C':0,  //空气表[自动]_特冶电炉_特冶电炉除尘用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2074_FT_CC01AO01_A':0,  //空气表[自动]_特冶电炉_特冶电炉除尘用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2064_FT_LG20AO02':0,  //空气表[自动]_特冶电炉_特冶电炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2064_FT_LG20AO02_A':0,  //空气表[自动]_特冶电炉_特冶电炉用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2064_PT_LG20AO02':0,  //空气表[自动]_特冶电炉_特冶电炉用空气(压力)\r\n'NumTag/OPCUA132/LG_IP2064_TT_LG20AO02':0,  //空气表[自动]_特冶电炉_特冶电炉用空气(温度)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG09AO04':0,  //空气表[自动]_电炉厂_电炉3#连铸用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG09AO04_A':0,  //空气表[自动]_电炉厂_电炉3#连铸用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG11AO01':0,  //空气表[自动]_电炉厂_电炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG11AO01_A':0,  //空气表[自动]_电炉厂_电炉用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP3045_TT_LG11AO01':0,  //空气表[自动]_电炉厂_电炉用空气(温度)\r\n'NumTag/OPCUA132/HB_IP3041_FT_HB01AO03':0,  //空气表[自动]_电炉厂_机制107厂房用空气(瞬时流量)\r\n'NumTag/OPCUA132/HB_IP3041_FT_HB01AO03_A':0,  //空气表[自动]_电炉厂_机制107厂房用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2064_FT_LG20AO07':0,  //空气表[自动]_特冶电渣_电渣27米跨厂房用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2064_FT_LG20AO07_A':0,  //空气表[自动]_特冶电渣_电渣27米跨厂房用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2065_FT_LG20CO01':0,  //空气表[自动]_特冶电渣_电渣用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2065_FT_LG20CO01_A':0,  //空气表[自动]_特冶电渣_电渣用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2065_PT_LG20CO01':0,  //空气表[自动]_特冶电渣_电渣用空气(压力)\r\n'NumTag/OPCUA132/LG_IP2065_TT_LG20CO01':0,  //空气表[自动]_特冶电渣_电渣用空气(温度)\r\n'NumTag/OPCUA132/LG_IP1146_FT_SZ11AI06_C':0,  //空气表[自动]_特冶厂_双真空用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP1146_FT_SZ11AI06_A':0,  //空气表[自动]_特冶厂_双真空用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2065_FT_ZG01HO04':0,  //空气表[自动]_大棒厂_850机组北用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2065_FT_ZG01HO04_A':0,  //空气表[自动]_大棒厂_850机组北用空气(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4065_FT_ZG02GO02_C':0,  //空气表[自动]_中棒厂_500机组用空气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4065_FT_ZG02GO02_A':0,  //空气表[自动]_中棒厂_500机组用空气(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4065_PT_ZG02GO02_P':0,  //空气表[自动]_中棒厂_500机组用空气(压力)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG11AO02':0,  //空气表[自动]_小棒厂_650机组东用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG11AO02_A':0,  //空气表[自动]_小棒厂_650机组东用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP3045_PT_LG11AO02':0,  //空气表[自动]_小棒厂_650机组东用空气(压力)\r\n'NumTag/OPCUA132/LG_IP3045_TT_LG11AO02':0,  //空气表[自动]_小棒厂_650机组东用空气(温度)\r\n'NumTag/OPCUA132/ZG_IP4062_FT_ZG02DN07_C':0,  //空气表[自动]_轧钢热处理_小棒厂银亮钢机组冷拉用空气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4062_FT_ZG02DN07__A':0,  //空气表[自动]_轧钢热处理_小棒厂银亮钢机组冷拉用空气(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4062_PT_ZG02DN07_P':0,  //空气表[自动]_轧钢热处理_小棒厂银亮钢机组冷拉用空气(压力)\r\n'NumTag/OPCUA132/NDGCFD01_FT':0,  //空气表[自动]_锻造厂_内锻用空气(瞬时流量)\r\n'NumTag/OPCUA132/NDGCFD01_FT_A':0,  //空气表[自动]_锻造厂_内锻用空气(累积流量)\r\n'NumTag/OPCUA132/NDGCFD01_TE':0,  //空气表[自动]_锻造厂_内锻用空气(温度)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_60MNAIO04_C':0,  //空气表[自动]_锻造厂_60MN用空气(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_60MNAIO04_A':0,  //空气表[自动]_锻造厂_60MN用空气(累积流量)\r\n'NumTag/OPCUA132/PS_IP5139_FT_LT07AO04_C':0,  //空气表[自动]_燃气发电_110t锅炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5139_FT_LT07AO04_A':0,  //空气表[自动]_燃气发电_110t锅炉用空气(累积流量)\r\n'NumTag/OPCUA132/PS_IP3058_FT_DL22AO01_C':0,  //空气表[自动]_燃气发电_160t锅炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP3058_FT_DL22AO01_A':0,  //空气表[自动]_燃气发电_160t锅炉用空气(累积流量)\r\n'NumTag/OPCUA132/PS_IP5137_FT_PS05AO04_C':0,  //空气表[自动]_燃气发电_75t锅炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5137_FT_PS05AO04_A':0,  //空气表[自动]_燃气发电_75t锅炉用空气(累积流量)\r\n'NumTag/OPCUA132/PW_IP2080_FT_PW28AO01_C':0,  //空气表[自动]_转炉水处理用净化空气(瞬时流量)\r\n'NumTag/OPCUA132/PW_IP2080_FT_PW28AO01_A':0,  //空气表[自动]_转炉水处理用净化空气(累积流量)\r\n'NumTag/OPCUA132/3031FT_LG12AO07_PV':0,  //空气表[自动]_电炉余热用空气(瞬时流量)\r\n'NumTag/OPCUA132/3031FT_LG12AO07_A_PV':0,  //空气表[自动]_电炉余热用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2049_FT_LG07AO12':0,  //空气表[自动]_濮阳源泰压球用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2049_FT_LG07AO12_A':0,  //空气表[自动]_濮阳源泰压球用空气(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4061_FT_ZG03DO01_C':0,  //空气表[自动]_质检部用空气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4061_FT_ZG03DO01_A':0,  //空气表[自动]_质检部用空气(累积流量)\r\n'NumTag/OPCUA132/4202FT_ZB01BO03_PV':0,  //空气表[自动]_中棒线用净化空气(瞬时流量)\r\n'NumTag/OPCUA132/4202FT_ZB01BO03_A_PV':0,  //空气表[自动]_中棒线用净化空气(累积流量)\r\n'NumTag/OPCUA132/4202FT_ZB01BO02_PV':0,  //空气表[自动]_中棒线用普通空气(瞬时流量)\r\n'NumTag/OPCUA132/4202FT_ZB01BO02_A_PV':0,  //空气表[自动]_中棒线用普通空气(累积流量)\r\n'NumTag/OPCUA132/BBX_IP6073_FT_BBX001_C':0,  //空气表[自动]_扁棒线用净化空气总管(瞬时流量)\r\n'NumTag/OPCUA132/BBX_IP6073_FT_BBX001_A':0,  //空气表[自动]_扁棒线用净化空气总管(累积流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO04_C':0,  //空气表[自动]_170钢管厂_170机组净化空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO04_A':0,  //空气表[自动]_170钢管厂_170机组净化空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO03_C':0,  //空气表[自动]_170钢管厂_170机组普通空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO03_A':0,  //空气表[自动]_170钢管厂_170机组普通空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO05_C':0,  //空气表[自动]_170钢管厂_170热处理2跨1#空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO05_A':0,  //空气表[自动]_170钢管厂_170热处理2跨1#空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6038_FT_GP04AO03_C':0,  //空气表[自动]_460钢管厂_460机组净化空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6038_FT_GP04AO03_A':0,  //空气表[自动]_460钢管厂_460机组净化空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6038_FT_GP04AO02_C':0,  //空气表[自动]_460钢管厂_460机组普通空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6038_FT_GP04AO02_A':0,  //空气表[自动]_460钢管厂_460机组普通空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6034_FT_GP03AO04_C':0,  //空气表[自动]_219钢管厂_219机组净化空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6034_FT_GP03AO04_A':0,  //空气表[自动]_219钢管厂_219机组净化空气(累积流量)\r\n'NumTag/OPCUA132/IP6034_PT_PG03AO04':0,  //空气表[自动]_219钢管厂_219机组净化空气(压力)\r\n'NumTag/OPCUA132/GG_IP6034_FT_GP03AO03_C':0,  //空气表[自动]_219钢管厂_219机组普通空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6034_FT_GP03AO03_A':0,  //空气表[自动]_219钢管厂_219机组普通空气(累积流量)\r\n'NumTag/OPCUA132/IP6034_PT_PG03AO03':0,  //空气表[自动]_219钢管厂_219机组普通空气(压力)\r\n'NumTag/OPCUA132/GG_IP1062_FT_GP01AO01_C':0,  //空气表[自动]_钢管厂_108机组用空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP1062_FT_GP01AO01_A':0,  //空气表[自动]_钢管厂_108机组用空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6040_FT_GP04BO04_C':0,  //空气表[自动]_钢管热处理_钢管460淬火炉净化空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6040_FT_GP04BO04_A':0,  //空气表[自动]_钢管热处理_钢管460淬火炉净化空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6040_FT_GP04BO03_C':0,  //空气表[自动]_钢管热处理_钢管460淬火炉普通空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6040_FT_GP04BO03_A':0,  //空气表[自动]_钢管热处理_钢管460淬火炉普通空气(累积流量)\r\n'NumTag/OPCUA132/DXDX03_FT':0,  //空气表[自动]_其他_大兴电气(瞬时流量)\r\n'NumTag/OPCUA132/DXDX03_FT_A':0,  //空气表[自动]_其他_大兴电气(累积流量)\r\n'NumTag/OPCUA132/DXDX03_PT':0,  //空气表[自动]_其他_大兴电气(压力)\r\n'NumTag/OPCUA132/DXDX03_TE':0,  //空气表[自动]_其他_大兴电气(温度)\r\n'NumTag/OPCUA132/PS_IP2076_FT_PS02AS08_C':0,  //空气表[自动]_转炉厂_转炉除尘2#用空气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP2076_FT_PS02AS08_A':0,  //空气表[自动]_转炉厂_转炉除尘2#用空气(累积流量)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280QT02_C':0,  //空气表[自动]_炼铁厂_1280高炉新汽拖风机外送风量(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280QT02_A':0,  //空气表[自动]_炼铁厂_1280高炉新汽拖风机外送风量(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4037_FT_ZG03DO03_C':0,  //空气表[自动]_小棒厂_650机组连轧厂2#用空气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4037_FT_ZG03DO03_A':0,  //空气表[自动]_小棒厂_650机组连轧厂2#用空气(累积流量)\r\n\r\n    'JSONTag/MQDD/Chart1/Line1':[156,111,33,44,100],\t//试验\r\n};\r\ndm.ListCal={\r\n    'NumTag/Air_ChaoLiuTu/Air01_1Air_FRS':{\t//一空外供空气总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(0)\",\r\n        datas:['NumTag/OPCUA132/IP2058_FT_PG03AO03','NumTag/OPCUA132/IP2057_FT_PG03AO02','NumTag/OPCUA132/IP2057_FT_PG03AO01']\r\n        },\r\n    'NumTag/Air_ChaoLiuTu/Air02_1Air_FRS':{\t//二空外供空气总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/IP3047_FT_PG04AO03','NumTag/OPCUA132/IP3047_FT_PG04AO04','NumTag/OPCUA132/IP3047_FT_PG04AO01','NumTag/OPCUA132/IP3047_FT_PG04AO02','NumTag/OPCUA132/IP3047_vfo6']\r\n       },\r\n    'NumTag/Air_ChaoLiuTu/Air03_1Air_FRS':{\t//三空外供空气总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1})).toFixed(0)\",\r\n        datas:['NumTag/OPCUA132/IP6061_FT_PG05AO01','NumTag/OPCUA132/IP6061_FT_PG05AO02']\r\n        },\r\n    'NumTag/MQDD/LEFT1/BFG_UtilizationRate':{\t//高炉煤气利用率\r\n        value:0,\r\n        formate:\"(parseFloat({0}/{1})*100).toFixed(1)\",\r\n        datas:['NumTag/MQDD/LEFT1/2BFG_FRS','NumTag/MQDD/LEFT1/GL_1BFG_FRS']\r\n       },\r\n };\r\n//\"(parseFloat({1})==0? 0: parseFloat({0}/{1})*100).toFixed(1)\"}",
+    "previewURL": "displayPage.html",
+    "fitContent": false
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 105886,
+      "p": {
+        "displayName": "img_bg",
+        "image": "assets/冶钢集控项目icon/煤气调度/img_bg.jpg",
+        "position": {
+          "x": 960,
+          "y": 507
+        }
+      },
+      "s": {
+        "pixelPerfect": false,
+        "2d.movable": false,
+        "2d.editable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 105887,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 60.73131,
+          "y": 24.83896
+        },
+        "width": 80,
+        "height": 22,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.1)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105888,
+      "p": {
+        "position": {
+          "x": 64.92227,
+          "y": 24.83946
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "KPa",
+        "text.color": "rgb(255,218,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105889,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 24.73181,
+          "y": 24.83946
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "压力：",
+        "text.color": "rgba(255,255,255,0.6)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 105890,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 60.73131,
+          "y": 49.11891
+        },
+        "width": 80,
+        "height": 22,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.1)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105891,
+      "p": {
+        "position": {
+          "x": 64.92227,
+          "y": 48.96625
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "m3/h",
+        "text.color": "rgb(20,179,242)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105892,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 24.73181,
+          "y": 48.96625
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "流量：",
+        "text.color": "rgba(255,255,255,0.6)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 105893,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 60.73131,
+          "y": 73.40749
+        },
+        "width": 80,
+        "height": 22,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.1)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105894,
+      "p": {
+        "position": {
+          "x": 64.92227,
+          "y": 73.25483
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "℃",
+        "text.color": "rgba(255,255,255,0.8)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105895,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 24.73181,
+          "y": 73.40799
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "温度：",
+        "text.color": "rgba(255,255,255,0.6)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 105896,
+      "p": {
+        "position": {
+          "x": 991.39697,
+          "y": 26.90726
+        },
+        "width": 1096.09399,
+        "height": 24.82588
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(21,186,232,0.50)",
+        "shape.border.color": "rgb(0,140,255)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105897,
+      "p": {
+        "position": {
+          "x": 922.09729,
+          "y": 26.90776
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "二级",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 105898,
+      "p": {
+        "position": {
+          "x": 991.44697,
+          "y": 220.55036
+        },
+        "width": 1096.194,
+        "height": 360.46031,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.05)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105899,
+      "p": {
+        "position": {
+          "x": 904.76661,
+          "y": 52.72014
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组1#钢坯退火炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105900,
+      "p": {
+        "position": {
+          "x": 1290.98727,
+          "y": 26.90776
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "三级",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105901,
+      "p": {
+        "position": {
+          "x": 469.59852,
+          "y": 207.66342
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "混合煤气",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105902,
+      "p": {
+        "position": {
+          "x": 564.83725,
+          "y": 490.41262
+        },
+        "width": 0.1,
+        "height": 953.1473,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 564.83725,
+              "y": 13.83895
+            },
+            {
+              "x": 564.83725,
+              "y": 966.98626
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105903,
+      "p": {
+        "position": {
+          "x": 893.91905,
+          "y": 490.41262
+        },
+        "width": 0.1,
+        "height": 953.1473,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 893.91905,
+              "y": 13.83895
+            },
+            {
+              "x": 893.91905,
+              "y": 966.98626
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105904,
+      "p": {
+        "position": {
+          "x": 1052.71016,
+          "y": 65.14609
+        },
+        "width": 972.87347,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 566.27342,
+              "y": 65.14609
+            },
+            {
+              "x": 1539.14689,
+              "y": 65.14609
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105905,
+      "p": {
+        "position": {
+          "x": 1052.61506,
+          "y": 91.3053
+        },
+        "width": 973.06366,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 566.08324,
+              "y": 91.3053
+            },
+            {
+              "x": 1539.14689,
+              "y": 91.3053
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105906,
+      "p": {
+        "position": {
+          "x": 1053.18976,
+          "y": 117.46451
+        },
+        "width": 972.50842,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 566.93554,
+              "y": 117.46451
+            },
+            {
+              "x": 1539.44397,
+              "y": 117.46451
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105907,
+      "p": {
+        "position": {
+          "x": 1052.67688,
+          "y": 143.62373
+        },
+        "width": 972.94005,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 566.20685,
+              "y": 143.62373
+            },
+            {
+              "x": 1539.14689,
+              "y": 143.62373
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105908,
+      "p": {
+        "position": {
+          "x": 904.76761,
+          "y": 106.25416
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组3#钢坯退火炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105909,
+      "p": {
+        "position": {
+          "x": 1052.24241,
+          "y": 168.45261
+        },
+        "width": 974.4031,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 565.04086,
+              "y": 168.45261
+            },
+            {
+              "x": 1539.44397,
+              "y": 168.45261
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105910,
+      "p": {
+        "position": {
+          "x": 1052.59444,
+          "y": 194.61182
+        },
+        "width": 973.0304,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 566.07925,
+              "y": 194.61182
+            },
+            {
+              "x": 1539.10964,
+              "y": 194.61182
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105911,
+      "p": {
+        "position": {
+          "x": 1052.08826,
+          "y": 221.05536
+        },
+        "width": 974.7114,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 564.73257,
+              "y": 221.05536
+            },
+            {
+              "x": 1539.44397,
+              "y": 221.05536
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105912,
+      "p": {
+        "position": {
+          "x": 1051.33144,
+          "y": 245.87824
+        },
+        "width": 976.22508,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 563.21889,
+              "y": 245.87824
+            },
+            {
+              "x": 1539.44397,
+              "y": 245.87824
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105913,
+      "p": {
+        "position": {
+          "x": 1051.85806,
+          "y": 271.70412
+        },
+        "width": 975.17182,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 564.27213,
+              "y": 271.70412
+            },
+            {
+              "x": 1539.44397,
+              "y": 271.70412
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105914,
+      "p": {
+        "position": {
+          "x": 1052.16561,
+          "y": 298.533
+        },
+        "width": 974.55671,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 564.88726,
+              "y": 298.533
+            },
+            {
+              "x": 1539.44397,
+              "y": 298.533
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105915,
+      "p": {
+        "position": {
+          "x": 1052.63346,
+          "y": 323.35588
+        },
+        "width": 973.62101,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 565.82296,
+              "y": 323.35588
+            },
+            {
+              "x": 1539.44397,
+              "y": 323.35588
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105916,
+      "p": {
+        "position": {
+          "x": 904.76861,
+          "y": 208.25178
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850成品5#退火炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105917,
+      "p": {
+        "position": {
+          "x": 904.76861,
+          "y": 234.07966
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850成品6#退火炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105918,
+      "p": {
+        "position": {
+          "x": 904.76861,
+          "y": 259.90354
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850成品7#退火炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105919,
+      "p": {
+        "position": {
+          "x": 904.76961,
+          "y": 335.75786
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组2#加热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105920,
+      "p": {
+        "position": {
+          "x": 443.34998,
+          "y": 490.41262
+        },
+        "width": 0.1,
+        "height": 953.1473,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 443.34998,
+              "y": 13.83895
+            },
+            {
+              "x": 443.34998,
+              "y": 966.98626
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105921,
+      "p": {
+        "position": {
+          "x": 379.67346,
+          "y": 490.85238
+        },
+        "width": 0.1,
+        "height": 952.17801,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 379.67346,
+              "y": 14.76336
+            },
+            {
+              "x": 379.67346,
+              "y": 966.94138
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 105922,
+      "p": {
+        "position": {
+          "x": 411.48672,
+          "y": 490.74866
+        },
+        "width": 63.52651,
+        "height": 952.4752,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(0,110,184,0.50)",
+        "shape.border.color": "rgb(0,140,255)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105923,
+      "p": {
+        "position": {
+          "x": 411.48622,
+          "y": 490.85288
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "大棒厂",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "20px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105924,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品1#钢坯退火炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG02_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27368,
+          "y": 53.37119
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105925,
+      "p": {
+        "position": {
+          "x": 904.76661,
+          "y": 78.84154
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组2#钢坯退火炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105926,
+      "p": {
+        "position": {
+          "x": 904.76761,
+          "y": 131.77041
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组均热炉混气",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105927,
+      "p": {
+        "position": {
+          "x": 904.76761,
+          "y": 183.26025
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850成品4#退火炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105928,
+      "p": {
+        "position": {
+          "x": 1051.31895,
+          "y": 348.50338
+        },
+        "width": 976.25002,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 563.19395,
+              "y": 348.50338
+            },
+            {
+              "x": 1539.44397,
+              "y": 348.50338
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105929,
+      "p": {
+        "position": {
+          "x": 904.76961,
+          "y": 286.33928
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850成品8#退火炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105930,
+      "p": {
+        "position": {
+          "x": 904.76961,
+          "y": 311.96282
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组1#加热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105931,
+      "p": {
+        "position": {
+          "x": 1265.43193,
+          "y": 490.41262
+        },
+        "width": 0.1,
+        "height": 953.1473,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1265.43193,
+              "y": 13.83895
+            },
+            {
+              "x": 1265.43193,
+              "y": 966.98626
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105932,
+      "p": {
+        "position": {
+          "x": 991.27453,
+          "y": 39.3202
+        },
+        "width": 1095.8491,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 443.34998,
+              "y": 39.3202
+            },
+            {
+              "x": 1539.19908,
+              "y": 39.3202
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105933,
+      "p": {
+        "position": {
+          "x": 959.37756,
+          "y": 14.49432
+        },
+        "width": 1159.64305,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 379.55603,
+              "y": 14.49432
+            },
+            {
+              "x": 1539.19908,
+              "y": 14.49432
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105934,
+      "p": {
+        "position": {
+          "x": 1273.30557,
+          "y": 52.72014
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "1#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105935,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_1#均热炉用混气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG02_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1425.82664,
+          "y": 52.72114
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105936,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品1#加热炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1145_FT_DB15AG01",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.28668,
+          "y": 311.96382
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105937,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品1#钢坯退火炉用混气(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG02_P",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1091.68635,
+          "y": 53.71914
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105938,
+      "p": {
+        "position": {
+          "x": 1539.49397,
+          "y": 490.41262
+        },
+        "width": 0.1,
+        "height": 953.1473,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1539.49397,
+              "y": 13.83895
+            },
+            {
+              "x": 1539.49397,
+              "y": 966.98626
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105939,
+      "p": {
+        "position": {
+          "x": 589.59013,
+          "y": 26.90776
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "一级",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105940,
+      "p": {
+        "position": {
+          "x": 1051.12757,
+          "y": 375.00764
+        },
+        "width": 975.56375,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 563.34569,
+              "y": 375.00764
+            },
+            {
+              "x": 1538.90944,
+              "y": 375.00764
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105941,
+      "p": {
+        "position": {
+          "x": 991.2505,
+          "y": 400.83052
+        },
+        "width": 1096.38693,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 443.05704,
+              "y": 400.83052
+            },
+            {
+              "x": 1539.44397,
+              "y": 400.83052
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105942,
+      "p": {
+        "position": {
+          "x": 904.76961,
+          "y": 361.58274
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850成品3#新退火炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105943,
+      "p": {
+        "position": {
+          "x": 1273.30457,
+          "y": 335.75886
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "12#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105944,
+      "p": {
+        "position": {
+          "x": 1273.30457,
+          "y": 361.58374
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "13#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105945,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品2#加热炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1103_FT_ZG01DG01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 335.75986
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105946,
+      "p": {
+        "position": {
+          "x": 904.76761,
+          "y": 156.70707
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850成品1#退火炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105947,
+      "p": {
+        "position": {
+          "x": 1273.30557,
+          "y": 78.84554
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "2#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105948,
+      "p": {
+        "position": {
+          "x": 1273.30557,
+          "y": 104.35181
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "3#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105949,
+      "p": {
+        "position": {
+          "x": 1273.30557,
+          "y": 130.47721
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "4#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105950,
+      "p": {
+        "position": {
+          "x": 1273.30557,
+          "y": 157.13485
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "5#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105951,
+      "p": {
+        "position": {
+          "x": 1273.30557,
+          "y": 183.26025
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "6#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105952,
+      "p": {
+        "position": {
+          "x": 1273.30557,
+          "y": 207.20999
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "7#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105953,
+      "p": {
+        "position": {
+          "x": 1273.30557,
+          "y": 233.33539
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "8#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105954,
+      "p": {
+        "position": {
+          "x": 1273.30557,
+          "y": 259.90254
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "9#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105955,
+      "p": {
+        "position": {
+          "x": 1273.30557,
+          "y": 286.34028
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "10#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105956,
+      "p": {
+        "position": {
+          "x": 1273.30557,
+          "y": 311.96182
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "11#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105957,
+      "p": {
+        "position": {
+          "x": 1273.30457,
+          "y": 387.5413
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "14#均热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105958,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_2#均热炉用混气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG03_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1425.82664,
+          "y": 78.84054
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105959,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_3#均热炉用混气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG04_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1425.82664,
+          "y": 104.35081
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105960,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_4#均热炉用混气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG05_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1425.82664,
+          "y": 130.47621
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105961,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_5#均热炉用混气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG06_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1425.82664,
+          "y": 156.70607
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105962,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_6#均热炉用混气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG07_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1425.82664,
+          "y": 181.86305
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105963,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_7#均热炉用混气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG08_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1425.82664,
+          "y": 207.20899
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105964,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_8#均热炉用混气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG09_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1425.82664,
+          "y": 234.08066
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105965,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_9#均热炉用混气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG10_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1425.82664,
+          "y": 259.90154
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105966,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品2#钢坯退火炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG03_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27368,
+          "y": 78.83954
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105967,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品2#钢坯退火炉用混气(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG03_P",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1091.68635,
+          "y": 78.84654
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105968,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品3#钢坯退火炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG04_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27368,
+          "y": 106.25316
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105969,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品3#钢坯退火炉用混气(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG04_P",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1091.68635,
+          "y": 106.25516
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105970,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品1#退火炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1096_FT_ZG01FG01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27368,
+          "y": 156.70507
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105971,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品1#退火炉用混气(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1096_PT_ZG01FG01_P",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1091.68635,
+          "y": 156.70407
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105972,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品4#退火炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1097_FT_ZG01GG01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27368,
+          "y": 183.26225
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105973,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品5#退火炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1097_FT_ZG01GG02_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27368,
+          "y": 208.25278
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105974,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品6#退火炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1097_FT_ZG01GG03_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27368,
+          "y": 234.08166
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105975,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品7#退火炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1098_FT_ZG01HG01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27368,
+          "y": 259.90454
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105976,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品8#退火炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1098_FT_ZG01HG02_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27368,
+          "y": 286.33828
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105977,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品1#加热炉用混气(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1145_PT_DB15AG01",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1091.68635,
+          "y": 311.96082
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105978,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品2#加热炉用混气(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1103_PT_ZG01DG01_P",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1091.31845,
+          "y": 335.75686
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105979,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850机组均热炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27368,
+          "y": 130.47521
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105980,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850机组均热炉用混气(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_PT_ZG01IG01_P",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1091.68635,
+          "y": 130.47821
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105981,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品3#新退火炉用混气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1096_FT_ZG01FG03_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 361.58174
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105982,
+      "p": {
+        "toolTip": "煤气表[自动]_大棒厂_850成品3#新退火炉用混气(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1096_PT_ZG01FG03_P",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1091.31845,
+          "y": 361.58474
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105983,
+      "p": {
+        "position": {
+          "x": 904.76961,
+          "y": 415.23073
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "均热炉氧气总管",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105984,
+      "p": {
+        "position": {
+          "x": 469.59852,
+          "y": 415.23173
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "氧气",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 105985,
+      "p": {
+        "position": {
+          "x": 990.81245,
+          "y": 464.93341
+        },
+        "width": 1096.194,
+        "height": 76.654,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.05)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105986,
+      "p": {
+        "position": {
+          "x": 991.50623,
+          "y": 529.46963
+        },
+        "width": 1095.87548,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 443.56849,
+              "y": 529.46963
+            },
+            {
+              "x": 1539.44397,
+              "y": 529.46963
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105987,
+      "p": {
+        "position": {
+          "x": 991.15983,
+          "y": 606.61694
+        },
+        "width": 1095.89962,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 443.21002,
+              "y": 606.61694
+            },
+            {
+              "x": 1539.10964,
+              "y": 606.61694
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105988,
+      "p": {
+        "position": {
+          "x": 1052.08826,
+          "y": 633.06048
+        },
+        "width": 974.7114,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 564.73257,
+              "y": 633.06048
+            },
+            {
+              "x": 1539.44397,
+              "y": 633.06048
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105989,
+      "p": {
+        "position": {
+          "x": 991.43599,
+          "y": 657.88336
+        },
+        "width": 1096.01598,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 443.42799,
+              "y": 657.88336
+            },
+            {
+              "x": 1539.44397,
+              "y": 657.88336
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105990,
+      "p": {
+        "position": {
+          "x": 991.1297,
+          "y": 426.65641
+        },
+        "width": 1095.95988,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 443.14976,
+              "y": 426.65641
+            },
+            {
+              "x": 1539.10964,
+              "y": 426.65641
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105991,
+      "p": {
+        "position": {
+          "x": 1052.71016,
+          "y": 477.15121
+        },
+        "width": 972.87347,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 566.27342,
+              "y": 477.15121
+            },
+            {
+              "x": 1539.14689,
+              "y": 477.15121
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105992,
+      "p": {
+        "position": {
+          "x": 991.33946,
+          "y": 503.31042
+        },
+        "width": 1095.54194,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 443.56849,
+              "y": 503.31042
+            },
+            {
+              "x": 1539.11043,
+              "y": 503.31042
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 105993,
+      "p": {
+        "position": {
+          "x": 1052.61506,
+          "y": 452.37532
+        },
+        "width": 973.06366,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 566.08324,
+              "y": 452.37532
+            },
+            {
+              "x": 1539.14689,
+              "y": 452.37532
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105994,
+      "p": {
+        "position": {
+          "x": 904.76961,
+          "y": 463.91849
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组2#加热炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105995,
+      "p": {
+        "position": {
+          "x": 904.76961,
+          "y": 440.12345
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850成品退火炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105996,
+      "p": {
+        "position": {
+          "x": 904.76961,
+          "y": 489.74337
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850电捕焦氮气",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105997,
+      "p": {
+        "position": {
+          "x": 469.59852,
+          "y": 464.93391
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "氮气",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105998,
+      "p": {
+        "toolTip": "氮气表[自动]_大棒_850成品退火炉用低压氮气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP2065_FT_ZG01HN03",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 440.12445
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 105999,
+      "p": {
+        "toolTip": "氮气表[自动]_大棒_850机组2#加热炉用低压氮气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1103_FT_ZG01DN02_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 464.93491
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106000,
+      "p": {
+        "toolTip": "氮气表[自动]_大棒_850电捕焦用低压氮气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG14_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 489.74437
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106001,
+      "p": {
+        "toolTip": "氮气表[自动]_大棒_850成品退火炉用低压氮气(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1103_PT_ZG01DN02_P",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1091.31845,
+          "y": 440.12545
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106002,
+      "p": {
+        "position": {
+          "x": 904.76961,
+          "y": 517.46849
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组北空气",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106003,
+      "p": {
+        "toolTip": "空气表[自动]_大棒厂_850机组北用空气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP2065_FT_ZG01HO04",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 517.46749
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106004,
+      "p": {
+        "position": {
+          "x": 469.59852,
+          "y": 517.46949
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "压缩空气",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 106005,
+      "p": {
+        "position": {
+          "x": 990.81245,
+          "y": 568.28994
+        },
+        "width": 1096.194,
+        "height": 76.654,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.05)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106006,
+      "p": {
+        "position": {
+          "x": 1052.67688,
+          "y": 555.62885
+        },
+        "width": 972.94005,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 566.20685,
+              "y": 555.62885
+            },
+            {
+              "x": 1539.14689,
+              "y": 555.62885
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106007,
+      "p": {
+        "position": {
+          "x": 1052.24241,
+          "y": 580.45773
+        },
+        "width": 974.4031,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 565.04086,
+              "y": 580.45773
+            },
+            {
+              "x": 1539.44397,
+              "y": 580.45773
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106008,
+      "p": {
+        "position": {
+          "x": 571.93605,
+          "y": 543.26091
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850余热蒸汽",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106009,
+      "p": {
+        "position": {
+          "x": 571.93605,
+          "y": 569.08579
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "一轧余热外送蒸汽",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106010,
+      "p": {
+        "position": {
+          "x": 571.93605,
+          "y": 594.81091
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "大棒1#加热炉余热蒸汽",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106011,
+      "p": {
+        "toolTip": "蒸汽表[自动]_大棒厂_850余热蒸汽(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1103_FT_ZG01DS03_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 781.96267,
+          "y": 544.25991
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106012,
+      "p": {
+        "toolTip": "蒸汽表[自动]_大棒厂_850余热蒸汽(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1103_TE_ZG01DW04_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 721.38959,
+          "y": 544.25891
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106013,
+      "p": {
+        "toolTip": "蒸汽表[自动]_大棒厂_850余热蒸汽(温度)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1103_TE_ZG01DG01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 843.88209,
+          "y": 544.25991
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106014,
+      "p": {
+        "toolTip": "蒸汽表[自动]_大棒厂_大棒1#加热炉余热蒸汽(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1145_FT_DB15AS01",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 781.96267,
+          "y": 594.81191
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106015,
+      "p": {
+        "position": {
+          "x": 469.59852,
+          "y": 568.28944
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "蒸汽",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106016,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 620.28336
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850_2#加热炉生产水补水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106017,
+      "p": {
+        "position": {
+          "x": 1273.30657,
+          "y": 620.28436
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "一轧2#加热炉余热生产水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106018,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 645.75581
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850北进生产水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106019,
+      "p": {
+        "position": {
+          "x": 469.59852,
+          "y": 633.00998
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "生产水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106020,
+      "p": {
+        "toolTip": "水表[自动]_大棒厂_850 2#加热炉生产水补水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1103_FT_ZG01AW07_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 620.28536
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106021,
+      "p": {
+        "toolTip": "水表[自动]_大棒厂_850北进生产水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP2064_FT_LG20AW04_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 645.75681
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 106022,
+      "p": {
+        "position": {
+          "x": 990.81245,
+          "y": 722.40645
+        },
+        "width": 1096.194,
+        "height": 127.2126,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.05)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106023,
+      "p": {
+        "position": {
+          "x": 1051.85806,
+          "y": 683.70924
+        },
+        "width": 975.17182,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 564.27213,
+              "y": 683.70924
+            },
+            {
+              "x": 1539.44397,
+              "y": 683.70924
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106024,
+      "p": {
+        "position": {
+          "x": 1052.16561,
+          "y": 710.53812
+        },
+        "width": 974.55671,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 564.88726,
+              "y": 710.53812
+            },
+            {
+              "x": 1539.44397,
+              "y": 710.53812
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106025,
+      "p": {
+        "position": {
+          "x": 1052.63346,
+          "y": 735.361
+        },
+        "width": 973.62101,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 565.82296,
+              "y": 735.361
+            },
+            {
+              "x": 1539.44397,
+              "y": 735.361
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106026,
+      "p": {
+        "position": {
+          "x": 1051.31895,
+          "y": 760.5085
+        },
+        "width": 976.25002,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 563.19395,
+              "y": 760.5085
+            },
+            {
+              "x": 1539.44397,
+              "y": 760.5085
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106027,
+      "p": {
+        "position": {
+          "x": 991.2071,
+          "y": 787.01276
+        },
+        "width": 1095.2735,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 443.57035,
+              "y": 787.01276
+            },
+            {
+              "x": 1538.84385,
+              "y": 787.01276
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106028,
+      "p": {
+        "position": {
+          "x": 1052.03844,
+          "y": 812.83564
+        },
+        "width": 974.81104,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 564.63293,
+              "y": 812.83564
+            },
+            {
+              "x": 1539.44397,
+              "y": 812.83564
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106029,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 672.92642
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850大锯冷却",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106030,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 699.12665
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850南生活水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106031,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 723.38613
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850职能生活水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106032,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 749.58636
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850 2#加热炉生活补水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106033,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 775.78659
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "大棒材探伤生活水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106034,
+      "p": {
+        "toolTip": "水表[自动]_大棒厂_850北进生产水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP1146_FT_SZ11AI10_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 699.12765
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106035,
+      "p": {
+        "position": {
+          "x": 469.59852,
+          "y": 723.38513
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "生活水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106036,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 800.98683
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "2#加热炉除氧箱补水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106037,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 826.15744
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组余热软水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106038,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 852.35767
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "1#加热炉余热软水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106039,
+      "p": {
+        "position": {
+          "x": 1051.31895,
+          "y": 838.72366
+        },
+        "width": 976.25002,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 563.19395,
+              "y": 838.72366
+            },
+            {
+              "x": 1539.44397,
+              "y": 838.72366
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106040,
+      "p": {
+        "position": {
+          "x": 991.2071,
+          "y": 865.22792
+        },
+        "width": 1095.2735,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 443.57035,
+              "y": 865.22792
+            },
+            {
+              "x": 1538.84385,
+              "y": 865.22792
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106041,
+      "p": {
+        "toolTip": "水表[自动]_大棒厂_850机组2#加热炉除氧箱补水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1103_FT_ZG01DW05_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 800.98583
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106042,
+      "p": {
+        "toolTip": "水表[自动]_大棒厂_大棒1#加热炉余热用软水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/ZG_IP1145_FT_DB15AG02_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 853.35867
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106043,
+      "p": {
+        "position": {
+          "x": 469.59852,
+          "y": 826.15844
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "软化水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 106044,
+      "p": {
+        "position": {
+          "x": 990.81245,
+          "y": 916.1071
+        },
+        "width": 1096.194,
+        "height": 101.75834,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.05)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106045,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 878.82015
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组浊环水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106046,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 903.99076
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组净环水（2#加热炉）",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106047,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 929.191
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组冲渣水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106048,
+      "p": {
+        "position": {
+          "x": 1051.31895,
+          "y": 888.7211
+        },
+        "width": 976.25002,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 563.19395,
+              "y": 888.7211
+            },
+            {
+              "x": 1539.44397,
+              "y": 888.7211
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106049,
+      "p": {
+        "position": {
+          "x": 1051.12757,
+          "y": 915.22536
+        },
+        "width": 975.56375,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 563.34569,
+              "y": 915.22536
+            },
+            {
+              "x": 1538.90944,
+              "y": 915.22536
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106050,
+      "p": {
+        "position": {
+          "x": 1052.03844,
+          "y": 941.04824
+        },
+        "width": 974.81104,
+        "height": 0.1,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 564.63293,
+              "y": 941.04824
+            },
+            {
+              "x": 1539.44397,
+              "y": 941.04824
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 106051,
+      "p": {
+        "position": {
+          "x": 959.23187,
+          "y": 966.93627
+        },
+        "width": 1160.4242,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 379.01977,
+              "y": 966.93627
+            },
+            {
+              "x": 1539.44397,
+              "y": 966.93627
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgba(255,255,255,0.3)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106052,
+      "p": {
+        "position": {
+          "x": 904.77061,
+          "y": 954.82374
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "850机组净环水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106053,
+      "p": {
+        "position": {
+          "x": 469.59852,
+          "y": 915.22486
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "循环水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106054,
+      "p": {
+        "toolTip": "水表[自动]_大棒厂_850机组冲渣水循环水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/PW_IP1041_FT_PW06AW03",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 929.192
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106055,
+      "p": {
+        "toolTip": "水表[自动]_大棒厂_850机组净环水（2#加热炉）循环水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/PW_IP1040_FT_PW05AW04",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 903.99176
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106056,
+      "p": {
+        "toolTip": "水表[自动]_大棒厂_850机组浊环循环水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/PW_IP1041_FT_PW06AW01",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.27068,
+          "y": 878.81915
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 106057,
+      "p": {
+        "toolTip": "水表[自动]_大棒厂_850机组净环水（1#加热炉）循环水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/PW_IP1040_FT_PW05AW03",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1147.28768,
+          "y": 954.82474
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    }
+  ],
+  "modified": "Fri Aug 18 2023 18:10:46 GMT+0800 (中国标准时间)",
+  "contentRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1014
+  }
+}

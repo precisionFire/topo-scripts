@@ -1,0 +1,66 @@
+{
+  "modified": "Mon Jan 05 2026 16:30:30 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "rollnum",
+      "valueType": "String"
+    },
+    {
+      "attr": "rollPieceID",
+      "valueType": "String"
+    },
+    {
+      "attr": "linetype",
+      "valueType": "String"
+    },
+    {
+      "attr": "rollcololr",
+      "valueType": "String"
+    },
+    {
+      "attr": "color",
+      "valueType": "Color",
+      "defaultValue": "#60ACFC"
+    }
+  ],
+  "width": 300,
+  "height": 15,
+  "fitSize": true,
+  "interactive": true,
+  "visible": {
+    "func": "__ht__function(data, view) {\nreturn data.a('rollPieceID') != \"1\" && data.a('rollPieceID') != \"\";\n}"
+  },
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('color')\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderColor": "rgb(61,61,61)",
+      "pixelPerfect": true,
+      "rect": [
+        0,
+        0,
+        300,
+        15
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@rollPieceID",
+        "value": "111"
+      },
+      "color": "rgb(255,255,255)",
+      "font": "12px sans-serif, Arial",
+      "letterGap": 1,
+      "rect": [
+        -0.001,
+        8.46335,
+        0.001,
+        0.001
+      ]
+    }
+  ]
+}

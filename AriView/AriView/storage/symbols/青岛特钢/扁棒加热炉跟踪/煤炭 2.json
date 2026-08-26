@@ -1,0 +1,599 @@
+{
+  "modified": "Mon Jul 07 2025 11:03:11 GMT+0800 (GMT+08:00)",
+  "background": "rgb(0,0,0)",
+  "dataBindings": [
+    {
+      "attr": "name",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "1166.color",
+      "valueType": "Color"
+    },
+    {
+      "attr": "color",
+      "valueType": "Color"
+    },
+    {
+      "attr": "tip1",
+      "valueType": "String"
+    },
+    {
+      "attr": "tip2",
+      "valueType": "String"
+    },
+    {
+      "attr": "tip3",
+      "valueType": "String"
+    },
+    {
+      "attr": "tip4",
+      "valueType": "String"
+    },
+    {
+      "attr": "tip5",
+      "valueType": "String"
+    },
+    {
+      "attr": "tip6",
+      "valueType": "String"
+    },
+    {
+      "attr": "tip7",
+      "valueType": "String"
+    },
+    {
+      "attr": "tip8",
+      "valueType": "String"
+    },
+    {
+      "attr": "tip9",
+      "valueType": "String"
+    },
+    {
+      "attr": "component",
+      "valueType": "Object",
+      "name": "成分总"
+    }
+  ],
+  "width": 525,
+  "height": 60,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "rect",
+      "gradientPack": [
+        "linear",
+        0.49992,
+        1,
+        0.49992,
+        0,
+        0,
+        "rgba(47,136,224,0.50)",
+        1,
+        "rgba(44, 58, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.6,
+      "layoutH": "leftright",
+      "layoutV": "topbottom",
+      "displayName": "",
+      "rect": [
+        0,
+        0,
+        525,
+        59.99998
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(192,233,255,0)",
+        0.50435,
+        "rgb(148,212,255)",
+        1,
+        "rgba(192,233,255,0)"
+      ],
+      "pixelPerfect": true,
+      "displayName": "",
+      "points": [
+        262.5,
+        58.20909,
+        407.47473,
+        58.20909,
+        525,
+        58.61,
+        525,
+        59.10454,
+        525,
+        59.59909,
+        407.47473,
+        60,
+        262.5,
+        60,
+        117.52527,
+        60,
+        0,
+        59.59909,
+        0,
+        59.10454,
+        0,
+        58.61,
+        117.52527,
+        58.20909,
+        262.5,
+        58.20909
+      ],
+      "segments": [
+        1,
+        4,
+        4,
+        4,
+        4,
+        5
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@name",
+        "value": "识别成分："
+      },
+      "color": "rgb(181,222,255)",
+      "font": "16px SimHei",
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "center",
+      "rect": [
+        35.96904,
+        7,
+        60,
+        20
+      ]
+    },
+    {
+      "type": "image",
+      "color": {
+        "func": "attr@color",
+        "value": "#5de3f5"
+      },
+      "name": "symbols/tenant/shjz-gczndpsj/图例图标3.json",
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "center",
+      "prefix": "1166",
+      "displayName": "单位",
+      "scaleX": 2,
+      "scaleY": 2,
+      "rect": [
+        15,
+        25,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "text",
+      "text": "硫",
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        110.96904,
+        7,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": "镍",
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        156.93807,
+        7,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": "锰",
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        202.90711,
+        7,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": "铬",
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        248.87614,
+        7,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": "钼",
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        294.84517,
+        7,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": "铜",
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        340.81421,
+        7,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": "铝",
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        386.78325,
+        7,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": "钒",
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        432.75228,
+        7,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@num",
+        "value": "铌"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        478.72132,
+        7,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@tip1"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "15px arial",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        110.96904,
+        32,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@tip2"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "15px arial",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        156.93807,
+        32,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@tip3"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "15px arial",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        202.90711,
+        32,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@tip4"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "15px arial",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        249.87614,
+        32,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@tip5"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "15px arial",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        294.84517,
+        32,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@tip6"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "15px arial",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        340.81421,
+        32,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@tip7"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "15px arial",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        386.78325,
+        32,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@tip8"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "15px arial",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        432.75228,
+        32,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@tip9"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "15px arial",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        478.72132,
+        32,
+        40,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@name",
+        "value": "百分比："
+      },
+      "color": "rgb(181,222,255)",
+      "font": "16px SimHei",
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "center",
+      "rect": [
+        40.48452,
+        32,
+        60,
+        20
+      ]
+    }
+  ]
+}

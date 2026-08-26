@@ -1,0 +1,20 @@
+{
+  "modified": "Mon Jun 15 2026 18:46:46 GMT+0800 (GMT+08:00)",
+  "width": 16.80145,
+  "height": 116.84974,
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/Ariimg/青岛特钢图片/辊道2.png",
+      "pixelPerfect": true,
+      "clipPercentage": 0.81,
+      "displayName": "辊道2",
+      "rect": [
+        0,
+        0.15026,
+        16.80145,
+        116.84974
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "modified": "Sat May 10 2025 14:07:59 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "signal",
+      "valueType": "String",
+      "name": "信号"
+    },
+    {
+      "attr": "signal_state",
+      "valueType": "String",
+      "name": "信号状态"
+    }
+  ],
+  "width": 65.77664,
+  "height": 39.17843,
+  "comps": [
+    {
+      "type": "image",
+      "name": "symbols/青岛特钢/设备管理/高高信号.json",
+      "displayName": "高高信号",
+      "rect": [
+        0,
+        0,
+        65.77664,
+        39.17843
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/青岛特钢/设备管理/正常信号.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('signal_state')=='True';\n}"
+      },
+      "displayName": "正常信号",
+      "rect": [
+        0,
+        0,
+        65.77664,
+        39.17843
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/青岛特钢/设备管理/未知信号.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('signal_state')=='False';\n}"
+      },
+      "displayName": "未知信号",
+      "rect": [
+        0,
+        0,
+        65.77664,
+        39.17843
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/青岛特钢/设备管理/高信号.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('signal')>2||data.a('switch_status')=='True';\n}"
+      },
+      "displayName": "高信号",
+      "rect": [
+        0,
+        0,
+        65.77664,
+        39.17843
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/青岛特钢/设备管理/高高信号.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('signal')>3||data.a('switch_status')=='True';\n}"
+      },
+      "displayName": "高高信号",
+      "rect": [
+        0,
+        0,
+        65.77664,
+        39.17843
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5864 @@
+{
+  "v": "8.0.5",
+  "p": {
+    "layers": [
+      {
+        "name": "0",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      }
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "previewURL": "displayPage.html",
+    "onPostDeserialize": "__ht__function(json, dm, view, datas) {dataModel.addDataPropertyChangeListener(function (e) {\r\n        if (e.property === 'a:group') {\r\n        const group = e.newValue;\r\n        const groupMap = {\r\n        'A': '甲班',\r\n        'B': '乙班',\r\n        'C': '丙班',\r\n        'D': '丁班'\r\n        };\r\n\r\n        const className = groupMap[group] || '未知班级';\r\n        let groupNode = graphView.dm().getDataByTag('班组');\r\n        console.log(groupNode)\r\n        groupNode.s('text', className);\r\n        console.log('📥 收到 group 数据：', e.newValue);\r\n    }\r\n});}"
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 559734,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 940,
+          "y": 540
+        },
+        "width": 1920,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(31,93,156)",
+        "shape.border.color": "#979797",
+        "fullscreen": "fill",
+        "fullscreen.lock": "h",
+        "fullscreen.gap": 0,
+        "2d.editable": false,
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 559735,
+      "p": {
+        "parent": {
+          "__i": 559734
+        },
+        "host": {
+          "__i": 559734
+        },
+        "position": {
+          "x": 940,
+          "y": 540
+        },
+        "anchor": {
+          "x": 0.5003,
+          "y": 0.50114
+        },
+        "width": 1920,
+        "height": 1082.60941
+      },
+      "s": {
+        "layout.h": "leftright",
+        "layout.v": "topbottom",
+        "2d.selectable": false,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 559736,
+      "p": {
+        "displayName": "背景",
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 939.41583,
+          "y": 538.76373
+        },
+        "width": 1920,
+        "height": 1082.60941
+      },
+      "s": {
+        "2d.editable": false,
+        "2d.movable": false,
+        "layout.v": "topbottom",
+        "layout.h": "leftright",
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559737,
+      "p": {
+        "displayName": "bg",
+        "parent": {
+          "__i": 559736
+        },
+        "image": "symbols/tenant/zwsm-dpymsj/参考/设计稿/bg.json",
+        "position": {
+          "x": 939.41583,
+          "y": 537.45902
+        },
+        "width": 1920,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "leftright",
+        "layout.v": "topbottom",
+        "fullscreen.lock": "v",
+        "fullscreen.gap": 0,
+        "opacity": 0.5
+      },
+      "a": {
+        "ht.blueprintId": "173708666751425871",
+        "ht.blueprint": {
+          "p": [
+            321.16251,
+            174
+          ],
+          "c": [
+            {
+              "i": "event$init",
+              "p": [
+                453.16251,
+                163
+              ],
+              "c": [
+                {
+                  "i": "action$playSymbol",
+                  "p": [
+                    640.16251,
+                    163
+                  ],
+                  "c": [
+                    {
+                      "i": "result$input",
+                      "p": [
+                        781.16251,
+                        179
+                      ],
+                      "c": [],
+                      "v": null
+                    }
+                  ]
+                },
+                {
+                  "i": "action$playAnimation",
+                  "p": [
+                    603.16251,
+                    257
+                  ],
+                  "c": [
+                    {
+                      "i": "fileName$未命名_0",
+                      "p": [
+                        744.16251,
+                        258
+                      ],
+                      "c": [
+                        {
+                          "i": "result$input",
+                          "p": [
+                            904.16251,
+                            251
+                          ],
+                          "c": [],
+                          "v": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "a": []
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559738,
+      "p": {
+        "displayName": "左右背景",
+        "parent": {
+          "__i": 559736
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": -20.58417,
+          "y": 537.45902
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "width": 800,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "left",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559739,
+      "p": {
+        "displayName": "左右背景",
+        "parent": {
+          "__i": 559736
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": -20.58417,
+          "y": 537.45902
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "width": 320,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "left",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559740,
+      "p": {
+        "displayName": "左右背景",
+        "parent": {
+          "__i": 559736
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": 1899.41583,
+          "y": 537.45902
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "scale": {
+          "x": -1,
+          "y": 1
+        },
+        "width": 800,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "right",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559741,
+      "p": {
+        "displayName": "左右背景",
+        "parent": {
+          "__i": 559736
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": 1899.41583,
+          "y": 537.45902
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "scale": {
+          "x": -1,
+          "y": 1
+        },
+        "width": 320,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "right",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559742,
+      "p": {
+        "displayName": "左右",
+        "parent": {
+          "__i": 559736
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/左右.json",
+        "position": {
+          "x": 1892.41583,
+          "y": 571.59595
+        },
+        "scale": {
+          "x": -1,
+          "y": 1
+        },
+        "width": 14,
+        "height": 1016.94497,
+        "tall": 20
+      },
+      "s": {
+        "2d.editable": false,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559743,
+      "p": {
+        "displayName": "左右",
+        "parent": {
+          "__i": 559736
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/左右.json",
+        "position": {
+          "x": -13.58417,
+          "y": 571.59595
+        },
+        "width": 14,
+        "height": 1016.94497,
+        "tall": 20
+      },
+      "s": {
+        "2d.editable": false,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559744,
+      "p": {
+        "displayName": "下方装饰",
+        "parent": {
+          "__i": 559736
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/底部装饰.json",
+        "position": {
+          "x": 939.41583,
+          "y": 1080.06844
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "width": 1920,
+        "height": 400,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "leftright",
+        "layout.v": "bottom",
+        "pixelPerfect": false,
+        "2d.editable": false,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 559745,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "rotation": 1.5708,
+        "position": {
+          "x": 1879.81593,
+          "y": 846.53526
+        },
+        "width": 0.11963,
+        "height": 5.38114,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1879.81593,
+              "y": 843.8447
+            },
+            {
+              "x": 1879.81593,
+              "y": 849.22583
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(43,255,251)",
+        "shape.border.width": 1,
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559746,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 940,
+          "y": 120
+        },
+        "width": 0.01,
+        "height": 0.01
+      },
+      "s": {
+        "text": "扁钢主轧线液压润滑系统监测画面",
+        "text.color": "rgb(247,247,247)",
+        "text.font": "bold 48px sans-serif, Arial",
+        "2d.movable": false,
+        "text.align": "center",
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559747,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 1015.14835
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "413",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559748,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 278.62815
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "401",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559749,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 340.00483
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "402",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559750,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 462.7582
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "404",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559751,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 524.13488
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "405",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559752,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 401.38152
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "403",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559753,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 585.51157
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "406",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559754,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 646.88825
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "407",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559755,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 769.64162
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "409",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559756,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 831.0183
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "410",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559757,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 708.26494
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "408",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559758,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 892.39499
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "411",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559759,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": -5.86666,
+          "y": 953.77167
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "412",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559760,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 76.6113,
+          "y": 198.62715
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "系统名称",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559761,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 430.60775,
+          "y": 198.62615
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "温度低",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559762,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 577.16577,
+          "y": 198.62815
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "温度高",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559763,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 723.72379,
+          "y": 198.63015
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "液位低",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559764,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 870.28181,
+          "y": 198.63115
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "压力低",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559765,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 1016.83983,
+          "y": 198.63215
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "压力高",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559766,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 1163.39785,
+          "y": 198.63315
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "液位低低",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559767,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 1309.95587,
+          "y": 198.63415
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "温度低低",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559768,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 1456.51389,
+          "y": 198.63515
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "温度高高",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559769,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 1603.07192,
+          "y": 198.63515
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "急停",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559770,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 1749.62994,
+          "y": 198.63615
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "油温",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559771,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 1015.14835
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "5#飞剪稀油润滑站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559772,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 278.62815
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "粗轧&一中轧液压站（1#）",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559773,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 340.00483
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "摆剪液压站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559774,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 462.7582
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "一中轧区稀油润滑站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559775,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 524.13488
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "二中轧&预精轧液压站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559776,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 401.38152
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "粗轧区稀油润滑站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559777,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 585.51157
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "减定径液压站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559778,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 646.88825
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "预精轧区稀油润滑站站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559779,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 769.64162
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "减定径稀油润滑站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559780,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 831.0183
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "剪切区液压站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559781,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 708.26494
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "二中轧区稀油润滑站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559782,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 892.39499
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "精整液压站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559783,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 57.13334,
+          "y": 953.77167
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "冷剪稀油润滑站",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 559784,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 380.13284,
+          "y": 618.62765
+        },
+        "width": 0,
+        "height": 840,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 380.13284,
+              "y": 198.62765
+            },
+            {
+              "x": 380.13284,
+              "y": 1038.62765
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(247,247,247)",
+        "shape.border.width": 3,
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 559785,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 940.13284,
+          "y": 238.62765
+        },
+        "width": 1850,
+        "height": 0,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 15.13284,
+              "y": 238.62765
+            },
+            {
+              "x": 1865.13284,
+              "y": 238.62765
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(247,247,247)",
+        "shape.border.width": 3,
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559786,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0480"
+            },
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0293"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 276.11165
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559787,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0307"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 337.90767
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559788,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0321"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 399.70368
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559789,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0334"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 461.4997
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559790,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0347"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 523.29572
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559791,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0361"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 585.09173
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559792,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0375"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 646.88775
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559793,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0401"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 770.47978
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559794,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0414"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 832.2758
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559795,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0428"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 894.07182
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559796,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0455"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 1017.66385
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559797,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0442"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 955.86783
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559798,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0388"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 469.69201,
+          "y": 708.68377
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559799,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0294"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 276.11165
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559800,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0308"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 337.90767
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559801,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0322"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 399.70368
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559802,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0335"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 461.4997
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559803,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0348"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 523.29572
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559804,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0362"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 585.09173
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559805,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0376"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 646.88775
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559806,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0402"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 770.47978
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559807,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0415"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 832.2758
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559808,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0429"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 894.07182
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559809,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0456"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 1017.66385
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559810,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0443"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 955.86783
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559811,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0389"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 626.59231,
+          "y": 708.68377
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559812,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0295"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 276.11265
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559813,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0309"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 337.90867
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559814,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0323"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 399.70468
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559815,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0336"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 461.5007
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559816,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0349"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 523.29672
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559817,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0363"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 585.09273
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559818,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0377"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 646.88875
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559819,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0403"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 770.48078
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559820,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0416"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 832.2768
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559821,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0430"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 894.07282
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559822,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0457"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 1017.66485
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559823,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0444"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 955.86883
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559824,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0390"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 775.40398,
+          "y": 708.68477
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559825,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0296"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 276.11165
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559826,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0310"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 337.90767
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559827,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0324"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 399.70368
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559828,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0337"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 461.4997
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559829,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0350"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 523.29572
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559830,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0364"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 585.09173
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559831,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0378"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 646.88775
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559832,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0404"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 770.47978
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559833,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0417"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 832.2758
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559834,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0431"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 894.07182
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559835,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0458"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 1017.66385
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559836,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0445"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 955.86783
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559837,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0391"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 914.33207,
+          "y": 708.68377
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559838,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0297"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 276.11165
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559839,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0311"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 337.90767
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559840,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0325"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 399.70368
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559841,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0338"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 461.4997
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559842,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0351"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 523.29572
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559843,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0365"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 585.09173
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559844,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0379"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 646.88775
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559845,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0405"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 770.47978
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559846,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0418"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 832.2758
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559847,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0432"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 894.07182
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559848,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0459"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 1017.66385
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559849,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0446"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 955.86783
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559850,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0392"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1065.85474,
+          "y": 708.68377
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559851,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0298"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 276.11165
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559852,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0312"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 337.90767
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559853,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0326"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 399.70368
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559854,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0339"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 461.4997
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559855,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0352"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 523.29572
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559856,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0366"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 585.09173
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559857,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0380"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 646.88775
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559858,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0406"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 770.47978
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559859,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0419"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 832.2758
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559860,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0433"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 894.07182
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559861,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0460"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 1017.66385
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559862,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0447"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 955.86783
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559863,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0393"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1215.2174,
+          "y": 708.68377
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559864,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0299"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 276.11265
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559865,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0313"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 337.90867
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559866,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0327"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 399.70468
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559867,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0340"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 461.5007
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559868,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0353"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 523.29672
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559869,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0367"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 585.09273
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559870,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0381"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 646.88875
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559871,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0407"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 770.48078
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559872,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0420"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 832.2768
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559873,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0434"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 894.07282
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559874,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0461"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 1017.66485
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559875,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0448"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 955.86883
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559876,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0394"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1365.86417,
+          "y": 708.68477
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559877,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0300"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 276.11165
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559878,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0314"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 337.90767
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559879,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0328"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 399.70368
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559880,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0341"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 461.4997
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559881,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0354"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 523.29572
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559882,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0368"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 585.09173
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559883,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0382"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 646.88775
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559884,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0408"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 770.47978
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559885,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0421"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 832.2758
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559886,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0435"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 894.07182
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559887,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0462"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 1017.66385
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559888,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0449"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 955.86783
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559889,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0395"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1505.62825,
+          "y": 708.68377
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559890,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0301"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 276.11165
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559891,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0315"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 337.90767
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559892,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0329"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 399.70368
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559893,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0342"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 461.4997
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559894,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0355"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 523.29572
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559895,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0369"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 585.09173
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559896,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0383"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 646.88775
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559897,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0409"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 770.47978
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559898,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0422"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 832.2758
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559899,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0436"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 894.07182
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559900,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0463"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 1017.66385
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559901,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0450"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 955.86783
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559902,
+      "p": {
+        "displayName": "变化信号",
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "a": {
+            "signal_state": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_DI0396"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/设备管理/布尔值变化信号.json",
+        "position": {
+          "x": 1628.15518,
+          "y": 708.68377
+        },
+        "width": 50.16753,
+        "height": 27.92026,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0
+      },
+      "a": {
+        "signal": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559903,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0307"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 278.62915
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559904,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0311"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 401.80185
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559905,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0309"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 340.2155
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559906,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0315"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 524.97455
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559907,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0317"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 586.5609
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559908,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0321"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 709.7336
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559909,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0319"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 648.14725
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559910,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0325"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 832.9063
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559911,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0323"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 771.31995
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559912,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0329"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 956.079
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559913,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0327"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 894.49265
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559914,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0331"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 1017.66535
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559915,
+      "p": {
+        "parent": {
+          "__i": 559735
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0313"
+            }
+          }
+        },
+        "position": {
+          "x": 1757.81918,
+          "y": 463.3882
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.font": "28px arial, sans-serif",
+        "text.color": "rgb(247,247,247)",
+        "2d.movable": false,
+        "select.width": 0
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 559916,
+      "p": {
+        "displayName": "块",
+        "parent": {
+          "__i": 559735
+        },
+        "position": {
+          "x": 939.77442,
+          "y": 31.68419
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "width": 1919.28283,
+        "height": 65.84092
+      },
+      "s": {
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559917,
+      "p": {
+        "displayName": "标题2 2",
+        "parent": {
+          "__i": 559916
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/标题2 2.json",
+        "position": {
+          "x": 939.77442,
+          "y": 31.68419
+        },
+        "width": 1919.28283,
+        "height": 65.84092,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559918,
+      "p": {
+        "displayName": "logo",
+        "parent": {
+          "__i": 559916
+        },
+        "image": "data:image/png;base64,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",
+        "position": {
+          "x": 180.51836,
+          "y": 31.68419
+        },
+        "width": 373.22193,
+        "height": 34.20565,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559919,
+      "p": {
+        "displayName": "time",
+        "parent": {
+          "__i": 559916
+        },
+        "tag": "time",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "TextTag/AriEplat/Common/DatetimeStrss"
+            }
+          }
+        },
+        "position": {
+          "x": 1544,
+          "y": 32
+        },
+        "width": 0.01,
+        "height": 0.01,
+        "tall": 20
+      },
+      "s": {
+        "text": "2025/1/4",
+        "text.color": "rgb(255,255,255)",
+        "text.font": "18px arial, sans-serif",
+        "select.width": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559920,
+      "p": {
+        "parent": {
+          "__i": 559916
+        },
+        "position": {
+          "x": 1445,
+          "y": 32
+        },
+        "width": 0.01,
+        "height": 0.01,
+        "tall": 20
+      },
+      "s": {
+        "text": "班组：",
+        "text.color": "rgb(255,255,255)",
+        "text.font": "18px arial, sans-serif",
+        "select.width": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559921,
+      "p": {
+        "displayName": "报警",
+        "parent": {
+          "__i": 559916
+        },
+        "image": "symbols/AriIcon/报警装置/报警.json",
+        "position": {
+          "x": 1733.99873,
+          "y": 28.54456
+        },
+        "width": 25.72959,
+        "height": 25.67716,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "num": "16"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559922,
+      "p": {
+        "displayName": "信息化综合应用",
+        "parent": {
+          "__i": 559916
+        },
+        "position": {
+          "x": 939.77442,
+          "y": 35.52767
+        },
+        "width": 0.09996,
+        "height": 0.09976,
+        "tall": 20
+      },
+      "s": {
+        "text": "扁钢数字产线",
+        "type": "text",
+        "text.align": "center",
+        "text.color": "rgb(0,0,0)",
+        "text.font": "bold 28px Arial",
+        "opacity": 1,
+        "select.width": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559923,
+      "p": {
+        "displayName": "信息化综合应用",
+        "parent": {
+          "__i": 559916
+        },
+        "position": {
+          "x": 939.77442,
+          "y": 33.53251
+        },
+        "width": 200,
+        "tall": 20
+      },
+      "s": {
+        "text": "扁钢数字产线",
+        "type": "text",
+        "text.align": "center",
+        "text.color": "rgb(247,247,247)",
+        "text.font": "bold 28px Arial",
+        "opacity": 1,
+        "text.gradient.pack": [
+          "linear",
+          0.5,
+          1.30958,
+          0.5,
+          0,
+          0,
+          "#45C4F9",
+          1,
+          "white"
+        ],
+        "interactive": true,
+        "onDoubleClick": "__ht__function(event, data, view) {// 检查是否全屏\r\n  const isFullScreen =\r\n    document.fullscreenElement ||\r\n    document.webkitFullscreenElement ||\r\n    document.mozFullScreenElement ||\r\n    document.msFullscreenElement;\r\n\r\n  if (isFullScreen) {\r\n    // 退出全屏\r\n    if (document.exitFullscreen) {\r\n      document.exitFullscreen();\r\n    } else if (document.webkitExitFullscreen) {\r\n      document.webkitExitFullscreen();\r\n    } else if (document.mozCancelFullScreen) {\r\n      document.mozCancelFullScreen();\r\n    } else if (document.msExitFullscreen) {\r\n      document.msExitFullscreen();\r\n    }\r\n  } else {\r\n    // 进入全屏\r\n    const el = document.documentElement;\r\n    if (el.requestFullscreen) {\r\n      el.requestFullscreen();\r\n    } else if (el.webkitRequestFullscreen) {\r\n      el.webkitRequestFullscreen();\r\n    } else if (el.mozRequestFullScreen) {\r\n      el.mozRequestFullScreen();\r\n    } else if (el.msRequestFullscreen) {\r\n      el.msRequestFullscreen();\r\n    }\r\n  }}",
+        "select.width": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559924,
+      "p": {
+        "displayName": "logo_jztz_白",
+        "parent": {
+          "__i": 559916
+        },
+        "image": "assets/AriIconLib/logo/logo_jztz_白.svg",
+        "position": {
+          "x": 1828.82691,
+          "y": 29.22944
+        },
+        "width": 103.60917,
+        "height": 29.29612,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 559925,
+      "p": {
+        "parent": {
+          "__i": 559916
+        },
+        "position": {
+          "x": 1762.32691,
+          "y": 28.96053
+        },
+        "width": 0.00001,
+        "height": 24.84517,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1762.32691,
+              "y": 16.53796
+            },
+            {
+              "x": 1762.32691,
+              "y": 41.38313
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(156,225,255)",
+        "shape.border.width": 1,
+        "select.width": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 559926,
+      "p": {
+        "displayName": "baseData",
+        "parent": {
+          "__i": 559916
+        },
+        "dataBindings": {
+          "a": {
+            "group": {
+              "id": "TextTag/TRACK_FLAT/ROLLLINE/Group"
+            }
+          }
+        },
+        "image": "symbols/czy/tableclass/baseData.json",
+        "position": {
+          "x": 740,
+          "y": 32
+        },
+        "width": 5,
+        "height": 5
+      },
+      "s": {
+        "select.width": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 559927,
+      "p": {
+        "displayName": "班组",
+        "parent": {
+          "__i": 559916
+        },
+        "tag": "班组",
+        "position": {
+          "x": 1495,
+          "y": 32
+        },
+        "width": 0.01,
+        "height": 0.01,
+        "tall": 20
+      },
+      "s": {
+        "text": "甲班",
+        "text.color": "rgb(255,255,255)",
+        "text.font": "18px arial, sans-serif",
+        "select.width": 0,
+        "2d.movable": false
+      }
+    }
+  ],
+  "modified": "Tue Jun 24 2025 18:26:36 GMT+0800 (GMT+08:00)",
+  "contentRect": {
+    "x": -20.58417,
+    "y": -2.54098,
+    "width": 1920.58417,
+    "height": 1082.60942
+  }
+}

@@ -74,7 +74,6 @@ git log --oneline
 ```
 
 **本仓库网络注意事项**（已写入仓库级 git 配置，无需重复设置）：
-- 本机走系统代理 `127.0.0.1:8890`，git 已配置 `http.proxy` / `https.proxy`
 - 必须使用 `http.version HTTP/1.1`，否则经代理 TLS 握手失败
 - 大文件推送需 `http.postBuffer` / `http.lowSpeedLimit` 已调大
 - 首次使用 git 命令需重开终端（PATH 才会刷新）

@@ -1,0 +1,45 @@
+{
+  "modified": "Sat Nov 11 2023 18:48:26 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "Opening",
+      "valueType": "String",
+      "name": "阀门开度"
+    },
+    {
+      "attr": "switch_status",
+      "valueType": "String",
+      "name": "开关状态"
+    }
+  ],
+  "cacheRule": true,
+  "width": 37,
+  "height": 39,
+  "comps": [
+    {
+      "type": "image",
+      "name": "symbols/冶钢集控项目图标/氧氮氩/阀门状态_关.json",
+      "displayName": "阀门状态_关",
+      "rect": [
+        0,
+        0,
+        37,
+        40
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/冶钢集控项目图标/氧氮氩/阀门状态_开.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('Opening')>0||data.a('switch_status')=='True';\n}"
+      },
+      "displayName": "阀门状态_开",
+      "rect": [
+        0,
+        0,
+        37,
+        40
+      ]
+    }
+  ]
+}

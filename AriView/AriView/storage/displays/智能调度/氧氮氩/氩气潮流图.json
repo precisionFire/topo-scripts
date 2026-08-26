@@ -1,0 +1,4321 @@
+{
+  "v": "7.7.2",
+  "p": {
+    "layers": [
+      {
+        "name": "0",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "m_top",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "trend",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      }
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "zoomable": true,
+    "pannable": true,
+    "rectSelectable": false,
+    "onPreDeserialize": "__ht__function(json, dm, view) {dm.ListSubscribe={\r\n'NumTag/OPCUA132/DB906_DBD576_PV':0,  //煤气表[自动]_5万焦炉煤气柜_高度\r\n'NumTag/OPCUA132/DB906_DBD676_PV':0,  //煤气表[自动]_5万焦炉煤气柜_速度\r\n'NumTag/OPCUA132/DB906_DBD480_PV':0,  //煤气表[自动]_5万焦炉煤气柜_温度\r\n};\r\ndm.ListCal={\r\n    'Local:NumTag/YQCLT/2Ar_FRS':{\t//氩气消耗总量(特冶总+电炉总+转炉厂)\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LG_IP2065_FT_TY01ZG01_C','NumTag/OPCUA132/LG_IP3185_FT_DL02WS01_C','NumTag/OPCUA132/LG_IP2031_FT_LG000O07']\r\n    },\r\n    'Local:NumTag/YQCLT/Ar_UtilizationRate':{\t//氩气利用率\r\n        value:0,\r\n        formate:\"(parseFloat({0}/{1})*100).toFixed(1)\",\r\n        datas:['NumTag/YQCLT/2Ar_FRS','NumTag/OPCUA132/IP4058_FT_PG02AO02']\r\n       },\r\n}}",
+    "previewURL": "displayPage.html",
+    "width": 0
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 53378,
+      "p": {
+        "displayName": "img_bg",
+        "image": "assets/冶钢集控项目icon/煤气调度/img_bg.jpg",
+        "position": {
+          "x": 960,
+          "y": 507
+        }
+      },
+      "s": {
+        "pixelPerfect": false,
+        "2d.movable": false,
+        "2d.editable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53379,
+      "p": {
+        "rotation": 3.14159,
+        "position": {
+          "x": 939.94029,
+          "y": 450.60995
+        },
+        "width": 1257.57159,
+        "height": 0.00066,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 311.15449,
+              "y": 450.60962
+            },
+            {
+              "x": 1568.72608,
+              "y": 450.61028
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53380,
+      "p": {
+        "position": {
+          "x": 312.09519,
+          "y": 660.02506
+        },
+        "width": 92.85809,
+        "height": 28.39809,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53381,
+      "p": {
+        "position": {
+          "x": 311.83372,
+          "y": 660.02456
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "特冶双真空",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53382,
+      "p": {
+        "position": {
+          "x": 693.29633,
+          "y": 195.07283
+        },
+        "width": 132.40678,
+        "height": 90.64054,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53383,
+      "p": {
+        "position": {
+          "x": 707.59408,
+          "y": 195.07333
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "新两万\n制氧",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "20px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53384,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 1164.16466,
+          "y": 350.4229
+        },
+        "width": 199.69715,
+        "height": 0.19421,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1064.31607,
+              "y": 350.4229
+            },
+            {
+              "x": 1262.83366,
+              "y": 350.4229
+            },
+            {
+              "x": 1264.01322,
+              "y": 350.4229
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53385,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 311.49347,
+          "y": 548.46808
+        },
+        "width": 194.48368,
+        "height": 0.0003,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 214.25163,
+              "y": 548.46823
+            },
+            {
+              "x": 408.06816,
+              "y": 548.46793
+            },
+            {
+              "x": 408.7353,
+              "y": 548.46793
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53386,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 429.11127,
+          "y": 589.35337
+        },
+        "width": 112.94529,
+        "height": 0.15345,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 372.63863,
+              "y": 589.35337
+            },
+            {
+              "x": 484.91678,
+              "y": 589.35337
+            },
+            {
+              "x": 485.58392,
+              "y": 589.35337
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53387,
+      "p": {
+        "position": {
+          "x": 252.99228,
+          "y": 481.86969
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "特冶事业部",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "bold 20px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53388,
+      "p": {
+        "displayName": "icon_KFT",
+        "image": "assets/冶钢集控项目icon/氧气调度/icon_KFT.svg",
+        "position": {
+          "x": 653.63128,
+          "y": 195.07283
+        },
+        "width": 22.05582,
+        "height": 70.39093
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53389,
+      "p": {
+        "position": {
+          "x": 1313.58804,
+          "y": 338.84665
+        },
+        "width": 82.83387,
+        "height": 60.45249,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53390,
+      "p": {
+        "position": {
+          "x": 1313.58754,
+          "y": 338.84715
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "二万\n外供",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "18px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53391,
+      "p": {
+        "rotation": 3.14159,
+        "position": {
+          "x": 1218.38194,
+          "y": 337.98151
+        },
+        "width": 107.57833,
+        "height": 0.10463,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1164.59277,
+              "y": 337.98151
+            },
+            {
+              "x": 1271.53566,
+              "y": 337.98151
+            },
+            {
+              "x": 1272.1711,
+              "y": 337.98151
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53392,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 693.53306,
+          "y": 345.44961
+        },
+        "width": 210.11305,
+        "height": 0.00002,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 588.47654,
+              "y": 345.44962
+            },
+            {
+              "x": 798.58959,
+              "y": 345.44961
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53393,
+      "p": {
+        "displayName": "icon_Ar_guan",
+        "image": "symbols/冶钢集控项目图标/氧氮氩/icon_Ar_guan.json",
+        "position": {
+          "x": 1164.26213,
+          "y": 209.63072
+        },
+        "width": 159.25333,
+        "height": 159.25333
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53394,
+      "p": {
+        "position": {
+          "x": 429.1892,
+          "y": 660.02506
+        },
+        "width": 92.85809,
+        "height": 28.39809,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53395,
+      "p": {
+        "position": {
+          "x": 428.92773,
+          "y": 660.02456
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "电渣",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53396,
+      "p": {
+        "position": {
+          "x": 782.76993,
+          "y": 764.67032
+        },
+        "width": 92.85809,
+        "height": 28.39809,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53397,
+      "p": {
+        "position": {
+          "x": 782.50846,
+          "y": 764.66982
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "RH炉1#工位",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53398,
+      "p": {
+        "position": {
+          "x": 900.28715,
+          "y": 764.67132
+        },
+        "width": 108.21409,
+        "height": 28.39809,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53399,
+      "p": {
+        "position": {
+          "x": 900.02568,
+          "y": 764.67082
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "RH炉2#工位",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53400,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 899.94817,
+          "y": 692.7159
+        },
+        "width": 115.77087,
+        "height": 0.15345,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 842.06273,
+              "y": 692.7159
+            },
+            {
+              "x": 957.14978,
+              "y": 692.7159
+            },
+            {
+              "x": 957.83361,
+              "y": 692.7159
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53401,
+      "p": {
+        "rotation": 3.14159,
+        "position": {
+          "x": 903.446,
+          "y": 634.71691
+        },
+        "width": 241.93661,
+        "height": 0.2353,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 782.47769,
+              "y": 634.71691
+            },
+            {
+              "x": 1022.98523,
+              "y": 634.71691
+            },
+            {
+              "x": 1024.4143,
+              "y": 634.71691
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53402,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 782.62326,
+          "y": 599.56489
+        },
+        "width": 300.48217,
+        "height": 0.29223,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 632.38216,
+              "y": 599.56489
+            },
+            {
+              "x": 931.08946,
+              "y": 599.56489
+            },
+            {
+              "x": 932.86433,
+              "y": 599.56489
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53403,
+      "p": {
+        "position": {
+          "x": 1024.9934,
+          "y": 764.67132
+        },
+        "width": 108.21409,
+        "height": 28.39809,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53404,
+      "p": {
+        "position": {
+          "x": 1024.73193,
+          "y": 764.67082
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "VD炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53405,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 1024.65449,
+          "y": 692.7159
+        },
+        "width": 115.77087,
+        "height": 0.15345,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 966.76905,
+              "y": 692.7159
+            },
+            {
+              "x": 1081.85609,
+              "y": 692.7159
+            },
+            {
+              "x": 1082.53993,
+              "y": 692.7159
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53406,
+      "p": {
+        "position": {
+          "x": 1569.70125,
+          "y": 660.02506
+        },
+        "width": 92.85809,
+        "height": 28.39809,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53407,
+      "p": {
+        "position": {
+          "x": 1569.43978,
+          "y": 660.02456
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "转炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53408,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 1569.4135,
+          "y": 548.65566
+        },
+        "width": 192.75914,
+        "height": 0.2555,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1473.03394,
+              "y": 548.65566
+            },
+            {
+              "x": 1664.6545,
+              "y": 548.65566
+            },
+            {
+              "x": 1665.79308,
+              "y": 548.65566
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53409,
+      "p": {
+        "position": {
+          "x": 707.70895,
+          "y": 481.86869
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "电炉厂",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "bold 20px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53410,
+      "p": {
+        "toolTip": "氩气表[自动]_转炉厂_转炉用氩气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP2031_FT_LG000O07",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1569.70175,
+          "y": 605.27072
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53411,
+      "p": {
+        "toolTip": "氩气表[自动]_转炉厂_转炉用氩气(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP2031_PT_LG000O07",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1569.70275,
+          "y": 588.67765
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53412,
+      "p": {
+        "toolTip": "氩气表[自动]_特冶厂_电渣用氩气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP2065_FT_LG20CO02",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 429.1887,
+          "y": 605.26972
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53413,
+      "p": {
+        "toolTip": "氩气表[自动]_特冶厂_双真空用氩气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP1146_FT_SZ11AI04_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 312.09569,
+          "y": 605.26972
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53414,
+      "p": {
+        "toolTip": "氩气表[自动]_电炉西氩气总管(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP3185_FT_DL02WS01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 782.77043,
+          "y": 498.03781
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53415,
+      "p": {
+        "toolTip": "氩气表[自动]_转炉厂_转炉1#RH炉用氩气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP3039_FT_LG26AO03",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 782.77043,
+          "y": 731.33164
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53416,
+      "p": {
+        "toolTip": "氩气表[自动]_转炉厂_转炉2#RH炉用氩气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP3039_FT_LG26AO04",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 900.02461,
+          "y": 731.33164
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53417,
+      "p": {
+        "toolTip": "氩气表[自动]_电炉厂_精炼VD炉用氩气_三级(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP3042_FT_LG16A002",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1024.9939,
+          "y": 731.33164
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53418,
+      "p": {
+        "toolTip": "氩气表[自动]_制氧_两万外供氩气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/IP4058_FT_PG02AO02",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1164.59328,
+          "y": 384.23222
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "22px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53419,
+      "p": {
+        "toolTip": "氩气表[自动]_制氧_两万外供氩气(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/IP4058_PT_PG02AO02",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1165.12844,
+          "y": 364.07339
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "22px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53420,
+      "p": {
+        "toolTip": "氩气表[自动]_制氧_两万外供氩气(温度)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/IP4058_TE_PG02AO02",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1164.59428,
+          "y": 405.45319
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "22px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53421,
+      "p": {
+        "toolTip": "氩气表[自动]_制氧_新两万外供氩气(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/IP4206_FT_20000ZY08_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 693.63462,
+          "y": 384.23222
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "22px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53422,
+      "p": {
+        "toolTip": "氩气表[自动]_制氧_新两万外供氩气(温度)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/IP4206_TT_20000ZY08_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 693.63562,
+          "y": 405.45319
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "22px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53423,
+      "p": {
+        "position": {
+          "x": 616.92562,
+          "y": 262.42829
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "纯度",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53424,
+      "p": {
+        "toolTip": "氩气表[自动]_制氧_新两万氩气纯度",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/IP4206_AT_20000ZY03_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(0);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 603.28256,
+          "y": 283.27699
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(25,166,156)",
+        "text.font": "22px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53425,
+      "p": {
+        "toolTip": "氩气表[自动]_电炉西氩气总管(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP3185_PT_DL02WS01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 782.77143,
+          "y": 481.44474
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53426,
+      "p": {
+        "toolTip": "氩气表[自动]_电炉西氩气总管(温度)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP3185_TT_DL02WS01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 782.77143,
+          "y": 515.47779
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53427,
+      "p": {
+        "rotation": 3.14159,
+        "position": {
+          "x": 370.03329,
+          "y": 532.76565
+        },
+        "width": 118.30129,
+        "height": 0.00033,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 310.88265,
+              "y": 532.76582
+            },
+            {
+              "x": 427.75487,
+              "y": 532.76549
+            },
+            {
+              "x": 429.18394,
+              "y": 532.76549
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53428,
+      "p": {
+        "toolTip": "氩气表[自动]_特冶氩气总管(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP2065_FT_TY01ZG01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 310.88113,
+          "y": 498.46176
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53429,
+      "p": {
+        "toolTip": "氩气表[自动]_特冶氩气总管(压力)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP2065_PT_TY01ZG01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 310.88214,
+          "y": 481.86869
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(255,218,0)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53430,
+      "p": {
+        "toolTip": "氩气表[自动]_特冶氩气总管(温度)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LG_IP2065_TT_TY01ZG01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 310.88214,
+          "y": 515.90174
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "16px arial, sans-serif",
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53431,
+      "p": {
+        "rotation": 3.14159,
+        "position": {
+          "x": 1024.53502,
+          "y": 532.76566
+        },
+        "width": 484.11686,
+        "height": 0.00064,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 782.47659,
+              "y": 532.76534
+            },
+            {
+              "x": 1265.16437,
+              "y": 532.76599
+            },
+            {
+              "x": 1266.59344,
+              "y": 532.76599
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53432,
+      "p": {
+        "position": {
+          "x": 1267.15899,
+          "y": 660.02506
+        },
+        "width": 92.85809,
+        "height": 28.39809,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53433,
+      "p": {
+        "position": {
+          "x": 1266.89752,
+          "y": 660.02456
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "50t小电炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53434,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 1267.23593,
+          "y": 589.35337
+        },
+        "width": 112.94529,
+        "height": 0.15345,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1210.76329,
+              "y": 589.35337
+            },
+            {
+              "x": 1323.04144,
+              "y": 589.35337
+            },
+            {
+              "x": 1323.70858,
+              "y": 589.35337
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(179,179,179)",
+        "shape.border.width": 2,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53435,
+      "p": {
+        "position": {
+          "x": 1569.70375,
+          "y": 481.86869
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "转炉厂",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.font": "bold 20px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 53436,
+      "p": {
+        "position": {
+          "x": 71.47195,
+          "y": 133.65136
+        },
+        "anchor": {
+          "x": 0.21083,
+          "y": 0.51745
+        },
+        "width": 313.18788,
+        "height": 251.54183
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53437,
+      "p": {
+        "parent": {
+          "__i": 53436
+        },
+        "position": {
+          "x": 161.51871,
+          "y": 128.96258
+        },
+        "width": 304.55166,
+        "height": 242.74482,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 9.24286,
+              "y": 7.59015
+            },
+            {
+              "x": 313.79452,
+              "y": 7.59015
+            },
+            {
+              "x": 313.79452,
+              "y": 7.59015
+            },
+            {
+              "x": 313.79452,
+              "y": 7.59015
+            },
+            {
+              "x": 313.79452,
+              "y": 250.33497
+            },
+            {
+              "x": 313.79452,
+              "y": 250.33497
+            },
+            {
+              "x": 313.79452,
+              "y": 250.33497
+            },
+            {
+              "x": 9.24286,
+              "y": 250.33497
+            },
+            {
+              "x": 9.24286,
+              "y": 250.33497
+            },
+            {
+              "x": 9.24286,
+              "y": 250.33497
+            },
+            {
+              "x": 9.24286,
+              "y": 7.59015
+            },
+            {
+              "x": 9.24286,
+              "y": 7.59015
+            },
+            {
+              "x": 9.24286,
+              "y": 7.59015
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "shape.background": null,
+        "shape.border.width": 1,
+        "shape.border.color": "#8dcbf9",
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "opacity": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53438,
+      "p": {
+        "parent": {
+          "__i": 53436
+        },
+        "position": {
+          "x": 17.79343,
+          "y": 16.81348
+        },
+        "width": 7.6005,
+        "height": 8.19848,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 13.99318,
+              "y": 20.91273
+            },
+            {
+              "x": 21.59368,
+              "y": 12.71424
+            },
+            {
+              "x": 13.99318,
+              "y": 12.71424
+            },
+            {
+              "x": 13.99318,
+              "y": 20.91273
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "shape.background": "#ff6464",
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.fill.rule": "evenodd",
+        "opacity": 0.8
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53439,
+      "p": {
+        "parent": {
+          "__i": 53436
+        },
+        "position": {
+          "x": 307.22973,
+          "y": 240.44615
+        },
+        "width": 7.6005,
+        "height": 8.1985,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 311.02998,
+              "y": 236.3469
+            },
+            {
+              "x": 303.42948,
+              "y": 244.5454
+            },
+            {
+              "x": 311.02998,
+              "y": 244.5454
+            },
+            {
+              "x": 311.02998,
+              "y": 236.3469
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "shape.background": "#ff6464",
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.fill.rule": "evenodd",
+        "opacity": 0.8
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53440,
+      "p": {
+        "parent": {
+          "__i": 53436
+        },
+        "position": {
+          "x": 11.14299,
+          "y": 4.51573
+        },
+        "width": 11.40075,
+        "height": 2.04962,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 5.44262,
+              "y": 3.49091
+            },
+            {
+              "x": 16.84337,
+              "y": 3.49091
+            },
+            {
+              "x": 16.84337,
+              "y": 3.49091
+            },
+            {
+              "x": 16.84337,
+              "y": 3.49091
+            },
+            {
+              "x": 16.84337,
+              "y": 5.54054
+            },
+            {
+              "x": 16.84337,
+              "y": 5.54054
+            },
+            {
+              "x": 16.84337,
+              "y": 5.54054
+            },
+            {
+              "x": 5.44262,
+              "y": 5.54054
+            },
+            {
+              "x": 5.44262,
+              "y": 5.54054
+            },
+            {
+              "x": 5.44262,
+              "y": 5.54054
+            },
+            {
+              "x": 5.44262,
+              "y": 3.49091
+            },
+            {
+              "x": 5.44262,
+              "y": 3.49091
+            },
+            {
+              "x": 5.44262,
+              "y": 3.49091
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "shape.background": "#8dcbf9",
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "opacity": 0.6
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53441,
+      "p": {
+        "parent": {
+          "__i": 53436
+        },
+        "position": {
+          "x": 6.39268,
+          "y": 9.63979
+        },
+        "width": 1.90013,
+        "height": 12.29775,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 5.44262,
+              "y": 3.49091
+            },
+            {
+              "x": 7.34274,
+              "y": 3.49091
+            },
+            {
+              "x": 7.34274,
+              "y": 3.49091
+            },
+            {
+              "x": 7.34274,
+              "y": 3.49091
+            },
+            {
+              "x": 7.34274,
+              "y": 15.78866
+            },
+            {
+              "x": 7.34274,
+              "y": 15.78866
+            },
+            {
+              "x": 7.34274,
+              "y": 15.78866
+            },
+            {
+              "x": 5.44262,
+              "y": 15.78866
+            },
+            {
+              "x": 5.44262,
+              "y": 15.78866
+            },
+            {
+              "x": 5.44262,
+              "y": 15.78866
+            },
+            {
+              "x": 5.44262,
+              "y": 3.49091
+            },
+            {
+              "x": 5.44262,
+              "y": 3.49091
+            },
+            {
+              "x": 5.44262,
+              "y": 3.49091
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "shape.background": "#8dcbf9",
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "opacity": 0.6
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53442,
+      "p": {
+        "parent": {
+          "__i": 53436
+        },
+        "position": {
+          "x": 317.68043,
+          "y": 9.63979
+        },
+        "width": 1.90013,
+        "height": 12.29775,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 316.73036,
+              "y": 3.49091
+            },
+            {
+              "x": 318.63048,
+              "y": 3.49091
+            },
+            {
+              "x": 318.63048,
+              "y": 3.49091
+            },
+            {
+              "x": 318.63048,
+              "y": 3.49091
+            },
+            {
+              "x": 318.63048,
+              "y": 15.78866
+            },
+            {
+              "x": 318.63048,
+              "y": 15.78866
+            },
+            {
+              "x": 318.63048,
+              "y": 15.78866
+            },
+            {
+              "x": 316.73036,
+              "y": 15.78866
+            },
+            {
+              "x": 316.73036,
+              "y": 15.78866
+            },
+            {
+              "x": 316.73036,
+              "y": 15.78866
+            },
+            {
+              "x": 316.73036,
+              "y": 3.49091
+            },
+            {
+              "x": 316.73036,
+              "y": 3.49091
+            },
+            {
+              "x": 316.73036,
+              "y": 3.49091
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "shape.background": "#8dcbf9",
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "opacity": 0.6
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53443,
+      "p": {
+        "parent": {
+          "__i": 53436
+        },
+        "position": {
+          "x": 312.93011,
+          "y": 4.51573
+        },
+        "width": 11.40075,
+        "height": 2.04962,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 307.22973,
+              "y": 3.49091
+            },
+            {
+              "x": 318.63048,
+              "y": 3.49091
+            },
+            {
+              "x": 318.63048,
+              "y": 3.49091
+            },
+            {
+              "x": 318.63048,
+              "y": 3.49091
+            },
+            {
+              "x": 318.63048,
+              "y": 5.54054
+            },
+            {
+              "x": 318.63048,
+              "y": 5.54054
+            },
+            {
+              "x": 318.63048,
+              "y": 5.54054
+            },
+            {
+              "x": 307.22973,
+              "y": 5.54054
+            },
+            {
+              "x": 307.22973,
+              "y": 5.54054
+            },
+            {
+              "x": 307.22973,
+              "y": 5.54054
+            },
+            {
+              "x": 307.22973,
+              "y": 3.49091
+            },
+            {
+              "x": 307.22973,
+              "y": 3.49091
+            },
+            {
+              "x": 307.22973,
+              "y": 3.49091
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "shape.background": "#8dcbf9",
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "opacity": 0.6
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53444,
+      "p": {
+        "parent": {
+          "__i": 53436
+        },
+        "position": {
+          "x": 312.93011,
+          "y": 254.00792
+        },
+        "width": 11.40075,
+        "height": 2.04962,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 307.22973,
+              "y": 252.98312
+            },
+            {
+              "x": 318.63048,
+              "y": 252.98312
+            },
+            {
+              "x": 318.63048,
+              "y": 252.98312
+            },
+            {
+              "x": 318.63048,
+              "y": 252.98312
+            },
+            {
+              "x": 318.63048,
+              "y": 255.03274
+            },
+            {
+              "x": 318.63048,
+              "y": 255.03274
+            },
+            {
+              "x": 318.63048,
+              "y": 255.03274
+            },
+            {
+              "x": 307.22973,
+              "y": 255.03274
+            },
+            {
+              "x": 307.22973,
+              "y": 255.03274
+            },
+            {
+              "x": 307.22973,
+              "y": 255.03274
+            },
+            {
+              "x": 307.22973,
+              "y": 252.98312
+            },
+            {
+              "x": 307.22973,
+              "y": 252.98312
+            },
+            {
+              "x": 307.22973,
+              "y": 252.98312
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "shape.background": "#8dcbf9",
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "opacity": 0.6
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53445,
+      "p": {
+        "parent": {
+          "__i": 53436
+        },
+        "position": {
+          "x": 317.68043,
+          "y": 248.88387
+        },
+        "width": 1.90013,
+        "height": 12.29775,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 316.73036,
+              "y": 242.73499
+            },
+            {
+              "x": 318.63048,
+              "y": 242.73499
+            },
+            {
+              "x": 318.63048,
+              "y": 242.73499
+            },
+            {
+              "x": 318.63048,
+              "y": 242.73499
+            },
+            {
+              "x": 318.63048,
+              "y": 255.03274
+            },
+            {
+              "x": 318.63048,
+              "y": 255.03274
+            },
+            {
+              "x": 318.63048,
+              "y": 255.03274
+            },
+            {
+              "x": 316.73036,
+              "y": 255.03274
+            },
+            {
+              "x": 316.73036,
+              "y": 255.03274
+            },
+            {
+              "x": 316.73036,
+              "y": 255.03274
+            },
+            {
+              "x": 316.73036,
+              "y": 242.73499
+            },
+            {
+              "x": 316.73036,
+              "y": 242.73499
+            },
+            {
+              "x": 316.73036,
+              "y": 242.73499
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "shape.background": "#8dcbf9",
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "opacity": 0.6
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53446,
+      "p": {
+        "parent": {
+          "__i": 53436
+        },
+        "position": {
+          "x": 6.39268,
+          "y": 248.88387
+        },
+        "width": 1.90013,
+        "height": 12.29775,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 5.44262,
+              "y": 242.73499
+            },
+            {
+              "x": 7.34274,
+              "y": 242.73499
+            },
+            {
+              "x": 7.34274,
+              "y": 242.73499
+            },
+            {
+              "x": 7.34274,
+              "y": 242.73499
+            },
+            {
+              "x": 7.34274,
+              "y": 255.03274
+            },
+            {
+              "x": 7.34274,
+              "y": 255.03274
+            },
+            {
+              "x": 7.34274,
+              "y": 255.03274
+            },
+            {
+              "x": 5.44262,
+              "y": 255.03274
+            },
+            {
+              "x": 5.44262,
+              "y": 255.03274
+            },
+            {
+              "x": 5.44262,
+              "y": 255.03274
+            },
+            {
+              "x": 5.44262,
+              "y": 242.73499
+            },
+            {
+              "x": 5.44262,
+              "y": 242.73499
+            },
+            {
+              "x": 5.44262,
+              "y": 242.73499
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "shape.background": "#8dcbf9",
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "opacity": 0.6
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53447,
+      "p": {
+        "parent": {
+          "__i": 53436
+        },
+        "position": {
+          "x": 11.14299,
+          "y": 254.00792
+        },
+        "width": 11.40075,
+        "height": 2.04962,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 5.44262,
+              "y": 252.98312
+            },
+            {
+              "x": 16.84337,
+              "y": 252.98312
+            },
+            {
+              "x": 16.84337,
+              "y": 252.98312
+            },
+            {
+              "x": 16.84337,
+              "y": 252.98312
+            },
+            {
+              "x": 16.84337,
+              "y": 255.03274
+            },
+            {
+              "x": 16.84337,
+              "y": 255.03274
+            },
+            {
+              "x": 16.84337,
+              "y": 255.03274
+            },
+            {
+              "x": 5.44262,
+              "y": 255.03274
+            },
+            {
+              "x": 5.44262,
+              "y": 255.03274
+            },
+            {
+              "x": 5.44262,
+              "y": 255.03274
+            },
+            {
+              "x": 5.44262,
+              "y": 252.98312
+            },
+            {
+              "x": 5.44262,
+              "y": 252.98312
+            },
+            {
+              "x": 5.44262,
+              "y": 252.98312
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "shape.background": "#8dcbf9",
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "opacity": 0.6
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53448,
+      "p": {
+        "position": {
+          "x": 170.08762,
+          "y": 54.83728
+        },
+        "width": 157.76083,
+        "height": 65.18262,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 91.2072,
+              "y": 22.24597
+            },
+            {
+              "x": 248.96803,
+              "y": 22.24597
+            },
+            {
+              "x": 248.96803,
+              "y": 22.24597
+            },
+            {
+              "x": 248.96803,
+              "y": 22.24597
+            },
+            {
+              "x": 248.96803,
+              "y": 87.42859
+            },
+            {
+              "x": 248.96803,
+              "y": 87.42859
+            },
+            {
+              "x": 248.96803,
+              "y": 87.42859
+            },
+            {
+              "x": 91.2072,
+              "y": 87.42859
+            },
+            {
+              "x": 91.2072,
+              "y": 87.42859
+            },
+            {
+              "x": 91.2072,
+              "y": 87.42859
+            },
+            {
+              "x": 91.2072,
+              "y": 22.24597
+            },
+            {
+              "x": 91.2072,
+              "y": 22.24597
+            },
+            {
+              "x": 91.2072,
+              "y": 22.24597
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 0.1,
+        "shape.background": null,
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.gradient.pack": [
+          "linear",
+          0,
+          0.5,
+          1,
+          0.5,
+          0,
+          "rgba(0, 28, 65, 0)",
+          0.467,
+          "#00b9f7",
+          0.486,
+          "#00c0ff",
+          1,
+          "rgba(0, 28, 65, 0)"
+        ],
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53449,
+      "p": {
+        "displayName": "不规则图形",
+        "position": {
+          "x": 55.51487,
+          "y": 54.83728
+        },
+        "width": 53.84651,
+        "height": 53.84651,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 82.43813,
+              "y": 54.83728
+            },
+            {
+              "x": 82.43813,
+              "y": 40.06763
+            },
+            {
+              "x": 70.28454,
+              "y": 27.91403
+            },
+            {
+              "x": 55.51487,
+              "y": 27.91403
+            },
+            {
+              "x": 40.74521,
+              "y": 27.91403
+            },
+            {
+              "x": 28.59162,
+              "y": 40.06763
+            },
+            {
+              "x": 28.59162,
+              "y": 54.83728
+            },
+            {
+              "x": 28.59162,
+              "y": 69.60694
+            },
+            {
+              "x": 40.74521,
+              "y": 81.76054
+            },
+            {
+              "x": 55.51487,
+              "y": 81.76054
+            },
+            {
+              "x": 70.28454,
+              "y": 81.76054
+            },
+            {
+              "x": 82.43813,
+              "y": 69.60694
+            },
+            {
+              "x": 82.43813,
+              "y": 54.83728
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 0.77,
+        "shape.background": null,
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.gradient.pack": [
+          "linear",
+          0,
+          0.04979,
+          1,
+          0.95021,
+          0,
+          "#0cf",
+          0.716,
+          "rgba(0, 78, 119, 0)",
+          1,
+          "#001c41"
+        ],
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53450,
+      "p": {
+        "position": {
+          "x": 55.51487,
+          "y": 54.83728
+        },
+        "width": 64.47412,
+        "height": 64.47412,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 87.75193,
+              "y": 54.83728
+            },
+            {
+              "x": 87.75193,
+              "y": 37.15256
+            },
+            {
+              "x": 73.1996,
+              "y": 22.60023
+            },
+            {
+              "x": 55.51487,
+              "y": 22.60023
+            },
+            {
+              "x": 37.83015,
+              "y": 22.60023
+            },
+            {
+              "x": 23.27782,
+              "y": 37.15256
+            },
+            {
+              "x": 23.27782,
+              "y": 54.83728
+            },
+            {
+              "x": 23.27782,
+              "y": 72.52201
+            },
+            {
+              "x": 37.83015,
+              "y": 87.07434
+            },
+            {
+              "x": 55.51487,
+              "y": 87.07434
+            },
+            {
+              "x": 73.1996,
+              "y": 87.07434
+            },
+            {
+              "x": 87.75193,
+              "y": 72.52201
+            },
+            {
+              "x": 87.75193,
+              "y": 54.83728
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 1,
+        "shape.background": null,
+        "shape.border.width": 0.99843,
+        "shape.border.color": "#00ffea",
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53451,
+      "p": {
+        "position": {
+          "x": 55.51487,
+          "y": 54.83728
+        },
+        "width": 49.71261,
+        "height": 49.71261,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            4,
+            4,
+            4,
+            4
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 80.37118,
+              "y": 54.83728
+            },
+            {
+              "x": 80.37118,
+              "y": 41.20151
+            },
+            {
+              "x": 69.15064,
+              "y": 29.98097
+            },
+            {
+              "x": 55.51487,
+              "y": 29.98097
+            },
+            {
+              "x": 41.87911,
+              "y": 29.98097
+            },
+            {
+              "x": 30.65857,
+              "y": 41.20151
+            },
+            {
+              "x": 30.65857,
+              "y": 54.83728
+            },
+            {
+              "x": 30.65857,
+              "y": 68.47304
+            },
+            {
+              "x": 41.87911,
+              "y": 79.69359
+            },
+            {
+              "x": 55.51487,
+              "y": 79.69359
+            },
+            {
+              "x": 69.15064,
+              "y": 79.69359
+            },
+            {
+              "x": 80.37118,
+              "y": 68.47304
+            },
+            {
+              "x": 80.37118,
+              "y": 54.83728
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 1,
+        "shape.background": null,
+        "shape.border.color": null,
+        "shape.dash": true,
+        "shape.dash.pattern": [
+          3.99372,
+          3.99372
+        ],
+        "shape.dash.offset": 0.99843,
+        "shape.dash.color": "rgba(0,238,255,0.39)",
+        "shape.dash.width": 0.99843,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53452,
+      "p": {
+        "position": {
+          "x": 55.51384,
+          "y": 54.61382
+        },
+        "width": 67.84033,
+        "height": 67.83641,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            4,
+            2,
+            4,
+            5,
+            1,
+            4,
+            2,
+            4,
+            5,
+            1,
+            2,
+            4,
+            2,
+            4,
+            5,
+            1,
+            4,
+            2,
+            4,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 76.686,
+              "y": 33.34213
+            },
+            {
+              "x": 69.00318,
+              "y": 25.78654
+            },
+            {
+              "x": 57.83913,
+              "y": 22.89001
+            },
+            {
+              "x": 47.45207,
+              "y": 25.75733
+            },
+            {
+              "x": 46.45638,
+              "y": 24.0333
+            },
+            {
+              "x": 57.81586,
+              "y": 20.69561
+            },
+            {
+              "x": 70.13531,
+              "y": 23.89109
+            },
+            {
+              "x": 78.44027,
+              "y": 32.32944
+            },
+            {
+              "x": 33.01081,
+              "y": 34.75347
+            },
+            {
+              "x": 26.30835,
+              "y": 42.27533
+            },
+            {
+              "x": 23.79253,
+              "y": 52.67076
+            },
+            {
+              "x": 26.31401,
+              "y": 62.42492
+            },
+            {
+              "x": 24.55975,
+              "y": 63.43761
+            },
+            {
+              "x": 21.59367,
+              "y": 52.69827
+            },
+            {
+              "x": 24.41236,
+              "y": 41.15528
+            },
+            {
+              "x": 31.99434,
+              "y": 32.99166
+            },
+            {
+              "x": 61.66093,
+              "y": 84.3754
+            },
+            {
+              "x": 62.67458,
+              "y": 86.13155
+            },
+            {
+              "x": 52.15245,
+              "y": 88.53203
+            },
+            {
+              "x": 41.09936,
+              "y": 85.48372
+            },
+            {
+              "x": 33.29516,
+              "y": 78.02907
+            },
+            {
+              "x": 35.05036,
+              "y": 77.01638
+            },
+            {
+              "x": 42.2116,
+              "y": 83.60679
+            },
+            {
+              "x": 52.1311,
+              "y": 86.34997
+            },
+            {
+              "x": 61.66093,
+              "y": 84.3754
+            },
+            {
+              "x": 76.66428,
+              "y": 76.35416
+            },
+            {
+              "x": 84.09503,
+              "y": 69.03924
+            },
+            {
+              "x": 87.23516,
+              "y": 58.3777
+            },
+            {
+              "x": 84.95569,
+              "y": 48.20282
+            },
+            {
+              "x": 86.70995,
+              "y": 47.19014
+            },
+            {
+              "x": 89.43401,
+              "y": 58.35226
+            },
+            {
+              "x": 85.97846,
+              "y": 70.15792
+            },
+            {
+              "x": 77.66563,
+              "y": 78.08953
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 1,
+        "shape.background": null,
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.fill.rule": "evenodd",
+        "shape.gradient.pack": [
+          "linear",
+          0.15635,
+          0.03025,
+          0.84368,
+          0.97634,
+          0,
+          "#182b43",
+          1,
+          "#c7d7ff"
+        ],
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53453,
+      "p": {
+        "position": {
+          "x": 155.63116,
+          "y": 57.23806
+        },
+        "width": 13.3955,
+        "height": 16.94654,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 149.87808,
+              "y": 48.76479
+            },
+            {
+              "x": 155.81065,
+              "y": 48.76479
+            },
+            {
+              "x": 162.32891,
+              "y": 57.88941
+            },
+            {
+              "x": 154.507,
+              "y": 65.71133
+            },
+            {
+              "x": 148.93341,
+              "y": 65.71133
+            },
+            {
+              "x": 156.39635,
+              "y": 57.88941
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 1,
+        "shape.background": null,
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.fill.rule": "evenodd",
+        "shape.gradient.pack": [
+          "linear",
+          1.00056,
+          0.50003,
+          0,
+          0.50003,
+          0,
+          "#00eaff",
+          0.014,
+          "#00e9ff",
+          1,
+          "rgba(0, 151, 247, 0)"
+        ],
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53454,
+      "p": {
+        "position": {
+          "x": 145.23973,
+          "y": 57.23806
+        },
+        "width": 13.3955,
+        "height": 16.94654,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 139.48665,
+              "y": 48.76479
+            },
+            {
+              "x": 145.41922,
+              "y": 48.76479
+            },
+            {
+              "x": 151.93748,
+              "y": 57.88941
+            },
+            {
+              "x": 144.11557,
+              "y": 65.71133
+            },
+            {
+              "x": 138.54198,
+              "y": 65.71133
+            },
+            {
+              "x": 146.00492,
+              "y": 57.88941
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 0.5,
+        "shape.background": null,
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.fill.rule": "evenodd",
+        "shape.gradient.pack": [
+          "linear",
+          1.00056,
+          0.50003,
+          0,
+          0.50003,
+          0,
+          "#00eaff",
+          0.014,
+          "#00e9ff",
+          1,
+          "rgba(0, 151, 247, 0)"
+        ],
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53455,
+      "p": {
+        "position": {
+          "x": 134.8483,
+          "y": 57.23806
+        },
+        "width": 13.3955,
+        "height": 16.94654,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 129.09522,
+              "y": 48.76479
+            },
+            {
+              "x": 135.02778,
+              "y": 48.76479
+            },
+            {
+              "x": 141.54605,
+              "y": 57.88941
+            },
+            {
+              "x": 133.72413,
+              "y": 65.71133
+            },
+            {
+              "x": 128.15055,
+              "y": 65.71133
+            },
+            {
+              "x": 135.61348,
+              "y": 57.88941
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 0.1,
+        "shape.background": null,
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.fill.rule": "evenodd",
+        "shape.gradient.pack": [
+          "linear",
+          1.00056,
+          0.50003,
+          0,
+          0.50003,
+          0,
+          "#00eaff",
+          0.014,
+          "#00e9ff",
+          1,
+          "rgba(0, 151, 247, 0)"
+        ],
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53456,
+      "p": {
+        "position": {
+          "x": 190.39814,
+          "y": 31.22039
+        },
+        "width": 41.56573,
+        "height": 10.39143,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 180.00671,
+              "y": 26.02468
+            },
+            {
+              "x": 211.18101,
+              "y": 26.02468
+            },
+            {
+              "x": 200.78958,
+              "y": 36.41611
+            },
+            {
+              "x": 169.61528,
+              "y": 36.41611
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 0.5,
+        "shape.background": null,
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.fill.rule": "evenodd",
+        "shape.gradient.pack": [
+          "linear",
+          0.5,
+          1,
+          0.5,
+          0,
+          0,
+          "#001c41",
+          0.284,
+          "rgba(45, 73, 119, 0)",
+          1,
+          "#9db9ff"
+        ],
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53457,
+      "p": {
+        "position": {
+          "x": 206.45763,
+          "y": 31.22039
+        },
+        "width": 41.56573,
+        "height": 10.39143,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 196.0662,
+              "y": 26.02468
+            },
+            {
+              "x": 227.24049,
+              "y": 26.02468
+            },
+            {
+              "x": 216.84906,
+              "y": 36.41611
+            },
+            {
+              "x": 185.67476,
+              "y": 36.41611
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 0.5,
+        "shape.background": null,
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.fill.rule": "evenodd",
+        "shape.gradient.pack": [
+          "linear",
+          0.5,
+          1,
+          0.5,
+          0,
+          0,
+          "#001c41",
+          0.284,
+          "rgba(45, 73, 119, 0)",
+          1,
+          "#9db9ff"
+        ],
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53458,
+      "p": {
+        "position": {
+          "x": 228.18517,
+          "y": 31.22039
+        },
+        "width": 41.56573,
+        "height": 10.39143,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            5
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 217.79374,
+              "y": 26.02468
+            },
+            {
+              "x": 248.96803,
+              "y": 26.02468
+            },
+            {
+              "x": 238.5766,
+              "y": 36.41611
+            },
+            {
+              "x": 207.40231,
+              "y": 36.41611
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 0.5,
+        "shape.background": null,
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.fill.rule": "evenodd",
+        "shape.gradient.pack": [
+          "linear",
+          0.5,
+          1,
+          0.5,
+          0,
+          0,
+          "#001c41",
+          0.284,
+          "rgba(45, 73, 119, 0)",
+          1,
+          "#9db9ff"
+        ],
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53459,
+      "p": {
+        "position": {
+          "x": 185.67476,
+          "y": 41.61183
+        },
+        "width": 120.91849,
+        "height": 29.28494,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 125.21552,
+              "y": 26.96935
+            },
+            {
+              "x": 153.55579,
+              "y": 26.96935
+            },
+            {
+              "x": 170.55995,
+              "y": 56.25429
+            },
+            {
+              "x": 246.13401,
+              "y": 56.25429
+            }
+          ]
+        }
+      },
+      "s": {
+        "type": "shape",
+        "opacity": 1,
+        "shape.background": null,
+        "shape.border.width": 0.99843,
+        "shape.border.color": null,
+        "shape.dash.pattern": [
+          16,
+          16
+        ],
+        "shape.border.gradient.pack": [
+          "linear",
+          0,
+          0.5,
+          1,
+          0.5,
+          0,
+          "rgba(41, 60, 85, 0)",
+          0.482,
+          "#b9c6fb",
+          0.494,
+          "#bdc9ff",
+          1,
+          "rgba(41, 60, 85, 0)"
+        ],
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53460,
+      "p": {
+        "displayName": "本月:",
+        "position": {
+          "x": 119.82695,
+          "y": 76.84257
+        },
+        "width": 43.43821,
+        "height": 18.78381,
+        "tall": 20
+      },
+      "s": {
+        "text": "消耗:",
+        "type": "text",
+        "text.align": "right",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "13.978021978021978px \"Microsoft YaHei\"",
+        "opacity": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53461,
+      "p": {
+        "displayName": "本月:",
+        "position": {
+          "x": 119.82695,
+          "y": 39.37288
+        },
+        "width": 43.43821,
+        "height": 18.78381,
+        "tall": 20
+      },
+      "s": {
+        "text": "外供:",
+        "type": "text",
+        "text.align": "right",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "13.978021978021978px \"Microsoft YaHei\"",
+        "opacity": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53462,
+      "p": {
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/IP4058_FT_PG02AO02",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 170.08812,
+          "y": 39.37238
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "22px arial, sans-serif",
+        "2d.movable": false,
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53463,
+      "p": {
+        "toolTip": "氩气消耗总量(特冶总+电炉总+转炉厂)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "Local:NumTag/YQCLT/2Ar_FRS",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 170.08812,
+          "y": 75.79194
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "22px arial, sans-serif",
+        "2d.movable": false,
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53464,
+      "p": {
+        "toolTip": "氩气利用率",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "Local:NumTag/YQCLT/Ar_UtilizationRate",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 54.09519,
+          "y": 53.36558
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "00.0",
+        "text.color": "rgb(255,232,105)",
+        "text.font": "22px arial, sans-serif",
+        "text.align": "center",
+        "2d.movable": false,
+        "onDoubleClick": "__ht__function(event, data, view) {//tag标签配置：data._dataBindings.s.text.id\r\n//tag名称提示：data._toolTip\r\nopenHistoricalDialog(data._dataBindings.s.text.id,data._toolTip, data)}",
+        "interactive": true
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53465,
+      "p": {
+        "displayName": "本月:",
+        "position": {
+          "x": 58.10644,
+          "y": 69.65502
+        },
+        "width": 15.69074,
+        "height": 18.78381,
+        "tall": 20
+      },
+      "s": {
+        "text": "(%)",
+        "type": "text",
+        "text.align": "right",
+        "text.color": "#ffffff",
+        "text.font": "10px \"Microsoft YaHei\"",
+        "opacity": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53466,
+      "p": {
+        "displayName": "本月:",
+        "position": {
+          "x": 201.92087,
+          "y": 117.19516
+        },
+        "width": 28.34315,
+        "height": 18.78381,
+        "tall": 20
+      },
+      "s": {
+        "text": "外供",
+        "type": "text",
+        "text.align": "right",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "12px \"Microsoft YaHei\"",
+        "opacity": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53467,
+      "p": {
+        "position": {
+          "x": 224.31051,
+          "y": 117.19516
+        },
+        "width": 11,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 218.81051,
+              "y": 117.19516
+            },
+            {
+              "x": 229.81051,
+              "y": 117.19516
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(251,0,69)",
+        "shape.border.width": 3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 53468,
+      "p": {
+        "position": {
+          "x": 288.93147,
+          "y": 117.19516
+        },
+        "width": 11,
+        "height": 0,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 283.43147,
+              "y": 117.19516
+            },
+            {
+              "x": 294.43147,
+              "y": 117.19516
+            }
+          ]
+        },
+        "closePath": true
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(255,240,37)",
+        "shape.border.width": 3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53469,
+      "p": {
+        "displayName": "本月:",
+        "position": {
+          "x": 263.35647,
+          "y": 117.19516
+        },
+        "width": 28.77687,
+        "height": 18.78381,
+        "tall": 20
+      },
+      "s": {
+        "text": "消耗",
+        "type": "text",
+        "text.align": "right",
+        "text.color": "rgba(255,255,255,0.5)",
+        "text.font": "12px \"Microsoft YaHei\"",
+        "opacity": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53470,
+      "p": {
+        "displayName": "Area2_DY_board_ZongHe",
+        "dataBindings": {
+          "a": {
+            "series0.data": {
+              "id": "JSONTag/OPC/2199_TrendLine_7D_ForecastHistory_copied_copied"
+            },
+            "series2.data": {
+              "id": "JSONTag/OPC/2201_TrendLine_7D_ForecastHistory_copied_copied"
+            },
+            "series1.data": {
+              "id": "JSONTag/OPC/2869_TrendLine_7D_ForecastHistory_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/可视化/echarts/AreaCharts/Area2_DY_board_ZongHe.json",
+        "position": {
+          "x": 156.85501,
+          "y": 176.42874
+        },
+        "width": 295.22427,
+        "height": 126.45009,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      },
+      "a": {
+        "series1.data": [],
+        "series2.data": [
+          70,
+          90,
+          100,
+          60,
+          50,
+          70,
+          60
+        ],
+        "xAxis.data": [
+          "15:00",
+          "15:10",
+          "15:20",
+          "15:30",
+          "15:40",
+          "15:50",
+          "16:00"
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53471,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 1868.36158,
+          "y": 20.48703
+        },
+        "width": 80,
+        "height": 22,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.1)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53472,
+      "p": {
+        "position": {
+          "x": 1903.68674,
+          "y": 20.48753
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "MPa",
+        "text.color": "rgb(255,218,0)",
+        "text.align": "right",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53473,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 1832.36208,
+          "y": 20.48753
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "压力：",
+        "text.color": "rgba(255,255,255,0.6)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53474,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 1868.36158,
+          "y": 44.76698
+        },
+        "width": 80,
+        "height": 22,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.1)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53475,
+      "p": {
+        "position": {
+          "x": 1903.68674,
+          "y": 44.61432
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "m3/h",
+        "text.color": "rgb(20,179,242)",
+        "text.align": "right",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53476,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 1832.36208,
+          "y": 44.61432
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "流量：",
+        "text.color": "rgba(255,255,255,0.6)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 53477,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 1868.36158,
+          "y": 69.04692
+        },
+        "width": 80,
+        "height": 22,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.1)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53478,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 1832.36308,
+          "y": 69.04742
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "温度：",
+        "text.color": "rgba(255,255,255,0.6)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 53479,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 1901.62007,
+          "y": 69.04842
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "℃",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "right",
+        "2d.movable": false
+      }
+    }
+  ],
+  "modified": "Thu Nov 09 2023 15:20:19 GMT+0800 (中国标准时间)",
+  "contentRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1014
+  }
+}

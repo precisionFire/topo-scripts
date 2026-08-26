@@ -1,0 +1,53 @@
+{
+  "modified": "Wed Nov 19 2025 23:57:12 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "six",
+      "valueType": "Object",
+      "name": "6组"
+    },
+    {
+      "attr": "twelve",
+      "valueType": "Object",
+      "name": "12组"
+    },
+    {
+      "attr": "eight",
+      "valueType": "Object",
+      "name": "8区"
+    },
+    {
+      "attr": "nine",
+      "valueType": "Object",
+      "name": "9区"
+    },
+    {
+      "attr": "ten",
+      "valueType": "Object",
+      "name": "10区"
+    },
+    {
+      "attr": "group",
+      "valueType": "String",
+      "name": "班组"
+    },
+    {
+      "attr": "k-a",
+      "valueType": "Object",
+      "name": "打捆信息1"
+    },
+    {
+      "attr": "k-b",
+      "valueType": "Object",
+      "name": "打捆信息2"
+    },
+    {
+      "attr": "k-c",
+      "valueType": "Object",
+      "name": "打捆信息3"
+    }
+  ],
+  "width": 5,
+  "height": 5,
+  "comps": []
+}

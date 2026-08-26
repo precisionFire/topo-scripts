@@ -1,0 +1,24 @@
+{
+  "modified": "Fri Apr 11 2025 18:54:07 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "rolltable",
+      "valueType": "Object",
+      "name": "辊道集合",
+      "group": "辊道"
+    },
+    {
+      "attr": "rolltable1",
+      "valueType": "Object",
+      "name": "冷床集合"
+    },
+    {
+      "attr": "rolltable2",
+      "valueType": "Object",
+      "name": "小床集合"
+    }
+  ],
+  "width": 1,
+  "height": 1,
+  "comps": []
+}

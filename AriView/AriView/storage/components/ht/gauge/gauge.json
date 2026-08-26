@@ -1,0 +1,133 @@
+{
+  "modified": "Thu Jun 01 2023 15:31:50 GMT+0800 (GMT+08:00)",
+  "width": 200,
+  "height": 200,
+  "func": "__ht__function(g, rect, comp, data, view) {ht.vector.comp.gauge.apply(null, arguments);}",
+  "properties": {
+    "startAngle": {
+      "valueType": "Angle",
+      "defaultValue": 2.44346,
+      "name": "起始角度"
+    },
+    "endAngle": {
+      "valueType": "Angle",
+      "defaultValue": 6.98132,
+      "name": "结束角度"
+    },
+    "pointerRadius": {
+      "valueType": "Percentage",
+      "defaultValue": 0.8,
+      "name": "指针长度"
+    },
+    "pointerColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(48,242,120)",
+      "name": "指针颜色"
+    },
+    "value": {
+      "valueType": "Number",
+      "defaultValue": 0,
+      "name": "值"
+    },
+    "min": {
+      "valueType": "Number",
+      "defaultValue": 0,
+      "name": "最小值"
+    },
+    "max": {
+      "valueType": "Number",
+      "defaultValue": 100,
+      "name": "最大值"
+    },
+    "clockwise": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "顺时针"
+    },
+    "showLabel": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "显示标签"
+    },
+    "labelEvery": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 10,
+      "name": "标签每隔"
+    },
+    "labelColor": {
+      "valueType": "Color",
+      "defaultValue": "#FEB64D",
+      "name": "标签颜色"
+    },
+    "labelFont": {
+      "valueType": "String",
+      "defaultValue": "12px arial, sans-serif",
+      "name": "标签字体"
+    },
+    "labelRadius": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 0.75,
+      "name": "标签半径"
+    },
+    "showTick": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "显示刻度"
+    },
+    "tickEvery": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 5,
+      "name": "刻度每隔"
+    },
+    "tickColor": {
+      "valueType": "Color",
+      "defaultValue": "#32D3EB",
+      "name": "刻度颜色"
+    },
+    "tickWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "刻度线宽"
+    },
+    "bigTickEvery": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 0,
+      "name": "大刻度每隔"
+    },
+    "bigTickColor": {
+      "valueType": "Color",
+      "defaultValue": "#60ACFC",
+      "name": "大刻度颜色"
+    },
+    "bigTickWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 2,
+      "name": "大刻度线宽"
+    },
+    "showShadow": {
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "阴影"
+    },
+    "shadowColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(247,247,247)",
+      "name": "阴影颜色"
+    },
+    "shadowBlur": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 20,
+      "name": "阴影模糊"
+    },
+    "shadowOffsetX": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 0,
+      "name": "阴影横偏移"
+    },
+    "shadowOffsetY": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 0,
+      "name": "阴影纵偏移"
+    }
+  }
+}

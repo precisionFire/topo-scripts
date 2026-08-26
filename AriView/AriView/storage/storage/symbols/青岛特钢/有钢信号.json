@@ -1,0 +1,72 @@
+{
+  "modified": "Thu Apr 02 2026 17:30:52 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "valueType": "String",
+      "attr": "有钢信号",
+      "defaultValue": "True"
+    }
+  ],
+  "width": 12,
+  "height": 12,
+  "comps": [
+    {
+      "type": "triangle",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "rgb(73,214,184)",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "rgb(36,242,40)",
+        0.07339,
+        "rgba(36,242,40,0.75)",
+        0.27064,
+        "rgba(36,242,40,0.50)",
+        0.5,
+        "rgba(36,242,40,0.32)",
+        0.6,
+        "rgba(36,242,40,0.30)",
+        0.88532,
+        "rgba(36,242,40,0.30)",
+        1,
+        "rgba(36,242,40,0.60)"
+      ],
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('有钢信号') == \"True\"\n}"
+      },
+      "pixelPerfect": true,
+      "state": {
+        "func": "attr@test"
+      },
+      "rect": [
+        0,
+        0,
+        12,
+        12
+      ]
+    },
+    {
+      "type": "triangle",
+      "borderWidth": 1,
+      "borderColor": "rgb(73,214,184)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('有钢信号') == \"False\"\n}"
+      },
+      "pixelPerfect": true,
+      "state": {
+        "func": "attr@test"
+      },
+      "rect": [
+        0,
+        0,
+        12,
+        12
+      ]
+    }
+  ]
+}

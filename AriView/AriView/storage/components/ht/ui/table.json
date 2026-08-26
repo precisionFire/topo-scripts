@@ -1,0 +1,406 @@
+{
+  "modified": "Wed Apr 26 2023 18:01:24 GMT+0800 (GMT+08:00)",
+  "width": 100,
+  "height": 100,
+  "func": "__ht__function(g, rect, comp, data, view) {\nht.vector.comp.table.apply(null, arguments);\n}",
+  "properties": {
+    "columns": {
+      "valueType": "Object",
+      "defaultValue": [],
+      "name": "列定义"
+    },
+    "dataSource": {
+      "valueType": "Object",
+      "defaultValue": [],
+      "name": "行数据"
+    },
+    "borderWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "边框宽度"
+    },
+    "borderColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(212,212,212)",
+      "name": "边框颜色"
+    },
+    "columnLineColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(212,212,212)",
+      "name": "列线颜色"
+    },
+    "columnLineWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "列线宽"
+    },
+    "columnLinePattern": {
+      "valueType": "NumberArray",
+      "name": "列线样式"
+    },
+    "rowLineColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(212,212,212)",
+      "name": "行线颜色"
+    },
+    "rowLineWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "行线宽"
+    },
+    "rowLinePattern": {
+      "valueType": "NumberArray",
+      "name": "行线样式"
+    },
+    "showHead": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "显示表头",
+      "group": "表头"
+    },
+    "thHeight": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 24,
+      "name": "表头行高"
+    },
+    "thBackground": {
+      "valueType": "Color",
+      "defaultValue": "rgb(212,212,212)",
+      "name": "表头背景色"
+    },
+    "showHeadRowLine": {
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "显示表头行线"
+    },
+    "thColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(33,33,33)",
+      "name": "表头文本颜色"
+    },
+    "thFont": {
+      "valueType": "Font",
+      "defaultValue": "12px sans-serif, arial",
+      "name": "表头字体"
+    },
+    "resizable": {
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "可编辑列宽"
+    },
+    "resizeLineWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 3,
+      "name": "列宽编辑线宽"
+    },
+    "resizeLineColor": {
+      "valueType": "Color",
+      "defaultValue": "rgba(247,247,247,0.35)",
+      "name": "列宽编辑线颜色"
+    },
+    "resizeInteractiveSize": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 5,
+      "name": "列宽编辑区大小"
+    },
+    "showHeadColumnLineOnly": {
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "只显示表头列线"
+    },
+    "showContentColumnLineOnly": {
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "只显示表格列线"
+    },
+    "tdHeight": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 18,
+      "name": "表格行高",
+      "group": "表体"
+    },
+    "adjustRowHeight": {
+      "valueType": "Function",
+      "name": "格式化行高度",
+      "extraInfo": {
+        "arguments": [
+          "row",
+          "rowIndex",
+          "defaultHeight"
+        ]
+      }
+    },
+    "tdBackground": {
+      "valueType": "Color",
+      "name": "表格背景色"
+    },
+    "textLineHeight": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 18,
+      "name": "文本行高"
+    },
+    "tdColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(33,33,33)",
+      "name": "表格文本颜色"
+    },
+    "cellPadding": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 0,
+      "name": "单元格内边距"
+    },
+    "tdFont": {
+      "valueType": "Font",
+      "defaultValue": "12px sans-serif, arial",
+      "name": "表格字体"
+    },
+    "drawRow": {
+      "valueType": "Function",
+      "name": "行绘制",
+      "extraInfo": {
+        "arguments": [
+          "g",
+          "row",
+          "rowIndex",
+          "rect",
+          "rawIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    "visibleFunc": {
+      "valueType": "Function",
+      "name": "可见函数",
+      "extraInfo": {
+        "arguments": [
+          "row",
+          "rowIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    "columnVisibleFunc": {
+      "valueType": "Function",
+      "name": "列可见函数",
+      "extraInfo": {
+        "arguments": [
+          "col",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    "multiple": {
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "可多选",
+      "group": "选择"
+    },
+    "rowSelectable": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "行可选中"
+    },
+    "rowHoverable": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "行可悬停"
+    },
+    "hoverBackground": {
+      "valueType": "Color",
+      "defaultValue": "rgba(255,255,255,0.30)",
+      "name": "悬停背景"
+    },
+    "hoverColor": {
+      "valueType": "Color",
+      "name": "悬停颜色"
+    },
+    "selectBackground": {
+      "valueType": "Color",
+      "defaultValue": "rgba(255,255,255,0.30)",
+      "name": "选中背景"
+    },
+    "selectColor": {
+      "valueType": "Color",
+      "name": "选中颜色"
+    },
+    "selectedIndex": {
+      "valueType": "NumberArray",
+      "defaultValue": [],
+      "name": "选中行下标"
+    },
+    "scrollable": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "可滚动",
+      "group": "滚动"
+    },
+    "scrollSpeed": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "滚动速度"
+    },
+    "pannable": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "可平移"
+    },
+    "translateX": {
+      "valueType": "Number",
+      "defaultValue": 0,
+      "name": "横偏移"
+    },
+    "translateY": {
+      "valueType": "Number",
+      "defaultValue": 0,
+      "name": "纵偏移"
+    },
+    "autoHideScrollBar": {
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "自动隐藏滚动条"
+    },
+    "scrollBarColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(51,153,255)",
+      "name": "滚动条颜色"
+    },
+    "scrollBarWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 8,
+      "name": "滚动条宽"
+    },
+    "XscrollBarMinWidth": {
+      "valueType": "PositiveNumber",
+      "name": "横轴滚动条最小宽度"
+    },
+    "YscrollBarMinHeight": {
+      "valueType": "PositiveNumber",
+      "name": "纵轴滚动条最小高度"
+    },
+    "scrollBarWidthAbsolute": {
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "滚动条绝对宽"
+    },
+    "scrollBarInteractiveSize": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 16,
+      "name": "滚动条交互大小"
+    },
+    "YscrollBarVisible": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "纵轴滚动可见"
+    },
+    "XscrollBarVisible": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "横轴滚动可见"
+    },
+    "onSelectRow": {
+      "valueType": "Function",
+      "name": "行选择",
+      "group": "事件",
+      "extraInfo": {
+        "arguments": [
+          "row",
+          "data",
+          "view"
+        ]
+      }
+    },
+    "onHoverCell": {
+      "valueType": "Function",
+      "name": "单元格悬停",
+      "extraInfo": {
+        "arguments": [
+          "event",
+          "cell",
+          "row",
+          "column",
+          "rowIndex",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    "onClickCell": {
+      "valueType": "Function",
+      "name": "单元格点击",
+      "extraInfo": {
+        "arguments": [
+          "event",
+          "cell",
+          "row",
+          "column",
+          "rowIndex",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    "onClickHeadCell": {
+      "valueType": "Function",
+      "name": "表头单元格点击",
+      "extraInfo": {
+        "arguments": [
+          "event",
+          "column",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    "onClickCellImage": {
+      "valueType": "Function",
+      "name": "单击自定义单元格",
+      "extraInfo": {
+        "arguments": [
+          "event",
+          "cellImageInfo",
+          "row",
+          "column",
+          "rowIndex",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    },
+    "handleCellImage": {
+      "valueType": "Function",
+      "name": "自定义单元格事件",
+      "extraInfo": {
+        "arguments": [
+          "type",
+          "event",
+          "cellImageInfo",
+          "row",
+          "column",
+          "rowIndex",
+          "colIndex",
+          "data",
+          "view"
+        ]
+      }
+    }
+  },
+  "events": {
+    "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onDown.apply(this, arguments);\n}",
+    "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onUp.apply(this, arguments);\n}",
+    "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onMove.apply(this, arguments);\n}",
+    "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onLeave.apply(this, arguments);\n}",
+    "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onBeginDrag.apply(this, arguments);\n}",
+    "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onDrag.apply(this, arguments);\n}",
+    "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onEndDrag.apply(this, arguments);\n}",
+    "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.tableInteractor.onScroll.apply(this, arguments);\n}"
+  },
+  "snapshotURL": "symbols/ht/snapshot/table.json"
+}

@@ -1,0 +1,1146 @@
+{
+  "v": "7.7.2",
+  "p": {
+    "layers": [
+      {
+        "name": "0",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "m_top",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "trend",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      }
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "zoomable": false,
+    "pannable": false,
+    "rectSelectable": false,
+    "onPreDeserialize": "__ht__function(json, dm, view) {dm.ListCal={\r\n    'NumExp/RSCLT/RSZ_1RS_FRS':{\t//软水站外供总量(供高炉方向+供四炼方向+供西区+供转炉除氧器)\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/PW_IP3050_IT_PW09AP09','NumTag/OPCUA132/PW_IP3050_IT_PW09AP10','NumTag/OPCUA132/PW_IP2082_FT_PW29AW07','NumTag/OPCUA132/PW_IP2082_FT_PW29AW08']\r\n    },\r\n    'NumTag/MQDD/LCT/HHZ02_1MG_FRS':{\t//2#掺混外供混气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(21)\",\r\n        datas:['NumTag/OPCUA132/PM_IP5046_FT_PM02AG05_C','NumTag/OPCUA132/PM_IP5046_FT_PM02AG04_C','NumTag/OPCUA132/PM_IP5046_FT_PM02AG06_C']\r\n    },\r\n    'NumTag/MQDD/LCT/HHZ03_1MG_FRS':{\t//3#掺混外供混气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1})).toFixed(1)\",\r\n        datas:['NumTag/OPCUA132/PM_IP2052_FT_PM01AG01','NumTag/OPCUA132/PM_IP2052_FT_PM01AG03']\r\n    },\r\n    'NumTag/MQDD/LCT/DZ_2MG_FRS':{\t//锻造用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/16MNHXMQ_FT','NumTag/OPCUA132/20MNJRMQ_FT','NumTag/OPCUA132/45MNJRMQ_FT','NumTag/OPCUA132/45MNTHMQ_FT','NumTag/OPCUA132/20MNTHMQ_FT','NumTag/OPCUA132/WDZGMQ_FT','NumTag/OPCUA132/DZ_IP1147_FT_60MNAIO01_C']\r\n    },\r\n    'NumTag/MQDD/LCT/GG_2MG_FRS':{\t//钢管用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/GG_IP6063_FT_GP02AG01_C','NumTag/OPCUA132/GG_IP6038_FT_GP04AG01_C','NumTag/OPCUA132/GG_IP6034_FT_GP03AG01_C','NumTag/OPCUA132/GG_IP1062_FT_GP01AG04_C']\r\n    },\r\n    'NumTag/MQDD/LCT/DB_2MG_FRS':{\t//大棒850用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6}+{7}+{8}+{9}+{10}+{11}+{12})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG02_C','NumTag/OPCUA132/ZG_IP1145_FT_DB15AG01','NumTag/OPCUA132/ZG_IP1096_FT_ZG01FG01_C','NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG01_C','NumTag/OPCUA132/ZG_IP1096_AA','NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG03_C','NumTag/OPCUA132/ZG_IP1103_FT_ZG01DG01_C','NumTag/OPCUA132/ZG_IP1096_FT_ZG01FG02_C','NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG04_C','NumTag/OPCUA132/ZG_IP1096_FT_ZG01FG03_C','NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG05_C','NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG06_C','NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG01_C']\r\n    },\r\n    'NumTag/MQDD/LCT/ZG_2MG_FRS':{\t//轧钢用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3})).toFixed(2)\",\r\n        datas:['NumTag/MQDD/LCT/DB_2MG_FRS','NumTag/OPCUA132/ZG_IP4065_FT_ZG02AG12_C','NumTag/OPCUA132/ZG_IP4035_FT_ZG03CG01_C','NumTag/OPCUA132/ZG_IP4062_M5']\r\n    },\r\n    'NumTag/MQDD/LCT/1780GL_2MG_FRS':{\t//1780高炉用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['NumTag/MQDD/LCT/LT_IP2106_FT_LTQBJ04_C','NumTag/OPCUA132/LG_IP2038_FT_LG01AG01','NumTag/OPCUA132/LG_IP2038_FT_LG01AG02']\r\n    },\r\n    'NumTag/MQDD/LCT/TY_2MG_FRS':{\t//特冶厂用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6}+{7}+{8})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG01_C','NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG02_C','NumTag/OPCUA132/LG_IP2062_FT_LG25AG03_C','NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG04_C','NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG05_C','NumTag/OPCUA132/LG_IP2064_FT_LG20AG01','NumTag/OPCUA132/LG_IP2064_FT_LG20AG03','NumTag/OPCUA132/LG_IP2065_FT_LG20BG06','NumTag/OPCUA132/LG_IP1146_FT_SZ11AI01_C']\r\n    },\r\n    'NumTag/MQDD/LCT/LG_2MG_FRS':{\t//炼钢共用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['NumTag/MQDD/LCT/LG_IP2031_FT_LG000G03','NumTag/MQDD/LCT/TY_2MG_FRS','NumTag/OPCUA132/LG_IP3045_FT_LG11AS10']\r\n    },\r\n};\r\n//\"(parseFloat({1})==0? 0: parseFloat({0}/{1})*100).toFixed(1)\"}",
+    "previewURL": "displayPage.html"
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 6494,
+      "p": {
+        "displayName": "img_bg",
+        "image": "assets/冶钢集控项目icon/煤气调度/img_bg.jpg",
+        "position": {
+          "x": 960,
+          "y": 507
+        }
+      },
+      "s": {
+        "pixelPerfect": false,
+        "2d.movable": false,
+        "2d.editable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6495,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 60.73131,
+          "y": 24.83896
+        },
+        "width": 80,
+        "height": 22,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.1)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6496,
+      "p": {
+        "position": {
+          "x": 64.92227,
+          "y": 24.83946
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "KPa",
+        "text.color": "rgb(255,218,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6497,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 24.73181,
+          "y": 24.83946
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "压力：",
+        "text.color": "rgba(255,255,255,0.6)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6498,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 60.73131,
+          "y": 49.11891
+        },
+        "width": 80,
+        "height": 22,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.1)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6499,
+      "p": {
+        "position": {
+          "x": 64.92227,
+          "y": 48.96625
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "m3/h",
+        "text.color": "rgb(20,179,242)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6500,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 24.73181,
+          "y": 48.96625
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "流量：",
+        "text.color": "rgba(255,255,255,0.6)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6501,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 60.73131,
+          "y": 73.40749
+        },
+        "width": 80,
+        "height": 22,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.1)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6502,
+      "p": {
+        "position": {
+          "x": 64.92227,
+          "y": 73.25483
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "℃",
+        "text.color": "rgba(255,255,255,0.8)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6503,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 24.73181,
+          "y": 73.40799
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "温度：",
+        "text.color": "rgba(255,255,255,0.6)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6504,
+      "p": {
+        "displayName": "table",
+        "image": "symbols/scada图标/table.json",
+        "position": {
+          "x": 1813.96724,
+          "y": 56.13918
+        },
+        "width": 185.4464,
+        "height": 90
+      },
+      "s": {
+        "label.background": "rgb(245,164,164)",
+        "label.color": null,
+        "2d.movable": false
+      },
+      "a": {
+        "ht.borderWidth": 0,
+        "ht.columnLinePattern": [],
+        "ht.showHeadRowLine": true,
+        "ht.showHead": false,
+        "ht.headHeight": 20,
+        "ht.rowHeight": 30,
+        "ht.headTextColor": "rgb(255,255,255)",
+        "ht.bodyBackground": "rgba(255,255,255,0.1)",
+        "ht.columns": [
+          80,
+          90
+        ],
+        "ht.rowLineColor": "rgb(188,212,211)",
+        "ht.rowLineWidth": 0.2,
+        "ht.headbackground": "rgb(115,10,10)",
+        "ht.columnLineWidth": 0.2,
+        "ht.textLineHeight": 15,
+        "ht.selectedIndex": [],
+        "ht.columnLineColor": "rgb(188,212,211)",
+        "ht.borderColor": "rgb(240,240,240)",
+        "ht.cellPadding": 0,
+        "ht.bodyFont": "12px sans-serif, arial",
+        "ht.bodyTextColor": "rgb(75,235,208)",
+        "ht.dataSource": [
+          50,
+          20,
+          30
+        ],
+        "ht.scrollable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6505,
+      "p": {
+        "position": {
+          "x": 1767.88789,
+          "y": 28.59889
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "总产出",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6506,
+      "p": {
+        "position": {
+          "x": 1767.88689,
+          "y": 56.13968
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "总消耗",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6507,
+      "p": {
+        "position": {
+          "x": 1767.88689,
+          "y": 86.80958
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "利用率",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6508,
+      "p": {
+        "toolTip": "软水站外供总量(供高炉方向+供四炼方向+供西区+供转炉除氧器)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumExp/RSCLT/RSZ_1RS_FRS",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1828.13016,
+          "y": 28.59989
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6509,
+      "p": {
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/MQDD/LEFT1/2BFG_FRS",
+              "func": "__ht__function(value){\r\n return (parseFloat(value/10000)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1828.13016,
+          "y": 56.14068
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6510,
+      "p": {
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/MQDD/LEFT1/BFG_UtilizationRate",
+              "func": "__ht__function(value){\r\n return (parseFloat(value/10000)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1828.13016,
+          "y": 86.81058
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6511,
+      "p": {
+        "position": {
+          "x": 755.26954,
+          "y": 538.80143
+        },
+        "width": 112.31833,
+        "height": 45,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6512,
+      "p": {
+        "position": {
+          "x": 866.55564,
+          "y": 538.80143
+        },
+        "width": 65,
+        "height": 45,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6513,
+      "p": {
+        "position": {
+          "x": 965.05967,
+          "y": 538.80143
+        },
+        "width": 92.24656,
+        "height": 45,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6514,
+      "p": {
+        "position": {
+          "x": 755.27004,
+          "y": 539.90791
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "265烧结余热发电",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6515,
+      "p": {
+        "position": {
+          "x": 866.55614,
+          "y": 539.90791
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "转底炉",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6516,
+      "p": {
+        "position": {
+          "x": 965.05917,
+          "y": 539.90791
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "80MW发电",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 6517,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 964.96813,
+          "y": 477.24863
+        },
+        "width": 77.4172,
+        "height": 0.17672,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 926.25953,
+              "y": 477.24863
+            },
+            {
+              "x": 1003.21944,
+              "y": 477.24863
+            },
+            {
+              "x": 1003.67673,
+              "y": 477.24863
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(127,127,127)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 6518,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 866.64515,
+          "y": 477.24863
+        },
+        "width": 77.4172,
+        "height": 0.17672,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 827.93655,
+              "y": 477.24863
+            },
+            {
+              "x": 904.89646,
+              "y": 477.24863
+            },
+            {
+              "x": 905.35375,
+              "y": 477.24863
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(127,127,127)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 6519,
+      "p": {
+        "rotation": 3.14159,
+        "position": {
+          "x": 916.16208,
+          "y": 438.10636
+        },
+        "width": 321.42374,
+        "height": 0.00033,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 755.45021,
+              "y": 438.1062
+            },
+            {
+              "x": 1076.87396,
+              "y": 438.10653
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(127,127,127)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6521,
+      "p": {
+        "toolTip": "水表[自动]_炼铁厂_265烧结余热发电除盐水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/PS_IP5171_FT_YR61AS03",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 755.90932,
+          "y": 492.82161
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6522,
+      "p": {
+        "position": {
+          "x": 918.93639,
+          "y": 244.82979
+        },
+        "width": 122.95787,
+        "height": 64.65593,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width.absolute": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6523,
+      "p": {
+        "position": {
+          "x": 936.82768,
+          "y": 244.82929
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "除盐水站",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "20px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 6524,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 918.88402,
+          "y": 358.01
+        },
+        "width": 160.19153,
+        "height": 0.14922,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 838.78826,
+              "y": 358.01
+            },
+            {
+              "x": 998.03353,
+              "y": 358.01
+            },
+            {
+              "x": 998.97976,
+              "y": 358.01
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(127,127,127)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6525,
+      "p": {
+        "position": {
+          "x": 1077.33255,
+          "y": 538.80143
+        },
+        "width": 92.24656,
+        "height": 45,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6526,
+      "p": {
+        "position": {
+          "x": 1077.33205,
+          "y": 539.90791
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "新焦化上升管",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 6527,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 1077.24101,
+          "y": 477.24863
+        },
+        "width": 77.4172,
+        "height": 0.17672,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1038.53241,
+              "y": 477.24863
+            },
+            {
+              "x": 1115.49232,
+              "y": 477.24863
+            },
+            {
+              "x": 1115.94961,
+              "y": 477.24863
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(127,127,127)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 6528,
+      "p": {
+        "toolTip": "水表[自动]_新焦化上升管除盐水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/JH_IP5219_FT_JH02YR01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1077.33105,
+          "y": 492.82161
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 6529,
+      "p": {
+        "rotation": 1.5708,
+        "position": {
+          "x": 755.99832,
+          "y": 477.24863
+        },
+        "width": 77.4172,
+        "height": 0.17672,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 717.28972,
+              "y": 477.24863
+            },
+            {
+              "x": 794.24963,
+              "y": 477.24863
+            },
+            {
+              "x": 794.70692,
+              "y": 477.24863
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(127,127,127)",
+        "shape.border.width": 1,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 6530,
+      "p": {
+        "position": {
+          "x": 876.76285,
+          "y": 241.96775
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "width": 25.41155,
+        "height": 22.87295
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6531,
+      "p": {
+        "displayName": "池",
+        "parent": {
+          "__i": 6530
+        },
+        "image": "symbols/冶钢集控项目图标/水系统/池.json",
+        "position": {
+          "x": 876.90468,
+          "y": 243.84988
+        },
+        "width": 22.20124,
+        "height": 19.1087,
+        "tall": 20
+      },
+      "a": {
+        "animat.custom.used": true,
+        "animat.custom.running": true,
+        "animat.custom.autoReverse": true,
+        "animat.custom.onUpdate": "data.a('anchorX', (value - 0.5) * 0.15 + 0.5)",
+        "animat.translate.used": true,
+        "animat.translate.running": true,
+        "animat.translate.duration": 4000,
+        "animat.translate.x": 0,
+        "animat.translate.y": 180
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 6532,
+      "p": {
+        "displayName": "池",
+        "parent": {
+          "__i": 6530
+        },
+        "image": "symbols/冶钢集控项目图标/水系统/池.json",
+        "position": {
+          "x": 876.90468,
+          "y": 243.84988
+        },
+        "width": 22.20124,
+        "height": 19.1087,
+        "tall": 20
+      },
+      "a": {
+        "animat.custom.used": true,
+        "animat.custom.running": true,
+        "animat.custom.autoReverse": true,
+        "animat.custom.onUpdate": "data.a('anchorX', (value - 0.5) * 0.15 + 0.5)",
+        "animat.translate.used": true,
+        "animat.translate.running": true,
+        "animat.translate.duration": 4000,
+        "animat.translate.x": 0,
+        "animat.translate.y": 180
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 6533,
+      "p": {
+        "parent": {
+          "__i": 6530
+        },
+        "position": {
+          "x": 876.76285,
+          "y": 241.79842
+        },
+        "width": 25.41155,
+        "height": 22.53428,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 864.05707,
+              "y": 230.68385
+            },
+            {
+              "x": 865.41794,
+              "y": 230.68385
+            },
+            {
+              "x": 865.41794,
+              "y": 253.06556
+            },
+            {
+              "x": 888.0492,
+              "y": 253.06556
+            },
+            {
+              "x": 888.0492,
+              "y": 230.53128
+            },
+            {
+              "x": 889.46862,
+              "y": 230.53128
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(33,89,145)",
+        "shape.border.width": 2,
+        "shape.border.cap": "round"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 14503,
+      "p": {
+        "toolTip": "水表[自动]_转底炉外来除盐水(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LT_IP3092_FT_LT04ZD01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 866.73415,
+          "y": 492.82161
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 14504,
+      "p": {
+        "toolTip": "水表[自动]_80MW发电除盐水总管(瞬时流量)",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCUA132/LT_IP5205_FT_CYS80MW01_C",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 964.87913,
+          "y": 492.82161
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(20,179,242)",
+        "text.font": "16px arial, sans-serif",
+        "2d.movable": false
+      }
+    }
+  ],
+  "modified": "Wed Sep 27 2023 14:03:52 GMT+0800 (中国标准时间)",
+  "contentRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1014
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "v": "8.1.3",
+  "p": {
+    "background": "rgb(0,0,0)",
+    "layers": [
+      {
+        "name": "0",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      }
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {},
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 9753,
+      "p": {
+        "displayName": "背景1",
+        "image": "symbols/Drawing/背景1.json",
+        "position": {
+          "x": 688,
+          "y": 536
+        },
+        "width": 1056,
+        "height": 752,
+        "tall": 20
+      },
+      "s": {
+        "opacity": 1,
+        "select.width": 0,
+        "clip.host": true,
+        "2d.editable": false,
+        "2d.movable": false
+      },
+      "a": {
+        "showTitle": 1,
+        "title": "通用",
+        "radius": 8
+      }
+    }
+  ],
+  "modified": "Sat Mar 28 2026 17:32:12 GMT+0800 (GMT+08:00)",
+  "contentRect": {
+    "x": 128,
+    "y": 128,
+    "width": 1120,
+    "height": 816
+  }
+}

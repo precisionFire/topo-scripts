@@ -1,0 +1,106 @@
+{
+  "modified": "Tue Feb 21 2023 17:17:35 GMT+0800 (中国标准时间)",
+  "background": "rgb(5,1,1)",
+  "dataBindings": [
+    {
+      "attr": "select",
+      "valueType": "PositiveNumber",
+      "name": "选择",
+      "defaultValue": 1
+    },
+    {
+      "attr": "title",
+      "valueType": "String",
+      "defaultValue": "柜位",
+      "name": "标题内容"
+    }
+  ],
+  "onDown": "__ht__function(event, data, view, point, width, height) {var prefixs = data.a('prefixs') || [];\r\nvar currentPrefix = data.getCurrentPrefix();\r\n\r\nif (data.ca(\"select\") < 3) {\r\n    prefixs.forEach(function (prefix) {\r\n        if (prefix !== currentPrefix) {\r\n            data.a(prefix + \"select\", 1);\r\n        }\r\n    });\r\n    data.ca(\"select\", 3);\r\n}\r\nelse\r\n    data.ca(\"select\", 1);}",
+  "onEnter": "__ht__function(event, data, view, point, width, height) {if (data.ca(\"select\") == 1) {\r\n    data.ca('select', 2);\r\n}\r\n\r\nview.setCursor('pointer');}",
+  "onLeave": "__ht__function(event, data, view, point, width, height) {if (data.ca(\"select\") == 2) {\r\n    data.ca('select', 1);\r\n}\r\n\r\nview.setCursor('default');}",
+  "width": 87,
+  "height": 28,
+  "fitSize": true,
+  "interactive": true,
+  "pixelPerfect": false,
+  "comps": [
+    {
+      "type": "shape",
+      "background": {
+        "func": "__ht__function(data, view) {\nif (data.ca('select') == 1) {\r\n    return 'transparent';\r\n}\r\nelse if (data.ca('select') == 2) {\r\n    return \"rgba(20,179,242,0.3)\";\r\n}\r\nelse {\r\n    return \"#0476bc\";\r\n}\n}"
+      },
+      "borderWidth": 1,
+      "borderColor": "rgba(20,179,242,0.3)",
+      "borderJoin": "miter",
+      "movable": false,
+      "points": [
+        1.64961,
+        3.00048,
+        83.93093,
+        3.00048,
+        83.93093,
+        3.00048,
+        83.93093,
+        3.00048,
+        83.93093,
+        25.00048,
+        83.93093,
+        25.00048,
+        83.93093,
+        25.00048,
+        1.64961,
+        25.00048,
+        1.64961,
+        25.00048,
+        1.64961,
+        25.00048,
+        1.64961,
+        3.00048,
+        1.64961,
+        3.00048,
+        1.64961,
+        3.00048
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "柜位"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "movable": false,
+      "layoutH": "center",
+      "layoutV": "center",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        42.78027,
+        15.00048,
+        0.01,
+        0.01
+      ]
+    }
+  ]
+}

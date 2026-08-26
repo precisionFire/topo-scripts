@@ -1,0 +1,1434 @@
+{
+  "modified": "Mon May 19 2025 16:20:41 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "ROLL_PLAN_NO",
+      "valueType": "String",
+      "group": "数据"
+    },
+    {
+      "attr": "IN_MAT_NO",
+      "valueType": "String"
+    },
+    {
+      "attr": "OUT_MAT_NO",
+      "valueType": "String"
+    },
+    {
+      "attr": "SG_SIGN",
+      "valueType": "String"
+    },
+    {
+      "attr": "MULT_LEN",
+      "valueType": "String"
+    },
+    {
+      "attr": "HeadFlag",
+      "valueType": "String"
+    },
+    {
+      "valueType": "String",
+      "attr": "TailFlag"
+    },
+    {
+      "valueType": "String",
+      "attr": "HeadRowFlag"
+    },
+    {
+      "valueType": "String",
+      "attr": "TailRowFlag"
+    }
+  ],
+  "width": 170,
+  "height": 187,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgba(61, 73, 128, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        0,
+        1,
+        0.5,
+        0.5,
+        0,
+        "rgba(21, 111, 237, 1)",
+        1,
+        "rgba(29, 93, 204, 0.00)"
+      ],
+      "opacity": 0.4,
+      "layoutH": "left",
+      "layoutV": "bottom",
+      "anchorX": 0,
+      "anchorY": 0,
+      "rect": [
+        0.41669,
+        136.51743,
+        23.34069,
+        50.31126
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(61, 73, 128, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        0,
+        1,
+        0.5,
+        0.5,
+        0,
+        "rgba(21, 111, 237, 1)",
+        1,
+        "rgba(29, 93, 204, 0.00)"
+      ],
+      "opacity": 0.4,
+      "layoutH": "right",
+      "layoutV": "bottom",
+      "anchorX": 0,
+      "anchorY": 1,
+      "rotation": -1.5708,
+      "rect": [
+        170.56013,
+        163.48796,
+        50.54132,
+        23.34069
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(28, 111, 255, 0.5)",
+        0.5,
+        "rgba(28, 111, 255, 0.1)",
+        0.99,
+        "rgba(28, 111, 255, 0.5)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "bottom",
+      "points": [
+        0.41669,
+        0.48191,
+        170.41504,
+        0.48191,
+        170.41504,
+        0.48191,
+        170.41504,
+        0.48191,
+        170.41504,
+        186.99999,
+        170.41504,
+        186.99999,
+        170.41504,
+        186.99999,
+        0.41669,
+        186.99999,
+        0.41669,
+        186.99999,
+        0.41669,
+        186.99999,
+        0.41669,
+        0.48191,
+        0.41669,
+        0.48191,
+        0.41669,
+        0.48191
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(61, 73, 128, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(15, 68, 117, 1)",
+        1,
+        "rgba(13, 33, 61, 1)"
+      ],
+      "opacity": 0.7,
+      "anchorX": 0,
+      "anchorY": 0,
+      "rect": [
+        1.50481,
+        -0.24223,
+        169.05517,
+        187.24222
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(43, 142, 255, 1)",
+        1,
+        "rgba(41, 118, 227, 0.00)"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.6,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "points": [
+        0.56083,
+        10.6197,
+        170.55918,
+        10.6197,
+        170.55918,
+        0.48191,
+        0.56083,
+        0.48191
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderGradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(28, 111, 255, 0.5)",
+        0.5,
+        "rgba(28, 111, 255, 0.1)",
+        0.99,
+        "rgba(28, 111, 255, 0.5)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "points": [
+        0.56083,
+        11.1628,
+        170.55918,
+        11.1628
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(28, 111, 255, 0.5)",
+        0.5,
+        "rgba(28, 111, 255, 0.1)",
+        0.99,
+        "rgba(28, 111, 255, 0.5)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "points": [
+        0.56083,
+        12.35991,
+        170.55918,
+        12.35991,
+        170.55918,
+        12.35991,
+        170.55918,
+        12.35991,
+        170.55918,
+        12.72198,
+        170.55918,
+        12.72198,
+        170.55918,
+        12.72198,
+        0.56083,
+        12.72198,
+        0.56083,
+        12.72198,
+        0.56083,
+        12.72198,
+        0.56083,
+        12.35991,
+        0.56083,
+        12.35991,
+        0.56083,
+        12.35991
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(135, 231, 255, 1)",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(135, 231, 255, 1)",
+        1,
+        "rgba(33, 147, 255, 0.6)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "top",
+      "points": [
+        0.53543,
+        12.35991,
+        6.3706,
+        12.35991,
+        6.3706,
+        12.35991,
+        6.3706,
+        12.35991,
+        6.3706,
+        12.72198,
+        6.3706,
+        12.72198,
+        6.3706,
+        12.72198,
+        0.53543,
+        12.72198,
+        0.53543,
+        12.72198,
+        0.53543,
+        12.72198,
+        0.53543,
+        12.35991,
+        0.53543,
+        12.35991,
+        0.53543,
+        12.35991
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(135, 231, 255, 1)",
+      "gradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(135, 231, 255, 1)",
+        1,
+        "rgba(33, 147, 255, 0.6)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "top",
+      "points": [
+        163.47591,
+        12.35991,
+        170.55918,
+        12.35991,
+        170.55918,
+        12.35991,
+        170.55918,
+        12.35991,
+        170.55918,
+        12.72198,
+        170.55918,
+        12.72198,
+        170.55918,
+        12.72198,
+        163.47591,
+        12.72198,
+        163.47591,
+        12.72198,
+        163.47591,
+        12.72198,
+        163.47591,
+        12.35991,
+        163.47591,
+        12.35991,
+        163.47591,
+        12.35991
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(135, 231, 255, 1)",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(135, 231, 255, 1)",
+        1,
+        "rgba(33, 147, 255, 0.6)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "bottom",
+      "points": [
+        0.41669,
+        186.44282,
+        6.25186,
+        186.44282,
+        6.25186,
+        186.44282,
+        6.25186,
+        186.44282,
+        6.25186,
+        186.99999,
+        6.25186,
+        186.99999,
+        6.25186,
+        186.99999,
+        0.41669,
+        186.99999,
+        0.41669,
+        186.99999,
+        0.41669,
+        186.99999,
+        0.41669,
+        186.44282,
+        0.41669,
+        186.44282,
+        0.41669,
+        186.44282
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(135, 231, 255, 1)",
+      "gradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(135, 231, 255, 1)",
+        1,
+        "rgba(33, 147, 255, 0.6)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "bottom",
+      "displayName": "不规则图形",
+      "points": [
+        163.33177,
+        186.44282,
+        170.41504,
+        186.44282,
+        170.41504,
+        186.44282,
+        170.41504,
+        186.44282,
+        170.41504,
+        186.99999,
+        170.41504,
+        186.99999,
+        170.41504,
+        186.99999,
+        163.33177,
+        186.99999,
+        163.33177,
+        186.99999,
+        163.33177,
+        186.99999,
+        163.33177,
+        186.44282,
+        163.33177,
+        186.44282,
+        163.33177,
+        186.44282
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "bottom",
+      "points": [
+        2.16725,
+        182.71126,
+        2.16725,
+        180.48253,
+        4.50131,
+        182.71126,
+        2.16725,
+        182.71126
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "bottom",
+      "rotation": 4.71239,
+      "points": [
+        165.75907,
+        183.01354,
+        165.75907,
+        180.18024,
+        167.98778,
+        183.01354,
+        165.75907,
+        183.01354
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "opacity": 0.6,
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        4.11349,
+        21.59042,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        5.85601,
+        21.59042,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgba(0, 60, 255, 1)",
+      "borderPattern": [
+        1,
+        10
+      ],
+      "dashPattern": [
+        1,
+        10
+      ],
+      "dashOffset": 1,
+      "dashColor": "rgba(65, 154, 224, 1)",
+      "dashWidth": 1,
+      "borderGradientPack": [
+        "linear",
+        -0.00021,
+        0.50011,
+        1,
+        0.50011,
+        0.01739,
+        "rgba(87, 65, 176, 0.00)",
+        1,
+        "rgba(65, 139, 196, 0.80)"
+      ],
+      "opacity": 0.4,
+      "layoutH": "right",
+      "layoutV": "topbottom",
+      "points": [
+        1.50481,
+        -0.24222,
+        170.41504,
+        -0.24222,
+        1.50481,
+        13.0924,
+        170.41504,
+        13.0924,
+        1.50481,
+        26.42706,
+        170.41504,
+        26.42706,
+        1.50481,
+        39.76172,
+        80.80806,
+        39.76172,
+        170.41504,
+        39.76172,
+        1.50481,
+        53.09638,
+        170.41504,
+        53.09638,
+        1.50481,
+        66.43099,
+        170.41504,
+        66.43099,
+        1.50481,
+        79.76565,
+        170.41504,
+        79.76565,
+        1.50481,
+        93.1003,
+        170.41504,
+        93.1003,
+        1.50481,
+        106.43497,
+        170.41504,
+        106.43497,
+        1.50481,
+        119.76961,
+        170.41504,
+        119.76961,
+        1.50481,
+        133.10425,
+        170.41504,
+        133.10425,
+        1.50481,
+        146.43891,
+        170.41504,
+        146.43891,
+        1.50481,
+        159.77357,
+        170.41504,
+        159.77357,
+        1.50481,
+        173.10819,
+        170.41504,
+        173.10819,
+        1.50481,
+        186.44282,
+        170.41504,
+        186.44282
+      ],
+      "segments": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        2
+      ]
+    },
+    {
+      "type": "text",
+      "text": "批号:",
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        8.38326,
+        24.15609,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": "钢坯号:",
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        8.38326,
+        42.12694,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": "倍尺序号:",
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        8.38326,
+        60.09777,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": "钢种:",
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        8.38326,
+        78.06862,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nreturn data.a('ROLL_PLAN_NO');\n}",
+        "value": "0.0"
+      },
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        38.33487,
+        24.15609,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nreturn data.a('IN_MAT_NO');\n}",
+        "value": "0.0"
+      },
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        50.39953,
+        42.13742,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nreturn data.a('OUT_MAT_NO');\n}",
+        "value": "0.0"
+      },
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        62.46419,
+        60.09779,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nreturn data.a('SG_SIGN');\n}",
+        "value": "0.0"
+      },
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        39.50692,
+        78.06864,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "opacity": 0.6,
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        4.11349,
+        58.6542,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        5.85601,
+        58.6542,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "opacity": 0.6,
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        4.11349,
+        40.68337,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        5.85601,
+        40.68337,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "opacity": 0.6,
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        4.11349,
+        76.62505,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        5.85601,
+        76.62505,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "text",
+      "text": "倍尺长(m):",
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        8.38326,
+        96.06862,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nreturn data.a('MULT_LEN');\n}",
+        "value": "0.0"
+      },
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        68.66858,
+        96.06864,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "opacity": 0.6,
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        4.11349,
+        94.62505,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        5.85601,
+        94.62505,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "text",
+      "text": "是否头支:",
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        8.38326,
+        114.06862,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nreturn data.a('HeadFlag');\n}",
+        "value": "0.0"
+      },
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        62.46419,
+        114.06864,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "opacity": 0.6,
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        4.11349,
+        112.62505,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        5.85601,
+        112.62505,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "text",
+      "text": "是否尾支:",
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        8.38326,
+        132.06862,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nreturn data.a('TailFlag');\n}",
+        "value": "0.0"
+      },
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        62.46419,
+        132.06864,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "opacity": 0.6,
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        4.11349,
+        130.62505,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        5.85601,
+        130.62505,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "text",
+      "text": "是否头排:",
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        8.38326,
+        150.06862,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nreturn data.a('HeadRowFlag');\n}",
+        "value": "0.0"
+      },
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        62.46419,
+        150.06864,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "opacity": 0.6,
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        4.11349,
+        148.62505,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        5.85601,
+        148.62505,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "text",
+      "text": "是否尾排:",
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        8.38326,
+        168.06862,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nreturn data.a('TailRowFlag');\n}",
+        "value": "0.0"
+      },
+      "color": "rgb(255,255,255)",
+      "pixelPerfect": true,
+      "rect": [
+        62.46419,
+        168.06864,
+        0.11264,
+        0.1
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "opacity": 0.6,
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        4.11349,
+        166.62505,
+        4.34477,
+        2.98715
+      ]
+    },
+    {
+      "type": "triangle",
+      "background": "rgba(216, 216, 216, 1)",
+      "borderColor": "rgba(151, 151, 151, 1)",
+      "gradientPack": [
+        "linear",
+        -0.00237,
+        0.49232,
+        1.00004,
+        0.49232,
+        0,
+        "rgba(89, 222, 255, 1)",
+        0.98696,
+        "rgba(89, 128, 255, 0.8)"
+      ],
+      "layoutH": "left",
+      "layoutV": "top",
+      "rotation": 1.5708,
+      "rect": [
+        5.85601,
+        166.62505,
+        4.34477,
+        2.98715
+      ]
+    }
+  ]
+}

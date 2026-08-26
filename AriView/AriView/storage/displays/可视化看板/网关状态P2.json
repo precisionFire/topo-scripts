@@ -1,0 +1,4735 @@
+{
+  "v": "7.7.2",
+  "p": {
+    "layers": [
+      {
+        "name": "0",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "m_top",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "trend",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      }
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "pannable": true,
+    "zoomable": true,
+    "rectSelectable": false,
+    "previewURL": "displayPage.html",
+    "onPreDeserialize": "__ht__function(json, dm, view) {dm.ListSubscribe={\r\n'NumTag/OPCUA132/PM_IP5045_FT_PM02AG02_C':0,  //煤气表[自动]_燃气_1#掺混高气(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP5045_FT_PM02AG01_C':0,  //煤气表[自动]_燃气_1#掺混焦气(瞬时流量)\r\n'NumTag/OPCUA132/jisuanliang_FT_PM_OUT01':0,  //煤气表[自动]_燃气_1#掺混混合煤气外供(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP5046_FT_PM02AG05_C':0,  //煤气表[自动]_燃气_2#掺混高气(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP5046_FT_PM02AG04_C':0,  //煤气表[自动]_燃气_2#掺混焦气(瞬时流量)\r\n'NumTag/OPCUA132/jisuanliang_FT_PM_OUT02':0,  //煤气表[自动]_燃气_2#掺混混合煤气外供(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_CH1':0,  //煤气表[自动]_燃气_1#掺混煤气总量(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_CH2':0,  //煤气表[自动]_燃气_2#掺混煤气总量(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_CH3':0,  //煤气表[自动]_燃气_3#掺混煤气总量(瞬时流量)\r\n'NumTag/OPCUA132/jisuanliang_FT_PM_ALL':0,  //煤气表[自动]_燃气_掺混站混合煤气外供总量(瞬时流量)\r\n'NumTag/OPCUA132/jisuanliang_FT_PM_OUT':0,  //煤气表[自动]_燃气_混合煤气消耗总量(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5127_FT_JH01AG01_C':0,  //煤气表[自动]_焦化厂_1#焦炉回炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5127_FT_JH01AG02_C':0,  //煤气表[自动]_焦化厂_2#焦炉回炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5202_FT_JH10AG01_C':0,  //煤气表[自动]_焦化厂_进新焦化高炉煤气总管流量(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP2052_FT_PM01AG01':0,  //煤气表[自动]_燃气_3#掺混转气(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_CH3':0,  //煤气表[自动]_燃气_3#掺混混合煤气外供(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5127_FT_JH01AS02_C':0,  //煤气表[自动]_焦化厂_1#焦炉掺混焦气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5127_FT_JH01AG03_C':0,  //煤气表[自动]_焦化厂_1#焦炉回炉焦气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5127_FT_JH01AS03_C':0,  //煤气表[自动]_焦化厂_2#焦炉掺混焦气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5127_FT_JH01AG04_C':0,  //煤气表[自动]_焦化厂_2#焦炉回炉焦气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5119_PT_JH03BO02_C':0,  //煤气表[自动]_焦化厂_管式炉焦气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5133_FT_PS06AG01_C':0,  //煤气表[自动]_焦化厂_新化能1#快锅焦气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5133_FT_PS06AG02_C':0,  //煤气表[自动]_焦化厂_新化能2#快锅焦气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5119_FT_JH03BG01_C':0,  //煤气表[自动]_焦化厂_新化能粗笨焦气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5130_FT_JH03AG01_C':0,  //煤气表[自动]_焦化厂_新化能放散焦气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5130_FT_JH03AG02_C':0,  //煤气表[自动]_焦化厂_新化能外供焦气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5206_FT_JH11CG06_C':0,  //煤气表[自动]_焦化厂_新焦化1#焦炉焦气主管(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5207_FT_JH21CG06_C':0,  //煤气表[自动]_焦化厂_新焦化2#焦炉焦气主管(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5216_FT_JH00FS01_C':0,  //煤气表[自动]_焦化厂_新焦化焦气放散(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5202_FT_JH10AG02_C':0,  //煤气表[自动]_焦化厂_新焦化外供焦气(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP2052_FT_PM01AG03':0,  //煤气表[自动]_燃气_3#掺混焦气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5175_FT_220SF05_C':0,  //煤气表[自动]_炼铁厂_220烧结点火炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5176_FT_220TLGQ01_C':0,  //煤气表[自动]_炼铁厂_220烧结脱硫脱硝用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5176_FT_220TLJQ01_C':0,  //煤气表[自动]_炼铁厂_220烧结脱硫脱硝加热炉用焦气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3064_FT_1280TRT01_C':0,  //煤气表[自动]_炼铁厂_1280高炉TRT用高气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5171_FT_YR61AS10_C':0,  //煤气表[自动]_炼铁厂_265烧结补燃炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5179_FT_265SJTX005_C':0,  //煤气表[自动]_炼铁厂_265烧结脱硝用高气量(瞬时流量)\r\n'NumTag/OPCUA132/LT_add_gasadd':0,  //煤气表[自动]_炼铁厂_265烧结高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5032_FT_LT04BG01':0,  //煤气表[自动]_炼铁厂_265烧结用混气量(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5171_FT_YR61AS11_C':0,  //煤气表[自动]_炼铁厂_265余热补燃炉环孔用高气量(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL07_C':0,  //煤气表[自动]_炼铁厂_1280高炉1#热风炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL08_C':0,  //煤气表[自动]_炼铁厂_1280高炉2#热风炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL09_C':0,  //煤气表[自动]_炼铁厂_1280高炉3#热风炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3093_FT_1280FS01_C':0,  //煤气表[自动]_炼铁厂_1280高炉放散高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5151_FT_LT62GS02':0,  //煤气表[自动]_炼铁厂_1280高炉喷煤用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL01_C':0,  //煤气表[自动]_炼铁厂_1280高炉外供高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5077_FT_1780TRT01_C':0,  //煤气表[自动]_炼铁厂_1780高炉TRT用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3093_FT_1280FS02_C':0,  //煤气表[自动]_炼铁厂_1280高炉放散伴烧用焦气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5151_FT_LT62GS01':0,  //煤气表[自动]_炼铁厂_1280高炉喷煤用焦气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL02_C':0,  //煤气表[自动]_炼铁厂_1280高炉用焦气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5080_FT_LT01CG01':0,  //煤气表[自动]_炼铁厂_1780高炉1#热风炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5080_FT_LT01CG02':0,  //煤气表[自动]_炼铁厂_1780高炉2#热风炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5080_FT_LT01CG03':0,  //煤气表[自动]_炼铁厂_1780高炉3#热风炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5057_FT_LT01DG01':0,  //煤气表[自动]_炼铁厂_1780高炉放散高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5082_FT_LT01BG01':0,  //煤气表[自动]_炼铁厂_1780高炉喷煤用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5057_FT_LT01DG03':0,  //煤气表[自动]_炼铁厂_1780高炉外供高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5056_FT_LT01DG02':0,  //煤气表[自动]_炼铁厂_1780高炉放散点火用焦气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5082_FT_LT01BG02':0,  //煤气表[自动]_炼铁厂_1780高炉喷煤用焦气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5057_FT_LT01DG04':0,  //煤气表[自动]_炼铁厂_1780高炉用焦气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP2106_FT_LTQBJ04_C':0,  //煤气表[自动]_炼铁厂_1780高炉炼铁砌包间用混气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2038_FT_LG01AG01':0,  //煤气表[自动]_炼铁厂_1780高炉转炉1#烤包用混气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2038_FT_LG01AG02':0,  //煤气表[自动]_炼铁厂_1780高炉转炉2#烤包用混气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5084_FT_LT06AG01':0,  //煤气表[自动]_炼铁厂_微粉用高气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5084_FT_LT06AG02':0,  //煤气表[自动]_炼铁厂_微粉用焦气(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG01_C':0,  //煤气表[自动]_特冶厂_特冶1#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG02_C':0,  //煤气表[自动]_特冶厂_特冶2#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2062_FT_LG25AG03_C':0,  //煤气表[自动]_特冶厂_特冶3#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG04_C':0,  //煤气表[自动]_特冶厂_特冶4#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG05_C':0,  //煤气表[自动]_特冶厂_特冶5#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/2200_DB8_DBD64_PV':0,  //煤气表[自动]_转炉厂_转炉快锅1#用焦气(瞬时流量)\r\n'NumTag/OPCUA132/2200_DB8_DBD68_PV':0,  //煤气表[自动]_转炉厂_转炉快锅2#用焦气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2072_FT_LG22AG02':0,  //煤气表[自动]_特冶厂_AOD炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2064_FT_LG20AG01':0,  //煤气表[自动]_特冶厂_特冶电炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2064_FT_LG20AG03':0,  //煤气表[自动]_特冶厂_电渣27米跨厂房用混气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2065_FT_LG20BG06':0,  //煤气表[自动]_特冶厂_电渣用混气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP1146_FT_SZ11AI01_C':0,  //煤气表[自动]_特冶厂_特冶厂双真空用混气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2062_FT_LG25AG06_C':0,  //煤气表[自动]_特冶厂_整模用混气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG11AG02':0,  //煤气表[自动]_电炉厂_电炉用焦气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG11AS10':0,  //煤气表[自动]_电炉厂_电炉用混气总管(瞬时流量)\r\n'NumTag/OPCUA132/2102FT_LGRH2O05_PV':0,  //煤气表[自动]_转炉厂_转炉2#RH炉用焦气_四级(瞬时流量)\r\n'NumTag/OPCUA132/2102FT_LGRH2O06_PV':0,  //煤气表[自动]_转炉厂_转炉2#RH炉用混气总管_三级(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2199_FT_ZL03KM02_C':0,  //煤气表[自动]_转炉厂_转炉3#连铸东烘烤用焦气_三级(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2199_FT_ZL03KM01_C':0,  //煤气表[自动]_转炉厂_转炉3#连铸西烘烤用焦气_三级(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2191_FT_LG10AG04_C':0,  //煤气表[自动]_转炉厂_转炉一次除尘点火焦气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG000G02':0,  //煤气表[自动]_转炉厂_转炉精制用焦气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG000G01':0,  //煤气表[自动]_转炉厂_转炉总管用焦气(瞬时流量)\r\n'NumTag/OPCUA132/jisuanliang_FT_LG00AG99':0,  //煤气表[自动]_转炉厂_转炉焦气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP2076_FT_PS02AS12_C':0,  //煤气表[自动]_转炉厂_转炉0#快锅用混气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG000G03':0,  //煤气表[自动]_转炉厂_转炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6065_FT_GP02BG01_C':0,  //煤气表[自动]_170钢管厂_170环形炉煤气用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6065_FT_GP02CG01_C':0,  //煤气表[自动]_170钢管厂_170机组步进炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AG01_C':0,  //煤气表[自动]_170钢管厂_170机组用混气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP1062_FT_GP01AG04_C':0,  //煤气表[自动]_钢管厂_108机组步进炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6033_FT_GP03BG01_C':0,  //煤气表[自动]_219钢管厂_219机组步进炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6034_FT_GP03AG05_C':0,  //煤气表[自动]_219钢管厂_219机组环形炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/6161FT_GP03CG01_PV':0,  //煤气表[自动]_219钢管厂_219机组芯棒炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6034_FT_GP03AG01_C':0,  //煤气表[自动]_219钢管厂_219机组用混气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6038_FT_GP04AG01_C':0,  //煤气表[自动]_460钢管厂_460机组环形炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4035_FT_ZG03CG02_C':0,  //煤气表[自动]_小棒厂_650机组1#加热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4035_FT_ZG03DG04_C':0,  //煤气表[自动]_小棒厂_650机组退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_MG_ZG650':0,  //煤气表[自动]_小棒厂_650机组2#加热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4035_FT_ZG03CG01_C':0,  //煤气表[自动]_小棒厂_650机组用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4062_FT_ZG02DG03_C':0,  //煤气表[自动]_轧钢热处理1#辊底炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4040_FT_ZG03DG59_C':0,  //煤气表[自动]_轧钢热处理1#退火炉用混气(650)_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4062_FT_ZG02DGO5_C':0,  //煤气表[自动]_轧钢热处理13#淬火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4062_FT_ZG02DG04_C':0,  //煤气表[自动]_轧钢热处理2#辊底炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4040_FT_ZG03DG60_C':0,  //煤气表[自动]_轧钢热处理2#退火炉用混气(650)_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4062_M5':0,  //煤气表[自动]_轧钢热处理用混气(650)(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4062_FT_ZG02GO02_C':0,  //煤气表[自动]_轧钢热处理罩式炉总用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4065_FT_ZG02AG12_C':0,  //煤气表[自动]_中棒厂_500高合金加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4065_FT_ZG02AG04_C':0,  //煤气表[自动]_中棒厂_500机组加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4065_FT_ZG02AG03_C':0,  //煤气表[自动]_中棒厂_500机组均热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_MG_ZG500':0,  //煤气表[自动]_中棒厂_500机组混气总量(瞬时流量)\r\n'NumTag/OPCUA132/4202FT_ZB01BG01_PV':0,  //煤气表[自动]_中棒厂_中棒线1#加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZB_IP4204_FT_ZB05AG01':0,  //煤气表[自动]_中棒厂_中棒线2#加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG02_C':0,  //煤气表[自动]_大棒厂_1#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG11_C':0,  //煤气表[自动]_大棒厂_10#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG12_C':0,  //煤气表[自动]_大棒厂_11#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG13_C':0,  //煤气表[自动]_大棒厂_12#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG15_C':0,  //煤气表[自动]_大棒厂_13#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG16_C':0,  //煤气表[自动]_大棒厂_14#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG03_C':0,  //煤气表[自动]_大棒厂_2#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG04_C':0,  //煤气表[自动]_大棒厂_3#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG05_C':0,  //煤气表[自动]_大棒厂_4#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG06_C':0,  //煤气表[自动]_大棒厂_5#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG07_C':0,  //煤气表[自动]_大棒厂_6#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG08_C':0,  //煤气表[自动]_大棒厂_7#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG09_C':0,  //煤气表[自动]_大棒厂_8#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG02_C':0,  //煤气表[自动]_大棒厂_850成品1#钢坯退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1145_FT_DB15AG01':0,  //煤气表[自动]_大棒厂_850成品1#加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1096_FT_ZG01FG01_C':0,  //煤气表[自动]_大棒厂_850成品1#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG01_C':0,  //煤气表[自动]_大棒厂_850成品1#至5#钢坯退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1096_AA':0,  //煤气表[自动]_大棒厂_850成品1#至8#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG03_C':0,  //煤气表[自动]_大棒厂_850成品2#钢坯退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1103_FT_ZG01DG01_C':0,  //煤气表[自动]_大棒厂_850成品2#加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1096_FT_ZG01FG02_C':0,  //煤气表[自动]_大棒厂_850成品2#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG04_C':0,  //煤气表[自动]_大棒厂_850成品3#钢坯退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1096_FT_ZG01FG03_C':0,  //煤气表[自动]_大棒厂_850成品3#新退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1097_FT_ZG01GG01_C':0,  //煤气表[自动]_大棒厂_850成品4#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1097_FT_ZG01GG02_C':0,  //煤气表[自动]_大棒厂_850成品5#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1097_FT_ZG01GG03_C':0,  //煤气表[自动]_大棒厂_850成品6#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1098_FT_ZG01HG01_C':0,  //煤气表[自动]_大棒厂_850成品7#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1098_FT_ZG01HG02_C':0,  //煤气表[自动]_大棒厂_850成品8#退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG05_C':0,  //煤气表[自动]_大棒厂_850成品4#钢坯退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG06_C':0,  //煤气表[自动]_大棒厂_850成品5#钢坯退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG01_C':0,  //煤气表[自动]_大棒厂_850机组均热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG10_C':0,  //煤气表[自动]_大棒厂_9#均热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_MG_ZG850':0,  //煤气表[自动]_大棒厂_850机组混气总量(瞬时流量)\r\n'NumTag/OPCUA132/BBX_IP6074_FT_BBJR002_C':0,  //煤气表[自动]_扁棒线混合煤气总管(瞬时流量)\r\n'NumTag/OPCUA132/WDJR01_FT':0,  //煤气表[自动]_锻造厂_2.5m环轧机组外锻1#再加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/WDTH02_FT':0,  //煤气表[自动]_锻造厂_2.5m环轧机组外锻2#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/WDJR02_FT':0,  //煤气表[自动]_锻造厂_2.5m环轧机组外锻2#再加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/WDTH03_FT':0,  //煤气表[自动]_锻造厂_2.5m环轧机组外锻3#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/WDJR03_FT':0,  //煤气表[自动]_锻造厂_2.5m环轧机组外锻3#再加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/NDGCFX01_FT':0,  //煤气表[自动]_锻造厂_52#电液锤1#室式加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/NDGCFX02_FT':0,  //煤气表[自动]_锻造厂_52#电液锤2#室式加热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/NDGCFD02_FT':0,  //煤气表[自动]_锻造厂_52#电液锤3#室式加热炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/NDGCFD03_FT':0,  //煤气表[自动]_锻造厂_52#电液锤3#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/NDGCFXMQ_FT':0,  //煤气表[自动]_锻造厂_52#电液锤内锻用混气(瞬时流量)\r\n'NumTag/OPCUA132/30MNSSMQ_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组/30MN快锻用混气(瞬时流量)\r\n'NumTag/OPCUA132/30MNSS01_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组5米碾环1#加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/30MNSS02_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组5米碾环2#加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/WDZGMQ_FT':0,  //煤气表[自动]_锻造厂_外锻总管混气(瞬时流量)\r\n'NumTag/OPCUA132/16MNHXMQ1_FT':0,  //煤气表[自动]_锻造厂_16MN机组16MN1#环形炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/16MNTC01_FT':0,  //煤气表[自动]_锻造厂_16MN机组16MN2#加热炉用混气(6#加热)_三级(瞬时流量)\r\n'NumTag/OPCUA132/16MNHXMQ_FT':0,  //煤气表[自动]_锻造厂_16MN机组16MN环形炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/20MNSS01_FT':0,  //煤气表[自动]_锻造厂_16MN机组20MN室式炉1#用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNSS02_FT':0,  //煤气表[自动]_锻造厂_16MN机组20MN室式炉2#用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNJR01_FT':0,  //煤气表[自动]_锻造厂_20MN机组20MN1#加热炉用混气（1#加热)_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNJR02_FT':0,  //煤气表[自动]_锻造厂_20MN机组20MN1#加热炉用混气（2#加热)_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNJR03_FT':0,  //煤气表[自动]_锻造厂_20MN机组20MN1#加热炉用混气（3#加热)_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNJR04_FT':0,  //煤气表[自动]_锻造厂_20MN机组20MN1#加热炉用混气（4#加热)_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNJR05_FT':0,  //煤气表[自动]_锻造厂_20MN机组20MN1#加热炉用混气（5#加热)_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNJRMQ_FT':0,  //煤气表[自动]_锻造厂_20MN机组20MN加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/20MNSSMQ_FT':0,  //煤气表[自动]_锻造厂_20MN机组20MN室式用混气(瞬时流量)\r\n'NumTag/OPCUA132/20MNTHMQ_FT':0,  //煤气表[自动]_锻造厂_20MN机组20MN退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/20MNTH01_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN1#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNTH10_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN10#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/45MNTH01_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN11#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/45MNTH02_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN12#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/45MNTH03_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN13#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/45MNTH04_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN14#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/45MNTH05_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN15#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/45MNTH06_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN16#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNTH02_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN2#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNTH03_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN3#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNTH04_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN4#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNTH05_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN5#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNTH06_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN6#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNTH07_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN7#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNTH08_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN8#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/20MNTH09_FT':0,  //煤气表[自动]_锻造厂_5m环轧机组20MN9#退火炉用混气_三级(瞬时流量)\r\n'NumTag/OPCUA132/45MNJR01_FT':0,  //煤气表[自动]_锻造厂_45MN机组45MN1#加热炉用混气(7加热炉)_三级(瞬时流量)\r\n'NumTag/OPCUA132/45MNJR02_FT':0,  //煤气表[自动]_锻造厂_45MN机组45MN2#加热炉用混气(8加热炉)_三级(瞬时流量)\r\n'NumTag/OPCUA132/45MNJR03_FT':0,  //煤气表[自动]_锻造厂_45MN机组45MN3#加热炉用混气(9加热炉)_三级(瞬时流量)\r\n'NumTag/OPCUA132/45MNJR04_FT':0,  //煤气表[自动]_锻造厂_45MN机组45MN4#加热炉用混气(10加热炉)_三级(瞬时流量)\r\n'NumTag/OPCUA132/45MNJRMQ_FT':0,  //煤气表[自动]_锻造厂_45MN机组45MN加热炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1207_FT_DZ01ZG01_C':0,  //煤气表[自动]_锻造厂_45MN机组45MN退火炉用混气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP3058_FT_DL22AG02_C':0,  //煤气表[自动]_热电厂_锅炉车间_160t锅炉1#用高气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP3058_FT_DL22GL10_C':0,  //煤气表[自动]_热电厂_锅炉车间_160t锅炉2#用新高气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP3058_FT_DL22AG01_C':0,  //煤气表[自动]_热电厂_锅炉车间_160t锅炉用焦气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5139_FT_LT07AO01_C':0,  //煤气表[自动]_热电厂_锅炉车间_110t锅炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5139_FT_LT07AO03_C':0,  //煤气表[自动]_热电厂_锅炉车间_110t锅炉用焦气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP2076_FT_PS02AG06_C':0,  //煤气表[自动]_转炉厂_转炉1#蓄热器用焦气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP2076_FT_PS02AG05_C':0,  //煤气表[自动]_转炉厂_转炉蓄热器用焦气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5137_FT_PS05AG01_C':0,  //煤气表[自动]_燃气发电_75t锅炉用高气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5137_FT_PS05AG02_C':0,  //煤气表[自动]_燃气发电_75t锅炉用焦气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP3044_FT_PS03AG05_C':0,  //煤气表[自动]_电炉厂_电炉快锅用焦气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5205_FT_DL80MW01_C':0,  //煤气表[自动]_热电厂_80MW机组_进80MW发电高炉煤气总管(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5205_FT_DL80MW02_C':0,  //煤气表[自动]_燃气发电_进80MW发电焦炉煤气总管流(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5108_FT_JH03DG01_C':0,  //煤气表[自动]_其它_新化能鑫龙公司食堂用焦气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP6059_FT_PS08AG03_C':0,  //煤气表[自动]_钢管厂_食堂用混气总管(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2049_FT_LG07AG07':0,  //煤气表[自动]_其他_濮阳源泰压球用混气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5032_FT_LT04BG02':0,  //煤气表[自动]_兴华生化厂用混气(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP5046_FT_PM02BG01_C':0,  //煤气表[自动]_加压站2#混合站直供动力事业部焦气(瞬时流量)\r\n'NumTag/OPCUA132/dzmq1_DZMQ':0,  //煤气表[自动]_锻造厂_用混气总管(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP5045_FT_PM02AG03_C':0,  //天然气表[自动]_燃气_1#混合站用天然气(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP5046_FT_PM02AG06_C':0,  //天然气表[自动]_燃气_2#混合站用天然气(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP6037_FT_FF89SS01_BC':0,  //天然气表[自动]_钢管天然气站_钢管区1#天然气总量(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP6037_FT_FF89SS02_BC':0,  //天然气表[自动]_钢管天然气站_钢管区2#天然气总量(瞬时流量)\r\n'NumTag/OPCUA132/IP5152_DM_FF90SS06_L1':0,  //天然气表[自动]_老东门天然气站_老东门1#天然气量(瞬时流量)\r\n'NumTag/OPCUA132/IP5152_DM_FF90SS02_L1':0,  //天然气表[自动]_老东门天然气站_老东门2#天然气量(瞬时流量)\r\n'NumTag/OPCUA132/IP5152_DM_FF90SS03_BC':0,  //天然气表[自动]_老东门天然气站_老东门3#(电炉)天然气量(瞬时流量)\r\n'NumTag/OPCUA132/IP5152_DM_FF90SS04_BC':0,  //天然气表[自动]_老东门天然气站_老东门4#(电炉)天然气量流量(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP1082_NM_FF82SS02_BC':0,  //天然气表[自动]_南门天然气站_南门1#天然气(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP1082_NM_FF82SS01_BC':0,  //天然气表[自动]_南门天然气站_南门2#天然气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4062_FT_ZG02DW09_C':0,  //天然气表[自动]_轧钢热处理_退火炉用天然气(瞬时流量)\r\n'NumTag/OPCUA132/30MNHC04_FT':0,  //天然气表[自动]_锻造厂_30MN 1#淬火炉用天然气_三级流量(瞬时流量)\r\n'NumTag/OPCUA132/30MNHC01_FT':0,  //天然气表[自动]_锻造厂_30MN 1#回火炉用天然气_三级流量(瞬时流量)\r\n'NumTag/OPCUA132/30MNHC05_FT':0,  //天然气表[自动]_锻造厂_30MN 2#淬火炉用天然气_三级流量(瞬时流量)\r\n'NumTag/OPCUA132/30MNHC02_FT':0,  //天然气表[自动]_锻造厂_30MN 2#回火炉用天然气_三级流量(瞬时流量)\r\n'NumTag/OPCUA132/30MNHC06_FT':0,  //天然气表[自动]_锻造厂_30MN 3#淬火炉用天然气_三级流量(瞬时流量)\r\n'NumTag/OPCUA132/30MNHC03_FT':0,  //天然气表[自动]_锻造厂_30MN 3#回火炉用天然气_三级流量(瞬时流量)\r\n'NumTag/OPCUA132/30MNHCMQ_FT':0,  //天然气表[自动]_锻造厂_5m环轧机组3千吨快锻用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_60MNAI002_C':0,  //天然气表[自动]_锻造厂_60MN用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6056_FT_GP02EG01_C':0,  //天然气表[自动]_钢管热处理_170机组1#退火炉用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6056_FT_GP02EG03_C':0,  //天然气表[自动]_钢管热处理_170机组2#退火炉用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6056_FT_GP02DG01_C':0,  //煤气表[自动]_钢管热处理_170机组淬火炉用焦气流量(瞬时流量)\r\n'NumTag/OPCUA132/6151FT_GP02FG01_C_PV':0,  //天然气表[自动]_钢管热处理_325线淬火炉用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/6151FT_GP02FG05_C_PV':0,  //天然气表[自动]_钢管热处理_325线辊底退火炉用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/6151FT_GP02FG03_C_PV':0,  //天然气表[自动]_钢管热处理_325回火炉用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6040_FT_GP04BG01_C':0,  //天然气表[自动]_钢管热处理_460机组淬火炉用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6068_FT_GG68AO02':0,  //天然气表[自动]_钢管热处理_460机组回火炉用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6078_FT_GG78AB04_C':0,  //天然气表[自动]_钢管热处理_508热处理炉用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP2077_FT_PS01AG02_C':0,  //天然气表[自动]_特冶厂_特冶快锅用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/BBX_IP6073_FT_BBX002_C':0,  //天然气表[自动]_扁棒线用天然气总管流量(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6040_FT_GP04CG01_C':0,  //天然气表[自动]_钢管热处理_460机组台车炉用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_60MNAI001_C':0,  //煤气表[自动]_锻造厂_锻造60MN用混气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP3044_FT_PS03AG02_C':0,  //天然气表[自动]_炼钢快锅1#用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP3044_FT_PS03AG04_C':0,  //天然气表[自动]_炼钢快锅2#用天然气流量(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1206_FT_DZ01SS07_C':0,  //煤气表[自动]_20MN6#室式加热炉焦气(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1206_FT_DZ01SS01_C':0,  //煤气表[自动]_20MN室式加热炉焦气流量(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1202_FT_DZ03TH01_C':0,  //煤气表[自动]_20MN退火炉焦气总管(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1150_FT_DZ01TZ01_C':0,  //煤气表[自动]_30MN调质线焦气流量(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1150_FT_DZ01JZ01_C':0,  //煤气表[自动]_30MN均质化炉焦气(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_60MNSS001_C':0,  //煤气表[自动]_60MN室式加热炉焦气(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_60MNTH001_C':0,  //煤气表[自动]_60MN退火炉焦气流量(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP5168_FT_JX01TL01_C':0,  //煤气表[自动]_解析气焦炉煤气总管出口流量(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP5168_FT_WG01TL01_C':0,  //煤气表[自动]_外管来系统入口主管道煤气流量(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP5168_FT_QG01FJ01_C':0,  //煤气表[自动]_再生气管道风机前煤气流量(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_TRQ1':0,  //煤气表[自动]_南门2#天然气总量(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_TRQ4':0,  //煤气表[自动]_老东门1#天然气总量(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_TRQ3':0,  //煤气表[自动]_老东门2#天然气总量(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_TRQ2':0,  //煤气表[自动]_钢管区天然气总量(瞬时流量)\r\n'NumTag/OPCUA132/FLOW_Meiqi_Total_MG_GP':0,  //煤气表[自动]_钢管区混气总量(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP1101_FT_ZG01JR01_C':0,  //煤气表[自动]_大棒厂_均热炉焦气总管(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5213_FT_JH14GX11_C':0,  //煤气表[自动]_动力厂_外送湖北红睿马新材料公司焦气总管(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3092_FT_LT02ZD01_C':0,  //煤气表[自动]_炼铁_转底炉焦炉煤气总管流里(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6078_FT_GG78AB04':0,  //天然气表[自动]_508热处理炉天然气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP3185_FT_DL01WS01_C':0,  //煤气表[自动]_电炉西混合煤气总管(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP2076_FT_ZL02KG02_C':0,  //煤气表[自动]_25t转炉快锅混气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP2076_FT_ZL02KG01_C':0,  //煤气表[自动]_二炼3#转炉快锅混气流量(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP2076_FT_ZL02KG01_C':0,  //煤气表[自动]_二炼3#转炉快锅混气流量(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP6037_FT_FF89SS01_BC':0,  //天然气表[自动]_钢管天然气站_钢管区1#天然气总量(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP6037_FT_FF89SS02_BC':0,  //天然气表[自动]_钢管天然气站_钢管区2#天然气总量(瞬时流量)\r\n'NumTag/OPCUA132/IP5152_DM_FF90SS06_L1':0,  //天然气表[自动]_老东门天然气站_老东门1#天然气量(瞬时流量)\r\n'NumTag/OPCUA132/IP5152_DM_FF90SS02_L1':0,  //天然气表[自动]_老东门天然气站_老东门2#天然气量(瞬时流量)\r\n'NumTag/OPCUA132/IP5152_DM_FF90SS03_BC':0,  //天然气表[自动]_老东门天然气站_老东门3#(电炉)天然气量(瞬时流量)\r\n'NumTag/OPCUA132/IP5152_DM_FF90SS04_BC':0,  //天然气表[自动]_老东门天然气站_老东门4#(电炉)天然气量流量(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP1082_NM_FF82SS02_BC':0,  //天然气表[自动]_南门天然气站_南门1#天然气(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP1082_NM_FF82SS01_BC':0,  //天然气表[自动]_南门天然气站_南门2#天然气(瞬时流量)\r\n'NumTag/OPCUA132/PW_IP2047_FT_PW04AW01':0,  //水表[自动]_水源二泵站1#泵(瞬时流量)\r\n'NumTag/OPCUA132/PW_IP2047_FT_PW04AW02':0,  //水表[自动]_水源二泵站2#泵(瞬时流量)\r\n'NumTag/OPCUA132/PW_IP2047_FT_PW04AW03':0,  //水表[自动]_水源二泵站3#泵(瞬时流量)\r\n'NumTag/OPCUA132/PW_IP2047_FT_PW04AW04':0,  //水表[自动]_水源二泵站4#泵(瞬时流量)\r\n'NumTag/OPCUA132/PW_IP2047_FT_PW04AW05':0,  //水表[自动]_水源一泵站1#泵(瞬时流量)\r\n'NumTag/OPCUA132/PW_IP2047_FT_PW04AW06':0,  //水表[自动]_水源一泵站2#泵(瞬时流量)\r\n'NumTag/OPCUA132/E10_N0001_P':0,  //1780TRT发电有功功率\r\n'NumTag/OPCUA132/E07_N6383_P':0,  //1280TRT发电有功功率\r\n'NumTag/OPCUA132/E08_N6122_P':0,  //电表[自动]_热电厂_15MW燃气发电有功功率\r\n'NumTag/OPCUA132/EnergyMeter_E000_E80_N0001_P':0,  //电表[自动]_热电厂_25MW燃气发电有功功率\r\n'NumTag/OPCUA132/LT_IP5205_E9V_N80MW_P':0,  //电表[自动]_热电厂_80MW燃气发电有功功率\r\n'NumTag/OPCUA132/XJHGXJFD_YGGL':0,  //电表[自动]_干熄焦发电25MW有功功率\r\n'NumTag/OPCUA132/265SJFDZ_YGGL':0,  //电表[自动]_烧结余热15MW有功功率\r\n\r\n'NumTag/OPCUA132/E02_N1001P_P':0,  //1#进线（主）_有功功率K1001P\r\n'NumTag/OPCUA132/E02_N1002P_P':0,  //2#进线（主）_有功功率K1002P\r\n'NumTag/OPCUA132/E03_N2005_P':0,  //1#变压器（6kV）_有功功率K2005\r\n'NumTag/OPCUA132/E03_N2006_P':0,  //2#变压器（6kV）_有功功率K2006\r\n'NumTag/OPCUA132/E03_N2007_P':0,  //3#变压器（6kV）_有功功率K2007\r\n'NumTag/OPCUA132/E04_N3005_P':0,  //1#变压器（35kV1）_有功功率K3005\r\n'NumTag/OPCUA132/E04_N3009_P':0,  //2#变压器（6kV）_有功功率K3009Z\r\n'NumTag/OPCUA132/E04_N3004_P':0,  //3#变压器（35kV2）_有功功率K3004\r\n'NumTag/OPCUA132/E04_N3C61_P':0,  //6KV III受电_有功功率K3C61\r\n'NumTag/OPCUA132/E04_N3010_P':0,  //4#变压器（110kV）_有功功率K3010Z\r\n'NumTag/OPCUA132/E04_N3008_P':0,  //5#变压器（6kV）_有功功率K3008\r\n'NumTag/OPCUA132/E05_N4007_P':0,  //1#变压器高压侧_有功功率K4007\r\n'NumTag/OPCUA132/E05_N4004_P':0,  //2#变压器高压侧_有功功率K4004\r\n'NumTag/OPCUA132/E06_N5003P_P':0,  //1#变压器10kV（主）_有功功率K5003P\r\n'NumTag/OPCUA132/E06_N5004P_P':0,  //2#变压器10kV（主）_有功功率K5004P\r\n'NumTag/OPCUA132/E06_N5005P_P':0,  //3#变压器35kV（主）_有功功率K5005P\r\n'NumTag/OPCUA132/E06_N5006P_P':0,  //4#变压器35kV（主）_有功功率K5006P\r\n'NumTag/OPCUA132/E06_N2008_P':0,  //二总降4#主变K2008_有功功率\r\n'NumTag/OPCUA132/E07_N6007P_P':0,  //1#变压器高压侧10kV（主）_有功功率K6007PZ\r\n'NumTag/OPCUA132/E07_N6008P_P':0,  //2#变压器高压侧10kV（主）_有功功率K6008PZ\r\n'NumTag/OPCUA132/E07_N6005_P':0,  //3#变压器高压侧6kV_有功功率K6005PZ\r\n'NumTag/OPCUA132/E07_N6006_P':0,  //4#变压器高压侧6kV_有功功率K6006PZ\r\n'NumTag/OPCUA132/E07_N6009_P':0,  //六总降5#主变K6009Z_有功功率\r\n\r\n};\r\ndm.ListCal={\r\n     'Local:NumTag/MQDD/LCT/JH_1COG_HS_FRS':{\t//转炉煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LT_IP3060_FT_1280GL07_C','NumTag/OPCUA132/LT_IP3060_FT_1280GL08_C','NumTag/OPCUA132/LT_IP3060_FT_1280GL09_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/160tGL_2BFG_FRS':{\t//160t锅炉用高炉煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1})).toFixed(1)\",\r\n        datas:['NumTag/OPCUA132/PS_IP3058_FT_DL22AG02_C','NumTag/OPCUA132/PS_IP3058_FT_DL22GL10_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/SJ_220_2BFG_FRS':{\t//220烧结用高炉煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LT_IP5175_FT_220SF05_C','NumTag/OPCUA132/LT_IP5176_FT_220TLGQ01_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/SJ_2BFG_FRS':{\t//烧结用高炉煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LT_IP5175_FT_220SF05_C','NumTag/OPCUA132/LT_IP5176_FT_220TLGQ01_C','NumTag/OPCUA132/LT_IP5179_FT_265SJTX005_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/GL_PM_2BFG_FRS':{\t//喷煤用高炉煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1})/10000).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LT_IP5151_FT_LT62GS02','NumTag/OPCUA132/LT_IP5082_FT_LT01BG01']\r\n    },\r\n    'Local:NumTag/MQDD/LEFT1/GL_1BFG_FRS':{\t//高炉煤气发生总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1})/10000).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LT_IP3064_FT_1280TRT01_C','NumTag/OPCUA132/LT_IP5057_FT_LT01DG03']\r\n        },\r\n    'Local:NumTag/MQDD/LEFT1/2BFG_FRS':{\t//高炉煤气消耗总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6}+{7}+{8}+{9}+{10}+{11}+{12}+{13})/10000).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/JH_IP5202_FT_JH10AG01_C','Local:NumTag/MQDD/LCT/SJ_2BFG_FRS','NumTag/OPCUA132/LT_IP5084_FT_LT06AG01','Local:NumTag/MQDD/LCT/GL_PM_2BFG_FRS','NumTag/OPCUA132/PS_IP5137_FT_PS05AG01_C','NumTag/OPCUA132/PS_IP5139_FT_LT07AO01_C','Local:NumTag/MQDD/LCT/160tGL_2BFG_FRS','NumTag/OPCUA132/LT_IP5205_FT_DL80MW01_C','NumTag/OPCUA132/LT_IP3060_FT_1280GL07_C','NumTag/OPCUA132/LT_IP3060_FT_1280GL08_C','NumTag/OPCUA132/LT_IP3060_FT_1280GL09_C','NumTag/OPCUA132/LT_IP5080_FT_LT01CG01','NumTag/OPCUA132/LT_IP5080_FT_LT01CG02','NumTag/OPCUA132/LT_IP5080_FT_LT01CG03']\r\n       },\r\n    'Local:NumTag/MQDD/LEFT1/BFG_UtilizationRate':{\t//高炉煤气利用率\r\n        value:0,\r\n        formate:\"(parseFloat({0}/{1})*100).toFixed(1)\",\r\n        datas:['Local:NumTag/MQDD/LEFT1/2BFG_FRS','Local:NumTag/MQDD/LEFT1/GL_1BFG_FRS']\r\n       },\r\n    'Local:NumTag/MQDD/LCT/DZ_2MG_FRS':{\t//锻造用混合煤气流量(16MN环形炉+20MN加热炉+45MN加热炉+20MN退火炉+45MN退火炉+外锻0#退火炉+60MN)\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/16MNHXMQ_FT','NumTag/OPCUA132/20MNJRMQ_FT','NumTag/OPCUA132/45MNJRMQ_FT','NumTag/OPCUA132/20MNTHMQ_FT','NumTag/OPCUA132/DZ_IP1207_FT_DZ01ZG01_C','NumTag/OPCUA132/WDZGMQ_FT','NumTag/OPCUA132/DZ_IP1147_FT_60MNAI001_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/GG_2MG_FRS':{\t//钢管用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/GG_IP6063_FT_GP02AG01_C','NumTag/OPCUA132/GG_IP6034_FT_GP03AG01_C','NumTag/OPCUA132/GG_IP6038_FT_GP04AG01_C','NumTag/OPCUA132/GG_IP1062_FT_GP01AG04_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/DB_2MG_FRS':{\t//大棒850用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6}+{7}+{8}+{9}+{10}+{11}+{12})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG02_C','NumTag/OPCUA132/ZG_IP1145_FT_DB15AG01','NumTag/OPCUA132/ZG_IP1096_FT_ZG01FG01_C','NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG01_C','NumTag/OPCUA132/ZG_IP1096_AA','NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG03_C','NumTag/OPCUA132/ZG_IP1103_FT_ZG01DG01_C','NumTag/OPCUA132/ZG_IP1096_FT_ZG01FG02_C','NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG04_C','NumTag/OPCUA132/ZG_IP1096_FT_ZG01FG03_C','NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG05_C','NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG06_C','NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG01_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/LG_2MG_FRS':{\t//炼钢用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LG_IP2065_FT_LG20BG06','NumTag/OPCUA132/LG_IP2072_FT_LG22AG02','NumTag/OPCUA132/LG_IP2064_FT_LG20AG01','NumTag/OPCUA132/LG_IP1146_FT_SZ11AI01_C','NumTag/OPCUA132/PS_IP2076_FT_PS02AS12_C','NumTag/OPCUA132/LG_IP2031_FT_LG000G03']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/ZG_DB850_2MG_FRS':{\t//大棒用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/ZG_IP1095_FT_ZG01EG01_C','NumTag/OPCUA132/ZG_IP1096_AA','NumTag/OPCUA132/ZG_IP1103_FT_ZG01DG01_C','NumTag/OPCUA132/ZG_IP1145_FT_DB15AG01','NumTag/OPCUA132/ZG_IP1101_FT_ZG01IG01_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/ZG_ZB_2MG_FRS':{\t//中棒线用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/ZG_IP4065_FT_ZG02AG12_C','NumTag/OPCUA132/4202FT_ZB01BG01_PV','NumTag/OPCUA132/ZB_IP4204_FT_ZB05AG01']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/ZG_2MG_FRS':{\t//轧钢用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4})).toFixed(2)\",\r\n        datas:['Local:NumTag/MQDD/LCT/ZG_DB850_2MG_FRS','Local:NumTag/MQDD/LCT/ZG_ZB_2MG_FRS','NumTag/OPCUA132/ZG_IP4035_FT_ZG03CG01_C','NumTag/OPCUA132/ZG_IP4062_M5','NumTag/OPCUA132/BBX_IP6074_FT_BBJR002_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/1780GL_2MG_FRS':{\t//1780高炉用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['Local:NumTag/MQDD/LCT/LT_IP2106_FT_LTQBJ04_C','NumTag/OPCUA132/LG_IP2038_FT_LG01AG01','NumTag/OPCUA132/LG_IP2038_FT_LG01AG02']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/LT_2MG_FRS':{\t//炼铁事业部用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LT_IP5032_FT_LT04BG01','NumTag/OPCUA132/LT_IP2106_FT_LTQBJ04_C','NumTag/OPCUA132/LG_IP2038_FT_LG01AG01','NumTag/OPCUA132/LG_IP2038_FT_LG01AG02']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/TY_2MG_FRS':{\t//特冶厂用混合煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6}+{7}+{8})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG01_C','NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG02_C','NumTag/OPCUA132/LG_IP2062_FT_LG25AG03_C','NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG04_C','NumTag/OPCUA132/DZ_IP1147_FT_ZM21AG05_C','NumTag/OPCUA132/LG_IP2064_FT_LG20AG01','NumTag/OPCUA132/LG_IP2064_FT_LG20AG03','NumTag/OPCUA132/LG_IP2065_FT_LG20BG06','NumTag/OPCUA132/LG_IP1146_FT_SZ11AI01_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/HHZ01_1MG_FRS':{\t//1#掺混外供混气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/PM_IP5045_FT_PM02AG01_C','NumTag/OPCUA132/PM_IP5045_FT_PM02AG02_C','NumTag/OPCUA132/PM_IP5045_FT_PM02AG03_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/HHZ02_1MG_FRS':{\t//2#掺混外供混气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(21)\",\r\n        datas:['NumTag/OPCUA132/PM_IP5046_FT_PM02AG04_C','NumTag/OPCUA132/PM_IP5046_FT_PM02AG05_C','NumTag/OPCUA132/PM_IP5046_FT_PM02AG06_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/HHZ03_1MG_FRS':{\t//3#掺混外供混气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1})).toFixed(1)\",\r\n        datas:['NumTag/OPCUA132/PM_IP2052_FT_PM01AG03','NumTag/OPCUA132/PM_IP2052_FT_PM01AG01']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/HHZ_1MG_FRS':{\t//1#2#3#掺混外供混气总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(1)\",\r\n        datas:['Local:NumTag/MQDD/LCT/HHZ01_1MG_FRS','Local:NumTag/MQDD/LCT/HHZ02_1MG_FRS','Local:NumTag/MQDD/LCT/HHZ03_1MG_FRS']\r\n      },\r\n    'Local:NumTag/MQDD/LCT/DYTG_2MG_FRS':{\t//混合煤气消耗端总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4})).toFixed(1)\",\r\n        datas:['Local:NumTag/MQDD/LCT/LT_2MG_FRS','Local:NumTag/MQDD/LCT/LG_2MG_FRS','Local:NumTag/MQDD/LCT/ZG_2MG_FRS','Local:NumTag/MQDD/LCT/GG_2MG_FRS','Local:NumTag/MQDD/LCT/DZ_2MG_FRS']\r\n      },\r\n    'Local:NumTag/MQDD/LEFT1/MG_UtilizationRate':{\t//混合煤气利用率\r\n        value:0,\r\n        formate:\"(parseFloat({0}/{1})*100).toFixed(1)\",\r\n        datas:['Local:NumTag/MQDD/LCT/DYTG_2MG_FRS','Local:NumTag/MQDD/LCT/HHZ_1MG_FRS']\r\n       },\r\n    'Local:NumTag/MQDD/LCT/LT_2COG_FRS':{\t//炼铁事业部用焦炉煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6}+{7})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LT_IP5151_FT_LT62GS01','NumTag/OPCUA132/LT_IP3060_FT_1280GL02_C','NumTag/OPCUA132/LT_IP3093_FT_1280FS02_C','NumTag/OPCUA132/LT_IP5082_FT_LT01BG02','NumTag/OPCUA132/LT_IP5056_FT_LT01DG02','NumTag/OPCUA132/LT_IP5084_FT_LT06AG02','NumTag/OPCUA132/LT_IP5057_FT_LT01DG04','NumTag/OPCUA132/LT_IP5176_FT_220TLJQ01_C']\r\n    },\r\n    'Local:NumTag/MQDD/LCT/LG_2COG_FRS':{\t//炼钢事业部用焦炉煤气流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/LG_IP2031_FT_LG000G01','NumTag/OPCUA132/LG_IP3045_FT_LG11AG02']\r\n    },\r\n    'Local:NumTag/MQDD/LEFT1/1COG_FRS':{\t//焦炉煤气产生总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0})/10000).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/JH_IP5202_FT_JH10AG02_C']\r\n       },\r\n    'Local:NumTag/MQDD/LEFT1/2COG_FRS':{\t//焦炉煤气消耗总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6}+{7})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/PM_IP5046_FT_PM02AG04_C','NumTag/OPCUA132/PM_IP5045_FT_PM02AG01_C','NumTag/OPCUA132/LT_IP5205_FT_DL80MW02_C','NumTag/OPCUA132/PS_IP3058_FT_DL22AG01_C','NumTag/OPCUA132/PS_IP5139_FT_LT07AO03_C','NumTag/OPCUA132/PS_IP5137_FT_PS05AG02_C','Local:NumTag/MQDD/LCT/LT_2COG_FRS','Local:NumTag/MQDD/LCT/LG_2COG_FRS']\r\n       },\r\n    'Local:NumTag/MQDD/LEFT1/COG1_UtilizationRate':{\t//焦炉煤气利用率\r\n        value:0,\r\n        formate:\"(parseFloat({0}/{1})*100).toFixed(1)\",\r\n        datas:['Local:NumTag/MQDD/LEFT1/2COG_FRS','NumTag/OPCUA132/JH_IP5202_FT_JH10AG02_C']\r\n       },\r\n    'Local:NumTag/NGCLT/NGZ_1NG_FRS':{\t//天然气站外供总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6}+{7})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/PM_IP1082_NM_FF82SS02_BC','NumTag/OPCUA132/PM_IP1082_NM_FF82SS01_BC','NumTag/OPCUA132/IP5152_DM_FF90SS06_L1','NumTag/OPCUA132/IP5152_DM_FF90SS02_L1','NumTag/OPCUA132/IP5152_DM_FF90SS03_BC','NumTag/OPCUA132/IP5152_DM_FF90SS04_BC','NumTag/OPCUA132/PM_IP6037_FT_FF89SS01_BC','NumTag/OPCUA132/PM_IP6037_FT_FF89SS02_BC']\r\n    },\r\n    'Local:NumTag/SXTGXZT/2BZ_1SYS_FRS':{\t//2#泵站水源水提取总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/PW_IP2047_FT_PW04AW05','NumTag/OPCUA132/PW_IP2047_FT_PW04AW06','NumTag/OPCUA132/PW_IP2047_FT_PW04AW01','NumTag/OPCUA132/PW_IP2047_FT_PW04AW02','NumTag/OPCUA132/PW_IP2047_FT_PW04AW03','NumTag/OPCUA132/PW_IP2047_FT_PW04AW04']\r\n    },\r\n    'Local:NumTag/ZHKB/FD_P':{\t//自发电总有功(1780TRT+1280TRT+15MW+25MW+80MW+干熄焦发电+烧结余热15MW)\r\n        value:0,\r\n        formate:\"(parseFloat({0}*30+{1}+{2}+{3}/1000+{4}*150+{5}*40+{6}*150)).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/E10_N0001_P','NumTag/OPCUA132/E07_N6383_P','NumTag/OPCUA132/E08_N6122_P','NumTag/OPCUA132/EnergyMeter_E000_E80_N0001_P','NumTag/OPCUA132/LT_IP5205_E9V_N80MW_P','NumTag/OPCUA132/XJHGXJFD_YGGL','NumTag/OPCUA132/265SJFDZ_YGGL']\r\n    },\r\n    'Local:NumTag/ZHKB/WGD_P':{\t//外购电总有功功率\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6}+{7}+{8}+{9}+{10}+{11}+{12}+{13}+{14}+{15}+{16}+{17}+{18}+{19}+{20}+{21}+{22})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/E02_N1001P_P','NumTag/OPCUA132/E02_N1002P_P','NumTag/OPCUA132/E03_N2005_P','NumTag/OPCUA132/E03_N2006_P','NumTag/OPCUA132/E03_N2007_P','NumTag/OPCUA132/E04_N3005_P','NumTag/OPCUA132/E04_N3009_P','NumTag/OPCUA132/E04_N3004_P','NumTag/OPCUA132/E04_N3C61_P','NumTag/OPCUA132/E04_N3010_P','NumTag/OPCUA132/E04_N3008_P','NumTag/OPCUA132/E05_N4007_P','NumTag/OPCUA132/E05_N4004_P','NumTag/OPCUA132/E06_N5003P_P','NumTag/OPCUA132/E06_N5004P_P','NumTag/OPCUA132/E06_N5005P_P','NumTag/OPCUA132/E06_N5006P_P','NumTag/OPCUA132/E06_N2008_P','NumTag/OPCUA132/E07_N6007P_P','NumTag/OPCUA132/E07_N6008P_P','NumTag/OPCUA132/E07_N6005_P','NumTag/OPCUA132/E07_N6006_P','NumTag/OPCUA132/E07_N6009_P','NumTag/OPCUA132/LT_IP5205_E9V_N80MW_P']\r\n       },\r\n    'Local:NumTag/ZHKB/WGD_P1':{\t//外购电总功率-80MW\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4}+{5}+{6}+{7}+{8}+{9}+{10}+{11}+{12}+{13}+{14}+{15}+{16}+{17}+{18}+{19}+{20}+{21}+{22}-{23}*150)/10).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/E02_N1001P_P','NumTag/OPCUA132/E02_N1002P_P','NumTag/OPCUA132/E03_N2005_P','NumTag/OPCUA132/E03_N2006_P','NumTag/OPCUA132/E03_N2007_P','NumTag/OPCUA132/E04_N3005_P','NumTag/OPCUA132/E04_N3009_P','NumTag/OPCUA132/E04_N3004_P','NumTag/OPCUA132/E04_N3C61_P','NumTag/OPCUA132/E04_N3010_P','NumTag/OPCUA132/E04_N3008_P','NumTag/OPCUA132/E05_N4007_P','NumTag/OPCUA132/E05_N4004_P','NumTag/OPCUA132/E06_N5003P_P','NumTag/OPCUA132/E06_N5004P_P','NumTag/OPCUA132/E06_N5005P_P','NumTag/OPCUA132/E06_N5006P_P','NumTag/OPCUA132/E06_N2008_P','NumTag/OPCUA132/E07_N6007P_P','NumTag/OPCUA132/E07_N6008P_P','NumTag/OPCUA132/E07_N6005_P','NumTag/OPCUA132/E07_N6006_P','NumTag/OPCUA132/E07_N6009_P','NumTag/OPCUA132/LT_IP5205_E9V_N80MW_P']\r\n       },\r\n    'Local:NumTag/ZHKB/WGD_COS':{\t//外购电功率因数\r\n        value:0,\r\n        formate:\"(parseFloat({0}/{1})).toFixed(2)\",\r\n        datas:['NumTag/ZHKB/WGD_P1','NumTag/ZHKB/WGD_P1']\r\n    },\r\n    'Local:NumTag/ZHKB/P':{\t//全厂用电总有功功率；\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1})).toFixed(2)\",\r\n        datas:['NumTag/ZHKB/FD_P','NumTag/ZHKB/WGD_P1']\r\n    },\r\n    'Local:NumTag/ZHKB/ZFDL':{\t//自发电率\r\n        value:0,\r\n        formate:\"(parseFloat({0}/{1})*100).toFixed(2)\",\r\n        datas:['NumTag/ZHKB/FD_P','NumTag/ZHKB/P']\r\n    },\r\n};\r\n//\"(parseFloat({1})==0? 0: parseFloat({0}/{1})*100).toFixed(1)\"}"
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 47526,
+      "p": {
+        "displayName": "img_bg",
+        "image": "assets/冶钢集控项目icon/煤气调度/img_bg.jpg",
+        "position": {
+          "x": 960,
+          "y": 507
+        },
+        "width": 1920,
+        "height": 1014
+      },
+      "s": {
+        "2d.movable": false,
+        "text.font": "14px arial, sans-serif",
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47527,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 41.21052
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(72,153,219)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47528,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 64.50331
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47529,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 87.79611
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47530,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 111.0889
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47531,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 134.38169
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47532,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 157.67448
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47533,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 180.96728
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47534,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 204.26007
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47535,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 227.55286
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47536,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 250.84565
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47537,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 297.70576
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47538,
+      "p": {
+        "position": {
+          "x": 196.08185,
+          "y": 274.13946
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47539,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 320.72404
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47540,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 344.01683
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47541,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 367.30962
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47542,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 390.60241
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47556,
+      "p": {
+        "position": {
+          "x": 26.7161,
+          "y": 41.21102
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "站名",
+        "text.font": "bold 13px sans-serif, Arial",
+        "text.color": "rgb(255,255,255)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47557,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 64.50331
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "烧结脱硫脱硝",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47558,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 87.7961
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E82 160锅炉",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47559,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 111.0889
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "压缩空气母管，265烧结煤气",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47560,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 64.50331
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.176",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47561,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 87.7961
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.177",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47562,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 134.38169
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "220余热锅炉",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47563,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 111.0889
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.179",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47564,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 134.38169
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.182",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47565,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 157.67448
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "20w气柜",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47566,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 180.96727
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "焦化干熄焦",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47567,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 204.26007
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E9T 干熄焦发电",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47568,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 157.67448
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.201",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47569,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 180.96727
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.202",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47570,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 227.55286
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E9U 新焦化化产高压室",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47571,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 204.26007
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.203",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47572,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 227.55286
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.204",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47573,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 250.84565
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E9V 80mw发电",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47574,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 250.84565
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.205",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47575,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 274.13845
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "炼焦采集站1",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47576,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 274.13845
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.206",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47577,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 297.43124
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "炼焦采集站2",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47578,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 297.43124
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.207",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47579,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 320.72403
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E9W 新干熄焦发电",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47580,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 320.72403
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.208",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47581,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 344.01682
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "干熄焦左",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47582,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 344.01682
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.213",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47583,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 367.30962
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "新焦化食堂",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47584,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 367.30962
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.215",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47585,
+      "p": {
+        "position": {
+          "x": 26.7151,
+          "y": 390.60241
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "放散塔",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47586,
+      "p": {
+        "position": {
+          "x": 215.46473,
+          "y": 390.60241
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.216",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47611,
+      "p": {
+        "position": {
+          "x": 231.46607,
+          "y": 41.21102
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "IP地址",
+        "text.font": "bold 13px sans-serif, Arial",
+        "text.color": "rgb(255,255,255)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47612,
+      "p": {
+        "position": {
+          "x": 315.88905,
+          "y": 41.21102
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "状态",
+        "text.font": "bold 13px sans-serif, Arial",
+        "text.color": "rgb(255,255,255)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47636,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 87.56611
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47637,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 110.78749
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47638,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 134.00888
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47639,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 157.23026
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47640,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 180.45164
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47641,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 203.67303
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47642,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 226.89441
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47644,
+      "p": {
+        "position": {
+          "x": 576.49019,
+          "y": 261.69078
+        },
+        "width": 350.21002,
+        "height": 46.44277,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47645,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 296.55856
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47646,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 319.77994
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47647,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 343.00132
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47648,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 366.22271
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47649,
+      "p": {
+        "position": {
+          "x": 407.12344,
+          "y": 204.03007
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "170旋流井（老井）",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47650,
+      "p": {
+        "position": {
+          "x": 595.87307,
+          "y": 204.03007
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.202",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47651,
+      "p": {
+        "position": {
+          "x": 407.12344,
+          "y": 227.32286
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "460钢管水处理",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47652,
+      "p": {
+        "position": {
+          "x": 595.87307,
+          "y": 227.32286
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.203",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47653,
+      "p": {
+        "position": {
+          "x": 407.12344,
+          "y": 286.91437
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "460环形炉采集站，IP已改，\n已插卡一个",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47654,
+      "p": {
+        "position": {
+          "x": 595.87307,
+          "y": 286.91437
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.204",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47655,
+      "p": {
+        "position": {
+          "x": 407.12344,
+          "y": 322.04156
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "273旋流井",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47656,
+      "p": {
+        "position": {
+          "x": 595.87307,
+          "y": 322.04156
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.205",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47665,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 389.44409
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47666,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 437.38919
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47667,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 460.61058
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47668,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 483.83196
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47669,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 507.05334
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47670,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 530.27473
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47671,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 553.49611
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47672,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 576.71749
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47673,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 599.93888
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47674,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 646.38164
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47675,
+      "p": {
+        "position": {
+          "x": 576.49019,
+          "y": 623.16026
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47676,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 669.60302
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47677,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 692.82441
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47678,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 716.04579
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47679,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 739.26717
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47712,
+      "p": {
+        "position": {
+          "x": 407.12444,
+          "y": 87.7971
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "扁棒加热炉",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47713,
+      "p": {
+        "position": {
+          "x": 595.87507,
+          "y": 88.52056
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.74",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47714,
+      "p": {
+        "position": {
+          "x": 407.12444,
+          "y": 110.0909
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "460（508）正火炉采集站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47715,
+      "p": {
+        "position": {
+          "x": 595.87507,
+          "y": 110.81436
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.78",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47716,
+      "p": {
+        "position": {
+          "x": 407.12444,
+          "y": 132.3837
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "325淬火炉采集站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47717,
+      "p": {
+        "position": {
+          "x": 595.87507,
+          "y": 133.10716
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.151",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47718,
+      "p": {
+        "position": {
+          "x": 407.12444,
+          "y": 155.95
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "219芯棒采集站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47719,
+      "p": {
+        "position": {
+          "x": 595.87507,
+          "y": 156.67346
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.161",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47720,
+      "p": {
+        "position": {
+          "x": 407.12444,
+          "y": 180.24381
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "170浊环净环",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47721,
+      "p": {
+        "position": {
+          "x": 595.87507,
+          "y": 180.96727
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.200",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47722,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 762.48856
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47723,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 785.70994
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47724,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 808.93132
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47725,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 832.15271
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47726,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 855.37409
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47727,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 878.59547
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47728,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 901.81686
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47729,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 948.25962
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47730,
+      "p": {
+        "position": {
+          "x": 576.49019,
+          "y": 925.03824
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 47731,
+      "p": {
+        "position": {
+          "x": 576.4896,
+          "y": 971.481
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48131,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 64.50581
+        },
+        "width": 15.9432,
+        "height": 15.9432
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48132,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 87.75314
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48133,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 111.00046
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48134,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 134.24779
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48135,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 157.49512
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48136,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 180.74245
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48137,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 203.98977
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48138,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 227.2371
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48139,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 250.48443
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48140,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 273.73176
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48141,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 296.97908
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48142,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 320.22641
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48143,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 343.47374
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48144,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 366.72106
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48145,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 336.67247,
+          "y": 389.96839
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48189,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62485,
+          "y": 157.23026
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48190,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62485,
+          "y": 180.45164
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48191,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62485,
+          "y": 203.67303
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48192,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62485,
+          "y": 226.89441
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48193,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62485,
+          "y": 286.4145
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48194,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62485,
+          "y": 321.28228
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48201,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62485,
+          "y": 87.56611
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48202,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62485,
+          "y": 110.78749
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 48203,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62485,
+          "y": 134.00888
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50424,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 414.06069
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50425,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 437.28208
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50426,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 460.50346
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50427,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 483.72484
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50428,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 506.94623
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50429,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 530.16761
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50430,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 553.38899
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50431,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 576.61038
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50432,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 634.62813
+        },
+        "width": 350.21002,
+        "height": 46.44277,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50433,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 599.83176
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50434,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 669.4959
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50435,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 692.71729
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50436,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 715.93867
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50437,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 739.16005
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50438,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 414.10123
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "80MW非电",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50439,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 437.39402
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E59 漩流井电气室",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50440,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 414.10123
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.5.217",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50441,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 460.68681
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "二期三步进炉采集站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50442,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 437.39402
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.31",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50443,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 460.68681
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.33",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50444,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 483.9796
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "二期三环形炉",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50445,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 507.2724
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E25 460水处理配电室",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50446,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 530.56519
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "钢管区天然气调压站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50447,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 483.9796
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.34",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50448,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 507.2724
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.35",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50449,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 553.85798
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "460环形炉操作室",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50450,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 530.56519
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.37",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50451,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 553.85798
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.38",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50452,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 577.15078
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "460淬火炉采集站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50453,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 577.15078
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.40",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50454,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 600.44357
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E58 460旋流井电气室",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50455,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 600.44357
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.43",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50456,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 634.62763
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "170水处理电气室采集站，右边\n一个站不知道IP,已插卡",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50457,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 634.80716
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.44",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50458,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 669.37335
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E26 1#水处理",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50459,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 669.37335
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.45",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50460,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 692.66614
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E05 四总降",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50461,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 692.66614
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.47",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50462,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 715.95894
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E8A 物管170库房",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50463,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 715.95894
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.52",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50464,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 739.25173
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E62 精整线配电室",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50465,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 739.25173
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.54",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50466,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 762.38144
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50467,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 785.60282
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50468,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 808.8242
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50469,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 832.04559
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50470,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 855.26697
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50471,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 878.48835
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50472,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 901.70974
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50473,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 948.1525
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50474,
+      "p": {
+        "position": {
+          "x": 196.08126,
+          "y": 924.93112
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50475,
+      "p": {
+        "position": {
+          "x": 196.08067,
+          "y": 971.37388
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "shape.foreground.gradient.color": "rgba(255,255,255,0.2)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50477,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 762.54452
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E60 170新旋流井电气室",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50478,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 785.83731
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "170淬火炉采集站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50479,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 762.54452
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.55",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50480,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 785.83731
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.56",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50481,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 809.1301
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "钢管食堂",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50482,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 832.42289
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E24 2#空压站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50483,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 855.71569
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "sixnet",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50484,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 809.1301
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.59",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50485,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 832.42289
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.60",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50486,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 879.00848
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E57 170#配电室",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50487,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 855.71569
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.61",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50488,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 879.00848
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.62",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50489,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 902.30127
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "170能源采集站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50490,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 902.30127
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.63",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50491,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 925.59407
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "170步进炉采集站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50492,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 925.59407
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.65",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50493,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 948.00968
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E96 508正火线",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50494,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 948.00968
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.66",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50495,
+      "p": {
+        "position": {
+          "x": 26.71451,
+          "y": 971.30247
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "460回火炉采集站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50496,
+      "p": {
+        "position": {
+          "x": 215.46414,
+          "y": 971.30247
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.68",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 50499,
+      "p": {
+        "position": {
+          "x": 207.51464,
+          "y": 507
+        },
+        "width": 0.1,
+        "height": 952.04056,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 207.51464,
+              "y": 30.97971
+            },
+            {
+              "x": 207.51464,
+              "y": 983.02028
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(0,0,0)",
+        "shape.border.width": 0.3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 50500,
+      "p": {
+        "position": {
+          "x": 303.02413,
+          "y": 507
+        },
+        "width": 0.1,
+        "height": 952.04056,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 303.02413,
+              "y": 30.97971
+            },
+            {
+              "x": 303.02413,
+              "y": 983.02028
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(0,0,0)",
+        "shape.border.width": 0.3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50501,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 739.16005
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50502,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 762.38144
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50503,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 785.60282
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50504,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 808.8242
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50505,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 832.04559
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50506,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 855.26697
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50507,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 878.48835
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50508,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 901.70974
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50509,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 924.93112
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50510,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 948.1525
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50511,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 971.37388
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50513,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 437.28208
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50514,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 460.50346
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50515,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 483.72484
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50516,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 506.94623
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50517,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 530.16761
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50518,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 553.38899
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50519,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 576.61038
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50520,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 599.83176
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50521,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 634.62813
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50522,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 669.4959
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50523,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 692.71729
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50524,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 715.93867
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50525,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 337.21592,
+          "y": 414.06069
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50730,
+      "p": {
+        "position": {
+          "x": 576.49019,
+          "y": 88.92919
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50731,
+      "p": {
+        "position": {
+          "x": 576.49019,
+          "y": 65.70424
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50732,
+      "p": {
+        "position": {
+          "x": 407.12603,
+          "y": 66.93674
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E9K 扁棒高压室",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50733,
+      "p": {
+        "position": {
+          "x": 595.87466,
+          "y": 66.93574
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.72",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50734,
+      "p": {
+        "position": {
+          "x": 407.12603,
+          "y": 89.22903
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "扁棒采集站",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50735,
+      "p": {
+        "position": {
+          "x": 595.87466,
+          "y": 89.22803
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.73",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50736,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62485,
+          "y": 88.99703
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50737,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62485,
+          "y": 65.70424
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 51296,
+      "p": {
+        "position": {
+          "x": 576.49019,
+          "y": 42.66183
+        },
+        "width": 350.21002,
+        "height": 23.29279,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(255,255,255)",
+        "shape.border.width": 0.5,
+        "shape.border.color": "rgba(0,0,0,0.5)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 47756,
+      "p": {
+        "position": {
+          "x": 683.43306,
+          "y": 507.05356
+        },
+        "width": 0.1,
+        "height": 952.14768,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 683.43306,
+              "y": 30.97971
+            },
+            {
+              "x": 683.43306,
+              "y": 983.1274
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(0,0,0)",
+        "shape.border.width": 0.3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 47755,
+      "p": {
+        "position": {
+          "x": 587.92357,
+          "y": 507.05356
+        },
+        "width": 0.1,
+        "height": 952.14768,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 587.92357,
+              "y": 30.97971
+            },
+            {
+              "x": 587.92357,
+              "y": 983.1274
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(0,0,0)",
+        "shape.border.width": 0.3,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50497,
+      "p": {
+        "position": {
+          "x": 407.12703,
+          "y": 42.66182
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "E90 170钢管旧旋流井",
+        "text.font": "12px sans-serif, Arial",
+        "text.color": "rgb(0,0,0)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50498,
+      "p": {
+        "position": {
+          "x": 595.87666,
+          "y": 42.66182
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "191.168.6.70",
+        "text.font": "12px sans-serif, Arial",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50512,
+      "p": {
+        "displayName": "网关状态",
+        "image": "symbols/冶钢看板/网关状态.json",
+        "position": {
+          "x": 717.62844,
+          "y": 42.66183
+        },
+        "width": 15.9432,
+        "height": 15.9432,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    }
+  ],
+  "modified": "Sat Nov 04 2023 16:47:51 GMT+0800 (中国标准时间)",
+  "contentRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1014
+  }
+}

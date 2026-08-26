@@ -1,0 +1,153 @@
+{
+  "modified": "Mon Jun 15 2026 18:49:58 GMT+0800 (GMT+08:00)",
+  "width": 84,
+  "height": 117,
+  "comps": [
+    {
+      "type": "rect",
+      "repeatImage": "assets/Ariimg/青岛特钢图片/金属材质.jpg",
+      "repeatImageStretch": "fill",
+      "borderColor": "#979797",
+      "gradientColor": null,
+      "dashColor": "#2C3E50",
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "rotation": 1.5708,
+      "rect": [
+        13.82449,
+        37.04814,
+        69.65356,
+        70.35858
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderColor": "#979797",
+      "dashColor": "#2C3E50",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0.03219,
+        "rgb(48,48,48)",
+        1,
+        "rgba(0,0,0,0.1)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "center",
+      "rotation": 1.5708,
+      "rect": [
+        40.31856,
+        -0.41724,
+        5.53673,
+        81.48754
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderColor": "#979797",
+      "dashColor": "#2C3E50",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(0,0,0,0.1)",
+        0.96781,
+        "rgb(48,48,48)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "center",
+      "rotation": 1.5708,
+      "rect": [
+        40.31856,
+        63.68026,
+        5.53673,
+        81.48754
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/大冶特钢中棒/传动轴.json",
+      "layoutH": "left",
+      "layoutV": "center",
+      "displayName": "传动轴",
+      "rect": [
+        0,
+        0.15026,
+        16.80145,
+        116.84974
+      ]
+    },
+    {
+      "type": "rect",
+      "borderColor": "#979797",
+      "dashColor": "#2C3E50",
+      "gradientPack": [
+        "radial",
+        1,
+        -0.12016,
+        0.5,
+        0,
+        "rgb(0,187,255)",
+        0.27072,
+        "rgb(0,73,163)",
+        0.8854,
+        "rgb(145,215,255)",
+        1,
+        "rgb(5,155,255)",
+        1,
+        "rgb(0,129,235)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "center",
+      "rotation": 1.5708,
+      "rect": [
+        40.01464,
+        -6.58499,
+        4.14003,
+        83.83068
+      ]
+    },
+    {
+      "type": "rect",
+      "borderColor": "#979797",
+      "dashColor": "#2C3E50",
+      "gradientPack": [
+        "radial",
+        1,
+        -0.12016,
+        0.5,
+        0,
+        "rgb(0,187,255)",
+        0.27072,
+        "rgb(0,73,163)",
+        0.8854,
+        "rgb(145,215,255)",
+        1,
+        "rgb(5,155,255)",
+        1,
+        "rgb(0,129,235)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "center",
+      "rotation": 1.5708,
+      "rect": [
+        39.84533,
+        67.34736,
+        4.14003,
+        83.83068
+      ]
+    }
+  ]
+}

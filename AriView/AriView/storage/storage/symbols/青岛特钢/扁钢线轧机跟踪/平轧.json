@@ -1,0 +1,57 @@
+{
+  "modified": "Wed Apr 01 2026 16:50:50 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "name",
+      "valueType": "String"
+    },
+    {
+      "attr": "isvisible",
+      "valueType": "String",
+      "defaultValue": "True"
+    },
+    {
+      "attr": "color",
+      "valueType": "Color"
+    }
+  ],
+  "width": 30,
+  "height": 70,
+  "fitSize": true,
+  "visible": {
+    "func": "__ht__function(data, view) {\nreturn data.a('isvisible') == \"True\";\n}"
+  },
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/Ariimg/青岛特钢图片/平轧机2.png",
+      "pixelPerfect": true,
+      "displayName": "平轧机",
+      "rect": [
+        0,
+        0,
+        30,
+        70
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@name",
+        "value": "文本"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(5,5,5)"
+      },
+      "font": "bold 10px sans-serif, Arial",
+      "rect": [
+        13.00329,
+        6.6561,
+        0.01,
+        0.01
+      ]
+    }
+  ]
+}

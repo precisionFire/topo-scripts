@@ -1,0 +1,122 @@
+{
+  "modified": "Tue Oct 24 2023 08:47:56 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "data.line1",
+      "valueType": "Object",
+      "defaultValue": [
+        120,
+        132,
+        101,
+        134
+      ]
+    },
+    {
+      "attr": "data.line2",
+      "valueType": "Object",
+      "defaultValue": [
+        null,
+        null,
+        null,
+        134,
+        150,
+        180,
+        180
+      ]
+    },
+    {
+      "attr": "data.line3",
+      "valueType": "Object",
+      "defaultValue": [
+        190,
+        202,
+        190,
+        154,
+        null,
+        null
+      ]
+    },
+    {
+      "attr": "data.xAxis",
+      "valueType": "Object",
+      "defaultValue": [
+        "15:30",
+        "16:00",
+        "16:30",
+        "17:00",
+        "17:30",
+        "18:00",
+        "18:30"
+      ]
+    },
+    {
+      "attr": "chart.line1color",
+      "valueType": "Color",
+      "name": "线1颜色"
+    },
+    {
+      "attr": "chart.line2color",
+      "valueType": "Color",
+      "name": "线2颜色"
+    },
+    {
+      "attr": "chart.line3color",
+      "valueType": "Color",
+      "name": "线3颜色"
+    },
+    {
+      "attr": "chart.backgroundColor",
+      "valueType": "Color",
+      "name": "背景色"
+    },
+    {
+      "attr": "chart.text",
+      "valueType": "String",
+      "name": "主标题"
+    },
+    {
+      "attr": "bindData",
+      "valueType": "Object",
+      "defaultValue": {
+        "line1": [
+          120,
+          132,
+          101,
+          134
+        ],
+        "line2": [
+          null,
+          null,
+          null,
+          134,
+          150,
+          180,
+          180
+        ],
+        "line3": [
+          190,
+          202,
+          190,
+          154,
+          null,
+          null
+        ],
+        "xAxis": [
+          "15:30",
+          "16:00",
+          "16:30",
+          "17:00",
+          "17:30",
+          "18:00",
+          "18:30"
+        ]
+      },
+      "bindable": false
+    }
+  ],
+  "renderHTML": "__ht__function(data, gv, cache) {option = {\r\n   title: {\r\n        text:'',\r\n        show:false\r\n    },\r\n   tooltip: {\r\n    trigger: 'axis'\r\n  },\r\n  grid: {\r\n    top: '12%',\r\n    left: '3%',\r\n    right: '4%',\r\n    bottom: '3%',\r\n    containLabel: true\r\n  },\r\n  xAxis: {\r\n    type: 'category',\r\n    boundaryGap: false,\r\n    data: ['15:30', '16:00', '16:30', '17:00', '17:30', '18:00', '18:30']\r\n  },\r\n  yAxis: {\r\n    type: 'value'\r\n  },\r\n  series: [\r\n    {\r\n      name: '值',\r\n      type: 'line',\r\n      smooth:true,\r\n      lineStyle: {\r\n          color: 'rgb(251,0,69,1)',\r\n         width: 2,\r\n        },\r\n\r\n          areaStyle: {\r\n                color:{\r\n                    type:'linear',\r\n                    x:0,\r\n                    y:0,\r\n                    x2:0,\r\n                    y2:1,\r\n                    colorStops:[{\r\n                        offset:0,color:'rgba(251,0,69,0.6)'},{\r\n                        offset:1,color:'rgba(251,0,69,0)'}],\r\n                        global:false\r\n                        }\r\n\r\n            \r\n      },\r\n      data: [120, 132, 101, 134 ]\r\n    },\r\n    {\r\n      name: '预测未来',\r\n      type: 'line',\r\n      areaStyle: {\r\n        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [\r\n       \r\n        ])\r\n      },\r\n      data: [, , , 134, 150, 180, 180],\r\n      lineStyle: {\r\n          color: '#rgb(100,255,89)',\r\n         width: 2,\r\n         type: 'dotted' //'dotted'虚线 'solid'实线\r\n        }\r\n    },\r\n    {\r\n      name: '实际',\r\n      type: 'line',\r\n      lineStyle: {\r\n          color: 'rgb(222,82,82)',\r\n         width: 2,\r\n        },\r\n        areaStyle: {\r\n        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [\r\n       \r\n        ])\r\n      },\r\n      data: [150, 202, 190, 154, , , ]\r\n    }\r\n  ]\r\n};\r\n\r\nif (!cache.htmlView) {\r\n\r\n    cache.htmlView = document.createElement('div');\r\n    cache.htmlView.style.position = 'absolute';\r\n    cache.htmlChart = echarts.init(cache.htmlView,\"dark\")\r\n\r\n    // layoutHTML will be called when the data needs to be drawing\r\n    cache.htmlView.layoutHTML = function () {\r\n        gv.layoutHTML(data, cache.htmlView, false);\r\n        cache.htmlChart.resize();\r\n    };\r\n}\r\n\r\n// update data\r\n//option.xAxis.data = data.a('xAxis.data');\r\noption.series[0].data = data.a('data.line1');\r\n//option.series[0].data = data.a('bindData')[\"line1\"];\r\noption.series[1].data = data.a('data.line2');\r\noption.series[2].data = data.a('data.line3');\r\noption.xAxis.data = data.a('data.xAxis');\r\ndata.a('chart.line1color') && (option.series[0].lineStyle.color = data.a('chart.line1color'));\r\ndata.a('chart.line2color') && (option.series[1].lineStyle.color = data.a('chart.line2color'));\r\ndata.a('chart.line2color') && (option.series[2].lineStyle.color = data.a('chart.line3color'));\r\nif(data.a('chart.text'))\r\n{\r\n    option.title.show=true;\r\n    option.grid.top='12%';\r\n    option.title.text = data.a('chart.text');\r\n}\r\nelse\r\n{\r\n    option.grid.top='5%';\r\n    option.title.show=false;\r\n}\r\n// data.a('chart.text') && (option.title.text = data.a('chart.text'));\r\n// data.a('chart.subtext') && (option.title.subtext = data.a('chart.subtext'));\r\ndata.a('chart.backgroundColor') && (option.backgroundColor = data.a('chart.backgroundColor'));\r\ncache.htmlChart.setOption(option);\r\n\r\n// html for showing\r\nreturn cache.htmlView;}",
+  "width": 560,
+  "height": 376,
+  "pixelPerfect": false,
+  "comps": []
+}

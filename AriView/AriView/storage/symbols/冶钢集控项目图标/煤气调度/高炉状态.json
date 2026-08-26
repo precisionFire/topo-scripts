@@ -1,0 +1,46 @@
+{
+  "modified": "Mon Aug 07 2023 18:34:03 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "BFGFloat",
+      "valueType": "String",
+      "defaultValue": "0",
+      "name": "煤气流量"
+    },
+    {
+      "attr": "AirFloat",
+      "valueType": "String",
+      "defaultValue": "0",
+      "name": "送风量"
+    }
+  ],
+  "width": 50,
+  "height": 100,
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_GL_02.svg",
+      "displayName": "icon_GL_02",
+      "rect": [
+        0,
+        0.16222,
+        50,
+        100
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_GL_01.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('BFGFloat')<20000 && data.a('AirFloat')<1000\n}"
+      },
+      "displayName": "icon_GL_01",
+      "rect": [
+        0.08111,
+        0.16222,
+        49.91889,
+        99.83778
+      ]
+    }
+  ]
+}

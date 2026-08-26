@@ -1,0 +1,50 @@
+{
+  "modified": "Thu Nov 09 2023 17:17:34 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "state",
+      "valueType": "String",
+      "name": "开关状态"
+    }
+  ],
+  "width": 512,
+  "height": 512,
+  "comps": [
+    {
+      "type": "shape",
+      "background": {
+        "func": "__ht__function(data, view) {\nif(data.a('state')=='True')\r\n{\r\nreturn 'rgb(2,212,89)';\r\n}\r\nelse if(data.a('state')=='True')\r\n{\r\nreturn 'rgb(217,28,28)';\r\n}\n}",
+        "value": "#e82e2e"
+      },
+      "points": [
+        512,
+        89.0317,
+        255.98916,
+        236.82194,
+        0,
+        89.0317,
+        0,
+        422.9683,
+        255.98916,
+        275.15639,
+        512,
+        422.9683,
+        512,
+        89.0317,
+        512,
+        89.0317
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        5
+      ]
+    }
+  ]
+}

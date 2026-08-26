@@ -1,0 +1,362 @@
+{
+  "modified": "Sun Apr 23 2023 17:32:40 GMT+0800 (GMT+08:00)",
+  "width": 180,
+  "height": 38,
+  "func": "__ht__function(g, rect, comp, data, view) {\nht.vector.comp.comboBox.apply(this, arguments);\n}",
+  "properties": {
+    "value": {
+      "valueType": "String",
+      "name": "属性值"
+    },
+    "placeholder": {
+      "valueType": "String",
+      "name": "占位符"
+    },
+    "placeholderColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(115,115,115)",
+      "name": "占位符颜色"
+    },
+    "dataSource": {
+      "valueType": "Object",
+      "name": "数据源"
+    },
+    "disabled": {
+      "valueType": "Boolean",
+      "name": "禁用"
+    },
+    "format": {
+      "valueType": "String",
+      "name": "格式化"
+    },
+    "formatSeparator": {
+      "valueType": "String",
+      "defaultValue": "~",
+      "name": "时间区间分隔符"
+    },
+    "borderWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "边框宽度"
+    },
+    "borderColor": {
+      "valueType": "Color",
+      "defaultValue": "#737373",
+      "name": "边框颜色"
+    },
+    "disabledBorderColor": {
+      "valueType": "Color",
+      "defaultValue": "#ebebeb",
+      "name": "禁用边框颜色"
+    },
+    "focusBorderColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(51,153,255)",
+      "name": "编辑边框颜色"
+    },
+    "borderRadius": {
+      "valueType": "String",
+      "defaultValue": "0",
+      "name": "边框角度"
+    },
+    "padding": {
+      "valueType": "String",
+      "defaultValue": "0",
+      "name": "内边距"
+    },
+    "background": {
+      "valueType": "Color",
+      "name": "背景"
+    },
+    "disabledBackground": {
+      "valueType": "Color",
+      "defaultValue": "#fafafa",
+      "name": "禁用背景"
+    },
+    "focusBackground": {
+      "valueType": "Color",
+      "name": "编辑背景"
+    },
+    "icon": {
+      "valueType": "String",
+      "name": "图标"
+    },
+    "iconWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 20,
+      "name": "图标宽度"
+    },
+    "iconHeight": {
+      "valueType": "PositiveNumber",
+      "defaultValue": "20",
+      "name": "图标高度"
+    },
+    "iconAlign": {
+      "valueType": "Align",
+      "defaultValue": "left",
+      "name": "图标水平位置"
+    },
+    "font": {
+      "valueType": "Font",
+      "defaultValue": "12px arial, sans-serif",
+      "name": "字体"
+    },
+    "textAlign": {
+      "valueType": "Align",
+      "defaultValue": "left",
+      "name": "文本水平对齐"
+    },
+    "textColor": {
+      "valueType": "Color",
+      "defaultValue": "#737373",
+      "name": "文本颜色"
+    },
+    "disabledTextColor": {
+      "valueType": "Color",
+      "defaultValue": "#ebebeb",
+      "name": "禁用文本颜色"
+    },
+    "dropDownIcon": {
+      "valueType": "String",
+      "name": "下拉图标"
+    },
+    "dropDownIconColor": {
+      "valueType": "Color",
+      "defaultValue": "#737373",
+      "name": "下拉图标颜色"
+    },
+    "dropDownIconWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 20,
+      "name": "下拉图标宽度"
+    },
+    "dropDownIconHeight": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 20,
+      "name": "下拉图标高度"
+    },
+    "drawUnMatchValue": {
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "显示无效值"
+    },
+    "searchInputVisible": {
+      "valueType": "Boolean",
+      "name": "显示搜索框"
+    },
+    "searchInputStyle": {
+      "valueType": "Object",
+      "name": "搜索框样式"
+    },
+    "onChange": {
+      "valueType": "Function",
+      "name": "改变事件",
+      "extraInfo": {
+        "arguments": [
+          "oldValue",
+          "newValue",
+          "data",
+          "view"
+        ]
+      }
+    },
+    "dropIconWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 20,
+      "name": "选项下拉框图标宽度",
+      "group": "下拉"
+    },
+    "dropIconHeight": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 20,
+      "name": "选项下拉框图标高度"
+    },
+    "dropRowHeight": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 26,
+      "name": "下拉框项行高"
+    },
+    "dropWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 200,
+      "name": "下拉框宽度"
+    },
+    "dropBackground": {
+      "valueType": "Color",
+      "defaultValue": "rgb(255,255,255)",
+      "name": "下拉框背景"
+    },
+    "dropLabelFont": {
+      "valueType": "Font",
+      "defaultValue": "12px Arial, sans-serif",
+      "name": "下拉框文本字体"
+    },
+    "dropLabelColor": {
+      "valueType": "Color",
+      "defaultValue": "#333",
+      "name": "下拉框文本颜色"
+    },
+    "dropActiveLabelColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(247,247,247)",
+      "name": "下拉框选中文本色"
+    },
+    "dropActiveBackground": {
+      "valueType": "Color",
+      "defaultValue": "rgb(51,153,255)",
+      "name": "下拉框选中背景"
+    },
+    "dropLabelHoverColor": {
+      "valueType": "Color",
+      "name": "下拉框悬停文本颜色"
+    },
+    "dropHoverBackground": {
+      "valueType": "Color",
+      "defaultValue": "#60ACFC",
+      "name": "下拉框悬停背景"
+    },
+    "dropMaxHeight": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 280,
+      "name": "下拉框最大高度"
+    },
+    "dropDownSyncZoom": {
+      "valueType": "Boolean",
+      "name": "同步缩放"
+    },
+    "dropBorderColor": {
+      "valueType": "Color",
+      "defaultValue": null,
+      "name": "下拉框边框颜色"
+    },
+    "dropBorderWidth": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "下拉框边框宽度"
+    },
+    "textDisableColor": {
+      "valueType": "Color",
+      "defaultValue": "rgb(232,232,232)",
+      "name": "选项禁用颜色"
+    },
+    "dropBoxBorderWidth": {
+      "valueType": "PositiveNumber",
+      "name": "盒子边框宽度"
+    },
+    "dropBoxBorderColor": {
+      "valueType": "Color",
+      "name": "盒子边框颜色"
+    },
+    "dropBoxBorderType": {
+      "valueType": "String",
+      "name": "盒子边框样式",
+      "extraInfo": {
+        "enum": {
+          "values": [
+            "dotted",
+            "solid",
+            "double",
+            "dashed"
+          ]
+        }
+      }
+    },
+    "dropBoxBorderRadius": {
+      "valueType": "PositiveNumber",
+      "name": "盒子角度"
+    },
+    "scrollSpeed": {
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "滚动速度"
+    },
+    "autoApply": {
+      "valueType": "Boolean",
+      "defaultValue": true,
+      "name": "选中填充",
+      "group": "日期下拉框"
+    },
+    "applyText": {
+      "valueType": "String",
+      "defaultValue": "Apply",
+      "name": "确定按钮文本"
+    },
+    "cancelText": {
+      "valueType": "String",
+      "defaultValue": "Cancel",
+      "name": "取消按钮文本"
+    },
+    "buttonAlign": {
+      "valueType": "String",
+      "defaultValue": "right",
+      "name": "按钮位置",
+      "extraInfo": {
+        "enum": {
+          "values": [
+            "left",
+            "center",
+            "right"
+          ]
+        }
+      }
+    },
+    "buttonGap": {
+      "valueType": "Number",
+      "defaultValue": 5,
+      "name": "按钮间距"
+    },
+    "dateType": {
+      "valueType": "String",
+      "defaultValue": "date",
+      "name": "日期类型",
+      "extraInfo": {
+        "enum": {
+          "values": [
+            "date",
+            "datetime"
+          ]
+        }
+      }
+    },
+    "langue": {
+      "valueType": "String",
+      "defaultValue": "zh",
+      "name": "语言",
+      "extraInfo": {
+        "enum": {
+          "values": [
+            "zh",
+            "en"
+          ]
+        }
+      }
+    },
+    "selectableFunc": {
+      "valueType": "Function",
+      "name": "可选过滤",
+      "extraInfo": {
+        "arguments": [
+          "date"
+        ]
+      }
+    },
+    "dropDownStyle": {
+      "valueType": "Object",
+      "name": "下拉框样式"
+    },
+    "delimiter": {
+      "valueType": "String",
+      "defaultValue": "~",
+      "name": "日期范围连接符"
+    }
+  },
+  "events": {
+    "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.comboBoxInteractor.onDown.apply(this, arguments);\n}",
+    "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.comboBoxInteractor.onUp.apply(this, arguments);\n}",
+    "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.comboBoxInteractor.onMove.apply(this, arguments);\n}",
+    "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.comboBoxInteractor.onEnter.apply(this, arguments);\n}",
+    "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.comboBoxInteractor.onLeave.apply(this, arguments);\n}",
+    "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.comboBoxInteractor.onDrag.apply(this, arguments);\n}"
+  },
+  "snapshotURL": "symbols/ht/snapshot/comboBox.json"
+}

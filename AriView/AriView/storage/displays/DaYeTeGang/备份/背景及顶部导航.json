@@ -1,0 +1,706 @@
+{
+  "v": "8.1.3",
+  "p": {
+    "layers": [
+      {
+        "name": "0",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "1",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "2",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      }
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "zoomable": false,
+    "pannable": false,
+    "previewURL": "displayPage.html",
+    "onPostDeserialize": "__ht__function(json, dm, view, datas) {// SteelFactStore（事实仓库）\r\nconst SteelFactStore = {\r\n    initialized: false,\r\n    data: {},\r\n\r\n    load() {\r\n        const cache = localStorage.getItem('SteelFactStore');\r\n\r\n        if (!cache) return;\r\n\r\n        try {\r\n            const obj = JSON.parse(cache);\r\n\r\n            this.initialized = obj.initialized || false;\r\n            this.data = obj.data || {};\r\n\r\n            console.log('[SteelFactStore] 恢复成功');\r\n        } catch (err) {\r\n            console.error('[SteelFactStore] 恢复失败', err);\r\n        }\r\n    },\r\n\r\n    save() {\r\n        localStorage.setItem(\r\n            'SteelFactStore',\r\n            JSON.stringify({\r\n                initialized: this.initialized,\r\n                data: this.data\r\n            })\r\n        );\r\n    }\r\n};\r\n\r\n// SteelStateStore（运动状态仓库）\r\nconst SteelStateStore = {\r\n    data: {},\r\n\r\n    load() {\r\n        const cache = localStorage.getItem('SteelStateStore');\r\n\r\n        if (!cache) return;\r\n\r\n        try {\r\n            this.data = JSON.parse(cache);\r\n\r\n            console.log('[SteelStateStore] 恢复成功');\r\n        } catch (err) {\r\n            console.error('[SteelStateStore] 恢复失败', err);\r\n        }\r\n    },\r\n\r\n    save() {\r\n        localStorage.setItem(\r\n            'SteelStateStore',\r\n            JSON.stringify(this.data)\r\n        );\r\n    }\r\n};\r\n\r\n//缓存仓库初始化\r\nSteelFactStore.load();\r\nSteelStateStore.load();\r\n\r\n//速度初始化配置\r\nconst SPEED_CONFIG = {\r\n    default: 100,\r\n\r\n    rough: 80,\r\n\r\n    middle: 120,\r\n\r\n    preFinish: 180,\r\n\r\n    finish: 250\r\n};\r\n\r\n//实时速度匹配\r\nfunction getSteelSpeed(headX) {\r\n\r\n    if (headX >= 3380 && headX <= 3550) {\r\n        return SPEED_CONFIG.finish;\r\n    }\r\n\r\n    if (headX >= 1600 && headX <= 1800) {\r\n        return SPEED_CONFIG.preFinish;\r\n    }\r\n\r\n    if (headX >= 1100 && headX <= 1500) {\r\n        return SPEED_CONFIG.middle;\r\n    }\r\n\r\n    if (headX >= 320 && headX <= 630) {\r\n        return SPEED_CONFIG.rough;\r\n    }\r\n\r\n    return SPEED_CONFIG.default;\r\n}\r\n\r\n//事件：轧线新增钢坯\r\nfunction addSteelToState(item) {\r\n\r\n    if (SteelStateStore.data[item.slabNo]) {\r\n        return;\r\n    }\r\n\r\n    SteelStateStore.data[item.slabNo] = {\r\n\r\n        slabNo: item.slabNo,\r\n\r\n        cardNo: item.cardNo,\r\n\r\n        headX: 0,\r\n\r\n        tailX: 0,\r\n\r\n        length: 0,\r\n\r\n        createTime: Date.now(),\r\n\r\n        updateTime: Date.now()\r\n    };\r\n\r\n    console.log(\r\n        '[钢坯进入轧线]',\r\n        item.slabNo\r\n    );\r\n}\r\n\r\n//建立事实基线\r\nfunction buildFactBaseline(rawData) {\r\n\r\n    rawData.forEach(item => {\r\n\r\n        SteelFactStore.data[item.slabNo] = {\r\n            ...item,\r\n            updateTime: Date.now()\r\n        };\r\n\r\n    });\r\n\r\n    SteelFactStore.initialized = true;\r\n\r\n    SteelFactStore.save();\r\n\r\n    console.log(\r\n        '[FactStore] 基线建立完成'\r\n    );\r\n}\r\n\r\n//更新真实数据仓库\r\nfunction updateFactStore(rawData) {\r\n\r\n    rawData.forEach(item => {\r\n\r\n        const slabNo = item.slabNo;\r\n\r\n        if (!SteelFactStore.data[slabNo]) {\r\n\r\n            addSteelToState(item);\r\n        }\r\n\r\n        SteelFactStore.data[slabNo] = {\r\n            ...item,\r\n            updateTime: Date.now()\r\n        };\r\n    });\r\n\r\n    SteelFactStore.save();\r\n}\r\n\r\n//运算推演核心\r\nfunction updateSteelStates() {\r\n\r\n    const now = Date.now();\r\n\r\n    Object.values(\r\n        SteelStateStore.data\r\n    ).forEach(steel => {\r\n\r\n        const dt =\r\n            (now - steel.updateTime)\r\n            / 1000;\r\n\r\n        steel.updateTime = now;\r\n\r\n        const speed =\r\n            getSteelSpeed(\r\n                steel.headX\r\n            );\r\n\r\n        // 头部前进\r\n        steel.headX += speed * dt;\r\n\r\n        // 长度增长\r\n        if (steel.length < 150) {\r\n\r\n            steel.length += speed * dt;\r\n\r\n            if (steel.length > 150) {\r\n                steel.length = 150;\r\n            }\r\n        }\r\n\r\n        steel.tailX =\r\n            steel.headX - steel.length;\r\n\r\n        if (steel.tailX < 0) {\r\n            steel.tailX = 0;\r\n        }\r\n\r\n    });\r\n}\r\n\r\n//接入flow\r\nfunction buildRenderData() {\r\n\r\n    return Object.values(\r\n        SteelStateStore.data\r\n    ).map(steel => [\r\n\r\n        steel.slabNo,\r\n\r\n        steel.cardNo,\r\n\r\n        steel.headX,\r\n\r\n        steel.tailX\r\n\r\n    ]);\r\n}\r\n\r\n//启动运行模型\r\nfunction startSteelSimulator() {\r\n\r\n    setInterval(() => {\r\n\r\n        updateSteelStates();\r\n\r\n        renderMultipleSteels(\r\n            buildRenderData()\r\n        );\r\n\r\n        SteelStateStore.save();\r\n\r\n    }, 100);\r\n}}"
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 11860,
+      "p": {
+        "position": {
+          "x": 960,
+          "y": 540
+        },
+        "width": 1920,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(31,93,156)",
+        "shape.border.color": "#979797",
+        "fullscreen.lock": "h",
+        "fullscreen.gap": 0,
+        "2d.editable": false,
+        "2d.movable": false,
+        "fullscreen": "fill",
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 11861,
+      "p": {
+        "displayName": "整体",
+        "parent": {
+          "__i": 11860
+        },
+        "host": {
+          "__i": 11860
+        },
+        "position": {
+          "x": 960,
+          "y": 540.25
+        },
+        "width": 1920,
+        "height": 1080.5
+      },
+      "s": {
+        "layout.h": "leftright",
+        "layout.v": "topbottom",
+        "2d.selectable": false,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 11862,
+      "p": {
+        "displayName": "背景",
+        "parent": {
+          "__i": 11861
+        },
+        "position": {
+          "x": 960,
+          "y": 540.25
+        },
+        "width": 1920,
+        "height": 1080.5
+      },
+      "s": {
+        "2d.selectable": false,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11863,
+      "p": {
+        "displayName": "bg",
+        "parent": {
+          "__i": 11862
+        },
+        "image": "symbols/tenant/zwsm-dpymsj/参考/设计稿/bg.json",
+        "position": {
+          "x": 960,
+          "y": 540
+        },
+        "width": 1920,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "leftright",
+        "layout.v": "topbottom",
+        "fullscreen.lock": "v",
+        "fullscreen.gap": 0,
+        "opacity": 0.5,
+        "2d.movable": false,
+        "2d.selectable": false
+      },
+      "a": {
+        "ht.blueprintId": "173708666751425871",
+        "ht.blueprint": {
+          "p": [
+            321.16251,
+            174
+          ],
+          "c": [
+            {
+              "i": "event$init",
+              "p": [
+                453.16251,
+                163
+              ],
+              "c": [
+                {
+                  "i": "action$playSymbol",
+                  "p": [
+                    640.16251,
+                    163
+                  ],
+                  "c": [
+                    {
+                      "i": "result$input",
+                      "p": [
+                        781.16251,
+                        179
+                      ],
+                      "c": [],
+                      "v": null
+                    }
+                  ]
+                },
+                {
+                  "i": "action$playAnimation",
+                  "p": [
+                    603.16251,
+                    257
+                  ],
+                  "c": [
+                    {
+                      "i": "fileName$未命名_0",
+                      "p": [
+                        744.16251,
+                        258
+                      ],
+                      "c": [
+                        {
+                          "i": "result$input",
+                          "p": [
+                            904.16251,
+                            251
+                          ],
+                          "c": [],
+                          "v": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "a": []
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11864,
+      "p": {
+        "displayName": "左竖",
+        "parent": {
+          "__i": 11862
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": 0,
+          "y": 540
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "width": 800,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "left",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11865,
+      "p": {
+        "displayName": "左景",
+        "parent": {
+          "__i": 11862
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": 0,
+          "y": 540
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "width": 320,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "left",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11866,
+      "p": {
+        "displayName": "右竖",
+        "parent": {
+          "__i": 11862
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": 1920,
+          "y": 540
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "scale": {
+          "x": -1,
+          "y": 1
+        },
+        "width": 800,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "right",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11867,
+      "p": {
+        "displayName": "右景",
+        "parent": {
+          "__i": 11862
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": 1920,
+          "y": 540
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "scale": {
+          "x": -1,
+          "y": 1
+        },
+        "width": 320,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "right",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11868,
+      "p": {
+        "displayName": "左右",
+        "parent": {
+          "__i": 11862
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/左右.json",
+        "position": {
+          "x": 1913,
+          "y": 573
+        },
+        "scale": {
+          "x": -1,
+          "y": 1
+        },
+        "width": 14,
+        "height": 1015,
+        "tall": 20
+      },
+      "s": {
+        "2d.editable": false,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11869,
+      "p": {
+        "displayName": "左右",
+        "parent": {
+          "__i": 11862
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/左右.json",
+        "position": {
+          "x": 7,
+          "y": 573
+        },
+        "width": 14,
+        "height": 1015,
+        "tall": 20
+      },
+      "s": {
+        "2d.editable": false,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11870,
+      "p": {
+        "displayName": "下方装饰",
+        "parent": {
+          "__i": 11862
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/底部装饰.json",
+        "position": {
+          "x": 960,
+          "y": 1080
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "width": 1920,
+        "height": 400,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "leftright",
+        "layout.v": "bottom",
+        "pixelPerfect": false,
+        "2d.editable": false,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 11871,
+      "p": {
+        "displayName": "顶部框",
+        "parent": {
+          "__i": 11861
+        },
+        "position": {
+          "x": 960,
+          "y": 33
+        },
+        "width": 1920,
+        "height": 66
+      },
+      "s": {
+        "2d.selectable": false,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11872,
+      "p": {
+        "displayName": "标题2 2",
+        "parent": {
+          "__i": 11871
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/标题2 2.json",
+        "position": {
+          "x": 960,
+          "y": 33
+        },
+        "width": 1920,
+        "height": 66,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 11874,
+      "p": {
+        "displayName": "班组:",
+        "parent": {
+          "__i": 11871
+        },
+        "position": {
+          "x": 1455,
+          "y": 32
+        },
+        "width": 0.01,
+        "height": 0.01,
+        "tall": 20
+      },
+      "s": {
+        "text": "班组:",
+        "text.color": "rgb(255,255,255)",
+        "text.font": "18px arial, sans-serif",
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 11875,
+      "p": {
+        "displayName": "信息化综合应用",
+        "parent": {
+          "__i": 11871
+        },
+        "position": {
+          "x": 961,
+          "y": 36
+        },
+        "width": 0.09998,
+        "height": 0.09976,
+        "tall": 20
+      },
+      "s": {
+        "text": "中棒数字产线",
+        "type": "text",
+        "text.align": "center",
+        "text.color": "rgb(0,0,0)",
+        "text.font": "bold 28px Arial",
+        "opacity": 1,
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "select.padding": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 11876,
+      "p": {
+        "displayName": "信息化综合应用",
+        "parent": {
+          "__i": 11871
+        },
+        "position": {
+          "x": 960,
+          "y": 35
+        },
+        "width": 180,
+        "tall": 20
+      },
+      "s": {
+        "text": "中棒数字产线",
+        "type": "text",
+        "text.align": "center",
+        "text.color": "rgb(247,247,247)",
+        "text.font": "bold 28px Arial",
+        "opacity": 1,
+        "text.gradient.pack": [
+          "linear",
+          0.5,
+          1.30958,
+          0.5,
+          0,
+          0,
+          "#45C4F9",
+          1,
+          "white"
+        ],
+        "2d.movable": false,
+        "interactive": true,
+        "onDoubleClick": "__ht__function(event, data, view) {// 检查是否全屏\r\n  const isFullScreen =\r\n    document.fullscreenElement ||\r\n    document.webkitFullscreenElement ||\r\n    document.mozFullScreenElement ||\r\n    document.msFullscreenElement;\r\n\r\n  if (isFullScreen) {\r\n    // 退出全屏\r\n    if (document.exitFullscreen) {\r\n      document.exitFullscreen();\r\n    } else if (document.webkitExitFullscreen) {\r\n      document.webkitExitFullscreen();\r\n    } else if (document.mozCancelFullScreen) {\r\n      document.mozCancelFullScreen();\r\n    } else if (document.msExitFullscreen) {\r\n      document.msExitFullscreen();\r\n    }\r\n  } else {\r\n    // 进入全屏\r\n    const el = document.documentElement;\r\n    if (el.requestFullscreen) {\r\n      el.requestFullscreen();\r\n    } else if (el.webkitRequestFullscreen) {\r\n      el.webkitRequestFullscreen();\r\n    } else if (el.mozRequestFullScreen) {\r\n      el.mozRequestFullScreen();\r\n    } else if (el.msRequestFullscreen) {\r\n      el.msRequestFullscreen();\r\n    }\r\n  }}",
+        "select.width": 0,
+        "select.padding": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11877,
+      "p": {
+        "displayName": "logo_jztz_白",
+        "parent": {
+          "__i": 11871
+        },
+        "image": "assets/AriIconLib/logo/logo_jztz_白.svg",
+        "position": {
+          "x": 1850,
+          "y": 30
+        },
+        "width": 100,
+        "height": 30,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 11878,
+      "p": {
+        "parent": {
+          "__i": 11871
+        },
+        "position": {
+          "x": 1780,
+          "y": 30
+        },
+        "width": 0.5,
+        "height": 25,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1780,
+              "y": 17.50001
+            },
+            {
+              "x": 1780,
+              "y": 42.50001
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(156,225,255)",
+        "shape.border.width": 1,
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 11879,
+      "p": {
+        "displayName": "班组",
+        "parent": {
+          "__i": 11871
+        },
+        "tag": "班组",
+        "position": {
+          "x": 1505,
+          "y": 32
+        },
+        "width": 0.01,
+        "height": 0.01,
+        "tall": 20
+      },
+      "s": {
+        "text": "甲班",
+        "text.color": "rgb(255,255,255)",
+        "text.font": "18px arial, sans-serif",
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11880,
+      "p": {
+        "displayName": "DYTG_LOGO",
+        "parent": {
+          "__i": 11871
+        },
+        "image": "assets/冶钢看板/DYTG_LOGO.png",
+        "position": {
+          "x": 200,
+          "y": 30
+        },
+        "width": 375,
+        "height": 35,
+        "tall": 20
+      },
+      "s": {
+        "2d.selectable": false,
+        "2d.movable": false,
+        "pixelPerfect": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 12009,
+      "p": {
+        "displayName": "时间",
+        "parent": {
+          "__i": 11871
+        },
+        "image": "ht.drawing.time",
+        "position": {
+          "x": 1650,
+          "y": 32
+        },
+        "width": 200,
+        "height": 25
+      },
+      "s": {
+        "2d.movable": false,
+        "2d.selectable": false
+      },
+      "a": {
+        "labelStyle": {
+          "align": "center",
+          "vAlign": "middle",
+          "color": "rgb(255,255,255)",
+          "font": "18px arial, sans-serif",
+          "formatter": "YYYY-MM-DD HH:mm:SS",
+          "shadowBlur": 6,
+          "shadowOffsetX": 3,
+          "shadowOffsetY": 3
+        }
+      }
+    }
+  ],
+  "modified": "Mon Jun 15 2026 14:49:19 GMT+0800 (GMT+08:00)",
+  "contentRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1080.5
+  }
+}

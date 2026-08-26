@@ -1,0 +1,68 @@
+{
+  "modified": "Thu Apr 20 2023 11:17:55 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "yAxis.data",
+      "valueType": "Object",
+      "group": "chart",
+      "defaultValue": [
+        "大连",
+        "北京",
+        "天津",
+        "青岛",
+        "成都",
+        "上海",
+        "厦门"
+      ]
+    },
+    {
+      "attr": "series0.data",
+      "valueType": "Object",
+      "defaultValue": [
+        150,
+        230,
+        224,
+        218,
+        135,
+        147,
+        260
+      ]
+    },
+    {
+      "attr": "chart.text",
+      "valueType": "String",
+      "defaultValue": "条形图",
+      "name": "主标题"
+    },
+    {
+      "attr": "chart.subtext",
+      "valueType": "String",
+      "defaultValue": "一个简单的条形图",
+      "name": "副标题"
+    },
+    {
+      "attr": "chart.backgroundColor",
+      "valueType": "Color",
+      "name": "背景色",
+      "defaultValue": "#fff"
+    },
+    {
+      "attr": "series1.data",
+      "valueType": "Object",
+      "defaultValue": [
+        120,
+        180,
+        210,
+        198,
+        133,
+        199,
+        23
+      ]
+    }
+  ],
+  "renderHTML": "__ht__function(data, gv, cache) {var option = {\r\n    title: {show:false\r\n    },\r\n    backgroundColor: 'transparent',\r\n        color:[\"#1e98e2\",\"#fb0045\",\"#30c5ed\",\"#9fe7b8\",\"#ff9f7d\",\"#0086e5\",\"#e7bcf2\"],\r\n    tooltip: {\r\n        trigger: 'axis',\r\n        axisPointer: {\r\n            type: 'shadow'\r\n        }\r\n    },\r\n    grid: {\r\n        top:0,\r\n        left: '3%',\r\n        right: '4%',\r\n        bottom: '3%',\r\n        containLabel: true\r\n    },\r\n    xAxis: {\r\n        type: 'value',\r\n         axisLabel: {//x轴文字的配置\r\n                show: true,\r\n                textStyle: {\r\n                    color: \"#fff\",\r\n                }\r\n            },\r\n        boundaryGap: [0, 0.01]\r\n    },\r\n    yAxis: {\r\n        type: 'category',\r\n          axisLabel: {//y轴文字的配置\r\n                textStyle: {\r\n                     color:\"#fff\",\r\n                     margin: 15\r\n                },\r\n               // formatter: &#39;{value} %&#39;//y轴的每一个刻度值后面加上‘%’号\r\n            },\r\n        data: []\r\n    },\r\n    series: [\r\n        {\r\n            name: 'name1',\r\n            type: 'bar',\r\n             itemStyle: {\r\n                                normal: {\r\n                                    label: {\r\n                                        show: true, \r\n                                        position: 'right',\r\n                                        textStyle: {\r\n                                            color: '#fff',\r\n                                            fontSize: 12\r\n                                        }\r\n                                    }\r\n                                }\r\n                            },\r\n            data: []\r\n        },\r\n        {\r\n            name: 'name2',\r\n            type: 'bar',\r\n              itemStyle: {\r\n                                normal: {\r\n                                    label: {\r\n                                        show: true, \r\n                                        position: 'right',\r\n                                        textStyle: {\r\n                                            color: '#fff',\r\n                                            fontSize: 12\r\n                                        }\r\n                                    }\r\n                                }\r\n                            },\r\n            data: []\r\n        }\r\n    ]\r\n};\r\n\r\nif (!cache.htmlView) {\r\n    cache.htmlView = document.createElement('div');\r\n    cache.htmlView.style.position = 'absolute';\r\n    cache.htmlChart = echarts.init(cache.htmlView);\r\n\r\n    // layoutHTML will be called when the data needs to be drawing\r\n    cache.htmlView.layoutHTML = function () {\r\n        gv.layoutHTML(data, cache.htmlView, false);\r\n        cache.htmlChart.resize();\r\n    };\r\n}\r\n\r\n// update data\r\noption.yAxis.data = data.a('yAxis.data');\r\noption.series[0].data = data.a('series0.data');\r\noption.series[1].data=data.a('series1.data');\r\ndata.a('chart.text') && (option.title.text = data.a('chart.text'));\r\ndata.a('chart.subtext') && (option.title.subtext = data.a('chart.subtext'));\r\ndata.a('chart.backgroundColor') && (option.backgroundColor = data.a('chart.backgroundColor'));\r\n\r\ncache.htmlChart.setOption(option);\r\n\r\n// html for showing\r\nreturn cache.htmlView;}",
+  "width": 500,
+  "height": 376,
+  "pixelPerfect": false,
+  "comps": []
+}

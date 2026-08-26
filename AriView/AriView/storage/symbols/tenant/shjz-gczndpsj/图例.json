@@ -1,0 +1,293 @@
+{
+  "modified": "Tue Nov 18 2025 14:43:07 GMT+0800 (中国标准时间)",
+  "background": "rgb(0,0,0)",
+  "dataBindings": [
+    {
+      "attr": "value",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "color",
+      "valueType": "Color"
+    },
+    {
+      "attr": "name",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "183.color",
+      "valueType": "Color"
+    },
+    {
+      "attr": "text",
+      "valueType": "Multiline"
+    }
+  ],
+  "width": 220,
+  "height": 27,
+  "comps": [
+    {
+      "type": "shape",
+      "background": "rgb(71,71,71)",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "gradientPack": [
+        "linear",
+        0,
+        1,
+        0.5,
+        0,
+        0,
+        "rgba(69,133,196,0.50)",
+        1,
+        "rgba(35,77,145,0)"
+      ],
+      "borderGradientPack": [
+        "linear",
+        0,
+        1,
+        0.5,
+        -0.62445,
+        0,
+        "rgb(130,218,255)",
+        0.12174,
+        "rgba(115,198,255,0.2)",
+        0.31739,
+        "rgba(100,177,255,0.5)",
+        0.68261,
+        "rgba(82,154,255,0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "center",
+      "closePath": true,
+      "points": [
+        6,
+        3,
+        154,
+        3,
+        148,
+        27,
+        0,
+        27,
+        6,
+        3,
+        6,
+        3
+      ]
+    },
+    {
+      "type": "shape",
+      "background": "rgba(71,99,143,0.30)",
+      "borderColor": "#979797",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0,
+        0,
+        1,
+        1,
+        0.13913,
+        "rgba(19,72,158,0.00)",
+        0.60435,
+        "rgba(76,165,224,0.5)",
+        0.83043,
+        "rgba(19,72,158,0.00)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "top",
+      "prefix": "1677468401239919",
+      "points": [
+        41.01184,
+        14,
+        41.01184,
+        12,
+        185.01184,
+        12,
+        185.01184,
+        14,
+        41.01184,
+        14,
+        41.01184,
+        14,
+        41.01184,
+        18,
+        41.01184,
+        16,
+        185.01184,
+        16,
+        185.01184,
+        18,
+        41.01184,
+        18,
+        41.01184,
+        18,
+        41.01184,
+        22,
+        41.01184,
+        20,
+        185.01184,
+        20,
+        185.01184,
+        22,
+        41.01184,
+        22,
+        41.01184,
+        22,
+        41.01184,
+        2,
+        41.01184,
+        0,
+        185.01184,
+        0,
+        185.01184,
+        2,
+        41.01184,
+        2,
+        41.01184,
+        2,
+        41.01184,
+        6,
+        41.01184,
+        4,
+        185.01184,
+        4,
+        185.01184,
+        6,
+        41.01184,
+        6,
+        41.01184,
+        6,
+        41.01184,
+        10,
+        41.01184,
+        8,
+        185.01184,
+        8,
+        185.01184,
+        10,
+        41.01184,
+        10,
+        41.01184,
+        10
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@value",
+        "value": "10"
+      },
+      "align": "right",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "20px arial",
+      "layoutH": "right",
+      "layoutV": "center",
+      "anchorX": 0,
+      "rect": [
+        173.10426,
+        5,
+        28,
+        20
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@name",
+        "value": "高炉-昨日"
+      },
+      "color": "rgb(204,232,255)",
+      "font": "14px sans-serif, Arial",
+      "layoutH": "left",
+      "layoutV": "center",
+      "anchorX": 0,
+      "rect": [
+        29.87179,
+        8,
+        28,
+        14
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@text",
+        "value": "%"
+      },
+      "align": "right",
+      "color": "rgb(255,255,255)",
+      "font": "12px sans-serif, Arial",
+      "opacity": 0.6,
+      "layoutH": "right",
+      "layoutV": "center",
+      "anchorX": 0,
+      "rect": [
+        206,
+        8,
+        14,
+        14
+      ]
+    },
+    {
+      "type": "image",
+      "color": {
+        "func": "attr@color",
+        "value": "#58b1ff"
+      },
+      "name": "symbols/tenant/shjz-gczndpsj/图例-圆.json",
+      "layoutH": "left",
+      "layoutV": "center",
+      "prefix": "183",
+      "displayName": "图例-圆",
+      "rect": [
+        7.87179,
+        5,
+        20,
+        20
+      ]
+    }
+  ]
+}

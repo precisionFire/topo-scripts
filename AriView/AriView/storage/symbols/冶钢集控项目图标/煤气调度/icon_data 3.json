@@ -1,0 +1,102 @@
+{
+  "modified": "Sun Apr 23 2023 15:17:16 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "title",
+      "valueType": "String",
+      "defaultValue": "标题",
+      "name": "标题"
+    },
+    {
+      "attr": "data2",
+      "valueType": "String",
+      "defaultValue": "0.00",
+      "name": "瞬时流量"
+    },
+    {
+      "attr": "data1",
+      "valueType": "String",
+      "defaultValue": "0.00",
+      "name": "压力"
+    }
+  ],
+  "width": 78,
+  "height": 83,
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_bg_6.png",
+      "pixelPerfect": true,
+      "displayName": "icon_bg_6",
+      "rect": [
+        -1,
+        0,
+        79,
+        83
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "轧钢"
+      },
+      "align": "center",
+      "color": "rgba(255,255,255,0.6)",
+      "pixelPerfect": true,
+      "rect": [
+        38.5,
+        13.31227,
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@data1",
+        "value": "15.5"
+      },
+      "color": "rgb(255,218,0)",
+      "font": "16px arial, sans-serif",
+      "pixelPerfect": true,
+      "rect": [
+        19.01215,
+        41.499,
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@data2",
+        "value": "1450"
+      },
+      "color": "rgb(20,179,242)",
+      "font": "16px arial, sans-serif",
+      "pixelPerfect": true,
+      "rect": [
+        19.01315,
+        65.48631,
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": "rgba(127,127,127,0.2)",
+      "pixelPerfect": true,
+      "rotation": 3.14159,
+      "points": [
+        6.21354,
+        22.33225,
+        71.39291,
+        22.33225,
+        71.7802,
+        22.33225
+      ]
+    }
+  ]
+}

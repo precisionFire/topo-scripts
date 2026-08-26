@@ -1,0 +1,33 @@
+{
+  "modified": "Mon May 19 2025 20:22:22 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "RUN",
+      "valueType": "String",
+      "name": "状态",
+      "group": "状态",
+      "bindable": true
+    }
+  ],
+  "cacheRule": true,
+  "width": 55,
+  "height": 55,
+  "comps": [
+    {
+      "type": "rect",
+      "background": {
+        "func": "__ht__function(data, view) {\nif(data.a('RUN')=='1'||data.a('RUN')=='True')\r\n{\r\nreturn 'rgb(51,204,0)';\r\n}\r\nelse if(data.a('RUN')=='0'||data.a('RUN')=='False')\r\n{\r\nreturn 'rgb(124,145,155)';\r\n}\n}",
+        "value": "rgb(0,199,7)"
+      },
+      "borderColor": "rgb(255,255,255)",
+      "border3dColor": null,
+      "borderPattern": null,
+      "rect": [
+        0.07204,
+        0.07204,
+        55,
+        55
+      ]
+    }
+  ]
+}

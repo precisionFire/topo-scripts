@@ -1,0 +1,169 @@
+{
+  "modified": "Tue May 16 2023 14:09:46 GMT+0800 (中国标准时间)",
+  "background": "rgb(40,50,66)",
+  "stateEnum": [
+    {
+      "value": "state0"
+    },
+    {
+      "value": "state1"
+    }
+  ],
+  "state": "state0",
+  "width": 1173,
+  "height": 218,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "#0476bc",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state1",
+      "displayName": "矩形",
+      "rect": [
+        0.52332,
+        108.51977,
+        27.29037,
+        109
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state1');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "rect",
+      "background": "#0476bc",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state0",
+      "rect": [
+        0.52332,
+        0.5,
+        27.29037,
+        109
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state0');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#0476bc",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "displayName": "矩形",
+      "rect": [
+        0.52332,
+        0.5,
+        27.29037,
+        109
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state0');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "rect",
+      "borderWidth": 1,
+      "borderColor": "#14b3f2",
+      "borderJoin": "miter",
+      "gradientColor": null,
+      "state": "state0",
+      "displayName": "矩形",
+      "rect": [
+        0.52332,
+        108.51977,
+        27.29037,
+        109
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.s('state', 'state1');}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {view.setCursor('pointer');\r\ndata.s(\"background\",\"#bababa\");}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {view.setCursor('default');}"
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "调\n控\n策\n略"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        14.15851,
+        54.99,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@title",
+        "value": "事\n件\n列\n表"
+      },
+      "align": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.align');\n}",
+        "value": "center"
+      },
+      "color": "rgb(255,255,255)",
+      "font": {
+        "func": "__ht__function(data, view) {\nreturn data.s('label.font');\n}",
+        "value": "12px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "displayName": {
+        "func": "attr@title"
+      },
+      "rect": [
+        14.14851,
+        163.00977,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "text",
+      "text": "30 分钟后，转炉煤气柜位 超 上限，建议执行以下调控策略：\n1.增加 转煤外供 10000 m3/h；\n2.1#2#掺混高炉煤气减小 5000 m3/h，焦炉煤气减小 2000 m3/h；\n3.80MW机组 增加BFG 5000 m3/h，焦炉煤气减小 2000 m3/h，负荷调整至 75 MW；",
+      "vAlign": "top",
+      "color": "#12d6d6",
+      "font": "16px arial, sans-serif",
+      "state": "state0",
+      "rect": [
+        42.72468,
+        22.76312,
+        1104.69852,
+        171.70653
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/冶钢集控项目图标/滚动消息.json",
+      "state": "state1",
+      "displayName": "滚动消息",
+      "rect": [
+        56.46388,
+        0.99012,
+        1145.18631,
+        217.01977
+      ]
+    }
+  ]
+}

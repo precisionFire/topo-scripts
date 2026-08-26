@@ -1,0 +1,38 @@
+{
+  "modified": "Tue Oct 17 2023 10:35:40 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "run",
+      "valueType": "String",
+      "name": "运行"
+    },
+    {
+      "attr": "stop",
+      "valueType": "String",
+      "name": "停止"
+    },
+    {
+      "attr": "fault",
+      "valueType": "String",
+      "name": "故障"
+    }
+  ],
+  "width": 88,
+  "height": 88,
+  "comps": [
+    {
+      "type": "oval",
+      "background": {
+        "func": "__ht__function(data, view) {\nif(data.a('run')=='True')\r\n{\r\nreturn 'rgb(2,212,89)';\r\n}\r\nelse if(data.a('stop')=='True')\r\n{\r\nreturn 'rgb(217,28,28)';\r\n}\r\nelse if(data.a('fault')=='True')\r\n{\r\nreturn 'rgb(255,229,0)';\r\n}\n}",
+        "value": "rgb(217,28,28)"
+      },
+      "borderColor": "#979797",
+      "rect": [
+        0,
+        0,
+        88,
+        88
+      ]
+    }
+  ]
+}

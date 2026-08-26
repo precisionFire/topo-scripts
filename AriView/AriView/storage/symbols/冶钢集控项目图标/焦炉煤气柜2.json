@@ -1,0 +1,54 @@
+{
+  "modified": "Thu Jul 06 2023 15:07:37 GMT+0800 (中国标准时间)",
+  "background": "rgb(41,39,46)",
+  "dataBindings": [
+    {
+      "attr": "COG_volume",
+      "valueType": "Number",
+      "name": "柜容",
+      "defaultValue": 0
+    },
+    {
+      "attr": "COG_high",
+      "valueType": "String",
+      "defaultValue": "0",
+      "name": "柜位"
+    },
+    {
+      "attr": "max",
+      "valueType": "String",
+      "defaultValue": "52",
+      "name": "总柜位"
+    }
+  ],
+  "width": 70,
+  "height": 89,
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_JLG_1.svg",
+      "displayName": "icon_JLG_1",
+      "rect": [
+        1.88165,
+        8.75834,
+        65.33591,
+        80.24166
+      ]
+    },
+    {
+      "type": "components/basic/progressBar.json",
+      "displayName": "progressBar",
+      "rect": [
+        30.78669,
+        51.163,
+        8.42662,
+        37.837
+      ],
+      "direction": "v",
+      "value": {
+        "func": "__ht__function(data, view) {\nreturn data.a('COG_high')/data.a('max');\n}"
+      },
+      "valueVisible": false
+    }
+  ]
+}

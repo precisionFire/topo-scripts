@@ -1,0 +1,45 @@
+{
+  "modified": "Sun Oct 08 2023 14:51:47 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "I",
+      "valueType": "String",
+      "defaultValue": "10",
+      "name": "电流"
+    },
+    {
+      "attr": "RUN",
+      "valueType": "String",
+      "name": "运行信号"
+    }
+  ],
+  "width": 100,
+  "height": 100,
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_jyj_1.svg",
+      "displayName": "icon_jyj_1",
+      "rect": [
+        2.57499,
+        13.88958,
+        94.85003,
+        72.22083
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_jyj_2.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('I')>10||data.a('RUN')=='True';\n}"
+      },
+      "displayName": "icon_jyj_2",
+      "rect": [
+        2.57499,
+        13.82749,
+        94.93157,
+        72.28292
+      ]
+    }
+  ]
+}

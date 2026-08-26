@@ -1,0 +1,73 @@
+{
+  "modified": "Wed Nov 08 2023 09:34:36 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "series0.data",
+      "valueType": "Object",
+      "defaultValue": [
+        {
+          "value": 1548,
+          "name": "尖"
+        },
+        {
+          "value": 775,
+          "name": "峰"
+        },
+        {
+          "value": 679,
+          "name": "平"
+        },
+        {
+          "value": 775,
+          "name": "峰"
+        }
+      ],
+      "group": "chart"
+    },
+    {
+      "attr": "series1.data",
+      "valueType": "Object",
+      "defaultValue": [
+        {
+          "value": 1048,
+          "name": "尖"
+        },
+        {
+          "value": 335,
+          "name": "峰"
+        },
+        {
+          "value": 310,
+          "name": "平"
+        },
+        {
+          "value": 251,
+          "name": "谷"
+        }
+      ]
+    },
+    {
+      "attr": "chart.text",
+      "valueType": "String",
+      "defaultValue": "饼图",
+      "name": "主标题"
+    },
+    {
+      "attr": "chart.subtext",
+      "valueType": "String",
+      "defaultValue": "一个简单的饼图",
+      "name": "副标题"
+    },
+    {
+      "attr": "chart.backgroundColor",
+      "valueType": "Color",
+      "name": "背景色",
+      "defaultValue": null
+    }
+  ],
+  "renderHTML": "__ht__function(data, gv, cache) {var option = {\r\n\ttitle: {\r\n    show:false},\r\n\tbackgroundColor: 'transparent',\r\n\ttooltip: {\r\n\t\ttrigger: 'item',\r\n\t\t\r\n\t},\r\n      //color:['#1e98e2','#fff025','#02bfba','#fb0045'],\r\n\tlegend: {\r\n\t\tshow: false\r\n\t},\r\n\tseries: [{\r\n\t\tname: '电量',\r\n\t\ttype: 'pie',\r\n\t\tselectedMode: 'single',\r\n\t\tradius: [0, '30%'],\r\n\t\tlabel: {\r\n\t\t\tformatter: '{b}：\\n{c} {d}%',\r\n          \tposition: 'inner',\r\n\t\t\tfontSize: 12,\r\n\t\t\trich: {\r\n\t\t\t\tb: {\r\n\t\t\t\t\tcolor: '#fff',\r\n\t\t\t\t},\r\n\t\t\t\td: {\r\n\t\t\t\t\tcolor: '#fff',\r\n\t\t\t\t},\r\n\t\t\t}\r\n\t\t},\r\n\t\tlabelLine: {\r\n\t\t\tshow: false\r\n\t\t},\r\n\t\tdata: [],\r\n\t\temphasis: {\r\n\t\t\titemStyle: {\r\n\t\t\t\tshadowBlur: 10,\r\n\t\t\t\tshadowOffsetX: 0,\r\n\t\t\t\tshadowColor: 'rgba(0, 0, 0, 0.5)'\r\n\t\t\t}\r\n\t\t}\r\n\t}, {\r\n\t\tname: '电量',\r\n\t\ttype: 'pie',\r\n\t\tradius: ['45%', '60%'],\r\n\t\tlabelLine: {\r\n\t\t\tlength: 2\r\n\t\t},\r\n        color:['#1e98e2','#fff025','#02bfba','#fb0045'],\r\n\t\tlabel: {\r\n\t\t\tformatter: '{b}：\\n{c}\\n{per|{d}%}',\r\n            //color:['#1e98e2','#fff025','#02bfba','#1e98e2'],\r\n\t\t\trich: {\r\n\t\t\t\ta: {\r\n\t\t\t\t\tcolor: '#6E7079',\r\n\t\t\t\t\tlineHeight: 22,\r\n\t\t\t\t\talign: 'center'\r\n\t\t\t\t},\r\n                b: {\r\n\t\t\t\t\tcolor: '#4C5058',\r\n\t\t\t\t\tfontSize: 14,\r\n\t\t\t\t\tfontWeight: 'bold',\r\n\t\t\t\t\tlineHeight: 33\r\n\t\t\t\t},\r\n\t\t\t\tper: {\r\n\t\t\t\t    color: '#fff',\r\n\t\t\t\t\tbackgroundColor: '#4C5058',\r\n\t\t\t\t\tpadding: [3, 4],\r\n\t\t\t\t\tborderRadius: 4,\r\n                    position: 'top',\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t},\r\n\t\tdata: []\r\n\t}]\r\n};\r\n\r\nif (!cache.htmlView) {\r\n    cache.htmlView = document.createElement('div');\r\n    cache.htmlView.style.position = 'absolute';\r\n    cache.htmlChart = echarts.init(cache.htmlView);\r\n\r\n    // layoutHTML will be called when the data needs to be drawing\r\n    cache.htmlView.layoutHTML = function () {\r\n        gv.layoutHTML(data, cache.htmlView, false);\r\n        cache.htmlChart.resize();\r\n    };\r\n}\r\n\r\n// update data\r\noption.series[0].data = data.a('series0.data');\r\noption.series[1].data = data.a('series1.data');\r\ndata.a('chart.text') && (option.title.text = data.a('chart.text'));\r\ndata.a('chart.subtext') && (option.title.subtext = data.a('chart.subtext'));\r\ndata.a('chart.backgroundColor') && (option.backgroundColor = data.a('chart.backgroundColor'));\r\n\r\ncache.htmlChart.setOption(option);\r\n\r\n// html for showing\r\nreturn cache.htmlView;}",
+  "width": 500,
+  "height": 376,
+  "pixelPerfect": false,
+  "comps": []
+}

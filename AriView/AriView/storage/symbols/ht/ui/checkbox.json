@@ -1,0 +1,119 @@
+{
+  "modified": "Mon Jun 07 2021 11:24:39 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "ht.group",
+      "valueType": "String",
+      "name": "分组"
+    },
+    {
+      "attr": "ht.value",
+      "valueType": "String",
+      "name": "属性值"
+    },
+    {
+      "attr": "ht.checked",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "选中"
+    },
+    {
+      "attr": "ht.disabled",
+      "valueType": "Boolean",
+      "name": "禁用"
+    },
+    {
+      "attr": "ht.borderColor",
+      "valueType": "Color",
+      "name": "边框颜色"
+    },
+    {
+      "attr": "ht.activeBorderColor",
+      "valueType": "Color",
+      "name": "按下边框颜色"
+    },
+    {
+      "attr": "ht.background",
+      "valueType": "Color",
+      "name": "背景"
+    },
+    {
+      "attr": "ht.activeBackground",
+      "valueType": "Color",
+      "name": "按下背景"
+    },
+    {
+      "attr": "ht.iconColor",
+      "valueType": "Color",
+      "name": "图标染色"
+    },
+    {
+      "attr": "ht.onChange",
+      "valueType": "Function",
+      "defaultValue": "__ht__function(vals, data, view) {\n\n}",
+      "name": "改变事件",
+      "extraInfo": {
+        "arguments": [
+          "value",
+          "data",
+          "view"
+        ]
+      }
+    }
+  ],
+  "snapshotURL": "symbols/ht/snapshot/checkbox.json",
+  "width": 16,
+  "height": 16,
+  "boundExtend": 2,
+  "fitSize": true,
+  "interactive": true,
+  "disableSelectedBorder": true,
+  "pixelPerfect": false,
+  "attachStyle": "close",
+  "comps": [
+    {
+      "type": "components/ht/ui/checkbox.json",
+      "displayName": "checkbox",
+      "rect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.checkboxInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.checkboxInteractor.onUp.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.checkboxInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.checkboxInteractor.onLeave.apply(this, arguments);\n}",
+      "checked": {
+        "func": "attr@ht.checked"
+      },
+      "group": {
+        "func": "attr@ht.group"
+      },
+      "value": {
+        "func": "attr@ht.value"
+      },
+      "disabled": {
+        "func": "attr@ht.disabled"
+      },
+      "borderColor": {
+        "func": "attr@ht.borderColor"
+      },
+      "activeBorderColor": {
+        "func": "attr@ht.activeBorderColor"
+      },
+      "background": {
+        "func": "attr@ht.background"
+      },
+      "activeBackground": {
+        "func": "attr@ht.activeBackground"
+      },
+      "iconColor": {
+        "func": "attr@ht.iconColor"
+      },
+      "onChange": {
+        "func": "attr@ht.onChange"
+      }
+    }
+  ]
+}

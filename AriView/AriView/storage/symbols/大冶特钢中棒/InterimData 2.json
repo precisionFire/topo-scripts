@@ -1,0 +1,83 @@
+{
+  "modified": "Tue Jul 28 2026 17:55:58 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "B1-inside",
+      "valueType": "Object",
+      "name": "1号炉炉内",
+      "group": "炉内信息"
+    },
+    {
+      "attr": "B2-inside",
+      "valueType": "Object",
+      "name": "2号炉炉内"
+    },
+    {
+      "attr": "B1-willin",
+      "valueType": "Object",
+      "name": "1号炉将入"
+    },
+    {
+      "attr": "B2-willin",
+      "valueType": "Object",
+      "name": "2号炉将入"
+    },
+    {
+      "attr": "B1-willout",
+      "valueType": "Object",
+      "name": "1号炉将出"
+    },
+    {
+      "attr": "B2-willout",
+      "valueType": "Object",
+      "name": "2号炉将出"
+    },
+    {
+      "attr": "B1-in",
+      "valueType": "Object",
+      "name": "1号炉正入",
+      "group": "正入炉信息"
+    },
+    {
+      "attr": "B2-in",
+      "valueType": "Object",
+      "name": "2号炉正入"
+    },
+    {
+      "attr": "B1-out",
+      "valueType": "Object",
+      "name": "1号炉正出"
+    },
+    {
+      "attr": "B2-out",
+      "valueType": "Object",
+      "name": "2号炉正出"
+    },
+    {
+      "attr": "B1-systemIdentification",
+      "valueType": "String",
+      "name": "1#刘识别结果"
+    },
+    {
+      "attr": "B2-systemIdentification",
+      "valueType": "String",
+      "name": "2#刘识别结果"
+    }
+  ],
+  "width": 10,
+  "height": 10,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": "#D8D8D8",
+      "borderWidth": 1,
+      "borderColor": "#979797",
+      "rect": [
+        0,
+        0,
+        10,
+        10
+      ]
+    }
+  ]
+}

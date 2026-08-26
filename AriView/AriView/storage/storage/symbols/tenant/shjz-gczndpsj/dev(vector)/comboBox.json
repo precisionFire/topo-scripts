@@ -1,0 +1,346 @@
+{
+  "modified": "Tue Apr 14 2026 09:47:54 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "ht.value",
+      "valueType": "String",
+      "name": "属性值"
+    },
+    {
+      "attr": "ht.placeholder",
+      "valueType": "String",
+      "name": "占位符"
+    },
+    {
+      "attr": "ht.placeholderColor",
+      "valueType": "Color",
+      "name": "占位符颜色"
+    },
+    {
+      "attr": "ht.dataSource",
+      "valueType": "Object",
+      "name": "数据源"
+    },
+    {
+      "attr": "ht.disabled",
+      "valueType": "Boolean",
+      "name": "禁用"
+    },
+    {
+      "attr": "ht.borderWidth",
+      "valueType": "PositiveNumber",
+      "name": "边框宽度"
+    },
+    {
+      "attr": "ht.borderColor",
+      "valueType": "Color",
+      "name": "边框颜色"
+    },
+    {
+      "attr": "ht.focusBorderColor",
+      "valueType": "Color",
+      "name": "编辑边框颜色"
+    },
+    {
+      "attr": "ht.borderRadius",
+      "valueType": "String",
+      "name": "边框角度"
+    },
+    {
+      "attr": "ht.padding",
+      "valueType": "String",
+      "name": "内边距"
+    },
+    {
+      "attr": "ht.background",
+      "valueType": "Color",
+      "name": "背景"
+    },
+    {
+      "attr": "ht.focusBackground",
+      "valueType": "Color",
+      "name": "编辑背景"
+    },
+    {
+      "attr": "ht.font",
+      "valueType": "Font",
+      "name": "字体"
+    },
+    {
+      "attr": "ht.textColor",
+      "valueType": "Color",
+      "name": "文本颜色"
+    },
+    {
+      "attr": "ht.dropDownIcon",
+      "valueType": "String",
+      "name": "下拉图标"
+    },
+    {
+      "attr": "ht.dropDownIconColor",
+      "valueType": "Color",
+      "name": "下拉图标颜色"
+    },
+    {
+      "attr": "ht.dropDownIconWidth",
+      "valueType": "PositiveNumber",
+      "name": "下拉图标宽度"
+    },
+    {
+      "attr": "ht.dropDownIconHeight",
+      "valueType": "PositiveNumber",
+      "name": "下拉图标高度"
+    },
+    {
+      "attr": "ht.drawUnMatchValue",
+      "valueType": "Boolean",
+      "name": "显示无效值"
+    },
+    {
+      "attr": "ht.searchInputVisible",
+      "valueType": "Boolean",
+      "name": "显示搜索框"
+    },
+    {
+      "attr": "ht.searchInputStyle",
+      "valueType": "Object",
+      "name": "搜索框样式"
+    },
+    {
+      "attr": "ht.onChange",
+      "valueType": "Function",
+      "name": "改变事件",
+      "extraInfo": {
+        "arguments": [
+          "oldValue",
+          "newValue",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "ht.dropIconWidth",
+      "valueType": "PositiveNumber",
+      "name": "选项下拉框图标宽度",
+      "group": "下拉"
+    },
+    {
+      "attr": "ht.dropIconHeight",
+      "valueType": "PositiveNumber",
+      "name": "选项下拉框图标高度"
+    },
+    {
+      "attr": "ht.dropWidth",
+      "valueType": "PositiveNumber",
+      "name": "下拉框宽度"
+    },
+    {
+      "attr": "ht.dropBackground",
+      "valueType": "Color",
+      "name": "下拉框背景"
+    },
+    {
+      "attr": "ht.dropLabelFont",
+      "valueType": "Font",
+      "name": "下拉框文本字体"
+    },
+    {
+      "attr": "ht.dropLabelColor",
+      "valueType": "Color",
+      "name": "下拉框文本颜色"
+    },
+    {
+      "attr": "ht.dropActiveLabelColor",
+      "valueType": "Color",
+      "name": "下拉框选中文本色"
+    },
+    {
+      "attr": "ht.dropActiveBackground",
+      "valueType": "Color",
+      "name": "下拉框选中背景"
+    },
+    {
+      "attr": "ht.dropDownSyncZoom",
+      "valueType": "Boolean",
+      "name": "同步缩放"
+    },
+    {
+      "attr": "ht.textDisableColor",
+      "valueType": "Color",
+      "name": "选项禁用颜色"
+    },
+    {
+      "attr": "ht.dropBoxBorderWidth",
+      "valueType": "PositiveNumber",
+      "name": "盒子边框宽度"
+    },
+    {
+      "attr": "ht.dropBoxBorderColor",
+      "valueType": "Color",
+      "name": "盒子边框颜色"
+    },
+    {
+      "attr": "ht.dropBoxBorderType",
+      "valueType": "String",
+      "name": "盒子边框样式",
+      "extraInfo": {
+        "enum": {
+          "values": [
+            "dotted",
+            "solid",
+            "double",
+            "dashed"
+          ]
+        }
+      }
+    },
+    {
+      "attr": "ht.dropBoxBorderRadius",
+      "valueType": "PositiveNumber",
+      "name": "盒子角度"
+    },
+    {
+      "attr": "ht.scrollSpeed",
+      "valueType": "PositiveNumber",
+      "name": "滚动速度"
+    }
+  ],
+  "snapshotURL": "symbols/system/功能/vector/snapshot/comboBox.json",
+  "width": 160,
+  "height": 32,
+  "boundExtend": 2,
+  "fitSize": true,
+  "interactive": true,
+  "disableSelectedBorder": true,
+  "pixelPerfect": false,
+  "attachStyle": "close",
+  "comps": [
+    {
+      "type": "components/system/vector/ui/comboBox.json",
+      "displayName": "comboBox",
+      "rect": [
+        0,
+        0,
+        160,
+        32
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.comboBoxInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.comboBoxInteractor.onUp.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.comboBoxInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.comboBoxInteractor.onLeave.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.comboBoxInteractor.onDrag.apply(this, arguments);\n}",
+      "value": {
+        "func": "attr@ht.value"
+      },
+      "placeholder": {
+        "func": "attr@ht.placeholder"
+      },
+      "placeholderColor": {
+        "func": "attr@ht.placeholderColor"
+      },
+      "dataSource": {
+        "func": "attr@ht.dataSource"
+      },
+      "disabled": {
+        "func": "attr@ht.disabled"
+      },
+      "borderWidth": {
+        "func": "attr@ht.borderWidth"
+      },
+      "borderColor": {
+        "func": "attr@ht.borderColor"
+      },
+      "focusBorderColor": {
+        "func": "attr@ht.focusBorderColor"
+      },
+      "borderRadius": {
+        "func": "attr@ht.borderRadius"
+      },
+      "padding": {
+        "func": "attr@ht.padding"
+      },
+      "background": {
+        "func": "attr@ht.background"
+      },
+      "focusBackground": {
+        "func": "attr@ht.focusBackground"
+      },
+      "iconHeight": 20,
+      "font": {
+        "func": "attr@ht.font"
+      },
+      "textColor": {
+        "func": "attr@ht.textColor",
+        "value": "rgb(61,61,61)"
+      },
+      "disabledTextColor": null,
+      "dropDownIcon": {
+        "func": "attr@ht.dropDownIcon"
+      },
+      "dropDownIconColor": {
+        "func": "attr@ht.dropDownIconColor"
+      },
+      "dropDownIconWidth": {
+        "func": "attr@ht.dropDownIconWidth"
+      },
+      "dropDownIconHeight": {
+        "func": "attr@ht.dropDownIconHeight"
+      },
+      "drawUnMatchValue": {
+        "func": "attr@ht.drawUnMatchValue"
+      },
+      "searchInputVisible": {
+        "func": "attr@ht.searchInputVisible"
+      },
+      "onChange": {
+        "func": "attr@ht.onChange"
+      },
+      "dropIconWidth": {
+        "func": "attr@ht.dropIconWidth"
+      },
+      "dropIconHeight": {
+        "func": "attr@ht.dropIconHeight"
+      },
+      "dropWidth": {
+        "func": "attr@ht.dropWidth"
+      },
+      "dropBackground": {
+        "func": "attr@ht.dropBackground",
+        "value": null
+      },
+      "dropLabelFont": {
+        "func": "attr@ht.dropLabelFont"
+      },
+      "dropLabelColor": {
+        "func": "attr@ht.dropLabelColor"
+      },
+      "dropActiveLabelColor": {
+        "func": "attr@ht.dropActiveLabelColor"
+      },
+      "dropActiveBackground": {
+        "func": "attr@ht.dropActiveBackground"
+      },
+      "textDisableColor": {
+        "func": "attr@ht.textDisableColor",
+        "value": "rgb(207,21,21)"
+      },
+      "dropBoxBorderWidth": {
+        "func": "attr@ht.dropBoxBorderWidth",
+        "value": 0
+      },
+      "dropBoxBorderColor": {
+        "func": "attr@ht.dropBoxBorderColor"
+      },
+      "dropBoxBorderType": {
+        "func": "attr@ht.dropBoxBorderType"
+      },
+      "dropBoxBorderRadius": {
+        "func": "attr@ht.dropBoxBorderRadius"
+      },
+      "scrollSpeed": {
+        "func": "attr@ht.scrollSpeed"
+      }
+    }
+  ]
+}

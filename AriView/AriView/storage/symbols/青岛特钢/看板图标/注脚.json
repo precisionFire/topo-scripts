@@ -1,0 +1,53 @@
+{
+  "modified": "Mon Jun 30 2025 16:36:50 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "color",
+      "valueType": "Color",
+      "name": "颜色"
+    },
+    {
+      "attr": "text",
+      "valueType": "String",
+      "name": "文本"
+    }
+  ],
+  "width": 75,
+  "height": 15,
+  "comps": [
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@text",
+        "value": "计划指标"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(0,221,255)"
+      },
+      "pixelPerfect": true,
+      "rect": [
+        47.4995,
+        7.4995,
+        0.001,
+        0.001
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "attr@color",
+        "value": "#32D3EB"
+      },
+      "borderColor": "rgb(255,235,195)",
+      "pixelPerfect": true,
+      "rect": [
+        0,
+        5,
+        15,
+        5
+      ]
+    }
+  ]
+}

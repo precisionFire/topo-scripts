@@ -1,0 +1,73 @@
+{
+  "modified": "Sat Nov 11 2023 18:32:28 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "state",
+      "valueType": "String",
+      "name": "开关状态"
+    }
+  ],
+  "width": 37,
+  "height": 40,
+  "comps": [
+    {
+      "type": "shape",
+      "background": {
+        "func": "__ht__function(data, view) {\nif(data.a('state')=='True')\r\n{\r\nreturn 'rgb(2,212,89)';\r\n}\r\nelse if(data.a('state')=='True')\r\n{\r\nreturn 'rgb(217,28,28)';\r\n}\n}",
+        "value": "rgb(2,212,89)"
+      },
+      "points": [
+        36.97297,
+        18.6134,
+        18.4857,
+        27.67937,
+        0,
+        18.6134,
+        0,
+        39.09826,
+        18.4857,
+        30.03095,
+        36.97297,
+        39.09826,
+        36.97297,
+        18.6134,
+        36.97297,
+        18.6134
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "arc",
+      "background": "rgba(216,216,216,0)",
+      "borderWidth": 2,
+      "borderColor": "rgb(2,212,89)",
+      "rect": [
+        5.02116,
+        0.90174,
+        27.09927,
+        25.82581
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 2,
+      "borderColor": "rgb(2,212,89)",
+      "points": [
+        18.48649,
+        28.0141,
+        18.48649,
+        14.09826
+      ]
+    }
+  ]
+}

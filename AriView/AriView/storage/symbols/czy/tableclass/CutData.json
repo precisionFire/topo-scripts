@@ -1,0 +1,69 @@
+{
+  "modified": "Mon Dec 22 2025 11:04:42 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "rolltable",
+      "valueType": "Object",
+      "name": "剪前辊道集合",
+      "group": "辊道"
+    },
+    {
+      "attr": "backtable",
+      "valueType": "Object",
+      "name": "剪切辊道集合"
+    },
+    {
+      "attr": "coldtable",
+      "valueType": "Object",
+      "name": "冷床集合"
+    },
+    {
+      "attr": "linetable",
+      "valueType": "Object",
+      "name": "链条小车集合"
+    },
+    {
+      "attr": "eight",
+      "valueType": "Object",
+      "name": "8区"
+    },
+    {
+      "attr": "nine",
+      "valueType": "Object",
+      "name": "9区"
+    },
+    {
+      "attr": "ten",
+      "valueType": "Object",
+      "name": "10区"
+    },
+    {
+      "attr": "staytable",
+      "valueType": "Object",
+      "name": "暂存集合"
+    },
+    {
+      "attr": "steeltable",
+      "valueType": "Object",
+      "name": "横移集合"
+    },
+    {
+      "attr": "group",
+      "valueType": "Object",
+      "name": "班组"
+    },
+    {
+      "attr": "CALCUTLEN",
+      "valueType": "Object",
+      "name": "定尺设定"
+    },
+    {
+      "attr": "CollectHopper",
+      "valueType": "Object",
+      "name": "收集斗对象"
+    }
+  ],
+  "width": 1,
+  "height": 1,
+  "comps": []
+}

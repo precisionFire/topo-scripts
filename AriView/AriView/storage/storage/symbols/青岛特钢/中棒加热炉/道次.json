@@ -1,0 +1,143 @@
+{
+  "modified": "Fri Jun 06 2025 16:07:50 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "r1.RollPieceID",
+      "valueType": "String",
+      "defaultValue": "1",
+      "group": "roll"
+    },
+    {
+      "attr": "r2.RollPieceID",
+      "valueType": "String",
+      "defaultValue": "1"
+    },
+    {
+      "attr": "r3.RollPieceID",
+      "valueType": "String",
+      "defaultValue": "1"
+    },
+    {
+      "attr": "r1.lineColor",
+      "valueType": "Color"
+    },
+    {
+      "attr": "r2.lineColor",
+      "valueType": "Color",
+      "defaultValue": null
+    },
+    {
+      "attr": "r3.lineColor",
+      "valueType": "Color"
+    },
+    {
+      "attr": "rollnum1",
+      "valueType": "String",
+      "group": "mqtt",
+      "defaultValue": "1"
+    },
+    {
+      "attr": "rollnum2",
+      "valueType": "String",
+      "defaultValue": "1"
+    },
+    {
+      "attr": "rolltype1",
+      "valueType": "String",
+      "defaultValue": "1"
+    },
+    {
+      "attr": "rolltype2",
+      "valueType": "String",
+      "defaultValue": "1"
+    },
+    {
+      "attr": "message1",
+      "valueType": "String",
+      "defaultValue": "1"
+    },
+    {
+      "attr": "message2",
+      "valueType": "String",
+      "defaultValue": "1"
+    },
+    {
+      "attr": "rollcolor",
+      "valueType": "String"
+    },
+    {
+      "attr": "isGreen",
+      "valueType": "String"
+    },
+    {
+      "attr": "ht.onChange",
+      "valueType": "Function",
+      "extraInfo": {
+        "arguments": [
+          "state"
+        ]
+      }
+    },
+    {
+      "attr": "type",
+      "valueType": "String"
+    }
+  ],
+  "width": 300,
+  "height": 15,
+  "fitSize": true,
+  "interactive": true,
+  "comps": [
+    {
+      "type": "image",
+      "name": "symbols/青岛特钢/中棒加热炉/道次3.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('rolltype1')==3\n}"
+      },
+      "pixelPerfect": true,
+      "prefix": "r3",
+      "displayName": "道次3",
+      "rect": [
+        0,
+        0,
+        300,
+        15
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {console.log(3)\r\ndata.a('type', '3');}"
+    },
+    {
+      "type": "image",
+      "name": "symbols/青岛特钢/中棒加热炉/道次1.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('rolltype1')==1\n}"
+      },
+      "pixelPerfect": true,
+      "prefix": "r1",
+      "displayName": "道次1",
+      "rect": [
+        160,
+        0,
+        140,
+        15
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {console.log(1)\r\ndata.a('type', '1');\r\nconsole.log(data.a('type'))}"
+    },
+    {
+      "type": "image",
+      "name": "symbols/青岛特钢/中棒加热炉/道次2.json",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('rolltype1') == 2 || data.a('rolltype2') == 2\n}"
+      },
+      "pixelPerfect": true,
+      "prefix": "r2",
+      "displayName": "道次2",
+      "rect": [
+        0,
+        0,
+        140,
+        15
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {data.a('type', '2');}"
+    }
+  ]
+}

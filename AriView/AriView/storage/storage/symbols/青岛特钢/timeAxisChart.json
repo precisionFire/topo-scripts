@@ -1,0 +1,198 @@
+{
+  "modified": "Thu Jul 03 2025 14:59:02 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "ht.series",
+      "valueType": "Object",
+      "name": "系列"
+    },
+    {
+      "attr": "ht.xAxis",
+      "valueType": "Object",
+      "name": "横轴"
+    },
+    {
+      "attr": "ht.yAxis",
+      "valueType": "Object",
+      "name": "纵轴"
+    },
+    {
+      "attr": "ht.colors",
+      "valueType": "ColorArray",
+      "name": "颜色数组"
+    },
+    {
+      "attr": "ht.background",
+      "valueType": "Color",
+      "name": "背景"
+    },
+    {
+      "attr": "ht.backgroundIncludeAxis",
+      "valueType": "Boolean",
+      "name": "坐标轴背景"
+    },
+    {
+      "attr": "ht.tooltipFormatter",
+      "valueType": "Function",
+      "name": "提示格式化",
+      "extraInfo": {
+        "arguments": [
+          "info",
+          "time",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "tip1",
+      "valueType": "Object",
+      "name": "一号"
+    },
+    {
+      "attr": "tip2",
+      "valueType": "Object",
+      "name": "二号"
+    },
+    {
+      "attr": "tip3",
+      "valueType": "Object",
+      "name": "三号"
+    },
+    {
+      "attr": "tip4",
+      "valueType": "Object",
+      "name": "四号"
+    },
+    {
+      "attr": "tip5",
+      "valueType": "Object",
+      "name": "五号"
+    },
+    {
+      "attr": "tip6",
+      "valueType": "Object",
+      "name": "六号"
+    }
+  ],
+  "gridLightColor": "rgba(255,255,255,0.20)",
+  "width": 310,
+  "height": 220,
+  "fitSize": true,
+  "scrollable": true,
+  "interactive": true,
+  "pixelPerfect": false,
+  "comps": [
+    {
+      "type": "components/ht/chart/timeAxisChart.json",
+      "displayName": "timeAxisChart",
+      "rect": [
+        5,
+        31.15546,
+        300,
+        188.84454
+      ],
+      "onClick": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onClick.apply(this, arguments);\n}",
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.timeAxisChartInteractor.onScroll.apply(this, arguments);\n}",
+      "series": {
+        "func": "attr@ht.series",
+        "value": [
+          {
+            "type": "line",
+            "name": "温度",
+            "itemStyle": {
+              "size": 1
+            },
+            "data": [
+              [
+                1566291297491,
+                466
+              ],
+              [
+                1566291657491,
+                443
+              ],
+              [
+                1566292017491,
+                439
+              ],
+              [
+                1566292377491,
+                346
+              ],
+              [
+                1566292737491,
+                260
+              ],
+              [
+                1566293097491,
+                216
+              ],
+              [
+                1566293457491,
+                202
+              ],
+              [
+                1566293817491,
+                148
+              ],
+              [
+                1566294177491,
+                81
+              ],
+              [
+                1566294537491,
+                2
+              ]
+            ]
+          }
+        ]
+      },
+      "xAxis": {
+        "func": "attr@ht.xAxis"
+      },
+      "yAxis": {
+        "func": "attr@ht.yAxis"
+      },
+      "colors": {
+        "func": "attr@ht.colors"
+      },
+      "background": {
+        "func": "attr@ht.background"
+      },
+      "backgroundIncludeAxis": {
+        "func": "attr@ht.backgroundIncludeAxis"
+      },
+      "maxVisiblePoint": 300,
+      "tooltipFormatter": {
+        "func": "attr@ht.tooltipFormatter"
+      }
+    },
+    {
+      "type": "components/青岛特钢/chartLegend.json",
+      "displayName": "chartLegend",
+      "rect": [
+        0,
+        15,
+        310,
+        16.15546
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartLegendInteractor.onDown.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartLegendInteractor.onMove.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.chartLegendInteractor.onLeave.apply(this, arguments);\n}",
+      "dataSource": {
+        "func": "attr@ht.series"
+      },
+      "align": "center",
+      "vAlign": "middle"
+    }
+  ]
+}

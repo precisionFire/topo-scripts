@@ -1,0 +1,460 @@
+/*
+    李露龙 弹窗js
+    2023-08-30
+*/
+//属性
+//要订阅的点
+//获取传入信息
+
+
+var tag = GetQueryString("tag");
+var name = GetQueryString("name");
+// var _ListSubscribe = { "NumTag/OPCUA132/PM_IP2052_HT_PM01AG10_C": "138550" }
+var _ListSubscribe = {};
+_ListSubscribe[tag] = "";
+
+document.getElementById('tagFlag') ? document.getElementById('tagFlag').innerHTML = decodeURI(tag) || "未知" : '';
+document.getElementById('tagDesc') ? document.getElementById('tagDesc').innerHTML = decodeURI(name) || "未知" : '';
+
+$('body').append('<div id="loading" style="display:none;position:fixed;z-index:20202001;top:0;left:0;height:100%;width:100%;background: rgba(0,0,0,0.2) url(\'./Images/loading.gif\') no-repeat fixed center;"></div>');
+resizeShow();
+
+var chartDom = document.getElementById('main');
+var myChart = echarts.init(chartDom, 'dark');
+var option;
+
+function randomData() {
+  now = new Date(+now + oneDay);
+  value = Math.random() * 100 + Math.random() * 100;
+  return {
+    name: now.toString(),
+    value: [
+      [now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
+      Math.round(value)
+    ]
+  };
+}
+let chartData = [];
+let now = new Date();
+// let oneDay = 24 * 3600 * 1000;
+// let value = Math.random() * 100;
+// for (var i = 0; i < 1000; i++) {
+//   chartData.push(randomData());
+// }
+option = {
+  //backgroundColor:'green',
+  toolbox: {
+    right: 10,
+    feature: {
+      dataZoom: {
+        yAxisIndex: "none",
+      },
+      restore: {},
+      saveAsImage: {},
+    },
+  },
+  title: {
+    text: '历史数据趋势'
+  },
+  tooltip: {
+    trigger: 'axis',
+    formatter: function (params) {
+      params = params[0];
+      var date = new Date(params.value[0]);
+      return (
+        add0(date.getHours()) +
+        ':' +
+        add0(date.getMinutes()) +
+        ':' +
+        add0(date.getSeconds()) +
+        '\n' +
+        params.value[1]
+      );
+    },
+    axisPointer: {
+      animation: false
+    }
+  },
+  xAxis: {
+    type: 'time',
+    splitLine: {
+      show: true
+    },
+    axisLabel: {
+      show: true,
+      interval: 1,
+      formatter: (value, index) => {
+        return new Date(value).toLocaleTimeString() + "\n" + new Date(value).toLocaleDateString()
+      }
+    }
+  },
+  yAxis: {
+    type: 'value',
+    scale: true, //自适应
+    splitLine: {
+      show: true
+    }
+  },
+  series: [
+    {
+      name: 'Historical Data',
+      type: 'line',
+      showSymbol: false,
+      data: chartData,
+      lineStyle: {
+        //静态时显示状态
+        width: 0.7,  //设置折线粗细
+        opacity: 1, //设置透明度
+        color: 'red'
+        // color: new echarts.graphic.LinearGradient(
+        //   // (x1,y1) 点到点 (x2,y2) 之间进行渐变
+        //   0, 0, 1, 0,
+        //   [{
+        //     offset: 0,
+        //     color: '#ff0000'
+        //   }, // 0 起始颜色
+        //   {
+        //     offset: 0.5,
+        //     color: '#00ffff'
+        //   }, // 0 起始颜色
+        //   {
+        //     offset: 1,
+        //     color: '#0101FF'
+        //   } // 1 结束颜色
+        //   ]
+        // )
+      }
+    }
+  ],
+  grid: {
+    x: 100,
+    y: 35,
+    x2: 35,
+    y2: 35
+  },
+  dataZoom: {
+    type: 'inside'
+  }
+};
+function refreshData() {
+  $("#btnPauseStart").show();
+  var btn = document.getElementById("btnPauseStart");
+  btn.src = "Images/暂停.png";
+  btn.title = "暂停";
+  isStart = true;
+
+  var timeTemp = new Date(); //获得当前时间
+  document.getElementById("date").value = timeTemp.getFullYear() + "-" + ((timeTemp.getMonth() + 1) > 9 ? (timeTemp.getMonth() + 1) : "0" + (timeTemp.getMonth() + 1)) + "-" + (timeTemp.getDate() > 9 ? timeTemp.getDate() : "0" + timeTemp.getDate());
+  document.getElementById("time").value = (timeTemp.getHours() > 9 ? (timeTemp.getHours()) : "0" + (timeTemp.getHours())) + ":" + (timeTemp.getMinutes() > 9 ? timeTemp.getMinutes() : "0" + timeTemp.getMinutes() + ":" + add0(timeTemp.getSeconds()));
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  if (date && time) {
+    date = date + " " + time;
+  }
+  var timeLength = getTimeLength(document.getElementById("during").value);
+  var data = { dt: date, timeLenght: timeLength, tagCode: Object.keys(_ListSubscribe)[0] };
+  //历史数据
+  getHistoricalData(data);
+  //实时最新数据
+  getRealtimeData();
+}
+//var theInterval = setInterval(refreshData, 1000);
+//刷新最新值
+function pushNewData(value) {
+  // for (var i = 0; i < 5; i++) {
+  //   chartData.shift();
+  //   chartData.push(randomData());
+  // }
+  $('#loading').show();
+  now = new Date();
+  document.getElementById("date").value = now.getFullYear() + "-" + ((now.getMonth() + 1) > 9 ? (now.getMonth() + 1) : "0" + (now.getMonth() + 1)) + "-" + (now.getDate() > 9 ? now.getDate() : "0" + now.getDate());
+  document.getElementById("time").value = (now.getHours() > 9 ? (now.getHours()) : "0" + (now.getHours())) + ":" + (now.getMinutes() > 9 ? now.getMinutes() : "0" + now.getMinutes() + ":" + add0(now.getSeconds()));
+  var theData = { name: now.toString(), value: [[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/') + " " + [add0(now.getHours()), add0(now.getMinutes()), add0(now.getSeconds())].join(':'), parseFloat(value).toFixed(2)] };
+  //新值
+  chartData.push(theData);
+  var timeLenght = getTimeLength(document.getElementById("during").value);
+  bindData({ timeLenght: timeLenght });
+  $('#loading').hide();
+}
+
+//绑定图表数据
+function bindData(data) {
+  $('#loading').show();
+  var chartlength = chartData.length;
+  if (data.dt) {
+    //去掉超期的值
+    var lastDate = new Date();
+    lastDate = new Date(new Date(data.dt).setMinutes(new Date(data.dt).getMinutes() - data.timeLenght));
+    for (let index = 0; index < chartlength; index++) {
+      if (new Date(chartData[0].value[0]) <= lastDate) {
+        chartData.shift();
+      } else {
+        break;
+      }
+    }
+  } else {
+    for (let index = 0; index < chartlength; index++) {
+      if (new Date(chartData[0].value[0]) <= new Date(new Date((now.toDateString() + " " + now.toLocaleTimeString())).setMinutes(new Date((now.toDateString() + " " + now.toLocaleTimeString())).getMinutes() - data.timeLenght))) {
+        chartData.shift();
+      } else {
+        break;
+      }
+    }
+  }
+
+  if (chartData && chartData.length > 1 && chartData[chartData.length - 1].value)
+    document.getElementById('tagValue').innerHTML = chartData[chartData.length - 1].value[1];
+  myChart.setOption({
+    series: [
+      {
+        data: chartData
+      }
+    ]
+  });
+  $('#loading').hide();
+}
+
+option && myChart.setOption(option);
+
+function resizeShow() {
+  document.getElementById('box').style.height = document.documentElement.clientHeight + 'px';
+  document.getElementById('box').style.width = document.documentElement.clientWidth + 'px';
+  document.getElementById('main').style.height = document.documentElement.clientHeight * 0.87 + 'px';
+  document.getElementById('main').style.width = document.documentElement.clientWidth + 'px';
+  document.getElementById('ctrl').style.height = document.documentElement.clientHeight * 0.04 + 'px';
+  document.getElementById('ctrl').style.width = document.documentElement.clientWidth * 0.99 + 'px';
+  document.getElementById('topshow').style.height = document.documentElement.clientHeight * 0.04 + 'px';
+  document.getElementById('msgshow').style.height = document.documentElement.clientHeight * 0.03 + 'px';
+  document.getElementById('mar').style.height = document.documentElement.clientHeight * 0.02 / 2 + 'px';
+}
+
+window.addEventListener('resize', resizeShow);
+window.onresize = myChart.resize;
+
+
+
+
+// window.onload(TimeShow());
+setInterval(TimeShow, 1000);
+//时钟
+function TimeShow() {
+  var week = new Array("日", "一", "二", "三", "四", "五", "六");
+  var time = new Date(); //获得当前时间
+  document.getElementById("datetime").innerText = time.getFullYear() + "/" + (time.getMonth() + 1) + "/" + time.getDate() + " " + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + " 星期" + week[time.getDay()];
+}
+
+var isStart = true;
+function pauseorStartInterval() {
+  if (isStart) {
+    //停止订阅
+    for (var name in _ListSubscribe) {
+      client.unsubscribe(name);
+    }
+    var btn = document.getElementById("btnPauseStart");
+    btn.src = "Images/播放.png";
+    btn.title = "继续";
+    isStart = false;
+  } else {
+    //开始订阅
+    for (var name in _ListSubscribe) {
+      client.subscribe(name);
+    }
+    var btn = document.getElementById("btnPauseStart");
+    btn.src = "Images/暂停.png";
+    btn.title = "暂停";
+    isStart = true;
+  }
+
+  // if (theInterval) {
+  //   clearInterval(theInterval);
+  //   var btn = document.getElementById("btnPauseStart");
+  //   btn.src = "Images/播放.png";
+  //   btn.title = "继续";
+  //   theInterval = null;
+  // } else {
+  //   theInterval = setInterval(pushNewData, 1000);
+  //   var btn = document.getElementById("btnPauseStart");
+  //   btn.src = "Images/暂停.png";
+  //   btn.title = "暂停";
+  // }
+}
+
+//获取历史数据
+function getHistoricalData(data) {
+  $('#loading').show();
+  chartData = [];
+  $.ajaxSettings.async = false;
+  $.get(
+    "http://localhost:9000/api/admin/datahis/gettdhisdata",
+    data,
+    function (datas, status) {
+      //alert("数据: " + data + "\n状态: " + status);
+      if (status == "success") {
+        for (const [key, value] of Object.entries(datas.data)) {
+          //console.log(`Key: ${key}, Value: ${value}`);
+          var theDate = new Date(key);
+          var theData = { name: theDate.toString(), value: [[theDate.getFullYear(), theDate.getMonth() + 1, theDate.getDate()].join('/') + " " + [add0(theDate.getHours()), add0(theDate.getMinutes()), add0(theDate.getSeconds())].join(':'), parseFloat(value).toFixed(2)] };
+          chartData.push(theData);
+        }
+        bindData(data);
+      }
+    });
+  $('#loading').hide();
+  // $.ajax({
+  //   type: "get",
+  //   url: "http://localhost:9000/api/admin/datahis/gettdhisdata",
+  //   data: data,
+  //   dataType: "json",
+  //   crossDomain: true,
+  //   success:function(data) {
+  //     alert("数据: " + data + "\n状态: success");
+  //   }
+  // });
+}
+//获取当前实时数据
+//按照约定，30分钟及以内秒级数据，以上的是分钟数据
+function getRealtimeData() {
+  var t = "testmq" + getRandomString(5),
+    a = !1,
+    e = !1;
+
+  function i() {
+    if (a = !0, console.log("连接服务器成功"), !e) {
+      for (var t in _ListSubscribe) client.subscribe(t);
+      e = !0
+    }
+    window.onbeforeunload = function () {
+      for (var t in _ListSubscribe) client.unsubscribe(t)
+    }
+  }
+
+  function n() {
+    a || client.connect({
+      onSuccess: i,
+      cleanSession: !1,
+      useSSL: !1,
+      keepAliveInterval: 30,
+      timeout: 10
+    })
+  }
+  client = new Paho.MQTT.Client("172.15.87.112", 8083, t), n(), setInterval(n, 8e3), client.onConnectionLost = function (t) {
+    0 !== t.errorCode && (console.log("连接已断开"), a = !1)
+  }, client.onMessageArrived = function (t) {
+    try {
+      var a = t.destinationName;
+      a in _ListSubscribe && (_ListSubscribe[a] = t.payloadString), pushNewData(t.payloadString)
+    } catch (t) {
+      console.log("ERROR1:" + t), console.log(a + ":" + value)
+    }
+  }
+}
+
+
+function getRandomString(t) {
+  var s = "abacdefghjklmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789",
+    a = s.length - 1,
+    e = "";
+  t = t || 15;
+  for (var i, n = 0; n < t; n++) i = (i = function (t, a, e, i) {
+    var n = Math.floor(Math.random() * (a - t + 1) + t);
+    return n = 0 == e && s.length - 10 <= n ? i(t, a, e, i) : n
+  })(0, a, n, i), e += s[i];
+  return e
+}
+
+refreshData();
+
+
+//查询按钮
+function searchData() {
+  $("#btnPauseStart").hide();
+  //先停止订阅
+  for (var name in _ListSubscribe) {
+    client.unsubscribe(name);
+  }
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  if (date && time) {
+    date = date + " " + time;
+  }
+  var timeLenght = getTimeLength(document.getElementById("during").value);
+
+  var data = { dt: date, timeLenght: timeLenght, tagCode: Object.keys(_ListSubscribe)[0] };
+  getHistoricalData(data);
+}
+//上一周期
+function lastData() {
+  $("#btnPauseStart").hide();
+  //先停止订阅
+  for (var name in _ListSubscribe) {
+    client.unsubscribe(name);
+  }
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  if (date && time) {
+    date = date + " " + time;
+  }
+  var timeLength = getTimeLength(document.getElementById("during").value);
+  date = new Date(new Date(date).setMinutes(new Date(date).getMinutes() - timeLength)).toLocaleDateString() + " " + new Date(new Date(date).setMinutes(new Date(date).getMinutes() - timeLength)).toLocaleTimeString();
+  document.getElementById("date").value = new Date(date).getFullYear() + "-" + add0(new Date(date).getMonth() + 1) + "-" + add0(new Date(date).getDate());
+  document.getElementById("time").value = add0(new Date(date).getHours()) + ":" + add0(new Date(date).getMinutes()) + ":" + add0(new Date(date).getSeconds());
+  var data = { dt: date, timeLenght: timeLength, tagCode: Object.keys(_ListSubscribe)[0] };
+  getHistoricalData(data);
+}
+//下一周期
+function nextData() {
+  $("#btnPauseStart").hide();
+  //先停止订阅
+  for (var name in _ListSubscribe) {
+    client.unsubscribe(name);
+  }
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+  if (date && time) {
+    date = date + " " + time;
+  }
+  var timeLength = getTimeLength(document.getElementById("during").value);
+  date = new Date(new Date(date).setMinutes(new Date(date).getMinutes() + timeLength)).toLocaleDateString() + " " + new Date(new Date(date).setMinutes(new Date(date).getMinutes() + timeLength)).toLocaleTimeString();
+  document.getElementById("date").value = new Date(date).getFullYear() + "-" + add0(new Date(date).getMonth() + 1) + "-" + add0(new Date(date).getDate());
+  document.getElementById("time").value = add0(new Date(date).getHours()) + ":" + add0(new Date(date).getMinutes()) + ":" + add0(new Date(date).getSeconds());
+  var data = { dt: date, timeLenght: timeLength, tagCode: Object.keys(_ListSubscribe)[0] };
+  getHistoricalData(data);
+}
+//根据选择获取间隔分钟
+function getTimeLength(type) {
+  var timeLenght = 0;
+  switch (type) {
+    case "1":
+      timeLenght = 10;
+      break;
+    case "2":
+      timeLenght = 30;
+      break;
+    case "3":
+      timeLenght = 60;
+      break;
+    case "4":
+      timeLenght = 360;
+      break;
+    case "5":
+      timeLenght = 720;
+      break;
+    case "6":
+      timeLenght = 1440;
+      break;
+    default:
+      break;
+  }
+  return timeLenght;
+}
+
+//修改月、天的格式，保持两位数显示
+function add0(m) {
+  return m < 10 ? '0' + m : m
+}
+//获取地址栏参数
+function GetQueryString(name) {
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+  var r = window.location.search.substr(1).match(reg);
+  if (r != null) return unescape(r[2]); return null;
+}

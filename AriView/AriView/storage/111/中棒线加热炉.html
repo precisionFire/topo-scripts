@@ -1,0 +1,599 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Preview Display</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <link rel="shortcut icon" href="custom/images/favicon.ico" />
+        <link rel="stylesheet" href="css/dialog_.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-icons.css">
+        <style>
+            html, body {
+                padding: 0px;
+                margin: 0px;
+            }
+        </style>
+
+        <script src='../custom/configs/htconfig.js'></script>
+        <script src='../custom/libs/echarts.js'></script>
+        <script src='../libs/core/opKY8JbGNLng.js'></script>
+        <script src='../libs/core/eCTP6EBBtjcC.js'></script>
+        <script src='../libs/core/ht.js'></script>
+        <script src='../libs/core/buckle.js'></script>
+        <script src='../libs/plugin/ht-edgetype.js'></script>
+        <script src='../libs/plugin/ht-obj.js'></script>
+		<script src='../libs/plugin/ht-form.js'></script>
+        <script src='../libs/plugin/ht-textureLoader.js'></script>
+        <script src='../libs/plugin/ht-fbx.js'></script>
+		<script src='../libs/plugin/ht-cssanimation.js'></script>
+		<script src='../libs/plugin/ht-dialog.js'></script>
+		<script src='../libs/plugin/ht-ui.js'></script>
+        <script src='../libs/plugin/ht-vector.js'></script>
+        <script src='../libs/plugin/ht-contextmenu.js'></script>
+		<script src='../libs/plugin/ht-flow.js'></script>
+		<script src='../libs/plugin/ht-dashflow.js'></script>
+		<script src='../libs/plugin/ht-drawing.js'></script>
+		<script src='../libs/plugin/ht-wireflow.js'></script>
+        <script src='../libs/plugin/ht-interactive.js'></script>
+        <script src='../libs/plugin/ht-anime.js'></script>
+        <script src='../libs/jquery.min.js'></script>
+        <script src='../libs/mqttws31.min.js'></script>
+        <script src='../libs/sbind.js'></script>
+		<script src='../libs/DialogView.js'></script>
+		<script src='../libs/ConflictDialog.js'></script>
+		<script type="module" src='../libs/DialogMain.js'></script>
+		<script src='../libs/PopupManager.js'></script>
+		<script src='../libs/WillInOutPopup.js'></script>
+        <script src='js/bootstrap.bundle.min.js'></script>
+    	<script src='js/dialog_.js'></script>
+	
+
+<script>
+    var dataModel, graphView;
+
+    // 页面加载完成后隐藏加载动画
+    $(window).load(function () {
+        $(".loading").fadeOut()
+    });
+
+    // DOM就绪后初始化页面
+    $(function () {
+        // 初始化数据模型和图形视图
+        dataModel = new ht.DataModel();
+        graphView = new ht.graph.GraphView(dataModel);
+        graphView.addToDOM();
+        
+        // 获取tag参数
+        var url = getParam('tag');
+        
+        // 反序列化图形视图
+        graphView.deserialize(url, function (json, dm, gv, datas) {
+            BindDataToPage(dataModel);
+            graphView.enableToolTip();
+        });
+    });
+
+    // 通用参数获取函数（统一用于获取tag和token）
+    function getParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null)
+            return decodeURIComponent(r[2]);
+        return null;
+    }
+
+	/**
+	 * 获取 Token（统一入口，每次调用时从 localStorage 读取）
+	 * @returns {string|null}
+	 */
+	function getToken() {
+		return localStorage.getItem('Admin-Token');
+	}
+
+	/**
+	 * 401 统一处理（request / requestGet 共用）
+	 * - 清除过期 token
+	 * - 防止并发请求重复弹窗/跳转
+	 * - 可通过设置 window.__onUnauthorized 自定义回调
+	 */
+	var _unauthorizedHandled = false;
+	function handleUnauthorized() {
+		if (_unauthorizedHandled) return; // 防抖：多个请求同时 401 只处理一次
+		_unauthorizedHandled = true;
+
+		localStorage.removeItem('Admin-Token');
+		showToast('登录已过期，请重新登录');
+
+		// 自定义回调优先（例如跳转登录页、停止轮询等）
+		if (typeof window.__onUnauthorized === 'function') {
+			window.__onUnauthorized();
+		}
+	}
+
+	/**
+	 * 通用请求工具
+	 * @param {string} url 请求地址
+	 * @param {Object} [data={}] 请求参数
+	 * @param {string} [method="GET"] 请求方式 GET / POST / PUT
+	 * @param {string} [contentType] 
+	 *        可选：json / form / form-data
+	 *        不传：GET默认url参数，POST/PUT默认json
+	 * @param {boolean} [showMessage=true] 是否显示Toast消息，默认true
+	 * @returns {Promise}
+	 */
+	function request(url, data = {}, method = "GET", contentType, showMessage = true) {
+		const token = getToken();
+		const headers = {};
+		if (token) {
+			headers['Authorization'] = `Bearer ${token}`;
+		}
+
+		let fullUrl = url;
+		let fetchOpt = {
+			method: method.toUpperCase(),
+			headers: headers,
+			mode: "cors",
+			credentials: "omit"
+		};
+
+		// 1. GET 请求：参数拼在url上
+		if (fetchOpt.method === "GET") {
+			const query = new URLSearchParams(data).toString();
+			fullUrl = query ? `${url}?${query}` : url;
+		} 
+		// 2. POST / PUT 请求：区分三种内容类型
+		else if (fetchOpt.method === "POST" || fetchOpt.method === "PUT") {
+			switch (contentType) {
+			// 表单 urlencoded
+			case "form":
+				headers['Content-Type'] = 'application/x-www-form-urlencoded';
+				fetchOpt.body = new URLSearchParams(data);
+				break;
+
+			// form-data 上传文件
+			case "form-data":
+				const formData = new FormData();
+				Object.keys(data).forEach(key => {
+					formData.append(key, data[key]);
+				});
+				fetchOpt.body = formData;
+				// 禁止手动设置 Content-Type，浏览器自动带 boundary
+				delete headers['Content-Type'];
+				break;
+
+			// 默认：json 格式
+			default:
+				headers['Content-Type'] = 'application/json';
+				fetchOpt.body = JSON.stringify(data);
+			}
+		}
+
+		return fetch(fullUrl, fetchOpt)
+			.then(response => {
+				if (response.status === 401) {
+					handleUnauthorized();
+					throw new Error('Unauthorized');
+				}
+				if (!response.ok) throw new Error(`HTTP 错误! 状态码: ${response.status}`);
+				return response.json();
+			})
+			.then(res => {
+				if (res.Message && showMessage) showToast(res.Message);
+				return res;
+			})
+			.catch(err => {
+				if (err.message !== 'Unauthorized') {
+					console.error('请求失败：', err);
+					if (showMessage) showToast('请求失败，请稍后重试');
+				}
+				throw err;
+			});
+	}
+
+
+	// } onload='setTimeout(init, 300)'
+
+		/**
+		 * 发送GET请求的工具函数
+		 * 功能：封装了带查询参数、Token认证的GET请求，统一处理响应和错误
+		 * 
+		 * @param {string} url - 请求的基础URL地址（例如："https://api.example.com/users"）
+		 * @param {Object} [params={}] - 可选的查询参数对象，键值对形式
+		 *                               例如：{page: 1, limit: 10} 会转换为 "page=1&limit=10"
+		 * @param {number} [timeoutMs=15000] - 请求超时时间（毫秒）
+		 * @param {boolean} [showMessage=true] - 是否显示Toast消息，默认true
+		 * @returns {Promise} - 返回Promise对象，成功时 resolve 响应数据，失败时 reject 错误信息
+		 */
+		function requestGet(url, params = {}, timeoutMs = 15000, showMessage = true) {
+			const query = new URLSearchParams(params).toString();
+			const fullUrl = query ? `${url}?${query}` : url;
+
+			const token = getToken();
+			const headers = {
+				'Cache-Control': 'no-cache'  // 轮询场景防止浏览器缓存过期数据
+			};
+			if (token) {
+				headers['Authorization'] = `Bearer ${token}`;
+			}
+
+			// 超时保护：防止请求挂起影响轮询节奏
+			const controller = new AbortController();
+			const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+			return fetch(fullUrl, { headers, signal: controller.signal })
+				.then(response => {
+					if (response.status === 401) {
+						handleUnauthorized();
+						throw new Error('Unauthorized');
+					}
+					if (!response.ok) {
+						// 尝试读取服务端返回的错误详情，避免丢失业务错误信息
+						return response.text().then(body => {
+							let detail = body;
+							try {
+								const parsed = JSON.parse(body);
+								detail = parsed.message || parsed.msg || parsed.error || body;
+							} catch (_) { /* 非 JSON 文本，直接用原始内容 */ }
+							throw new Error(`HTTP ${response.status}: ${detail}`);
+						});
+					}
+					return response.json();
+				})
+				.then(data => {
+					return data;
+				})
+				.catch(error => {
+					if (error.message === 'Unauthorized') {
+						// 401 已由 handleUnauthorized 处理，静默跳过
+					} else if (error.name === 'AbortError') {
+						console.error('请求超时:', fullUrl);
+						if (showMessage) showToast('请求超时，请稍后重试');
+					} else {
+						console.error('请求失败:', error);
+						if (showMessage) showToast('请求失败，请稍后重试');
+					}
+					throw error;
+				})
+				.finally(() => {
+					clearTimeout(timeoutId);
+				});
+		}
+			
+		/**
+		 * 控制流动管道动画的函数
+		 * @param {number} [speedDirection=-3] - 流动速度方向和大小，正值向右流动，负值向左流动
+		 */
+		function startFlowAnimation(dm, speedDirection = -3) {
+			let i = 1;
+			setInterval(function () {
+				ht.Default.startAnim({
+					frames: 1,
+					interval: 100,
+					action: function (v, t) {
+						i += speedDirection;
+						dm.each(function (d) {
+							if (d.getDisplayName() === '流动管道') {
+								d.s('shape.dash.offset', i);
+							}
+						});
+					}
+				});
+			}, 50);
+		}
+		
+		/**
+		 * 更新滑动时间序列数据
+		 * @param {Array} seriesData - 原始序列数据（会被修改）
+		 * @param {Number} newValue - 新增的值
+		 * @param {Number} timeWindowMs - 滑动时间窗口（毫秒）
+		 * @param {Number} maxPoints - 最大点数
+		 * @returns {Array} 更新后的序列
+		 */
+		function updateTimeSeries(seriesData, newValue, timeWindowMs = 5 * 60 * 1000, maxPoints = 300) {
+			const timestamp = Date.now();
+
+			// 追加新数据
+			seriesData.push([timestamp, newValue]);
+
+			// 删除超出时间范围的
+			const cutoff = timestamp - timeWindowMs;
+			seriesData = seriesData.filter(item => item[0] >= cutoff);
+
+			// 限制最大点数
+			if (seriesData.length > maxPoints) {
+				seriesData = seriesData.slice(-maxPoints);
+			}
+
+			return seriesData;
+		}
+		
+		/**
+		 * 尝试为节点设置双击事件处理程序，用于打开历史数据对话框
+		 * 
+		 * 处理逻辑：
+		 * 1. 筛选出包含有效_dataBindings配置的节点
+		 * 2. 提取绑定配置中的ID信息
+		 * 3. 为仅存在单一有效绑定的节点注册双击事件
+		 * 4. 对多绑定节点输出警告信息
+		 * 
+		 * @param {Object} node - 待处理的节点对象
+		 * @param {string} node.getTag - 获取节点标签的方法
+		 * @param {Object} node._dataBindings - 数据绑定配置对象
+		 * @param {Function} node.setToolTip - 设置节点工具提示的方法
+		 * @param {Function} node.s - 设置节点事件处理程序的方法
+		 */
+		function trySetDoubleClickHandlerForNode(node) {
+			if (!node?.hasOwnProperty('_dataBindings')) {
+				// console.log(`[跳过] ${node.getTag() || '[无tag]'} 无 _dataBindings`);
+				return;
+			}
+
+			const bindings = node._dataBindings;
+			if (typeof bindings !== 'object') {
+				// console.log(`[跳过] ${node.getTag()} 的 _dataBindings 非对象`);
+				return;
+			}
+
+			let allBoundings = [];
+
+			for (const sectionKey in bindings) {
+				const section = bindings[sectionKey];
+				if (section && typeof section === 'object') {
+					for (const propKey in section) {
+						const cfg = section[propKey];
+						if (cfg && typeof cfg.id === 'string') {
+							allBoundings.push({ sectionKey, propKey, cfg });
+							//   console.log(`[绑定ID] 节点: ${node.getTag() || '[无tag]'} | 区域: ${sectionKey} | 属性: ${propKey} | ID: ${cfg.id}`);
+						}
+					}
+				}
+			}
+
+			if (allBoundings.length === 1) {
+				const bindingConfig = allBoundings[0].cfg;
+				const result = bindingConfig.id.split('/').pop();
+				// console.log(result); // 输出: CS_03_01_DI0104
+				node.setToolTip(bindingConfig.id);
+				node.s('onDoubleClick', function () {
+					//   console.log(`[双击事件触发] 节点: ${node.getTag() || '[无tag]'}，打开 ID: ${bindingConfig.id}`);
+					openHistoricalDialog(bindingConfig, node._toolTip);
+				});
+
+				// console.log(`[处理完成✔️] 节点 ${node.getTag() || '[无tag]'} 注册了单一绑定双击事件`);
+
+			} else if (allBoundings.length > 1) {
+				// console.log(`[多绑定⚠️] 节点 ${node.getTag() || '[无tag]'} 有多个绑定 ID`);
+				allBoundings.forEach((b, i) => {
+					//   console.log(`  [${i + 1}] ${b.sectionKey}.${b.propKey} -> ${b.cfg.id}`);
+				});
+			} else {
+				// console.log(`[无有效绑定ID] 节点 ${node.getTag() || '[无tag]'} 虽有 _dataBindings 但未包含 id`);
+			}
+		}
+		
+		// JSON过滤
+		function isValidJSON(str) {
+			try {
+				JSON.parse(str);
+				return true;
+			}catch(e) {
+				return false;
+			}
+		}
+		
+		/**
+		 * 批量更新图扑中 ht.Text 节点的显示名称为 点位名称 + "+" + 原显示名
+		 * @param {ht.DataModel} dm - 图扑的数据模型对象
+		 * @param {Array} mappingArray - 映射数组，格式为：[[绑定ID, 点位名称], ...]
+		 */
+		function prependPointNameToDisplayName(dm, mappingArray) {
+			if (!dm || !Array.isArray(mappingArray)) return;
+
+			const idToNameMap = new Map(mappingArray);
+
+			dm.getDatas().each(function (node) {
+				if (node instanceof ht.Text) {
+					const bindingId = node._dataBindings?.s?.text?.id;
+					if (typeof bindingId === 'string') {
+						const pointName = idToNameMap.get(bindingId);
+						if (pointName) {
+							const oldDisplayName = node.getDisplayName() || '';
+							const newDisplayName = `${pointName}+${oldDisplayName}`;
+
+							node.setDisplayName(newDisplayName);
+							node.a('text', newDisplayName);  // 图上显示内容
+						}
+					}
+				}
+			});
+		}
+
+		//消息提示
+		function showToast(message, duration = 1000) {
+			const toast = document.createElement('div');
+			toast.innerText = message;
+
+			Object.assign(toast.style, {
+				position: 'fixed',
+				top: '30px', // 顶部显示
+				left: '50%',
+				transform: 'translateX(-50%)',
+				background: 'linear-gradient(45deg, #1e90ff, #87cefa)', 
+				color: '#fff',
+				padding: '10px 24px',
+				borderRadius: '6px',
+				fontSize: '14px',
+				zIndex: 9999,
+				boxShadow: '0 2px 10px rgba(0, 0, 0, 0.3)',
+				opacity: '1',
+				transition: 'opacity 0.3s ease',
+				pointerEvents: 'none',
+				maxWidth: '80%',
+				textAlign: 'center',
+			});
+
+			document.body.appendChild(toast);
+
+			// 1秒后淡出
+			setTimeout(() => {
+				toast.style.opacity = '0';
+				setTimeout(() => {
+					toast.remove();
+				}, 300); // 动画持续时间
+			}, duration);
+		}
+
+
+   function openHistoricalDialog(tag, name, tagid) {
+    
+	let tagCode;
+	
+	function typeVar (tag) {
+		if (typeof tag === 'object') {
+			let key = Object.keys(tag)[0]
+			return tag[key]
+		}
+		if (typeof tag === 'string') return tag;
+	}
+	
+	if (isValidJSON(tag)) {
+		tagCode = JSON.parse(tag);
+		tagCode = typeVar(tag);
+	}
+	
+	tagCode = typeVar(tag);
+	
+	console.log(tagCode)
+	
+    if (false) {
+        // 不启用，但保留 以防后续需求变更
+        window.open(
+            'HistoricalDataDialog/DataDialog.html?tag=' + encodeURI(encodeURI(tagCode)) + '&name=' + encodeURI(encodeURI(name)) + '&tagid=' + encodeURI(encodeURI(tagid)),
+            'theDialog',
+            'height=600,width=1200,top=80,toolbar=no,menubar=no, scrollbars=no,resizable=no,location=no, status=no'
+        )
+    } else {
+        // 设计路径
+          let url = window.location.origin + '/static/AriView/custom/HistoricalDataDialog/newDataDialog.html?tag=' + encodeURI(encodeURI(tagCode)) + '&name=' + encodeURI(encodeURI(name)) + '&tagid=' + encodeURI(encodeURI(tagid));
+        /* const modal = new window.Modal({ title: name, pageUrl: url, tag: tag })
+        modal.init()
+        modal.registerEvent()
+		*/
+		// let url = `${window.location.origin}` + '/static/AriView/custom/HistoricalDataDialog/test.html'
+		console.log(url)
+		 const dialogTitle = name || "历史趋势";
+        //let tag_ = "NumTag/WeightInFurFlat/扁钢称重/Flat_ Furnace_Weight1"
+        // const url = `${window.location.origin}/HistoricalDataDialog/newDataDialog.html?tag=${encodeURI(encodeURI(tag_))}&name=${encodeURI(name)}`;
+        openModalWithIframe(url, dialogTitle);
+
+        function openModalWithIframe(url, title) {
+            // 检查是否已存在模态框，存在则重用
+            if (document.getElementById('myModal')) {
+                document.getElementById('iframe').src = url;
+                document.getElementById('myModalLabel').textContent = title;
+                const modal = new bootstrap.Modal(document.getElementById('myModal'));
+                  
+                modal.show();
+                return;
+            }
+
+            // 创建模态框HTML
+            const modalHTML = `
+          <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header" style="padding: 0.3rem 1rem;">
+                  <h5 class="modal-title" id="myModalLabel">${title}</h5>
+                 <!--  <span id="datetime" class="ms-3" style="font-size:16px;">--:--</span> -->
+                 <!-- <button type="button" class="btn btn-sm btn-outline-secondary ms-2" id="fullscreenBtn">
+                    <i class="bi bi-arrows-fullscreen"></i>
+                  </button> -->
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="关闭" style="font-size: 1rem;"></button>
+                </div>
+                <div class="modal-body" style="height:600px;padding-top: 0;padding-bottom:0;">
+                  <iframe id="iframe" src='${url}" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+               <!-- <div id="resizer" style="width: 15px; height: 15px; position: absolute; right: 0; bottom: 0; cursor: se-resize;"></div> -->
+              </div>
+            </div>
+          </div>
+          `;
+
+            // 添加模态框到DOM
+            const container = document.createElement('div');
+            container.innerHTML = modalHTML;
+            document.body.appendChild(container);
+
+            // 显示模态框
+            const modal = new bootstrap.Modal(document.getElementById('myModal'));
+            modal.show();
+        }
+    } 
+}
+                dataModel = new ht.DataModel();
+                graphView = new ht.graph.GraphView(dataModel);
+                graphView.addToDOM();
+function changPage(url, callBack = undefined) {
+            graphView.dm().clear()
+            graphView.deserialize(url, function (json, dm, gv, datas) {
+                callBack && callBack(json, dm, gv, datas)
+            });
+        }
+           
+		   function init() {
+	graphView.enableToolTip();
+
+                graphView.deserialize('displays/DaYeTeGang/中棒线加热炉.json', function(json, dm, gv, datas) {
+		        BindDataToPage(dataModel);		
+                    if(json.title) document.title = json.title;
+                    if (json.a['json.background']) {
+                        var bgJSON = json.a['json.background'];
+                        if (bgJSON.indexOf('displays') === 0) {
+                            var bgGv = new ht.graph.GraphView();
+                            bgGv.deserialize(bgJSON);
+                            bgGv.addToDOM();
+                            graphView.addToDOM(bgGv.getView());
+                        }
+                        else if (bgJSON.indexOf('scenes') === 0) {
+                            var bgG3d = new ht.graph3d.Graph3dView();
+                            bgG3d.deserialize(bgJSON);
+                            bgG3d.addToDOM();
+                            graphView.addToDOM(bgG3d.getView());
+                        }
+                        graphView.handleScroll = function() {};
+                    }
+                });
+            } 
+</script>
+
+<body>
+
+	<script type="text/javascript">
+
+		var html = $(".wrap ul").html()
+		if (html) {
+			$(".wrap ul").append(html)
+			var ls = ($(".wrap ul li").length / 2 + 1);
+			i = 0
+			ref = setInterval(function () {
+				if (ls == 1 && $(".wrap ul li").length > 0) {
+					var html = $(".wrap ul").html()
+					$(".wrap ul").append(html)
+					ls = ($(".wrap ul li").length / 2 + 1);
+				}
+				i++
+				if (i == ls) {
+					i = 1
+					$(".wrap ul").css({ marginTop: 0 })
+					$(".wrap ul").animate({ marginTop: -'63' * i + 'px' }, 1000)
+				}
+				$(".wrap ul").animate({ marginTop: -'63' * i + 'px' }, 1000)
+			}, 2500);
+		}
+	</script>
+
+    <body onload='setTimeout(init, 300)'>
+</body>
+
+</html>

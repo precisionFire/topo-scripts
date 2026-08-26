@@ -1,0 +1,43 @@
+{
+  "modified": "Wed Jul 02 2025 13:53:31 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "rollPieceID",
+      "valueType": "String"
+    }
+  ],
+  "width": 420,
+  "height": 65,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "image",
+      "color": "rgb(255,209,161)",
+      "name": "assets/20250611_0953_轧纹金属铁条_simple_compose_01jxeazcf5fserm076zwb5qxje.png",
+      "pixelPerfect": true,
+      "displayName": "20250611_0953_轧纹金属铁条_simple_compose_01jxeazcf5fserm076zwb5qxje",
+      "rect": [
+        -9.45767,
+        -123.54452,
+        438.91534,
+        312.08903
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@rollPieceID",
+        "value": "文本"
+      },
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "14px arial, sans-serif",
+      "rect": [
+        136.49345,
+        7.5,
+        147.0131,
+        50
+      ]
+    }
+  ]
+}

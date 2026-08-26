@@ -1,0 +1,64 @@
+{
+  "modified": "Mon Jul 07 2025 16:14:13 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "ht.value",
+      "valueType": "String",
+      "name": "NumPaneContent"
+    },
+    {
+      "attr": "ht.textAlign",
+      "valueType": "Align",
+      "name": "TBTextAlign"
+    },
+    {
+      "attr": "ht.gap",
+      "valueType": "PositiveNumber",
+      "name": "NumPaneGap"
+    },
+    {
+      "attr": "ht.color",
+      "valueType": "Color",
+      "name": "TBColor"
+    },
+    {
+      "attr": "ht.digit",
+      "valueType": "PositiveNumber",
+      "name": "NumPaneDigitCount"
+    }
+  ],
+  "width": 200,
+  "height": 24,
+  "boundExtend": 20,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "components/textBox/numberPane.json",
+      "displayName": "numberPane",
+      "rect": [
+        0,
+        0,
+        200,
+        24
+      ],
+      "value": {
+        "func": "attr@ht.value",
+        "value": "9266.5"
+      },
+      "textAlign": {
+        "func": "attr@ht.textAlign"
+      },
+      "gap": {
+        "func": "attr@ht.gap"
+      },
+      "color": {
+        "func": "attr@ht.color"
+      },
+      "iconHeight": 18,
+      "digitCount": {
+        "func": "attr@ht.digit"
+      },
+      "fixed": 1
+    }
+  ]
+}

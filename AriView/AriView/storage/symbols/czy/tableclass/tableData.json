@@ -1,0 +1,76 @@
+{
+  "modified": "Fri Nov 07 2025 22:52:56 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "rolltable",
+      "valueType": "Object"
+    },
+    {
+      "attr": "rolltable1",
+      "valueType": "Object"
+    },
+    {
+      "attr": "chan1",
+      "valueType": "Object"
+    },
+    {
+      "attr": "chan2",
+      "valueType": "Object"
+    },
+    {
+      "attr": "chan3",
+      "valueType": "Object"
+    },
+    {
+      "attr": "ge1",
+      "valueType": "Object"
+    },
+    {
+      "attr": "ge2",
+      "valueType": "Object"
+    },
+    {
+      "attr": "ge3",
+      "valueType": "Object"
+    },
+    {
+      "attr": "ge4",
+      "valueType": "Object"
+    },
+    {
+      "attr": "ge5",
+      "valueType": "Object"
+    },
+    {
+      "attr": "tingji",
+      "valueType": "Object"
+    },
+    {
+      "attr": "chanliang",
+      "valueType": "Object"
+    },
+    {
+      "attr": "diamtext1",
+      "valueType": "Object"
+    },
+    {
+      "attr": "diamtext2",
+      "valueType": "Object"
+    },
+    {
+      "attr": "CALCUTLEN",
+      "valueType": "Object"
+    },
+    {
+      "attr": "War",
+      "valueType": "Object"
+    },
+    {
+      "attr": "isWar",
+      "valueType": "Object"
+    }
+  ],
+  "width": 1,
+  "height": 1,
+  "comps": []
+}

@@ -1,0 +1,360 @@
+{
+  "modified": "Mon Jun 30 2025 15:37:14 GMT+0800 (GMT+08:00)",
+  "background": "rgb(0,0,0)",
+  "dataBindings": [
+    {
+      "attr": "unit",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "name",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "color",
+      "valueType": "Object",
+      "name": "圆环渐变色",
+      "description": "圆环渐变色"
+    },
+    {
+      "attr": "per",
+      "valueType": "String"
+    },
+    {
+      "attr": "value",
+      "valueType": "String"
+    }
+  ],
+  "animation": {
+    "v": "0.22",
+    "1737096054421802": {
+      "未命名_0": {
+        "s_angle": [
+          0,
+          6.28319,
+          0,
+          0,
+          300,
+          0,
+          0,
+          0
+        ],
+        "r": true,
+        "e": 300
+      }
+    },
+    "1737096226388529": {
+      "未命名_0": {
+        "s_angle": [
+          0,
+          0,
+          0,
+          0,
+          300,
+          6.28319,
+          0,
+          0
+        ],
+        "r": true,
+        "e": 300
+      }
+    }
+  },
+  "width": 100,
+  "height": 120,
+  "comps": [
+    {
+      "type": "image",
+      "name": "symbols/tenant/shjz-gczndpsj/圆2.json",
+      "prefix": "1737096054421802",
+      "displayName": "圆2",
+      "rotation": 0.00754,
+      "rect": [
+        4.53207,
+        4.08796,
+        90.93587,
+        91.82408
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/tenant/shjz-gczndpsj/圆1.json",
+      "prefix": "1737096226388529",
+      "displayName": "圆1",
+      "rotation": 6.27565,
+      "rect": [
+        17.33073,
+        17.06725,
+        65.33854,
+        65.86551
+      ]
+    },
+    {
+      "type": "shape",
+      "dash": true,
+      "dashPattern": [
+        0.5,
+        1
+      ],
+      "dashOffset": 1,
+      "dashColor": "#6ed7ff",
+      "dashWidth": 0.5,
+      "pixelPerfect": true,
+      "opacity": 0.8,
+      "scaleX": 0.72,
+      "scaleY": 0.72,
+      "points": [
+        97.65652,
+        50,
+        97.65652,
+        23.60106,
+        76.14357,
+        1.87799,
+        49.99998,
+        1.87799,
+        23.85639,
+        1.87799,
+        2.34347,
+        23.60106,
+        2.34347,
+        50,
+        2.34347,
+        76.39895,
+        23.85639,
+        98.12201,
+        49.99998,
+        98.12201,
+        76.14357,
+        98.12201,
+        97.65652,
+        76.39895,
+        97.65652,
+        50
+      ],
+      "segments": [
+        1,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.99901,
+      "borderColor": "#4078ff",
+      "pixelPerfect": true,
+      "opacity": 0.2,
+      "prefix": "1737096021718485",
+      "scaleX": 0.738,
+      "scaleY": 0.738,
+      "points": [
+        105.51461,
+        50,
+        105.51461,
+        19.24811,
+        80.45443,
+        -6.05684,
+        50.00003,
+        -6.05684,
+        19.54559,
+        -6.05684,
+        -5.51461,
+        19.24811,
+        -5.51461,
+        50,
+        -5.51461,
+        80.75187,
+        19.54559,
+        106.05684,
+        50.00003,
+        106.05684,
+        80.45443,
+        106.05684,
+        105.51461,
+        80.75187,
+        105.51461,
+        50
+      ],
+      "segments": [
+        1,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        1,
+        0.77395,
+        0.05533,
+        0.28062,
+        0,
+        "rgba(112,186,255,0.6)",
+        0.30275,
+        "rgba(118, 159, 220, 0)",
+        1,
+        "rgba(123,152,227,0.5)"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.89,
+      "scaleX": 0.738,
+      "scaleY": 0.738,
+      "points": [
+        18.49545,
+        88.41909,
+        -0.89826,
+        69.67653,
+        -1.65063,
+        38.16674,
+        16.826,
+        18.50216,
+        35.30264,
+        -1.1624,
+        66.50406,
+        -2.05935,
+        86.05871,
+        16.51194
+      ],
+      "segments": [
+        1,
+        4,
+        4,
+        5
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@unit",
+        "value": "%"
+      },
+      "align": "center",
+      "color": "rgb(147,178,219)",
+      "font": "13px sans-serif",
+      "pixelPerfect": true,
+      "scaleX": 0.72,
+      "scaleY": 0.72,
+      "rect": [
+        43.52017,
+        57.73968,
+        14.62748,
+        16.88039
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/tenant/shjz-gczndpsj/背景_01.json",
+      "displayName": "背景",
+      "scaleX": 0.32,
+      "rect": [
+        3.02141,
+        100,
+        140.625,
+        20
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/tenant/shjz-gczndpsj/背景_01.json",
+      "displayName": "背景",
+      "scaleX": -0.32,
+      "rect": [
+        -41.97859,
+        100,
+        140.625,
+        20
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(61,148,255,0)",
+      "borderColor": "#979797",
+      "gradient": "radial.center",
+      "gradientColor": "rgba(158,239,255,0.7)",
+      "layoutH": "center",
+      "layoutV": "bottom",
+      "scaleX": 4,
+      "scaleY": 0.03,
+      "rect": [
+        39.71127,
+        112.4097,
+        22.24528,
+        14.73845
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@name",
+        "value": "生产水"
+      },
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgb(255,255,255)",
+        1,
+        "rgba(255,255,255,0.6)"
+      ],
+      "font": "14px arial",
+      "layoutH": "center",
+      "layoutV": "top",
+      "rect": [
+        23.6641,
+        102,
+        54.33962,
+        17.90169
+      ]
+    },
+    {
+      "type": "components/tenant/shjz-gczndpsj/circleProcess.json",
+      "displayName": "circleProcess",
+      "rotation": 1.5708,
+      "rect": [
+        20.14851,
+        20.14852,
+        59.70297,
+        59.70297
+      ],
+      "linearOuter": {
+        "func": "attr@color",
+        "value": [
+          0,
+          "#67ebff",
+          1,
+          "#1f9dff"
+        ]
+      },
+      "progressLineCap": "round",
+      "progressPercentage": {
+        "func": "attr@per"
+      }
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@value",
+        "value": "60"
+      },
+      "align": "center",
+      "color": "#ffffff",
+      "font": "bold 20px Arial",
+      "rect": [
+        24.99999,
+        32.88893,
+        50,
+        31.15765
+      ]
+    }
+  ]
+}

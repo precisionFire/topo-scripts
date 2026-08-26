@@ -1,0 +1,47 @@
+{
+  "modified": "Thu Jul 13 2023 13:55:21 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "flow",
+      "valueType": "Number",
+      "name": "流量",
+      "defaultValue": 0
+    },
+    {
+      "attr": "pressure",
+      "valueType": "Number",
+      "name": "压力",
+      "defaultValue": 0
+    }
+  ],
+  "rulerEnabled": false,
+  "width": 17,
+  "height": 60,
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/设备/放散塔/icon_fire.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('flow')>0;\n}"
+      },
+      "displayName": "放散火苗",
+      "rect": [
+        2.45579,
+        0.33995,
+        12.08842,
+        16.62158
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/设备/放散塔/icon_FST.svg",
+      "displayName": "放散塔",
+      "rect": [
+        1.15446,
+        16.96152,
+        14.69108,
+        42.60414
+      ]
+    }
+  ]
+}

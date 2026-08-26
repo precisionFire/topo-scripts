@@ -1,0 +1,57 @@
+{
+  "modified": "Wed Apr 01 2026 16:45:45 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "name",
+      "valueType": "String"
+    },
+    {
+      "attr": "isvisible",
+      "valueType": "String",
+      "defaultValue": "True"
+    },
+    {
+      "attr": "color",
+      "valueType": "Color"
+    }
+  ],
+  "width": 40,
+  "height": 90,
+  "fitSize": true,
+  "visible": {
+    "func": "__ht__function(data, view) {\nreturn data.a('isvisible') == \"True\";\n}"
+  },
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/Ariimg/青岛特钢图片/立轧机3.png",
+      "pixelPerfect": true,
+      "displayName": "立轧机",
+      "rect": [
+        0,
+        0,
+        40,
+        90
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@name",
+        "value": "文本"
+      },
+      "align": "center",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(0,0,0)"
+      },
+      "font": "bold 10px sans-serif, Arial",
+      "rect": [
+        19.99,
+        43.99,
+        0.01,
+        0.01
+      ]
+    }
+  ]
+}

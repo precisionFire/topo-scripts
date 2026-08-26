@@ -1,0 +1,30 @@
+{
+  "modified": "Mon May 19 2025 18:12:33 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "isvisible",
+      "valueType": "String",
+      "defaultValue": "True"
+    }
+  ],
+  "width": 20,
+  "height": 15,
+  "fitSize": true,
+  "visible": {
+    "func": "__ht__function(data, view) {\nreturn data.a('isvisible') == \"True\";\n}"
+  },
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/Ariimg/青岛特钢图片/活套.png",
+      "pixelPerfect": true,
+      "displayName": "活套",
+      "rect": [
+        0,
+        0,
+        20,
+        15
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "modified": "Fri Jun 13 2025 15:06:18 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "time",
+      "valueType": "String"
+    }
+  ],
+  "width": 175,
+  "height": 35,
+  "comps": [
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@time",
+        "value": "2025-06-13 15:03:49"
+      },
+      "color": "rgb(255,255,255)",
+      "font": "18px arial, sans-serif",
+      "rect": [
+        0,
+        0,
+        175,
+        35
+      ]
+    }
+  ]
+}

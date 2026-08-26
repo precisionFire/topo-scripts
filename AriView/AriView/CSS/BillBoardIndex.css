@@ -1,0 +1,90 @@
+﻿/*
+  李露龙 主页CSS
+  20230408
+*/
+body {
+    margin: 0px;
+    overflow: hidden;
+    user-select: none;
+    background: url(../Images/bg.png);
+    /* background-color: black; */
+}
+
+div {
+    border: 0px;
+}
+
+#headlogo {
+    min-height: 56px;
+    width: 322px;
+    padding-top: 10px;
+    padding-left: 10px;
+    float: left;
+}
+
+/* #headlogo:hover {
+    background-color: #337ABA;
+} */
+
+#user:hover {
+    background-color: #337ABA;
+}
+
+/* #JZTZ:hover {
+    background-color: #337ABA;
+} */
+
+#alarm:hover {
+    background-color: #337ABA;
+}
+
+/* #datetime:hover {
+    background-color: #337ABA;
+} */
+
+a {
+    text-decoration: none;
+}
+
+.btn{
+    width: 83px; 
+    height: 30px;
+    background: url(../Images/icon_top_bg_1.png);
+    display:inline-block;
+    background-repeat:no-repeat;
+    color: white;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+}
+
+.btn:hover{
+    background: url(../Images/icon_top_bg_2.png);
+}
+
+.navbtn{
+    width: 83px; 
+    height: 30px;
+    background: url(../Images/icon_top_bg_1.png);
+    display:inline-block;
+    background-repeat:no-repeat;
+    color: white;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+}
+
+.navbtn:hover{
+    background: url(../Images/icon_top_bg_2.png);
+}
+
+#warning {
+    background-color: red;
+    font-size: 8px;
+    border-radius: 8px;
+    color: white;
+    position: relative;
+    bottom: 33px;
+    left: 6px;
+    padding: 0 1px;
+}

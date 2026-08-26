@@ -1,0 +1,44 @@
+{
+  "modified": "Tue Nov 18 2025 15:36:03 GMT+0800 (中国标准时间)",
+  "background": "rgb(0,0,0)",
+  "dataBindings": [],
+  "animation": {},
+  "width": 12,
+  "height": 12,
+  "blendMode": "override_rgb",
+  "comps": [
+    {
+      "type": "oval",
+      "borderWidth": 1,
+      "borderColor": "rgb(48,242,130)",
+      "rect": [
+        0.5,
+        0.5,
+        11,
+        11
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgba(36,255,0,0.40)",
+      "rect": [
+        2,
+        2,
+        8,
+        8
+      ]
+    },
+    {
+      "type": "oval",
+      "background": "rgb(255,255,255)",
+      "borderColor": "rgba(255,188,130,0.2)",
+      "gray": true,
+      "rect": [
+        4,
+        4,
+        4,
+        4
+      ]
+    }
+  ]
+}

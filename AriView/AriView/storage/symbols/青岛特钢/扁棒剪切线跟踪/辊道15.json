@@ -1,0 +1,124 @@
+{
+  "modified": "Sun May 25 2025 14:39:09 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "rollnum",
+      "valueType": "String"
+    },
+    {
+      "attr": "rollPieceID",
+      "valueType": "String"
+    },
+    {
+      "attr": "linetype",
+      "valueType": "String"
+    },
+    {
+      "attr": "rollcololr",
+      "valueType": "String"
+    },
+    {
+      "attr": "color",
+      "valueType": "Color",
+      "defaultValue": "#60ACFC"
+    }
+  ],
+  "width": 300,
+  "height": 15,
+  "fitSize": true,
+  "interactive": true,
+  "visible": {
+    "func": "__ht__function(data, view) {\nreturn data.a('rollPieceID') != \"1\" && data.a('rollPieceID') != \"\";\n}"
+  },
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": {
+        "func": "__ht__function(data, view) {\nreturn data.a('color')\n}",
+        "value": "rgb(255,0,0)"
+      },
+      "borderColor": "rgb(61,61,61)",
+      "pixelPerfect": true,
+      "rect": [
+        0,
+        0,
+        300,
+        15
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "#FEB64D",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('linetype') === \"1\"\n}"
+      },
+      "rect": [
+        268.36707,
+        0,
+        31.63293,
+        15
+      ]
+    },
+    {
+      "type": "text",
+      "text": "小车",
+      "align": "center",
+      "color": "rgb(0,0,0)",
+      "font": "10px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('linetype') === \"1\"\n}"
+      },
+      "displayName": "小车",
+      "rect": [
+        284.17354,
+        8.45335,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(117,255,117)",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('linetype') === \"0\"\n}"
+      },
+      "rect": [
+        268.36707,
+        0,
+        31.63293,
+        15
+      ]
+    },
+    {
+      "type": "text",
+      "text": "链条",
+      "align": "center",
+      "color": "rgb(0,0,0)",
+      "font": "10px arial, sans-serif",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('linetype') === \"0\"\n}"
+      },
+      "rect": [
+        284.16354,
+        8.45335,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@rollPieceID"
+      },
+      "color": "rgb(255,255,255)",
+      "font": "bold 14px sans-serif, Arial",
+      "letterGap": 1,
+      "rect": [
+        -0.001,
+        8.46335,
+        0.001,
+        0.001
+      ]
+    }
+  ]
+}

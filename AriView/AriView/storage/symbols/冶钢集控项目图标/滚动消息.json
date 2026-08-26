@@ -1,0 +1,62 @@
+{
+  "modified": "Fri May 12 2023 15:50:27 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "div.background",
+      "valueType": "Color",
+      "defaultValue": "rgb(61,61,61)",
+      "name": "背景"
+    },
+    {
+      "attr": "div.color",
+      "valueType": "Color",
+      "defaultValue": "rgb(247,247,247)"
+    },
+    {
+      "attr": "div.title",
+      "valueType": "String",
+      "name": "标题"
+    },
+    {
+      "attr": "div.debug",
+      "valueType": "Boolean",
+      "defaultValue": true
+    },
+    {
+      "attr": "div.msgdata",
+      "valueType": "ObjectArray",
+      "defaultValue": [
+        [
+          "1号消息",
+          "2023-01-01 14:43"
+        ],
+        [
+          "2号消息",
+          "2023-01-02 14:43"
+        ],
+        [
+          "3号消息",
+          "2023-01-03 14:43"
+        ],
+        [
+          "4号消息",
+          "2023-01-04 14:43"
+        ],
+        [
+          "5号消息",
+          "2023-01-05 14:43"
+        ],
+        [
+          "6号消息",
+          "2023-01-06 14:43"
+        ]
+      ]
+    }
+  ],
+  "snapshotURL": "symbols/可视化/basic/snapshot_div.json",
+  "renderHTML": "__ht__function(data, gv, cache) {var msgdata = [\r\n\t\t\t[\"1号消息\", \"2023-01-01 14:43\"],\r\n\t\t\t[\"2号消息\", \"2023-01-02 14:43\"],\r\n\t\t\t[\"3号消息\", \"2023-01-03 14:43\"],\r\n\t\t\t[\"4号消息\", \"2023-01-04 14:43\"],\r\n\t\t\t[\"5号消息\", \"2023-01-05 14:43\"],\r\n\t\t\t[\"6号消息\", \"2023-01-06 14:43\"]\r\n\t\t];\r\nif (!cache.htmlView) {\r\n\r\n        var div = cache.htmlView = document.createElement('div');\r\n        div.style.position = 'absolute';\r\n        div.style.overflow = 'hidden';\r\n        div.style.setProperty(\"box-sizing\", \"border-box\", null);\r\n        div.style.setProperty(\"-moz-box-sizing\", \"border-box\", null);\r\n\r\n        var boxallbefStyle= document.createElement('style');\r\n        boxallbefStyle.type = \"text/css\";\r\n        boxallbefStyle.appendChild(document.createTextNode('.boxall:{border: 0px solid rgba(25, 186, 139, .17);padding: 0px 0px 0px;background-size: 100% auto;position: relative;margin-bottom: 0px;z-index: 10;width:100%;}'));\r\n        boxallbefStyle.appendChild(document.createTextNode('.boxall:before,.boxall:after {position: absolute;width:12px;height:12px;border-top: 2px solid #02a6b5;top: 0;}'));\r\n        boxallbefStyle.appendChild(document.createTextNode('.boxall:before,.boxfoot:before {border-left: 2px solid #02a6b5;left: 0;}'));\r\n        boxallbefStyle.appendChild(document.createTextNode('.boxall:after,.boxfoot:after {border-right: 2px solid #02a6b5;right: 0;}'));\r\n        boxallbefStyle.appendChild(document.createTextNode('.boxfoot:{position: absolute;bottom: 0;width: 100%;left: 0;}'));\r\n        boxallbefStyle.appendChild(document.createTextNode('.boxfoot:before,.boxfoot:after {position: absolute;width:12px;height:12px;border-bottom: 2px solid #02a6b5;bottom: 0;}'));\r\n        \r\n        boxallbefStyle.appendChild(document.createTextNode('.wrap li {height:40px;text-indent: 28px;margin-bottom: 5px;border-bottom: 1px solid rgba(25, 186, 139, .17);}'));\r\n        boxallbefStyle.appendChild(document.createTextNode('.wrap li p:first-child {font-size: 16px;color: #12d6d6;}'));\r\n        boxallbefStyle.appendChild(document.createTextNode('.wrap li p:last-child {font-size: 10px;color: rgba(255, 255, 255, .5);}'));\r\n        cache.htmlView.appendChild(boxallbefStyle); \r\n\r\n\r\n        var boxalldiv = document.createElement('div');\r\n        boxalldiv.className = 'boxall';\r\n        cache.htmlView.appendChild(boxalldiv); \r\n\r\n\r\n        var alltitle = cache.htmltitle = document.createElement('div');\r\n        alltitle.style.color = '#fff';\r\n        alltitle.style.fontSize = '28px';\r\n        alltitle.style.textAlign = 'center';\r\n        alltitle.style.lineHeight = '72px';\r\n        alltitle.style.borderBottom = '1px solid rgba(255, 255, 255, .2)';\r\n        //alltitle.innerText = \"消息列表\";\r\n        boxalldiv.appendChild(alltitle); \r\n\r\n        var wrap = cache.htmlwrap = document.createElement('div');\r\n        wrap.className = 'wrap';\r\n        wrap.style.overflow = 'hidden';\r\n        wrap.style.height = '305px';\r\n        boxalldiv.appendChild(wrap); \r\n\r\n        var boxfoot = document.createElement('div');\r\n        boxfoot.className = 'boxfoot';\r\n        boxalldiv.appendChild(boxfoot); \r\n\r\n        data.div = div;\r\n        div.addEventListener('mousedown', function(e){e.preventDefault();}, false);\r\n        div.layoutHTML = function() {\r\n            gv.layoutHTML(data, div);\r\n            //if(data.a('div.debug')) console.log('Div is layout');\r\n        };\r\n        div.onHTMLAdded = function() {\r\n            //if(data.a('div.debug')) console.log('Div is added');\r\n        };\r\n        div.onHTMLRemoved = function() {\r\n            //if(data.a('div.debug')) console.log('Div is removed');\r\n        };\r\n\r\n    }\r\n\r\n    cache.htmlView.style.color = data.a('div.color');\r\n    cache.htmlView.style.background = data.a('div.background');\r\n    cache.htmltitle.hidden=!data.a('div.title');\r\n\r\n    if(data.a('div.title'))\r\n        cache.htmltitle.innerText = data.a('div.title');\r\n\r\n    if(data.a('div.msgdata')&&data.a('div.msgdata')!=msgdata)\r\n    {\r\n        cache.htmlwrap.innerHTML=\"\";\r\n        msgdata=data.a('div.msgdata');\r\n        var listul = document.createElement('ul');\r\n        listul.id=\"ullli\";\r\n\t\tfor (var i = 0; i < msgdata.length; i++) {\r\n            var listli = document.createElement('li');\r\n\r\n            listul.appendChild(listli); \r\n\r\n            var p1= document.createElement('p');\r\n            p1.innerText=msgdata[i][0];\r\n            listli.appendChild(p1); \r\n\r\n            var p2= document.createElement('p');\r\n            p2.innerText=msgdata[i][1];\r\n            listli.appendChild(p2); \r\n\t\t}\r\n        cache.htmlwrap.appendChild(listul); \r\n}\r\n\r\n    return cache.htmlView;}",
+  "width": 250,
+  "height": 150,
+  "pixelPerfect": false,
+  "comps": []
+}

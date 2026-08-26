@@ -1,0 +1,1033 @@
+{
+  "modified": "Wed Nov 19 2025 23:02:19 GMT+0800 (中国标准时间)",
+  "background": "rgb(0,0,0)",
+  "dataBindings": [
+    {
+      "attr": "unit",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "font",
+      "valueType": "Font"
+    },
+    {
+      "attr": "value",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "unit2",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "unit1",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "value2",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "value1",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "unit3",
+      "valueType": "Multiline"
+    },
+    {
+      "attr": "value3",
+      "valueType": "String"
+    },
+    {
+      "attr": "date1",
+      "valueType": "String"
+    },
+    {
+      "attr": "date2",
+      "valueType": "String"
+    },
+    {
+      "attr": "mouth1",
+      "valueType": "String"
+    },
+    {
+      "attr": "mouth2",
+      "valueType": "String"
+    }
+  ],
+  "animation": {
+    "v": "0.22",
+    "1737086129912503": {
+      "未命名_0": {
+        "s_move": [
+          0,
+          {
+            "x": 237.79031,
+            "y": 45.41214,
+            "w": 58.37379,
+            "h": 49.0533,
+            "ax": 0.5,
+            "ay": 0.5
+          },
+          0,
+          0,
+          50,
+          {
+            "x": 237.79031,
+            "y": 31.10736,
+            "w": 58.37379,
+            "h": 49.0533,
+            "ax": 0.5,
+            "ay": 0.5
+          },
+          0,
+          0,
+          100,
+          {
+            "x": 237.79031,
+            "y": 45.41214,
+            "w": 58.37379,
+            "h": 49.0533,
+            "ax": 0.5,
+            "ay": 0.5
+          },
+          0,
+          0
+        ],
+        "r": true,
+        "e": 100
+      }
+    }
+  },
+  "width": 480,
+  "height": 177.18943,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "image",
+      "name": "symbols/tenant/shjz-gczndpsj/背景_01.json",
+      "prefix": "815",
+      "displayName": "背景",
+      "scaleX": 0.32,
+      "scaleY": -1,
+      "rect": [
+        -15,
+        -0.11853,
+        750,
+        85.61554
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/tenant/shjz-gczndpsj/背景_01.json",
+      "prefix": "816",
+      "displayName": "背景",
+      "scaleX": -0.32,
+      "scaleY": -1,
+      "rect": [
+        -255,
+        -0.11853,
+        750,
+        85.61554
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/tenant/shjz-gczndpsj/背景_01.json",
+      "prefix": "815",
+      "displayName": "背景",
+      "scaleX": 0.32,
+      "rect": [
+        -15,
+        85.49702,
+        750,
+        91.69241
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/tenant/shjz-gczndpsj/背景_01.json",
+      "prefix": "816",
+      "displayName": "背景",
+      "scaleX": -0.32,
+      "rect": [
+        -255,
+        85.49702,
+        750,
+        91.69241
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgba(61,148,255,0)",
+      "borderColor": "#979797",
+      "gradient": "radial.center",
+      "gradientColor": "rgba(158,239,255,0.7)",
+      "layoutH": "leftright",
+      "layoutV": "bottom",
+      "scaleX": 4,
+      "scaleY": 0.03,
+      "rect": [
+        180.55371,
+        130.58033,
+        118.55908,
+        90.50311
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@unit",
+        "value": "总电力数据(万kwh)"
+      },
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgb(255,255,255)",
+        1,
+        "rgba(255,255,255,0.6)"
+      ],
+      "font": {
+        "func": "attr@font",
+        "value": "14px arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "rect": [
+        159.32157,
+        96.30409,
+        161.35685,
+        21.72075
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgb(99,229,255)",
+        1,
+        "rgba(94,191,255,0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadow": true,
+      "shadowColor": "rgb(0,133,242)",
+      "shadowBlur": 4,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "anchorX": 0,
+      "scaleX": 0.75,
+      "scaleY": 0.75,
+      "closePath": true,
+      "points": [
+        162.30752,
+        116.21478,
+        166.27436,
+        116.21478,
+        173.16789,
+        107.16446,
+        166.27436,
+        98.11415,
+        162.30752,
+        98.11415
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgb(99,229,255)",
+        1,
+        "rgba(94,191,255,0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadow": true,
+      "shadowColor": "rgb(0,133,242)",
+      "shadowBlur": 4,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "anchorX": 0,
+      "scaleX": -0.75,
+      "scaleY": 0.75,
+      "closePath": true,
+      "points": [
+        318.16904,
+        116.21478,
+        322.13588,
+        116.21478,
+        329.02941,
+        107.16446,
+        322.13588,
+        98.11415,
+        318.16904,
+        98.11415
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "gradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(69,171,255,0.4)",
+        0.09633,
+        "rgba(69,205,255,0.27)",
+        0.37615,
+        "rgba(99,185,255,0.1)",
+        1,
+        "rgba(94,191,255,0)"
+      ],
+      "borderGradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(110,212,255,0.75)",
+        0.32569,
+        "rgba(110,211,255,0.4)",
+        1,
+        "rgba(255,255,255,0.00)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadowColor": "rgb(0,133,242)",
+      "shadowBlur": 4,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "anchorX": 0,
+      "scaleX": -1,
+      "closePath": true,
+      "points": [
+        389.71978,
+        144.37849,
+        415.52812,
+        144.37849,
+        460.37755,
+        85.49702,
+        415.52812,
+        26.61554,
+        389.71978,
+        26.61554
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "gradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(69,171,255,0.4)",
+        0.09633,
+        "rgba(69,205,255,0.27)",
+        0.37615,
+        "rgba(99,185,255,0.1)",
+        1,
+        "rgba(94,191,255,0)"
+      ],
+      "borderGradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(110,212,255,0.75)",
+        0.32569,
+        "rgba(110,211,255,0.4)",
+        1,
+        "rgba(255,255,255,0.00)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadowColor": "rgb(0,133,242)",
+      "shadowBlur": 4,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "anchorX": 0,
+      "closePath": true,
+      "points": [
+        90.30611,
+        144.37849,
+        116.11445,
+        144.37849,
+        160.96389,
+        85.49702,
+        116.11445,
+        26.61554,
+        90.30611,
+        26.61554
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@date2",
+        "value": "10000"
+      },
+      "align": "center",
+      "color": "#ffffff",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "white",
+        1,
+        "rgb(181,184,94)"
+      ],
+      "font": {
+        "func": "attr@font",
+        "value": "bold 24px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadow": true,
+      "shadowColor": "rgb(9,101,176)",
+      "shadowOffsetX": 0,
+      "rect": [
+        134.635,
+        125.84865,
+        116.14919,
+        21.72075
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@unit2",
+        "value": "本月(万kwh)"
+      },
+      "align": "center",
+      "color": "rgb(171,217,255)",
+      "font": {
+        "func": "attr@font",
+        "value": "14px Arial"
+      },
+      "opacity": 0.8,
+      "layoutH": "center",
+      "layoutV": "bottom",
+      "rect": [
+        332.01314,
+        95.31212,
+        107.41327,
+        21.72075
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@unit1",
+        "value": "昨日(万kwh)"
+      },
+      "align": "center",
+      "color": "rgb(171,217,255)",
+      "font": {
+        "func": "attr@font",
+        "value": "14px Arial"
+      },
+      "opacity": 0.8,
+      "layoutH": "center",
+      "layoutV": "bottom",
+      "rect": [
+        50.62406,
+        95.31212,
+        87.51104,
+        21.72075
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "gradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(69,171,255,0.4)",
+        0.09633,
+        "rgba(69,205,255,0.27)",
+        0.37615,
+        "rgba(99,185,255,0.1)",
+        1,
+        "rgba(94,191,255,0)"
+      ],
+      "borderGradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(110,212,255,0.75)",
+        0.32569,
+        "rgba(110,211,255,0.4)",
+        0.55505,
+        "rgba(255,255,255,0.00)"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.5,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(0,133,242)",
+      "shadowBlur": 4,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "anchorX": 0,
+      "scaleX": -0.5,
+      "closePath": true,
+      "points": [
+        457.09085,
+        140.66446,
+        482.89919,
+        140.66446,
+        527.74862,
+        81.78299,
+        482.89919,
+        22.90151,
+        457.09085,
+        22.90151
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "gradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(69,171,255,0.4)",
+        0.09633,
+        "rgba(69,205,255,0.27)",
+        0.37615,
+        "rgba(99,185,255,0.1)",
+        1,
+        "rgba(94,191,255,0)"
+      ],
+      "borderGradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(110,212,255,0.75)",
+        0.32569,
+        "rgba(110,211,255,0.4)",
+        0.55505,
+        "rgba(255,255,255,0.00)"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.5,
+      "layoutH": "left",
+      "layoutV": "center",
+      "shadowColor": "rgb(0,133,242)",
+      "shadowBlur": 4,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "anchorX": 0,
+      "scaleX": 0.5,
+      "closePath": true,
+      "points": [
+        0,
+        144.37849,
+        25.80834,
+        144.37849,
+        70.65777,
+        85.49702,
+        25.80834,
+        26.61554,
+        0,
+        26.61554
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "gradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(69,171,255,0.4)",
+        0.09633,
+        "rgba(69,205,255,0.27)",
+        0.37615,
+        "rgba(99,185,255,0.1)",
+        1,
+        "rgba(94,191,255,0)"
+      ],
+      "borderGradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(110,212,255,0.75)",
+        0.32569,
+        "rgba(110,211,255,0.4)",
+        1,
+        "rgba(255,255,255,0.00)"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.15,
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadowColor": "rgb(0,133,242)",
+      "shadowBlur": 4,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "anchorX": 0,
+      "scaleX": -1,
+      "closePath": true,
+      "points": [
+        379.71978,
+        144.37849,
+        405.52812,
+        144.37849,
+        450.37755,
+        85.49702,
+        405.52812,
+        26.61554,
+        379.71978,
+        26.61554
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.8,
+      "gradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(69,171,255,0.4)",
+        0.09633,
+        "rgba(69,205,255,0.27)",
+        0.37615,
+        "rgba(99,185,255,0.1)",
+        1,
+        "rgba(94,191,255,0)"
+      ],
+      "borderGradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(110,212,255,0.75)",
+        0.32569,
+        "rgba(110,211,255,0.4)",
+        1,
+        "rgba(255,255,255,0.00)"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.15,
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadowColor": "rgb(0,133,242)",
+      "shadowBlur": 4,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "anchorX": 0,
+      "closePath": true,
+      "points": [
+        100.30611,
+        144.37849,
+        126.11445,
+        144.37849,
+        170.96389,
+        85.49702,
+        126.11445,
+        26.61554,
+        100.30611,
+        26.61554
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@value2",
+        "value": "3000"
+      },
+      "align": "center",
+      "color": "#4fd1fd",
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "rect": [
+        332.01314,
+        55.19942,
+        107.41327,
+        20.2976
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "rgba(0,94,255,0.00)",
+        1,
+        "rgba(99,221,255,0.80)"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.6,
+      "layoutH": "left",
+      "layoutV": "center",
+      "points": [
+        39.8072,
+        85.49702,
+        36.86914,
+        85.49701,
+        35.43821,
+        85.49701,
+        28.59175,
+        67.93879,
+        32.96072,
+        67.93881,
+        37.73057,
+        80.35655,
+        54.25856,
+        80.35656,
+        55.12326,
+        82.49701,
+        63.95816,
+        82.49701,
+        65.17009,
+        85.49702,
+        39.8072,
+        85.49701,
+        39.8072,
+        85.49702,
+        39.8072,
+        85.49702
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "rgba(0,94,255,0.00)",
+        1,
+        "rgba(99,221,255,0.80)"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.6,
+      "layoutH": "right",
+      "layoutV": "center",
+      "scaleX": -1,
+      "points": [
+        425.9893,
+        85.49702,
+        423.05124,
+        85.49701,
+        421.62031,
+        85.49701,
+        414.77385,
+        67.93879,
+        419.14282,
+        67.93881,
+        423.91267,
+        80.35655,
+        440.44066,
+        80.35656,
+        441.30536,
+        82.49701,
+        450.14026,
+        82.49701,
+        451.35219,
+        85.49702,
+        425.9893,
+        85.49701,
+        425.9893,
+        85.49702,
+        425.9893,
+        85.49702
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@value1",
+        "value": "0.0"
+      },
+      "align": "center",
+      "color": "#ffaf2e",
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "rect": [
+        50.47712,
+        55.19942,
+        87.51104,
+        20.2976
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@unit3",
+        "value": "总电力数据(万kwh)"
+      },
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgb(255,255,255)",
+        1,
+        "rgba(255,255,255,0.6)"
+      ],
+      "font": {
+        "func": "attr@font",
+        "value": "14px arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "rect": [
+        159.32157,
+        11.30409,
+        161.35685,
+        21.72075
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgb(99,229,255)",
+        1,
+        "rgba(94,191,255,0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadow": true,
+      "shadowColor": "rgb(0,133,242)",
+      "shadowBlur": 4,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "anchorX": 0,
+      "scaleX": 0.75,
+      "scaleY": 0.75,
+      "closePath": true,
+      "points": [
+        162.30752,
+        31.21478,
+        166.27436,
+        31.21478,
+        173.16789,
+        22.16446,
+        166.27436,
+        13.11415,
+        162.30752,
+        13.11415
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgb(99,229,255)",
+        1,
+        "rgba(94,191,255,0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadow": true,
+      "shadowColor": "rgb(0,133,242)",
+      "shadowBlur": 4,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "anchorX": 0,
+      "scaleX": -0.75,
+      "scaleY": 0.75,
+      "closePath": true,
+      "points": [
+        318.16904,
+        31.21478,
+        322.13588,
+        31.21478,
+        329.02941,
+        22.16446,
+        322.13588,
+        13.11415,
+        318.16904,
+        13.11415
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@date1",
+        "value": "10000"
+      },
+      "align": "center",
+      "color": "#ffffff",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "white",
+        1,
+        "rgb(181,184,94)"
+      ],
+      "font": {
+        "func": "attr@font",
+        "value": "bold 24px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadow": true,
+      "shadowColor": "rgb(9,101,176)",
+      "shadowOffsetX": 0,
+      "rect": [
+        134.635,
+        43.62747,
+        116.14919,
+        21.72075
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@mouth1",
+        "value": "10000"
+      },
+      "align": "center",
+      "color": "#ffffff",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "white",
+        1,
+        "rgb(135,213,255)"
+      ],
+      "font": {
+        "func": "attr@font",
+        "value": "bold 24px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadow": true,
+      "shadowColor": "rgb(9,101,176)",
+      "shadowOffsetX": 0,
+      "rect": [
+        223.85081,
+        43.62747,
+        116.14919,
+        21.72075
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@mouth2",
+        "value": "10000"
+      },
+      "align": "center",
+      "color": "#ffffff",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "white",
+        1,
+        "rgb(135,213,255)"
+      ],
+      "font": {
+        "func": "attr@font",
+        "value": "bold 24px Arial"
+      },
+      "layoutH": "center",
+      "layoutV": "center",
+      "shadow": true,
+      "shadowColor": "rgb(9,101,176)",
+      "shadowOffsetX": 0,
+      "rect": [
+        223.85081,
+        125.84865,
+        116.14919,
+        21.72075
+      ]
+    }
+  ]
+}

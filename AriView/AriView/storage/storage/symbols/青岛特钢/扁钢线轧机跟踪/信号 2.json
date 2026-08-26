@@ -1,0 +1,260 @@
+{
+  "modified": "Sun Jun 29 2025 13:52:56 GMT+0800 (GMT+08:00)",
+  "background": "rgb(0,0,0)",
+  "dataBindings": [
+    {
+      "attr": "name",
+      "valueType": "String"
+    },
+    {
+      "attr": "num",
+      "valueType": "String"
+    },
+    {
+      "attr": "num1",
+      "valueType": "String"
+    },
+    {
+      "attr": "color",
+      "valueType": "Color"
+    },
+    {
+      "attr": "单位",
+      "valueType": "String"
+    },
+    {
+      "attr": "单位1",
+      "valueType": "String"
+    }
+  ],
+  "width": 310,
+  "height": 33.50243,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "rect",
+      "gradientPack": [
+        "linear",
+        0.49992,
+        1,
+        0.49992,
+        0,
+        0,
+        "rgba(47,136,224,0.50)",
+        1,
+        "rgba(44, 58, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.6,
+      "layoutH": "leftright",
+      "layoutV": "topbottom",
+      "displayName": "",
+      "rect": [
+        0,
+        0,
+        310,
+        33.50242
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        1,
+        0.5,
+        0,
+        0.5,
+        0,
+        "rgba(192,233,255,0)",
+        0.50435,
+        "rgb(148,212,255)",
+        1,
+        "rgba(192,233,255,0)"
+      ],
+      "pixelPerfect": true,
+      "displayName": "",
+      "points": [
+        155,
+        32.50243,
+        240.60412,
+        32.50243,
+        310,
+        32.72629,
+        310,
+        33.00243,
+        310,
+        33.27857,
+        240.60412,
+        33.50243,
+        155,
+        33.50243,
+        69.39588,
+        33.50243,
+        0,
+        33.27857,
+        0,
+        33.00243,
+        0,
+        32.72629,
+        69.39588,
+        32.50243,
+        155,
+        32.50243
+      ],
+      "segments": [
+        1,
+        4,
+        4,
+        4,
+        4,
+        5
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@name",
+        "value": "1-7："
+      },
+      "color": "rgb(181,222,255)",
+      "font": "16px SimHei",
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "center",
+      "rect": [
+        44.78756,
+        16.40243,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "image",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(93,217,174)"
+      },
+      "name": "symbols/tenant/shjz-gczndpsj/图例图标3.json",
+      "pixelPerfect": true,
+      "layoutH": "left",
+      "layoutV": "center",
+      "prefix": "1166",
+      "displayName": "单位",
+      "scaleX": 2,
+      "scaleY": 2,
+      "rect": [
+        15,
+        11.41243,
+        10,
+        10
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@单位",
+        "value": "t"
+      },
+      "align": "right",
+      "color": "rgb(135,165,201)",
+      "font": "12px sans-serif",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "rect": [
+        186.66772,
+        16.40243,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@num",
+        "value": "100"
+      },
+      "align": "right",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(255,255,255)"
+      },
+      "font": "bold 20px D-DIN-PRO",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "rect": [
+        173.4612,
+        16.40243,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@单位1",
+        "value": "t"
+      },
+      "color": "rgb(135,165,201)",
+      "font": "12px sans-serif",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "rect": [
+        288.22513,
+        16.40243,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@num1",
+        "value": "2000"
+      },
+      "align": "right",
+      "color": {
+        "func": "attr@color",
+        "value": "rgb(156,237,126)"
+      },
+      "font": {
+        "func": "attr@font",
+        "value": "bold 20px D-DIN-PRO"
+      },
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "shadowColor": "rgb(11,57,112)",
+      "shadowOffsetX": 1,
+      "displayName": "'1'",
+      "rect": [
+        288.22513,
+        16.40243,
+        0.01,
+        0.01
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@unit",
+        "value": "/"
+      },
+      "color": "rgb(135,165,201)",
+      "font": "20px sans-serif",
+      "pixelPerfect": true,
+      "layoutH": "right",
+      "layoutV": "center",
+      "rect": [
+        186.66772,
+        16.40243,
+        0.01,
+        0.01
+      ]
+    }
+  ]
+}

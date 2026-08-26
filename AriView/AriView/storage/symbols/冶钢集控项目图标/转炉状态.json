@@ -1,0 +1,129 @@
+{
+  "modified": "Mon Nov 06 2023 09:38:15 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "Number",
+      "valueType": "String",
+      "name": "转炉炉号"
+    },
+    {
+      "attr": "StatusCode",
+      "valueType": "String",
+      "name": "状态编码"
+    },
+    {
+      "attr": "StatusTime",
+      "valueType": "String",
+      "name": "状态时间"
+    }
+  ],
+  "width": 55,
+  "height": 69,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": {
+        "func": "__ht__function(data, view) {\nif(data.a('StatusCode')=='25')\r\n{\r\nreturn '#ce160d';\r\n}\r\nelse if(data.a('StatusCode')=='27')\r\n{\r\nreturn '#14b3f2';\r\n}\r\nelse if(data.a('StatusCode')=='24')\r\n{\r\nreturn '#1a9692';\r\n}\r\nelse if(data.a('StatusCode')=='26')\r\n{\r\nreturn '#db6e0b';\r\n}\r\nelse if(data.a('StatusCode')=='28'||data.a('StatusCode')=='29')\r\n{\r\nreturn '#939393';\r\n}\n}",
+        "value": "#ce160d"
+      },
+      "borderColor": "#979797",
+      "cornerRadius": 2,
+      "rect": [
+        6.36736,
+        0,
+        41.64378,
+        13
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nif(data.a('StatusCode')=='24')\r\n{\r\nreturn '炉次开始';\r\n}\r\nelse if(data.a('StatusCode')=='25')\r\n{\r\nreturn '吹炼开始';\r\n}\r\nelse if(data.a('StatusCode')=='26')\r\n{\r\nreturn '吹炼结束';\r\n}\r\nelse if(data.a('StatusCode')=='27')\r\n{\r\nreturn '出钢开始';\r\n}\r\nelse if(data.a('StatusCode')=='28')\r\n{\r\nreturn '出钢结束';\r\n}\r\nelse if(data.a('StatusCode')=='29')\r\n{\r\nreturn '炉次结束';\r\n}\n}",
+        "value": "吹炼开始"
+      },
+      "align": "center",
+      "color": "rgb(255,255,255)",
+      "font": "10px arial, sans-serif",
+      "rect": [
+        7.19231,
+        1.18979,
+        39.99388,
+        11.81021
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/设备/转炉/转炉_炉次开始.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('StatusCode')=='24';\n}",
+        "value": false
+      },
+      "displayName": "转炉_炉次开始",
+      "rect": [
+        0,
+        14.55296,
+        53.77777,
+        51
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/设备/转炉/转炉_吹炼开始.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('StatusCode')=='25';\n}",
+        "value": false
+      },
+      "displayName": "转炉_吹炼开始",
+      "rect": [
+        5.56124,
+        13.74862,
+        43.25603,
+        52.60868
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/设备/转炉/转炉_吹炼结束.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('StatusCode')=='26';\n}",
+        "value": false
+      },
+      "displayName": "转炉_吹炼结束",
+      "rect": [
+        5.56123,
+        13.74862,
+        43.25603,
+        52.60868
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/设备/转炉/转炉_出钢开始.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('StatusCode')=='27';\n}",
+        "value": false
+      },
+      "displayName": "转炉_出钢开始",
+      "rect": [
+        5.56123,
+        17.23068,
+        44.21396,
+        49.12662
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/设备/转炉/转炉_炉次结束.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('StatusCode')=='28'||data.a('StatusCode')=='29';\n}"
+      },
+      "displayName": "转炉_炉次结束",
+      "rect": [
+        5.56123,
+        13.74862,
+        43.25603,
+        52.60868
+      ]
+    }
+  ]
+}

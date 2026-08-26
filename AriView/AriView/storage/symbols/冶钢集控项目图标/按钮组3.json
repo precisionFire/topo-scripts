@@ -1,0 +1,101 @@
+{
+  "modified": "Thu Feb 23 2023 12:42:29 GMT+0800 (中国标准时间)",
+  "background": "rgb(0,59,130)",
+  "dataBindings": [
+    {
+      "attr": "b1.select",
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "选择"
+    },
+    {
+      "attr": "b1.title",
+      "valueType": "String",
+      "defaultValue": "柜位",
+      "name": "标题内容"
+    },
+    {
+      "attr": "b2.select",
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "选择"
+    },
+    {
+      "attr": "b2.title",
+      "valueType": "String",
+      "defaultValue": "柜位",
+      "name": "标题内容"
+    },
+    {
+      "attr": "b3.select",
+      "valueType": "PositiveNumber",
+      "defaultValue": 1,
+      "name": "选择"
+    },
+    {
+      "attr": "b3.title",
+      "valueType": "String",
+      "defaultValue": "柜位",
+      "name": "标题内容"
+    },
+    {
+      "attr": "prefixs",
+      "valueType": "Object",
+      "defaultValue": [
+        "b1.",
+        "b2.",
+        "b3."
+      ],
+      "extraInfo": {
+        "visible": "__ht__function(inspector) {\n        return false;\n    }"
+      }
+    },
+    {
+      "attr": "select.index",
+      "valueType": "String"
+    }
+  ],
+  "width": 177,
+  "height": 20,
+  "fitSize": true,
+  "interactive": true,
+  "pixelPerfect": false,
+  "comps": [
+    {
+      "type": "image",
+      "name": "symbols/冶钢集控项目图标/按钮1.json",
+      "prefix": "b1",
+      "displayName": "按钮1",
+      "rect": [
+        1,
+        0,
+        60,
+        20
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/冶钢集控项目图标/按钮1.json",
+      "prefix": "b2",
+      "displayName": "按钮2",
+      "rect": [
+        58.77055,
+        0,
+        60,
+        20
+      ]
+    },
+    {
+      "type": "image",
+      "name": "symbols/冶钢集控项目图标/按钮1.json",
+      "prefix": "b3",
+      "displayName": "按钮3",
+      "rect": [
+        116.57888,
+        0,
+        60,
+        20
+      ]
+    }
+  ]
+}

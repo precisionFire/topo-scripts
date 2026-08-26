@@ -1,0 +1,85 @@
+{
+  "modified": "Sat Aug 22 2026 19:31:25 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "RollPieceID",
+      "valueType": "String",
+      "name": "钢坯号"
+    },
+    {
+      "attr": "CardNumber",
+      "valueType": "String",
+      "name": "卡号"
+    },
+    {
+      "attr": "SteelGrade",
+      "valueType": "String",
+      "name": "钢种"
+    },
+    {
+      "attr": "HeatNumber",
+      "valueType": "String",
+      "name": "炉号"
+    },
+    {
+      "attr": "Thickness",
+      "valueType": "String",
+      "name": "厚度"
+    },
+    {
+      "attr": "Length",
+      "valueType": "String",
+      "name": "长度"
+    },
+    {
+      "attr": "LineColor",
+      "valueType": "String",
+      "name": "mqtt颜色"
+    },
+    {
+      "attr": "Color",
+      "valueType": "Color",
+      "name": "绑定颜色"
+    },
+    {
+      "attr": "visible",
+      "valueType": "String",
+      "name": "可见"
+    },
+    {
+      "attr": "displayText",
+      "valueType": "String",
+      "name": "显示内容",
+      "group": "显示"
+    },
+    {
+      "attr": "displayFont",
+      "valueType": "Font",
+      "name": "显示字体",
+      "defaultValue": "bold 12px SimSun"
+    },
+    {
+      "attr": "displayColor",
+      "valueType": "Color",
+      "name": "显示颜色"
+    }
+  ],
+  "width": 300,
+  "height": 15,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "roundRect",
+      "background": {
+        "func": "attr@Color",
+        "value": "rgb(255,0,0)"
+      },
+      "rect": [
+        0,
+        0,
+        300,
+        15
+      ]
+    }
+  ]
+}

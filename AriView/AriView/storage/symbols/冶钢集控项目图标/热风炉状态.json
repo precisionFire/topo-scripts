@@ -1,0 +1,116 @@
+{
+  "modified": "Fri Nov 03 2023 13:40:34 GMT+0800 (中国标准时间)",
+  "dataBindings": [
+    {
+      "attr": "XZ",
+      "valueType": "String",
+      "name": "休止"
+    },
+    {
+      "attr": "RS",
+      "valueType": "String",
+      "name": "燃烧"
+    },
+    {
+      "attr": "SF",
+      "valueType": "String",
+      "name": "送风"
+    },
+    {
+      "attr": "ML",
+      "valueType": "String",
+      "name": "焖炉"
+    }
+  ],
+  "width": 56,
+  "height": 100,
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_RFL_ML.svg",
+      "displayName": "icon_RFL_ML",
+      "rect": [
+        -0.23071,
+        0,
+        55.93105,
+        101.08022
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_RFL_SF.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('SF')=='true';\n}",
+        "value": false
+      },
+      "displayName": "icon_RFL_SF",
+      "rect": [
+        -0.26519,
+        0.08022,
+        56,
+        101
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_RFL_SL.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('ML')=='true';\n}",
+        "value": false
+      },
+      "displayName": "icon_RFL_SL",
+      "rect": [
+        -0.26519,
+        0,
+        56,
+        101
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/冶钢集控项目icon/煤气调度/icon_RFL_RS.svg",
+      "visible": {
+        "func": "__ht__function(data, view) {\nreturn data.a('RS')=='true';\n}",
+        "value": false
+      },
+      "displayName": "icon_RFL_RS",
+      "rect": [
+        0,
+        0,
+        56,
+        113.59414
+      ]
+    },
+    {
+      "type": "roundRect",
+      "background": "rgb(255,255,255)",
+      "borderColor": "#979797",
+      "cornerRadius": 2,
+      "rect": [
+        12.66257,
+        50,
+        29.14826,
+        18.66658
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "__ht__function(data, view) {\nif(data.a('XZ')=='true')\r\n{\r\nreturn '休止';\r\n}\r\nelse if(data.a('RS')=='true')\r\n{\r\nreturn '燃烧';\r\n}\r\nelse if(data.a('SF')=='true')\r\n{\r\nreturn '送风';\r\n}\r\nelse if(data.a('ML')=='true')\r\n{\r\nreturn '焖炉';\r\n}\n}",
+        "value": "休止"
+      },
+      "align": "center",
+      "color": {
+        "func": "__ht__function(data, view) {\nif(data.a('XZ')=='true')\r\n{\r\nreturn 'rgb(100,100,100)';\r\n}\r\nelse if(data.a('RS')=='true')\r\n{\r\nreturn 'rgb(239,77,77)';\r\n}\r\nelse if(data.a('SF')=='true')\r\n{\r\nreturn 'rgb(31,176,19)';\r\n}\r\nelse if(data.a('ML')=='true')\r\n{\r\nreturn 'rgb(255,183,3)';\r\n}\n}",
+        "value": "rgb(105,105,105)"
+      },
+      "font": "13px arial, sans-serif",
+      "rect": [
+        15.05357,
+        54.2315,
+        24.36626,
+        11.81021
+      ]
+    }
+  ]
+}

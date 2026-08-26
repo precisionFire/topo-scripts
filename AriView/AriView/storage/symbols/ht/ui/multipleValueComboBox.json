@@ -1,0 +1,262 @@
+{
+  "modified": "Thu Jun 12 2025 16:29:22 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "ht.name",
+      "valueType": "String",
+      "name": "属性名"
+    },
+    {
+      "attr": "ht.value",
+      "valueType": "StringArray",
+      "name": "属性值"
+    },
+    {
+      "attr": "ht.dataSource",
+      "valueType": "Object",
+      "name": "数据源"
+    },
+    {
+      "attr": "ht.placeholder",
+      "valueType": "String",
+      "name": "占位符"
+    },
+    {
+      "attr": "ht.placeholderColor",
+      "valueType": "Color",
+      "name": "占位符颜色",
+      "defaultValue": "#737373"
+    },
+    {
+      "attr": "ht.disabled",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "禁用"
+    },
+    {
+      "attr": "ht.maxSelection",
+      "valueType": "PositiveNumber",
+      "defaultValue": 0,
+      "name": "选择数量限制"
+    },
+    {
+      "attr": "ht.hideSelected",
+      "valueType": "Boolean",
+      "defaultValue": false,
+      "name": "隐藏已选"
+    },
+    {
+      "attr": "ht.onChange",
+      "valueType": "Function",
+      "name": "改变事件",
+      "extraInfo": {
+        "arguments": [
+          "oldValue",
+          "newValue",
+          "data",
+          "view"
+        ]
+      }
+    },
+    {
+      "attr": "ht.dropIconWidth",
+      "valueType": "Number",
+      "name": "图标宽度",
+      "group": "下拉"
+    },
+    {
+      "attr": "ht.dropIconHeight",
+      "valueType": "Number",
+      "name": "图标高度"
+    },
+    {
+      "attr": "ht.dropBackground",
+      "valueType": "Color",
+      "name": "背景"
+    },
+    {
+      "attr": "ht.dropLabelFont",
+      "valueType": "Font",
+      "name": "文本字体"
+    },
+    {
+      "attr": "ht.dropLabelColor",
+      "valueType": "Color",
+      "name": "文本颜色"
+    },
+    {
+      "attr": "ht.dropActiveLabelColor",
+      "valueType": "Color",
+      "name": "选中文本色"
+    },
+    {
+      "attr": "ht.dropActiveBackground",
+      "valueType": "Color",
+      "name": "选中背景色"
+    },
+    {
+      "attr": "ht.dropDownSyncZoom",
+      "valueType": "Boolean",
+      "name": "同步缩放",
+      "defaultValue": true
+    },
+    {
+      "attr": "ht.dropWidth",
+      "valueType": "Number",
+      "name": "宽度",
+      "defaultValue": 200
+    },
+    {
+      "attr": "ht.itemFont",
+      "valueType": "Font",
+      "name": "选项字体",
+      "group": "选中项"
+    },
+    {
+      "attr": "ht.itemTextColor",
+      "valueType": "Color",
+      "name": "选项文本颜色"
+    },
+    {
+      "attr": "ht.itemBorderColor",
+      "valueType": "Color",
+      "name": "选项边框颜色"
+    },
+    {
+      "attr": "ht.itemBackground",
+      "valueType": "Color",
+      "name": "选项背景"
+    },
+    {
+      "attr": "ht.scrollable",
+      "valueType": "Boolean",
+      "name": "可滚动",
+      "group": "滚动",
+      "defaultValue": true
+    },
+    {
+      "attr": "ht.translateX",
+      "valueType": "Number",
+      "name": "横偏移",
+      "defaultValue": 0
+    },
+    {
+      "attr": "ht.translateY",
+      "valueType": "Number",
+      "name": "纵偏移",
+      "defaultValue": 0
+    }
+  ],
+  "snapshotURL": "symbols/ht/snapshot/comboBox.json",
+  "width": 200,
+  "height": 48,
+  "boundExtend": 2,
+  "fitSize": true,
+  "interactive": true,
+  "disableSelectedBorder": true,
+  "pixelPerfect": false,
+  "attachStyle": "close",
+  "comps": [
+    {
+      "type": "components/ht/ui/multipleValueComboBox.json",
+      "layoutH": "leftright",
+      "layoutV": "topbottom",
+      "displayName": "multipleValueComboBox",
+      "rect": [
+        0,
+        0,
+        200,
+        48
+      ],
+      "onDown": "__ht__function(event, data, view, point, width, height) {\nht.vector.multipleComboBoxInteractor.onDown.apply(this, arguments);\n}",
+      "onUp": "__ht__function(event, data, view, point, width, height) {\nht.vector.multipleComboBoxInteractor.onUp.apply(this, arguments);\n}",
+      "onMove": "__ht__function(event, data, view, point, width, height) {\nht.vector.multipleComboBoxInteractor.onMove.apply(this, arguments);\n}",
+      "onEnter": "__ht__function(event, data, view, point, width, height) {\nht.vector.multipleComboBoxInteractor.onEnter.apply(this, arguments);\n}",
+      "onLeave": "__ht__function(event, data, view, point, width, height) {\nht.vector.multipleComboBoxInteractor.onLeave.apply(this, arguments);\n}",
+      "onBeginDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.multipleComboBoxInteractor.onBeginDrag.apply(this, arguments);\n}",
+      "onDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.multipleComboBoxInteractor.onDrag.apply(this, arguments);\n}",
+      "onEndDrag": "__ht__function(event, data, view, point, width, height) {\nht.vector.multipleComboBoxInteractor.onEndDrag.apply(this, arguments);\n}",
+      "onScroll": "__ht__function(event, data, view, point, width, height) {\nht.vector.multipleComboBoxInteractor.onScroll.apply(this, arguments);\n}",
+      "value": {
+        "func": "attr@ht.value"
+      },
+      "dataSource": {
+        "func": "attr@ht.dataSource"
+      },
+      "placeholder": {
+        "func": "attr@ht.placeholder"
+      },
+      "placeholderColor": {
+        "func": "attr@ht.placeholderColor"
+      },
+      "disabled": {
+        "func": "attr@ht.disabled",
+        "value": false
+      },
+      "background": null,
+      "hideSelected": {
+        "func": "attr@ht.hideSelected"
+      },
+      "maxSelection": {
+        "func": "attr@ht.maxSelection"
+      },
+      "onChange": {
+        "func": "attr@ht.onChange"
+      },
+      "itemFont": {
+        "func": "attr@ht.itemFont"
+      },
+      "itemTextColor": {
+        "func": "attr@ht.itemTextColor"
+      },
+      "itemBorderColor": {
+        "func": "attr@ht.itemBorderColor"
+      },
+      "itemBackground": {
+        "func": "attr@ht.itemBackground",
+        "value": "rgb(247,247,247)"
+      },
+      "itemGradientColor": null,
+      "dropIconWidth": {
+        "func": "attr@ht.dropIconWidth"
+      },
+      "dropIconHeight": {
+        "func": "attr@ht.dropIconHeight"
+      },
+      "dropWidth": {
+        "func": "attr@ht.dropWidth"
+      },
+      "dropBackground": {
+        "func": "attr@ht.dropBackground"
+      },
+      "dropLabelFont": {
+        "func": "attr@ht.dropLabelFont"
+      },
+      "dropLabelColor": {
+        "func": "attr@ht.dropLabelColor"
+      },
+      "dropActiveLabelColor": {
+        "func": "attr@ht.dropActiveLabelColor"
+      },
+      "dropActiveBackground": {
+        "func": "attr@ht.dropActiveBackground"
+      },
+      "dropDownSyncZoom": {
+        "func": "attr@ht.dropDownSyncZoom",
+        "value": true
+      },
+      "scrollable": {
+        "func": "attr@ht.scrollable"
+      },
+      "pannable": false,
+      "translateX": {
+        "func": "attr@ht.translateX"
+      },
+      "translateY": {
+        "func": "attr@ht.translateY"
+      },
+      "autoHideScrollBar": true,
+      "scrollBarWidth": 4
+    }
+  ]
+}

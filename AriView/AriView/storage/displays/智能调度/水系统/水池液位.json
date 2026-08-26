@@ -1,0 +1,4404 @@
+{
+  "v": "7.7.1",
+  "p": {
+    "layers": [
+      {
+        "name": "0",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "m_top",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "trend",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      }
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "zoomable": true,
+    "pannable": true,
+    "rectSelectable": false,
+    "onPreDeserialize": "__ht__function(json, dm, view) {dm.ListSubscribe={\r\n 'NumTag/OPCUA132/IP2057_FT_PG03AO01':0,  //空气表[自动]_二空外供净化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP2057_FT_PG03AO01_A':0,  //空气表[自动]_二空外供净化空气(累积流量)\r\n'NumTag/OPCUA132/IP2057_PT_PG03AO01':0,  //空气表[自动]_二空外供净化空气(压力)\r\n'NumTag/OPCUA132/IP2057_TE_PG03AO01':0,  //空气表[自动]_二空外供净化空气(温度)\r\n'NumTag/OPCUA132/IP2058_FT_PG03AO03':0,  //空气表[自动]_二空外供普通空气(瞬时流量)\r\n'NumTag/OPCUA132/IP2058_FT_PG03AO03_A':0,  //空气表[自动]_二空外供普通空气(累积流量)\r\n'NumTag/OPCUA132/IP2058_PT_PG03AO03':0,  //空气表[自动]_二空外供普通空气(压力)\r\n'NumTag/OPCUA132/IP2058_TE_PG03AO03':0,  //空气表[自动]_二空外供普通空气(温度)\r\n'NumTag/OPCUA132/IP2057_FT_PG03AO02':0,  //空气表[自动]_二空外供雾化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP2057_FT_PG03AO02_A':0,  //空气表[自动]_二空外供雾化空气(累积流量)\r\n'NumTag/OPCUA132/IP2057_PT_PG03AO02':0,  //空气表[自动]_二空外供雾化空气(压力)\r\n'NumTag/OPCUA132/IP2057_TE_PG03AO02':0,  //空气表[自动]_二空外供雾化空气(温度)\r\n'NumTag/OPCUA132/IP6061_FT_PG05AO02':0,  //空气表[自动]_钢管外供净化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP6061_FT_PG05AO02_A':0,  //空气表[自动]_钢管外供净化空气(累积流量)\r\n'NumTag/OPCUA132/IP6061_PT_PG05AO02':0,  //空气表[自动]_钢管外供净化空气(压力)\r\n'NumTag/OPCUA132/IP6061_TE_PG05AO02':0,  //空气表[自动]_钢管外供净化空气(温度)\r\n'NumTag/OPCUA132/IP6061_FT_PG05AO01':0,  //空气表[自动]_钢管外供普通空气(瞬时流量)\r\n'NumTag/OPCUA132/IP6061_FT_PG05AO01_A':0,  //空气表[自动]_钢管外供普通空气(累积流量)\r\n'NumTag/OPCUA132/IP6061_PT_PG05AO01':0,  //空气表[自动]_钢管外供普通空气(压力)\r\n'NumTag/OPCUA132/IP6061_TE_PG05AO01':0,  //空气表[自动]_钢管外供普通空气(温度)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO01':0,  //空气表[自动]_四空1#外供净化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO01_A':0,  //空气表[自动]_四空1#外供净化空气(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4037_PT_ZG03DO03_P':0,  //空气表[自动]_四空1#外供净化空气(压力)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO02':0,  //空气表[自动]_四空2#外供净化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO02_A':0,  //空气表[自动]_四空2#外供净化空气(累积流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO03':0,  //空气表[自动]_四空1#外供普通空气(瞬时流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO03_A':0,  //空气表[自动]_四空1#外供普通空气(累积流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO04':0,  //空气表[自动]_四空2#外供普通空气(瞬时流量)\r\n'NumTag/OPCUA132/IP3047_FT_PG04AO04_A':0,  //空气表[自动]_四空2#外供普通空气(累积流量)\r\n'NumTag/OPCUA132/IP3047_vfo6':0,  //空气表[自动]_四空外供雾化空气(瞬时流量)\r\n'NumTag/OPCUA132/IP3047_vfo14':0,  //空气表[自动]_四空外供雾化空气(累积流量)\r\n'NumTag/OPCUA132/JH_IP5111_FT_JH02AO05_C':0,  //空气表[自动]_焦化厂_新化能干熄焦用空气_三级(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5111_FT_JH02AO05_A':0,  //空气表[自动]_焦化厂_新化能干熄焦用空气_三级(累积流量)\r\n'NumTag/OPCUA132/JH_IP5111_PT_JH02AO05_P':0,  //空气表[自动]_焦化厂_新化能干熄焦用空气_三级(压力)\r\n'NumTag/OPCUA132/JH_IP5111_TE_JH02AO05':0,  //空气表[自动]_焦化厂_新化能干熄焦用空气_三级(温度)\r\n'NumTag/OPCUA132/JH_IP5130_FT_JH03AO01_C':0,  //空气表[自动]_焦化厂_新化能用空气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5130_FT_JH03AO01_A':0,  //空气表[自动]_焦化厂_新化能用空气(累积流量)\r\n'NumTag/OPCUA132/JH_IP5130_PT_JH03AO01_P':0,  //空气表[自动]_焦化厂_新化能用空气(压力)\r\n'NumTag/OPCUA132/JH_IP5130_TE_JH03AO01':0,  //空气表[自动]_焦化厂_新化能用空气(温度)\r\n'NumTag/OPCUA132/JH_IP5202_FT_JH10AG04_C':0,  //空气表[自动]_焦化厂_进新焦化空气(瞬时流量)\r\n'NumTag/OPCUA132/JH_IP5202_FT_JH10AG04_A':0,  //空气表[自动]_焦化厂_进新焦化空气(累积流量)\r\n'NumTag/OPCUA132/JH_IP5202_PT_JH10AG04_C':0,  //空气表[自动]_焦化厂_进新焦化空气(压力)\r\n'NumTag/OPCUA132/JH_IP5202_TT_JH10AG04_C':0,  //空气表[自动]_焦化厂_进新焦化空气(温度)\r\n'NumTag/OPCUA132/LT_IP5031_FT_LT04BO01':0,  //空气表[自动]_炼铁厂_265烧结用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5031_FT_LT04BO01_A':0,  //空气表[自动]_炼铁厂_265烧结用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5031_PT_LT04BO01':0,  //空气表[自动]_炼铁厂_265烧结用空气(压力)\r\n'NumTag/OPCUA132/LT_IP5031_TE_LT04BO01':0,  //空气表[自动]_炼铁厂_265烧结用空气(温度)\r\n'NumTag/OPCUA132/LT_IP5179_FT_265SJTX002_C':0,  //空气表[自动]_炼铁厂_265烧结脱硝用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5179_FT_265SJTX002_A':0,  //空气表[自动]_炼铁厂_265烧结脱硝用空气(累积流量)\r\n'NumTag/OPCUA132/HB_IP5035_FT_HB04AO17':0,  //空气表[自动]_炼铁厂_265烧结脱硫用空气(瞬时流量)\r\n'NumTag/OPCUA132/HB_IP5035_FT_HB04AO17_A':0,  //空气表[自动]_炼铁厂_265烧结脱硫用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5058_FT_LT01DO03':0,  //空气表[自动]_炼铁厂_1780高炉用净化空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5058_FT_LT01DO03_A':0,  //空气表[自动]_炼铁厂_1780高炉用净化空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5058_PT_LT01DO03':0,  //空气表[自动]_炼铁厂_1780高炉用净化空气(压力)\r\n'NumTag/OPCUA132/LT_IP5058_TE_LT01DO03':0,  //空气表[自动]_炼铁厂_1780高炉用净化空气(温度)\r\n'NumTag/OPCUA132/PM_IP5045_FT_shaojie_C':0,  //空气表[自动]_炼铁厂_1780高炉矿槽用空气(瞬时流量)\r\n'NumTag/OPCUA132/PM_IP5045_FT_shaojie_A':0,  //空气表[自动]_炼铁厂_1780高炉矿槽用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5082_FT_LT01BO01':0,  //空气表[自动]_炼铁厂_1780高炉喷煤用空气_三级(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5082_FT_LT01BO01_A':0,  //空气表[自动]_炼铁厂_1780高炉喷煤用空气_三级(累积流量)\r\n'NumTag/OPCUA132/LT_IP5082_PT_LT01BO01':0,  //空气表[自动]_炼铁厂_1780高炉喷煤用空气_三级(压力)\r\n'NumTag/OPCUA132/LT_IP5058_TE_LT01DO04':0,  //空气表[自动]_炼铁厂_1780高炉喷煤用空气_三级(温度)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280FY03_C':0,  //空气表[自动]_炼铁厂_1780高炉电拖(1#)风机外送风量(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280FY03_A':0,  //空气表[自动]_炼铁厂_1780高炉电拖(1#)风机外送风量(累积流量)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280DT01_C':0,  //空气表[自动]_炼铁厂_1780高炉电拖(2#)风机外送风量(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280DT01_A':0,  //空气表[自动]_炼铁厂_1780高炉电拖(2#)风机外送风量(累积流量)\r\n'NumTag/OPCUA132/LT_IP2106_FT_LTQBJ02_C':0,  //空气表[自动]_炼铁厂_1780高炉炼铁砌包间用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP2106_FT_LTQBJ02_A':0,  //空气表[自动]_炼铁厂_1780高炉炼铁砌包间用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5088_FT_LT06AO01':0,  //空气表[自动]_炼铁厂_1780高炉炼铁原料场用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5088_FT_LT06AO01_A':0,  //空气表[自动]_炼铁厂_1780高炉炼铁原料场用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5088_PT_LT06AO01':0,  //空气表[自动]_炼铁厂_1780高炉炼铁原料场用空气(压力)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL05_C':0,  //空气表[自动]_炼铁厂_1280高炉用净化空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL05_A':0,  //空气表[自动]_炼铁厂_1280高炉用净化空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP3060_PT_1280GL05_C':0,  //空气表[自动]_炼铁厂_1280高炉用净化空气(压力)\r\n'NumTag/OPCUA132/LT_IP3060_TT_1280GL05_C':0,  //空气表[自动]_炼铁厂_1280高炉用净化空气(温度)\r\n'NumTag/OPCUA132/LT_IP3066_FT_1280KC01_C':0,  //空气表[自动]_炼铁厂_1280高炉矿槽用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3066_FT_1280KC01_A':0,  //空气表[自动]_炼铁厂_1280高炉矿槽用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5151_FT_LT62GS03':0,  //空气表[自动]_炼铁厂_1280高炉喷煤用普通空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5151_FT_LT62GS03_A':0,  //空气表[自动]_炼铁厂_1280高炉喷煤用普通空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5151_PT_LT62GS03':0,  //空气表[自动]_炼铁厂_1280高炉喷煤用普通空气(压力)\r\n'NumTag/OPCUA132/LT_IP5151_TT_LT62GS03':0,  //空气表[自动]_炼铁厂_1280高炉喷煤用普通空气(温度)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL15_C':0,  //空气表[自动]_炼铁厂_1280高炉冷风风量(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP3060_FT_1280GL15_A':0,  //空气表[自动]_炼铁厂_1280高炉冷风风量(累积流量)\r\n'NumTag/OPCUA132/LT_IP3060_PT_1280GL15_C':0,  //空气表[自动]_炼铁厂_1280高炉冷风风量(压力)\r\n'NumTag/OPCUA132/LT_IP3060_TT_1280GL15_C':0,  //空气表[自动]_炼铁厂_1280高炉冷风风量(温度)\r\n'NumTag/OPCUA132/LT_IP5084_FT_LT06AO02':0,  //空气表[自动]_炼铁厂_微粉用空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5084_FT_LT06AO02_A':0,  //空气表[自动]_炼铁厂_微粉用空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5175_FT_220SF03_C':0,  //空气表[自动]_炼铁厂_220烧结用普通空气(瞬时流量)\r\n'NumTag/OPCUA132/LT_IP5175_FT_220SF03_A':0,  //空气表[自动]_炼铁厂_220烧结用普通空气(累积流量)\r\n'NumTag/OPCUA132/LT_IP5175_PT_220SF03_C':0,  //空气表[自动]_炼铁厂_220烧结用普通空气(压力)\r\n'NumTag/OPCUA132/LT_IP5175_TT_220SF03_C':0,  //空气表[自动]_炼铁厂_220烧结用普通空气(温度)\r\n'NumTag/OPCUA132/2102FT_LGRH2O07_PV':0,  //空气表[自动]_转炉厂_转炉2#RH炉用普通空气总管_三级(瞬时流量)\r\n'NumTag/OPCUA132/2102FT_LGRH2O07_A_PV':0,  //空气表[自动]_转炉厂_转炉2#RH炉用普通空气总管_三级(累积流量)\r\n'NumTag/OPCUA132/LG_IP2191_FT_LG10AG03_C':0,  //空气表[自动]_转炉厂_转炉除尘用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2191_FT_LG10AG03_A':0,  //空气表[自动]_转炉厂_转炉除尘用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG000O01':0,  //空气表[自动]_转炉厂_转炉用净化空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG000O01_A':0,  //空气表[自动]_转炉厂_转炉用净化空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2031_PT_LG000O01':0,  //空气表[自动]_转炉厂_转炉用净化空气(压力)\r\n'NumTag/OPCUA132/LG_IP2031_TT_LG000O01':0,  //空气表[自动]_转炉厂_转炉用净化空气(温度)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG02CO03':0,  //空气表[自动]_转炉厂_转炉用普通空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG02CO03_A':0,  //空气表[自动]_转炉厂_转炉用普通空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2031_PT_LG02CO03':0,  //空气表[自动]_转炉厂_转炉用普通空气(压力)\r\n'NumTag/OPCUA132/LG_IP2031_TT_LG02CO02':0,  //空气表[自动]_转炉厂_转炉用普通空气(温度)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG000O02':0,  //空气表[自动]_转炉厂_转炉用雾化空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2031_FT_LG000O02_A':0,  //空气表[自动]_转炉厂_转炉用雾化空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2031_PT_LG000O02':0,  //空气表[自动]_转炉厂_转炉用雾化空气(压力)\r\n'NumTag/OPCUA132/LG_IP2031_TT_LG000O02':0,  //空气表[自动]_转炉厂_转炉用雾化空气(温度)\r\n'NumTag/OPCUA132/LG_IP2072_FT_LG22AO05':0,  //空气表[自动]_特冶电炉_AOD炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2072_FT_LG22AO05_A':0,  //空气表[自动]_特冶电炉_AOD炉用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2074_FT_CC01AO01_C':0,  //空气表[自动]_特冶电炉_特冶电炉除尘用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2074_FT_CC01AO01_A':0,  //空气表[自动]_特冶电炉_特冶电炉除尘用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2064_FT_LG20AO02':0,  //空气表[自动]_特冶电炉_特冶电炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2064_FT_LG20AO02_A':0,  //空气表[自动]_特冶电炉_特冶电炉用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2064_PT_LG20AO02':0,  //空气表[自动]_特冶电炉_特冶电炉用空气(压力)\r\n'NumTag/OPCUA132/LG_IP2064_TT_LG20AO02':0,  //空气表[自动]_特冶电炉_特冶电炉用空气(温度)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG09AO04':0,  //空气表[自动]_电炉厂_电炉3#连铸用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG09AO04_A':0,  //空气表[自动]_电炉厂_电炉3#连铸用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG11AO01':0,  //空气表[自动]_电炉厂_电炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG11AO01_A':0,  //空气表[自动]_电炉厂_电炉用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP3045_TT_LG11AO01':0,  //空气表[自动]_电炉厂_电炉用空气(温度)\r\n'NumTag/OPCUA132/HB_IP3041_FT_HB01AO03':0,  //空气表[自动]_电炉厂_机制107厂房用空气(瞬时流量)\r\n'NumTag/OPCUA132/HB_IP3041_FT_HB01AO03_A':0,  //空气表[自动]_电炉厂_机制107厂房用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2064_FT_LG20AO07':0,  //空气表[自动]_特冶电渣_电渣27米跨厂房用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2064_FT_LG20AO07_A':0,  //空气表[自动]_特冶电渣_电渣27米跨厂房用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2065_FT_LG20CO01':0,  //空气表[自动]_特冶电渣_电渣用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2065_FT_LG20CO01_A':0,  //空气表[自动]_特冶电渣_电渣用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2065_PT_LG20CO01':0,  //空气表[自动]_特冶电渣_电渣用空气(压力)\r\n'NumTag/OPCUA132/LG_IP2065_TT_LG20CO01':0,  //空气表[自动]_特冶电渣_电渣用空气(温度)\r\n'NumTag/OPCUA132/LG_IP1146_FT_SZ11AI06_C':0,  //空气表[自动]_特冶厂_双真空用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP1146_FT_SZ11AI06_A':0,  //空气表[自动]_特冶厂_双真空用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2065_FT_ZG01HO04':0,  //空气表[自动]_大棒厂_850机组北用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2065_FT_ZG01HO04_A':0,  //空气表[自动]_大棒厂_850机组北用空气(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4065_FT_ZG02GO02_C':0,  //空气表[自动]_中棒厂_500机组用空气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4065_FT_ZG02GO02_A':0,  //空气表[自动]_中棒厂_500机组用空气(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4065_PT_ZG02GO02_P':0,  //空气表[自动]_中棒厂_500机组用空气(压力)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG11AO02':0,  //空气表[自动]_小棒厂_650机组东用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP3045_FT_LG11AO02_A':0,  //空气表[自动]_小棒厂_650机组东用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP3045_PT_LG11AO02':0,  //空气表[自动]_小棒厂_650机组东用空气(压力)\r\n'NumTag/OPCUA132/LG_IP3045_TT_LG11AO02':0,  //空气表[自动]_小棒厂_650机组东用空气(温度)\r\n'NumTag/OPCUA132/ZG_IP4062_FT_ZG02DN07_C':0,  //空气表[自动]_轧钢热处理_小棒厂银亮钢机组冷拉用空气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4062_FT_ZG02DN07__A':0,  //空气表[自动]_轧钢热处理_小棒厂银亮钢机组冷拉用空气(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4062_PT_ZG02DN07_P':0,  //空气表[自动]_轧钢热处理_小棒厂银亮钢机组冷拉用空气(压力)\r\n'NumTag/OPCUA132/NDGCFD01_FT':0,  //空气表[自动]_锻造厂_内锻用空气(瞬时流量)\r\n'NumTag/OPCUA132/NDGCFD01_FT_A':0,  //空气表[自动]_锻造厂_内锻用空气(累积流量)\r\n'NumTag/OPCUA132/NDGCFD01_TE':0,  //空气表[自动]_锻造厂_内锻用空气(温度)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_60MNAIO04_C':0,  //空气表[自动]_锻造厂_60MN用空气(瞬时流量)\r\n'NumTag/OPCUA132/DZ_IP1147_FT_60MNAIO04_A':0,  //空气表[自动]_锻造厂_60MN用空气(累积流量)\r\n'NumTag/OPCUA132/PS_IP5139_FT_LT07AO04_C':0,  //空气表[自动]_燃气发电_110t锅炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5139_FT_LT07AO04_A':0,  //空气表[自动]_燃气发电_110t锅炉用空气(累积流量)\r\n'NumTag/OPCUA132/PS_IP3058_FT_DL22AO01_C':0,  //空气表[自动]_燃气发电_160t锅炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP3058_FT_DL22AO01_A':0,  //空气表[自动]_燃气发电_160t锅炉用空气(累积流量)\r\n'NumTag/OPCUA132/PS_IP5137_FT_PS05AO04_C':0,  //空气表[自动]_燃气发电_75t锅炉用空气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5137_FT_PS05AO04_A':0,  //空气表[自动]_燃气发电_75t锅炉用空气(累积流量)\r\n'NumTag/OPCUA132/PW_IP2080_FT_PW28AO01_C':0,  //空气表[自动]_转炉水处理用净化空气(瞬时流量)\r\n'NumTag/OPCUA132/PW_IP2080_FT_PW28AO01_A':0,  //空气表[自动]_转炉水处理用净化空气(累积流量)\r\n'NumTag/OPCUA132/3031FT_LG12AO07_PV':0,  //空气表[自动]_电炉余热用空气(瞬时流量)\r\n'NumTag/OPCUA132/3031FT_LG12AO07_A_PV':0,  //空气表[自动]_电炉余热用空气(累积流量)\r\n'NumTag/OPCUA132/LG_IP2049_FT_LG07AO12':0,  //空气表[自动]_濮阳源泰压球用空气(瞬时流量)\r\n'NumTag/OPCUA132/LG_IP2049_FT_LG07AO12_A':0,  //空气表[自动]_濮阳源泰压球用空气(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4061_FT_ZG03DO01_C':0,  //空气表[自动]_质检部用空气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4061_FT_ZG03DO01_A':0,  //空气表[自动]_质检部用空气(累积流量)\r\n'NumTag/OPCUA132/4202FT_ZB01BO03_PV':0,  //空气表[自动]_中棒线用净化空气(瞬时流量)\r\n'NumTag/OPCUA132/4202FT_ZB01BO03_A_PV':0,  //空气表[自动]_中棒线用净化空气(累积流量)\r\n'NumTag/OPCUA132/4202FT_ZB01BO02_PV':0,  //空气表[自动]_中棒线用普通空气(瞬时流量)\r\n'NumTag/OPCUA132/4202FT_ZB01BO02_A_PV':0,  //空气表[自动]_中棒线用普通空气(累积流量)\r\n'NumTag/OPCUA132/BBX_IP6073_FT_BBX001_C':0,  //空气表[自动]_扁棒线用净化空气总管(瞬时流量)\r\n'NumTag/OPCUA132/BBX_IP6073_FT_BBX001_A':0,  //空气表[自动]_扁棒线用净化空气总管(累积流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO04_C':0,  //空气表[自动]_170钢管厂_170机组净化空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO04_A':0,  //空气表[自动]_170钢管厂_170机组净化空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO03_C':0,  //空气表[自动]_170钢管厂_170机组普通空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO03_A':0,  //空气表[自动]_170钢管厂_170机组普通空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO05_C':0,  //空气表[自动]_170钢管厂_170热处理2跨1#空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6063_FT_GP02AO05_A':0,  //空气表[自动]_170钢管厂_170热处理2跨1#空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6038_FT_GP04AO03_C':0,  //空气表[自动]_460钢管厂_460机组净化空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6038_FT_GP04AO03_A':0,  //空气表[自动]_460钢管厂_460机组净化空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6038_FT_GP04AO02_C':0,  //空气表[自动]_460钢管厂_460机组普通空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6038_FT_GP04AO02_A':0,  //空气表[自动]_460钢管厂_460机组普通空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6034_FT_GP03AO04_C':0,  //空气表[自动]_219钢管厂_219机组净化空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6034_FT_GP03AO04_A':0,  //空气表[自动]_219钢管厂_219机组净化空气(累积流量)\r\n'NumTag/OPCUA132/IP6034_PT_PG03AO04':0,  //空气表[自动]_219钢管厂_219机组净化空气(压力)\r\n'NumTag/OPCUA132/GG_IP6034_FT_GP03AO03_C':0,  //空气表[自动]_219钢管厂_219机组普通空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6034_FT_GP03AO03_A':0,  //空气表[自动]_219钢管厂_219机组普通空气(累积流量)\r\n'NumTag/OPCUA132/IP6034_PT_PG03AO03':0,  //空气表[自动]_219钢管厂_219机组普通空气(压力)\r\n'NumTag/OPCUA132/GG_IP1062_FT_GP01AO01_C':0,  //空气表[自动]_钢管厂_108机组用空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP1062_FT_GP01AO01_A':0,  //空气表[自动]_钢管厂_108机组用空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6040_FT_GP04BO04_C':0,  //空气表[自动]_钢管热处理_钢管460淬火炉净化空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6040_FT_GP04BO04_A':0,  //空气表[自动]_钢管热处理_钢管460淬火炉净化空气(累积流量)\r\n'NumTag/OPCUA132/GG_IP6040_FT_GP04BO03_C':0,  //空气表[自动]_钢管热处理_钢管460淬火炉普通空气(瞬时流量)\r\n'NumTag/OPCUA132/GG_IP6040_FT_GP04BO03_A':0,  //空气表[自动]_钢管热处理_钢管460淬火炉普通空气(累积流量)\r\n'NumTag/OPCUA132/DXDX03_FT':0,  //空气表[自动]_其他_大兴电气(瞬时流量)\r\n'NumTag/OPCUA132/DXDX03_FT_A':0,  //空气表[自动]_其他_大兴电气(累积流量)\r\n'NumTag/OPCUA132/DXDX03_PT':0,  //空气表[自动]_其他_大兴电气(压力)\r\n'NumTag/OPCUA132/DXDX03_TE':0,  //空气表[自动]_其他_大兴电气(温度)\r\n'NumTag/OPCUA132/PS_IP2076_FT_PS02AS08_C':0,  //空气表[自动]_转炉厂_转炉除尘2#用空气(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP2076_FT_PS02AS08_A':0,  //空气表[自动]_转炉厂_转炉除尘2#用空气(累积流量)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280QT02_C':0,  //空气表[自动]_炼铁厂_1280高炉新汽拖风机外送风量(瞬时流量)\r\n'NumTag/OPCUA132/PS_IP5173_FT_1280QT02_A':0,  //空气表[自动]_炼铁厂_1280高炉新汽拖风机外送风量(累积流量)\r\n'NumTag/OPCUA132/ZG_IP4037_FT_ZG03DO03_C':0,  //空气表[自动]_小棒厂_650机组连轧厂2#用空气(瞬时流量)\r\n'NumTag/OPCUA132/ZG_IP4037_FT_ZG03DO03_A':0,  //空气表[自动]_小棒厂_650机组连轧厂2#用空气(累积流量)\r\n\r\n    'JSONTag/MQDD/Chart1/Line1':[156,111,33,44,100],\t//试验\r\n};\r\ndm.ListCal={\r\n    'NumTag/Air_ChaoLiuTu/Air01_1Air_FRS':{\t//一空外供空气总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2})).toFixed(0)\",\r\n        datas:['NumTag/OPCUA132/IP2058_FT_PG03AO03','NumTag/OPCUA132/IP2057_FT_PG03AO02','NumTag/OPCUA132/IP2057_FT_PG03AO01']\r\n        },\r\n    'NumTag/Air_ChaoLiuTu/Air02_1Air_FRS':{\t//二空外供空气总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1}+{2}+{3}+{4})).toFixed(2)\",\r\n        datas:['NumTag/OPCUA132/IP3047_FT_PG04AO03','NumTag/OPCUA132/IP3047_FT_PG04AO04','NumTag/OPCUA132/IP3047_FT_PG04AO01','NumTag/OPCUA132/IP3047_FT_PG04AO02','NumTag/OPCUA132/IP3047_vfo6']\r\n       },\r\n    'NumTag/Air_ChaoLiuTu/Air03_1Air_FRS':{\t//三空外供空气总流量\r\n        value:0,\r\n        formate:\"(parseFloat({0}+{1})).toFixed(0)\",\r\n        datas:['NumTag/OPCUA132/IP6061_FT_PG05AO01','NumTag/OPCUA132/IP6061_FT_PG05AO02']\r\n        },\r\n    'NumTag/MQDD/LEFT1/BFG_UtilizationRate':{\t//高炉煤气利用率\r\n        value:0,\r\n        formate:\"(parseFloat({0}/{1})*100).toFixed(1)\",\r\n        datas:['NumTag/MQDD/LEFT1/2BFG_FRS','NumTag/MQDD/LEFT1/GL_1BFG_FRS']\r\n       },\r\n };\r\n//\"(parseFloat({1})==0? 0: parseFloat({0}/{1})*100).toFixed(1)\"}",
+    "previewURL": "displayPage.html",
+    "fitContent": false
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 18188,
+      "p": {
+        "displayName": "img_bg",
+        "image": "assets/冶钢集控项目icon/煤气调度/img_bg.jpg",
+        "position": {
+          "x": 960,
+          "y": 507
+        }
+      },
+      "s": {
+        "pixelPerfect": false,
+        "2d.movable": false,
+        "2d.editable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 18189,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 60.73131,
+          "y": 24.83896
+        },
+        "width": 80,
+        "height": 22,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.1)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 18190,
+      "p": {
+        "position": {
+          "x": 64.92227,
+          "y": 24.83946
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "m",
+        "text.color": "rgb(12,133,135)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 18191,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 24.73181,
+          "y": 24.83946
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "净环：",
+        "text.color": "rgba(255,255,255,0.6)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 18192,
+      "p": {
+        "displayName": "节点",
+        "position": {
+          "x": 60.73131,
+          "y": 49.11891
+        },
+        "width": 80,
+        "height": 22,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgba(255,255,255,0.1)",
+        "shape.border.color": "#979797",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 18193,
+      "p": {
+        "position": {
+          "x": 64.92227,
+          "y": 48.96625
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "m",
+        "text.color": "rgb(117,102,18)",
+        "2d.movable": false,
+        "text.border.color": "rgb(117,102,18)"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 18194,
+      "p": {
+        "dataBindings": {
+          "p": {}
+        },
+        "position": {
+          "x": 24.73181,
+          "y": 48.96625
+        },
+        "width": 0.001,
+        "height": 0.001,
+        "tall": 20
+      },
+      "s": {
+        "text": "浊环：",
+        "text.color": "rgba(255,255,255,0.6)",
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 18199,
+      "p": {
+        "position": {
+          "x": 207.63029,
+          "y": 158.16851
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "460净环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 22762,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/DongA_D460_JH_LSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 207.63071,
+          "y": 94.95135
+        },
+        "width": 56.16327,
+        "height": 83.01504
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 18230,
+      "p": {
+        "toolTip": "东区460—净环\\净环冷水池_液位|m",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/DongA_D460_JH_LSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 207.63113,
+          "y": 94.95093
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 31936,
+      "p": {
+        "position": {
+          "x": 317.26473,
+          "y": 158.16851
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "460浊环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 31937,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/DongA_D460_ZH_LSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 317.62518,
+          "y": 94.95135
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 31938,
+      "p": {
+        "toolTip": "东区460—浊环\\浊环冷水池_液位|m",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/DongA_D460_ZH_LSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 317.26558,
+          "y": 94.95093
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 31939,
+      "p": {
+        "position": {
+          "x": 427.61922,
+          "y": 158.16851
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "460浊环热水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 31940,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/DongA_D460_ZH_RSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 427.61964,
+          "y": 94.95135
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 31941,
+      "p": {
+        "toolTip": "东区460—浊环\\浊环热水池_液位|m",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/DongA_D460_ZH_RSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 427.62006,
+          "y": 94.95093
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 33740,
+      "p": {
+        "position": {
+          "x": 565.57576,
+          "y": 158.16851
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "170净环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 33741,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/DongA_D170_JH_LSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 565.57618,
+          "y": 94.95135
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 33742,
+      "p": {
+        "toolTip": "东区170—净环\\冷水池_液位|m",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/DongA_D170_JH_LSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 565.5766,
+          "y": 94.95093
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 33743,
+      "p": {
+        "position": {
+          "x": 675.2102,
+          "y": 158.16851
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "170浊环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 33744,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/DongA_D170_ZH_ZGLSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 675.57065,
+          "y": 94.95135
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 33745,
+      "p": {
+        "toolTip": "东区170—浊环\\轧钢冷水池_液位|m",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/DongA_D170_ZH_ZGLSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 675.21105,
+          "y": 94.95093
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 33746,
+      "p": {
+        "position": {
+          "x": 785.56469,
+          "y": 158.16851
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "170浊环热水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 33747,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/DongA_D170_ZH_RSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 785.56511,
+          "y": 94.95135
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 33748,
+      "p": {
+        "toolTip": "东区170—浊环\\热水池_液位|m",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/DongA_D170_ZH_RSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 785.56553,
+          "y": 94.95093
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 33749,
+      "p": {
+        "position": {
+          "x": 896.47548,
+          "y": 158.16851
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "热处理浊环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 33750,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/DongA_D170_ZH_RCLLSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 896.4759,
+          "y": 94.95135
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 33751,
+      "p": {
+        "toolTip": "东区170—浊环\\热处理冷水池_液位|m",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/DongA_D170_ZH_RCLLSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 896.47632,
+          "y": 94.95093
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 35042,
+      "p": {
+        "position": {
+          "x": 224.54354,
+          "y": 26.10228
+        },
+        "width": 90,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 35043,
+      "p": {
+        "position": {
+          "x": 224.54396,
+          "y": 26.1027
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "460水处理",
+        "text.color": "rgba(13,251,255,0.80)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 35044,
+      "p": {
+        "position": {
+          "x": 583.13147,
+          "y": 26.10228
+        },
+        "width": 90,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 35045,
+      "p": {
+        "position": {
+          "x": 583.13189,
+          "y": 26.1027
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "170水处理",
+        "text.color": "rgba(13,251,255,0.80)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 35046,
+      "p": {
+        "position": {
+          "x": 1035.29315,
+          "y": 158.16851
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "325浊环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 35047,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/DongA_D325_ZH_LSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 1035.29357,
+          "y": 94.95135
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "-4"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 35048,
+      "p": {
+        "toolTip": "东区325—浊环\\冷水池_液位|m",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/DongA_D325_ZH_LSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1035.29399,
+          "y": 94.95093
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 35447,
+      "p": {
+        "position": {
+          "x": 244.8607,
+          "y": 55.37582
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37626,
+      "p": {
+        "position": {
+          "x": 244.8607,
+          "y": 136.4593
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37634,
+      "p": {
+        "position": {
+          "x": 353.33242,
+          "y": 55.37582
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37635,
+      "p": {
+        "position": {
+          "x": 353.33242,
+          "y": 136.4593
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37636,
+      "p": {
+        "position": {
+          "x": 463.63072,
+          "y": 55.37582
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37637,
+      "p": {
+        "position": {
+          "x": 463.63072,
+          "y": 136.4593
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37638,
+      "p": {
+        "position": {
+          "x": 601.78134,
+          "y": 55.37582
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37639,
+      "p": {
+        "position": {
+          "x": 601.78134,
+          "y": 136.4593
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37640,
+      "p": {
+        "position": {
+          "x": 711.62359,
+          "y": 55.37582
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37641,
+      "p": {
+        "position": {
+          "x": 711.62359,
+          "y": 136.4593
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37642,
+      "p": {
+        "position": {
+          "x": 821.67042,
+          "y": 55.37582
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37643,
+      "p": {
+        "position": {
+          "x": 821.67042,
+          "y": 136.4593
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37644,
+      "p": {
+        "position": {
+          "x": 932.46764,
+          "y": 55.37582
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37645,
+      "p": {
+        "position": {
+          "x": 932.46764,
+          "y": 136.4593
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37646,
+      "p": {
+        "position": {
+          "x": 1071.06374,
+          "y": 55.37582
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 37647,
+      "p": {
+        "position": {
+          "x": 1071.06374,
+          "y": 136.4593
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "-4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 38049,
+      "p": {
+        "position": {
+          "x": 1052.21193,
+          "y": 26.10228
+        },
+        "width": 90,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38050,
+      "p": {
+        "position": {
+          "x": 1052.21235,
+          "y": 26.1027
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "325水处理",
+        "text.color": "rgba(13,251,255,0.80)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38797,
+      "p": {
+        "position": {
+          "x": 207.63029,
+          "y": 343.48913
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "小棒净环热水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 38798,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZZXB_JH_650RSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 207.63071,
+          "y": 280.27197
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38799,
+      "p": {
+        "toolTip": "650净环热水池/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZZXB_JH_650RSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 207.63113,
+          "y": 280.27155
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38800,
+      "p": {
+        "position": {
+          "x": 317.26389,
+          "y": 343.48913
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "小棒净环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 38801,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZZXB_JH_650LSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 317.62518,
+          "y": 280.27197
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38802,
+      "p": {
+        "toolTip": "650净环冷水池/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZZXB_JH_650LSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 317.26558,
+          "y": 280.27155
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 38804,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZZXB_JH_ZBCLSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 427.61964,
+          "y": 280.27197
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38805,
+      "p": {
+        "toolTip": "中棒材冷水池/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZZXB_JH_ZBCLSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 427.62006,
+          "y": 280.27155
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38806,
+      "p": {
+        "position": {
+          "x": 539.45768,
+          "y": 343.48913
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "中棒浊环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 38807,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZZXB_ZH_ZBCLSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 539.45811,
+          "y": 280.27197
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38808,
+      "p": {
+        "toolTip": "浊环冷水池/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZZXB_ZH_ZBCLSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 539.45853,
+          "y": 280.27155
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38809,
+      "p": {
+        "position": {
+          "x": 649.09213,
+          "y": 343.48913
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "小棒浊环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 38810,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_Z650_ZH_650LSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 649.45257,
+          "y": 280.27197
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38811,
+      "p": {
+        "toolTip": "650车间浊环冷水池\\液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_Z650_ZH_650LSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 649.09298,
+          "y": 280.27155
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38812,
+      "p": {
+        "position": {
+          "x": 805.60989,
+          "y": 343.48913
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "大棒净环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 38813,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDB0_JH_XHLSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 805.61031,
+          "y": 280.27197
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "6"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38814,
+      "p": {
+        "toolTip": "大棒_循环冷水池/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDB0_JH_XHLSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 805.61073,
+          "y": 280.27155
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38815,
+      "p": {
+        "position": {
+          "x": 916.52068,
+          "y": 343.48913
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "净环新增冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 38816,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDB0_JH_LSC2_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 916.5211,
+          "y": 280.27197
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "6"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38817,
+      "p": {
+        "toolTip": "大棒_2冷水池/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDB0_JH_LSC2_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 916.52152,
+          "y": 280.27155
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38825,
+      "p": {
+        "position": {
+          "x": 244.8607,
+          "y": 240.69644
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38827,
+      "p": {
+        "position": {
+          "x": 244.8607,
+          "y": 321.77992
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38835,
+      "p": {
+        "position": {
+          "x": 353.33242,
+          "y": 240.69644
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38836,
+      "p": {
+        "position": {
+          "x": 353.33242,
+          "y": 321.77992
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38837,
+      "p": {
+        "position": {
+          "x": 463.63072,
+          "y": 240.69644
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38838,
+      "p": {
+        "position": {
+          "x": 463.63072,
+          "y": 321.77992
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38839,
+      "p": {
+        "position": {
+          "x": 575.66327,
+          "y": 240.69644
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38840,
+      "p": {
+        "position": {
+          "x": 575.66327,
+          "y": 321.77992
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38841,
+      "p": {
+        "position": {
+          "x": 685.50552,
+          "y": 240.69644
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38842,
+      "p": {
+        "position": {
+          "x": 685.50552,
+          "y": 321.77992
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38843,
+      "p": {
+        "position": {
+          "x": 841.71562,
+          "y": 240.69644
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "6.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38844,
+      "p": {
+        "position": {
+          "x": 841.71562,
+          "y": 321.77992
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38846,
+      "p": {
+        "position": {
+          "x": 952.51284,
+          "y": 321.77992
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 39246,
+      "p": {
+        "position": {
+          "x": 1028.18414,
+          "y": 343.48913
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "大棒浊环热水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 39247,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDB0_ZH_RSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 1028.18457,
+          "y": 280.27197
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "6"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 39248,
+      "p": {
+        "toolTip": "大棒_浊环热水池/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDB0_ZH_RSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1028.18499,
+          "y": 280.27155
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 39250,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDB0_ZH_ZHLSC_YW"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 1139.09536,
+          "y": 280.27197
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "6"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 39251,
+      "p": {
+        "toolTip": "大棒_浊环冷水池/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDB0_ZH_ZHLSC_YW",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1139.09578,
+          "y": 280.27155
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 39255,
+      "p": {
+        "position": {
+          "x": 1064.28988,
+          "y": 321.77992
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 39257,
+      "p": {
+        "position": {
+          "x": 1175.0871,
+          "y": 321.77992
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 39259,
+      "p": {
+        "position": {
+          "x": 1139.09662,
+          "y": 343.48913
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "大棒浊环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 46035,
+      "p": {
+        "position": {
+          "x": 952.512,
+          "y": 240.69644
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "6.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 46036,
+      "p": {
+        "position": {
+          "x": 1064.28903,
+          "y": 240.69644
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "6.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 46037,
+      "p": {
+        "position": {
+          "x": 1175.08625,
+          "y": 240.69644
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "6.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 49429,
+      "p": {
+        "position": {
+          "x": 427.62175,
+          "y": 343.48913
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "中棒材冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50627,
+      "p": {
+        "position": {
+          "x": 207.63029,
+          "y": 539.40656
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "事故水箱",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50628,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ1_AQSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 207.63071,
+          "y": 476.18941
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50629,
+      "p": {
+        "toolTip": "中区连铸1_安全水池/液位值",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ1_AQSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 207.63113,
+          "y": 476.18898
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50630,
+      "p": {
+        "position": {
+          "x": 317.26389,
+          "y": 539.40656
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "净环水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50631,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ1_JHSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 317.62518,
+          "y": 476.18941
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50632,
+      "p": {
+        "toolTip": "中区连铸1_净环水池/液位值",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ1_JHSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 317.26558,
+          "y": 476.18898
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50633,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ1_ZHSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 427.61964,
+          "y": 476.18941
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "12"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50634,
+      "p": {
+        "toolTip": "中区连铸1_浊环水池/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ1_ZHSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 427.62006,
+          "y": 476.18898
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50635,
+      "p": {
+        "position": {
+          "x": 575.62096,
+          "y": 539.40656
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "软水水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50636,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ2_RHSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 575.62138,
+          "y": 476.18941
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "6"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50637,
+      "p": {
+        "toolTip": "中区2连铸/软化水池液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ2_RHSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 575.6218,
+          "y": 476.18898
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50638,
+      "p": {
+        "position": {
+          "x": 685.2554,
+          "y": 539.40656
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "净环水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50639,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ2_JHLSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 685.61584,
+          "y": 476.18941
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50640,
+      "p": {
+        "toolTip": "中区2连铸/净环冷水池液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ2_JHLSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 685.25625,
+          "y": 476.18898
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50641,
+      "p": {
+        "position": {
+          "x": 795.60989,
+          "y": 539.40656
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "浊环冷水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50642,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ2_ZHLSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 795.61031,
+          "y": 476.18941
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "12"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50643,
+      "p": {
+        "toolTip": "中区2连铸/浊环冷水池液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ2_ZHLSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 795.61073,
+          "y": 476.18898
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50644,
+      "p": {
+        "position": {
+          "x": 906.52068,
+          "y": 539.40656
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "浊环热水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50645,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ2_ZHRSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 906.5211,
+          "y": 476.18941
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "12"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50646,
+      "p": {
+        "toolTip": "中区2连铸/浊环热水池液位C",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ2_ZHRSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 906.52152,
+          "y": 476.18898
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50647,
+      "p": {
+        "position": {
+          "x": 227.56644,
+          "y": 407.34033
+        },
+        "width": 96.03473,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50648,
+      "p": {
+        "position": {
+          "x": 226.50287,
+          "y": 407.34075
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "1#连铸水处理",
+        "text.color": "rgba(13,251,255,0.80)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50649,
+      "p": {
+        "position": {
+          "x": 244.8607,
+          "y": 436.61388
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50650,
+      "p": {
+        "position": {
+          "x": 244.8607,
+          "y": 517.69735
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50658,
+      "p": {
+        "position": {
+          "x": 353.33242,
+          "y": 436.61388
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50659,
+      "p": {
+        "position": {
+          "x": 353.33242,
+          "y": 517.69735
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50661,
+      "p": {
+        "position": {
+          "x": 463.63072,
+          "y": 517.69735
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50662,
+      "p": {
+        "position": {
+          "x": 611.82654,
+          "y": 436.61388
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "6.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50663,
+      "p": {
+        "position": {
+          "x": 611.82654,
+          "y": 517.69735
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50664,
+      "p": {
+        "position": {
+          "x": 721.66879,
+          "y": 436.61388
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50665,
+      "p": {
+        "position": {
+          "x": 721.66879,
+          "y": 517.69735
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50667,
+      "p": {
+        "position": {
+          "x": 831.71562,
+          "y": 517.69735
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50668,
+      "p": {
+        "position": {
+          "x": 942.51284,
+          "y": 517.69735
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50669,
+      "p": {
+        "position": {
+          "x": 596.58175,
+          "y": 407.34033
+        },
+        "width": 98.08402,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50670,
+      "p": {
+        "position": {
+          "x": 596.58175,
+          "y": 407.34075
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "2#连铸水处理",
+        "text.color": "rgba(13,251,255,0.80)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50671,
+      "p": {
+        "position": {
+          "x": 1054.34742,
+          "y": 539.40656
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "事故水箱",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50672,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ3_SGSX_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 1054.34784,
+          "y": 476.18941
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "4"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50673,
+      "p": {
+        "toolTip": "中区连铸3_事故水箱/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ3_SGSX_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1054.34826,
+          "y": 476.18898
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 50674,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ3_JHXSJ_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 1165.25863,
+          "y": 476.18941
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "6"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50675,
+      "p": {
+        "toolTip": "中区连铸3_净环吸水井/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ3_JHXSJ_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1165.25905,
+          "y": 476.18898
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50678,
+      "p": {
+        "position": {
+          "x": 1090.45315,
+          "y": 517.69735
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50679,
+      "p": {
+        "position": {
+          "x": 1201.25037,
+          "y": 517.69735
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50680,
+      "p": {
+        "position": {
+          "x": 1165.25989,
+          "y": 539.40656
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "净环水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50682,
+      "p": {
+        "position": {
+          "x": 1090.4523,
+          "y": 436.61388
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "4.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50683,
+      "p": {
+        "position": {
+          "x": 1201.24953,
+          "y": 436.61388
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "6.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 50684,
+      "p": {
+        "position": {
+          "x": 427.62175,
+          "y": 539.40656
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "浊环水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 51142,
+      "p": {
+        "position": {
+          "x": 1074.23634,
+          "y": 407.34033
+        },
+        "width": 97.50441,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 51143,
+      "p": {
+        "position": {
+          "x": 1073.71351,
+          "y": 407.34075
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "3#连铸水处理",
+        "text.color": "rgba(13,251,255,0.80)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 51144,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ3_ZHXSJ_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 1273.71105,
+          "y": 476.18941
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "12"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 51145,
+      "p": {
+        "toolTip": "中区连铸3_浊环吸水井/液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZLZ3_ZHXSJ_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 1273.71147,
+          "y": 476.18898
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 51147,
+      "p": {
+        "position": {
+          "x": 1309.70279,
+          "y": 517.69735
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 51148,
+      "p": {
+        "position": {
+          "x": 1273.71232,
+          "y": 539.40656
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "浊环水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59977,
+      "p": {
+        "position": {
+          "x": 207.63029,
+          "y": 736.34086
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "7#电炉净环水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 59978,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL7SCL_XZLSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 207.63071,
+          "y": 673.12371
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59979,
+      "p": {
+        "toolTip": "7#电炉/新冷水池液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL7SCL_XZLSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 207.63113,
+          "y": 673.12328
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59980,
+      "p": {
+        "position": {
+          "x": 317.62644,
+          "y": 736.34086
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "新增净环水池",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 59981,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL7SCL_XZLSC_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 317.62518,
+          "y": 673.12371
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59982,
+      "p": {
+        "toolTip": "7#电炉/新冷水池液位",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL7SCL_XZLSC_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 317.26558,
+          "y": 673.12328
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59985,
+      "p": {
+        "position": {
+          "x": 468.08346,
+          "y": 736.34086
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "净环热水井",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 59986,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL8_JRJ_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 468.08388,
+          "y": 673.12371
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "6"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59987,
+      "p": {
+        "toolTip": "中区8#电炉_净热井/液位值",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL8_JRJ_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 468.08431,
+          "y": 673.12328
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59988,
+      "p": {
+        "position": {
+          "x": 578.07877,
+          "y": 736.34086
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "净环冷井水 ",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 59989,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL8_JLJ_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/净环液位.json",
+        "position": {
+          "x": 578.07835,
+          "y": 673.12371
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "6"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59990,
+      "p": {
+        "toolTip": "中区8#电炉_净冷井/液位值",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL8_JLJ_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 577.71875,
+          "y": 673.12328
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59991,
+      "p": {
+        "position": {
+          "x": 688.0724,
+          "y": 736.34086
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "浊环冷井水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 59992,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL8_ZLJ_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 688.07282,
+          "y": 673.12371
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "12"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59993,
+      "p": {
+        "toolTip": "中区8#电炉_浊冷井/液位值",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL8_ZLJ_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 688.07324,
+          "y": 673.12328
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59994,
+      "p": {
+        "position": {
+          "x": 798.98318,
+          "y": 736.34086
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "浊环热井水",
+        "text.color": "rgba(255,255,255,0.8)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 59995,
+      "p": {
+        "displayName": "液位",
+        "dataBindings": {
+          "a": {
+            "Water_Level": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL8_ZRJ_L"
+            }
+          }
+        },
+        "image": "symbols/冶钢集控项目图标/浊环液位.json",
+        "position": {
+          "x": 798.98361,
+          "y": 673.12371
+        },
+        "width": 56.16327,
+        "height": 83.01504,
+        "tall": 20
+      },
+      "a": {
+        "Water_Level": "0",
+        "Max": "12"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59996,
+      "p": {
+        "toolTip": "中区8#电炉_浊热井/液位值",
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/OPCDA222/ZhongA_ZDL8_ZRJ_L",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "position": {
+          "x": 798.98403,
+          "y": 673.12328
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgb(237,237,237)",
+        "text.font": "bold 22px Microsoft YaHei",
+        "text.align": "center"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 59997,
+      "p": {
+        "position": {
+          "x": 214.69531,
+          "y": 603.27463
+        },
+        "width": 70.29248,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 59998,
+      "p": {
+        "position": {
+          "x": 214.69574,
+          "y": 604.27505
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "7#电炉",
+        "text.color": "rgba(13,251,255,0.80)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 60000,
+      "p": {
+        "position": {
+          "x": 244.8607,
+          "y": 714.63165
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 60009,
+      "p": {
+        "position": {
+          "x": 353.33242,
+          "y": 714.63165
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 60012,
+      "p": {
+        "position": {
+          "x": 504.28905,
+          "y": 714.63165
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 60014,
+      "p": {
+        "position": {
+          "x": 614.1313,
+          "y": 714.63165
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 60015,
+      "p": {
+        "position": {
+          "x": 724.17813,
+          "y": 714.63165
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 60016,
+      "p": {
+        "position": {
+          "x": 834.97535,
+          "y": 714.63165
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "0.0",
+        "text.color": "rgba(255,255,255,0.6)",
+        "text.align": "center",
+        "text.font": "12px Microsoft YaHei"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 60017,
+      "p": {
+        "position": {
+          "x": 476.12032,
+          "y": 603.27463
+        },
+        "width": 70.29248,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 60018,
+      "p": {
+        "position": {
+          "x": 476.12074,
+          "y": 604.27505
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "8#电炉",
+        "text.color": "rgba(13,251,255,0.80)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Edge",
+      "i": 62979,
+      "p": {
+        "source": {
+          "__i": 18188
+        },
+        "target": {
+          "__i": 18188
+        }
+      },
+      "s": {
+        "edge.color": "#009687",
+        "edge.width": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 62981,
+      "p": {
+        "position": {
+          "x": 856.25997,
+          "y": 180.57937
+        },
+        "width": 1377.03606,
+        "height": 0.10539,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 167.74194,
+              "y": 180.57937
+            },
+            {
+              "x": 1544.77799,
+              "y": 180.57937
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "#979797",
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 62982,
+      "p": {
+        "position": {
+          "x": 856.25997,
+          "y": 756.89807
+        },
+        "width": 1377.03606,
+        "height": 0.10539,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 167.74194,
+              "y": 756.89807
+            },
+            {
+              "x": 1544.77799,
+              "y": 756.89807
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "#979797",
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 63762,
+      "p": {
+        "position": {
+          "x": 1474.86674,
+          "y": 94.95009
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "东区水务",
+        "text.color": "rgba(255,231,13,0.80)",
+        "text.align": "center",
+        "text.font": "32px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 63763,
+      "p": {
+        "position": {
+          "x": 1474.86674,
+          "y": 476.18983
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "中区水务",
+        "text.color": "rgba(255,231,13,0.80)",
+        "text.align": "center",
+        "text.font": "32px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 67569,
+      "p": {
+        "position": {
+          "x": 227.56644,
+          "y": 210.37062
+        },
+        "width": 96.03473,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38819,
+      "p": {
+        "position": {
+          "x": 226.39748,
+          "y": 211.42332
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "中小棒水处理",
+        "text.color": "rgba(13,251,255,0.80)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 67570,
+      "p": {
+        "position": {
+          "x": 825.54604,
+          "y": 210.37062
+        },
+        "width": 96.03473,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "shape": "roundRect",
+        "shape.background": "rgba(63,79,92,0.5)",
+        "shape.border.color": "rgba(81,151,189,0.8)",
+        "shape.corner.radius": 3,
+        "shape.border.3d": true,
+        "shape.border.width": 1
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 38850,
+      "p": {
+        "position": {
+          "x": 825.59874,
+          "y": 211.42332
+        },
+        "width": 0.10539,
+        "height": 0.10539,
+        "tall": 20
+      },
+      "s": {
+        "text": "大棒水处理",
+        "text.color": "rgba(13,251,255,0.80)",
+        "text.align": "center",
+        "text.font": "14px arial, sans-serif"
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 70838,
+      "p": {
+        "position": {
+          "x": 728.62265,
+          "y": 273.69421
+        },
+        "width": 0,
+        "height": 146.64719,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 728.62265,
+              "y": 200.37062
+            },
+            {
+              "x": 728.62265,
+              "y": 347.01781
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(7,120,143)",
+        "shape.border.width": 1,
+        "shape.border.pattern": [
+          16,
+          16
+        ]
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 70839,
+      "p": {
+        "position": {
+          "x": 507.37647,
+          "y": 466.13567
+        },
+        "width": 0,
+        "height": 146.64719,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 507.37647,
+              "y": 392.81207
+            },
+            {
+              "x": 507.37647,
+              "y": 539.45926
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(7,120,143)",
+        "shape.border.width": 1,
+        "shape.border.pattern": [
+          16,
+          16
+        ]
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 70840,
+      "p": {
+        "position": {
+          "x": 984.21193,
+          "y": 468.13567
+        },
+        "width": 0,
+        "height": 146.64719,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 984.21193,
+              "y": 394.81207
+            },
+            {
+              "x": 984.21193,
+              "y": 541.45926
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(7,120,143)",
+        "shape.border.width": 1,
+        "shape.border.pattern": [
+          16,
+          16
+        ]
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 71857,
+      "p": {
+        "position": {
+          "x": 397.53801,
+          "y": 673.07059
+        },
+        "width": 0,
+        "height": 146.64719,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 397.53801,
+              "y": 599.74699
+            },
+            {
+              "x": 397.53801,
+              "y": 746.39418
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(7,120,143)",
+        "shape.border.width": 1,
+        "shape.border.pattern": [
+          16,
+          16
+        ]
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 72599,
+      "p": {
+        "position": {
+          "x": 967.81897,
+          "y": 90.49363
+        },
+        "width": 0,
+        "height": 146.64719,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 967.81897,
+              "y": 17.17004
+            },
+            {
+              "x": 967.81897,
+              "y": 163.81723
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(7,120,143)",
+        "shape.border.width": 1,
+        "shape.border.pattern": [
+          16,
+          16
+        ]
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 80670,
+      "p": {
+        "position": {
+          "x": 496.16552,
+          "y": 90.49363
+        },
+        "width": 0,
+        "height": 146.64719,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 496.16552,
+              "y": 17.17004
+            },
+            {
+              "x": 496.16552,
+              "y": 163.81723
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(7,120,143)",
+        "shape.border.width": 1,
+        "shape.border.pattern": [
+          16,
+          16
+        ]
+      }
+    }
+  ],
+  "modified": "Sat Aug 19 2023 17:25:01 GMT+0800 (中国标准时间)",
+  "contentRect": {
+    "x": -13.5,
+    "y": 0,
+    "width": 1933.5,
+    "height": 1014
+  }
+}

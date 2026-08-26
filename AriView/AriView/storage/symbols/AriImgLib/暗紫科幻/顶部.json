@@ -1,0 +1,1424 @@
+{
+  "modified": "Mon Jan 20 2025 12:36:49 GMT+0800 (中国标准时间)",
+  "background": "rgb(0,0,0)",
+  "width": 500,
+  "height": 60,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.5,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        3,
+        0.13608,
+        22.85506,
+        0.13608,
+        61.57242,
+        53.19728,
+        41.71736,
+        53.19728
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgba(29, 42, 73, 0)",
+        0.006,
+        "#1d2a49",
+        1,
+        "#18355f"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.55,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        34.7681,
+        0.13608,
+        249.20273,
+        0.13608,
+        249.20273,
+        57.27891,
+        75.47097,
+        57.27891
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(41, 60, 85, 0)",
+        0.482,
+        "#faf9db",
+        0.494,
+        "#fffede",
+        1,
+        "rgba(41, 60, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        46.68113,
+        57.27891,
+        66.53619,
+        57.27891,
+        66.53619,
+        57.27891,
+        66.53619,
+        57.27891,
+        66.53619,
+        60,
+        66.53619,
+        60,
+        66.53619,
+        60,
+        46.68113,
+        60,
+        46.68113,
+        60,
+        46.68113,
+        60,
+        46.68113,
+        57.27891,
+        46.68113,
+        57.27891,
+        46.68113,
+        57.27891
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        115.18109,
+        0.13608,
+        95.32603,
+        0.13608,
+        66.53619,
+        25.98642,
+        86.39125,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        147.94193,
+        0.13608,
+        128.08687,
+        0.13608,
+        99.29704,
+        25.98642,
+        119.1521,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        180.70278,
+        0.13608,
+        160.84772,
+        0.13608,
+        132.05789,
+        25.98642,
+        151.91294,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.99275,
+      "borderGradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "rgba(41, 60, 85, 0)",
+        0.491,
+        "#fff",
+        0.506,
+        "#f9f9fa",
+        1,
+        "rgba(41, 60, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        52.63765,
+        21.90478,
+        77.45648,
+        57.27891,
+        103.26805,
+        57.27891
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.5,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        496.39821,
+        0.13608,
+        476.54315,
+        0.13608,
+        437.82579,
+        53.19728,
+        457.68085,
+        53.19728
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgba(29, 42, 73, 0)",
+        0.006,
+        "#1d2a49",
+        1,
+        "#18355f"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.55,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        463.63736,
+        0.13608,
+        249.20273,
+        0.13608,
+        249.20273,
+        57.27891,
+        422.93449,
+        57.27891
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(41, 60, 85, 0)",
+        0.482,
+        "#faf9db",
+        0.494,
+        "#fffede",
+        1,
+        "rgba(41, 60, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        432.86202,
+        57.27891,
+        452.71708,
+        57.27891,
+        452.71708,
+        57.27891,
+        452.71708,
+        57.27891,
+        452.71708,
+        60,
+        452.71708,
+        60,
+        452.71708,
+        60,
+        432.86202,
+        60,
+        432.86202,
+        60,
+        432.86202,
+        60,
+        432.86202,
+        57.27891,
+        432.86202,
+        57.27891,
+        432.86202,
+        57.27891
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        384.21712,
+        0.13608,
+        404.07218,
+        0.13608,
+        432.86202,
+        25.98642,
+        413.00696,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        351.45628,
+        0.13608,
+        371.31134,
+        0.13608,
+        400.10117,
+        25.98642,
+        380.24611,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        318.69543,
+        0.13608,
+        338.55049,
+        0.13608,
+        367.34032,
+        25.98642,
+        347.48527,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.99275,
+      "borderGradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "rgba(41, 60, 85, 0)",
+        0.491,
+        "#fff",
+        0.506,
+        "#f9f9fa",
+        1,
+        "rgba(41, 60, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        446.76056,
+        21.90478,
+        421.94173,
+        57.27891,
+        396.13016,
+        57.27891
+      ]
+    },
+    {
+      "type": "shape",
+      "dash": true,
+      "dashPattern": [
+        1.98551,
+        6.94927
+      ],
+      "dashOffset": 0.99275,
+      "dashColor": "rgba(45, 96, 166, 0)",
+      "dashWidth": 0.99275,
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "points": [
+        1311.76229,
+        19.85506,
+        1560.94326,
+        19.85506
+      ]
+    },
+    {
+      "type": "shape",
+      "dash": true,
+      "dashPattern": [
+        1.98551,
+        6.94927
+      ],
+      "dashOffset": 0.99275,
+      "dashColor": "rgba(45, 96, 166, 0)",
+      "dashWidth": 0.99275,
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "points": [
+        1307.79127,
+        23.82607,
+        1556.97225,
+        23.82607
+      ]
+    },
+    {
+      "type": "shape",
+      "dash": true,
+      "dashPattern": [
+        1.98551,
+        6.94927
+      ],
+      "dashOffset": 0.99275,
+      "dashColor": "rgba(45, 96, 166, 0)",
+      "dashWidth": 0.99275,
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "points": [
+        252.23771,
+        19.85506,
+        3.05674,
+        19.85506
+      ]
+    },
+    {
+      "type": "shape",
+      "dash": true,
+      "dashPattern": [
+        1.98551,
+        6.94927
+      ],
+      "dashOffset": 0.99275,
+      "dashColor": "rgba(45, 96, 166, 0)",
+      "dashWidth": 0.99275,
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "points": [
+        256.20873,
+        23.82607,
+        7.02775,
+        23.82607
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "rgb(0,83,191)",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.5,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        3,
+        0.13608,
+        22.85506,
+        0.13608,
+        61.57242,
+        53.19728,
+        41.71736,
+        53.19728
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgba(29, 42, 73, 0)",
+        0.006,
+        "#1d2a49",
+        1,
+        "#18355f"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.55,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        34.7681,
+        0.13608,
+        249.20273,
+        0.13608,
+        249.20273,
+        57.27891,
+        75.47097,
+        57.27891
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(41, 60, 85, 0)",
+        0.482,
+        "#faf9db",
+        0.494,
+        "#fffede",
+        1,
+        "rgba(41, 60, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        113.19558,
+        55.91838,
+        190.63031,
+        55.91838,
+        190.63031,
+        55.91838,
+        190.63031,
+        55.91838,
+        190.63031,
+        58.63946,
+        190.63031,
+        58.63946,
+        190.63031,
+        58.63946,
+        113.19558,
+        58.63946,
+        113.19558,
+        58.63946,
+        113.19558,
+        58.63946,
+        113.19558,
+        55.91838,
+        113.19558,
+        55.91838,
+        113.19558,
+        55.91838
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(41, 60, 85, 0)",
+        0.482,
+        "#faf9db",
+        0.494,
+        "#fffede",
+        1,
+        "rgba(41, 60, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        46.68113,
+        57.27891,
+        66.53619,
+        57.27891,
+        66.53619,
+        57.27891,
+        66.53619,
+        57.27891,
+        66.53619,
+        60,
+        66.53619,
+        60,
+        66.53619,
+        60,
+        46.68113,
+        60,
+        46.68113,
+        60,
+        46.68113,
+        60,
+        46.68113,
+        57.27891,
+        46.68113,
+        57.27891,
+        46.68113,
+        57.27891
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        115.18109,
+        0.13608,
+        95.32603,
+        0.13608,
+        66.53619,
+        25.98642,
+        86.39125,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        147.94193,
+        0.13608,
+        128.08687,
+        0.13608,
+        99.29704,
+        25.98642,
+        119.1521,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        180.70278,
+        0.13608,
+        160.84772,
+        0.13608,
+        132.05789,
+        25.98642,
+        151.91294,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.99275,
+      "borderGradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "rgba(41, 60, 85, 0)",
+        0.491,
+        "#fff",
+        0.506,
+        "#f9f9fa",
+        1,
+        "rgba(41, 60, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        52.63765,
+        21.90478,
+        77.45648,
+        57.27891,
+        103.26805,
+        57.27891
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "rgb(0,83,191)",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.5,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        496.39821,
+        0.13608,
+        476.54315,
+        0.13608,
+        437.82579,
+        53.19728,
+        457.68085,
+        53.19728
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        0,
+        0.5,
+        1,
+        0,
+        "rgba(29, 42, 73, 0)",
+        0.006,
+        "#1d2a49",
+        1,
+        "#18355f"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.55,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        464.63011,
+        0.13608,
+        249.20273,
+        0.13608,
+        249.20273,
+        57.27891,
+        423.7388,
+        57.27891
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(41, 60, 85, 0)",
+        0.482,
+        "#faf9db",
+        0.494,
+        "#fffede",
+        1,
+        "rgba(41, 60, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        311.74616,
+        57.27892,
+        389.18089,
+        57.27892,
+        389.18089,
+        57.27892,
+        389.18089,
+        57.27892,
+        389.18089,
+        60,
+        389.18089,
+        60,
+        389.18089,
+        60,
+        311.74616,
+        60,
+        311.74616,
+        60,
+        311.74616,
+        60,
+        311.74616,
+        57.27892,
+        311.74616,
+        57.27892,
+        311.74616,
+        57.27892
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(41, 60, 85, 0)",
+        0.482,
+        "#faf9db",
+        0.494,
+        "#fffede",
+        1,
+        "rgba(41, 60, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        432.86202,
+        57.27891,
+        452.71708,
+        57.27891,
+        452.71708,
+        57.27891,
+        452.71708,
+        57.27891,
+        452.71708,
+        60,
+        452.71708,
+        60,
+        452.71708,
+        60,
+        432.86202,
+        60,
+        432.86202,
+        60,
+        432.86202,
+        60,
+        432.86202,
+        57.27891,
+        432.86202,
+        57.27891,
+        432.86202,
+        57.27891
+      ],
+      "segments": [
+        1,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        384.21712,
+        0.13608,
+        404.07218,
+        0.13608,
+        432.86202,
+        25.98642,
+        413.00696,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        351.45628,
+        0.13608,
+        371.31134,
+        0.13608,
+        400.10117,
+        25.98642,
+        380.24611,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "fillRule": "evenodd",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "#001c41",
+        1,
+        "#9db9ff"
+      ],
+      "pixelPerfect": true,
+      "opacity": 0.1,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        318.69543,
+        0.13608,
+        338.55049,
+        0.13608,
+        367.34032,
+        25.98642,
+        347.48527,
+        25.98642
+      ],
+      "segments": [
+        1,
+        2,
+        2,
+        2,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.99275,
+      "borderGradientPack": [
+        "linear",
+        0.5,
+        1,
+        0.5,
+        0,
+        0,
+        "rgba(41, 60, 85, 0)",
+        0.491,
+        "#fff",
+        0.506,
+        "#f9f9fa",
+        1,
+        "rgba(41, 60, 85, 0)"
+      ],
+      "pixelPerfect": true,
+      "layoutH": "center",
+      "layoutV": "top",
+      "points": [
+        446.76056,
+        21.90478,
+        421.94173,
+        57.27891,
+        396.13016,
+        57.27891
+      ]
+    },
+    {
+      "type": "shape",
+      "dash": true,
+      "dashPattern": [
+        1.98551,
+        6.94927
+      ],
+      "dashOffset": 0.99275,
+      "dashColor": "rgba(45, 96, 166, 0)",
+      "dashWidth": 0.99275,
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "points": [
+        1311.76229,
+        19.85506,
+        1560.94326,
+        19.85506
+      ]
+    },
+    {
+      "type": "shape",
+      "dash": true,
+      "dashPattern": [
+        1.98551,
+        6.94927
+      ],
+      "dashOffset": 0.99275,
+      "dashColor": "rgba(45, 96, 166, 0)",
+      "dashWidth": 0.99275,
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "points": [
+        1307.79127,
+        23.82607,
+        1556.97225,
+        23.82607
+      ]
+    },
+    {
+      "type": "shape",
+      "dash": true,
+      "dashPattern": [
+        1.98551,
+        6.94927
+      ],
+      "dashOffset": 0.99275,
+      "dashColor": "rgba(45, 96, 166, 0)",
+      "dashWidth": 0.99275,
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "points": [
+        252.23771,
+        19.85506,
+        3.05674,
+        19.85506
+      ]
+    },
+    {
+      "type": "shape",
+      "dash": true,
+      "dashPattern": [
+        1.98551,
+        6.94927
+      ],
+      "dashOffset": 0.99275,
+      "dashColor": "rgba(45, 96, 166, 0)",
+      "dashWidth": 0.99275,
+      "pixelPerfect": true,
+      "layoutH": "leftright",
+      "layoutV": "top",
+      "points": [
+        256.20873,
+        23.82607,
+        7.02775,
+        23.82607
+      ]
+    },
+    {
+      "type": "text",
+      "text": "中棒数字产线",
+      "align": "center",
+      "color": "rgb(0,0,0)",
+      "font": "italic bold 28px Arial",
+      "pixelPerfect": true,
+      "displayName": "信息化综合应用",
+      "rect": [
+        248.75008,
+        30.48837,
+        0.1,
+        0.1
+      ]
+    },
+    {
+      "type": "text",
+      "text": "中棒数字产线",
+      "align": "center",
+      "color": "rgb(247,247,247)",
+      "gradientPack": [
+        "linear",
+        0.5,
+        1.30958,
+        0.5,
+        0,
+        0,
+        "#45C4F9",
+        1,
+        "white"
+      ],
+      "font": "italic bold 28px Arial",
+      "pixelPerfect": true,
+      "displayName": "信息化综合应用",
+      "rect": [
+        249.79958,
+        23.53837,
+        0.001,
+        10
+      ]
+    }
+  ]
+}
