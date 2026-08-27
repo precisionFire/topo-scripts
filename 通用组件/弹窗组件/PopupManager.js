@@ -16,6 +16,10 @@
 // 新增弹窗步骤：
 //   1. 编写 render(rawData, closeFn) 函数，return { close }
 //   2. 调用 PopupManager.register('my-type', { render })
+//
+// 【版本记录】
+//   v1.2  2026-08-27  移除 show() 的 preShow 钩子（v1.1 已废弃）：
+//                     去重等业务判断归各业务弹窗在 render/update 内自行处理，管理器保持纯管理
 // =========================
 
 const PopupManager = (() => {

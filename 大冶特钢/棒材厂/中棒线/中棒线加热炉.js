@@ -23,6 +23,10 @@
  *
  * 【配套文档】
  *   中棒加热炉逻辑 — 架构设计与数据流全文档
+ *
+ * 【版本记录】
+ *   v1.1  2026-08-27  报警弹窗调用统一改为 PopupManager.show（conflict / recognition）
+ *   v1.0  2026-08-27  炉号识别不一致新增报警弹窗（RecognitionDialog，仅中棒画面使用）
  * ================================================================
  */
 
@@ -542,8 +546,10 @@ var cachedSystemId = {};
  * 炉前识别：对比系统识别炉号与入炉检测炉号
  * @param {string} heatKey - 炉号 'A1' | 'A2'
  * @param {string} furNo   - 炉编号 '1' | '2'
+ * @param {Object|Array} newValue - 入炉检测数据（单对象或数组）
+ * @param {string} msgTime - 消息时间（报警弹窗展示用）
  */
-function tryRecognize(heatKey, furNo, newValue) {
+function tryRecognize(heatKey, furNo, newValue, msgTime) {
     if (!newValue) return;
 
     function doRecognition() {
@@ -563,6 +569,8 @@ function tryRecognize(heatKey, furNo, newValue) {
             console.log('[炉号不一致] ' + heatKey + '炉: ALMAR=' + cachedSystemId[heatKey]
                 + ' INLET_ROLLER=' + newValue.heatNo);
             recognitionText.s('text', '炉号不一致');
+            // 报警弹窗：显示卡号/钢坯号/跟踪炉号/炉前识别炉号，缓存后点击一次不再显示
+            showRecognitionDialog(heatKey, newValue, msgTime);
         } else if (hasSystem && !hasHeatNo) {
             recognitionText.s('text', 'INLET_ROLLER标签未带入炉号');
         } else if (!hasSystem && hasHeatNo) {
@@ -575,6 +583,39 @@ function tryRecognize(heatKey, furNo, newValue) {
     doRecognition();
     // 缓存未就绪则 1000ms 后重试
     if (!cachedSystemId[heatKey]) setTimeout(doRecognition, 1000);
+}
+
+/**
+ * 炉号识别不一致报警弹窗
+ * 显示卡号、钢坯号、跟踪炉号、炉前识别炉号
+ * 与炉内冲突弹窗一致：localStorage 缓存，点击确认一次后不再显示
+ * @param {string} heatKey  - 炉号 'A1' | 'A2'
+ * @param {Object|Array} newValue - 入炉检测数据（单对象或数组）
+ * @param {string} msgTime  - 消息时间
+ */
+function showRecognitionDialog(heatKey, newValue, msgTime) {
+    if (typeof PopupManager === 'undefined' || !PopupManager.show) return;
+
+    // 兼容单对象/数组，取第一条非空数据
+    var items = Array.isArray(newValue) ? newValue : [newValue];
+    var cardNo = '', inMatNo = '', heatNo = '';
+    for (var i = 0; i < items.length; i++) {
+        var it = items[i];
+        if (!it) continue;
+        if (!cardNo && it.cardNo) cardNo = it.cardNo;
+        if (!inMatNo && it.inMatNo) inMatNo = it.inMatNo;
+        if (!heatNo && it.heatNo) heatNo = it.heatNo;
+        if (cardNo && inMatNo && heatNo) break;
+    }
+
+    PopupManager.show('recognition', {
+        furnaceCode: heatKey,
+        cardNo: cardNo,
+        inMatNo: inMatNo,
+        trackHeatNo: heatNo,
+        systemHeatNo: cachedSystemId[heatKey] || '',
+        msgTime: msgTime || ''
+    });
 }
 
 /**
@@ -663,7 +704,9 @@ dataModel.addDataPropertyChangeListener(function (e) {
         var abnormalData = e.newValue?.data;
         if (abnormalData && abnormalData.abnormalType === 'SLAB_IN_POSITION_CARD_CONFLICT') {
             abnormalData.msgTime = e.newValue?.msgTime || '';
-            ConflictDialog.show(abnormalData);
+            if (typeof PopupManager !== 'undefined' && PopupManager.show) {
+                PopupManager.show('conflict', abnormalData);
+            }
         }
     }
 
@@ -723,13 +766,13 @@ dataModel.addDataPropertyChangeListener(function (e) {
     if (e.property === 'a:A1-in') {
         if (isMsgExpired(e.newValue?.msgTime, 30, 'A1-in')) return;
         var a1InData = e.newValue && e.newValue.data;
-        tryRecognize('A1', '1', a1InData);
+        tryRecognize('A1', '1', a1InData, e.newValue && e.newValue.msgTime);
         setNodeText('1#跟踪炉号', extractHeatNo(a1InData));
     }
     if (e.property === 'a:A2-in') {
         if (isMsgExpired(e.newValue?.msgTime, 30, 'A2-in')) return;
         var a2InData = e.newValue && e.newValue.data;
-        tryRecognize('A2', '2', a2InData);
+        tryRecognize('A2', '2', a2InData, e.newValue && e.newValue.msgTime);
         setNodeText('2#跟踪炉号', extractHeatNo(a2InData));
     }
 });
