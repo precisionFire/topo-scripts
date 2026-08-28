@@ -2,8 +2,11 @@
 .vscode/
 .idea/
 
-# CodeBuddy 项目工作数据（不入库）
-.codebuddy/
+# CodeBuddy 项目工作数据（记忆/规则入库，临时文件不入库）
+.codebuddy/*
+!.codebuddy/memory/
+!.codebuddy/rules/
+.codebuddy/tmp/
 
 # 系统文件
 Thumbs.db
