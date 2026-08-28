@@ -115,12 +115,12 @@ var MILL_TOTAL_LENGTH = 1500;     // 轨道总像素长度
 var STEEL_FIXED_LENGTH = 202;     // 钢坯固定像素长度（默认值，实际按比例计算）
 
 // ── 钢坯长度按比例显示 ──
-// 大棒2#炉最大钢坯长度为 10000mm，对应钢坯图标 200px（可调整）
+// 大棒2#炉最大钢坯长度为 7000mm，对应钢坯图标 250px（可调整）
 var FURNACE_MAX_LENGTH_MM = {
-    A2: 10000    // 2#炉最大钢坯长度（毫米）
+    A2: 7000     // 2#炉最大钢坯长度（毫米）
 };
 var FURNACE_STEEL_ICON_PX = {
-    A2: 200      // 2#炉钢坯图标像素宽度
+    A2: 250      // 2#炉钢坯图标像素宽度
 };
 
 /**
@@ -131,8 +131,8 @@ var FURNACE_STEEL_ICON_PX = {
  */
 function calcSteelPixelLength(furnaceKey, lengthMm) {
     if (!lengthMm || lengthMm <= 0) return STEEL_FIXED_LENGTH;
-    var maxMm = FURNACE_MAX_LENGTH_MM[furnaceKey] || 10000;
-    var iconPx = FURNACE_STEEL_ICON_PX[furnaceKey] || 200;
+    var maxMm = FURNACE_MAX_LENGTH_MM[furnaceKey] || 7000;
+    var iconPx = FURNACE_STEEL_ICON_PX[furnaceKey] || 250;
     return Math.round(lengthMm / maxMm * iconPx);
 }
 
@@ -444,7 +444,7 @@ function fetchPlanData(furnace) {
         });
 
     if (!furnace || furnace === 'A2') {
-        requestGet(`https://bar.dayesteel.com.cn/api/api/bdy/bptbusrollingplan/getreadyplans?wholeBacklogCode=H8&furNo=A2`)
+        requestGet(`https://bar.dayesteel.com.cn/api/api/bdy/bptbusrollingplan/getreadyplans?wholeBacklogCode=H7,H8&furNo=A2`)
             .then(data => {
                 tableData2 = data.Data;
                 let table2 = graphView.dm().getDataByTag('2#plan');
