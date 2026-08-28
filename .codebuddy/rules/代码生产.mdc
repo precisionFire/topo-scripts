@@ -46,6 +46,13 @@ enabled: true
   - 适用：扁棒/小棒/大棒/中棒 4 个加热炉.js（弹窗通用逻辑）
 - **大文件/新文件改动前**：先读目标文件全文，再动手，不要凭记忆改
   - 适用：所有脚本，无例外
+- **PowerShell 中文引号/路径编码问题**（Windows 环境高频踩坑，2026-08-28 起）
+  - 症状：①命令含中文引号或中文消息报 `字符串缺少终止符: "`；②命令含中文路径报 `找不到路径 D:\宸ヤ綔鏂囦欢\...`（GBK 乱码）
+  - 解决方法：
+    - commit 消息含中文 → 改用英文消息，或用 `git commit -m "..."` 时确保引号内为 ASCII
+    - 涉及中文路径的 shell 命令（cd/git -C/Get-ChildItem）→ 直接用 `git` 命令即可（shell 默认已在项目根），不要 cd 中文路径；目录遍历/读取改用 IDE 工具（list_dir/read_file/write_to_file/replace_in_file/search_content）
+    - 需传中文路径给 shell 时，用正斜杠 + 完整路径仍乱码 → 放弃 shell，改用 IDE 工具操作文件
+  - 适用：Windows 下所有 shell 命令（PowerShell），Linux/Mac 不受影响
 
 ## 4. 完成后自查清单（报告完成前逐项确认）
 - [ ] 改动前已读目标文件全文，未凭记忆修改
