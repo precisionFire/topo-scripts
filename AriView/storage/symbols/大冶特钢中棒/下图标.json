@@ -1,10 +1,16 @@
 {
-  "modified": "Wed Apr 29 2026 17:46:06 GMT+0800 (GMT+08:00)",
+  "modified": "Wed Aug 26 2026 18:46:28 GMT+0800 (中国标准时间)",
   "background": "rgb(0,0,0)",
   "dataBindings": [
     {
       "attr": "name",
-      "valueType": "Multiline"
+      "valueType": "Multiline",
+      "name": "内容"
+    },
+    {
+      "attr": "fontsize",
+      "valueType": "Font",
+      "name": "内容字体"
     }
   ],
   "stateEnum": [
@@ -730,7 +736,10 @@
       },
       "align": "center",
       "color": "rgb(184,232,255)",
-      "font": "14px sans-serif, Arial",
+      "font": {
+        "func": "attr@fontsize",
+        "value": "14px sans-serif, Arial"
+      },
       "pixelPerfect": true,
       "opacity": 0.8,
       "state": "normal",

@@ -36,7 +36,7 @@
   "d": [
     {
       "c": "ht.Node",
-      "i": 11860,
+      "i": 47947,
       "p": {
         "position": {
           "x": 960,
@@ -60,14 +60,14 @@
     },
     {
       "c": "ht.Block",
-      "i": 11861,
+      "i": 47948,
       "p": {
         "displayName": "整体",
         "parent": {
-          "__i": 11860
+          "__i": 47947
         },
         "host": {
-          "__i": 11860
+          "__i": 47947
         },
         "position": {
           "x": 960,
@@ -85,11 +85,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 11862,
+      "i": 47949,
       "p": {
         "displayName": "背景",
         "parent": {
-          "__i": 11861
+          "__i": 47948
         },
         "position": {
           "x": 960,
@@ -105,11 +105,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 11863,
+      "i": 47950,
       "p": {
         "displayName": "bg",
         "parent": {
-          "__i": 11862
+          "__i": 47949
         },
         "image": "symbols/tenant/zwsm-dpymsj/参考/设计稿/bg.json",
         "position": {
@@ -198,11 +198,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 11864,
+      "i": 47951,
       "p": {
         "displayName": "左竖",
         "parent": {
-          "__i": 11862
+          "__i": 47949
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -229,11 +229,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 11865,
+      "i": 47952,
       "p": {
         "displayName": "左景",
         "parent": {
-          "__i": 11862
+          "__i": 47949
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -260,11 +260,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 11866,
+      "i": 47953,
       "p": {
         "displayName": "右竖",
         "parent": {
-          "__i": 11862
+          "__i": 47949
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -295,11 +295,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 11867,
+      "i": 47954,
       "p": {
         "displayName": "右景",
         "parent": {
-          "__i": 11862
+          "__i": 47949
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -330,11 +330,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 11868,
+      "i": 47955,
       "p": {
         "displayName": "左右",
         "parent": {
-          "__i": 11862
+          "__i": 47949
         },
         "image": "symbols/tenant/shjz-gczndpsj/左右.json",
         "position": {
@@ -357,11 +357,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 11869,
+      "i": 47956,
       "p": {
         "displayName": "左右",
         "parent": {
-          "__i": 11862
+          "__i": 47949
         },
         "image": "symbols/tenant/shjz-gczndpsj/左右.json",
         "position": {
@@ -380,11 +380,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 11870,
+      "i": 47957,
       "p": {
         "displayName": "下方装饰",
         "parent": {
-          "__i": 11862
+          "__i": 47949
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/底部装饰.json",
         "position": {
@@ -410,11 +410,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 11871,
+      "i": 47958,
       "p": {
         "displayName": "顶部框",
         "parent": {
-          "__i": 11861
+          "__i": 47948
         },
         "position": {
           "x": 960,
@@ -430,11 +430,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 11872,
+      "i": 47959,
       "p": {
         "displayName": "标题2 2",
         "parent": {
-          "__i": 11871
+          "__i": 47958
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/标题2 2.json",
         "position": {
@@ -451,130 +451,34 @@
       }
     },
     {
-      "c": "ht.Text",
-      "i": 11874,
-      "p": {
-        "displayName": "班组:",
-        "parent": {
-          "__i": 11871
-        },
-        "position": {
-          "x": 1455,
-          "y": 32
-        },
-        "width": 0.01,
-        "height": 0.01,
-        "tall": 20
-      },
-      "s": {
-        "text": "班组:",
-        "text.color": "rgb(255,255,255)",
-        "text.font": "18px arial, sans-serif",
-        "2d.movable": false,
-        "select.width": 0,
-        "interactive": true,
-        "2d.selectable": false
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 11875,
-      "p": {
-        "displayName": "信息化综合应用",
-        "parent": {
-          "__i": 11871
-        },
-        "position": {
-          "x": 961,
-          "y": 36
-        },
-        "width": 0.09998,
-        "height": 0.09976,
-        "tall": 20
-      },
-      "s": {
-        "text": "中棒数字产线",
-        "type": "text",
-        "text.align": "center",
-        "text.color": "rgb(0,0,0)",
-        "text.font": "bold 28px Arial",
-        "opacity": 1,
-        "2d.movable": false,
-        "select.width": 0,
-        "interactive": true,
-        "select.padding": 0
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 11876,
-      "p": {
-        "displayName": "信息化综合应用",
-        "parent": {
-          "__i": 11871
-        },
-        "position": {
-          "x": 960,
-          "y": 35
-        },
-        "width": 180,
-        "tall": 20
-      },
-      "s": {
-        "text": "中棒数字产线",
-        "type": "text",
-        "text.align": "center",
-        "text.color": "rgb(247,247,247)",
-        "text.font": "bold 28px Arial",
-        "opacity": 1,
-        "text.gradient.pack": [
-          "linear",
-          0.5,
-          1.30958,
-          0.5,
-          0,
-          0,
-          "#45C4F9",
-          1,
-          "white"
-        ],
-        "2d.movable": false,
-        "interactive": true,
-        "onDoubleClick": "__ht__function(event, data, view) {// 检查是否全屏\r\n  const isFullScreen =\r\n    document.fullscreenElement ||\r\n    document.webkitFullscreenElement ||\r\n    document.mozFullScreenElement ||\r\n    document.msFullscreenElement;\r\n\r\n  if (isFullScreen) {\r\n    // 退出全屏\r\n    if (document.exitFullscreen) {\r\n      document.exitFullscreen();\r\n    } else if (document.webkitExitFullscreen) {\r\n      document.webkitExitFullscreen();\r\n    } else if (document.mozCancelFullScreen) {\r\n      document.mozCancelFullScreen();\r\n    } else if (document.msExitFullscreen) {\r\n      document.msExitFullscreen();\r\n    }\r\n  } else {\r\n    // 进入全屏\r\n    const el = document.documentElement;\r\n    if (el.requestFullscreen) {\r\n      el.requestFullscreen();\r\n    } else if (el.webkitRequestFullscreen) {\r\n      el.webkitRequestFullscreen();\r\n    } else if (el.mozRequestFullScreen) {\r\n      el.mozRequestFullScreen();\r\n    } else if (el.msRequestFullscreen) {\r\n      el.msRequestFullscreen();\r\n    }\r\n  }}",
-        "select.width": 0,
-        "select.padding": 0
-      }
-    },
-    {
       "c": "ht.Node",
-      "i": 11877,
+      "i": 47966,
       "p": {
-        "displayName": "logo_jztz_白",
+        "displayName": "DYTG_LOGO",
         "parent": {
-          "__i": 11871
+          "__i": 47958
         },
-        "image": "assets/AriIconLib/logo/logo_jztz_白.svg",
+        "image": "assets/冶钢看板/DYTG_LOGO.png",
         "position": {
-          "x": 1850,
+          "x": 200,
           "y": 30
         },
-        "width": 100,
-        "height": 30,
+        "width": 375,
+        "height": 35,
         "tall": 20
       },
       "s": {
+        "2d.selectable": false,
         "2d.movable": false,
-        "select.width": 0,
-        "interactive": true,
-        "2d.selectable": false
+        "pixelPerfect": false
       }
     },
     {
       "c": "ht.Shape",
-      "i": 11878,
+      "i": 47964,
       "p": {
         "parent": {
-          "__i": 11871
+          "__i": 47958
         },
         "position": {
           "x": 1780,
@@ -613,26 +517,23 @@
       }
     },
     {
-      "c": "ht.Text",
-      "i": 11879,
+      "c": "ht.Node",
+      "i": 47963,
       "p": {
-        "displayName": "班组",
+        "displayName": "logo_jztz_白",
         "parent": {
-          "__i": 11871
+          "__i": 47958
         },
-        "tag": "班组",
+        "image": "assets/AriIconLib/logo/logo_jztz_白.svg",
         "position": {
-          "x": 1505,
-          "y": 32
+          "x": 1850,
+          "y": 30
         },
-        "width": 0.01,
-        "height": 0.01,
+        "width": 100,
+        "height": 30,
         "tall": 20
       },
       "s": {
-        "text": "甲班",
-        "text.color": "rgb(255,255,255)",
-        "text.font": "18px arial, sans-serif",
         "2d.movable": false,
         "select.width": 0,
         "interactive": true,
@@ -640,35 +541,81 @@
       }
     },
     {
-      "c": "ht.Node",
-      "i": 11880,
+      "c": "ht.Text",
+      "i": 47961,
       "p": {
-        "displayName": "DYTG_LOGO",
+        "displayName": "标题阴影",
         "parent": {
-          "__i": 11871
+          "__i": 47958
         },
-        "image": "assets/冶钢看板/DYTG_LOGO.png",
         "position": {
-          "x": 200,
-          "y": 30
+          "x": 961,
+          "y": 36
         },
-        "width": 375,
-        "height": 35,
+        "width": 0.09998,
+        "height": 0.09976,
         "tall": 20
       },
       "s": {
-        "2d.selectable": false,
+        "text": "中棒数字产线",
+        "type": "text",
+        "text.align": "center",
+        "text.color": "rgb(0,0,0)",
+        "text.font": "bold 28px Arial",
+        "opacity": 1,
         "2d.movable": false,
-        "pixelPerfect": false
+        "select.width": 0,
+        "interactive": true,
+        "select.padding": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47962,
+      "p": {
+        "displayName": "标题",
+        "parent": {
+          "__i": 47958
+        },
+        "position": {
+          "x": 960,
+          "y": 35
+        },
+        "width": 180,
+        "tall": 20
+      },
+      "s": {
+        "text": "中棒数字产线",
+        "type": "text",
+        "text.align": "center",
+        "text.color": "rgb(247,247,247)",
+        "text.font": "bold 28px Arial",
+        "opacity": 1,
+        "text.gradient.pack": [
+          "linear",
+          0.5,
+          1.30958,
+          0.5,
+          0,
+          0,
+          "#45C4F9",
+          1,
+          "white"
+        ],
+        "2d.movable": false,
+        "interactive": true,
+        "onDoubleClick": "__ht__function(event, data, view) {// 检查是否全屏\r\n  const isFullScreen =\r\n    document.fullscreenElement ||\r\n    document.webkitFullscreenElement ||\r\n    document.mozFullScreenElement ||\r\n    document.msFullscreenElement;\r\n\r\n  if (isFullScreen) {\r\n    // 退出全屏\r\n    if (document.exitFullscreen) {\r\n      document.exitFullscreen();\r\n    } else if (document.webkitExitFullscreen) {\r\n      document.webkitExitFullscreen();\r\n    } else if (document.mozCancelFullScreen) {\r\n      document.mozCancelFullScreen();\r\n    } else if (document.msExitFullscreen) {\r\n      document.msExitFullscreen();\r\n    }\r\n  } else {\r\n    // 进入全屏\r\n    const el = document.documentElement;\r\n    if (el.requestFullscreen) {\r\n      el.requestFullscreen();\r\n    } else if (el.webkitRequestFullscreen) {\r\n      el.webkitRequestFullscreen();\r\n    } else if (el.mozRequestFullScreen) {\r\n      el.mozRequestFullScreen();\r\n    } else if (el.msRequestFullscreen) {\r\n      el.msRequestFullscreen();\r\n    }\r\n  }}",
+        "select.width": 0,
+        "select.padding": 0
       }
     },
     {
       "c": "ht.Node",
-      "i": 12009,
+      "i": 47967,
       "p": {
         "displayName": "时间",
         "parent": {
-          "__i": 11871
+          "__i": 47958
         },
         "image": "ht.drawing.time",
         "position": {
@@ -694,9 +641,62 @@
           "shadowOffsetY": 3
         }
       }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47960,
+      "p": {
+        "displayName": "班组:",
+        "parent": {
+          "__i": 47958
+        },
+        "position": {
+          "x": 1455,
+          "y": 32
+        },
+        "width": 0.01,
+        "height": 0.01,
+        "tall": 20
+      },
+      "s": {
+        "text": "班组:",
+        "text.color": "rgb(255,255,255)",
+        "text.font": "18px arial, sans-serif",
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 47965,
+      "p": {
+        "displayName": "班组",
+        "parent": {
+          "__i": 47958
+        },
+        "tag": "班组",
+        "position": {
+          "x": 1505,
+          "y": 32
+        },
+        "width": 0.01,
+        "height": 0.01,
+        "tall": 20
+      },
+      "s": {
+        "text": "甲班",
+        "text.color": "rgb(255,255,255)",
+        "text.font": "18px arial, sans-serif",
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "2d.selectable": false
+      }
     }
   ],
-  "modified": "Mon Jun 15 2026 14:49:19 GMT+0800 (GMT+08:00)",
+  "modified": "Wed Jul 22 2026 16:58:18 GMT+0800 (GMT+08:00)",
   "contentRect": {
     "x": 0,
     "y": 0,

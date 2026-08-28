@@ -36,7 +36,7 @@
   "d": [
     {
       "c": "ht.Node",
-      "i": 37770,
+      "i": 52641,
       "p": {
         "position": {
           "x": 960,
@@ -60,22 +60,18 @@
     },
     {
       "c": "ht.Block",
-      "i": 37771,
+      "i": 52642,
       "p": {
         "displayName": "整体",
         "parent": {
-          "__i": 37770
+          "__i": 52641
         },
         "host": {
-          "__i": 37770
+          "__i": 52641
         },
         "position": {
           "x": 960,
           "y": 540.25
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 0.5
         },
         "width": 1920,
         "height": 1080.5
@@ -89,11 +85,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37772,
+      "i": 52643,
       "p": {
         "displayName": "背景",
         "parent": {
-          "__i": 37771
+          "__i": 52642
         },
         "position": {
           "x": 960,
@@ -109,11 +105,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37773,
+      "i": 52644,
       "p": {
         "displayName": "bg",
         "parent": {
-          "__i": 37772
+          "__i": 52643
         },
         "image": "symbols/tenant/zwsm-dpymsj/参考/设计稿/bg.json",
         "position": {
@@ -202,11 +198,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37774,
+      "i": 52645,
       "p": {
         "displayName": "左竖",
         "parent": {
-          "__i": 37772
+          "__i": 52643
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -233,11 +229,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37775,
+      "i": 52646,
       "p": {
         "displayName": "左景",
         "parent": {
-          "__i": 37772
+          "__i": 52643
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -264,11 +260,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37776,
+      "i": 52647,
       "p": {
         "displayName": "右竖",
         "parent": {
-          "__i": 37772
+          "__i": 52643
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -299,11 +295,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37777,
+      "i": 52648,
       "p": {
         "displayName": "右景",
         "parent": {
-          "__i": 37772
+          "__i": 52643
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -334,11 +330,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37778,
+      "i": 52649,
       "p": {
         "displayName": "左右",
         "parent": {
-          "__i": 37772
+          "__i": 52643
         },
         "image": "symbols/tenant/shjz-gczndpsj/左右.json",
         "position": {
@@ -361,11 +357,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37779,
+      "i": 52650,
       "p": {
         "displayName": "左右",
         "parent": {
-          "__i": 37772
+          "__i": 52643
         },
         "image": "symbols/tenant/shjz-gczndpsj/左右.json",
         "position": {
@@ -384,11 +380,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37780,
+      "i": 52651,
       "p": {
         "displayName": "下方装饰",
         "parent": {
-          "__i": 37772
+          "__i": 52643
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/底部装饰.json",
         "position": {
@@ -414,11 +410,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37781,
+      "i": 52652,
       "p": {
         "displayName": "顶部框",
         "parent": {
-          "__i": 37771
+          "__i": 52642
         },
         "position": {
           "x": 960,
@@ -434,11 +430,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37782,
+      "i": 52653,
       "p": {
         "displayName": "标题2 2",
         "parent": {
-          "__i": 37781
+          "__i": 52652
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/标题2 2.json",
         "position": {
@@ -456,11 +452,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37783,
+      "i": 52654,
       "p": {
         "displayName": "logo_jztz_白",
         "parent": {
-          "__i": 37781
+          "__i": 52652
         },
         "image": "assets/AriIconLib/logo/logo_jztz_白.svg",
         "position": {
@@ -480,10 +476,10 @@
     },
     {
       "c": "ht.Shape",
-      "i": 37784,
+      "i": 52655,
       "p": {
         "parent": {
-          "__i": 37781
+          "__i": 52652
         },
         "position": {
           "x": 1780,
@@ -523,11 +519,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37785,
+      "i": 52656,
       "p": {
         "displayName": "DYTG_LOGO",
         "parent": {
-          "__i": 37781
+          "__i": 52652
         },
         "image": "assets/冶钢看板/DYTG_LOGO.png",
         "position": {
@@ -546,11 +542,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 37786,
+      "i": 52657,
       "p": {
         "displayName": "信息化综合应用",
         "parent": {
-          "__i": 37781
+          "__i": 52652
         },
         "position": {
           "x": 961,
@@ -575,11 +571,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 37787,
+      "i": 52658,
       "p": {
         "displayName": "信息化综合应用",
         "parent": {
-          "__i": 37781
+          "__i": 52652
         },
         "position": {
           "x": 960,
@@ -615,11 +611,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37788,
+      "i": 52659,
       "p": {
         "displayName": "时间",
         "parent": {
-          "__i": 37781
+          "__i": 52652
         },
         "image": "ht.drawing.time",
         "position": {
@@ -648,10 +644,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37789,
+      "i": 52660,
       "p": {
         "parent": {
-          "__i": 37781
+          "__i": 52652
         },
         "tag": "Team",
         "dataBindings": {
@@ -675,11 +671,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 37790,
+      "i": 52661,
       "p": {
         "displayName": "班组:",
         "parent": {
-          "__i": 37781
+          "__i": 52652
         },
         "position": {
           "x": 1390,
@@ -699,10 +695,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37791,
+      "i": 52662,
       "p": {
         "parent": {
-          "__i": 37781
+          "__i": 52652
         },
         "tag": "Shift1",
         "dataBindings": {
@@ -726,11 +722,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 37792,
+      "i": 52663,
       "p": {
         "displayName": "班次:",
         "parent": {
-          "__i": 37781
+          "__i": 52652
         },
         "position": {
           "x": 1500,
@@ -750,11 +746,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37793,
+      "i": 52664,
       "p": {
         "displayName": "画面主体",
         "parent": {
-          "__i": 37771
+          "__i": 52642
         },
         "position": {
           "x": 1129.84292,
@@ -774,11 +770,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37794,
+      "i": 52665,
       "p": {
         "displayName": "1#锯设定值",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw1LengthSetting",
         "image": "ht.drawing.inputNumber",
@@ -847,11 +843,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37795,
+      "i": 52666,
       "p": {
         "displayName": "2#锯设定值",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw2LengthSetting",
         "image": "ht.drawing.inputNumber",
@@ -928,11 +924,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37796,
+      "i": 52667,
       "p": {
         "displayName": "3#锯设定值",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw3LengthSetting",
         "image": "ht.drawing.inputNumber",
@@ -1001,11 +997,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37797,
+      "i": 52668,
       "p": {
         "displayName": "3#锯测量值",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw3LengthActual",
         "image": "ht.drawing.inputNumber",
@@ -1068,11 +1064,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37798,
+      "i": 52669,
       "p": {
         "displayName": "1#锯测量值",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw1LengthActual",
         "image": "ht.drawing.inputNumber",
@@ -1135,11 +1131,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37799,
+      "i": 52670,
       "p": {
         "displayName": "2#锯测量值",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw2LengthActual",
         "image": "ht.drawing.inputNumber",
@@ -1202,11 +1198,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37800,
+      "i": 52671,
       "p": {
         "displayName": "带入当前设备",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "ht.drawing.button",
         "position": {
@@ -1237,11 +1233,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37801,
+      "i": 52672,
       "p": {
         "displayName": "总确认提交",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "ht.drawing.button",
         "position": {
@@ -1274,11 +1270,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37802,
+      "i": 52673,
       "p": {
         "displayName": "旧片直径",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "1#OldBladeDiameter",
         "image": "ht.drawing.input",
@@ -1325,11 +1321,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37803,
+      "i": 52674,
       "p": {
         "displayName": "新片直径",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "1#NewBladeDiameter",
         "image": "ht.drawing.input",
@@ -1377,11 +1373,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37804,
+      "i": 52675,
       "p": {
         "displayName": "班组",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Group",
         "dataBindings": {
@@ -1582,11 +1578,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37805,
+      "i": 52676,
       "p": {
         "displayName": "班次",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Shift",
         "image": "ht.drawing.select",
@@ -1777,11 +1773,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37806,
+      "i": 52677,
       "p": {
         "displayName": "备注信息",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Remark",
         "image": "ht.drawing.textarea",
@@ -1836,11 +1832,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37807,
+      "i": 52678,
       "p": {
         "displayName": "剪切方式",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "SelectMode",
         "image": "ht.drawing.buttonGroup",
@@ -1868,7 +1864,7 @@
       },
       "a": {
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":37993,\"p\":{\"name\":\"5\",\"displayName\":\"剪切\"},\"s\":{\"checked\":false}},{\"c\":\"ht.Data\",\"i\":37994,\"p\":{\"name\":\"10\",\"displayName\":\"锯切\"},\"s\":{\"checked\":true}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":52864,\"p\":{\"name\":\"5\",\"displayName\":\"剪切\"},\"s\":{\"checked\":false}},{\"c\":\"ht.Data\",\"i\":52865,\"p\":{\"name\":\"10\",\"displayName\":\"锯切\"},\"s\":{\"checked\":true}}]}"
         },
         "checkMode": true,
         "buttonGroup.scrollWidth": 202.73828,
@@ -1924,11 +1920,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37808,
+      "i": 52679,
       "p": {
         "displayName": "3#锯实际值",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw3ActualPosition",
         "image": "ht.drawing.inputNumber",
@@ -1991,11 +1987,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37809,
+      "i": 52680,
       "p": {
         "displayName": "1#锯实际值",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw1ActualPosition",
         "image": "ht.drawing.inputNumber",
@@ -2058,11 +2054,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37810,
+      "i": 52681,
       "p": {
         "displayName": "2#锯实际值",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw2ActualPosition",
         "image": "ht.drawing.inputNumber",
@@ -2125,11 +2121,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37811,
+      "i": 52682,
       "p": {
         "displayName": "3#锯光栅位置",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw3GratingPosition",
         "image": "ht.drawing.inputNumber",
@@ -2192,11 +2188,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37812,
+      "i": 52683,
       "p": {
         "displayName": "1#锯光栅位置",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw1GratingPosition",
         "image": "ht.drawing.inputNumber",
@@ -2259,11 +2255,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37813,
+      "i": 52684,
       "p": {
         "displayName": "2#锯光栅位置",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "Saw2GratingPosition",
         "image": "ht.drawing.inputNumber",
@@ -2326,11 +2322,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37814,
+      "i": 52685,
       "p": {
         "displayName": "剪锯工作信息",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "1#plan",
         "dataBindings": {
@@ -2411,11 +2407,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37815,
+      "i": 52686,
       "p": {
         "displayName": "辊道区域",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 487.08291,
@@ -2432,11 +2428,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37816,
+      "i": 52687,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37815
+          "__i": 52686
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2449,11 +2445,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37817,
+      "i": 52688,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37815
+          "__i": 52686
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2467,11 +2463,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37818,
+      "i": 52689,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37815
+          "__i": 52686
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2485,11 +2481,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37819,
+      "i": 52690,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37815
+          "__i": 52686
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2503,11 +2499,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37820,
+      "i": 52691,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37815
+          "__i": 52686
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2521,11 +2517,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37821,
+      "i": 52692,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37815
+          "__i": 52686
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2539,11 +2535,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37822,
+      "i": 52693,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37815
+          "__i": 52686
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2557,11 +2553,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37823,
+      "i": 52694,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37815
+          "__i": 52686
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2575,11 +2571,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37824,
+      "i": 52695,
       "p": {
         "displayName": "辊道区域",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 1006.73447,
@@ -2596,11 +2592,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37825,
+      "i": 52696,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37824
+          "__i": 52695
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2614,11 +2610,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37826,
+      "i": 52697,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37824
+          "__i": 52695
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2632,11 +2628,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37827,
+      "i": 52698,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37824
+          "__i": 52695
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2650,11 +2646,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37828,
+      "i": 52699,
       "p": {
         "displayName": "辊道区域",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 1310.53786,
@@ -2671,11 +2667,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37829,
+      "i": 52700,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37828
+          "__i": 52699
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2689,11 +2685,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37830,
+      "i": 52701,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37828
+          "__i": 52699
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2707,11 +2703,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37831,
+      "i": 52702,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37828
+          "__i": 52699
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2725,11 +2721,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37832,
+      "i": 52703,
       "p": {
         "displayName": "辊道区域",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 1614.34126,
@@ -2746,11 +2742,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37833,
+      "i": 52704,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37832
+          "__i": 52703
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2764,11 +2760,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37834,
+      "i": 52705,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37832
+          "__i": 52703
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2782,11 +2778,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37835,
+      "i": 52706,
       "p": {
         "displayName": "辊道",
         "parent": {
-          "__i": 37832
+          "__i": 52703
         },
         "image": "symbols/大冶特钢中棒/辊道.json",
         "position": {
@@ -2800,11 +2796,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37836,
+      "i": 52707,
       "p": {
         "displayName": "2#锯",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "symbols/图标库/25D/煤矿/采煤机截割部.json",
         "position": {
@@ -2822,11 +2818,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37837,
+      "i": 52708,
       "p": {
         "displayName": "3#锯",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "symbols/图标库/25D/煤矿/采煤机截割部.json",
         "position": {
@@ -2845,11 +2841,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37838,
+      "i": 52709,
       "p": {
         "displayName": "锯机号",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "SawMachineNumber",
         "image": "ht.drawing.buttonGroup",
@@ -2884,7 +2880,7 @@
       },
       "a": {
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":37995,\"p\":{\"name\":\"1#\",\"displayName\":\"1#锯\",\"tag\":\"One\"},\"s\":{\"checked\":false,\"visible\":true,\"disabled\":false}},{\"c\":\"ht.Data\",\"i\":37996,\"p\":{\"name\":\"2#\",\"displayName\":\"2#锯\",\"tag\":\"Two\"},\"s\":{\"checked\":false,\"visible\":true}},{\"c\":\"ht.Data\",\"i\":37997,\"p\":{\"name\":\"3#\",\"displayName\":\"3#锯\",\"tag\":\"Three\"},\"s\":{\"checked\":false,\"visible\":true}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":52866,\"p\":{\"name\":\"1#\",\"displayName\":\"1#锯\",\"tag\":\"One\"},\"s\":{\"checked\":false,\"visible\":true,\"disabled\":false}},{\"c\":\"ht.Data\",\"i\":52867,\"p\":{\"name\":\"2#\",\"displayName\":\"2#锯\",\"tag\":\"Two\"},\"s\":{\"checked\":false,\"visible\":true}},{\"c\":\"ht.Data\",\"i\":52868,\"p\":{\"name\":\"3#\",\"displayName\":\"3#锯\",\"tag\":\"Three\"},\"s\":{\"checked\":false,\"visible\":true}}]}"
         },
         "checkMode": true,
         "buttonGroup.scrollWidth": 202.73828,
@@ -2942,11 +2938,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37839,
+      "i": 52710,
       "p": {
         "displayName": "待使用",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "plan",
         "image": "ht.drawing.table",
@@ -2963,10 +2959,10 @@
       },
       "a": {
         "columnModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":37998,\"p\":{\"name\":\"OutId2\",\"displayName\":\"序号\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":37999,\"p\":{\"name\":\"CardNo\",\"displayName\":\"卡片号\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":38000,\"p\":{\"name\":\"HeatNo\",\"displayName\":\"炉号\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":38001,\"p\":{\"name\":\"SteelGrade\",\"displayName\":\"钢种\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":38002,\"p\":{\"name\":\"OrderThick\",\"displayName\":\"规格\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":38003,\"p\":{\"name\":\"OrderLen\",\"displayName\":\"定尺长度\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":38004,\"p\":{\"name\":\"TotalMatNum\",\"displayName\":\"坯料支数\"},\"s\":{\"visible\":true,\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":52869,\"p\":{\"name\":\"OutId2\",\"displayName\":\"序号\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":52870,\"p\":{\"name\":\"CardNo\",\"displayName\":\"卡片号\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":52871,\"p\":{\"name\":\"HeatNo\",\"displayName\":\"炉号\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":52872,\"p\":{\"name\":\"SteelGrade\",\"displayName\":\"钢种\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":52873,\"p\":{\"name\":\"OrderThick\",\"displayName\":\"规格\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":52874,\"p\":{\"name\":\"OrderLen\",\"displayName\":\"定尺长度\"},\"s\":{\"visible\":true,\"width\":\"150\",\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":52875,\"p\":{\"name\":\"TotalMatNum\",\"displayName\":\"坯料支数\"},\"s\":{\"visible\":true,\"filter\":null,\"labelFont\":\"30px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"25px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}}]}"
         },
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":38005,\"p\":{\"displayName\":\"data\"},\"a\":{\"firstName\":\"Tiger\",\"lastName\":\"Nixon\",\"office\":\"Edinburgh\",\"OutId2\":\"1\",\"CardNo\":\"1\",\"HeatNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}},{\"c\":\"ht.Data\",\"i\":38006,\"p\":{\"displayName\":\"data\"},\"a\":{\"firstName\":\"Garrett\",\"lastName\":\"Winters\",\"office\":\"Tokyo\",\"OutId2\":\"1\",\"HeatNo\":\"1\",\"CardNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}},{\"c\":\"ht.Data\",\"i\":38007,\"p\":{\"displayName\":\"data\"},\"s\":{\"disabled\":false},\"a\":{\"firstName\":\"Ashton\",\"lastName\":\"Cox\",\"office\":\"San Francisco\",\"OutId2\":\"1\",\"CardNo\":\"1\",\"HeatNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":52876,\"p\":{\"displayName\":\"data\"},\"a\":{\"firstName\":\"Tiger\",\"lastName\":\"Nixon\",\"office\":\"Edinburgh\",\"OutId2\":\"1\",\"CardNo\":\"1\",\"HeatNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}},{\"c\":\"ht.Data\",\"i\":52877,\"p\":{\"displayName\":\"data\"},\"a\":{\"firstName\":\"Garrett\",\"lastName\":\"Winters\",\"office\":\"Tokyo\",\"OutId2\":\"1\",\"HeatNo\":\"1\",\"CardNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}},{\"c\":\"ht.Data\",\"i\":52878,\"p\":{\"displayName\":\"data\"},\"s\":{\"disabled\":false},\"a\":{\"firstName\":\"Ashton\",\"lastName\":\"Cox\",\"office\":\"San Francisco\",\"OutId2\":\"1\",\"CardNo\":\"1\",\"HeatNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}}]}"
         },
         "table.translateX": 0,
         "table.translateY": 0,
@@ -3017,11 +3013,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37840,
+      "i": 52711,
       "p": {
         "displayName": "操作人员记录",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "ht.drawing.table",
         "position": {
@@ -3037,10 +3033,10 @@
       },
       "a": {
         "columnModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":38008,\"p\":{\"name\":\"OutId2\",\"displayName\":\"序号\"},\"s\":{\"visible\":true,\"width\":\"50\",\"filter\":null,\"labelFont\":\"15px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"15px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":38009,\"p\":{\"name\":\"CardNo\",\"displayName\":\"卡片号\"},\"s\":{\"visible\":true,\"width\":\"200\",\"filter\":null,\"labelFont\":\"15px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"15px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":38010,\"p\":{\"name\":\"HeatNo\",\"displayName\":\"炉号\"},\"s\":{\"visible\":true,\"width\":\"80\",\"filter\":null,\"labelFont\":\"15px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"15px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":38011,\"p\":{\"name\":\"SteelGrade\",\"displayName\":\"钢种\"},\"s\":{\"visible\":true,\"filter\":null,\"labelFont\":\"15px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"15px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":52879,\"p\":{\"name\":\"OutId2\",\"displayName\":\"序号\"},\"s\":{\"visible\":true,\"width\":\"50\",\"filter\":null,\"labelFont\":\"15px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"15px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":52880,\"p\":{\"name\":\"CardNo\",\"displayName\":\"卡片号\"},\"s\":{\"visible\":true,\"width\":\"200\",\"filter\":null,\"labelFont\":\"15px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"15px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":52881,\"p\":{\"name\":\"HeatNo\",\"displayName\":\"炉号\"},\"s\":{\"visible\":true,\"width\":\"80\",\"filter\":null,\"labelFont\":\"15px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"15px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}},{\"c\":\"ht.Data\",\"i\":52882,\"p\":{\"name\":\"SteelGrade\",\"displayName\":\"钢种\"},\"s\":{\"visible\":true,\"filter\":null,\"labelFont\":\"15px arial, sans-serif\",\"lineHeight\":0,\"headLabelFont\":\"15px arial, sans-serif\",\"headAlign\":\"center\",\"headLabelColor\":\"rgb(255,255,255)\",\"sortable\":false,\"colSpan\":0,\"ignoreColumnLine\":false,\"ignoreRowLine\":false}}]}"
         },
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":38012,\"p\":{\"displayName\":\"data\"},\"a\":{\"firstName\":\"Tiger\",\"lastName\":\"Nixon\",\"office\":\"Edinburgh\",\"OutId2\":\"1\",\"CardNo\":\"1\",\"HeatNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}},{\"c\":\"ht.Data\",\"i\":38013,\"p\":{\"displayName\":\"data\"},\"a\":{\"firstName\":\"Garrett\",\"lastName\":\"Winters\",\"office\":\"Tokyo\",\"OutId2\":\"1\",\"HeatNo\":\"1\",\"CardNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}},{\"c\":\"ht.Data\",\"i\":38014,\"p\":{\"displayName\":\"data\"},\"s\":{\"disabled\":false},\"a\":{\"firstName\":\"Ashton\",\"lastName\":\"Cox\",\"office\":\"San Francisco\",\"OutId2\":\"1\",\"CardNo\":\"1\",\"HeatNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":52883,\"p\":{\"displayName\":\"data\"},\"a\":{\"firstName\":\"Tiger\",\"lastName\":\"Nixon\",\"office\":\"Edinburgh\",\"OutId2\":\"1\",\"CardNo\":\"1\",\"HeatNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}},{\"c\":\"ht.Data\",\"i\":52884,\"p\":{\"displayName\":\"data\"},\"a\":{\"firstName\":\"Garrett\",\"lastName\":\"Winters\",\"office\":\"Tokyo\",\"OutId2\":\"1\",\"HeatNo\":\"1\",\"CardNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}},{\"c\":\"ht.Data\",\"i\":52885,\"p\":{\"displayName\":\"data\"},\"s\":{\"disabled\":false},\"a\":{\"firstName\":\"Ashton\",\"lastName\":\"Cox\",\"office\":\"San Francisco\",\"OutId2\":\"1\",\"CardNo\":\"1\",\"HeatNo\":\"1\",\"SteelGrade\":\"1\",\"OrderThick\":\"1\",\"OrderLen\":\"1\",\"TotalMatNum\":\"1\"}}]}"
         },
         "table.translateX": 0,
         "table.translateY": 0,
@@ -3091,11 +3087,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37841,
+      "i": 52712,
       "p": {
         "displayName": "One-7",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-7",
         "dataBindings": {
@@ -3140,11 +3136,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37842,
+      "i": 52713,
       "p": {
         "displayName": "One-8",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-8",
         "dataBindings": {
@@ -3189,11 +3185,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37843,
+      "i": 52714,
       "p": {
         "displayName": "One-9",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-9",
         "dataBindings": {
@@ -3238,11 +3234,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37844,
+      "i": 52715,
       "p": {
         "displayName": "One-10",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-10",
         "dataBindings": {
@@ -3287,11 +3283,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37845,
+      "i": 52716,
       "p": {
         "displayName": "One-11",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-11",
         "dataBindings": {
@@ -3336,11 +3332,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37846,
+      "i": 52717,
       "p": {
         "displayName": "One-12",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-12",
         "dataBindings": {
@@ -3385,11 +3381,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37847,
+      "i": 52718,
       "p": {
         "displayName": "One-13",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-13",
         "dataBindings": {
@@ -3434,11 +3430,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37848,
+      "i": 52719,
       "p": {
         "displayName": "One-14",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-14",
         "dataBindings": {
@@ -3483,11 +3479,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37849,
+      "i": 52720,
       "p": {
         "displayName": "One-15",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-15",
         "dataBindings": {
@@ -3532,11 +3528,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37850,
+      "i": 52721,
       "p": {
         "displayName": "One-16",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-16",
         "dataBindings": {
@@ -3581,11 +3577,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37851,
+      "i": 52722,
       "p": {
         "displayName": "One-17",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-17",
         "dataBindings": {
@@ -3630,11 +3626,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37852,
+      "i": 52723,
       "p": {
         "displayName": "One-18",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-18",
         "dataBindings": {
@@ -3679,11 +3675,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37853,
+      "i": 52724,
       "p": {
         "displayName": "One-19",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-19",
         "dataBindings": {
@@ -3728,11 +3724,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37854,
+      "i": 52725,
       "p": {
         "displayName": "One-20",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-20",
         "dataBindings": {
@@ -3777,11 +3773,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37855,
+      "i": 52726,
       "p": {
         "displayName": "One-21",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-21",
         "dataBindings": {
@@ -3826,11 +3822,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37856,
+      "i": 52727,
       "p": {
         "displayName": "One-22",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-22",
         "dataBindings": {
@@ -3875,11 +3871,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37857,
+      "i": 52728,
       "p": {
         "displayName": "One-23",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-23",
         "dataBindings": {
@@ -3924,11 +3920,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37858,
+      "i": 52729,
       "p": {
         "displayName": "One-24",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-24",
         "dataBindings": {
@@ -3973,11 +3969,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37859,
+      "i": 52730,
       "p": {
         "displayName": "One-25",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-25",
         "dataBindings": {
@@ -4022,11 +4018,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37860,
+      "i": 52731,
       "p": {
         "displayName": "One-26",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-26",
         "dataBindings": {
@@ -4071,11 +4067,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37861,
+      "i": 52732,
       "p": {
         "displayName": "One-27",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-27",
         "dataBindings": {
@@ -4120,11 +4116,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37862,
+      "i": 52733,
       "p": {
         "displayName": "One-28",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-28",
         "dataBindings": {
@@ -4169,11 +4165,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37863,
+      "i": 52734,
       "p": {
         "displayName": "One-29",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-29",
         "dataBindings": {
@@ -4218,11 +4214,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37864,
+      "i": 52735,
       "p": {
         "displayName": "One-30",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-30",
         "dataBindings": {
@@ -4267,11 +4263,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37865,
+      "i": 52736,
       "p": {
         "displayName": "One-31",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-31",
         "dataBindings": {
@@ -4316,11 +4312,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37866,
+      "i": 52737,
       "p": {
         "displayName": "One-32",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-32",
         "dataBindings": {
@@ -4365,11 +4361,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37867,
+      "i": 52738,
       "p": {
         "displayName": "One-33",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-33",
         "dataBindings": {
@@ -4414,11 +4410,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37868,
+      "i": 52739,
       "p": {
         "displayName": "One-34",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-34",
         "dataBindings": {
@@ -4463,11 +4459,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37869,
+      "i": 52740,
       "p": {
         "displayName": "One-35",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-35",
         "dataBindings": {
@@ -4512,11 +4508,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37870,
+      "i": 52741,
       "p": {
         "displayName": "One-36",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-36",
         "dataBindings": {
@@ -4561,11 +4557,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37871,
+      "i": 52742,
       "p": {
         "displayName": "One-37",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-37",
         "dataBindings": {
@@ -4610,11 +4606,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37872,
+      "i": 52743,
       "p": {
         "displayName": "One-38",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-38",
         "dataBindings": {
@@ -4659,11 +4655,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37873,
+      "i": 52744,
       "p": {
         "displayName": "One-39",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-39",
         "dataBindings": {
@@ -4708,11 +4704,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37874,
+      "i": 52745,
       "p": {
         "displayName": "One-40",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-40",
         "dataBindings": {
@@ -4757,11 +4753,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37875,
+      "i": 52746,
       "p": {
         "displayName": "One-41",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-41",
         "dataBindings": {
@@ -4806,11 +4802,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37876,
+      "i": 52747,
       "p": {
         "displayName": "One-42",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-42",
         "dataBindings": {
@@ -4855,11 +4851,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37877,
+      "i": 52748,
       "p": {
         "displayName": "One-43",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-43",
         "dataBindings": {
@@ -4904,11 +4900,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37878,
+      "i": 52749,
       "p": {
         "displayName": "One-44",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-44",
         "dataBindings": {
@@ -4953,11 +4949,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37879,
+      "i": 52750,
       "p": {
         "displayName": "One-45",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-45",
         "dataBindings": {
@@ -5002,11 +4998,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37880,
+      "i": 52751,
       "p": {
         "displayName": "One-46",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-46",
         "dataBindings": {
@@ -5051,11 +5047,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37881,
+      "i": 52752,
       "p": {
         "displayName": "One-2",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-2",
         "dataBindings": {
@@ -5100,11 +5096,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37882,
+      "i": 52753,
       "p": {
         "displayName": "One-3",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-3",
         "dataBindings": {
@@ -5149,11 +5145,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37883,
+      "i": 52754,
       "p": {
         "displayName": "One-4",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-4",
         "dataBindings": {
@@ -5198,11 +5194,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37884,
+      "i": 52755,
       "p": {
         "displayName": "One-5",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-5",
         "dataBindings": {
@@ -5247,11 +5243,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37885,
+      "i": 52756,
       "p": {
         "displayName": "One-6",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-6",
         "dataBindings": {
@@ -5296,11 +5292,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37886,
+      "i": 52757,
       "p": {
         "displayName": "One-1",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "One-1",
         "dataBindings": {
@@ -5345,10 +5341,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37887,
+      "i": 52758,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5382,10 +5378,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37888,
+      "i": 52759,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5419,10 +5415,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37889,
+      "i": 52760,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5456,10 +5452,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37890,
+      "i": 52761,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5493,10 +5489,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37891,
+      "i": 52762,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5530,10 +5526,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37892,
+      "i": 52763,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5567,10 +5563,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37893,
+      "i": 52764,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5604,10 +5600,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37894,
+      "i": 52765,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5641,10 +5637,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37895,
+      "i": 52766,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5678,10 +5674,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37896,
+      "i": 52767,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5715,10 +5711,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37897,
+      "i": 52768,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5752,10 +5748,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37898,
+      "i": 52769,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5789,10 +5785,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37899,
+      "i": 52770,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5826,10 +5822,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37900,
+      "i": 52771,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5863,10 +5859,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37901,
+      "i": 52772,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5900,10 +5896,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37902,
+      "i": 52773,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5937,10 +5933,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37903,
+      "i": 52774,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -5974,10 +5970,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37904,
+      "i": 52775,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6011,10 +6007,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37905,
+      "i": 52776,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6048,10 +6044,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37906,
+      "i": 52777,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6085,10 +6081,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37907,
+      "i": 52778,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6122,10 +6118,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37908,
+      "i": 52779,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6159,10 +6155,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37909,
+      "i": 52780,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6196,10 +6192,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37910,
+      "i": 52781,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6233,10 +6229,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37911,
+      "i": 52782,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6270,10 +6266,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37912,
+      "i": 52783,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6307,10 +6303,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37913,
+      "i": 52784,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6344,10 +6340,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37914,
+      "i": 52785,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6381,10 +6377,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37915,
+      "i": 52786,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6418,10 +6414,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37916,
+      "i": 52787,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6455,10 +6451,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37917,
+      "i": 52788,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6492,10 +6488,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37918,
+      "i": 52789,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6529,10 +6525,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37919,
+      "i": 52790,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6566,10 +6562,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37920,
+      "i": 52791,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6603,10 +6599,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37921,
+      "i": 52792,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6640,10 +6636,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37922,
+      "i": 52793,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6677,10 +6673,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37923,
+      "i": 52794,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6714,10 +6710,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37924,
+      "i": 52795,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6751,10 +6747,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37925,
+      "i": 52796,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6788,10 +6784,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37926,
+      "i": 52797,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6825,10 +6821,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37927,
+      "i": 52798,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6862,10 +6858,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37928,
+      "i": 52799,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6899,10 +6895,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37929,
+      "i": 52800,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6936,10 +6932,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37930,
+      "i": 52801,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -6973,10 +6969,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37931,
+      "i": 52802,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -7010,10 +7006,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37932,
+      "i": 52803,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 150.77937,
@@ -7047,11 +7043,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37933,
+      "i": 52804,
       "p": {
         "displayName": "前进",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "ht.drawing.button",
         "position": {
@@ -7082,11 +7078,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37934,
+      "i": 52805,
       "p": {
         "displayName": "一键连锁",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "ht.drawing.button",
         "position": {
@@ -7117,11 +7113,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37935,
+      "i": 52806,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "rotation": 1.5708,
         "position": {
@@ -7141,10 +7137,10 @@
     },
     {
       "c": "ht.Node",
-      "i": 37936,
+      "i": 52807,
       "p": {
         "parent": {
-          "__i": 37935
+          "__i": 52806
         },
         "rotation": 1.5708,
         "position": {
@@ -7165,11 +7161,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37937,
+      "i": 52808,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37935
+          "__i": 52806
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7184,11 +7180,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37938,
+      "i": 52809,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37935
+          "__i": 52806
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7203,11 +7199,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37939,
+      "i": 52810,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37935
+          "__i": 52806
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7222,11 +7218,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37940,
+      "i": 52811,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37935
+          "__i": 52806
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7241,11 +7237,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37941,
+      "i": 52812,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37935
+          "__i": 52806
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7260,11 +7256,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37942,
+      "i": 52813,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "rotation": 1.5708,
         "position": {
@@ -7284,10 +7280,10 @@
     },
     {
       "c": "ht.Node",
-      "i": 37943,
+      "i": 52814,
       "p": {
         "parent": {
-          "__i": 37942
+          "__i": 52813
         },
         "rotation": 1.5708,
         "position": {
@@ -7308,11 +7304,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37944,
+      "i": 52815,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37942
+          "__i": 52813
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7327,11 +7323,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37945,
+      "i": 52816,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37942
+          "__i": 52813
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7346,11 +7342,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37946,
+      "i": 52817,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37942
+          "__i": 52813
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7365,11 +7361,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37947,
+      "i": 52818,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37942
+          "__i": 52813
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7384,11 +7380,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37948,
+      "i": 52819,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37942
+          "__i": 52813
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7403,11 +7399,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37949,
+      "i": 52820,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "rotation": 1.5708,
         "position": {
@@ -7427,10 +7423,10 @@
     },
     {
       "c": "ht.Node",
-      "i": 37950,
+      "i": 52821,
       "p": {
         "parent": {
-          "__i": 37949
+          "__i": 52820
         },
         "rotation": 1.5708,
         "position": {
@@ -7451,11 +7447,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37951,
+      "i": 52822,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37949
+          "__i": 52820
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7470,11 +7466,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37952,
+      "i": 52823,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37949
+          "__i": 52820
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7489,11 +7485,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37953,
+      "i": 52824,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37949
+          "__i": 52820
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7508,11 +7504,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37954,
+      "i": 52825,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37949
+          "__i": 52820
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7527,11 +7523,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37955,
+      "i": 52826,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37949
+          "__i": 52820
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7546,11 +7542,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37956,
+      "i": 52827,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "rotation": 1.5708,
         "position": {
@@ -7570,10 +7566,10 @@
     },
     {
       "c": "ht.Node",
-      "i": 37957,
+      "i": 52828,
       "p": {
         "parent": {
-          "__i": 37956
+          "__i": 52827
         },
         "rotation": 1.5708,
         "position": {
@@ -7594,11 +7590,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37958,
+      "i": 52829,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37956
+          "__i": 52827
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7613,11 +7609,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37959,
+      "i": 52830,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37956
+          "__i": 52827
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7632,11 +7628,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37960,
+      "i": 52831,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37956
+          "__i": 52827
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7651,11 +7647,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37961,
+      "i": 52832,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37956
+          "__i": 52827
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7670,11 +7666,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37962,
+      "i": 52833,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37956
+          "__i": 52827
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7689,11 +7685,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37963,
+      "i": 52834,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "rotation": 1.5708,
         "position": {
@@ -7713,10 +7709,10 @@
     },
     {
       "c": "ht.Node",
-      "i": 37964,
+      "i": 52835,
       "p": {
         "parent": {
-          "__i": 37963
+          "__i": 52834
         },
         "rotation": 1.5708,
         "position": {
@@ -7737,11 +7733,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37965,
+      "i": 52836,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37963
+          "__i": 52834
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7756,11 +7752,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37966,
+      "i": 52837,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37963
+          "__i": 52834
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7775,11 +7771,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37967,
+      "i": 52838,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37963
+          "__i": 52834
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7794,11 +7790,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37968,
+      "i": 52839,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37963
+          "__i": 52834
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7813,11 +7809,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37969,
+      "i": 52840,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37963
+          "__i": 52834
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7832,11 +7828,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 37970,
+      "i": 52841,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "rotation": 1.5708,
         "position": {
@@ -7856,10 +7852,10 @@
     },
     {
       "c": "ht.Node",
-      "i": 37971,
+      "i": 52842,
       "p": {
         "parent": {
-          "__i": 37970
+          "__i": 52841
         },
         "rotation": 1.5708,
         "position": {
@@ -7880,11 +7876,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37972,
+      "i": 52843,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37970
+          "__i": 52841
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7899,11 +7895,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37973,
+      "i": 52844,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37970
+          "__i": 52841
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7918,11 +7914,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37974,
+      "i": 52845,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37970
+          "__i": 52841
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7937,11 +7933,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37975,
+      "i": 52846,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37970
+          "__i": 52841
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7956,11 +7952,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37976,
+      "i": 52847,
       "p": {
         "displayName": "链条",
         "parent": {
-          "__i": 37970
+          "__i": 52841
         },
         "image": "symbols/青岛特钢/中棒剪切线/链条.json",
         "rotation": 1.5708,
@@ -7975,11 +7971,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37977,
+      "i": 52848,
       "p": {
         "displayName": "小车",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "stay-2",
         "image": "symbols/青岛特钢/中棒剪切线/AI报警记录.json",
@@ -8005,11 +8001,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37978,
+      "i": 52849,
       "p": {
         "displayName": "前进",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "ht.drawing.button",
         "position": {
@@ -8040,11 +8036,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37979,
+      "i": 52850,
       "p": {
         "displayName": "前进",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "ht.drawing.button",
         "position": {
@@ -8075,11 +8071,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37980,
+      "i": 52851,
       "p": {
         "displayName": "前进",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "ht.drawing.button",
         "position": {
@@ -8110,11 +8106,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37981,
+      "i": 52852,
       "p": {
         "displayName": "前进",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "ht.drawing.button",
         "position": {
@@ -8145,10 +8141,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37982,
+      "i": 52853,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 107,
@@ -8168,10 +8164,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37983,
+      "i": 52854,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 106.999,
@@ -8192,10 +8188,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 37984,
+      "i": 52855,
       "p": {
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "position": {
           "x": 106.999,
@@ -8216,11 +8212,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37985,
+      "i": 52856,
       "p": {
         "displayName": "手动录入卡号",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "CardNo",
         "image": "ht.drawing.input",
@@ -8268,11 +8264,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37986,
+      "i": 52857,
       "p": {
         "displayName": "2#锯",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "image": "symbols/图标库/25D/煤矿/采煤机截割部.json",
         "position": {
@@ -8291,11 +8287,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37987,
+      "i": 52858,
       "p": {
         "displayName": "旧片直径",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "2#OldBladeDiameter",
         "image": "ht.drawing.input",
@@ -8343,11 +8339,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37988,
+      "i": 52859,
       "p": {
         "displayName": "新片直径",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "2#NewBladeDiameter",
         "image": "ht.drawing.input",
@@ -8395,11 +8391,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37989,
+      "i": 52860,
       "p": {
         "displayName": "旧片直径",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "3#OldBladeDiameter",
         "image": "ht.drawing.input",
@@ -8447,11 +8443,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37990,
+      "i": 52861,
       "p": {
         "displayName": "新片直径",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "3#NewBladeDiameter",
         "image": "ht.drawing.input",
@@ -8499,11 +8495,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37991,
+      "i": 52862,
       "p": {
         "displayName": "厂家编码",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "tag": "BladeSupplier",
         "image": "ht.drawing.buttonGroup",
@@ -8539,7 +8535,7 @@
       },
       "a": {
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":38015,\"p\":{\"name\":\"T\",\"displayName\":\"T\",\"tag\":\"T\"},\"s\":{\"checked\":false,\"visible\":true,\"disabled\":false}},{\"c\":\"ht.Data\",\"i\":38016,\"p\":{\"name\":\"X\",\"displayName\":\"X\",\"tag\":\"X\"},\"s\":{\"checked\":false,\"visible\":true}},{\"c\":\"ht.Data\",\"i\":38017,\"p\":{\"name\":\"Z\",\"displayName\":\"Z\",\"tag\":\"Z\"},\"s\":{\"checked\":false,\"visible\":true}},{\"c\":\"ht.Data\",\"i\":38018,\"p\":{\"name\":\"A\",\"displayName\":\"A\",\"tag\":\"A\"},\"s\":{\"checked\":false,\"visible\":true}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":52886,\"p\":{\"name\":\"T\",\"displayName\":\"T\",\"tag\":\"T\"},\"s\":{\"checked\":false,\"visible\":true,\"disabled\":false}},{\"c\":\"ht.Data\",\"i\":52887,\"p\":{\"name\":\"X\",\"displayName\":\"X\",\"tag\":\"X\"},\"s\":{\"checked\":false,\"visible\":true}},{\"c\":\"ht.Data\",\"i\":52888,\"p\":{\"name\":\"Z\",\"displayName\":\"Z\",\"tag\":\"Z\"},\"s\":{\"checked\":false,\"visible\":true}},{\"c\":\"ht.Data\",\"i\":52889,\"p\":{\"name\":\"A\",\"displayName\":\"A\",\"tag\":\"A\"},\"s\":{\"checked\":false,\"visible\":true}}]}"
         },
         "checkMode": true,
         "buttonGroup.scrollWidth": 202.73828,
@@ -8597,11 +8593,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 37992,
+      "i": 52863,
       "p": {
         "displayName": "ByData",
         "parent": {
-          "__i": 37793
+          "__i": 52664
         },
         "layer": "1",
         "tag": "ByData",
@@ -8629,7 +8625,7 @@
       }
     }
   ],
-  "modified": "Sat Aug 22 2026 19:36:08 GMT+0800 (中国标准时间)",
+  "modified": "Mon Aug 24 2026 18:56:23 GMT+0800 (中国标准时间)",
   "contentRect": {
     "x": 0,
     "y": 0,

@@ -37,7 +37,7 @@
   "d": [
     {
       "c": "ht.Node",
-      "i": 40614,
+      "i": 13979,
       "p": {
         "position": {
           "x": 900,
@@ -61,15 +61,15 @@
     },
     {
       "c": "ht.Block",
-      "i": 40615,
+      "i": 13980,
       "p": {
         "displayName": "main",
         "parent": {
-          "__i": 40614
+          "__i": 13979
         },
         "tag": "main",
         "host": {
-          "__i": 40614
+          "__i": 13979
         },
         "position": {
           "x": 900,
@@ -91,11 +91,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 40616,
+      "i": 13981,
       "p": {
         "displayName": "背景",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "position": {
           "x": 900.17933,
@@ -114,11 +114,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40617,
+      "i": 13982,
       "p": {
         "displayName": "bg",
         "parent": {
-          "__i": 40616
+          "__i": 13981
         },
         "image": "symbols/tenant/zwsm-dpymsj/参考/设计稿/bg.json",
         "position": {
@@ -207,11 +207,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40618,
+      "i": 13983,
       "p": {
         "displayName": "左右背景",
         "parent": {
-          "__i": 40616
+          "__i": 13981
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -238,11 +238,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40619,
+      "i": 13984,
       "p": {
         "displayName": "左右背景",
         "parent": {
-          "__i": 40616
+          "__i": 13981
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -269,11 +269,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40620,
+      "i": 13985,
       "p": {
         "displayName": "左右背景",
         "parent": {
-          "__i": 40616
+          "__i": 13981
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -304,11 +304,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40621,
+      "i": 13986,
       "p": {
         "displayName": "左右背景",
         "parent": {
-          "__i": 40616
+          "__i": 13981
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -339,11 +339,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40622,
+      "i": 13987,
       "p": {
         "displayName": "左右",
         "parent": {
-          "__i": 40616
+          "__i": 13981
         },
         "image": "symbols/tenant/shjz-gczndpsj/左右.json",
         "position": {
@@ -366,11 +366,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40623,
+      "i": 13988,
       "p": {
         "displayName": "左右",
         "parent": {
-          "__i": 40616
+          "__i": 13981
         },
         "image": "symbols/tenant/shjz-gczndpsj/左右.json",
         "position": {
@@ -389,11 +389,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40624,
+      "i": 13989,
       "p": {
         "displayName": "下方装饰",
         "parent": {
-          "__i": 40616
+          "__i": 13981
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/底部装饰.json",
         "position": {
@@ -419,11 +419,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 40625,
+      "i": 13990,
       "p": {
         "displayName": "track-path-1",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "track-path-1",
         "position": {
@@ -441,11 +441,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40626,
+      "i": 13991,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "tag": "roll-y1",
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
@@ -463,11 +463,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40627,
+      "i": 13992,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -484,11 +484,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40628,
+      "i": 13993,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -505,11 +505,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40629,
+      "i": 13994,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -526,11 +526,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40630,
+      "i": 13995,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -547,11 +547,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40631,
+      "i": 13996,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -568,11 +568,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40632,
+      "i": 13997,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -589,11 +589,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40633,
+      "i": 13998,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -610,11 +610,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40634,
+      "i": 13999,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -631,11 +631,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40635,
+      "i": 14000,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -652,11 +652,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40636,
+      "i": 14001,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -673,11 +673,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40637,
+      "i": 14002,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -694,11 +694,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40638,
+      "i": 14003,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -715,11 +715,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40639,
+      "i": 14004,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -736,11 +736,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40640,
+      "i": 14005,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -757,11 +757,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40641,
+      "i": 14006,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -778,11 +778,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40642,
+      "i": 14007,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -799,11 +799,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40643,
+      "i": 14008,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -820,11 +820,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40644,
+      "i": 14009,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -841,11 +841,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40645,
+      "i": 14010,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -862,11 +862,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40646,
+      "i": 14011,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -883,11 +883,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40647,
+      "i": 14012,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40625
+          "__i": 13990
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -904,11 +904,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 40648,
+      "i": 14013,
       "p": {
         "displayName": "track-path-2",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "track-path-2",
         "position": {
@@ -926,11 +926,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40649,
+      "i": 14014,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "tag": "roll-y2",
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
@@ -948,11 +948,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40650,
+      "i": 14015,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -969,11 +969,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40651,
+      "i": 14016,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -990,11 +990,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40652,
+      "i": 14017,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1011,11 +1011,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40653,
+      "i": 14018,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1032,11 +1032,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40654,
+      "i": 14019,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1053,11 +1053,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40655,
+      "i": 14020,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1074,11 +1074,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40656,
+      "i": 14021,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1095,11 +1095,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40657,
+      "i": 14022,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1116,11 +1116,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40658,
+      "i": 14023,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1137,11 +1137,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40659,
+      "i": 14024,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1158,11 +1158,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40660,
+      "i": 14025,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1179,11 +1179,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40661,
+      "i": 14026,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1200,11 +1200,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40662,
+      "i": 14027,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1221,11 +1221,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40663,
+      "i": 14028,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1242,11 +1242,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40664,
+      "i": 14029,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1263,11 +1263,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40665,
+      "i": 14030,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1284,11 +1284,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40666,
+      "i": 14031,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1305,11 +1305,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40667,
+      "i": 14032,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1326,11 +1326,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40668,
+      "i": 14033,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1347,11 +1347,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40669,
+      "i": 14034,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1368,11 +1368,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40670,
+      "i": 14035,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40648
+          "__i": 14013
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1389,11 +1389,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 40671,
+      "i": 14036,
       "p": {
         "displayName": "track-path-3",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "track-path-3",
         "position": {
@@ -1411,11 +1411,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40672,
+      "i": 14037,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "tag": "roll-y3",
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
@@ -1433,11 +1433,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40673,
+      "i": 14038,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1454,11 +1454,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40674,
+      "i": 14039,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1475,11 +1475,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40675,
+      "i": 14040,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1496,11 +1496,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40676,
+      "i": 14041,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1517,11 +1517,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40677,
+      "i": 14042,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1538,11 +1538,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40678,
+      "i": 14043,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1559,11 +1559,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40679,
+      "i": 14044,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1580,11 +1580,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40680,
+      "i": 14045,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1601,11 +1601,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40681,
+      "i": 14046,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1622,11 +1622,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40682,
+      "i": 14047,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1643,11 +1643,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40683,
+      "i": 14048,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1664,11 +1664,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40684,
+      "i": 14049,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1685,11 +1685,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40685,
+      "i": 14050,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1706,11 +1706,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40686,
+      "i": 14051,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1727,11 +1727,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40687,
+      "i": 14052,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1748,11 +1748,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40688,
+      "i": 14053,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1769,11 +1769,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40689,
+      "i": 14054,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1790,11 +1790,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40690,
+      "i": 14055,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1811,11 +1811,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40691,
+      "i": 14056,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1832,11 +1832,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40692,
+      "i": 14057,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1853,11 +1853,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40693,
+      "i": 14058,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40671
+          "__i": 14036
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1874,11 +1874,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 40694,
+      "i": 14059,
       "p": {
         "displayName": "背景及顶部栏",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "position": {
           "x": 910,
@@ -1898,11 +1898,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40695,
+      "i": 14060,
       "p": {
         "displayName": "标题2 2",
         "parent": {
-          "__i": 40694
+          "__i": 14059
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/标题2 2.json",
         "position": {
@@ -1920,11 +1920,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 40696,
+      "i": 14061,
       "p": {
         "displayName": "信息化综合应用",
         "parent": {
-          "__i": 40694
+          "__i": 14059
         },
         "position": {
           "x": 899.82067,
@@ -1949,11 +1949,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 40697,
+      "i": 14062,
       "p": {
         "displayName": "信息化综合应用",
         "parent": {
-          "__i": 40694
+          "__i": 14059
         },
         "position": {
           "x": 900,
@@ -1989,11 +1989,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40698,
+      "i": 14063,
       "p": {
         "displayName": "logo_jztz_白",
         "parent": {
-          "__i": 40694
+          "__i": 14059
         },
         "image": "assets/AriIconLib/logo/logo_jztz_白.svg",
         "position": {
@@ -2013,10 +2013,10 @@
     },
     {
       "c": "ht.Shape",
-      "i": 40699,
+      "i": 14064,
       "p": {
         "parent": {
-          "__i": 40694
+          "__i": 14059
         },
         "position": {
           "x": 1722.85986,
@@ -2056,11 +2056,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40700,
+      "i": 14065,
       "p": {
         "displayName": "DYTG_LOGO",
         "parent": {
-          "__i": 40694
+          "__i": 14059
         },
         "image": "assets/冶钢看板/DYTG_LOGO.png",
         "position": {
@@ -2078,11 +2078,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40701,
+      "i": 14066,
       "p": {
         "displayName": "时间",
         "parent": {
-          "__i": 40694
+          "__i": 14059
         },
         "image": "ht.drawing.time",
         "position": {
@@ -2113,10 +2113,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40702,
+      "i": 14067,
       "p": {
         "parent": {
-          "__i": 40694
+          "__i": 14059
         },
         "tag": "Team",
         "dataBindings": {
@@ -2140,11 +2140,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 40703,
+      "i": 14068,
       "p": {
         "displayName": "班组",
         "parent": {
-          "__i": 40694
+          "__i": 14059
         },
         "position": {
           "x": 1305,
@@ -2164,10 +2164,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40704,
+      "i": 14069,
       "p": {
         "parent": {
-          "__i": 40694
+          "__i": 14059
         },
         "tag": "Shift",
         "dataBindings": {
@@ -2191,11 +2191,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 40705,
+      "i": 14070,
       "p": {
         "displayName": "班次",
         "parent": {
-          "__i": 40694
+          "__i": 14059
         },
         "position": {
           "x": 1415,
@@ -2215,11 +2215,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 40706,
+      "i": 14071,
       "p": {
         "displayName": "异常信息",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "errormes",
         "position": {
@@ -2240,10 +2240,10 @@
     },
     {
       "c": "ht.Node",
-      "i": 40707,
+      "i": 14072,
       "p": {
         "parent": {
-          "__i": 40706
+          "__i": 14071
         },
         "image": "symbols/大冶特钢中棒/框体.json",
         "position": {
@@ -2264,17 +2264,17 @@
         "name": "控轧控冷水箱温度",
         "显示": false,
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":40979,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":40980,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":40981,\"p\":{\"displayName\":\"年\"}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":14294,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":14295,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":14296,\"p\":{\"displayName\":\"年\"}}]}"
         },
         "visible": false
       }
     },
     {
       "c": "ht.Node",
-      "i": 40708,
+      "i": 14073,
       "p": {
         "parent": {
-          "__i": 40706
+          "__i": 14071
         },
         "image": "symbols/大冶特钢中棒/框体.json",
         "position": {
@@ -2295,17 +2295,17 @@
         "name": "测径趋势",
         "显示": false,
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":40982,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":40983,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":40984,\"p\":{\"displayName\":\"年\"}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":14297,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":14298,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":14299,\"p\":{\"displayName\":\"年\"}}]}"
         },
         "visible": false
       }
     },
     {
       "c": "ht.Node",
-      "i": 40709,
+      "i": 14074,
       "p": {
         "parent": {
-          "__i": 40706
+          "__i": 14071
         },
         "image": "symbols/大冶特钢中棒/框体.json",
         "position": {
@@ -2326,18 +2326,18 @@
         "name": "每卡轧制时长（最近十卡）",
         "显示": false,
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":40985,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":40986,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":40987,\"p\":{\"displayName\":\"年\"}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":14300,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":14301,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":14302,\"p\":{\"displayName\":\"年\"}}]}"
         },
         "visible": false
       }
     },
     {
       "c": "ht.Block",
-      "i": 40710,
+      "i": 14075,
       "p": {
         "displayName": "出钢明细",
         "parent": {
-          "__i": 40706
+          "__i": 14071
         },
         "position": {
           "x": 846.41681,
@@ -2352,11 +2352,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40711,
+      "i": 14076,
       "p": {
         "displayName": "出钢间隔",
         "parent": {
-          "__i": 40710
+          "__i": 14075
         },
         "dataBindings": {
           "a": {
@@ -2392,11 +2392,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40712,
+      "i": 14077,
       "p": {
         "displayName": "运行时间",
         "parent": {
-          "__i": 40710
+          "__i": 14075
         },
         "dataBindings": {
           "a": {
@@ -2431,11 +2431,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40713,
+      "i": 14078,
       "p": {
         "displayName": "批次总支数",
         "parent": {
-          "__i": 40710
+          "__i": 14075
         },
         "dataBindings": {
           "a": {
@@ -2470,11 +2470,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40714,
+      "i": 14079,
       "p": {
         "displayName": "批次已轧",
         "parent": {
-          "__i": 40710
+          "__i": 14075
         },
         "dataBindings": {
           "a": {
@@ -2509,11 +2509,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40715,
+      "i": 14080,
       "p": {
         "displayName": "当班已轧",
         "parent": {
-          "__i": 40710
+          "__i": 14075
         },
         "dataBindings": {
           "a": {
@@ -2550,11 +2550,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40716,
+      "i": 14081,
       "p": {
         "displayName": "异常录入",
         "parent": {
-          "__i": 40710
+          "__i": 14075
         },
         "image": "symbols/tenant/shjz-gczndpsj/下图标.json",
         "position": {
@@ -2580,11 +2580,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40717,
+      "i": 14082,
       "p": {
         "displayName": "异常查询",
         "parent": {
-          "__i": 40710
+          "__i": 14075
         },
         "image": "symbols/大冶特钢中棒/下图标.json",
         "position": {
@@ -2610,11 +2610,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40718,
+      "i": 14083,
       "p": {
         "displayName": "timeAxisChart",
         "parent": {
-          "__i": 40706
+          "__i": 14071
         },
         "tag": "date",
         "dataBindings": {
@@ -2786,34 +2786,34 @@
     },
     {
       "c": "ht.Node",
-      "i": 40719,
+      "i": 14084,
       "p": {
         "displayName": "timeAxisChart",
         "parent": {
-          "__i": 40706
+          "__i": 14071
         },
         "tag": "liuliang",
         "dataBindings": {
           "a": {
             "tip1": {
               "id": "NumTag/Bar2ABB/中棒1Bar/B1OPCLS179",
-              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+              "func": "__ht__function(value){\r\n    const num = parseFloat(value);\r\n    if (num < 410) {\r\n        return 0;\r\n    }\r\n    return num.toFixed(0);\r\n}\r\n"
             },
             "tip2": {
               "id": "NumTag/Bar2ABB/中棒1Bar/B1OPCLS180",
-              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+              "func": "__ht__function(value){\r\n    const num = parseFloat(value);\r\n    if (num < 410) {\r\n        return 0;\r\n    }\r\n    return num.toFixed(0);\r\n}\r\n"
             },
             "tip3": {
               "id": "NumTag/Bar2ABB/中棒1Bar/B1OPCLS181",
-              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+              "func": "__ht__function(value){\r\n    const num = parseFloat(value);\r\n    if (num < 410) {\r\n        return 0;\r\n    }\r\n    return num.toFixed(0);\r\n}\r\n"
             },
             "tip4": {
               "id": "NumTag/Bar2ABB/中棒1Bar/B1OPCLS182",
-              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+              "func": "__ht__function(value){\r\n    const num = parseFloat(value);\r\n    if (num < 410) {\r\n        return 0;\r\n    }\r\n    return num.toFixed(0);\r\n}\r\n"
             },
             "tip5": {
               "id": "NumTag/Bar2ABB/中棒1Bar/B1OPCLS183",
-              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+              "func": "__ht__function(value){\r\n    const num = parseFloat(value);\r\n    if (num < 410) {\r\n        return 0;\r\n    }\r\n    return num.toFixed(0);\r\n}\r\n"
             }
           }
         },
@@ -2962,10 +2962,10 @@
     },
     {
       "c": "ht.Block",
-      "i": 40720,
+      "i": 14085,
       "p": {
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "position": {
@@ -2986,10 +2986,10 @@
     },
     {
       "c": "ht.Block",
-      "i": 40721,
+      "i": 14086,
       "p": {
         "parent": {
-          "__i": 40720
+          "__i": 14085
         },
         "position": {
           "x": 62,
@@ -3001,11 +3001,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40722,
+      "i": 14087,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 40721
+          "__i": 14086
         },
         "dataBindings": {
           "s": {
@@ -3031,11 +3031,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40723,
+      "i": 14088,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 40721
+          "__i": 14086
         },
         "dataBindings": {
           "s": {
@@ -3061,11 +3061,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40724,
+      "i": 14089,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 40721
+          "__i": 14086
         },
         "dataBindings": {
           "s": {
@@ -3091,11 +3091,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40725,
+      "i": 14090,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 40721
+          "__i": 14086
         },
         "dataBindings": {
           "s": {
@@ -3121,11 +3121,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40726,
+      "i": 14091,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 40721
+          "__i": 14086
         },
         "dataBindings": {
           "s": {
@@ -3151,11 +3151,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40727,
+      "i": 14092,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 40721
+          "__i": 14086
         },
         "dataBindings": {
           "s": {
@@ -3181,11 +3181,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40728,
+      "i": 14093,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40720
+          "__i": 14085
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "rotation": 3.14159,
@@ -3203,11 +3203,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40729,
+      "i": 14094,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 40720
+          "__i": 14085
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "rotation": 3.14159,
@@ -3225,11 +3225,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40730,
+      "i": 14095,
       "p": {
         "displayName": "H6架轧机前温度",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "H6架轧机前温度",
@@ -3237,7 +3237,7 @@
           "a": {
             "name": {
               "id": "NumTag/Bar2ABB/中棒1Bar/B1OPCLS180",
-              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+              "func": "__ht__function(value){\r\n    const num = parseFloat(value);\r\n    if (num < 410) {\r\n        return 0;\r\n    }\r\n    return num.toFixed(0);\r\n}\r\n"
             }
           }
         },
@@ -3263,11 +3263,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40731,
+      "i": 14096,
       "p": {
         "displayName": "RTWZ1辊道后温度",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "RTWZ1辊道后温度",
@@ -3279,12 +3279,12 @@
             }
           }
         },
-        "image": "symbols/青岛特钢/名称标注2.json",
+        "image": "symbols/大冶特钢中棒/名称标注.json",
         "position": {
           "x": 29.09848,
           "y": 298.72178
         },
-        "width": 66.99731,
+        "width": 80,
         "height": 82.55644,
         "tall": 20
       },
@@ -3301,11 +3301,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40732,
+      "i": 14097,
       "p": {
         "displayName": "飞剪",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/飞剪.png",
@@ -3329,11 +3329,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40733,
+      "i": 14098,
       "p": {
         "displayName": "夹送棍",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/夹送棍.png",
@@ -3357,11 +3357,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40734,
+      "i": 14099,
       "p": {
         "displayName": "飞剪",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/飞剪.png",
@@ -3384,11 +3384,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40735,
+      "i": 14100,
       "p": {
         "displayName": "飞剪",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/飞剪.png",
@@ -3411,11 +3411,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40736,
+      "i": 14101,
       "p": {
         "displayName": "ByData",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "ByData",
@@ -3452,11 +3452,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40737,
+      "i": 14102,
       "p": {
         "displayName": "V8",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "V8",
@@ -3485,11 +3485,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40738,
+      "i": 14103,
       "p": {
         "displayName": "V10",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "V10",
@@ -3518,11 +3518,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40739,
+      "i": 14104,
       "p": {
         "displayName": "V12",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "V12",
@@ -3551,11 +3551,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40740,
+      "i": 14105,
       "p": {
         "displayName": "H9",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "H9",
@@ -3583,11 +3583,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40741,
+      "i": 14106,
       "p": {
         "displayName": "H11",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "H11",
@@ -3615,11 +3615,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40742,
+      "i": 14107,
       "p": {
         "displayName": "H13",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "H13",
@@ -3651,11 +3651,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40743,
+      "i": 14108,
       "p": {
         "displayName": "V14",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "V14",
@@ -3687,11 +3687,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40744,
+      "i": 14109,
       "p": {
         "displayName": "H15",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "H15",
@@ -3724,11 +3724,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40745,
+      "i": 14110,
       "p": {
         "displayName": "V16",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "V16",
@@ -3761,11 +3761,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40746,
+      "i": 14111,
       "p": {
         "displayName": "V17",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "dataBindings": {
@@ -3796,11 +3796,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40747,
+      "i": 14112,
       "p": {
         "displayName": "H18",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "dataBindings": {
@@ -3831,11 +3831,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40748,
+      "i": 14113,
       "p": {
         "displayName": "V19",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "dataBindings": {
@@ -3866,11 +3866,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40749,
+      "i": 14114,
       "p": {
         "displayName": "H20",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "dataBindings": {
@@ -3901,11 +3901,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40750,
+      "i": 14115,
       "p": {
         "displayName": "V1",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "V1",
@@ -3935,11 +3935,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40751,
+      "i": 14116,
       "p": {
         "displayName": "V3",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "V3",
@@ -3971,11 +3971,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40752,
+      "i": 14117,
       "p": {
         "displayName": "V5",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "V5",
@@ -4005,11 +4005,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40753,
+      "i": 14118,
       "p": {
         "displayName": "H2",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "H2",
@@ -4038,11 +4038,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40754,
+      "i": 14119,
       "p": {
         "displayName": "H4",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "H4",
@@ -4071,2199 +4071,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40755,
-      "p": {
-        "displayName": "线轧机悬浮跟踪",
-        "parent": {
-          "__i": 40615
-        },
-        "layer": "2",
-        "tag": "set",
-        "dataBindings": {
-          "a": {}
-        },
-        "image": "symbols/青岛特钢/扁钢线轧机跟踪/线轧机悬浮跟踪.json",
-        "position": {
-          "x": 1114.46879,
-          "y": 155.58444
-        },
-        "width": 174.93116,
-        "height": 156.92947,
-        "tall": 20
-      },
-      "s": {
-        "2d.visible": false,
-        "interactive": true
-      },
-      "a": {
-        "mqtt2": {
-          "no1": "12345",
-          "no2": "12345",
-          "no3": "12345",
-          "no4": "12345",
-          "no5": "12345"
-        }
-      }
-    },
-    {
-      "c": "ht.Block",
-      "i": 40756,
-      "p": {
-        "displayName": "异常录入",
-        "parent": {
-          "__i": 40615
-        },
-        "layer": "2",
-        "tag": "异常录入",
-        "position": {
-          "x": 900.17933,
-          "y": 440
-        },
-        "anchor": {
-          "x": 0.5,
-          "y": 0.50449
-        },
-        "width": 440.08219,
-        "height": 600
-      },
-      "s": {
-        "select.color": null,
-        "2d.visible": false
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40757,
-      "p": {
-        "displayName": "图表背景",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "image": "symbols/青岛特钢/图表背景.json",
-        "position": {
-          "x": 900.17933,
-          "y": 440
-        },
-        "width": 440.08219,
-        "height": 594.60928,
-        "tall": 20
-      },
-      "s": {
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40758,
-      "p": {
-        "displayName": "钢坯号",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "tag": "钢坯号",
-        "image": "symbols/ht/ui/input.json",
-        "position": {
-          "x": 958.93068,
-          "y": 231.93653
-        },
-        "width": 248.87413,
-        "height": 33.62619,
-        "tall": 20
-      },
-      "s": {
-        "2d.movable": false
-      },
-      "a": {
-        "ht.borderColor": "rgb(51,153,255)",
-        "ht.borderRadius": "3",
-        "ht.textColor": "rgb(255,255,255)",
-        "ht.disabled": false,
-        "ht.font": "20px arial, sans-serif"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40759,
-      "p": {
-        "displayName": "位置",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "tag": "位置",
-        "image": "symbols/ht/ui/input.json",
-        "position": {
-          "x": 958.93068,
-          "y": 341.18473
-        },
-        "width": 248.87413,
-        "height": 33.62619,
-        "tall": 20
-      },
-      "s": {
-        "2d.movable": false
-      },
-      "a": {
-        "ht.borderColor": "rgb(51,153,255)",
-        "ht.borderRadius": "3",
-        "ht.textColor": "rgb(255,255,255)",
-        "ht.disabled": false,
-        "ht.font": "20px arial, sans-serif"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40760,
-      "p": {
-        "displayName": "实际值",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "tag": "实际值",
-        "image": "symbols/ht/ui/input.json",
-        "position": {
-          "x": 958.93068,
-          "y": 395.80883
-        },
-        "width": 248.87413,
-        "height": 33.62619,
-        "tall": 20
-      },
-      "s": {
-        "2d.movable": false
-      },
-      "a": {
-        "ht.borderColor": "rgb(51,153,255)",
-        "ht.borderRadius": "3",
-        "ht.textColor": "rgb(255,255,255)",
-        "ht.disabled": false,
-        "ht.font": "20px arial, sans-serif"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40761,
-      "p": {
-        "displayName": "采集重量",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "tag": "采集重量",
-        "image": "symbols/ht/ui/input.json",
-        "position": {
-          "x": 958.93068,
-          "y": 505.05703
-        },
-        "width": 248.87413,
-        "height": 33.62619,
-        "tall": 20
-      },
-      "s": {
-        "2d.movable": false
-      },
-      "a": {
-        "ht.borderColor": "rgb(51,153,255)",
-        "ht.borderRadius": "3",
-        "ht.textColor": "rgb(255,255,255)",
-        "ht.disabled": false,
-        "ht.font": "20px arial, sans-serif"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40762,
-      "p": {
-        "displayName": "下图标",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "image": "symbols/青岛特钢/扁棒加热炉跟踪/下图标.json",
-        "position": {
-          "x": 832.50263,
-          "y": 686.51965
-        },
-        "width": 99.54965,
-        "height": 44.83492,
-        "tall": 20
-      },
-      "s": {
-        "state": "normal",
-        "onEnter": "__ht__function(event, data, view) {view.setCursor('pointer');\r\nlet state = data.s('state');\r\nstate !== 'pressed' && data.s({state: 'hover'});}",
-        "onLeave": "__ht__function(event, data, view) {view.setCursor('');\r\nlet state = data.s('state');\r\nstate !== 'pressed' && data.s({state: 'normal'});}",
-        "onDown": "__ht__function(event, data, view) {data.getParent().eachChild(child=>{\r\n    child.s({state:'normal'})\r\n});\r\ndata.s({state: 'pressed'});}",
-        "interactive": true,
-        "onClick": "__ht__function(event, data, view) {let group = graphView.dm().getDataByTag('ByData');\r\n// 构建URL（假设与原GET请求类似）\r\nlet Line = \"B101\";\r\nlet Area = \"1\"\r\nlet Processes = \"加热炉\";\r\nlet SHIFT_GROUP = group.a('group');\r\nvar row1 = graphView.dm().getDataByTag('钢坯号');\r\nvar row2 = graphView.dm().getDataByTag('异常类型');\r\nvar row3 = graphView.dm().getDataByTag('位置');\r\nvar row4 = graphView.dm().getDataByTag('实际值');\r\nvar row5 = graphView.dm().getDataByTag('要求范围');\r\nvar row6 = graphView.dm().getDataByTag('发生时刻');\r\nvar row7 = graphView.dm().getDataByTag('确认人');\r\nvar row8 = graphView.dm().getDataByTag('采集重量');\r\nconsole.log(row6.a('ht.value'))\r\nlet SlabNo = row1.a('ht.value');\r\nlet AbnormalType = row2.a('ht.value');\r\nlet Section = row3.a('ht.value');\r\nlet ActValue = row4.a('ht.value');\r\nlet RequireValue = row5.a('ht.value');\r\nlet OccurTime = row6.a('ht.value');\r\nlet Confirmer = row7.a('ht.value');\r\nlet Weight = row8.a('ht.value');\r\nlet url = `http://180.10.10.12:9003/api/sdf/sltdatabnormal/boardcreate`;\r\n    // 准备请求数据\r\nconst requestData = {\r\n    \"line\" : Line,\r\n    \"Area\" : Area,\r\n    \"Processes\" : Processes,\r\n    \"SHIFT_GROUP\" : SHIFT_GROUP,\r\n    \"ROLL_PLAN_NO\": \"0\",\r\n    \"MtlNo\": SlabNo.toString(),\r\n    \"AbnormalType\": AbnormalType.toString(),\r\n    \"Section\": Section.toString(),\r\n    \"ActValue\": parseFloat(ActValue),\r\n    \"Weight\": parseFloat(Weight),\r\n    \"RequireValue\": parseFloat(RequireValue).toString(), // ✅\r\n    \"OccurTime\": new Date(OccurTime).toISOString(), // ✅ ISO格式\r\n    \"Confirmer\": Confirmer.toString()\r\n};\r\n\r\n// 发送PUT请求\r\nfetch(url, {\r\n  method: 'PUT', // 指定请求方法为PUT\r\n  headers: {\r\n    'Content-Type': 'application/json', // 指定请求体格式为JSON\r\n  },\r\n  body: JSON.stringify(requestData) // 将JavaScript对象转换为JSON字符串\r\n})\r\n.then(response => {\r\n  if (!response.ok) throw new Error(`HTTP错误! 状态码: ${response.status}`);\r\n  return response.json(); // 解析响应数据（如果返回JSON）\r\n})\r\n.then(data => {\r\n  console.log('PUT请求成功:', data);\r\n  if (data.Message) {\r\n    showToast(data.Message);\r\n  }\r\n})\r\n.catch(error => {\r\n  console.error('PUT请求失败:', error);\r\n  showToast('请求失败，请稍后重试');\r\n});}",
-        "2d.movable": false,
-        "select.color": "rgb(255,255,255)",
-        "select.width": 0,
-        "select.padding": 0
-      },
-      "a": {
-        "name": "确认"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40763,
-      "p": {
-        "displayName": "下图标",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "image": "symbols/青岛特钢/扁棒加热炉跟踪/下图标.json",
-        "position": {
-          "x": 986.92865,
-          "y": 686.51965
-        },
-        "width": 99.54965,
-        "height": 44.83492,
-        "tall": 20
-      },
-      "s": {
-        "state": "normal",
-        "onEnter": "__ht__function(event, data, view) {view.setCursor('pointer');\r\nlet state = data.s('state');\r\nstate !== 'pressed' && data.s({state: 'hover'});}",
-        "onLeave": "__ht__function(event, data, view) {view.setCursor('');\r\nlet state = data.s('state');\r\nstate !== 'pressed' && data.s({state: 'normal'});}",
-        "onDown": "__ht__function(event, data, view) {data.getParent().eachChild(child=>{\r\n    child.s({state:'normal'})\r\n});\r\ndata.s({state: 'pressed'});}",
-        "interactive": true,
-        "2d.movable": false,
-        "onClick": "__ht__function(event, data, view) {var row1 = graphView.dm().getDataByTag('钢坯号');\r\nvar row2 = graphView.dm().getDataByTag('异常类型');\r\nvar row3 = graphView.dm().getDataByTag('位置');\r\nvar row4 = graphView.dm().getDataByTag('实际值');\r\nvar row5 = graphView.dm().getDataByTag('要求范围');\r\nvar row6 = graphView.dm().getDataByTag('发生时刻');\r\nvar row7 = graphView.dm().getDataByTag('确认人');\r\nconsole.log(row6.a('ht.value'))\r\nlet SlabNo = row1.a('ht.value','');\r\nlet AbnormalType = row2.a('ht.value','');\r\nlet AbnormalZone = row3.a('ht.value','');\r\nlet ActValue = row4.a('ht.value','');\r\nlet RequireValue = row5.a('ht.value','');\r\nlet OccurTime = row6.a('ht.value','');\r\nlet Confirmer = row7.a('ht.value','')\r\nlet inset = graphView.dm().getDataByTag('异常录入');\r\ninset.s('2d.visible',false);}",
-        "select.color": "rgb(255,255,255)",
-        "select.width": 0
-      },
-      "a": {
-        "name": "取消"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40764,
-      "p": {
-        "displayName": "确认人",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "tag": "确认人",
-        "image": "symbols/ht/ui/input.json",
-        "position": {
-          "x": 958.93068,
-          "y": 623.27221
-        },
-        "width": 248.87413,
-        "height": 33.62619,
-        "tall": 20
-      },
-      "s": {
-        "2d.movable": false
-      },
-      "a": {
-        "ht.borderColor": "rgb(51,153,255)",
-        "ht.borderRadius": "3",
-        "ht.textColor": "rgb(255,255,255)",
-        "ht.disabled": false,
-        "ht.font": "20px arial, sans-serif"
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40765,
-      "p": {
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "position": {
-          "x": 717.82374,
-          "y": 231.93653
-        },
-        "width": 0.01,
-        "height": 0.01113,
-        "tall": 20
-      },
-      "s": {
-        "text": "钢坯号：",
-        "text.font": "22px arial, sans-serif",
-        "text.color": "rgb(255,255,255)",
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40766,
-      "p": {
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "position": {
-          "x": 717.82374,
-          "y": 287.84163
-        },
-        "width": 0.01,
-        "height": 0.01113,
-        "tall": 20
-      },
-      "s": {
-        "text": "异常类型：",
-        "text.font": "22px arial, sans-serif",
-        "text.color": "rgb(255,255,255)",
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40767,
-      "p": {
-        "displayName": "位置：",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "position": {
-          "x": 717.82374,
-          "y": 343.74672
-        },
-        "width": 0.01,
-        "height": 0.01113,
-        "tall": 20
-      },
-      "s": {
-        "text": "位置：",
-        "text.font": "22px arial, sans-serif",
-        "text.color": "rgb(255,255,255)",
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40768,
-      "p": {
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "position": {
-          "x": 717.82374,
-          "y": 399.65182
-        },
-        "width": 0.01,
-        "height": 0.01113,
-        "tall": 20
-      },
-      "s": {
-        "text": "实际值：",
-        "text.font": "22px arial, sans-serif",
-        "text.color": "rgb(255,255,255)",
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40769,
-      "p": {
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "position": {
-          "x": 717.82374,
-          "y": 511.46202
-        },
-        "width": 0.01,
-        "height": 0.01113,
-        "tall": 20
-      },
-      "s": {
-        "text": "采集重量：",
-        "text.font": "22px arial, sans-serif",
-        "text.color": "rgb(255,255,255)",
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40770,
-      "p": {
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "position": {
-          "x": 717.82374,
-          "y": 567.36711
-        },
-        "width": 0.01,
-        "height": 0.01113,
-        "tall": 20
-      },
-      "s": {
-        "text": "发生时刻：",
-        "text.font": "22px arial, sans-serif",
-        "text.color": "rgb(255,255,255)",
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40771,
-      "p": {
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "position": {
-          "x": 717.82374,
-          "y": 623.27221
-        },
-        "width": 0.01,
-        "height": 0.01113,
-        "tall": 20
-      },
-      "s": {
-        "text": "确认人：",
-        "text.font": "22px arial, sans-serif",
-        "text.color": "rgb(255,255,255)",
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40772,
-      "p": {
-        "displayName": "关闭按钮",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "image": "symbols/青岛特钢/关闭按钮.json",
-        "position": {
-          "x": 1093.04034,
-          "y": 159.7221
-        },
-        "width": 39.81986,
-        "height": 44.83492,
-        "tall": 20
-      },
-      "s": {
-        "interactive": true,
-        "2d.movable": false,
-        "onClick": "__ht__function(event, data, view) {var row1 = graphView.dm().getDataByTag('钢坯号');\r\nvar row2 = graphView.dm().getDataByTag('异常类型');\r\nvar row3 = graphView.dm().getDataByTag('位置');\r\nvar row4 = graphView.dm().getDataByTag('实际值');\r\nvar row5 = graphView.dm().getDataByTag('要求范围');\r\nvar row6 = graphView.dm().getDataByTag('发生时刻');\r\nvar row7 = graphView.dm().getDataByTag('确认人');\r\nconsole.log(row6.a('ht.value'))\r\nlet SlabNo = row1.a('ht.value','');\r\nlet AbnormalType = row2.a('ht.value','');\r\nlet AbnormalZone = row3.a('ht.value','');\r\nlet ActValue = row4.a('ht.value','');\r\nlet RequireValue = row5.a('ht.value','');\r\nlet OccurTime = row6.a('ht.value','');\r\nlet Confirmer = row7.a('ht.value','')\r\nlet inset = graphView.dm().getDataByTag('异常录入');\r\ninset.s('2d.visible',false);}",
-        "select.color": "rgb(255,255,255)",
-        "select.width": 0
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40773,
-      "p": {
-        "displayName": "发生时刻",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "tag": "发生时刻",
-        "image": "symbols/ht/ui/dateTimePicker.json",
-        "position": {
-          "x": 958.93068,
-          "y": 564.16462
-        },
-        "width": 248.87413,
-        "height": 42.59317,
-        "tall": 20
-      },
-      "s": {
-        "interactive": true,
-        "pixelPerfect": false,
-        "2d.movable": false
-      },
-      "a": {
-        "ht.focusBorderColor": "rgb(51,153,255)",
-        "ht.name": "endDate",
-        "ht.borderRadius": "3",
-        "ht.placeHolder": "Apply Date",
-        "ht.padding": "8",
-        "ht.placeholder": "Start Time",
-        "ht.focusBackground": null,
-        "ht.dateType": "datetime",
-        "ht.disabled": false,
-        "ht.format": "YYYY-MM-DD HH:MM",
-        "ht.instant": false,
-        "ht.borderColor": "rgb(51,153,255)",
-        "ht.textColor": "rgb(255,255,255)",
-        "ht.font": "20px arial, sans-serif"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40774,
-      "p": {
-        "displayName": "异常类型",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "tag": "异常类型",
-        "image": "symbols/tenant/shjz-gczndpsj/dev(vector)/comboBox.json",
-        "position": {
-          "x": 958.93068,
-          "y": 286.56063
-        },
-        "width": 248.87413,
-        "height": 33.62619,
-        "tall": 20
-      },
-      "s": {
-        "2d.movable": false
-      },
-      "a": {
-        "ht.borderColor": "rgb(51,153,255)",
-        "ht.borderRadius": "3",
-        "ht.textColor": "rgb(255,255,255)",
-        "ht.disabled": false,
-        "ht.font": "20px arial, sans-serif",
-        "ht.placeholderColor": "rgb(255,255,255)",
-        "ht.dropDownIconColor": "rgb(255,255,255)",
-        "ht.dropDownIconWidth": 20,
-        "ht.dropWidth": 248.82765,
-        "ht.dropLabelFont": "20px Arial, sans-serif",
-        "ht.dropLabelColor": "rgb(255,255,255)",
-        "ht.dropActiveLabelColor": "rgb(255,255,255)",
-        "ht.dropActiveBackground": "rgb(255,255,255)",
-        "ht.dropBackground": "#60ACFC"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40775,
-      "p": {
-        "displayName": "要求范围",
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "tag": "要求范围",
-        "image": "symbols/ht/ui/input.json",
-        "position": {
-          "x": 958.93068,
-          "y": 450.43293
-        },
-        "width": 248.87413,
-        "height": 33.62619,
-        "tall": 20
-      },
-      "s": {
-        "2d.movable": false
-      },
-      "a": {
-        "ht.borderColor": "rgb(51,153,255)",
-        "ht.borderRadius": "3",
-        "ht.textColor": "rgb(255,255,255)",
-        "ht.disabled": false,
-        "ht.font": "20px arial, sans-serif"
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40776,
-      "p": {
-        "parent": {
-          "__i": 40756
-        },
-        "layer": "2",
-        "position": {
-          "x": 717.82374,
-          "y": 455.55692
-        },
-        "width": 0.01,
-        "height": 0.01113,
-        "tall": 20
-      },
-      "s": {
-        "text": "要求范围：",
-        "text.font": "22px arial, sans-serif",
-        "text.color": "rgb(255,255,255)",
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Block",
-      "i": 40777,
-      "p": {
-        "displayName": "块",
-        "parent": {
-          "__i": 40615
-        },
-        "position": {
-          "x": 406.61238,
-          "y": 106.03496
-        },
-        "width": 196.23406,
-        "height": 50
-      },
-      "s": {
-        "select.width": 0,
-        "2d.movable": false,
-        "2d.visible": false
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40778,
-      "p": {
-        "parent": {
-          "__i": 40777
-        },
-        "position": {
-          "x": 406.61239,
-          "y": 106.03496
-        },
-        "width": 196.23406,
-        "height": 50,
-        "tall": 20
-      },
-      "s": {
-        "shape": "roundRect",
-        "shape.background": "rgba(141, 203, 249, 0.101960784313725)",
-        "shape.border.color": "rgb(51,153,255)",
-        "shape.border.width": 1,
-        "shadow2.color": "rgb(0,0,0)",
-        "select.width": 0
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40779,
-      "p": {
-        "parent": {
-          "__i": 40777
-        },
-        "position": {
-          "x": 322.46012,
-          "y": 87.87739
-        },
-        "width": 9.91583,
-        "height": 3.20873,
-        "tall": 20
-      },
-      "s": {
-        "shape": "rect",
-        "shape.background": "rgb(51,153,255)",
-        "shape.border.color": "rgba(255,255,255,0.2)",
-        "select.width": 0
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40780,
-      "p": {
-        "parent": {
-          "__i": 40777
-        },
-        "position": {
-          "x": 334.17097,
-          "y": 87.87739
-        },
-        "width": 9.91583,
-        "height": 3.20873,
-        "tall": 20
-      },
-      "s": {
-        "shape": "rect",
-        "shape.background": "rgba(51,153,255,0.7)",
-        "shape.border.color": "rgba(255,255,255,0.2)",
-        "select.width": 0
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40781,
-      "p": {
-        "parent": {
-          "__i": 40777
-        },
-        "position": {
-          "x": 345.88183,
-          "y": 87.87739
-        },
-        "width": 9.91583,
-        "height": 3.20873,
-        "tall": 20
-      },
-      "s": {
-        "shape": "rect",
-        "shape.background": "rgba(51,153,255,0.3)",
-        "shape.border.color": "rgba(255,255,255,0.2)",
-        "select.width": 0
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40782,
-      "p": {
-        "displayName": "流动管道",
-        "parent": {
-          "__i": 40777
-        },
-        "position": {
-          "x": 407.15247,
-          "y": 100.74722
-        },
-        "width": 179.30054,
-        "height": 0.00001,
-        "tall": 20,
-        "segments": {
-          "__a": [
-            1,
-            2
-          ]
-        },
-        "points": {
-          "__a": [
-            {
-              "x": 317.50221,
-              "y": 100.74722
-            },
-            {
-              "x": 496.80273,
-              "y": 100.74722
-            }
-          ]
-        }
-      },
-      "s": {
-        "shape.background": null,
-        "shape.border.width": 6,
-        "shape.dash.pattern": [
-          16,
-          500
-        ],
-        "shape.dash.3d.color": "rgb(237,237,237)",
-        "note.border.color": "rgb(61,61,61)",
-        "border.color": "#929292",
-        "shape.border.color": "rgb(70,96,122)",
-        "shape.dash.color": "rgb(60,157,201)",
-        "border.width": 0,
-        "shape.border.3d": true,
-        "shape.border.3d.color": "rgb(247,247,247)",
-        "shape.dash": true,
-        "shape.dash.3d": true,
-        "shape.border.cap": "square",
-        "select.width": 0
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40783,
-      "p": {
-        "displayName": "流动管道",
-        "parent": {
-          "__i": 40777
-        },
-        "position": {
-          "x": 407.40191,
-          "y": 112.00993
-        },
-        "width": 179.79942,
-        "height": 0.00001,
-        "tall": 20,
-        "segments": {
-          "__a": [
-            1,
-            2
-          ]
-        },
-        "points": {
-          "__a": [
-            {
-              "x": 317.50221,
-              "y": 112.00993
-            },
-            {
-              "x": 497.30162,
-              "y": 112.00993
-            }
-          ]
-        }
-      },
-      "s": {
-        "shape.background": null,
-        "shape.border.color": "rgb(70,96,122)",
-        "shape.border.width": 6,
-        "shape.border.3d": true,
-        "shape.border.3d.color": "rgb(247,247,247)",
-        "shape.dash.color": "rgb(60,157,201)",
-        "shape.dash.pattern": [
-          16,
-          500
-        ],
-        "shape.dash.3d.color": "rgb(237,237,237)",
-        "shape.border.cap": "square",
-        "border.width": 0,
-        "shape.dash": true,
-        "shape.dash.3d": true,
-        "select.width": 0
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40784,
-      "p": {
-        "displayName": "流动管道",
-        "parent": {
-          "__i": 40777
-        },
-        "position": {
-          "x": 407.40191,
-          "y": 123.27264
-        },
-        "width": 179.79942,
-        "height": 0.00001,
-        "tall": 20,
-        "segments": {
-          "__a": [
-            1,
-            2
-          ]
-        },
-        "points": {
-          "__a": [
-            {
-              "x": 317.50221,
-              "y": 123.27264
-            },
-            {
-              "x": 497.30162,
-              "y": 123.27264
-            }
-          ]
-        }
-      },
-      "s": {
-        "shape.background": null,
-        "shape.border.color": "rgb(70,96,122)",
-        "shape.border.width": 6,
-        "shape.border.3d": true,
-        "shape.border.3d.color": "rgb(247,247,247)",
-        "shape.dash.color": "rgb(60,157,201)",
-        "shape.dash.pattern": [
-          16,
-          500
-        ],
-        "shape.dash.3d.color": "rgb(237,237,237)",
-        "shape.border.cap": "square",
-        "border.width": 0,
-        "shape.dash": true,
-        "shape.dash.3d": true,
-        "select.width": 0
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40785,
-      "p": {
-        "parent": {
-          "__i": 40777
-        },
-        "position": {
-          "x": 378.54594,
-          "y": 91
-        },
-        "width": 0.01,
-        "height": 0.01
-      },
-      "s": {
-        "text": "1800",
-        "text.color": "rgb(255,255,255)",
-        "text.align": "center",
-        "select.width": 0
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40786,
-      "p": {
-        "parent": {
-          "__i": 40777
-        },
-        "position": {
-          "x": 427.95997,
-          "y": 91
-        },
-        "width": 0.01,
-        "height": 0.01,
-        "tall": 20
-      },
-      "s": {
-        "text": "1:12",
-        "text.color": "rgb(255,255,255)",
-        "text.align": "center",
-        "select.width": 0
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40787,
-      "p": {
-        "parent": {
-          "__i": 40777
-        },
-        "position": {
-          "x": 477.374,
-          "y": 91
-        },
-        "width": 0.01,
-        "height": 0.01,
-        "tall": 20
-      },
-      "s": {
-        "text": "从左至右",
-        "text.color": "rgb(255,255,255)",
-        "text.align": "center",
-        "select.width": 0
-      }
-    },
-    {
-      "c": "ht.Block",
-      "i": 40788,
-      "p": {
-        "displayName": "再次确认",
-        "parent": {
-          "__i": 40615
-        },
-        "layer": "2",
-        "tag": "再次确认",
-        "position": {
-          "x": 818.25778,
-          "y": 453.26892
-        },
-        "width": 207.72763,
-        "height": 140.07385
-      },
-      "s": {
-        "2d.movable": false,
-        "interactive": true,
-        "2d.visible": false
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40789,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 718.10172,
-          "y": 402.03174
-        },
-        "width": 7.12416,
-        "height": 0.53249,
-        "tall": 20,
-        "segments": {
-          "__a": [
-            1,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            5
-          ]
-        },
-        "points": {
-          "__a": [
-            {
-              "x": 714.53964,
-              "y": 401.7655
-            },
-            {
-              "x": 721.6638,
-              "y": 401.7655
-            },
-            {
-              "x": 721.6638,
-              "y": 401.7655
-            },
-            {
-              "x": 721.6638,
-              "y": 401.7655
-            },
-            {
-              "x": 721.6638,
-              "y": 402.29799
-            },
-            {
-              "x": 721.6638,
-              "y": 402.29799
-            },
-            {
-              "x": 721.6638,
-              "y": 402.29799
-            },
-            {
-              "x": 714.53964,
-              "y": 402.29799
-            },
-            {
-              "x": 714.53964,
-              "y": 402.29799
-            },
-            {
-              "x": 714.53964,
-              "y": 402.29799
-            },
-            {
-              "x": 714.53964,
-              "y": 401.7655
-            },
-            {
-              "x": 714.53964,
-              "y": 401.7655
-            },
-            {
-              "x": 714.53964,
-              "y": 401.7655
-            }
-          ]
-        }
-      },
-      "s": {
-        "type": "shape",
-        "shape.background": "rgba(135, 231, 255, 1)",
-        "shape.border.color": null,
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "opacity": 1,
-        "layout.h": "left",
-        "layout.v": "top",
-        "shape.gradient.pack": [
-          "linear",
-          0,
-          0.5,
-          1,
-          0.5,
-          0,
-          "rgba(135, 231, 255, 1)",
-          1,
-          "rgba(33, 147, 255, 0.6)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40790,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 717.95675,
-          "y": 523.03898
-        },
-        "width": 7.12416,
-        "height": 0.53248,
-        "tall": 20,
-        "segments": {
-          "__a": [
-            1,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            5
-          ]
-        },
-        "points": {
-          "__a": [
-            {
-              "x": 714.39467,
-              "y": 522.77274
-            },
-            {
-              "x": 721.51882,
-              "y": 522.77274
-            },
-            {
-              "x": 721.51882,
-              "y": 522.77274
-            },
-            {
-              "x": 721.51882,
-              "y": 522.77274
-            },
-            {
-              "x": 721.51882,
-              "y": 523.30522
-            },
-            {
-              "x": 721.51882,
-              "y": 523.30522
-            },
-            {
-              "x": 721.51882,
-              "y": 523.30522
-            },
-            {
-              "x": 714.39467,
-              "y": 523.30522
-            },
-            {
-              "x": 714.39467,
-              "y": 523.30522
-            },
-            {
-              "x": 714.39467,
-              "y": 523.30522
-            },
-            {
-              "x": 714.39467,
-              "y": 522.77274
-            },
-            {
-              "x": 714.39467,
-              "y": 522.77274
-            },
-            {
-              "x": 714.39467,
-              "y": 522.77274
-            }
-          ]
-        }
-      },
-      "s": {
-        "type": "shape",
-        "shape.background": "rgba(135, 231, 255, 1)",
-        "shape.border.color": null,
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "opacity": 1,
-        "layout.h": "left",
-        "layout.v": "bottom",
-        "shape.gradient.pack": [
-          "linear",
-          0,
-          0.5,
-          1,
-          0.5,
-          0,
-          "rgba(135, 231, 255, 1)",
-          1,
-          "rgba(33, 147, 255, 0.6)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40791,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 714.39467,
-          "y": 502.00555
-        },
-        "anchor": {
-          "x": 0,
-          "y": 0
-        },
-        "width": 28.49661,
-        "height": 21.29968,
-        "tall": 20
-      },
-      "s": {
-        "shape": "rect",
-        "shape.background": "rgba(61, 73, 128, 1)",
-        "shape.border.color": "rgba(151, 151, 151, 1)",
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "pixelPerfect": false,
-        "opacity": 1,
-        "layout.h": "left",
-        "layout.v": "bottom",
-        "shape.gradient.pack": [
-          "linear",
-          0,
-          1,
-          0.5,
-          0.5,
-          0,
-          "rgba(21, 111, 237, 1)",
-          1,
-          "rgba(29, 93, 204, 0.00)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40792,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 818.16999,
-          "y": 453.13777
-        },
-        "width": 207.55066,
-        "height": 139.26589,
-        "tall": 20,
-        "segments": {
-          "__a": [
-            1,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            5
-          ]
-        },
-        "points": {
-          "__a": [
-            {
-              "x": 714.39467,
-              "y": 383.50482
-            },
-            {
-              "x": 921.94532,
-              "y": 383.50482
-            },
-            {
-              "x": 921.94532,
-              "y": 383.50482
-            },
-            {
-              "x": 921.94532,
-              "y": 383.50482
-            },
-            {
-              "x": 921.94532,
-              "y": 522.77072
-            },
-            {
-              "x": 921.94532,
-              "y": 522.77072
-            },
-            {
-              "x": 921.94532,
-              "y": 522.77072
-            },
-            {
-              "x": 714.39467,
-              "y": 522.77072
-            },
-            {
-              "x": 714.39467,
-              "y": 522.77072
-            },
-            {
-              "x": 714.39467,
-              "y": 522.77072
-            },
-            {
-              "x": 714.39467,
-              "y": 383.50482
-            },
-            {
-              "x": 714.39467,
-              "y": 383.50482
-            },
-            {
-              "x": 714.39467,
-              "y": 383.50482
-            }
-          ]
-        }
-      },
-      "s": {
-        "type": "shape",
-        "shape.background": null,
-        "shape.border.color": null,
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "opacity": 1,
-        "layout.h": "leftright",
-        "layout.v": "bottom",
-        "shape.gradient.pack": [
-          "linear",
-          0,
-          0.5,
-          1,
-          0.5,
-          0,
-          "rgba(28, 111, 255, 0.5)",
-          0.5,
-          "rgba(28, 111, 255, 0.1)",
-          0.99,
-          "rgba(28, 111, 255, 0.5)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40793,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 715.72316,
-          "y": 383.23138
-        },
-        "anchor": {
-          "x": 0,
-          "y": 0
-        },
-        "width": 206.39913,
-        "height": 139.54135,
-        "tall": 20
-      },
-      "s": {
-        "shape": "rect",
-        "shape.background": "rgba(61, 73, 128, 1)",
-        "shape.border.color": "rgba(151, 151, 151, 1)",
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "pixelPerfect": false,
-        "opacity": 1,
-        "shape.gradient.pack": [
-          "linear",
-          0,
-          0.5,
-          1,
-          0.5,
-          0,
-          "rgba(15, 68, 117, 1)",
-          1,
-          "rgba(13, 33, 61, 1)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40794,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 818.34597,
-          "y": 391.75125
-        },
-        "width": 207.55066,
-        "height": 14.90978,
-        "tall": 20,
-        "segments": null,
-        "points": {
-          "__a": [
-            {
-              "x": 714.57064,
-              "y": 399.20614
-            },
-            {
-              "x": 922.12131,
-              "y": 399.20614
-            },
-            {
-              "x": 922.12131,
-              "y": 384.29636
-            },
-            {
-              "x": 714.57064,
-              "y": 384.29636
-            }
-          ]
-        }
-      },
-      "s": {
-        "type": "shape",
-        "shape.background": null,
-        "shape.border.color": null,
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "shape.fill.rule": "evenodd",
-        "opacity": 0.6,
-        "layout.h": "leftright",
-        "layout.v": "top",
-        "shape.gradient.pack": [
-          "linear",
-          0,
-          0.5,
-          1,
-          0.5,
-          0,
-          "rgba(43, 142, 255, 1)",
-          1,
-          "rgba(41, 118, 227, 0.00)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40795,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 818.34597,
-          "y": 400.00488
-        },
-        "width": 207.55066,
-        "height": 0.12602,
-        "tall": 20,
-        "segments": null,
-        "points": {
-          "__a": [
-            {
-              "x": 714.57064,
-              "y": 400.00488
-            },
-            {
-              "x": 922.12131,
-              "y": 400.00488
-            }
-          ]
-        }
-      },
-      "s": {
-        "type": "shape",
-        "shape.background": null,
-        "shape.border.width": 1,
-        "shape.border.color": null,
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "opacity": 1,
-        "layout.h": "leftright",
-        "layout.v": "top",
-        "shape.border.gradient.pack": [
-          "linear",
-          0,
-          0.5,
-          1,
-          0.5,
-          0,
-          "rgba(28, 111, 255, 0.5)",
-          0.5,
-          "rgba(28, 111, 255, 0.1)",
-          0.99,
-          "rgba(28, 111, 255, 0.5)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40796,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 818.34597,
-          "y": 402.03174
-        },
-        "width": 207.55066,
-        "height": 0.53249,
-        "tall": 20,
-        "segments": {
-          "__a": [
-            1,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            5
-          ]
-        },
-        "points": {
-          "__a": [
-            {
-              "x": 714.57064,
-              "y": 401.7655
-            },
-            {
-              "x": 922.12131,
-              "y": 401.7655
-            },
-            {
-              "x": 922.12131,
-              "y": 401.7655
-            },
-            {
-              "x": 922.12131,
-              "y": 401.7655
-            },
-            {
-              "x": 922.12131,
-              "y": 402.29799
-            },
-            {
-              "x": 922.12131,
-              "y": 402.29799
-            },
-            {
-              "x": 922.12131,
-              "y": 402.29799
-            },
-            {
-              "x": 714.57064,
-              "y": 402.29799
-            },
-            {
-              "x": 714.57064,
-              "y": 402.29799
-            },
-            {
-              "x": 714.57064,
-              "y": 402.29799
-            },
-            {
-              "x": 714.57064,
-              "y": 401.7655
-            },
-            {
-              "x": 714.57064,
-              "y": 401.7655
-            },
-            {
-              "x": 714.57064,
-              "y": 401.7655
-            }
-          ]
-        }
-      },
-      "s": {
-        "type": "shape",
-        "shape.background": null,
-        "shape.border.color": null,
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "opacity": 1,
-        "layout.h": "leftright",
-        "layout.v": "top",
-        "shape.gradient.pack": [
-          "linear",
-          0,
-          0.5,
-          1,
-          0.5,
-          0,
-          "rgba(28, 111, 255, 0.5)",
-          0.5,
-          "rgba(28, 111, 255, 0.1)",
-          0.99,
-          "rgba(28, 111, 255, 0.5)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40797,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 718.10172,
-          "y": 402.03174
-        },
-        "width": 7.12416,
-        "height": 0.53249,
-        "tall": 20,
-        "segments": {
-          "__a": [
-            1,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            5
-          ]
-        },
-        "points": {
-          "__a": [
-            {
-              "x": 714.53964,
-              "y": 401.7655
-            },
-            {
-              "x": 721.6638,
-              "y": 401.7655
-            },
-            {
-              "x": 721.6638,
-              "y": 401.7655
-            },
-            {
-              "x": 721.6638,
-              "y": 401.7655
-            },
-            {
-              "x": 721.6638,
-              "y": 402.29799
-            },
-            {
-              "x": 721.6638,
-              "y": 402.29799
-            },
-            {
-              "x": 721.6638,
-              "y": 402.29799
-            },
-            {
-              "x": 714.53964,
-              "y": 402.29799
-            },
-            {
-              "x": 714.53964,
-              "y": 402.29799
-            },
-            {
-              "x": 714.53964,
-              "y": 402.29799
-            },
-            {
-              "x": 714.53964,
-              "y": 401.7655
-            },
-            {
-              "x": 714.53964,
-              "y": 401.7655
-            },
-            {
-              "x": 714.53964,
-              "y": 401.7655
-            }
-          ]
-        }
-      },
-      "s": {
-        "type": "shape",
-        "shape.background": "rgba(135, 231, 255, 1)",
-        "shape.border.color": null,
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "opacity": 1,
-        "layout.h": "left",
-        "layout.v": "top",
-        "shape.gradient.pack": [
-          "linear",
-          0,
-          0.5,
-          1,
-          0.5,
-          0,
-          "rgba(135, 231, 255, 1)",
-          1,
-          "rgba(33, 147, 255, 0.6)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40798,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 717.95675,
-          "y": 523.03898
-        },
-        "width": 7.12416,
-        "height": 0.53248,
-        "tall": 20,
-        "segments": {
-          "__a": [
-            1,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            5
-          ]
-        },
-        "points": {
-          "__a": [
-            {
-              "x": 714.39467,
-              "y": 522.77274
-            },
-            {
-              "x": 721.51882,
-              "y": 522.77274
-            },
-            {
-              "x": 721.51882,
-              "y": 522.77274
-            },
-            {
-              "x": 721.51882,
-              "y": 522.77274
-            },
-            {
-              "x": 721.51882,
-              "y": 523.30522
-            },
-            {
-              "x": 721.51882,
-              "y": 523.30522
-            },
-            {
-              "x": 721.51882,
-              "y": 523.30522
-            },
-            {
-              "x": 714.39467,
-              "y": 523.30522
-            },
-            {
-              "x": 714.39467,
-              "y": 523.30522
-            },
-            {
-              "x": 714.39467,
-              "y": 523.30522
-            },
-            {
-              "x": 714.39467,
-              "y": 522.77274
-            },
-            {
-              "x": 714.39467,
-              "y": 522.77274
-            },
-            {
-              "x": 714.39467,
-              "y": 522.77274
-            }
-          ]
-        }
-      },
-      "s": {
-        "type": "shape",
-        "shape.background": "rgba(135, 231, 255, 1)",
-        "shape.border.color": null,
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "opacity": 1,
-        "layout.h": "left",
-        "layout.v": "bottom",
-        "shape.gradient.pack": [
-          "linear",
-          0,
-          0.5,
-          1,
-          0.5,
-          0,
-          "rgba(135, 231, 255, 1)",
-          1,
-          "rgba(33, 147, 255, 0.6)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40799,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 917.79734,
-          "y": 383.59364
-        },
-        "width": 8.64795,
-        "height": 0.72412,
-        "tall": 20,
-        "segments": {
-          "__a": [
-            1,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            5
-          ]
-        },
-        "points": {
-          "__a": [
-            {
-              "x": 913.47336,
-              "y": 383.23158
-            },
-            {
-              "x": 922.12131,
-              "y": 383.23158
-            },
-            {
-              "x": 922.12131,
-              "y": 383.23158
-            },
-            {
-              "x": 922.12131,
-              "y": 383.23158
-            },
-            {
-              "x": 922.12131,
-              "y": 383.9557
-            },
-            {
-              "x": 922.12131,
-              "y": 383.9557
-            },
-            {
-              "x": 922.12131,
-              "y": 383.9557
-            },
-            {
-              "x": 913.47336,
-              "y": 383.9557
-            },
-            {
-              "x": 913.47336,
-              "y": 383.9557
-            },
-            {
-              "x": 913.47336,
-              "y": 383.9557
-            },
-            {
-              "x": 913.47336,
-              "y": 383.23158
-            },
-            {
-              "x": 913.47336,
-              "y": 383.23158
-            },
-            {
-              "x": 913.47336,
-              "y": 383.23158
-            }
-          ]
-        }
-      },
-      "s": {
-        "type": "shape",
-        "shape.background": "rgba(135, 231, 255, 1)",
-        "shape.border.color": null,
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "opacity": 1,
-        "layout.h": "right",
-        "layout.v": "top",
-        "shape.gradient.pack": [
-          "linear",
-          1,
-          0.5,
-          0,
-          0.5,
-          0,
-          "rgba(135, 231, 255, 1)",
-          1,
-          "rgba(33, 147, 255, 0.6)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Shape",
-      "i": 40800,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 917.62135,
-          "y": 522.94316
-        },
-        "width": 8.64795,
-        "height": 0.72411,
-        "tall": 20,
-        "segments": {
-          "__a": [
-            1,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            2,
-            3,
-            5
-          ]
-        },
-        "points": {
-          "__a": [
-            {
-              "x": 913.29738,
-              "y": 522.58111
-            },
-            {
-              "x": 921.94532,
-              "y": 522.58111
-            },
-            {
-              "x": 921.94532,
-              "y": 522.58111
-            },
-            {
-              "x": 921.94532,
-              "y": 522.58111
-            },
-            {
-              "x": 921.94532,
-              "y": 523.30522
-            },
-            {
-              "x": 921.94532,
-              "y": 523.30522
-            },
-            {
-              "x": 921.94532,
-              "y": 523.30522
-            },
-            {
-              "x": 913.29738,
-              "y": 523.30522
-            },
-            {
-              "x": 913.29738,
-              "y": 523.30522
-            },
-            {
-              "x": 913.29738,
-              "y": 523.30522
-            },
-            {
-              "x": 913.29738,
-              "y": 522.58111
-            },
-            {
-              "x": 913.29738,
-              "y": 522.58111
-            },
-            {
-              "x": 913.29738,
-              "y": 522.58111
-            }
-          ]
-        }
-      },
-      "s": {
-        "type": "shape",
-        "shape.background": "rgba(135, 231, 255, 1)",
-        "shape.border.color": null,
-        "shape.dash.pattern": [
-          16,
-          16
-        ],
-        "opacity": 1,
-        "layout.h": "right",
-        "layout.v": "bottom",
-        "shape.gradient.pack": [
-          "linear",
-          1,
-          0.5,
-          0,
-          0.5,
-          0,
-          "rgba(135, 231, 255, 1)",
-          1,
-          "rgba(33, 147, 255, 0.6)"
-        ],
-        "2d.movable": false
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40801,
-      "p": {
-        "displayName": "下图标 2",
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "image": "symbols/青岛特钢/扁棒加热炉跟踪/下图标 2.json",
-        "position": {
-          "x": 767.58054,
-          "y": 479.31404
-        },
-        "width": 100.01868,
-        "height": 45,
-        "tall": 20
-      },
-      "s": {
-        "2d.movable": false,
-        "onClick": "__ht__function(event, data, view) {// 轧线钢坯参数\r\nlet Line = \"B101\";\r\nlet canshu = graphView.dm().getDataByTag('ByData');\r\nlet SlabNo = canshu.a('部分选中');\r\n//跟踪区域\r\nlet type = canshu.a('datetext');\r\nlet url;\r\nif(type === \"1\"){\r\n url = `http://180.10.10.12:9003/api/sdf/sltbusrolllinetrack/delslab?Line=${Line}&SlabNo=${SlabNo}`;\r\n}\r\nif(type === \"2\"){\r\n url = `http://180.10.10.12:9003/api/sdf/sltbusrolllinetrack/slabenfurnback?Line=${Line}&SlabNo=${SlabNo}`;\r\n}\r\nrequestGet(url);\r\nlet main = graphView.dm().getDataByTag('再次确认');\r\nmain.s('2d.visible',false);\r\ncanshu.a('datetext',\"0\");}",
-        "interactive": true,
-        "select.width": 0
-      },
-      "a": {
-        "name": "确认"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40802,
-      "p": {
-        "displayName": "下图标 2",
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "image": "symbols/青岛特钢/扁棒加热炉跟踪/下图标 2.json",
-        "position": {
-          "x": 869.93561,
-          "y": 479.31404
-        },
-        "width": 100.01868,
-        "height": 45,
-        "tall": 20
-      },
-      "s": {
-        "2d.movable": false,
-        "interactive": true,
-        "onClick": "__ht__function(event, data, view) {let canshu = graphView.dm().getDataByTag('ByData');\r\n    canshu.a('datetext',\"0\");\r\n    let main = graphView.dm().getDataByTag('再次确认');\r\n    main.s('2d.visible',false)}",
-        "select.width": 0
-      },
-      "a": {
-        "name": "取消"
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40803,
-      "p": {
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "position": {
-          "x": 817.58938,
-          "y": 393.95659
-        },
-        "width": 0.01,
-        "height": 0.01,
-        "tall": 20
-      },
-      "s": {
-        "text": "再次确认",
-        "text.color": "rgb(255,255,255)",
-        "text.align": "center",
-        "text.font": "18px arial, sans-serif"
-      }
-    },
-    {
-      "c": "ht.Text",
-      "i": 40804,
-      "p": {
-        "displayName": "参数",
-        "parent": {
-          "__i": 40788
-        },
-        "layer": "2",
-        "tag": "参数",
-        "position": {
-          "x": 817.58838,
-          "y": 435.79142
-        },
-        "width": 0.01,
-        "height": 0.01,
-        "tall": 20
-      },
-      "s": {
-        "text": "参数",
-        "text.color": "rgb(255,255,255)",
-        "text.align": "center",
-        "text.font": "18px arial, sans-serif"
-      }
-    },
-    {
-      "c": "ht.Node",
-      "i": 40805,
+      "i": 14120,
       "p": {
         "displayName": "H6",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "H6",
@@ -6293,18 +4105,18 @@
     },
     {
       "c": "ht.Node",
-      "i": 40806,
+      "i": 14121,
       "p": {
         "displayName": "H6架轧机前温度",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "dataBindings": {
           "a": {
             "name": {
               "id": "NumTag/Bar2ABB/中棒1Bar/B1OPCLS179",
-              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+              "func": "__ht__function(value){\r\n    const num = parseFloat(value);\r\n    if (num < 410) {\r\n        return 0;\r\n    }\r\n    return num.toFixed(0);\r\n}\r\n"
             }
           }
         },
@@ -6330,11 +4142,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40807,
+      "i": 14122,
       "p": {
         "displayName": "H7",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "tag": "H7",
@@ -6362,11 +4174,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40808,
+      "i": 14123,
       "p": {
         "displayName": "水箱",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/水箱.png",
@@ -6390,11 +4202,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40809,
+      "i": 14124,
       "p": {
         "displayName": "水箱",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/水箱.png",
@@ -6418,11 +4230,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40810,
+      "i": 14125,
       "p": {
         "displayName": "水箱",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/水箱.png",
@@ -6446,11 +4258,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40811,
+      "i": 14126,
       "p": {
         "displayName": "H6架轧机前温度",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "dataBindings": {
@@ -6483,11 +4295,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40812,
+      "i": 14127,
       "p": {
         "displayName": "出料炉门信号",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "dataBindings": {
           "a": {
@@ -6521,11 +4333,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 40813,
+      "i": 14128,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "position": {
           "x": 899.99999,
@@ -6545,11 +4357,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40814,
+      "i": 14129,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6571,11 +4383,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40815,
+      "i": 14130,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6598,11 +4410,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40816,
+      "i": 14131,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6625,11 +4437,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40817,
+      "i": 14132,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6652,11 +4464,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40818,
+      "i": 14133,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6679,11 +4491,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40819,
+      "i": 14134,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6706,11 +4518,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40820,
+      "i": 14135,
       "p": {
         "displayName": "水箱",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/水箱.png",
@@ -6734,11 +4546,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40821,
+      "i": 14136,
       "p": {
         "displayName": "水箱",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/水箱.png",
@@ -6762,11 +4574,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40822,
+      "i": 14137,
       "p": {
         "displayName": "水箱",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/水箱.png",
@@ -6790,11 +4602,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40823,
+      "i": 14138,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6817,11 +4629,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40824,
+      "i": 14139,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6844,11 +4656,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40825,
+      "i": 14140,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6871,11 +4683,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40826,
+      "i": 14141,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6898,11 +4710,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40827,
+      "i": 14142,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6925,11 +4737,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40828,
+      "i": 14143,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6952,11 +4764,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40829,
+      "i": 14144,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6979,11 +4791,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40830,
+      "i": 14145,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -7006,11 +4818,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40831,
+      "i": 14146,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -7033,11 +4845,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40832,
+      "i": 14147,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -7060,11 +4872,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40833,
+      "i": 14148,
       "p": {
         "displayName": "6A辊道入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-RollTable6AEntryHmd",
         "dataBindings": {
@@ -7090,11 +4902,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40834,
+      "i": 14149,
       "p": {
         "displayName": "6B辊道入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-RollTable6BEntryHmd",
         "dataBindings": {
@@ -7121,11 +4933,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40835,
+      "i": 14150,
       "p": {
         "displayName": "未启用信号点",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/有钢信号 2.json",
         "position": {
@@ -7148,11 +4960,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40836,
+      "i": 14151,
       "p": {
         "displayName": "未启用信号点",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/有钢信号 2.json",
         "position": {
@@ -7175,11 +4987,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40837,
+      "i": 14152,
       "p": {
         "displayName": "除磷机前热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-DescalerBeforeHmd",
         "dataBindings": {
@@ -7206,11 +5018,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40838,
+      "i": 14153,
       "p": {
         "displayName": "1号剪前热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-No1ShearBeforeHmd",
         "dataBindings": {
@@ -7237,11 +5049,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40839,
+      "i": 14154,
       "p": {
         "displayName": "7架入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-Stand7EntryHmd",
         "dataBindings": {
@@ -7268,11 +5080,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40840,
+      "i": 14155,
       "p": {
         "displayName": "9架入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-Stand9EntryHmd",
         "dataBindings": {
@@ -7299,11 +5111,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40841,
+      "i": 14156,
       "p": {
         "displayName": "未启用信号点",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/有钢信号 2.json",
         "position": {
@@ -7326,11 +5138,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40842,
+      "i": 14157,
       "p": {
         "displayName": "12架入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-Stand12EntryHmd",
         "dataBindings": {
@@ -7357,11 +5169,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40843,
+      "i": 14158,
       "p": {
         "displayName": "2号剪入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-No2ShearEntryHmd",
         "dataBindings": {
@@ -7388,11 +5200,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40844,
+      "i": 14159,
       "p": {
         "displayName": "13架入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-Stand13EntryHmd",
         "dataBindings": {
@@ -7419,11 +5231,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40845,
+      "i": 14160,
       "p": {
         "displayName": "15架入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-Stand15EntryHmd",
         "dataBindings": {
@@ -7450,11 +5262,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40846,
+      "i": 14161,
       "p": {
         "displayName": "16架出口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-Stand16ExitHmd",
         "dataBindings": {
@@ -7481,11 +5293,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40847,
+      "i": 14162,
       "p": {
         "displayName": "未启用信号点",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/有钢信号 2.json",
         "position": {
@@ -7508,11 +5320,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40848,
+      "i": 14163,
       "p": {
         "displayName": "未启用信号点",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/有钢信号 2.json",
         "position": {
@@ -7535,11 +5347,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40849,
+      "i": 14164,
       "p": {
         "displayName": "未启用信号点",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/有钢信号 2.json",
         "position": {
@@ -7562,11 +5374,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40850,
+      "i": 14165,
       "p": {
         "displayName": "17架入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-2-Stand17EntryHmd",
         "dataBindings": {
@@ -7593,11 +5405,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40851,
+      "i": 14166,
       "p": {
         "displayName": "4号水箱入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-3-No4WaterTankEntryHmd",
         "dataBindings": {
@@ -7624,11 +5436,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40852,
+      "i": 14167,
       "p": {
         "displayName": "4号剪前热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-3-No4ShearBeforeHmd",
         "dataBindings": {
@@ -7655,11 +5467,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40853,
+      "i": 14168,
       "p": {
         "displayName": "4号剪出口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-3-No4ShearExitHmd",
         "dataBindings": {
@@ -7686,11 +5498,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40854,
+      "i": 14169,
       "p": {
         "displayName": "未启用信号点",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/有钢信号 2.json",
         "position": {
@@ -7713,11 +5525,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40855,
+      "i": 14170,
       "p": {
         "displayName": "6架入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-Stand6EntryHmd",
         "dataBindings": {
@@ -7744,11 +5556,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40856,
+      "i": 14171,
       "p": {
         "displayName": "未启用信号点",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "image": "symbols/大冶特钢中棒/有钢信号 2.json",
         "position": {
@@ -7771,11 +5583,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40857,
+      "i": 14172,
       "p": {
         "displayName": "4架入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-Stand4EntryHmd",
         "dataBindings": {
@@ -7802,11 +5614,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40858,
+      "i": 14173,
       "p": {
         "displayName": "2架入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-Stand2EntryHmd",
         "dataBindings": {
@@ -7833,11 +5645,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40859,
+      "i": 14174,
       "p": {
         "displayName": "水箱",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/水箱.png",
@@ -7862,11 +5674,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40860,
+      "i": 14175,
       "p": {
         "displayName": "冷床出口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-3-BslHmd",
         "dataBindings": {
@@ -7893,11 +5705,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40861,
+      "i": 14176,
       "p": {
         "displayName": "夹送辊前热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-1-PinchRollBeforeHmd",
         "dataBindings": {
@@ -7924,11 +5736,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40862,
+      "i": 14177,
       "p": {
         "displayName": "3号剪出口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-2-No3ShearExitHmd",
         "dataBindings": {
@@ -7955,11 +5767,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40863,
+      "i": 14178,
       "p": {
         "displayName": "3号剪入口热检",
         "parent": {
-          "__i": 40813
+          "__i": 14128
         },
         "tag": "track-2-No3ShearEntryHmd",
         "dataBindings": {
@@ -7986,11 +5798,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 40864,
+      "i": 14179,
       "p": {
         "displayName": "中棒轧线冷床跟踪",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "position": {
           "x": 1530,
@@ -8010,11 +5822,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40865,
+      "i": 14180,
       "p": {
         "displayName": "One-7",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-7",
         "dataBindings": {
@@ -8059,11 +5871,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40866,
+      "i": 14181,
       "p": {
         "displayName": "One-8",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-8",
         "dataBindings": {
@@ -8108,11 +5920,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40867,
+      "i": 14182,
       "p": {
         "displayName": "One-9",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-9",
         "dataBindings": {
@@ -8157,11 +5969,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40868,
+      "i": 14183,
       "p": {
         "displayName": "One-10",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-10",
         "dataBindings": {
@@ -8206,11 +6018,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40869,
+      "i": 14184,
       "p": {
         "displayName": "One-11",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-11",
         "dataBindings": {
@@ -8255,11 +6067,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40870,
+      "i": 14185,
       "p": {
         "displayName": "One-12",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-12",
         "dataBindings": {
@@ -8304,11 +6116,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40871,
+      "i": 14186,
       "p": {
         "displayName": "One-13",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-13",
         "dataBindings": {
@@ -8353,11 +6165,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40872,
+      "i": 14187,
       "p": {
         "displayName": "One-14",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-14",
         "dataBindings": {
@@ -8402,11 +6214,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40873,
+      "i": 14188,
       "p": {
         "displayName": "One-15",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-15",
         "dataBindings": {
@@ -8451,11 +6263,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40874,
+      "i": 14189,
       "p": {
         "displayName": "One-16",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-16",
         "dataBindings": {
@@ -8500,11 +6312,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40875,
+      "i": 14190,
       "p": {
         "displayName": "One-17",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-17",
         "dataBindings": {
@@ -8549,11 +6361,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40876,
+      "i": 14191,
       "p": {
         "displayName": "One-18",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-18",
         "dataBindings": {
@@ -8598,11 +6410,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40877,
+      "i": 14192,
       "p": {
         "displayName": "One-19",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-19",
         "dataBindings": {
@@ -8647,11 +6459,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40878,
+      "i": 14193,
       "p": {
         "displayName": "One-20",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-20",
         "dataBindings": {
@@ -8696,11 +6508,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40879,
+      "i": 14194,
       "p": {
         "displayName": "One-21",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-21",
         "dataBindings": {
@@ -8745,11 +6557,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40880,
+      "i": 14195,
       "p": {
         "displayName": "One-22",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-22",
         "dataBindings": {
@@ -8794,11 +6606,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40881,
+      "i": 14196,
       "p": {
         "displayName": "One-23",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-23",
         "dataBindings": {
@@ -8843,11 +6655,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40882,
+      "i": 14197,
       "p": {
         "displayName": "One-24",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-24",
         "dataBindings": {
@@ -8892,11 +6704,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40883,
+      "i": 14198,
       "p": {
         "displayName": "One-25",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-25",
         "dataBindings": {
@@ -8941,11 +6753,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40884,
+      "i": 14199,
       "p": {
         "displayName": "One-26",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-26",
         "dataBindings": {
@@ -8990,11 +6802,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40885,
+      "i": 14200,
       "p": {
         "displayName": "One-27",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-27",
         "dataBindings": {
@@ -9039,11 +6851,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40886,
+      "i": 14201,
       "p": {
         "displayName": "One-28",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-28",
         "dataBindings": {
@@ -9088,11 +6900,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40887,
+      "i": 14202,
       "p": {
         "displayName": "One-29",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-29",
         "dataBindings": {
@@ -9137,11 +6949,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40888,
+      "i": 14203,
       "p": {
         "displayName": "One-30",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-30",
         "dataBindings": {
@@ -9186,11 +6998,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40889,
+      "i": 14204,
       "p": {
         "displayName": "One-31",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-31",
         "dataBindings": {
@@ -9235,11 +7047,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40890,
+      "i": 14205,
       "p": {
         "displayName": "One-32",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-32",
         "dataBindings": {
@@ -9284,11 +7096,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40891,
+      "i": 14206,
       "p": {
         "displayName": "One-33",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-33",
         "dataBindings": {
@@ -9333,11 +7145,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40892,
+      "i": 14207,
       "p": {
         "displayName": "One-34",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-34",
         "dataBindings": {
@@ -9382,11 +7194,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40893,
+      "i": 14208,
       "p": {
         "displayName": "One-35",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-35",
         "dataBindings": {
@@ -9431,11 +7243,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40894,
+      "i": 14209,
       "p": {
         "displayName": "One-36",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-36",
         "dataBindings": {
@@ -9480,11 +7292,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40895,
+      "i": 14210,
       "p": {
         "displayName": "One-37",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-37",
         "dataBindings": {
@@ -9529,11 +7341,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40896,
+      "i": 14211,
       "p": {
         "displayName": "One-38",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-38",
         "dataBindings": {
@@ -9578,11 +7390,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40897,
+      "i": 14212,
       "p": {
         "displayName": "One-39",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-39",
         "dataBindings": {
@@ -9627,11 +7439,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40898,
+      "i": 14213,
       "p": {
         "displayName": "One-40",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-40",
         "dataBindings": {
@@ -9676,11 +7488,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40899,
+      "i": 14214,
       "p": {
         "displayName": "One-41",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-41",
         "dataBindings": {
@@ -9725,11 +7537,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40900,
+      "i": 14215,
       "p": {
         "displayName": "One-42",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-42",
         "dataBindings": {
@@ -9774,11 +7586,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40901,
+      "i": 14216,
       "p": {
         "displayName": "One-43",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-43",
         "dataBindings": {
@@ -9819,11 +7631,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40902,
+      "i": 14217,
       "p": {
         "displayName": "One-44",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-44",
         "dataBindings": {
@@ -9864,11 +7676,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40903,
+      "i": 14218,
       "p": {
         "displayName": "One-45",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-45",
         "dataBindings": {
@@ -9909,11 +7721,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40904,
+      "i": 14219,
       "p": {
         "displayName": "One-46",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-46",
         "dataBindings": {
@@ -9954,11 +7766,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40905,
+      "i": 14220,
       "p": {
         "displayName": "One-2",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-2",
         "dataBindings": {
@@ -10003,11 +7815,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40906,
+      "i": 14221,
       "p": {
         "displayName": "One-3",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-3",
         "dataBindings": {
@@ -10052,11 +7864,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40907,
+      "i": 14222,
       "p": {
         "displayName": "One-4",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-4",
         "dataBindings": {
@@ -10101,11 +7913,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40908,
+      "i": 14223,
       "p": {
         "displayName": "One-5",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-5",
         "dataBindings": {
@@ -10150,11 +7962,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40909,
+      "i": 14224,
       "p": {
         "displayName": "One-6",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-6",
         "dataBindings": {
@@ -10199,11 +8011,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40910,
+      "i": 14225,
       "p": {
         "displayName": "One-1",
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "tag": "One-1",
         "dataBindings": {
@@ -10248,10 +8060,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40911,
+      "i": 14226,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10285,10 +8097,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40912,
+      "i": 14227,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10322,10 +8134,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40913,
+      "i": 14228,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10359,10 +8171,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40914,
+      "i": 14229,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10396,10 +8208,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40915,
+      "i": 14230,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10433,10 +8245,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40916,
+      "i": 14231,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10470,10 +8282,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40917,
+      "i": 14232,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10507,10 +8319,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40918,
+      "i": 14233,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10544,10 +8356,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40919,
+      "i": 14234,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10581,10 +8393,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40920,
+      "i": 14235,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10618,10 +8430,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40921,
+      "i": 14236,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10655,10 +8467,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40922,
+      "i": 14237,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10692,10 +8504,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40923,
+      "i": 14238,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10729,10 +8541,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40924,
+      "i": 14239,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10766,10 +8578,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40925,
+      "i": 14240,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10803,10 +8615,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40926,
+      "i": 14241,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10840,10 +8652,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40927,
+      "i": 14242,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10877,10 +8689,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40928,
+      "i": 14243,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10914,10 +8726,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40929,
+      "i": 14244,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10951,10 +8763,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40930,
+      "i": 14245,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -10988,10 +8800,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40931,
+      "i": 14246,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11025,10 +8837,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40932,
+      "i": 14247,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11062,10 +8874,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40933,
+      "i": 14248,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11099,10 +8911,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40934,
+      "i": 14249,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11136,10 +8948,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40935,
+      "i": 14250,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11173,10 +8985,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40936,
+      "i": 14251,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11210,10 +9022,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40937,
+      "i": 14252,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11247,10 +9059,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40938,
+      "i": 14253,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11284,10 +9096,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40939,
+      "i": 14254,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11321,10 +9133,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40940,
+      "i": 14255,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11358,10 +9170,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40941,
+      "i": 14256,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11395,10 +9207,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40942,
+      "i": 14257,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11432,10 +9244,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40943,
+      "i": 14258,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11469,10 +9281,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40944,
+      "i": 14259,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11506,10 +9318,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40945,
+      "i": 14260,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11543,10 +9355,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40946,
+      "i": 14261,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11580,10 +9392,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40947,
+      "i": 14262,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11617,10 +9429,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40948,
+      "i": 14263,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11654,10 +9466,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40949,
+      "i": 14264,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11691,10 +9503,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40950,
+      "i": 14265,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11728,10 +9540,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40951,
+      "i": 14266,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11765,10 +9577,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40952,
+      "i": 14267,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11802,10 +9614,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40953,
+      "i": 14268,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11839,10 +9651,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40954,
+      "i": 14269,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11876,10 +9688,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40955,
+      "i": 14270,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11913,10 +9725,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 40956,
+      "i": 14271,
       "p": {
         "parent": {
-          "__i": 40864
+          "__i": 14179
         },
         "position": {
           "x": 1251.67885,
@@ -11950,18 +9762,18 @@
     },
     {
       "c": "ht.Node",
-      "i": 40957,
+      "i": 14272,
       "p": {
         "displayName": "H6架轧机前温度",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "layer": "1",
         "dataBindings": {
           "a": {
             "name": {
               "id": "NumTag/Bar2ABB/中棒1Bar/B1OPCLS183",
-              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+              "func": "__ht__function(value){\r\n    const num = parseFloat(value);\r\n    if (num < 410) {\r\n        return 0;\r\n    }\r\n    return num.toFixed(0);\r\n}\r\n"
             }
           }
         },
@@ -11987,11 +9799,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40958,
+      "i": 14273,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate1",
         "dataBindings": {
@@ -12023,11 +9835,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40959,
+      "i": 14274,
       "p": {
         "displayName": "millstate2",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate2",
         "dataBindings": {
@@ -12060,11 +9872,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40960,
+      "i": 14275,
       "p": {
         "displayName": "millstate3",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate3",
         "dataBindings": {
@@ -12097,11 +9909,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40961,
+      "i": 14276,
       "p": {
         "displayName": "millstate4",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate4",
         "dataBindings": {
@@ -12134,11 +9946,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40962,
+      "i": 14277,
       "p": {
         "displayName": "millstate5",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate5",
         "dataBindings": {
@@ -12171,11 +9983,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40963,
+      "i": 14278,
       "p": {
         "displayName": "millstate6",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate6",
         "dataBindings": {
@@ -12208,11 +10020,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40964,
+      "i": 14279,
       "p": {
         "displayName": "millstate7",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate7",
         "dataBindings": {
@@ -12245,11 +10057,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40965,
+      "i": 14280,
       "p": {
         "displayName": "millstate8",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate8",
         "dataBindings": {
@@ -12282,11 +10094,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40966,
+      "i": 14281,
       "p": {
         "displayName": "millstate9",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate9",
         "dataBindings": {
@@ -12319,11 +10131,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40967,
+      "i": 14282,
       "p": {
         "displayName": "millstate10",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate10",
         "dataBindings": {
@@ -12356,11 +10168,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40968,
+      "i": 14283,
       "p": {
         "displayName": "millstate11",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate11",
         "dataBindings": {
@@ -12393,11 +10205,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40969,
+      "i": 14284,
       "p": {
         "displayName": "millstate12",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate12",
         "dataBindings": {
@@ -12430,11 +10242,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40970,
+      "i": 14285,
       "p": {
         "displayName": "millstate13",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate13",
         "dataBindings": {
@@ -12467,11 +10279,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40971,
+      "i": 14286,
       "p": {
         "displayName": "millstate14",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate14",
         "dataBindings": {
@@ -12504,11 +10316,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40972,
+      "i": 14287,
       "p": {
         "displayName": "millstate15",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate15",
         "dataBindings": {
@@ -12541,11 +10353,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40973,
+      "i": 14288,
       "p": {
         "displayName": "millstate16",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate16",
         "dataBindings": {
@@ -12578,11 +10390,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40974,
+      "i": 14289,
       "p": {
         "displayName": "millstate17",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate17",
         "dataBindings": {
@@ -12615,11 +10427,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40975,
+      "i": 14290,
       "p": {
         "displayName": "millstate18",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate18",
         "dataBindings": {
@@ -12652,11 +10464,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40976,
+      "i": 14291,
       "p": {
         "displayName": "millstate19",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate19",
         "dataBindings": {
@@ -12689,11 +10501,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40977,
+      "i": 14292,
       "p": {
         "displayName": "millstate20",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "millstate20",
         "dataBindings": {
@@ -12726,11 +10538,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 40978,
+      "i": 14293,
       "p": {
         "displayName": "最近十卡",
         "parent": {
-          "__i": 40615
+          "__i": 13980
         },
         "tag": "tenCardNo",
         "image": "ht.drawing.lineChart",
@@ -12746,10 +10558,10 @@
       },
       "a": {
         "seriesModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":40988,\"p\":{\"name\":\"value\"},\"s\":{\"accessType\":\"a\",\"markAreas\":[],\"type\":\"line\",\"smooth\":0.2,\"itemStyle\":{\"visible\":true,\"width\":5,\"height\":5,\"offsetX\":0,\"offsetY\":0,\"borderWidth\":1,\"type\":\"circle\"}}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":14303,\"p\":{\"name\":\"value\"},\"s\":{\"accessType\":\"a\",\"markAreas\":[],\"type\":\"line\",\"smooth\":0.2,\"itemStyle\":{\"visible\":true,\"width\":5,\"height\":5,\"offsetX\":0,\"offsetY\":0,\"borderWidth\":1,\"type\":\"circle\"}}}]}"
         },
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":40989,\"a\":{\"value\":141,\"name\":\"aa\",\"value2\":31,\"value3\":31}},{\"c\":\"ht.Data\",\"i\":40990,\"s\":{\"visible\":true},\"a\":{\"value\":165,\"name\":\"02\",\"value2\":39,\"value3\":57}},{\"c\":\"ht.Data\",\"i\":40991,\"a\":{\"value\":90,\"name\":\"03\",\"value2\":47,\"value3\":50}},{\"c\":\"ht.Data\",\"i\":40992,\"a\":{\"value\":133,\"name\":\"04\",\"value2\":106,\"value3\":4}},{\"c\":\"ht.Data\",\"i\":40993,\"a\":{\"value\":115,\"name\":\"05\",\"value2\":88,\"value3\":93}},{\"c\":\"ht.Data\",\"i\":40994,\"a\":{\"value\":46,\"name\":\"06\",\"value2\":84,\"value3\":11}},{\"c\":\"ht.Data\",\"i\":40995,\"a\":{\"value\":157,\"name\":\"07\",\"value2\":45,\"value3\":92}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":14304,\"a\":{\"value\":141,\"name\":\"aa\",\"value2\":31,\"value3\":31}},{\"c\":\"ht.Data\",\"i\":14305,\"s\":{\"visible\":true},\"a\":{\"value\":165,\"name\":\"02\",\"value2\":39,\"value3\":57}},{\"c\":\"ht.Data\",\"i\":14306,\"a\":{\"value\":90,\"name\":\"03\",\"value2\":47,\"value3\":50}},{\"c\":\"ht.Data\",\"i\":14307,\"a\":{\"value\":133,\"name\":\"04\",\"value2\":106,\"value3\":4}},{\"c\":\"ht.Data\",\"i\":14308,\"a\":{\"value\":115,\"name\":\"05\",\"value2\":88,\"value3\":93}},{\"c\":\"ht.Data\",\"i\":14309,\"a\":{\"value\":46,\"name\":\"06\",\"value2\":84,\"value3\":11}},{\"c\":\"ht.Data\",\"i\":14310,\"a\":{\"value\":157,\"name\":\"07\",\"value2\":45,\"value3\":92}}]}"
         },
         "toolTipOption": {
           "background": "rgba(0,85,204,0.70)",
@@ -12844,9 +10656,32 @@
         ],
         "toolTipTrigger": "axis"
       }
+    },
+    {
+      "c": "ht.Text",
+      "i": 15466,
+      "p": {
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1OPCLS179"
+            }
+          }
+        },
+        "position": {
+          "x": 701.18508,
+          "y": 501.12396
+        },
+        "width": 0.001,
+        "height": 0.001
+      },
+      "s": {
+        "text": "文本",
+        "text.font": "30px sans-serif, Arial"
+      }
     }
   ],
-  "modified": "Sat Aug 22 2026 19:32:09 GMT+0800 (中国标准时间)",
+  "modified": "Fri Aug 28 2026 09:45:30 GMT+0800 (中国标准时间)",
   "contentRect": {
     "x": -60,
     "y": 0,
