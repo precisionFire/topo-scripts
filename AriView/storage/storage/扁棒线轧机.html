@@ -370,20 +370,9 @@
 	
 	console.log(tagCode)
 	
-    if (false) {
-        // 不启用，但保留 以防后续需求变更
-        window.open(
-            'HistoricalDataDialog/DataDialog.html?tag=' + encodeURI(encodeURI(tagCode)) + '&name=' + encodeURI(encodeURI(name)) + '&tagid=' + encodeURI(encodeURI(tagid)),
-            'theDialog',
-            'height=600,width=1200,top=80,toolbar=no,menubar=no, scrollbars=no,resizable=no,location=no, status=no'
-        )
-    } else {
+    {
         // 设计路径
           let url = window.location.origin + '/HistoricalDataDialog/newDataDialog.html?tag=' + encodeURI(encodeURI(tagCode)) + '&name=' + encodeURI(encodeURI(name)) + '&tagid=' + encodeURI(encodeURI(tagid));
-        /* const modal = new window.Modal({ title: name, pageUrl: url, tag: tag })
-        modal.init()
-        modal.registerEvent()
-		*/
 		 const dialogTitle = name || "历史趋势";
         //let tag_ = "NumTag/WeightInFurFlat/扁钢称重/Flat_ Furnace_Weight1"
         // const url = `${window.location.origin}/HistoricalDataDialog/newDataDialog.html?tag=${encodeURI(encodeURI(tag_))}&name=${encodeURI(name)}`;

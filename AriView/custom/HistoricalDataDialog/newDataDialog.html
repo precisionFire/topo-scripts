@@ -1237,7 +1237,7 @@
     chartData = [];
     $.ajaxSettings.async = false;
 
-    let url = 'http://180.10.10.12:9003/api/iot/datahis/getophisdata'
+    let url = 'https://bar.dayesteel.com.cn/api/api/iot/datahis/getophisdata'
 
     /*let data_ = {
       dt: "2025-05-17 15:10:00",
@@ -1289,12 +1289,12 @@
       a || client.connect({
         onSuccess: i,
         cleanSession: !1,
-        useSSL: !1,
+        useSSL: true,
         keepAliveInterval: 30,
         timeout: 10
       })
     }
-    client = new Paho.MQTT.Client("180.10.10.17", 8083, t), n(), setInterval(n, 8e3),
+    client = new Paho.MQTT.Client("bar.dayesteel.com.cn", 443, t), n(), setInterval(n, 8e3),
       client.onConnectionLost = function (t) {
         0 !== t.errorCode && (console.log("连接已断开"), a = !1)
       },
