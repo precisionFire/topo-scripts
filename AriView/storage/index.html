@@ -42,11 +42,12 @@
 <script src='../libs/jquery.min.js'></script>
 <script src='../libs/mqttws31.min.js'></script>
 <script src='../libs/sbind.js'></script>
-<script src='../libs/DialogView.js'></script>
-<script src='../libs/ConflictDialog.js'></script>
-<script type="module" src="../libs/DialogMain.js"></script>
-<script src='../libs/PopupManager.js'></script>
-<script src='../libs/WillInOutPopup.js'></script>
+<script src='../libs/通用组件/弹窗组件/DialogView.js'></script>
+<script src='../libs/通用组件/弹窗组件/ConflictDialog.js'></script>
+<script type="module" src="../libs/通用组件/弹窗组件/DialogMain.js"></script>
+<script src='../libs/通用组件/弹窗组件/PopupManager.js'></script>
+<script src='../libs/HistoricalTrendPopup.js'></script>
+<script src='../libs/通用组件/弹窗组件/WillInOutPopup.js'></script>
 <script src="../Scripts/bootstrap.bundle.min.js"></script>
 <script>
     var dataModel, graphView;
@@ -420,7 +421,7 @@
 				node.setToolTip(bindingConfig.id);
 				node.s('onDoubleClick', function () {
 					//   console.log(`[双击事件触发] 节点: ${node.getTag() || '[无tag]'}，打开 ID: ${bindingConfig.id}`);
-					openHistoricalDialog(bindingConfig, node._toolTip);
+					PopupManager.show('history-trend', { tag: bindingConfig.id, tagid: bindingConfig.id, name: bindingConfig.id });
 				});
 
 				// console.log(`[处理完成✔️] 节点 ${node.getTag() || '[无tag]'} 注册了单一绑定双击事件`);
@@ -508,80 +509,8 @@
 		}
 
 
-   function openHistoricalDialog(tag, name, tagid) {
-    
-	let tagCode;
-	
-	function typeVar (tag) {
-		if (typeof tag === 'object') {
-			let key = Object.keys(tag)[0]
-			return tag[key]
-		}
-		if (typeof tag === 'string') return tag;
-	}
-	
-	if (isValidJSON(tag)) {
-		tagCode = JSON.parse(tag);
-		tagCode = typeVar(tag);
-	}
-	
-	tagCode = typeVar(tag);
-	
-	console.log(tagCode)
-	
-    {
-        // 设计路径
-          let url = window.location.origin + '/static/AriView/custom/HistoricalDataDialog/newDataDialog.html?tag=' + encodeURI(encodeURI(tagCode)) + '&name=' + encodeURI(encodeURI(name)) + '&tagid=' + encodeURI(encodeURI(tagid));
-		console.log(url)
-		 const dialogTitle = name || "历史趋势";
-        //let tag_ = "NumTag/WeightInFurFlat/扁钢称重/Flat_ Furnace_Weight1"
-        // const url = `${window.location.origin}/HistoricalDataDialog/newDataDialog.html?tag=${encodeURI(encodeURI(tag_))}&name=${encodeURI(name)}`;
-        openModalWithIframe(url, dialogTitle);
-
-        function openModalWithIframe(url, title) {
-            // 检查是否已存在模态框，存在则重用
-            if (document.getElementById('myModal')) {
-                document.getElementById('iframe').src = url;
-                document.getElementById('myModalLabel').textContent = title;
-                const modal = new bootstrap.Modal(document.getElementById('myModal'));
-                  
-                modal.show();
-                return;
-            }
-
-            // 创建模态框HTML
-            const modalHTML = `
-          <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-              <div class="modal-content">
-                <div class="modal-header" style="background:#1e90ff; color:#fff; padding: 0.3rem 1rem; border-bottom: none; border-radius: 0.5rem 0.5rem 0 0;">
-                  <h5 class="modal-title" id="myModalLabel" style="color:#fff; font-weight:500; font-size:16px;">${title}</h5>
-                 <!--  <span id="datetime" class="ms-3" style="font-size:16px;">--:--</span> -->
-                 <!-- <button type="button" class="btn btn-sm btn-outline-secondary ms-2" id="fullscreenBtn">
-                    <i class="bi bi-arrows-fullscreen"></i>
-                  </button> -->
-                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="关闭" style="font-size: 1rem;"></button>
-                </div>
-                <div class="modal-body" style="height:600px;padding-top: 0;padding-bottom:0;">
-                  <iframe id="iframe" src="${url}" width="100%" height="100%" frameborder="0"></iframe>
-                </div>
-               <!-- <div id="resizer" style="width: 15px; height: 15px; position: absolute; right: 0; bottom: 0; cursor: se-resize;"></div> -->
-              </div>
-            </div>
-          </div>
-          `;
-
-            // 添加模态框到DOM
-            const container = document.createElement('div');
-            container.innerHTML = modalHTML;
-            document.body.appendChild(container);
-
-            // 显示模态框
-            const modal = new bootstrap.Modal(document.getElementById('myModal'));
-            modal.show();
-        }
-    } 
-}
+   // [2026-09-02] 历史曲线弹窗启动器已抽离至 ../libs/HistoricalTrendPopup.js（PopupManager 类型 history-trend）
+   // 双击点位入口见 trySetDoubleClickHandlerForNode：PopupManager.show('history-trend', {...})
                 dataModel = new ht.DataModel();
                 graphView = new ht.graph.GraphView(dataModel);
                 graphView.addToDOM();
