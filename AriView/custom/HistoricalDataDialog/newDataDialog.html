@@ -1,9 +1,3 @@
-<!--
-    李露龙 主页
-    2023-08-30
-    重构美化：2024
--->
-
 <!DOCTYPE html>
 <html lang="cn">
 
@@ -19,38 +13,43 @@
   <link rel="stylesheet" href="libs/flatpickr/flatpickr.min.css">
   <style>
       body {
-          background-color: #f8f9fa;
-          font-family: 'Microsoft YaHei', sans-serif;
+          background-color: #f0f2f5;
+          font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
           overflow-x: hidden;
           /* 防止水平滚动条 */
       }
 
       .chart-container {
           background-color: #fff;
-          border-radius: 8px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          border: 1px solid #e8e8e8;
+          border-radius: 6px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
           margin-bottom: 15px;
       }
 
+      /* 信息栏：与通用弹窗组件标题栏一致（道奇蓝底白字） */
       .info-bar {
-          background-color: #343a40;
-          color: white;
+          background: #1e90ff;
+          color: #fff;
           padding: 8px 15px;
           border-radius: 6px;
           margin-bottom: 15px;
           font-size: 14px;
+          font-weight: 500;
+          box-shadow: 0 2px 6px rgba(30, 144, 255, 0.3);
       }
 
       .control-panel {
-          background-color: #f1f8ff;
-          border-radius: 8px;
+          background-color: #fff;
+          border: 1px solid #e8e8e8;
+          border-radius: 6px;
           padding: 15px;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
           margin-bottom: 10px;
       }
 
       .btn {
-          border-radius: 5px;
+          border-radius: 4px;
           transition: all 0.2s;
           font-weight: 500;
           display: flex;
@@ -74,50 +73,66 @@
           margin-right: 0;
       }
 
+      /* 查询（主操作）：参考通用弹窗组件主按钮（渐变蓝） */
       .btn-primary {
-          background-color: #0d6efd;
-          border-color: #0d6efd;
+          background: linear-gradient(135deg, #2c7be5, #00b8d4);
+          border-color: transparent;
+          color: #fff;
       }
 
       .btn-primary:hover {
-          background-color: #0b5ed7;
-          border-color: #0a58ca;
+          background: linear-gradient(135deg, #1a6fd0, #00a3bd);
+          border-color: transparent;
+          color: #fff;
       }
 
+      /* 暂停（警示）：参考通用弹窗组件 warn 渐变 */
       .btn-warning {
-          background-color: #ffc107;
-          border-color: #ffc107;
-          color: #000;
+          background: linear-gradient(135deg, #e57320, #f0a030);
+          border-color: transparent;
+          color: #fff;
       }
 
       .btn-warning:hover {
-          background-color: #ffca2c;
-          border-color: #ffc720;
+          background: linear-gradient(135deg, #d0661a, #e0941f);
+          border-color: transparent;
+          color: #fff;
       }
 
+      /* 刷新（成功）：参考通用弹窗组件 success 绿色系 */
       .btn-success {
-          background-color: #198754;
-          border-color: #198754;
+          background: linear-gradient(135deg, #2fa84a, #52c41a);
+          border-color: transparent;
+          color: #fff;
       }
 
       .btn-success:hover {
-          background-color: #157347;
-          border-color: #146c43;
+          background: linear-gradient(135deg, #28913f, #45ad15);
+          border-color: transparent;
+          color: #fff;
       }
 
+      /* 上一/下一周期（次级）：白底蓝字蓝边框，参考通用弹窗组件次按钮 */
       .btn-info {
-          background-color: #0dcaf0;
-          border-color: #0dcaf0;
-          color: #000;
+          background: #fff;
+          border: 1px solid #1e90ff;
+          color: #1e90ff;
       }
 
       .btn-info:hover {
-          background-color: #31d2f2;
-          border-color: #25cff2;
+          background: #e6f4ff;
+          border-color: #1e90ff;
+          color: #1e90ff;
       }
 
       .input-group-text {
           font-weight: 500;
+      }
+
+      /* 覆盖 Bootstrap bg-primary，统一为通用弹窗组件主色 */
+      .input-group-text.bg-primary {
+          background-color: #1e90ff !important;
+          border-color: #1e90ff !important;
       }
 
       .form-control,
@@ -128,8 +143,8 @@
 
       .form-control:focus,
       .form-select:focus {
-          border-color: #86b7fe;
-          box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+          border-color: #1e90ff;
+          box-shadow: 0 0 0 0.25rem rgba(30, 144, 255, 0.25);
       }
 
       /* 适配小屏幕 */
@@ -346,7 +361,6 @@
           padding: 12px;
           border: 1px solid #dee2e6;
           /* max-height: 320px; */
-          top: 120px !important;
       }
 
       /* 日期选择器出现动画 - 始终从上方进入 */
@@ -401,6 +415,32 @@
       /* 移除非顶部位置的样式，现在选择器总是在顶部 */
       #custom-date-picker:not(.top-position)::after {
           display: none;
+      }
+
+      /* 下方显示（空间不足时）：小三角改到顶部，箭头朝上 */
+      #custom-date-picker.below-position {
+          animation: fadeInBottom 0.2s ease-out;
+      }
+
+      #custom-date-picker.below-position::after {
+          bottom: auto;
+          top: -6px;
+          border-right: none;
+          border-bottom: none;
+          border-left: 1px solid #dee2e6;
+          border-top: 1px solid #dee2e6;
+      }
+
+      @keyframes fadeInBottom {
+          from {
+              opacity: 0;
+              transform: translateY(10px);
+          }
+
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
       }
 
       #custom-date-picker .days-grid div {
@@ -578,7 +618,26 @@
           enableTime: true,
           dateFormat: "Y-m-d H:i",
           time_24hr: true,
-          locale: "zh"
+          locale: "zh",
+          position: "above",        // 默认在输入框上方显示
+          disableMobile: true,      // 禁用移动端原生选择器，统一桌面日历
+          onOpen: function (selectedDates, dateStr, instance) {
+            // 打开后校准：改为 fixed 定位并限制在 iframe 视口内，
+            // 避免日历超出视口撑出滚动条
+            const cal = instance.calendarContainer;
+            if (!cal) return;
+            const inputRect = instance.element.getBoundingClientRect();
+            const calH = cal.offsetHeight || 320;
+            const calW = cal.offsetWidth || 280;
+            const vh = window.innerHeight;
+            const vw = window.innerWidth;
+            cal.style.position = 'fixed';
+            let top = inputRect.top - calH - 8;   // 优先输入框上方
+            if (top < 4) top = inputRect.bottom + 8; // 上方放不下 → 下方
+            cal.style.top = Math.min(top, vh - calH - 4) + 'px';
+            cal.style.left = Math.max(4, Math.min(inputRect.left, vw - calW - 4)) + 'px';
+            cal.style.margin = '0';
+          }
         });
 
         // 如果成功初始化 flatpickr，我们仍然要保证在某些环境下（例如 flatpickr 样式缺失）用户可用自定义选择器。
@@ -632,7 +691,8 @@
       // 创建日期选择器容器
       const picker = document.createElement('div');
       picker.id = 'custom-date-picker';
-      picker.style.position = 'absolute';
+      // fixed 相对 iframe 视口定位，不撑开文档、不产生滚动条
+      picker.style.position = 'fixed';
       picker.style.backgroundColor = '#fff';
       picker.style.border = '1px solid #ddd';
       picker.style.borderRadius = '4px';
@@ -693,16 +753,31 @@
       const pickerHeight = pickerRect.height || 200;
       const pickerWidth = pickerRect.width || 280;
 
-      // 定位到时间区间元素的上方（保持原来的 top 放置策略）
-      const topPosition = targetRect.top + window.scrollY - pickerHeight - 10; // 额外10px间距
-      picker.style.top = `${Math.max(10, topPosition)}px`;
+      // 定位：fixed 相对 iframe 视口，不撑开文档、不产生滚动条
+      // 优先显示在输入框上方；上方空间不足时自动改为下方显示
+      const baseTop = targetRect.top;
+      const baseLeft = targetRect.left + (targetRect.width - pickerWidth) / 2;
+
+      let topPosition;
+      if (baseTop - pickerHeight - 10 >= 4) {
+        // 上方有足够空间 → 显示在输入框上方（默认）
+        topPosition = baseTop - pickerHeight - 10;
+        picker.classList.remove('below-position');
+      } else {
+        // 上方空间不足 → 显示在输入框下方
+        topPosition = baseTop + targetRect.height + 10;
+        picker.classList.add('below-position');
+      }
+      // 兜底：不超出 iframe 视口底部
+      topPosition = Math.min(topPosition, window.innerHeight - pickerHeight - 4);
+      picker.style.top = `${Math.max(4, topPosition)}px`;
 
       // 水平居中显示在时间区间输入框上方，同时确保不超出左右边界
       const leftPosition = Math.max(
-        10,
+        4,
         Math.min(
-          document.documentElement.clientWidth - pickerWidth - 10,
-          targetRect.left + window.scrollX + (targetRect.width - pickerWidth) / 2
+          window.innerWidth - pickerWidth - 4,
+          baseLeft
         )
       );
       picker.style.left = `${leftPosition}px`;
@@ -1232,41 +1307,61 @@
   // 获取历史数据
   function getHistoricalData(data) {
     console.log(data)
-    let { protocol, hostname } = window.location;
     $('#loading').show();
     chartData = [];
-    $.ajaxSettings.async = false;
 
-    let url = 'https://bar.dayesteel.com.cn/api/api/iot/datahis/getophisdata'
+    // 真实历史数据接口（内网网关，需 Bearer Token 认证）
+    let url = 'https://bar.dayesteel.com.cn/api/api/iot/datahis/gethisdata'
 
-    /*let data_ = {
-      dt: "2025-05-17 15:10:00",
-      timeLenght: 11,
-      tagCode: "CP_01_01_AI0002"
-    }*/
+    // 与后端示例对齐：dt 使用斜杠格式 yyyy/MM/dd HH:mm
+    var reqData = $.extend({}, data);
+    if (reqData.dt) {
+      reqData.dt = reqData.dt.replace(/-/g, '/');
+    }
 
-    $.get(
-      url,
-      data,
-      function (datas, status) {
-        if (status == "success") {
-          for (const [key, value] of Object.entries(datas.Data)) {
-            console.log(`Key: ${key}, Value: ${value}`);
-            var theDate = new Date(key);
-            var theData = {
-              name: theDate.toString(),
-              value: [
-                [theDate.getFullYear(), theDate.getMonth() + 1, theDate.getDate()].join('/') + " " +
-                [add0(theDate.getHours()), add0(theDate.getMinutes()), add0(theDate.getSeconds())].join(':'),
-                parseFloat(value).toFixed(2)
-              ]
-            };
-            chartData.push(theData);
-          }
-          bindData(data_);
+    // 渲染历史曲线（异步回调复用）
+    function render(datas) {
+      if (datas && datas.Data) {
+        for (const [key, value] of Object.entries(datas.Data)) {
+          console.log(`Key: ${key}, Value: ${value}`);
+          var theDate = new Date(key);
+          var theData = {
+            name: theDate.toString(),
+            value: [
+              [theDate.getFullYear(), theDate.getMonth() + 1, theDate.getDate()].join('/') + " " +
+              [add0(theDate.getHours()), add0(theDate.getMinutes()), add0(theDate.getSeconds())].join(':'),
+              parseFloat(value).toFixed(2)
+            ]
+          };
+          chartData.push(theData);
         }
+        bindData(data);
+      }
+      $('#loading').hide();
+    }
+
+    // 优先调用父画面已集成的 requestGet（自动带 Bearer Token，401 统一处理）
+    var requestGetFn = (window.parent && typeof window.parent.requestGet === 'function')
+      ? window.parent.requestGet.bind(window.parent)
+      : (typeof window.requestGet === 'function' ? window.requestGet : null);
+
+    if (requestGetFn) {
+      // requestGet 为异步（Promise）
+      requestGetFn(url, reqData)
+        .then(render)
+        .catch(function (err) {
+          console.error('历史数据请求失败：', err);
+          $('#loading').hide();
+        });
+    } else {
+      // 兜底：父页面无 requestGet 时退回原生 $.get
+      $.ajaxSettings.async = false;
+      $.get(url, reqData, function (datas, status) {
+        if (status == "success") render(datas);
       });
-    $('#loading').hide();
+      $.ajaxSettings.async = true;
+      $('#loading').hide();
+    }
   }
 
   // 获取当前实时数据

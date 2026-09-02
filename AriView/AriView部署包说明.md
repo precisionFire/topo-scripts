@@ -150,8 +150,9 @@ AriView/
                        └─ iframe 加载 newDataDialog.html
                             ├─ GetQueryString 解析 tag / name / tagid
                             ├─ echarts 初始化折线图（dark 主题）
-                            ├─ 历史数据：$.get https://bar.dayesteel.com.cn/api/api/iot/datahis/getophisdata
-                            │    参数 { dt, timeLenght, tagCode } → bindData 渲染曲线
+                            ├─ 历史数据：父画面 requestGet（带 Bearer Token，401 统一处理）
+                            │    GET https://bar.dayesteel.com.cn/api/api/iot/datahis/gethisdata
+                            │    参数 { dt(斜杠格式), timeLenght, tagCode } → bindData 渲染曲线
                             └─ 实时数据：Paho MQTT 订阅（bar.dayesteel.com.cn:443，useSSL）
                                   → onMessageArrived 实时补点，关页自动退订
 ```
@@ -162,7 +163,7 @@ AriView/
 - **tag 参数容错**：`isValidJSON(tag)` 通过则先 `JSON.parse` 再取首键值；对象直接取首键值；纯字符串直接使用——保证绑定 ID 形态多变仍能解析出点位编码。
 - **模态框全局复用**：`openModalWithIframe` 首次创建 `#myModal` 后**复用同一个模态框**，后续双击只换 iframe 的 `src` 与标题，不会叠加多个弹窗。
 - **数据双通道**：
-  - 历史：同步 `$.get` 请求 `https://bar.dayesteel.com.cn/api/api/iot/datahis/getophisdata`，`tagCode` 即点位 ID，响应 `datas.Data` 键值对 → 折线图。
+  - 历史：`getHistoricalData` 优先调用父画面已集成的 `requestGet`（自动带 `Authorization: Bearer <Admin-Token>`，401 由父画面 `handleUnauthorized` 统一处理，异步 Promise），请求 `https://bar.dayesteel.com.cn/api/api/iot/datahis/gethisdata`；`tagCode` 即点位 ID，`dt` 自动转为斜杠格式 `yyyy/MM/dd HH:mm`（与后端示例一致），响应 `datas.Data` 键值对 → 折线图。父画面无 `requestGet` 时退回原生 `$.get`（无 Token）。
   - 实时：`getRealtimeData` 连接 Paho MQTT（`bar.dayesteel.com.cn:443`，`useSSL: true`）订阅该点位，实时补点；关闭页面自动退订。
 - **操作面板**：查询（`searchData` 先退订再按所选时段查历史）、刷新（结束时间=当前，按时段反推开始时间）、暂停/继续（MQTT 订阅开关）、上一周期/下一周期（`lastData`/`nextData`）、时间段选择（10/30/60/360/720/1440 分钟或自定义）。
 

@@ -1,8 +1,4 @@
-﻿/*
-  李露龙 主页JS
-  20230408
-*/
-var devs;//导航
+﻿var devs;//导航
 
 window.onload = function () {
   //导航、标题控制
