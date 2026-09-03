@@ -1,0 +1,268 @@
+{
+  "modified": "Fri Aug 28 2026 11:09:35 GMT+0800 (中国标准时间)",
+  "dataBindings": [],
+  "width": 155,
+  "height": 47.98147,
+  "comps": [
+    {
+      "type": "image",
+      "name": "assets/Ariimg/青岛特钢图片/辊道2.png",
+      "pixelPerfect": true,
+      "displayName": "辊道2",
+      "rect": [
+        149.12205,
+        0,
+        5.87795,
+        47.98147
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/Ariimg/青岛特钢图片/辊道2.png",
+      "pixelPerfect": true,
+      "displayName": "辊道2",
+      "rect": [
+        119.29764,
+        0,
+        5.87795,
+        47.98147
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/Ariimg/青岛特钢图片/辊道2.png",
+      "pixelPerfect": true,
+      "displayName": "辊道2",
+      "rect": [
+        89.47324,
+        0,
+        5.87795,
+        47.98147
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/Ariimg/青岛特钢图片/辊道2.png",
+      "pixelPerfect": true,
+      "displayName": "辊道2",
+      "rect": [
+        59.64882,
+        0,
+        5.87795,
+        47.98147
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/Ariimg/青岛特钢图片/辊道2.png",
+      "pixelPerfect": true,
+      "displayName": "辊道2",
+      "rect": [
+        29.82441,
+        0,
+        5.87795,
+        47.98147
+      ]
+    },
+    {
+      "type": "image",
+      "name": "assets/Ariimg/青岛特钢图片/辊道2.png",
+      "pixelPerfect": true,
+      "displayName": "辊道2",
+      "rect": [
+        0,
+        0,
+        5.87795,
+        47.98147
+      ]
+    },
+    {
+      "type": "rect",
+      "repeatImage": "assets/Ariimg/青岛特钢图片/金属材质.jpg",
+      "repeatImageStretch": "fill",
+      "borderColor": "#979797",
+      "gradientColor": null,
+      "dashColor": "#2C3E50",
+      "pixelPerfect": true,
+      "rotation": 1.5708,
+      "rect": [
+        92.9397,
+        17.28933,
+        28.60152,
+        24.61478
+      ]
+    },
+    {
+      "type": "rect",
+      "repeatImage": "assets/Ariimg/青岛特钢图片/金属材质.jpg",
+      "repeatImageStretch": "fill",
+      "borderColor": "#979797",
+      "gradientColor": null,
+      "dashColor": "#2C3E50",
+      "pixelPerfect": true,
+      "rotation": 1.5708,
+      "rect": [
+        63.13107,
+        17.28933,
+        28.60152,
+        24.61478
+      ]
+    },
+    {
+      "type": "rect",
+      "repeatImage": "assets/Ariimg/青岛特钢图片/金属材质.jpg",
+      "repeatImageStretch": "fill",
+      "borderColor": "#979797",
+      "gradientColor": null,
+      "dashColor": "#2C3E50",
+      "pixelPerfect": true,
+      "rotation": 1.5708,
+      "rect": [
+        33.32245,
+        17.28933,
+        28.60152,
+        24.61478
+      ]
+    },
+    {
+      "type": "rect",
+      "repeatImage": "assets/Ariimg/青岛特钢图片/金属材质.jpg",
+      "repeatImageStretch": "fill",
+      "borderColor": "#979797",
+      "gradientColor": null,
+      "dashColor": "#2C3E50",
+      "pixelPerfect": true,
+      "rotation": 1.5708,
+      "rect": [
+        3.51382,
+        17.28933,
+        28.60152,
+        24.61478
+      ]
+    },
+    {
+      "type": "rect",
+      "repeatImage": "assets/Ariimg/青岛特钢图片/金属材质.jpg",
+      "repeatImageStretch": "fill",
+      "borderColor": "#979797",
+      "gradientColor": null,
+      "dashColor": "#2C3E50",
+      "pixelPerfect": true,
+      "rotation": 1.5708,
+      "rect": [
+        122.74832,
+        17.28933,
+        28.60152,
+        24.61478
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderColor": "#979797",
+      "dashColor": "#2C3E50",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0.03219,
+        "rgb(48,48,48)",
+        1,
+        "rgba(0,0,0,0.1)"
+      ],
+      "pixelPerfect": true,
+      "rotation": 1.5708,
+      "rect": [
+        76.45828,
+        -60.36033,
+        2.27352,
+        153.60197
+      ]
+    },
+    {
+      "type": "rect",
+      "background": "rgb(61,61,61)",
+      "borderColor": "#979797",
+      "dashColor": "#2C3E50",
+      "gradientPack": [
+        "linear",
+        0,
+        0.5,
+        1,
+        0.5,
+        0,
+        "rgba(0,0,0,0.1)",
+        0.96781,
+        "rgb(48,48,48)"
+      ],
+      "pixelPerfect": true,
+      "rotation": 1.5708,
+      "rect": [
+        76.45828,
+        -34.04027,
+        2.27352,
+        153.60197
+      ]
+    },
+    {
+      "type": "rect",
+      "borderColor": "#979797",
+      "dashColor": "#2C3E50",
+      "gradientPack": [
+        "radial",
+        1,
+        -0.12016,
+        0.5,
+        0,
+        "rgb(0,187,255)",
+        0.27072,
+        "rgb(0,73,163)",
+        0.8854,
+        "rgb(145,215,255)",
+        1,
+        "rgb(5,155,255)",
+        1,
+        "rgb(0,129,235)"
+      ],
+      "pixelPerfect": true,
+      "rotation": 1.5708,
+      "rect": [
+        76.74504,
+        -62.40371,
+        1.7,
+        153.60197
+      ]
+    },
+    {
+      "type": "rect",
+      "borderColor": "#979797",
+      "dashColor": "#2C3E50",
+      "gradientPack": [
+        "radial",
+        1,
+        -0.12016,
+        0.5,
+        0,
+        "rgb(0,187,255)",
+        0.27072,
+        "rgb(0,73,163)",
+        0.8854,
+        "rgb(145,215,255)",
+        1,
+        "rgb(5,155,255)",
+        1,
+        "rgb(0,129,235)"
+      ],
+      "pixelPerfect": true,
+      "rotation": 1.5708,
+      "rect": [
+        76.74504,
+        -31.88341,
+        1.7,
+        153.60197
+      ]
+    }
+  ]
+}
