@@ -9,14 +9,13 @@
   <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="libs/bootstrap-icons/bootstrap-icons.css">
-  <!-- Flatpickr 日期时间选择器 -->
-  <link rel="stylesheet" href="libs/flatpickr/flatpickr.min.css">
   <style>
-      body {
+      html, body {
           background-color: #f0f2f5;
           font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
-          overflow-x: hidden;
-          /* 防止水平滚动条 */
+          overflow: hidden;
+          /* 防止任何滚动条 */
+          height: 100%;
       }
 
       .chart-container {
@@ -351,127 +350,6 @@
           justify-content: end;
       }
 
-      /* 自定义日期选择器样式 */
-      #custom-date-picker {
-          background-color: #fff;
-          border-radius: 8px;
-          box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-          font-family: 'Microsoft YaHei', sans-serif;
-          animation: fadeInTop 0.2s ease-out;
-          padding: 12px;
-          border: 1px solid #dee2e6;
-          /* max-height: 320px; */
-      }
-
-      /* 日期选择器出现动画 - 始终从上方进入 */
-      @keyframes fadeInTop {
-          from {
-              opacity: 0;
-              transform: translateY(-10px);
-          }
-
-          to {
-              opacity: 1;
-              transform: translateY(0);
-          }
-      }
-
-      /* 顶部显示时的样式 */
-      #custom-date-picker.top-position {
-          animation: fadeInTop 0.2s ease-out;
-          margin-bottom: 8px;
-      }
-
-      @keyframes fadeInTop {
-          from {
-              opacity: 0;
-              transform: translateY(-10px);
-          }
-
-          to {
-              opacity: 1;
-              transform: translateY(0);
-          }
-      }
-
-      /* 添加小三角指示箭头 */
-      #custom-date-picker::after {
-          content: '';
-          position: absolute;
-          width: 12px;
-          height: 12px;
-          background: white;
-          transform: rotate(45deg);
-          border-right: 1px solid #dee2e6;
-          border-bottom: 1px solid #dee2e6;
-          z-index: -1;
-          bottom: -6px;
-          left: 50%;
-          /* 居中放置 */
-          margin-left: -6px;
-          /* 向左偏移自身宽度的一半 */
-      }
-
-      /* 移除非顶部位置的样式，现在选择器总是在顶部 */
-      #custom-date-picker:not(.top-position)::after {
-          display: none;
-      }
-
-      /* 下方显示（空间不足时）：小三角改到顶部，箭头朝上 */
-      #custom-date-picker.below-position {
-          animation: fadeInBottom 0.2s ease-out;
-      }
-
-      #custom-date-picker.below-position::after {
-          bottom: auto;
-          top: -6px;
-          border-right: none;
-          border-bottom: none;
-          border-left: 1px solid #dee2e6;
-          border-top: 1px solid #dee2e6;
-      }
-
-      @keyframes fadeInBottom {
-          from {
-              opacity: 0;
-              transform: translateY(10px);
-          }
-
-          to {
-              opacity: 1;
-              transform: translateY(0);
-          }
-      }
-
-      #custom-date-picker .days-grid div {
-          text-align: center;
-          padding: 6px;
-          border-radius: 4px;
-          cursor: pointer;
-          transition: background-color 0.15s ease;
-      }
-
-      #custom-date-picker .days-grid div:hover:not(:empty) {
-          background-color: #e9ecef;
-      }
-
-      #custom-date-picker select {
-          border: 1px solid #ced4da;
-          border-radius: 4px;
-          padding: 4px;
-          background-color: #fff;
-      }
-
-      #custom-date-picker button {
-          transition: all 0.2s;
-      }
-
-      #custom-date-picker .month-year {
-          font-weight: bold;
-          font-size: 16px;
-          padding: 5px 0;
-      }
-
       .align-items-center {
           display: flex;
           justify-content: space-between;
@@ -479,15 +357,151 @@
 
       .flex {
           display: flex;
+          align-items: center;
+          gap: 8px;
       }
 
       .col-lg-5 {
           margin-right: 1rem;
       }
+
+      /* 查询日期 / 快捷选项 输入组：标签独立按钮风格，输入框分离 */
+      .control-group {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+      }
+
+      .control-group .control-label {
+          display: inline-flex;
+          align-items: center;
+          padding: 6px 12px;
+          font-size: 0.875rem;
+          font-weight: 500;
+          color: #fff;
+          background-color: #0d6efd;
+          border: 1px solid #0d6efd;
+          border-radius: 4px;
+          white-space: nowrap;
+          line-height: 1.5;
+      }
+
+      .control-group .control-label.warning {
+          background-color: #ffc107;
+          border-color: #ffc107;
+          color: #000;
+      }
+
+      .control-group .control-label.success {
+          background-color: #198754;
+          border-color: #198754;
+      }
+
+      .control-group .control-label.info {
+          background-color: #0dcaf0;
+          border-color: #0dcaf0;
+          color: #000;
+      }
+
+      .control-group .control-input {
+          padding: 6px 10px;
+          font-size: 0.875rem;
+          border: 1px solid #ced4da;
+          border-radius: 4px;
+          background-color: #fff;
+          line-height: 1.5;
+          min-width: 180px;
+      }
+
+      .control-group .control-input:focus {
+          border-color: #86b7fe;
+          outline: 0;
+          box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+      }
+
+      .control-group .control-select {
+          padding: 6px 28px 6px 10px;
+          font-size: 0.875rem;
+          border: 1px solid #ced4da;
+          border-radius: 4px;
+          background-color: #fff;
+          line-height: 1.5;
+          min-width: 100px;
+          appearance: auto;
+      }
+
+      /* 实时曲线 / 历史趋势 模式切换 Tab（置顶替代标题栏） */
+      .mode-tabs {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0;
+          margin-bottom: 10px;
+          background: #1e90ff;
+          border: none;
+          border-radius: 6px;
+          padding: 6px 6px 6px 10px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .mode-tab-btn {
+          border: none;
+          background: transparent;
+          padding: 7px 24px;
+          font-size: 14px;
+          font-weight: 500;
+          color: rgba(255,255,255,0.85);
+          border-radius: 4px;
+          cursor: pointer;
+          transition: all 0.2s;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          white-space: nowrap;
+      }
+
+      .mode-tab-btn:hover {
+          color: #fff;
+          background: rgba(255,255,255,0.15);
+      }
+
+      .mode-tab-btn.active {
+          background: #fff;
+          color: #1e90ff;
+      }
+
+      /* 内部页关闭按钮（替代外壳标题栏关闭） */
+      .tab-close-btn {
+          background: transparent;
+          border: none;
+          color: #fff;
+          font-size: 20px;
+          line-height: 1;
+          cursor: pointer;
+          padding: 4px 8px;
+          border-radius: 4px;
+          transition: background 0.2s;
+      }
+      .tab-close-btn:hover {
+          background: rgba(255,255,255,0.2);
+      }
   </style>
 </head>
 
 <body>
+<!-- 模式切换 Tab（置顶，替代弹窗标题栏） -->
+<div class="mode-tabs">
+  <div style="display:flex;gap:0;">
+    <button type="button" class="mode-tab-btn active" data-mode="realtime" onclick="switchTab('realtime')">
+      <i class="bi bi-activity"></i> 实时曲线
+    </button>
+    <button type="button" class="mode-tab-btn" data-mode="history" onclick="switchTab('history')">
+      <i class="bi bi-graph-up-arrow"></i> 历史趋势
+    </button>
+  </div>
+  <button type="button" class="tab-close-btn" onclick="closeDialog()" title="关闭">&times;</button>
+</div>
+
 <div class="container-fluid py-3">
   <!-- 信息显示栏 -->
   <div class="info-bar d-flex justify-content-between align-items-center">
@@ -505,27 +519,53 @@
     <div id="main" style="height: 480px;"></div>
   </div>
 
-  <!-- 控制面板 -->
-  <div class="control-panel">
+  <!-- 实时曲线 控制面板：按钮和历史面板 buttons-container 同列对齐 -->
+  <div class="control-panel mode-panel" id="panel-realtime">
+    <div class="row g-2 align-items-center">
+      <div class="flex">
+        <!-- 左侧占位标签（保持和历史面板布局骨架一致，视觉上两面板切换不跳动） -->
+        <div class="col-lg-8">
+          <div class="control-group">
+            <span class="control-label info">实时曲线</span>
+            <span class="text-muted" style="font-size:12px;margin-left:8px;">最近10分钟数据</span>
+          </div>
+        </div>
+      </div>
+      <!-- 操作按钮：和历史面板 buttons-container 同列（col-lg-4）对齐 -->
+      <div class="col-lg-4">
+        <div class="buttons-container">
+          <button type="button" id="btnPauseStart" class="btn btn-warning" onclick="pauseorStartInterval()"
+                  title="暂停/继续">
+            <i class="bi bi-pause-fill"></i> 暂停
+          </button>
+          <button type="button" class="btn btn-success" onclick="refreshData()" title="重置">
+            <i class="bi bi-arrow-clockwise"></i> 重置
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 历史趋势 控制面板 -->
+  <div class="control-panel mode-panel d-none" id="panel-history">
     <div class="row g-2 align-items-center">
       <div class="flex">
         <!-- 时间区间选择 -->
         <div class="col-lg-5">
-          <div class="input-group">
-            <span class="input-group-text bg-primary text-white">查询日期</span>
-            <input type="text" id="date0Time0" class="form-control flatpickr-datetime" placeholder="开始时间"
+          <div class="control-group">
+            <span class="control-label">查询日期</span>
+            <input type="datetime-local" id="date0Time0" class="control-input date-input"
                    onchange="onChange()">
-            <span class="input-group-text" style="display: none">-</span>
-            <input type="text" id="dateTime" class="form-control flatpickr-datetime" placeholder="结束时间"
+            <input type="datetime-local" id="dateTime" class="control-input date-input"
                    onchange="onChange()" style="display: none">
           </div>
         </div>
 
         <!-- 快捷选项 -->
         <div class="col-lg-3">
-          <div class="input-group">
-            <span class="input-group-text bg-primary text-white">快捷选项</span>
-            <select id="during" class="form-select" onchange="onSelect()">
+          <div class="control-group">
+            <span class="control-label info">快捷选项</span>
+            <select id="during" class="control-select" onchange="onSelect()">
               <option value="1">10分钟</option>
               <option value="2">30分钟</option>
               <option value="3">1 小时</option>
@@ -544,13 +584,6 @@
         <div class="buttons-container">
           <button type="button" class="btn btn-primary" onclick="searchData()" title="查询">
             <i class="bi bi-search"></i> 查询
-          </button>
-          <button type="button" id="btnPauseStart" class="btn btn-warning" onclick="pauseorStartInterval()"
-                  title="暂停/继续">
-            <i class="bi bi-stop-btn-fill"></i> 暂停
-          </button>
-          <button type="button" class="btn btn-success" onclick="refreshData()" title="刷新">
-            <i class="bi bi-arrow-clockwise"></i> 刷新
           </button>
           <button type="button" class="btn btn-info" onclick="lastData()" title="上一周期">
             <i class="bi bi-skip-backward-fill"></i>上一周期
@@ -574,8 +607,6 @@
 <!-- 引入必要的JS库 -->
 <script src="libs/jquery.min.js"></script>
 <script src="libs/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="libs/flatpickr/flatpickr.min.js"></script>
-<script src="libs/flatpickr/l10n-zh.js"></script>
 <script src="libs/echarts.min.js"></script>
 <script src="libs/mqttws31.min.js"></script>
 <script>
@@ -608,375 +639,26 @@
     checkIconFont();
 
     // 获取日期时间输入框
-    const dateInputs = document.querySelectorAll('.flatpickr-datetime');
+    const dateInputs = document.querySelectorAll('.date-input');
 
-    // 初始化日期选择器 - 使用自定义实现（保留原逻辑：若flatpickr存在会尝试初始化，但我们保持备用行为健壮）
-    if (typeof flatpickr === 'function') {
-      try {
-        // 尝试初始化 flatpickr（如果目标环境存在且期望使用flatpickr）
-        flatpickr(".flatpickr-datetime", {
-          enableTime: true,
-          dateFormat: "Y-m-d H:i",
-          time_24hr: true,
-          locale: "zh",
-          position: "above",        // 默认在输入框上方显示
-          disableMobile: true,      // 禁用移动端原生选择器，统一桌面日历
-          onOpen: function (selectedDates, dateStr, instance) {
-            // 打开后校准：改为 fixed 定位并限制在 iframe 视口内，
-            // 避免日历超出视口撑出滚动条
-            const cal = instance.calendarContainer;
-            if (!cal) return;
-            const inputRect = instance.element.getBoundingClientRect();
-            const calH = cal.offsetHeight || 320;
-            const calW = cal.offsetWidth || 280;
-            const vh = window.innerHeight;
-            const vw = window.innerWidth;
-            cal.style.position = 'fixed';
-            let top = inputRect.top - calH - 8;   // 优先输入框上方
-            if (top < 4) top = inputRect.bottom + 8; // 上方放不下 → 下方
-            cal.style.top = Math.min(top, vh - calH - 4) + 'px';
-            cal.style.left = Math.max(4, Math.min(inputRect.left, vw - calW - 4)) + 'px';
-            cal.style.margin = '0';
-          }
-        });
+    // 设置初始日期时间（refreshData 会立即覆盖为正确区间，此处仅兜底空值）
+    setDefaultDates();
 
-        // 如果成功初始化 flatpickr，我们仍然要保证在某些环境下（例如 flatpickr 样式缺失）用户可用自定义选择器。
-        // 所以不直接 return；但若你明确只想用自定义，可以在这里强制跳过 flatpickr 初始化（不推荐）。
-      } catch (e) {
-        console.error("初始化flatpickr失败:", e);
-        // 如果初始化失败，使用备用方法设置初始值
-        setDefaultDates();
-      }
-    } else {
-      console.warn("flatpickr未找到，使用备用方法");
-      // 使用备用方法
-      setDefaultDates();
-    }
-
-    // 备用方法：手动添加点击处理和设置初始日期
+    // 初始兜底：若输入框无值则填当前时间
     function setDefaultDates() {
       dateInputs.forEach(input => {
-        // 设置为只读，防止手动输入
-        input.readOnly = true;
-
-        // 设置初始日期时间（当前时间）
-        const now = new Date();
-        const formattedDate = `${now.getFullYear()}-${add0(now.getMonth() + 1)}-${add0(now.getDate())} ${add0(now.getHours())}:${add0(now.getMinutes())}`;
-        input.value = formattedDate;
-
-        // 移除旧的点击处理（防止重复绑定）；由于匿名函数无法直接移除，这里先标记然后替换事件。
-        // 使用一个命名函数引用，便于后续移除或替换。
-        function inputClickHandler(e) {
-          // 阻止冒泡，避免立即触发 document 的全局点击关闭处理
-          e.stopPropagation();
-          // 打开自定义日期选择器
-          showCustomDatePicker(input);
-        }
-
-        // 先移除（若曾绑定），再绑定
-        input.removeEventListener('click', inputClickHandler);
-        input.addEventListener('click', inputClickHandler);
-      });
-    }
-
-    // 自定义日期选择UI
-    function showCustomDatePicker(inputElement) {
-      // 检查是否已有日期选择器，若存在先移除
-      let existing = document.getElementById('custom-date-picker');
-      if (existing) {
-        // 如果当前已经显示的是为同一个输入框的 picker，先移除旧的（避免重复）
-        try { document.body.removeChild(existing); } catch (err) { /* ignore */ }
-      }
-
-      // 创建日期选择器容器
-      const picker = document.createElement('div');
-      picker.id = 'custom-date-picker';
-      // fixed 相对 iframe 视口定位，不撑开文档、不产生滚动条
-      picker.style.position = 'fixed';
-      picker.style.backgroundColor = '#fff';
-      picker.style.border = '1px solid #ddd';
-      picker.style.borderRadius = '4px';
-      picker.style.padding = '10px';
-      picker.style.boxShadow = '0 0 10px rgba(0,0,0,0.2)';
-      picker.style.zIndex = '9999';
-      picker.style.width = '280px'; // 微调宽度
-      picker.classList.add('top-position');
-
-      // 获取当前日期或输入框中的日期（解析容错）
-      let currentDate;
-      try {
-        currentDate = inputElement.value ? new Date(inputElement.value.replace(/-/g, '/')) : new Date();
-        if (isNaN(currentDate.getTime())) currentDate = new Date();
-      } catch (err) {
-        currentDate = new Date();
-      }
-
-      // 创建日期选择器内容
-      let datePickerHTML = `
-          <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-            <button class="btn btn-sm btn-outline-secondary prev-month" type="button">&lt;</button>
-            <div style="font-weight:bold;" class="month-year">${currentDate.getFullYear()}年${currentDate.getMonth() + 1}月</div>
-            <button class="btn btn-sm btn-outline-secondary next-month" type="button">&gt;</button>
-          </div>
-          <div style="display:grid; grid-template-columns:repeat(7, 1fr); text-align:center; margin-bottom:5px; font-weight:500;">
-            <div>日</div><div>一</div><div>二</div><div>三</div><div>四</div><div>五</div><div>六</div>
-          </div>
-          <div class="days-grid" style="display:grid; grid-template-columns:repeat(7, 1fr); gap:2px;"></div>
-          <div style="margin-top:10px; display:flex; justify-content:center; align-items:center;">
-            <span style="margin-right:5px;">时间:</span>
-            <select class="hour-select form-select form-select-sm" style="width:70px; margin-right:5px;"></select>
-            <span>:</span>
-            <select class="minute-select form-select form-select-sm" style="width:70px; margin-left:5px;"></select>
-          </div>
-          <div style="margin-top:10px; display:flex; justify-content:flex-end;">
-            <button class="btn btn-sm btn-outline-secondary today-btn" type="button" style="margin-right:5px;">今天</button>
-            <button class="btn btn-sm btn-primary done-btn" type="button">确定</button>
-          </div>
-        `;
-
-      picker.innerHTML = datePickerHTML;
-      document.body.appendChild(picker);
-
-      // 在 DOM 插入后再读取尺寸和定位，避免高度为 0 的情况
-      const timeRangeLabel = Array.from(document.querySelectorAll('.input-group-text')).find(el =>
-        el.textContent.includes('时间区间'));
-      let timeRangeContainer;
-      if (timeRangeLabel) {
-        timeRangeContainer = timeRangeLabel.closest('.input-group');
-      } else {
-        timeRangeContainer = document.querySelector('.col-lg-5 .input-group');
-      }
-      let targetRect = timeRangeContainer ? timeRangeContainer.getBoundingClientRect() : inputElement.getBoundingClientRect();
-
-      // 读取 picker 的实际尺寸（此时已在 DOM）
-      const pickerRect = picker.getBoundingClientRect();
-      const pickerHeight = pickerRect.height || 200;
-      const pickerWidth = pickerRect.width || 280;
-
-      // 定位：fixed 相对 iframe 视口，不撑开文档、不产生滚动条
-      // 优先显示在输入框上方；上方空间不足时自动改为下方显示
-      const baseTop = targetRect.top;
-      const baseLeft = targetRect.left + (targetRect.width - pickerWidth) / 2;
-
-      let topPosition;
-      if (baseTop - pickerHeight - 10 >= 4) {
-        // 上方有足够空间 → 显示在输入框上方（默认）
-        topPosition = baseTop - pickerHeight - 10;
-        picker.classList.remove('below-position');
-      } else {
-        // 上方空间不足 → 显示在输入框下方
-        topPosition = baseTop + targetRect.height + 10;
-        picker.classList.add('below-position');
-      }
-      // 兜底：不超出 iframe 视口底部
-      topPosition = Math.min(topPosition, window.innerHeight - pickerHeight - 4);
-      picker.style.top = `${Math.max(4, topPosition)}px`;
-
-      // 水平居中显示在时间区间输入框上方，同时确保不超出左右边界
-      const leftPosition = Math.max(
-        4,
-        Math.min(
-          window.innerWidth - pickerWidth - 4,
-          baseLeft
-        )
-      );
-      picker.style.left = `${leftPosition}px`;
-
-      // 渲染日历
-      renderCalendar(currentDate);
-
-      // 填充小时选择器
-      const hourSelect = picker.querySelector('.hour-select');
-      hourSelect.innerHTML = '';
-      for (let h = 0; h < 24; h++) {
-        const option = document.createElement('option');
-        option.value = h;
-        option.textContent = h < 10 ? `0${h}` : h;
-        if (h === currentDate.getHours()) option.selected = true;
-        hourSelect.appendChild(option);
-      }
-
-      // 填充分钟选择器（保留原来每5分钟步进）
-      const minuteSelect = picker.querySelector('.minute-select');
-      minuteSelect.innerHTML = '';
-      for (let m = 0; m < 60; m += 5) {
-        const option = document.createElement('option');
-        option.value = m;
-        option.textContent = m < 10 ? `0${m}` : m;
-        if (m === Math.floor(currentDate.getMinutes() / 5) * 5) option.selected = true;
-        minuteSelect.appendChild(option);
-      }
-
-      // 上一月按钮点击事件
-      picker.querySelector('.prev-month').addEventListener('click', function (e) {
-        e.stopPropagation();
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar(currentDate);
-      });
-
-      // 下一月按钮点击事件
-      picker.querySelector('.next-month').addEventListener('click', function (e) {
-        e.stopPropagation();
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar(currentDate);
-      });
-
-      // 今天按钮点击事件
-      picker.querySelector('.today-btn').addEventListener('click', function (e) {
-        e.stopPropagation();
-        currentDate = new Date();
-        hourSelect.value = currentDate.getHours();
-        minuteSelect.value = Math.floor(currentDate.getMinutes() / 5) * 5;
-        renderCalendar(currentDate);
-      });
-
-      // 确定按钮点击事件
-      picker.querySelector('.done-btn').addEventListener('click', function (e) {
-        e.stopPropagation();
-        // 更新日期
-        currentDate.setHours(parseInt(hourSelect.value));
-        currentDate.setMinutes(parseInt(minuteSelect.value));
-
-        // 格式化日期并设置到输入框
-        const year = currentDate.getFullYear();
-        const month = add0(currentDate.getMonth() + 1);
-        const day = add0(currentDate.getDate());
-        const hour = add0(currentDate.getHours());
-        const minute = add0(currentDate.getMinutes());
-
-        inputElement.value = `${year}-${month}-${day} ${hour}:${minute}`;
-
-        // 触发 change 事件（兼容内联 onchange）
-        const event = new Event('change', { bubbles: true });
-        inputElement.dispatchEvent(event);
-        // 兼容调用内联的 onchange 函数
-        if (typeof inputElement.onchange === 'function') {
-          try { inputElement.onchange(); } catch (err) { /* ignore */ }
-        }
-        // 也尝试调用全局 onChange 函数（文件中用 this 的地方）
-        if (typeof onChange === 'function') {
-          try { onChange(); } catch (err) { /* ignore */ }
-        }
-
-        // 关闭日期选择器（安全移除）
-        if (document.body.contains(picker)) {
-          try { document.body.removeChild(picker); } catch (err) { /* ignore */ }
+        if (!input.value) {
+          input.value = fmtInputDT(new Date());
         }
       });
-
-      // 为 picker 内部阻止点击冒泡，避免触发 document 外部点击关闭
-      picker.addEventListener('click', function (e) {
-        e.stopPropagation();
-      });
-
-      // 点击其他地方关闭日期选择器：延迟绑定以避免打开时立即关闭
-      setTimeout(() => {
-        function closePicker(e) {
-          if (e.target !== inputElement && !picker.contains(e.target)) {
-            if (document.body.contains(picker)) {
-              try { document.body.removeChild(picker); } catch (err) { /* ignore */ }
-            }
-            document.removeEventListener('click', closePicker);
-          }
-        }
-        document.addEventListener('click', closePicker);
-      }, 0);
-
-      // 渲染日历函数（内嵌）
-      function renderCalendar(date) {
-        // 更新月份年份显示
-        picker.querySelector('.month-year').textContent = `${date.getFullYear()}年${date.getMonth() + 1}月`;
-
-        // 获取当月第一天是星期几（周日 = 0）
-        const firstDay = new Date(date.getFullYear(), date.getMonth(), 1).getDay();
-
-        // 获取当月有多少天
-        const daysInMonth = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
-
-        // 清空日历
-        const daysGrid = picker.querySelector('.days-grid');
-        daysGrid.innerHTML = '';
-
-        // 添加空白格子
-        for (let i = 0; i < firstDay; i++) {
-          const emptyCell = document.createElement('div');
-          emptyCell.style.textAlign = 'center';
-          emptyCell.style.padding = '5px';
-          daysGrid.appendChild(emptyCell);
-        }
-
-        // 今日日期
-        const today = new Date();
-        const isCurrentMonth = today.getMonth() === date.getMonth() && today.getFullYear() === date.getFullYear();
-
-        // 添加日期格子
-        for (let day = 1; day <= daysInMonth; day++) {
-          const dayCell = document.createElement('div');
-          dayCell.textContent = day;
-          dayCell.style.textAlign = 'center';
-          dayCell.style.padding = '5px';
-          dayCell.style.cursor = 'pointer';
-          dayCell.style.borderRadius = '4px';
-
-          // 高亮当前选中的日期
-          if (day === date.getDate()) {
-            dayCell.style.backgroundColor = '#0d6efd';
-            dayCell.style.color = 'white';
-          } else {
-            dayCell.style.backgroundColor = '';
-            dayCell.style.color = '';
-          }
-
-          // 突出显示今天（如果不是选中日期）
-          if (isCurrentMonth && day === today.getDate() && day !== date.getDate()) {
-            dayCell.style.border = '1px solid #0d6efd';
-            dayCell.style.fontWeight = 'bold';
-          }
-
-          // 日期点击事件
-          dayCell.addEventListener('click', function (e) {
-            e.stopPropagation();
-            // 更新当前日期（保留时间）
-            const prevHours = date.getHours();
-            const prevMinutes = date.getMinutes();
-            date.setDate(day);
-            date.setHours(prevHours);
-            date.setMinutes(prevMinutes);
-
-            // 更新时间下拉框选择匹配当前日期时间（保持原来的时分）
-            if (picker.querySelector('.hour-select')) {
-              picker.querySelector('.hour-select').value = date.getHours();
-            }
-            if (picker.querySelector('.minute-select')) {
-              const m = Math.floor(date.getMinutes() / 5) * 5;
-              picker.querySelector('.minute-select').value = m;
-            }
-
-            // 重新渲染日历（更新高亮）
-            renderCalendar(date);
-          });
-
-          // 鼠标悬停效果
-          dayCell.addEventListener('mouseover', function () {
-            if (day !== date.getDate()) {
-              dayCell.style.backgroundColor = '#f0f0f0';
-            }
-          });
-
-          dayCell.addEventListener('mouseout', function () {
-            if (day !== date.getDate()) {
-              dayCell.style.backgroundColor = '';
-            }
-          });
-
-          daysGrid.appendChild(dayCell);
-        }
-      }
     }
 
     // 初始化图表大小和数据
     resizeShow();
     refreshData();
+
+    // 初始状态强制切换到实时面板（兜底：防止 Bootstrap d-none 未生效导致双面板同时显示）
+    switchTab('realtime');
   });
 
   // 保留原有的通道通信逻辑
@@ -991,7 +673,6 @@
   var name = GetQueryString("name");
   var tagid = GetQueryString("tagid");
 
-  console.error(tag)
   var _ListSubscribe = {};
   _ListSubscribe[tag] = "";
 
@@ -1004,9 +685,9 @@
   }
   // document.getElementById('tagDesc').innerHTML = decodeURI(tagid) : '';
 
-  // 图表初始化
+  // 图表初始化（浅色主题：与弹窗白底卡片风格统一，勿改回 dark）
   var chartDom = document.getElementById('main');
-  var myChart = echarts.init(chartDom, 'dark');
+  var myChart = echarts.init(chartDom);
   var option;
 
   function randomData() {
@@ -1022,6 +703,10 @@
   }
   let chartData = [];
   let now = new Date();
+  // 当前激活模式：realtime（实时曲线）/ history（历史趋势）
+  var currentMode = 'realtime';
+  // 实时数据独立缓冲：历史模式下实时订阅不中断、数据后台累积，切回实时时无缝衔接
+  var liveData = [];
 
   // 配置图表选项
   option = {
@@ -1059,22 +744,34 @@
     },
     xAxis: {
       type: 'time',
-      splitLine: {
-        show: true
-      },
       axisLabel: {
         show: true,
         interval: 1,
+        color: '#6c757d',
         formatter: (value, index) => {
           return new Date(value).toLocaleTimeString() + "\n" + new Date(value).toLocaleDateString()
         }
+      },
+      axisLine: {
+        lineStyle: { color: '#d9dee5' }
+      },
+      splitLine: {
+        show: true,
+        lineStyle: { color: '#eef1f5' }
       }
     },
     yAxis: {
       type: 'value',
       scale: true,
+      axisLabel: {
+        color: '#6c757d'
+      },
+      axisLine: {
+        lineStyle: { color: '#d9dee5' }
+      },
       splitLine: {
-        show: true
+        show: true,
+        lineStyle: { color: '#eef1f5' }
       }
     },
     series: [
@@ -1086,7 +783,23 @@
         lineStyle: {
           width: 2,
           opacity: 1,
-          color: '#0d6efd'
+          color: '#1e90ff'
+        },
+        itemStyle: {
+          color: '#1e90ff'
+        },
+        areaStyle: {
+          color: {
+            type: 'linear',
+            x: 0,
+            y: 0,
+            x2: 0,
+            y2: 1,
+            colorStops: [
+              { offset: 0, color: 'rgba(30, 144, 255, 0.18)' },
+              { offset: 1, color: 'rgba(30, 144, 255, 0)' }
+            ]
+          }
         },
         markPoint: {
           data: [
@@ -1111,7 +824,51 @@
     }
   };
 
-  // 刷新数据函数
+  // iframe 内通知父层关闭弹窗（关闭按钮位于置顶 mode-tabs 右侧）
+  function closeDialog() {
+    try {
+      if (window.parent && typeof window.parent.PopupManager !== 'undefined') {
+        window.parent.PopupManager.close('history-trend');
+      }
+    } catch (e) {
+      // 跨域或父层未就绪时静默忽略
+    }
+  }
+
+  // 模式切换：实时曲线 / 历史趋势（实时订阅常驻，两种模式间切换不中断实时链路）
+  function switchTab(mode) {
+    document.querySelectorAll('.mode-tab-btn').forEach(function (btn) {
+      btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
+    });
+    // 同时操作 classList 和 style.display，防止 Bootstrap 未加载或缓存导致 d-none 失效
+    var panelRealtime = document.getElementById('panel-realtime');
+    var panelHistory  = document.getElementById('panel-history');
+    if (panelRealtime) {
+      panelRealtime.classList.toggle('d-none', mode !== 'realtime');
+      panelRealtime.style.display = mode === 'realtime' ? '' : 'none';
+    }
+    if (panelHistory) {
+      panelHistory.classList.toggle('d-none', mode !== 'history');
+      panelHistory.style.display = mode === 'history' ? '' : 'none';
+    }
+
+    if (mode === 'realtime') {
+      currentMode = 'realtime';
+      // 把历史期间后台累积的实时点并入当前曲线，曲线保持连贯不中断
+      now = new Date();
+      var timeLenght = REALTIME_WINDOW_MINUTES;
+      chartData = liveData.slice();
+      bindData({ timeLenght: timeLenght });
+      refreshData();
+    } else {
+      // 历史趋势：实时订阅保持不中断（数据在后台继续累积），画面展示历史查询结果
+      currentMode = 'history';
+      searchData();
+    }
+    resizeShow();
+  }
+
+  // 刷新数据函数（实时曲线）
   function refreshData() {
     $("#btnPauseStart").show();
     var btn = document.getElementById("btnPauseStart");
@@ -1122,34 +879,32 @@
     btn.classList.add('btn-warning');
 
     isStart = true;
+    userPaused = false;
 
-    var timeLength = getTimeLength(document.getElementById("during").value);
-    var timeTemp = new Date();
+    // 实时窗口固定（实时曲线无需选择时间范围）
+    var timeLength = REALTIME_WINDOW_MINUTES;
+    var endDate = new Date();
 
-    // 设置结束时间为当前时间
-    var endDateStr = timeTemp.getFullYear() + "-" + add0(timeTemp.getMonth() + 1) + "-" + add0(timeTemp.getDate()) + " " + add0(timeTemp.getHours()) + ":" + add0(timeTemp.getMinutes());
+    // 结束时间 = 当前时间，开始时间 = 当前时间 - 时长，同步更新日期输入框
+    document.querySelector("#dateTime").value = fmtInputDT(endDate);
+    endDate.setMinutes(endDate.getMinutes() - timeLength);
+    document.querySelector("#date0Time0").value = fmtInputDT(endDate);
 
-    // 计算开始时间
-    timeTemp.setMinutes(timeTemp.getMinutes() - timeLength);
-    var startDateStr = timeTemp.getFullYear() + "-" + add0(timeTemp.getMonth() + 1) + "-" + add0(timeTemp.getDate()) + " " + add0(timeTemp.getHours()) + ":" + add0(timeTemp.getMinutes());
-
-    // 更新日期选择器
-    document.querySelector("#dateTime").value = endDateStr;
-    document.querySelector("#date0Time0").value = startDateStr;
-
-    // 获取实时数据
+    // 获取实时数据（连接只建立一次，重复调用不产生重复连接/重复订阅）
     getRealtimeData();
+
+    // 此前若被手动暂停，刷新即恢复订阅（切回实时 Tab 也走这里）
+    if (client && typeof client.isConnected === 'function' && client.isConnected()) {
+      for (var name in _ListSubscribe) client.subscribe(name);
+    }
   }
 
-  // 推送新数据
+  // 推送新数据（实时模式渲染曲线；历史模式下订阅保持、数据后台累积，不打断历史查询展示）
   function pushNewData(value) {
-    $('#loading').show();
-    var timeLenght = getTimeLength(document.getElementById("during").value);
+    var timeLenght = REALTIME_WINDOW_MINUTES;
 
-    // 动态赋值结束时间
+    // 推送时刻
     now = new Date();
-    var endDateStr = now.getFullYear() + "-" + add0(now.getMonth() + 1) + "-" + add0(now.getDate()) + " " + add0(now.getHours()) + ":" + add0(now.getMinutes());
-    document.querySelector("#dateTime").value = endDateStr;
 
     // 新值
     var theData = {
@@ -1159,12 +914,29 @@
         parseFloat(value).toFixed(2)
       ]
     };
+
+    // 实时数据始终累积到独立缓冲，并裁剪到当前实时时间窗口，防止长时间后台运行内存膨胀
+    liveData.push(theData);
+    var windowStart = new Date(now.getTime() - timeLenght * 60000);
+    while (liveData.length && new Date(liveData[0].value[0]) < windowStart) {
+      liveData.shift();
+    }
+
+    // 历史趋势模式：不渲染实时点、不干扰日期输入框，仅顶部数值持续刷新（证明实时链路仍在运行）
+    if (currentMode !== 'realtime') {
+      var tagVal = document.getElementById('tagValue');
+      if (tagVal) tagVal.innerHTML = theData.value[1];
+      return;
+    }
+
+    $('#loading').show();
+    // 动态赋值结束时间
+    document.querySelector("#dateTime").value = fmtInputDT(now);
     chartData.push(theData);
 
     // 动态赋值开始时间
     now.setMinutes(now.getMinutes() - timeLenght);
-    var startDateStr = now.getFullYear() + "-" + add0(now.getMonth() + 1) + "-" + add0(now.getDate()) + " " + add0(now.getHours()) + ":" + add0(now.getMinutes());
-    document.querySelector("#date0Time0").value = startDateStr;
+    document.querySelector("#date0Time0").value = fmtInputDT(now);
 
     bindData({ timeLenght: timeLenght });
     $('#loading').hide();
@@ -1220,10 +992,9 @@
     }
 
     // 确保控制面板不超出视窗
-    const controlPanel = document.querySelector('.control-panel');
     const chartContainer = document.getElementById('main');
 
-    if (controlPanel && chartContainer) {
+    if (chartContainer) {
       const windowHeight = window.innerHeight;
       const windowWidth = window.innerWidth;
 
@@ -1241,8 +1012,17 @@
       // 检查控制面板是否会导致滚动条
       const infoBar = document.querySelector('.info-bar');
       const infoBarHeight = infoBar ? infoBar.offsetHeight : 0;
-      const controlPanelHeight = controlPanel.offsetHeight;
-      const availableHeight = windowHeight - infoBarHeight - controlPanelHeight - 40; // 40px留作边距
+      // 模式 Tab 高度
+      const tabsEl = document.querySelector('.mode-tabs');
+      const tabsHeight = tabsEl ? tabsEl.offsetHeight : 0;
+      // 当前可见模式面板高度（实时/历史二选一）
+      let controlPanelHeight = 0;
+      document.querySelectorAll('.mode-panel').forEach(function (p) {
+        if (!p.classList.contains('d-none')) {
+          controlPanelHeight = p.offsetHeight;
+        }
+      });
+      const availableHeight = windowHeight - infoBarHeight - tabsHeight - controlPanelHeight - 40; // 40px留作边距
 
       // 确保图表高度不超过可用空间
       chartHeight = Math.min(chartHeight, availableHeight);
@@ -1272,12 +1052,14 @@
 
   // 暂停/开始按钮
   var isStart = true;
+  // 实时曲线固定时间窗口（分钟）：实时无需查询时间范围，窗口固定为最近 10 分钟
+  var REALTIME_WINDOW_MINUTES = 10;
   function pauseorStartInterval() {
     if (isStart) {
-      console.error('停止')
-      // 停止订阅
+      userPaused = true;
+      // 停止订阅（实时连接保持，随时可恢复）
       for (var name in _ListSubscribe) {
-        client.unsubscribe(name);
+        if (client) client.unsubscribe(name);
       }
       var btn = document.getElementById("btnPauseStart");
       btn.innerHTML = '<i class="bi bi-play-fill"></i> 继续';
@@ -1286,10 +1068,10 @@
       btn.title = "继续";
       isStart = false;
     } else {
-      console.error('开始')
+      userPaused = false;
       // 开始订阅
       for (var name in _ListSubscribe) {
-        client.subscribe(name);
+        if (client) client.subscribe(name);
       }
       var btn = document.getElementById("btnPauseStart");
       btn.innerHTML = '<i class="bi bi-pause-fill"></i> 暂停';
@@ -1360,16 +1142,25 @@
     }
   }
 
+  // 实时连接只建立一次：switchTab/refreshData 重复触发不产生重复连接、重复订阅
+  var mqttClientStarted = false;
+  // 用户手动暂停标记：断线自动重连时尊重暂停状态，不擅自恢复订阅
+  var userPaused = false;
+
   // 获取当前实时数据
   function getRealtimeData() {
+    if (mqttClientStarted) {
+      return; // 连接断开时由内部 8s 心跳自动重连，无需重建
+    }
+    mqttClientStarted = true;
+
     var t = "testmq" + getRandomString(5),
-      a = !1,
-      e = !1;
+      a = !1;
 
     function i() {
-      if (a = !0, console.log("连接服务器成功"), !e) {
+      if (a = !0, console.log("连接服务器成功"), !userPaused) {
+        // 每次连接成功都重新订阅（Paho 同主题重复 subscribe 幂等），断线重连后自动恢复
         for (var t in _ListSubscribe) client.subscribe(t);
-        e = !0
       }
       window.onbeforeunload = function () {
         for (var t in _ListSubscribe) client.unsubscribe(t)
@@ -1390,7 +1181,6 @@
         0 !== t.errorCode && (console.log("连接已断开"), a = !1)
       },
       client.onMessageArrived = function (t) {
-        console.log(t)
         try {
           var a = t.destinationName;
           a in _ListSubscribe && (_ListSubscribe[a] = t.payloadString)
@@ -1413,84 +1203,68 @@
     return e
   }
 
-  // 查询按钮
+  // 查询按钮（实时订阅保持常驻不中断，实时数据在 pushNewData 内转入后台缓冲）
   function searchData() {
     $("#btnPauseStart").hide();
-    // 先停止订阅
-    for (var name in _ListSubscribe) {
-      client.unsubscribe(name);
-    }
 
-    // 获取日期时间
+    // 获取日期时间（datetime-local 的 value 为 T 分隔）
     var dateTime = document.querySelector("#dateTime").value;
     var date0Time0 = document.querySelector("#date0Time0").value;
-
 
     // 计算时间长度
     var timeLength = getTimeLength(document.getElementById("during").value);
 
     // 如果是自定义时间段，计算时间差
     if (document.getElementById("during").value == "0") {
-      var beginTime = new Date(date0Time0);
-      var endTime = new Date(dateTime);
+      var beginTime = parseDT(date0Time0);
+      var endTime = parseDT(dateTime);
       timeLength = (Number(endTime.getTime()) - Number(beginTime.getTime())) / 1000 / 60; // 相差分钟数
     }
 
-    var data = { dt: dateTime, timeLenght: timeLength, tagCode: Object.keys(_ListSubscribe)[0] };
+    // 接口 dt 参数使用空格分隔格式
+    var data = { dt: dateTime.replace('T', ' '), timeLenght: timeLength, tagCode: Object.keys(_ListSubscribe)[0] };
     getHistoricalData(data);
   }
 
   // 上一周期
   function lastData() {
     $("#btnPauseStart").hide();
-    // 先停止订阅
-    for (var name in _ListSubscribe) {
-      client.unsubscribe(name);
-    }
 
     var dateTime = document.querySelector("#dateTime").value;
     var timeLength = getTimeLength(document.getElementById("during").value);
 
     // 计算上一周期的结束时间
-    var endDate = new Date(dateTime);
+    var endDate = parseDT(dateTime);
     endDate.setMinutes(endDate.getMinutes() - timeLength);
-    var newEndDateStr = endDate.getFullYear() + "-" + add0(endDate.getMonth() + 1) + "-" + add0(endDate.getDate()) + " " + add0(endDate.getHours()) + ":" + add0(endDate.getMinutes());
-    document.querySelector("#dateTime").value = newEndDateStr;
+    document.querySelector("#dateTime").value = fmtInputDT(endDate);
 
     // 计算上一周期的开始时间
     var startDate = new Date(endDate);
     startDate.setMinutes(startDate.getMinutes() - timeLength);
-    var newStartDateStr = startDate.getFullYear() + "-" + add0(startDate.getMonth() + 1) + "-" + add0(startDate.getDate()) + " " + add0(startDate.getHours()) + ":" + add0(startDate.getMinutes());
-    document.querySelector("#date0Time0").value = newStartDateStr;
+    document.querySelector("#date0Time0").value = fmtInputDT(startDate);
 
-    var data = { dt: newEndDateStr, timeLenght: timeLength, tagCode: Object.keys(_ListSubscribe)[0] };
+    var data = { dt: fmtDT(endDate), timeLenght: timeLength, tagCode: Object.keys(_ListSubscribe)[0] };
     getHistoricalData(data);
   }
 
   // 下一周期
   function nextData() {
     $("#btnPauseStart").hide();
-    // 先停止订阅
-    for (var name in _ListSubscribe) {
-      client.unsubscribe(name);
-    }
 
     var dateTime = document.querySelector("#dateTime").value;
     var timeLength = getTimeLength(document.getElementById("during").value);
 
     // 计算下一周期的结束时间
-    var endDate = new Date(dateTime);
+    var endDate = parseDT(dateTime);
     endDate.setMinutes(endDate.getMinutes() + timeLength);
-    var newEndDateStr = endDate.getFullYear() + "-" + add0(endDate.getMonth() + 1) + "-" + add0(endDate.getDate()) + " " + add0(endDate.getHours()) + ":" + add0(endDate.getMinutes());
-    document.querySelector("#dateTime").value = newEndDateStr;
+    document.querySelector("#dateTime").value = fmtInputDT(endDate);
 
     // 计算下一周期的开始时间
     var startDate = new Date(endDate);
     startDate.setMinutes(startDate.getMinutes() - timeLength);
-    var newStartDateStr = startDate.getFullYear() + "-" + add0(startDate.getMonth() + 1) + "-" + add0(startDate.getDate()) + " " + add0(startDate.getHours()) + ":" + add0(startDate.getMinutes());
-    document.querySelector("#date0Time0").value = newStartDateStr;
+    document.querySelector("#date0Time0").value = fmtInputDT(startDate);
 
-    var data = { dt: newEndDateStr, timeLenght: timeLength, tagCode: Object.keys(_ListSubscribe)[0] };
+    var data = { dt: fmtDT(endDate), timeLenght: timeLength, tagCode: Object.keys(_ListSubscribe)[0] };
     getHistoricalData(data);
   }
 
@@ -1508,11 +1282,10 @@
     var timeLength = getTimeLength(document.getElementById("during").value);
 
     // 计算开始时间
-    var endDate = new Date(dateTime);
+    var endDate = parseDT(dateTime);
     var startDate = new Date(endDate);
     startDate.setMinutes(startDate.getMinutes() - timeLength);
-    var startDateStr = startDate.getFullYear() + "-" + add0(startDate.getMonth() + 1) + "-" + add0(startDate.getDate()) + " " + add0(startDate.getHours()) + ":" + add0(startDate.getMinutes());
-    document.querySelector("#date0Time0").value = startDateStr;
+    document.querySelector("#date0Time0").value = fmtInputDT(startDate);
   }
 
   // 根据选择获取间隔分钟
@@ -1521,8 +1294,8 @@
     switch (type) {
       case "0": // 自定义
         timeLenght = 9999999;
-        var beginTime = new Date(document.querySelector("#date0Time0").value);
-        var endTime = new Date(document.querySelector("#dateTime").value);
+        var beginTime = parseDT(document.querySelector("#date0Time0").value);
+        var endTime = parseDT(document.querySelector("#dateTime").value);
         timeLenght = (Number(endTime.getTime()) - Number(beginTime.getTime())) / 1000 / 60; // 相差分钟数
         break;
       case "1":
@@ -1558,6 +1331,21 @@
   // 修改月、天的格式，保持两位数显示
   function add0(m) {
     return m < 10 ? '0' + m : m
+  }
+
+  // 日期格式化（空格分隔，供接口 dt 参数使用）：YYYY-MM-DD HH:mm
+  function fmtDT(date) {
+    return date.getFullYear() + "-" + add0(date.getMonth() + 1) + "-" + add0(date.getDate()) + " " + add0(date.getHours()) + ":" + add0(date.getMinutes());
+  }
+
+  // datetime-local 输入框 value 格式：YYYY-MM-DDTHH:mm（浏览器原生要求 T 分隔）
+  function fmtInputDT(date) {
+    return fmtDT(date).replace(' ', 'T');
+  }
+
+  // 解析 datetime-local / 旧式日期字符串为 Date（兼容 T 或空格分隔）
+  function parseDT(str) {
+    return new Date(String(str).replace('T', ' ').replace(/-/g, '/'));
   }
 
   // 获取地址栏参数

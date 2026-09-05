@@ -11,6 +11,7 @@
 // 【版本记录】
 //   v1.0  2026-09-02  新增：替换 index.html 内联的 openHistoricalDialog/openModalWithIframe；
 //                     复用 iframe 容器弹窗方案（做法 A），内容页 newDataDialog.html 不改动
+//   v1.1  2026-09-03  去掉标题栏：标题/Tab/关闭按钮全部移入 iframe 内部页，外壳只保留 iframe 容器
 // =========================
 
 (function _register() {
@@ -54,20 +55,10 @@
         'font-family:"Microsoft YaHei","PingFang SC",sans-serif;' +
         'opacity:0;transition:all .2s ease;overflow:hidden;';
 
+      // 标题栏已移至 iframe 内部页（newDataDialog.html），外壳只保留 iframe 容器
       el.innerHTML =
-        '<div style="height:40px;background:#1e90ff;color:#fff;' +
-        'display:flex;align-items:center;justify-content:space-between;' +
-        'padding:0 15px;font-size:16px;font-weight:500;">' +
-        '<span>历史数据趋势</span>' +
-        '<button type="button" class="htp-close-btn" style="' +
-        'background:transparent;border:none;color:#fff;font-size:18px;' +
-        'line-height:1;cursor:pointer;padding:4px;" title="关闭">&times;</button>' +
-        '</div>' +
-        '<iframe style="width:100%;height:620px;border:none;display:block;background:#f0f2f5;" ' +
+        '<iframe style="width:100%;height:660px;border:none;display:block;background:#f0f2f5;border-radius:6px;" ' +
         'src="' + buildIframeUrl(rawData.tag, rawData.name, rawData.tagid) + '"></iframe>';
-
-      var closeBtn = el.querySelector('.htp-close-btn');
-      if (closeBtn) closeBtn.onclick = closeFn;
 
       mask.appendChild(el);
       document.body.appendChild(mask);

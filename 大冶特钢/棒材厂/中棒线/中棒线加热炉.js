@@ -12,7 +12,7 @@
  *     1. 炉内流渲染（inside）        — 离散位置网格，颜色+钢坯号
  *     2. 出入炉轨道渲染（in/out）    — 连续坐标，热检→像素→Shape
  *     3. 表格系统（will-in/out）      — 待入/待出表格
- *     4. 计划表（dataSource触发）      — 炉内坯信息变化时按炉拉取计划
+ *     4. 计划表（dataSource触发+兜底）  — 炉内坯信息变化时按炉拉取计划；超1分钟无变化自动兜底刷新
  *     5. 出炉自动前进（插件）         — 尾到 OutletHotDetector2 后按辊道速度移动
  *
  * 【外部依赖】
@@ -25,6 +25,9 @@
  *   中棒加热炉逻辑 — 架构设计与数据流全文档
  *
  * 【版本记录】
+ *   v1.4  2026-09-05  计划表新增兜底定时刷新：炉内坯信息超 1 分钟无变化自动刷新计划
+ *   v1.3  2026-09-03  炉内钢坯长度 > 10000mm 新增超长报警弹窗（OverlengthDialog）
+ *   v1.2  2026-09-03  炉内钢坯输入长度 > 10000mm 时按 10000mm 处理
  *   v1.1  2026-08-27  报警弹窗调用统一改为 PopupManager.show（conflict / recognition）
  *   v1.0  2026-08-27  炉号识别不一致新增报警弹窗（RecognitionDialog，仅中棒画面使用）
  * ================================================================
@@ -123,6 +126,10 @@ var FURNACE_STEEL_ICON_PX = {
     A2: 200      // 2#炉钢坯图标像素宽度
 };
 var SHORT_STEEL_LENGTH_MM = 8000;   // 短坯判定阈值：≤8000mm 视为短坯，炉内左右交替显示
+var OVERLENGTH_LIMIT_MM = 10000;   // 超长报警阈值：炉内钢坯长度 > 10000mm 触发超长报警
+// 超长报警会话级触发记录：furnaceKey → { 钢坯号: true }
+// 仅用于"出现新超长钢坯号才调用弹窗"；真正的去重/确认由 OverlengthDialog 内部缓存负责
+var lastOverlengthShown = {};
 
 /**
  * 根据炉号和实际长度（毫米）计算对应的像素宽度
@@ -206,9 +213,13 @@ function mapColorToRGB(color) {
 function renderFurnaceInsideLayer(furnaceKey, dataList) {
     // 数据兜底
     if (!dataList) dataList = [];
+    // 消息顶层时间（e.newValue 为对象时携带，超长报警弹窗展示用）
+    var arriveMsgTime = (!Array.isArray(dataList) && dataList) ? (dataList.msgTime || '') : '';
     if (!Array.isArray(dataList)) dataList = dataList.data || [];
 
     const occupied = new Set();
+    // 本次数据中超长钢坯收集（>10000mm），用于超长报警弹窗
+    const overlengthItems = [];
 
     // 按 pos 升序排序，保证短坯左右交替顺序稳定
     const sortedList = dataList.slice().sort((a, b) => Number(a[0]) - Number(b[0]));
@@ -227,6 +238,14 @@ function renderFurnaceInsideLayer(furnaceKey, dataList) {
             var lenMatch = String(info).match(/inMatLen:(\d+)/);
             if (lenMatch) lengthMm = Number(lenMatch[1]);
         }
+        // 超长报警收集：长度 > 10000mm 的钢坯记入报警列表（按原始长度判断，先于渲染截断）
+        if (lengthMm > OVERLENGTH_LIMIT_MM) {
+            overlengthItems.push({
+                inMatNo: inMatNo, pos: pos, lengthMm: lengthMm, furnaceCode: furnaceKey
+            });
+        }
+        // 渲染长度上限：输入钢坯长度 > 10000mm 时按 10000mm 处理（炉子最大钢坯长度）
+        if (lengthMm > OVERLENGTH_LIMIT_MM) lengthMm = OVERLENGTH_LIMIT_MM;
 
         const node = positionMap[furnaceKey]?.[pos];
         if (!node) return;
@@ -283,6 +302,28 @@ function renderFurnaceInsideLayer(furnaceKey, dataList) {
             if (node.a('_originX') !== undefined) node.setX(node.a('_originX'));
         }
     });
+
+    // ── 超长钢坯报警（长度 > 10000mm）：出现新超长钢坯号才弹窗 ──
+    // 真正的去重/确认由 OverlengthDialog（PopupManager 'overlength' 类型）内部缓存负责，
+    // 这里只做"会话级新增号"判断，避免每帧快照重复调用弹窗
+    if (overlengthItems.length && typeof PopupManager !== 'undefined' && PopupManager.show) {
+        var hasNewOver = false;
+        overlengthItems.forEach(function (it) {
+            var shownMap = lastOverlengthShown[furnaceKey] || (lastOverlengthShown[furnaceKey] = {});
+            if (!shownMap[it.inMatNo]) {
+                hasNewOver = true;
+                shownMap[it.inMatNo] = true;
+            }
+        });
+        if (hasNewOver) {
+            PopupManager.show('overlength', {
+                furnaceCode: furnaceKey,
+                msgTime: arriveMsgTime,
+                // 当前炉内全部超长钢坯快照（超长总数与道次明细由弹窗展示）
+                items: overlengthItems.slice()
+            });
+        }
+    }
 }
 
 
@@ -471,12 +512,21 @@ function updateTable(payload, table) {
 // 由 1#BilletProduction / 2#BilletProduction 的 ht.dataSource 属性变化触发调用
 let tableData1;
 let tableData2;
+// 计划表最近一次刷新时间（分炉记录）：监听触发与兜底定时刷新都会更新。
+// 用于"炉内坯信息超过 1 分钟无变化时自动刷新一次"的兜底判断。
+var lastPlanRefreshTime = { A1: Date.now(), A2: Date.now() };
+var PLAN_STALE_THRESHOLD_MS = 60 * 1000;   // 兜底阈值：某炉距上次刷新超过 60s 则自动拉取一次
+var PLAN_FALLBACK_CHECK_MS = 30 * 1000;    // 兜底定时器检查周期
 
 /**
  * 获取计划表数据（由BilletProduction的ht.dataSource变化触发）
  * @param {string} [furnace] - 可选，指定炉号 'A1' | 'A2'；不传则拉取两个炉
  */
 function fetchPlanData(furnace) {
+    // 记录本次刷新时间（分炉），供兜底定时器判断是否超时未刷新
+    if (!furnace || furnace === 'A1') lastPlanRefreshTime.A1 = Date.now();
+    if (!furnace || furnace === 'A2') lastPlanRefreshTime.A2 = Date.now();
+
     // 获取班组班次信息
     var shiftGroupMap = { A: '一', B: '二', C: '三', D: '四' };
     var shiftNoMap = { '1': '夜', '2': '白' };
@@ -570,7 +620,7 @@ function tryRecognize(heatKey, furNo, newValue, msgTime) {
                 + ' INLET_ROLLER=' + newValue.heatNo);
             recognitionText.s('text', '炉号不一致');
             // 报警弹窗：显示卡号/钢坯号/跟踪炉号/炉前识别炉号，缓存后点击一次不再显示
-            showRecognitionDialog(heatKey, newValue, msgTime);
+            // showRecognitionDialog(heatKey, newValue, msgTime);
         } else if (hasSystem && !hasHeatNo) {
             recognitionText.s('text', 'INLET_ROLLER标签未带入炉号');
         } else if (!hasSystem && hasHeatNo) {
@@ -1216,3 +1266,16 @@ function stopChuluAutoAdvance() {
 // ht.dataSource 属性变化触发 fetchPlanData()，不再使用定时器轮询。
 // 首次加载时拉取两个炉的计划数据。
 fetchPlanData();
+
+// ── 13.2 计划表兜底定时刷新 ──
+// 事件驱动存在盲区：炉内坯信息若长期不变（数据停止推送/内容未变化），
+// BilletProduction 的 ht.dataSource 不会变化，计划表将不再刷新。
+// 兜底策略：每 30s 检查一次，某炉距上次刷新超过 60s 则自动拉取一次该炉计划。
+setInterval(function () {
+    if (Date.now() - lastPlanRefreshTime.A1 > PLAN_STALE_THRESHOLD_MS) {
+        fetchPlanData('A1');
+    }
+    if (Date.now() - lastPlanRefreshTime.A2 > PLAN_STALE_THRESHOLD_MS) {
+        fetchPlanData('A2');
+    }
+}, PLAN_FALLBACK_CHECK_MS);

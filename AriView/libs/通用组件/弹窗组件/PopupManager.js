@@ -156,3 +156,7 @@ const PopupManager = (() => {
   };
 
 })();
+
+// 同时挂载到 window，供 iframe 内页通过 window.parent.PopupManager 访问
+// （必须在 const PopupManager 赋值完成后执行，否则会触发 TDZ）
+window.PopupManager = PopupManager;
