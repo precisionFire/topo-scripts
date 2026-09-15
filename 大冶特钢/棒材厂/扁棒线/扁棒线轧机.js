@@ -293,17 +293,9 @@ var steelLineShapesCollection = [];
 // 声明提前在此处，因为启动重建时 cleanupFinishedSteels → isSteelFinished 会写入
 var finishedInMatNos = {};
 
-// 修磨停顿追踪（声明提前，applyCollectionPointControl 第1547行会引用）
-var steelPauseTracker = {};
-
-// ---- 以下 tracker 声明提前，cleanupSteelTrackers 在启动重建/removeSteelFromState 中引用 ----
+// ---- 以下为核心 tracker 声明，cleanupSteelTrackers 在启动重建/removeSteelFromState 中引用 ----
 var steelCollectionTracker = {};
 var headBlockedState = {};
-var steelLengthLockTracker = {};
-var steelHeadBlockTracker = {};
-var steelTailJumpTracker = {};
-var steelTailJump3350Tracker = {};
-var steelTailJump3100Tracker = {};
 
 // COLLECTION_POINT_LENGTHS 已删除，改用 applyProcessConstraints 工艺约束规则
 
@@ -1339,31 +1331,25 @@ function removeSteelFromState(inMatNo) {
 
     delete SteelStateStore.data[inMatNo];
 
-    // 统一清理该钢坯在所有插件中的追踪数据
+    // 统一清理该钢坯在所有 tracker 中的追踪数据
     cleanupSteelTrackers(inMatNo);
 
     SteelStateStore.save();
 }
 
 /**
- * 统一清理钢坯在所有插件 tracker 中的追踪数据
+ * 统一清理钢坯在核心 tracker 中的追踪数据
  *
- * 替代原来分散在5个插件函数末尾的独立清理代码：
- *   steelCollectionTracker, headBlockedState, steelLengthLockTracker,
- *   steelHeadBlockTracker, steelTailJumpTracker, steelPauseTracker
+ * 当前仅包含集合点控制相关的两个核心 tracker：
+ *   steelCollectionTracker - 集合点控制状态（applyCollectionPointControl）
+ *   headBlockedState       - 头部阻塞状态（canHeadAdvance）
  *
  * 在 removeSteelFromState 中调用，确保钢坯下线时一次性清理所有 tracker。
- * 新增 tracker 只需在此函数中添加一行 delete 即可。
+ * 新增核心 tracker 只需在此函数中添加一行 delete 即可。
  */
 function cleanupSteelTrackers(inMatNo) {
     delete steelCollectionTracker[inMatNo];
     delete headBlockedState[inMatNo];
-    delete steelLengthLockTracker[inMatNo];
-    delete steelHeadBlockTracker[inMatNo];
-    delete steelTailJumpTracker[inMatNo];
-    delete steelTailJump3350Tracker[inMatNo];
-    delete steelTailJump3100Tracker[inMatNo];
-    delete steelPauseTracker[inMatNo];
 }
 
 /**
@@ -1971,11 +1957,6 @@ function applyCollectionPointControl(steel) {
         return;
     }
 
-    // 修磨停顿期间跳过集合点控制，防止尾速度覆盖停顿（P4优先级高于P5）
-    if (steelPauseTracker[key] && steelPauseTracker[key].paused) {
-        return;
-    }
-
     // steelCollectionTracker LRU 容量控制：最多保留10条
     // （已下线钢坯的清理已统一移至 cleanupSteelTrackers，在 removeSteelFromState 中触发）
     trimCollectionTracker();
@@ -2155,356 +2136,6 @@ function clipTailBySignals(steel, proposedTailX) {
     }
 
     return clippedX;
-}
-
-/**
- * ===== 插件：尾位置到620时长度固定为180，头位置到1200时解除（独立函数） =====
- *
- * 当钢坯尾位置到达620时，将钢坯长度强制固定为180，
- * 即尾位置 = 头位置 - 180（最小为0）。
- * 当钢坯头位置到达1200时，长度控制解除，恢复正常运动。
- *
- * 独立函数，可随时移除不影响其他逻辑。
- * （steelLengthLockTracker 声明已提前至文件前部）
- */
-
-function applyLengthLockAt620(steel) {
-    const TAIL_TRIGGER = 620;
-    const HEAD_RELEASE = 1200;
-    const FIXED_LENGTH = 150;
-
-    var key = steel.inMatNo;
-
-    if (!steelLengthLockTracker[key]) {
-        steelLengthLockTracker[key] = {
-            locked: false,
-            lockApplied: false
-        };
-    }
-
-    var tracker = steelLengthLockTracker[key];
-
-    // 当尾位置到达620时，触发长度固定
-    if (!tracker.locked && !tracker.lockApplied && steel.tailX >= TAIL_TRIGGER) {
-        tracker.locked = true;
-        console.log('[长度锁定]', steel.inMatNo, '尾位置到达620，长度固定为150');
-    }
-
-    // 长度固定期间：强制尾位置 = 头位置 - 150（受集合点信号约束）
-    if (tracker.locked) {
-        var targetTailX = Math.max(0, steel.headX - FIXED_LENGTH);
-
-        // 逐点检查 tailX→targetTailX 之间是否有信号≠0的集合点
-        // 不能用 clipTailBySignals（其早退逻辑 target≤tailX 会导致逐帧漂过约束点）
-        var blockedPoint = null;
-        var iterator = All_POSITION_MAP.entries();
-        var entry;
-        while ((entry = iterator.next()) && !entry.done) {
-            var tag = entry.value[0];
-            var x = entry.value[1];
-            if (x <= steel.tailX) continue;          // 跳过当前位置之前的点
-            if (x > targetTailX) break;               // 超出目标范围
-            if (!isActiveCollectionPoint(tag)) continue;
-            if (x > steel.headX) { blockedPoint = x; break; }  // 头未经过
-            var signal = getCollectionSignal(tag);
-            if (signal !== 0) { blockedPoint = x; break; }     // 该点有钢
-        }
-
-        if (blockedPoint !== null) {
-            steel.tailX = blockedPoint;   // 卡在阻塞的集合点
-            steel.tailSpeed = 0;          // 尾不可前进
-        } else {
-            steel.tailX = targetTailX;
-            steel.tailSpeed = steel.headSpeed;
-        }
-    }
-
-    // 当头位置到达1200时，解除长度固定
-    if (tracker.locked && steel.headX >= HEAD_RELEASE) {
-        tracker.locked = false;
-        tracker.lockApplied = true;
-        console.log('[长度锁定]', steel.inMatNo, '头位置到达1200，长度控制解除');
-    }
-
-}
-
-/**
- * ===== 插件：头位置到达1000后，若有其他钢坯尾在1050-1450则阻塞（独立函数） =====
- *
- * 当钢坯头位置到达1000后，检查所有其他在线钢坯。
- * 如果存在任意其他钢坯的尾位置在1050-1450之间，
- * 则当前钢坯头尾均不允许前进（speed设为0）。
- * 直到区间内无其他钢坯尾部时，恢复正常运动。
- *
- * 独立函数，可随时移除不影响其他逻辑。
- * （steelHeadBlockTracker 声明已提前至文件前部）
- */
-
-function applyHeadBlockAt1000(steel) {
-    const HEAD_BLOCK_POS = 1000;
-    const BLOCK_TAIL_MIN = 1050;
-    const BLOCK_TAIL_MAX = 1450;
-
-    var key = steel.inMatNo;
-
-    if (!steelHeadBlockTracker[key]) {
-        steelHeadBlockTracker[key] = {
-            triggered: false,
-            blocked: false
-        };
-    }
-
-    var tracker = steelHeadBlockTracker[key];
-
-    // 检测头是否到达1000
-    if (!tracker.triggered && steel.headX >= HEAD_BLOCK_POS) {
-        tracker.triggered = true;
-        console.log('[头阻塞检查]', steel.inMatNo, '头位置到达1000，开始检查其他钢坯身体是否在1050-1450区间');
-    }
-
-    // 头已到达1000，检查是否有其他钢坯的身体（tailX~headX）与1050-1450区间重叠
-    if (tracker.triggered) {
-        var shouldBlock = false;
-        var blockingSteel = null;
-
-        Object.values(SteelStateStore.data).forEach(function (other) {
-            if (other.inMatNo === key) return;
-            // 钢坯身体区间 [tailX, headX] 与阻塞区间 [1050, 1450] 是否重叠
-            // 重叠条件：other.headX > 1050 且 other.tailX < 1450
-            if (other.headX > BLOCK_TAIL_MIN && other.tailX < BLOCK_TAIL_MAX) {
-                shouldBlock = true;
-                blockingSteel = other.inMatNo;
-            }
-        });
-
-        if (shouldBlock && !tracker.blocked) {
-            tracker.blocked = true;
-            console.log('[头阻塞]', steel.inMatNo, '头到达1000，被钢坯', blockingSteel, '身体阻塞（区间1050-1450有钢坯），不允许前进');
-        }
-
-        if (!shouldBlock && tracker.blocked) {
-            tracker.blocked = false;
-            console.log('[头阻塞解除]', steel.inMatNo, '1050-1450区间无其他钢坯身体，恢复前进');
-        }
-
-        if (tracker.blocked) {
-            steel.headSpeed = 0;
-            steel.tailSpeed = 0;
-        }
-    }
-}
-
-/**
- * ===== 插件：尾位置到达Stand16ExitHmd时尾速设为10 =====
- *
- * 当钢坯尾位置到达精轧入口（Stand16ExitHmd）后，
- * 距离下一个热检距离太远，尾部以速度10向前移动，
- * 避免尾部长时间停在无信号区域导致画面显示异常。
- *
- * 独立函数，可随时移除不影响其他逻辑。
- */
-function applyTailSpeedAtStand16ExitHmd(steel) {
-    const TRIGGER_X = TRACK_POSITION_MAP.get('Stand16ExitHmd');
-    const TAIL_SPEED = 10;
-
-    // RTL: tailX递减，尾越过HMD后加速（tailX ≤ HMD位置）
-    if (TRIGGER_X !== undefined && steel.tailX <= TRIGGER_X) {
-        // 直接设置尾速，信号约束由 updateSteelPosition 安全网负责
-        steel.tailSpeed = TAIL_SPEED;
-    }
-}
-
-/**
- * ===== 插件：头越过1750时尾跳至下一集合点前50（独立函数） =====
- *
- * 当钢坯头位置跨过1750后，尾位置立刻跳到下一个要离开的集合点之前50的位置，
- * 使尾部快速追近头部，避免钢坯视觉长度无限拉长。
- *
- * 独立函数，可随时移除不影响其他逻辑。
- * （steelTailJumpTracker 声明已提前至文件前部）
- */
-
-function applyTailJumpAt1750(steel) {
-    const TRIGGER_X = 1750;
-    const GAP_BEFORE_POINT = 50;
-
-    var key = steel.inMatNo;
-
-    if (!steelTailJumpTracker[key]) {
-        steelTailJumpTracker[key] = {
-            triggered: false,
-            prevHeadX: 3600   // RTL: 3600 > 所有阈值，headX≤1750时触发（已越过）
-        };
-    }
-
-    var tracker = steelTailJumpTracker[key];
-
-    // 检测跨过1750：RTL运动中 headX 递减，从上一次>1750 变为 本次≤1750
-    var crossed = tracker.prevHeadX > TRIGGER_X && steel.headX <= TRIGGER_X;
-
-    if (crossed && !tracker.triggered) {
-        // 找到尾位置下一个要离开的集合点
-        var next = getTailNextPoint(steel.tailX);
-        if (next) {
-            var jumpTarget = Math.max(0, next.x - GAP_BEFORE_POINT);
-            if (jumpTarget > steel.tailX) {
-                steel.tailX = jumpTarget;
-                console.log('[尾跳插件]', steel.inMatNo,
-                    '头越过1750，尾跳至', jumpTarget.toFixed(1),
-                    '(下一集合点', next.tag, 'x=' + next.x, '前' + GAP_BEFORE_POINT + ')');
-            } else {
-                console.log('[尾跳插件]', steel.inMatNo,
-                    '头越过1750，尾已越过目标', jumpTarget.toFixed(1), '，跳过尾跳');
-            }
-        }
-        tracker.triggered = true;
-    }
-
-    tracker.prevHeadX = steel.headX;
-
-}
-
-/**
- * ===== 插件：头越过3100时尾跳至下一集合点前50（独立函数） =====
- *
- * 当钢坯头位置跨过3100后，尾位置跳到下一个要离开的集合点之前50的位置。
- * 控制精轧入口区域钢坯视觉长度。
- *
- * 独立函数，可随时移除不影响其他逻辑。
- */
-function applyTailJumpAt3100(steel) {
-    const TRIGGER_X = 3100;
-    const GAP_BEFORE_POINT = 50;
-
-    var key = steel.inMatNo;
-
-    if (!steelTailJump3100Tracker[key]) {
-        steelTailJump3100Tracker[key] = {
-            triggered: false,
-            prevHeadX: 3600   // RTL: 3600 > 所有阈值，headX≤3100时触发（已越过）
-        };
-    }
-
-    var tracker = steelTailJump3100Tracker[key];
-
-    // RTL运动中 headX 递减：从上一次>3100 变为 本次≤3100
-    var crossed = tracker.prevHeadX > TRIGGER_X && steel.headX <= TRIGGER_X;
-
-    if (crossed && !tracker.triggered) {
-        var next = getTailNextPoint(steel.tailX);
-        if (next) {
-            var jumpTarget = Math.max(0, next.x - GAP_BEFORE_POINT);
-            if (jumpTarget > steel.tailX) {
-                steel.tailX = jumpTarget;
-                console.log('[尾跳3100插件]', steel.inMatNo,
-                    '头越过3100，尾跳至', jumpTarget.toFixed(1),
-                    '(下一集合点', next.tag, 'x=' + next.x, '前' + GAP_BEFORE_POINT + ')');
-            } else {
-                console.log('[尾跳3100插件]', steel.inMatNo,
-                    '头越过3100，尾已越过目标', jumpTarget.toFixed(1), '，跳过尾跳');
-            }
-        }
-        tracker.triggered = true;
-    }
-
-    tracker.prevHeadX = steel.headX;
-
-}
-
-/**
- * ===== 插件：头经过3350时尾位置移动到2100（独立函数） =====
- *
- * 当钢坯头位置跨过3350后，尾位置立刻跳至2100。
- * 控制精轧区域钢坯视觉长度，避免钢坯在精轧后段被过度拉长。
- *
- * 独立函数，可随时移除不影响其他逻辑。
- */
-function applyTailJumpAt3350(steel) {
-    const TRIGGER_X = 3350;
-    const JUMP_TARGET = 2100;
-
-    var key = steel.inMatNo;
-
-    if (!steelTailJump3350Tracker[key]) {
-        steelTailJump3350Tracker[key] = {
-            triggered: false,
-            prevHeadX: 3600   // RTL: 3600 > 所有阈值，headX≤3350时触发（已越过）
-        };
-    }
-
-    var tracker = steelTailJump3350Tracker[key];
-
-    // RTL运动中 headX 递减：从上一次>3350 变为 本次≤3350
-    var crossed = tracker.prevHeadX > TRIGGER_X && steel.headX <= TRIGGER_X;
-
-    if (crossed && !tracker.triggered) {
-        if (JUMP_TARGET > steel.tailX) {
-            steel.tailX = clipTailBySignals(steel, JUMP_TARGET);
-            console.log('[尾跳3350插件]', steel.inMatNo,
-                '头越过3350，尾跳至', steel.tailX,
-                '(目标=' + JUMP_TARGET + ',经clipTailBySignals约束)');
-        } else {
-            console.log('[尾跳3350插件]', steel.inMatNo,
-                '头越过3350，尾已越过目标', JUMP_TARGET, '，跳过尾跳');
-        }
-        tracker.triggered = true;
-    }
-
-    tracker.prevHeadX = steel.headX;
-
-}
-
-/**
- * ===== 钢坯头位置到达1100时停顿10秒（1#剪位置修磨工艺） =====
- *
- * 真实轧线工艺：钢坯头到达1100附近（MIDDLE区入口）时，
- * 需要在1#剪切前对钢坯头部进行修磨处理，
- * 整根钢坯停顿10秒，头尾均不前进。
- *
- * 独立函数，可随时移除不影响其他逻辑。
- */
-function applySteelPauseAt1100(steel) {
-    const PAUSE_POSITION = 1100;
-    const PAUSE_DURATION = 10000; // 1#剪位置修磨，整根钢坯停顿10秒
-
-    const key = steel.inMatNo;
-
-    if (!steelPauseTracker[key]) {
-        steelPauseTracker[key] = {
-            paused: false,
-            pauseStartTime: 0,
-            passed: false,
-            prevHeadX: steel.headX
-        };
-    }
-
-    const tracker = steelPauseTracker[key];
-
-    // 检测跨过1100：RTL运动中headX递减，从上一次>1100 变为 本次≤1100
-    const crossed1100 = tracker.prevHeadX > PAUSE_POSITION && steel.headX <= PAUSE_POSITION;
-
-    if (crossed1100 && !tracker.paused && !tracker.passed) {
-        // 头位置从小于1100跨到1100，开始在1#剪位置修磨停顿
-        tracker.paused = true;
-        tracker.pauseStartTime = Date.now();
-        steel.headSpeed = 0;
-        steel.tailSpeed = 0;
-        console.log('[停顿]', steel.inMatNo, '头跨过1100，1#剪修磨停顿10秒');
-    } else if (tracker.paused) {
-        // 停顿中，检查是否已到10秒
-        if (Date.now() - tracker.pauseStartTime >= PAUSE_DURATION) {
-            tracker.paused = false;
-            tracker.passed = true;
-            console.log('[停顿]', steel.inMatNo, '修磨停顿结束，恢复运动');
-        } else {
-            steel.headSpeed = 0;
-            steel.tailSpeed = 0;
-        }
-    }
-
-    // 记录本次headX供下次比较
-    tracker.prevHeadX = steel.headX;
-
 }
 
 //位置求解函数
@@ -2861,7 +2492,15 @@ function getSteelColor(steel) {
  */
 function startSteelSimulator() {
 
-    setInterval(() => {
+    // 防重复启动：脚本被页面/图纸重复加载时 setInterval 会永久叠加，
+    // 两条推演+渲染循环交替执行，会互相覆盖 animationFrames 动画句柄，
+    // 导致同一钢坯出现两条 requestAnimationFrame 链轮流写坐标（抖动、重影）。
+    // 用 window 全局句柄保证同一页面上下文内只有一个主循环（先清旧，再起新）。
+    if (window.__steelSimulatorTimer) {
+        clearInterval(window.__steelSimulatorTimer);
+    }
+
+    window.__steelSimulatorTimer = setInterval(() => {
 
         updateSteelStates();
 
@@ -2905,7 +2544,13 @@ let SpeedStore = {
  *   data 数组的最后一组可能包含速度参数（dischargeSpeed等字段），
  *   其余项为钢坯热检数据，每项包含 inMatNo, headPosition, headTime, tailPosition, tailTime 等。
  */
-dataModel.addDataPropertyChangeListener(function (e) {
+// 防重复注册：脚本可能被页面/图纸重复加载导致监听器注册多次，
+// 同一消息会被多次触发（表现为 console 打印多次、钢坯反复刷新留下重影）。
+// 用 window 全局标记保证同一页面上下文内只注册一次（与中棒线轧机.js 保持一致）。
+if (!window.__trackingListenerInstalled) {
+    window.__trackingListenerInstalled = true;
+
+    dataModel.addDataPropertyChangeListener(function (e) {
 
     // 只响应 a:rolltable 属性变化
     if (e.property !== 'a:rolltable') {
@@ -3003,7 +2648,9 @@ dataModel.addDataPropertyChangeListener(function (e) {
     // 校正后立即清理已下线钢坯（tailPosition可能变为离线HMD，或headX被推过终点）
     cleanupFinishedSteels();
 
-});
+    });
+
+}
 
 /**
  * 校正触发：遍历 FactStore 中所有钢坯，对 StateStore 中对应钢坯执行位置校正
@@ -3624,7 +3271,13 @@ class DataCollector {
 }
 
 // 启动数据采集器
-const dataCollector = new DataCollector(graphView);
+// 防重复实例化：脚本被页面/图纸重复加载时，先停掉上一个采集器实例再建新的，
+// 避免多个 1 秒定时器同时往同一批图表节点写数据（图表抖动、时间序列重复）。
+// 注：DataCollector.start() 内的 this.isRunning 守卫只能防同一实例重复启动，管不到跨实例。
+if (window.__dataCollector) {
+    window.__dataCollector.stop();
+}
+const dataCollector = window.__dataCollector = new DataCollector(graphView);
 dataCollector.start(); // 启动数据采集
 
 // 当不再需要时停止
@@ -3633,7 +3286,7 @@ dataCollector.start(); // 启动数据采集
 //获取班组班次信息
 var shiftGroupMap = { A: '一', B: '二', C: '三', D: '四' };
 var shiftNoMap = { '1': '夜', '2': '白' };
-request("http://172.15.88.243:9003/api/bdy/bptbuscommon/getcurrentshiftinfo", {}, 'POST')
+request("https://bar.dayesteel.com.cn/api/api/bdy/bptbuscommon/getcurrentshiftinfo", {}, 'POST')
     .then(data => {
         var teamNode = graphView.dm().getDataByTag('Team');
         var shiftNode = graphView.dm().getDataByTag('Shift');
@@ -3644,7 +3297,7 @@ request("http://172.15.88.243:9003/api/bdy/bptbuscommon/getcurrentshiftinfo", {}
     });
 
 //获取最近十卡
-request("http://172.15.88.243:9003/api/bdy/bptdatrollopact/list", {
+request("https://bar.dayesteel.com.cn/api/api/bdy/bptdatrollopact/list", {
     "PageSize": 20,
     "PageIndex": 1,
     "SortFields": [

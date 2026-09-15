@@ -2723,7 +2723,15 @@ function getSteelColor(steel) {
  */
 function startSteelSimulator() {
 
-    setInterval(() => {
+    // 防重复启动：脚本被页面/图纸重复加载时 setInterval 会永久叠加，
+    // 两条推演+渲染循环交替执行，会互相覆盖 animationFrames 动画句柄，
+    // 导致同一钢坯出现两条 requestAnimationFrame 链轮流写坐标（抖动、重影）。
+    // 用 window 全局句柄保证同一页面上下文内只有一个主循环（先清旧，再起新）。
+    if (window.__steelSimulatorTimer) {
+        clearInterval(window.__steelSimulatorTimer);
+    }
+
+    window.__steelSimulatorTimer = setInterval(() => {
 
         updateSteelStates();
 
@@ -3554,7 +3562,13 @@ class DataCollector {
 }
 
 // 启动数据采集器
-const dataCollector = new DataCollector(graphView);
+// 防重复实例化：脚本被页面/图纸重复加载时，先停掉上一个采集器实例再建新的，
+// 避免多个 1 秒定时器同时往同一批图表节点写数据（图表抖动、时间序列重复）。
+// 注：DataCollector.start() 内的 this.isRunning 守卫只能防同一实例重复启动，管不到跨实例。
+if (window.__dataCollector) {
+    window.__dataCollector.stop();
+}
+const dataCollector = window.__dataCollector = new DataCollector(graphView);
 dataCollector.start(); // 启动数据采集
 
 // 当不再需要时停止
