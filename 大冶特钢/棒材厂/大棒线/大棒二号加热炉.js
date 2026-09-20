@@ -16,7 +16,7 @@
  *     1. 炉内流渲染（inside）        — 离散位置网格，颜色+钢坯号
  *     2. 出入炉轨道渲染（in/out）    — 连续坐标，热检→像素→Shape
  *     3. 表格系统（will-in/out）      — 待入/待出表格
- *     4. 计划表（dataSource触发）      — 炉内坯信息变化时拉取计划
+ *     4. 计划表（dataSource触发+兜底）  — 炉内坯信息变化时拉取计划；超1分钟无变化自动兜底刷新
  *     5. 出炉自动前进（插件）         — 尾到 OutletHotDetector2 后按辊道速度移动
  *
  * 【外部依赖】
@@ -424,12 +424,20 @@ function updateTable(payload, table) {
 // ── 6.2 计划表数据获取 ──
 // 由 2#BilletProduction 的 ht.dataSource 属性变化触发调用
 let tableData2;
+// 计划表最近一次刷新时间：监听触发与兜底定时刷新都会更新。
+// 用于"炉内坯信息超过 1 分钟无变化时自动刷新一次"的兜底判断。
+var lastPlanRefreshTime = Date.now();
+var PLAN_STALE_THRESHOLD_MS = 60 * 1000;   // 兜底阈值：距上次刷新超过 60s 则自动拉取一次
+var PLAN_FALLBACK_CHECK_MS = 30 * 1000;    // 兜底定时器检查周期
 
 /**
  * 获取计划表数据（由BilletProduction的ht.dataSource变化触发）
  * @param {string} [furnace] - 可选，指定炉号 'A2'
  */
 function fetchPlanData(furnace) {
+    // 记录本次刷新时间，供兜底定时器判断是否超时未刷新
+    lastPlanRefreshTime = Date.now();
+
     // 获取班组班次信息
     var shiftGroupMap = { A: '一', B: '二', C: '三', D: '四' };
     var shiftNoMap = { '1': '夜', '2': '白' };
@@ -1078,3 +1086,13 @@ function stopChuluAutoAdvance() {
 // ht.dataSource 属性变化触发 fetchPlanData()，不再使用定时器轮询。
 // 首次加载时拉取计划数据。
 fetchPlanData();
+
+// ── 计划表兜底定时刷新 ──
+// 事件驱动存在盲区：炉内坯信息若长期不变（数据停止推送/内容未变化），
+// BilletProduction 的 ht.dataSource 不会变化，计划表将不再刷新。
+// 兜底策略：每 30s 检查一次，距上次刷新超过 60s 则自动拉取一次计划。
+setInterval(function () {
+    if (Date.now() - lastPlanRefreshTime > PLAN_STALE_THRESHOLD_MS) {
+        fetchPlanData();
+    }
+}, PLAN_FALLBACK_CHECK_MS);
