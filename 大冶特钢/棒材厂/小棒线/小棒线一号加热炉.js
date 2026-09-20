@@ -1,6 +1,6 @@
 /**
  * ================================================================
- *  扁棒加热炉出入炉 — 实时可视化监控系统
+ *  小棒线一号加热炉出入炉 — 实时可视化监控系统
  * ================================================================
  *
  * 【场景描述】
@@ -22,7 +22,7 @@
  *   - showToast   : 全局 Toast 提示函数
  *
  * 【配套文档】
- *   扁棒加热炉逻辑 — 架构设计与数据流全文档
+ *   小棒线一号加热炉逻辑 — 架构设计与数据流全文档
  * ================================================================
  */
 
@@ -78,27 +78,12 @@ function getYTrack(trackIndex) {
 }
 
 // ── 2.2 热检坐标映射 ──
-// 支持两种 tag 格式:
-//   入炉轨道: track-{轨道序号}-{热检名}  → TRACK_POSITION_MAP[trackIndex][热检名] = X
-//   出炉轨道: track-{轨道序号}-{炉号}-{热检名} → TRACK_POSITION_MAP[trackIndex][炉号][热检名] = X
+// 统一三段式: track-{轨道序号}-{热检名} → TRACK_POSITION_MAP[trackIndex][热检名] = X
 function getTrackPositionMap() {
     var map = {};
     dm.each(function (item) {
         var tag = item.getTag();
-        if (!tag || !tag.startsWith('track-')) return;
-
-        var parts = tag.substring(6).split('-');
-        // 四段式: track-{轨道序号}-{炉号}-{热检名}  (出炉专用)
-        if (parts.length === 3 && (parts[1] === '1' || parts[1] === '2')) {
-            var trackIndex = parseInt(parts[0], 10) - 1;
-            var furnaceNum = parts[1];
-            var name = parts[2];
-            if (!map[trackIndex]) map[trackIndex] = {};
-            if (!map[trackIndex][furnaceNum]) map[trackIndex][furnaceNum] = {};
-            map[trackIndex][furnaceNum][name] = item.getX();
-            return;
-        }
-        // 三段式: track-{轨道序号}-{热检名}  (入炉)
+        if (!tag) return;
         var match = tag.match(/^track-(\d+)-(.+)$/);
         if (!match) return;
         var trackIndex = parseInt(match[1], 10) - 1;
@@ -110,20 +95,9 @@ function getTrackPositionMap() {
 var TRACK_POSITION_MAP = {};
 function refreshTrackPositionMap() {
     TRACK_POSITION_MAP = getTrackPositionMap();
-    // // 打印热检节点一览
+    // // 打印热检节点一览（三段式: track-{轨道序号}-{热检名}）
     // Object.keys(TRACK_POSITION_MAP).forEach(function (ti) {
-    //     var trackMap = TRACK_POSITION_MAP[ti];
-    //     if (trackMap && typeof trackMap === 'object') {
-    //         // 是否为出炉轨道（四段式，key是炉号字符串）→ 展开
-    //         var keys = Object.keys(trackMap);
-    //         if (keys.length > 0 && (keys[0] === '1' || keys[0] === '2')) {
-    //             keys.forEach(function (fn) {
-    //                 console.log('[热检坐标] 刷新 轨道' + ti + ' 炉号' + fn + ':', JSON.stringify(trackMap[fn]));
-    //             });
-    //         } else {
-    //             console.log('[热检坐标] 刷新 轨道' + ti + ':', JSON.stringify(trackMap));
-    //         }
-    //     }
+    //     console.log('[热检坐标] 刷新 轨道' + ti + ':', JSON.stringify(TRACK_POSITION_MAP[ti]));
     // });
 }
 refreshTrackPositionMap();
@@ -159,7 +133,7 @@ function calcSteelPixelLength(furnaceKey, lengthMm) {
 }
 
 // 属性与轨道的映射关系：监听到哪个属性，就用哪条轨道
-// 扁棒单加热炉：入炉1#辊道，出炉2#辊道
+// 小棒线一号单加热炉：入炉1#辊道，出炉2#辊道
 var PROPERTY_TRACK_MAP = {
     'a:A2-in': 0,     // 2#炉入炉 → 轨道0 (y1)  入炉辊道1#
     'a:A2-out': 1     // 2#炉出炉 → 轨道1 (y2)  出炉辊道2#
@@ -396,7 +370,7 @@ function renderFurnaceInsideLayer(furnaceKey, dataList) {
         // 按比例计算钢坯图标像素宽度
         var pixelLen = calcSteelPixelLength(furnaceKey, lengthMm);
 
-        // console.log('[扁棒炉内坯] 炉号=' + furnaceKey + ' pos=' + pos
+        // console.log('[小棒线一号炉内坯] 炉号=' + furnaceKey + ' pos=' + pos
         //     + ' inMatNo=' + inMatNo + ' lengthMm=' + lengthMm
         //     + ' pixelLen=' + pixelLen + ' maxMm=' + (FURNACE_MAX_LENGTH_MM[furnaceKey] || 7000)
         //     + ' iconPx=' + (FURNACE_STEEL_ICON_PX[furnaceKey] || 380));
@@ -449,14 +423,7 @@ function renderFurnaceInsideLayer(furnaceKey, dataList) {
  */
 function applyPositionCorrection(item) {
     var trackIndex = item._trackIndex || 0;
-    var trackMap;
-
-    // 出炉轨道(trackIndex=1)：查炉号子映射（四段式标签 track-2-1-*）
-    if (trackIndex === 1 && item.furnaceCode) {
-        trackMap = (TRACK_POSITION_MAP[trackIndex] || {})['1'] || {};
-    } else {
-        trackMap = TRACK_POSITION_MAP[trackIndex] || {};
-    }
+    var trackMap = TRACK_POSITION_MAP[trackIndex] || {};
 
     var headX = item.headPosition ? trackMap[item.headPosition] : undefined;
     var tailX = item.tailPosition ? trackMap[item.tailPosition] : undefined;
@@ -1003,8 +970,10 @@ view.addEventListener('click', function (e) {
 const menuItems = [
     { label: "入炉退回", action: () => handleMenuClick("入炉退回") },
     { label: "出炉撤回", action: () => handleMenuClick("出炉撤回") },
-    { label: "前移", multi: true, action: () => handleMenuClick("部分前移") },
-    { label: "后移", multi: true, action: () => handleMenuClick("部分后移") },
+    { label: "单支前移", action: () => handleMenuClick("单支前移") },
+    { label: "单支后移", action: () => handleMenuClick("单支后移") },
+    { label: "部分前移", multi: true, action: () => handleMenuClick("部分前移") },
+    { label: "部分后移", multi: true, action: () => handleMenuClick("部分后移") },
 ];
 
 const contextmenu = new ht.widget.ContextMenu(menuItems);
@@ -1015,15 +984,17 @@ contextmenu.setVisibleFunc(function (item) {
     if (!rightClickNode || !rightClickNode.furnaceKey) return false;
 
     var datas = graphView.sm().toSelection();
-    var count = datas.size();
+    // 只统计炉内钢坯节点，过滤框选时混入的轨道/标记等非炉内图元
+    var furnaceNodes = datas.toArray().filter(isFurnaceSteelNode);
+    var count = furnaceNodes.length;
     if (count === 0) return false;
 
-    // 多选：仅显示 multi=true 的条目（前移/后移）
+    // 多选：仅显示 multi=true 的条目（部分前移/部分后移）
     if (count > 1) {
         return item.multi === true;
     }
 
-    // 单选：显示非 multi 条目（入炉退回/出炉撤回），且右键节点必须有钢坯号
+    // 单选：显示非 multi 条目（入炉退回/出炉撤回/单支前移/单支后移），且右键节点必须有钢坯号
     var hasMatNo = rightClickNode.a('inMatNo');
     return !item.multi && hasMatNo;
 });
@@ -1032,6 +1003,16 @@ contextmenu.addTo(view);
 // ── 10.6 多选节点数组 ──
 // 确认多选后，将所有选中的钢坯节点存入此数组
 // 一个钢坯节点 = 实物的一根钢坯，没有道次概念
+
+/**
+ * 判断节点是否为炉内钢坯节点（tag 形如 One-数字 / Two-数字）
+ * 用于过滤选择集中混入的非炉内图元（轨道 Shape、标记节点等 tag 为空的节点）
+ */
+function isFurnaceSteelNode(node) {
+    var t = node && node.getTag ? node.getTag() : '';
+    return /^(One|Two)-\d+$/.test(t || '');
+}
+
 var selectedSteelNodes = [];
 
 /**
@@ -1045,7 +1026,7 @@ function confirmMultiSelect() {
         return selectedSteelNodes;
     }
 
-    selectedSteelNodes = datas.toArray().map(function (node) {
+    selectedSteelNodes = datas.toArray().filter(isFurnaceSteelNode).map(function (node) {
         return {
             node: node,                          // HT 节点对象
             inMatNo: node.a('inMatNo') || '',    // 钢坯号
@@ -1077,7 +1058,10 @@ function extractSelectedRange() {
 
     var ctx = graphView._ctx;
     var furnaceKey = ctx ? (ctx.furnaceKey || ctx.a('furnace')) : undefined;
-    var nodes = datas.toArray();
+    // 只保留炉内钢坯节点，过滤框选时混入的非炉内图元
+    // （否则按 pos 排序时，pos=undefined 的杂项会排最前，导致 first/last 取到 undefined，无法发请求）
+    var nodes = datas.toArray().filter(isFurnaceSteelNode);
+    if (nodes.length === 0) return null;
 
     // 按 pos 排序
     nodes.sort(function (a, b) {
@@ -1133,6 +1117,16 @@ function handleMenuClick(type) {
             }
             break;
         }
+        case "单支前移":
+        case "单支后移": {
+            // 单支移动与部分移动一致，发送炉内位置（pos），不是钢坯号
+            var singlePos = ctx.a('pos');
+            if (singlePos !== undefined && singlePos !== null) {
+                var direction = type === "单支前移" ? "forward" : "backward";
+                requestSingleMove(furnaceKey, direction, singlePos);
+            }
+            break;
+        }
     }
 }
 
@@ -1181,6 +1175,22 @@ function requestPartialMove(furnaceCode, direction, fromPosition, toPosition) {
         direction: direction,
         fromPosition: fromPosition,
         toPosition: toPosition
+    });
+}
+
+/**
+ * 单支前移/后移（单支）
+ * 复用 /WALKINGBEAM/PARTIAL 接口，fromPosition 与 toPosition 发同一个炉内位置（pos）
+ * @param {string} furnaceCode  - 炉号 'A2'
+ * @param {string} direction    - 'forward' | 'backward'
+ * @param {number} position     - 炉内位置（pos）
+ */
+function requestSingleMove(furnaceCode, direction, position) {
+    requestGet(API_BASE + "/WALKINGBEAM/PARTIAL", {
+        furnaceCode: furnaceCode,
+        direction: direction,
+        fromPosition: position,
+        toPosition: position
     });
 }
 

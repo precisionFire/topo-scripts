@@ -78,27 +78,12 @@ function getYTrack(trackIndex) {
 }
 
 // ── 2.2 热检坐标映射 ──
-// 支持两种 tag 格式:
-//   入炉轨道: track-{轨道序号}-{热检名}  → TRACK_POSITION_MAP[trackIndex][热检名] = X
-//   出炉轨道: track-{轨道序号}-{炉号}-{热检名} → TRACK_POSITION_MAP[trackIndex][炉号][热检名] = X
+// 统一三段式: track-{轨道序号}-{热检名} → TRACK_POSITION_MAP[trackIndex][热检名] = X
 function getTrackPositionMap() {
     var map = {};
     dm.each(function (item) {
         var tag = item.getTag();
-        if (!tag || !tag.startsWith('track-')) return;
-
-        var parts = tag.substring(6).split('-');
-        // 四段式: track-{轨道序号}-{炉号}-{热检名}  (出炉专用)
-        if (parts.length === 3 && (parts[1] === '1' || parts[1] === '2')) {
-            var trackIndex = parseInt(parts[0], 10) - 1;
-            var furnaceNum = parts[1];
-            var name = parts[2];
-            if (!map[trackIndex]) map[trackIndex] = {};
-            if (!map[trackIndex][furnaceNum]) map[trackIndex][furnaceNum] = {};
-            map[trackIndex][furnaceNum][name] = item.getX();
-            return;
-        }
-        // 三段式: track-{轨道序号}-{热检名}  (入炉)
+        if (!tag) return;
         var match = tag.match(/^track-(\d+)-(.+)$/);
         if (!match) return;
         var trackIndex = parseInt(match[1], 10) - 1;
@@ -110,20 +95,9 @@ function getTrackPositionMap() {
 var TRACK_POSITION_MAP = {};
 function refreshTrackPositionMap() {
     TRACK_POSITION_MAP = getTrackPositionMap();
-    // // 打印热检节点一览
+    // // 打印热检节点一览（三段式: track-{轨道序号}-{热检名}）
     // Object.keys(TRACK_POSITION_MAP).forEach(function (ti) {
-    //     var trackMap = TRACK_POSITION_MAP[ti];
-    //     if (trackMap && typeof trackMap === 'object') {
-    //         // 是否为出炉轨道（四段式，key是炉号字符串）→ 展开
-    //         var keys = Object.keys(trackMap);
-    //         if (keys.length > 0 && (keys[0] === '1' || keys[0] === '2')) {
-    //             keys.forEach(function (fn) {
-    //                 console.log('[热检坐标] 刷新 轨道' + ti + ' 炉号' + fn + ':', JSON.stringify(trackMap[fn]));
-    //             });
-    //         } else {
-    //             console.log('[热检坐标] 刷新 轨道' + ti + ':', JSON.stringify(trackMap));
-    //         }
-    //     }
+    //     console.log('[热检坐标] 刷新 轨道' + ti + ':', JSON.stringify(TRACK_POSITION_MAP[ti]));
     // });
 }
 refreshTrackPositionMap();
@@ -159,7 +133,7 @@ function calcSteelPixelLength(furnaceKey, lengthMm) {
 }
 
 // 属性与轨道的映射关系：监听到哪个属性，就用哪条轨道
-// 扁棒单加热炉：入炉1#辊道，出炉2#辊道
+// 小棒线二号单加热炉：入炉1#辊道，出炉2#辊道
 var PROPERTY_TRACK_MAP = {
     'a:A2-in': 0,     // 2#炉入炉 → 轨道0 (y1)  入炉辊道1#
     'a:A2-out': 1     // 2#炉出炉 → 轨道1 (y2)  出炉辊道2#
@@ -396,7 +370,7 @@ function renderFurnaceInsideLayer(furnaceKey, dataList) {
         // 按比例计算钢坯图标像素宽度
         var pixelLen = calcSteelPixelLength(furnaceKey, lengthMm);
 
-        // console.log('[扁棒炉内坯] 炉号=' + furnaceKey + ' pos=' + pos
+        // console.log('[小棒线二号炉内坯] 炉号=' + furnaceKey + ' pos=' + pos
         //     + ' inMatNo=' + inMatNo + ' lengthMm=' + lengthMm
         //     + ' pixelLen=' + pixelLen + ' maxMm=' + (FURNACE_MAX_LENGTH_MM[furnaceKey] || 7000)
         //     + ' iconPx=' + (FURNACE_STEEL_ICON_PX[furnaceKey] || 380));
@@ -449,14 +423,7 @@ function renderFurnaceInsideLayer(furnaceKey, dataList) {
  */
 function applyPositionCorrection(item) {
     var trackIndex = item._trackIndex || 0;
-    var trackMap;
-
-    // 出炉轨道(trackIndex=1)：查炉号子映射（四段式标签 track-2-1-*）
-    if (trackIndex === 1 && item.furnaceCode) {
-        trackMap = (TRACK_POSITION_MAP[trackIndex] || {})['1'] || {};
-    } else {
-        trackMap = TRACK_POSITION_MAP[trackIndex] || {};
-    }
+    var trackMap = TRACK_POSITION_MAP[trackIndex] || {};
 
     var headX = item.headPosition ? trackMap[item.headPosition] : undefined;
     var tailX = item.tailPosition ? trackMap[item.tailPosition] : undefined;
