@@ -1,0 +1,4361 @@
+{
+  "v": "8.1.3",
+  "p": {
+    "layers": [
+      {
+        "name": "0",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "1",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      },
+      {
+        "name": "2",
+        "visible": true,
+        "selectable": true,
+        "movable": true,
+        "editable": true
+      }
+    ],
+    "autoAdjustIndex": true,
+    "hierarchicalRendering": true
+  },
+  "a": {
+    "zoomable": false,
+    "pannable": false,
+    "previewURL": "displayPage.html",
+    "onPostDeserialize": "__ht__function(json, dm, view, datas) {// ===== 获取 GraphView 和数据模型 =====\r\nvar view = graphView.getView();\r\nvar dm = graphView.dm();\r\n//滚动条不可见\r\ngraphView.setScrollBarVisible(false);\r\n// 获取实时纵坐标基准点\r\nvar rolly1 = dm.getDataByTag('roll-y1');\r\nvar rolly2 = dm.getDataByTag('roll-y2');\r\nvar rolly3 = dm.getDataByTag('roll-y3');\r\n\r\n// ✅ 使用函数动态获取 Y 坐标\r\nfunction getYTrack(index) {\r\n    switch (index) {\r\n        case 0: return rolly1.getPosition().y;\r\n        case 1: return rolly2.getPosition().y;\r\n        case 2: return rolly3.getPosition().y;\r\n        default: return 0;\r\n    }\r\n}\r\n\r\n// 轨道配置\r\nvar segmentLength = 1800;\r\nvar allSteelLines = {};\r\nvar lastPositions = {};\r\nvar animationFrames = {};\r\nvar steelLineShapesCollection = [];\r\n\r\n// ===== 工具函数：创建钢条 shape =====\r\nfunction createSteelLineShapes(rollnum) {\r\n    const lineShapes = [];\r\n\r\n    for (let i = 0; i < 3; i++) {\r\n        let line = new ht.Shape();\r\n        line.setTag(`steel-${rollnum}-track-${i}`);\r\n        line.setStyle('label', String(rollnum));\r\n        line.setStyle('label.position', \"17\");\r\n        line.setStyle('label.font', \"16px arial, sans-serif\");\r\n        line.setStyle('label.color', \"rgb(255,255,255)\");\r\n        line.setStyle('shape.border.width', 6);\r\n        line.setStyle('shape.border.color', 'red');\r\n        line.setStyle('shape.type', 'polyline');\r\n        line.setStyle('shadow2', true);\r\n        line.setStyle('shadow2.color', \"rgb(255,72,0)\");\r\n        line.setStyle('shadow2.blur', 10);\r\n        line.setStyle('shadow2.offset.x', 0);\r\n        line.setStyle('shadow2.offset.y', 0);\r\n        line.setStyle('2d.movable', false);\r\n        line.setStyle('shape.repeat.image', 'symbols/青岛特钢/扁钢钢坯.json'); // 设置图像并平铺\r\n        line.setLayer('0');\r\n        line.setPoints([]);\r\n        dm.add(line);\r\n        lineShapes.push(line);\r\n    }\r\n\r\n    return lineShapes;\r\n}\r\n\r\n// ===== 工具函数：更新轨道显示 =====\r\nfunction updateSteelLines(rollnum, headX, tailX) {\r\n    const lineShapes = allSteelLines[rollnum];\r\n    if (!lineShapes) return;\r\n\r\n    for (let i = 0; i < 3; i++) {\r\n        const trackStart = i * segmentLength;\r\n        const trackEnd = trackStart + segmentLength;\r\n        const y = getYTrack(i);  // ✅ 动态获取 Y\r\n\r\n        const visibleStart = Math.max(headX, trackStart);\r\n        const visibleEnd = Math.min(tailX, trackEnd);\r\n\r\n        if (visibleStart < visibleEnd) {\r\n            const relativeStartX = visibleStart - trackStart;\r\n            const relativeEndX = visibleEnd - trackStart;\r\n\r\n            lineShapes[i].setPoints([\r\n                { x: relativeStartX, y: y },\r\n                { x: relativeEndX, y: y }\r\n            ]);\r\n        } else {\r\n            lineShapes[i].setPoints([]);\r\n        }\r\n    }\r\n}\r\n\r\n// ===== 动画函数 =====\r\nfunction animateSteelLine(rollnum, fromHeadX, fromTailX, fromLen, toHeadX, toTailX, toLen) {\r\n    const duration = 1000;\r\n    const startTime = performance.now();\r\n\r\n    if (animationFrames[rollnum]) {\r\n        cancelAnimationFrame(animationFrames[rollnum]);\r\n    }\r\n\r\n    function animateFrame(currentTime) {\r\n        const elapsed = currentTime - startTime;\r\n        const t = Math.min(elapsed / duration, 1);\r\n\r\n        const currentHeadX = fromHeadX + (toHeadX - fromHeadX) * t;\r\n        const currentTailX = fromTailX + (toTailX - fromTailX) * t;\r\n\r\n        updateSteelLines(rollnum, currentHeadX, currentTailX);\r\n\r\n        if (t < 1) {\r\n            animationFrames[rollnum] = requestAnimationFrame(animateFrame);\r\n        } else {\r\n            delete animationFrames[rollnum];\r\n        }\r\n    }\r\n\r\n    animationFrames[rollnum] = requestAnimationFrame(animateFrame);\r\n}\r\n\r\n// ===== 添加或更新钢条 =====\r\nfunction drawSteel(rollnum, headX, tailX, len) {\r\n    if (!rollnum) {\r\n        if (allSteelLines[rollnum]) {\r\n            allSteelLines[rollnum].forEach(shape => shape.s('2d.visible', false));\r\n        }\r\n        return;\r\n    }\r\n\r\n    if (!allSteelLines[rollnum]) {\r\n        allSteelLines[rollnum] = createSteelLineShapes(rollnum);\r\n        updateSteelLines(rollnum, headX, tailX);\r\n        allSteelLines[rollnum].forEach(shape => shape.s('2d.visible', true));\r\n        lastPositions[rollnum] = { headX, tailX, len };\r\n        return;\r\n    }\r\n\r\n    allSteelLines[rollnum].forEach(shape => shape.s('2d.visible', true));\r\n\r\n    let last = lastPositions[rollnum] || { headX, tailX, len };\r\n\r\n    // ✅ 后退时直接渲染，不执行动画\r\n    if (tailX < last.tailX) {\r\n        console.log(tailX,last.tailX)\r\n        updateSteelLines(rollnum, headX, tailX);\r\n    } else {\r\n        animateSteelLine(rollnum, last.headX, last.tailX, last.len, headX, tailX, len);\r\n    }\r\n\r\n    lastPositions[rollnum] = { headX, tailX, len };\r\n}\r\n\r\n\r\n// ✅ 更新全局 shape 集合\r\nfunction updateSteelLineShapesCollection() {\r\n    steelLineShapesCollection = [];\r\n\r\n    Object.values(allSteelLines).forEach(shapeList => {\r\n        steelLineShapesCollection.push(...shapeList);\r\n    });\r\n}\r\n\r\n// ===== 主函数：渲染多个钢条数据 =====\r\nfunction renderMultipleSteels(dataList) {\r\n    const newRollnums = new Set();\r\n\r\n    dataList.forEach(([rollnum, start, end, length]) => {\r\n        let headX = Number(end) * 12;\r\n        let tailX = Number(start) * 12;\r\n        let steelLength = Number(start - end) * 12;\r\n\r\n        newRollnums.add(rollnum);\r\n        drawSteel(rollnum, headX, tailX, steelLength);\r\n    });\r\n\r\n    Object.keys(allSteelLines).forEach(rollnum => {\r\n        if (!newRollnums.has(rollnum)) {\r\n            allSteelLines[rollnum].forEach(shape => dm.remove(shape));\r\n            delete allSteelLines[rollnum];\r\n            delete lastPositions[rollnum];\r\n            if (animationFrames[rollnum]) {\r\n                cancelAnimationFrame(animationFrames[rollnum]);\r\n                delete animationFrames[rollnum];\r\n            }\r\n        }\r\n    });\r\n\r\n    updateSteelLineShapesCollection();\r\n}\r\n\r\n// ===== 监听数据变化 =====\r\nvar isUpdating = false;\r\nconst alertSlots = [null, null, null, null, null, null]; // 5 个位置槽位\r\nconst slotCount = alertSlots.length;\r\ndataModel.addDataPropertyChangeListener(function (e) {\r\n    let parent = graphView.dm().getDataByTag('main');\r\n    if (e.property === 'a:rolltable') {\r\n        renderMultipleSteels(e.newValue);\r\n        console.log('📥 收到 rolltable 数据：', e.newValue);\r\n    }\r\n\r\n\r\n    // 消息规则 - 处理War报警数据\r\n    if (e.property === 'a:War') {\r\n        const War = e.newValue;\r\n        console.log('📥 收到 War 数据：', War);\r\n\r\n        // 查找第一个空位\r\n        const freeIndex = alertSlots.findIndex(slot => slot === null);\r\n        if (freeIndex === -1) {\r\n            console.log('⚠️ 已达到最大报警数，忽略新报警');\r\n            return;\r\n        }\r\n\r\n        // 创建节点 - 根据War[2]的值使用不同的创建逻辑\r\n        const newNode = new ht.Node();\r\n        newNode.setLayer('2');\r\n        \r\n        // 根据War[2]的值设置不同的节点样式\r\n        if (War[2] === '0') {\r\n            // War[2]为0时：自动消失类型\r\n            newNode.setImage('symbols/青岛特钢/扁棒剪切线跟踪/报警提醒.json');\r\n            newNode.setSize(240, 80);\r\n            newNode.setPosition(115, 190 + freeIndex * 80);\r\n            newNode.a('text', War[0]);\r\n            newNode.a('text1', War[1]);\r\n            newNode.a('id', War[3]);\r\n            newNode.a('closeType', 0);\r\n            console.log('⏱️ 自动消失型报警已创建');\r\n        } else if (War[2] === '1') {\r\n            // War[2]为1时：手动处理类型\r\n            newNode.setImage('symbols/青岛特钢/扁钢线轧机跟踪/报警提醒确定.json');\r\n            newNode.setSize(240, 100);\r\n            newNode.setPosition(115, 190 + freeIndex * 100);\r\n            newNode.a('text', War[0]);\r\n            newNode.a('text1', War[1]);\r\n            newNode.a('id', War[3]);\r\n            newNode.a('closeType', 0);\r\n            console.log('🔒 手动处理型报警已创建',newNode);\r\n        } else {\r\n            // 未知值时使用默认样式\r\n            newNode.setImage('symbols/青岛特钢/扁钢线轧机跟踪/报警提醒.json');\r\n            newNode.setSize(240, 80);\r\n            newNode.setPosition(115, 190 + freeIndex * 80);\r\n            newNode.a('text', War[0]);\r\n            newNode.a('text1', War[1]);\r\n            newNode.a('id', War[3]);\r\n            newNode.a('closeType', 0);\r\n        }\r\n\r\n        // 添加节点到数据模型\r\n        dataModel.add(newNode);\r\n        newNode.setParent(parent);\r\n        alertSlots[freeIndex] = newNode;\r\n\r\n        // 仅自动消失类型设置消失逻辑\r\n        if (War[2] === '0') {\r\n            // 自动消失逻辑\r\n            setTimeout(() => {\r\n                dataModel.remove(newNode);\r\n                if (alertSlots[freeIndex] === newNode) {\r\n                    alertSlots[freeIndex] = null;\r\n                }\r\n                console.log('⏱️ 自动消失型报警已清除');\r\n            }, 6000);\r\n        }\r\n        // 手动处理类型不设置自动消失逻辑，需要其他方式处理\r\n    }\r\n\r\n    // 处理closeType属性变化\r\n    if (e.property === 'a:closeType') {\r\n        // 当新值为1时，移除当前变化的节点\r\n        if (e.newValue === 1) {\r\n            // e.object通常指向发生属性变化的节点对象\r\n            const targetNode = e.data;\r\n            console.log(targetNode)\r\n            // 检查节点是否存在于数据模型中\r\n            if (targetNode && dataModel.contains(targetNode)) {\r\n                // 从数据模型中移除节点\r\n                dataModel.remove(targetNode);\r\n                \r\n                // 同时从报警槽位中清除\r\n                const nodeIndex = alertSlots.findIndex(slot => slot === targetNode);\r\n                if (nodeIndex !== -1) {\r\n                    alertSlots[nodeIndex] = null;\r\n                    console.log('🔌 已移除closeType触发的节点并释放槽位');\r\n                } else {\r\n                    console.log('🔌 已移除closeType触发的节点');\r\n                }\r\n            } else {\r\n                console.log('⚠️ 尝试移除不存在的节点');\r\n            }\r\n        }\r\n    }\r\n\r\n    //班组信息标签\r\n    if (e.property === 'a:group') {\r\n        const group = e.newValue;\r\n        const groupMap = {\r\n        'A': '甲班',\r\n        'B': '乙班',\r\n        'C': '丙班',\r\n        'D': '丁班'\r\n        };\r\n\r\n        const className = groupMap[group] || '未知班级';\r\n        let groupNode = graphView.dm().getDataByTag('班组');\r\n        groupNode.s('text', className);\r\n        console.log('📥 收到 group 数据：', e.newValue);\r\n    }\r\n\r\n    if (isUpdating) return;\r\n    if (e.property === 's:text') {\r\n        var d = e.data;\r\n        var textValue = d.s('text');\r\n        var numericValue = parseFloat(textValue);\r\n\r\n        isUpdating = true;\r\n        if (d.getDisplayName() === '开关量') {\r\n            if (!isNaN(numericValue)) {\r\n                d.s('text', numericValue === 1 ? '运行' : '停止');\r\n                d.s('text.color', 'rgb(0,204,133)');\r\n            }\r\n        } else {\r\n            if (!isNaN(numericValue)) {\r\n                if (d.getDisplayName() === '整数') {\r\n                    d.s('text', numericValue.toFixed(0));\r\n                }\r\n                if (d.getDisplayName() === '一位数') {\r\n                    d.s('text', numericValue.toFixed(1));\r\n                }\r\n                if (d.getDisplayName() === '二位数') {\r\n                    d.s('text', numericValue.toFixed(2));\r\n                }\r\n                if (d.getDisplayName() === '三位数') {\r\n                    d.s('text', numericValue.toFixed(3));\r\n                }\r\n                if (d.getDisplayName() === '') {\r\n                    d.s('text', numericValue.toFixed(2));\r\n                }\r\n            }\r\n        }\r\n        isUpdating = false;\r\n    }\r\n});\r\n\r\n// ===== 右键菜单逻辑 =====\r\nconst menuItems = [\r\n    { label: \"钢坯轧废\", fordata: 1, action: () => handleMenuClick(\"钢坯轧废\") },\r\n    { label: \"钢坯剔料\", fordata: 1, action: () => handleMenuClick(\"钢坯剔料\") },\r\n    { label: \"跟踪清除\", fordata: 1, action: () => handleMenuClick(\"跟踪清除\") },\r\n    { label: \"查看计划\", fordata: 1, action: () => handleMenuClick(\"查看计划\") },\r\n    { label: \"查看实绩\", fordata: 1, action: () => handleMenuClick(\"查看实绩\") }\r\n];\r\n\r\nconst contextmenu = new ht.widget.ContextMenu(menuItems);\r\ncontextmenu.setVisibleFunc(item => steelLineShapesCollection.includes(graphView.sm().ld()));\r\ncontextmenu.addTo(view);\r\n\r\nfunction handleMenuClick(menuLabel) {\r\n    const data = graphView.sm().ld();\r\n    if (!data || !steelLineShapesCollection.includes(data)) {\r\n        alert(\"未选中合适的节点，点击的菜单项：\" + menuLabel);\r\n        return;\r\n    }\r\n\r\n    const line = data.getAttr(\"Line\") || \"B101\";\r\n    // 轧线钢坯参数\r\n    let slabNo = data.s('label');\r\n\r\n    switch (menuLabel) {\r\n        case \"钢坯轧废\": handleRollChange(\"1\"); break;\r\n        case \"钢坯剔料\": handleRollChange(\"2\"); break;\r\n        case \"跟踪清除\": requestfallowDelete(line,slabNo); break;\r\n        case \"查看计划\": requestPlanView(); break;\r\n        case \"查看实绩\": requestTrueView(); break;\r\n        default: console.warn(\"未处理的菜单项:\", menuLabel);\r\n    }\r\n}\r\n\r\n// // ✅ 接口请求封装（GET）\r\n// function requestGet(url, params = {}) {\r\n//     const query = new URLSearchParams(params).toString();\r\n//     const fullUrl = `${url}?${query}`;\r\n\r\n//     // 添加 return 关键字，返回整个 Promise 链\r\n//     return fetch(fullUrl)\r\n//         .then(response => {\r\n//             if (!response.ok) throw new Error(`HTTP 错误! 状态码: ${response.status}`);\r\n//             return response.json();\r\n//         })\r\n//         .then(data => {\r\n//             if (data.Message) {\r\n//                 showToast(data.Message);\r\n//             }\r\n//             console.log(data);\r\n//             return data; // 确保数据传递到下一个 .then()\r\n//         })\r\n//         .catch(error => {\r\n//             console.error('请求失败:', error);\r\n//             showToast('请求失败，请稍后重试');\r\n//             throw error; // 继续抛出错误，让调用者处理\r\n//         });\r\n// }\r\n\r\n// ✅ 实际接口：钢坯轧废\r\nfunction requeststeelDisable(line,slabNo) {\r\n    const url = \"http://180.10.10.12:9003/api/sdf/sltbusrolllinetrack/delslab\";\r\n    requestGet(url, { Line: line , SlabNo: slabNo });\r\n}\r\n\r\n// ✅ 实际接口：钢坯剔料\r\nfunction requeststeelDelete(line,slabNo) {\r\n    const url = \"http://180.10.10.12:9003/api/sdf/sltbusrolllinetrack/slabenfurnback\";\r\n    requestGet(url, { Line: line , SlabNo: slabNo });\r\n}\r\n\r\n// ✅ 实际接口：跟踪清除\r\nfunction requestfallowDelete(line,slabNo) {\r\n    const url = \"http://180.10.10.12:9003/api/sdf/sltbusrolllinetrack/clearslab\";\r\n    requestGet(url, { Line: line , SlabNo: slabNo });\r\n}\r\n\r\n// ✅ 实际接口：查看计划\r\nfunction requestPlanView() {\r\n    window.open('http://180.10.10.11/#/5360058618240113987/5216491215829125201/4681989552413649962', '_blank'); // 在新标签页打开\r\n}\r\n\r\n// ✅ 实际接口：查看实绩\r\nfunction requestTrueView() {\r\n    window.open('http://180.10.10.11/#/5360058618240113987/5021496965365457308/5462642838515585300', '_blank'); // 在新标签页打开\r\n}\r\n\r\n// ===== 全局状态和弹窗节点 =====\r\nlet isClicked = false;\r\nlet isPreparingClick = false;\r\nlet hoverTimeout, leaveTimeout;\r\nconst virtualNode = graphView.dm().getDataByTag('set');\r\n\r\n// 辅助函数：给虚拟节点赋属性\r\nfunction setVirtualNodeProperty(key, value) {\r\n    if (value != null) {\r\n        virtualNode.a(key, value);\r\n        console.log(`${key} 已赋值:`, value);\r\n    }\r\n}\r\n\r\n// 点击空白处时，自动关闭弹窗并重置状态\r\ngraphView.getView().addEventListener('click', function (e) {\r\n    if (!e.target.closest('.your-popup-element')) {\r\n        virtualNode.s('2d.visible', false);\r\n        isClicked = false;\r\n    }\r\n});\r\n\r\n// ===== 统一绑定所有交互事件 =====\r\ngraphView.mi(e => {\r\n    const data = e.data;\r\n\r\n    // 只处理钢条（tag 以 steel- 开头）\r\n    if (!(data instanceof ht.Shape)) return;\r\n    const tag = data.s('label');\r\n    const rollnum = tag;  // 拆出钢条编号\r\n    if (!rollnum) return;               // 没有编号也不处理\r\n    let canshu = graphView.dm().getDataByTag('ByData');\r\n    let para = graphView.dm().getDataByTag('参数');\r\n    canshu.a('部分选中',rollnum);\r\n    para.s('text',rollnum);\r\n    console.log(rollnum);\r\n    const event = e.event;               // 拿到原生 DOM 事件\r\n    const point = graphView.getLogicalPoint(event); // 关键点：必须传 event！\r\n\r\n    switch (e.kind) {\r\n        case 'downData':\r\n            isPreparingClick = true;\r\n            break;\r\n\r\n        case 'exitData':\r\n            if (isClicked || isPreparingClick) return;\r\n            clearTimeout(hoverTimeout);\r\n            leaveTimeout = setTimeout(() => {\r\n                virtualNode.s('2d.visible', false);\r\n            }, 1000);\r\n            break;\r\n\r\ncase 'clickData':\r\n    // ===== 新增一行：只允许左键点击弹窗，右键点击直接 return =====\r\n    if (event.button !== 0) return; \r\n\r\n    isClicked = true;\r\n    isPreparingClick = false;\r\n    clearTimeout(hoverTimeout);\r\n    clearTimeout(leaveTimeout);\r\n\r\n    virtualNode.setPosition(point.x + 80, point.y + 80);\r\n    virtualNode.s('2d.visible', true);\r\n    let canshu = graphView.dm().getDataByTag('ByData');\r\n    canshu.a('部分选中',rollnum);\r\n    const Line = \"B101\";  // 线路编码（固定）\r\n    const url = `http://180.10.10.12:9003/api/sdf/sltbusrolllinetrack/mousehover`\r\n              + `?Line=${Line}&RollPieceID=${rollnum}`;\r\n    requestGet(url)  // 如果有参数，解开注释并传入\r\n        .then(json => {\r\n            const item = json?.Data?.[0];\r\n            if (item) {\r\n                setVirtualNodeProperty('ROLL_PLAN_NO', item.ROLL_PLAN_NO);\r\n                setVirtualNodeProperty('HEAT_NO', item.HEAT_NO);\r\n                setVirtualNodeProperty('SG_SIGN', item.SG_SIGN);\r\n                setVirtualNodeProperty('IN_MAT_LEN', item.IN_MAT_LEN);\r\n                setVirtualNodeProperty('TOTAL_MAT_NUM', item.TOTAL_MAT_NUM);\r\n                setVirtualNodeProperty('OUT_MAT_NO', item.OUT_MAT_NO);\r\n            } else {\r\n                console.error('返回数据不正确');\r\n            }\r\n        })\r\n        .catch(err => {\r\n            console.error('请求失败:', err);\r\n            virtualNode.s('2d.visible', false); // 出错时隐藏弹窗\r\n            isClicked = false;\r\n        });\r\n    break;\r\n\r\n    }\r\n});\r\n\r\n//再次确认\r\nfunction handleRollChange(type) {\r\n    // 获取接口类型\r\n    var bydata = graphView.dm().getDataByTag('ByData');\r\n    if(type === \"1\"){\r\n    bydata.a('datetext',\"1\")\r\n    }\r\n    if(type === \"2\"){\r\n    bydata.a('datetext',\"2\")    \r\n    }\r\n    // 检查是否有选中的数据\r\n    const data = graphView.sm().ld();\r\n    if (!data) {\r\n        alert(\"请先选择一个节点\");\r\n        return;\r\n    }\r\n    // 获取道次修改节点\r\n    var rollchange = graphView.dm().getDataByTag('再次确认');\r\n\r\n    // 检查节点是否存在\r\n    if (!rollchange) {\r\n        console.error(\"未找到标签为 '再次确认' 的数据项\");\r\n        alert(\"再次确认功能暂时不可用\");\r\n        return;\r\n    }\r\n\r\n    // 如果是右键菜单点击，可能需要从 contextmenu 事件中获取位置\r\n    const point = data.getPosition();\r\n    rollchange.setPosition(point.x - 100, point.y - 100);\r\n    rollchange.s('2d.visible', true);\r\n}\r\n\r\n// ✅ 正确使用方式\r\nrequestGet(\"http://180.10.10.12:9003/api/sdf/sltdatabnormal/getfields\")\r\n    .then(data => {\r\n        let node = graphView.dm().getDataByTag('异常类型');\r\n        console.log(data.DataDic.AbnormalType);\r\n        node.a('ht.dataSource', data.DataDic.AbnormalType);\r\n    });\r\n\r\ndm.getDatas().each(node => trySetDoubleClickHandlerForNode(node));\r\n\r\n//点位名称为流动管道，可新增参数修改方向速度，示例：dm,-3\r\nstartFlowAnimation(dm);\r\n\r\n/**\r\n * 实时曲线数据采集器 - 支持多图表多数据源（统一时间轴版本）\r\n * 主要功能：\r\n * 1. 从指定节点属性获取实时数据\r\n * 2. 使用共享时间戳确保所有数据系列时间对齐\r\n * 3. 滑动时间窗口算法管理数据点\r\n * 4. 支持定时器的启动/停止控制\r\n */\r\nclass DataCollector {\r\n  constructor(graphView) {\r\n    this.graphView = graphView;\r\n    this.timer = null;           // 定时器句柄\r\n    this.isRunning = false;      // 运行状态\r\n    this.currentTimestamp = null; // 统一时间戳\r\n    \r\n    // 图表配置（支持多个图表）\r\n    this.chartConfig = {\r\n      'line': {\r\n        chartTag: 'line',\r\n        propertyMap: {\r\n          'tip1': { dataArray: [], seriesIndex: 0 },\r\n          'tip2': { dataArray: [], seriesIndex: 1 },\r\n          'tip3': { dataArray: [], seriesIndex: 2 }\r\n        },\r\n        getNode: () => this.graphView.dm().getDataByTag('line')\r\n      },\r\n      'date': {\r\n        chartTag: 'date',\r\n        propertyMap: {\r\n          'tip1': { dataArray: [], seriesIndex: 0 },\r\n          'tip2': { dataArray: [], seriesIndex: 1 },\r\n          'tip3': { dataArray: [], seriesIndex: 2 },\r\n          'tip4': { dataArray: [], seriesIndex: 3 },\r\n          'tip5': { dataArray: [], seriesIndex: 4 },\r\n          'tip6': { dataArray: [], seriesIndex: 5 }\r\n        },\r\n        getNode: () => this.graphView.dm().getDataByTag('date')\r\n      }\r\n    };\r\n  }\r\n\r\n  /**\r\n   * 启动数据采集\r\n   */\r\n  start() {\r\n    if (this.isRunning) {\r\n      console.warn('[DataCollector] 已在运行中，无需重复启动');\r\n      return;\r\n    }\r\n    \r\n    this.isRunning = true;\r\n    console.log('[DataCollector] 启动数据采集，频率: 1秒/次');\r\n    \r\n    // 使用requestAnimationFrame优化时间戳获取\r\n    this.timer = setInterval(() => {\r\n      requestAnimationFrame(() => {\r\n        this.currentTimestamp = Date.now(); // 记录统一时间戳\r\n        try {\r\n          this.updateAllCharts();\r\n        } catch (error) {\r\n          console.error('[DataCollector] 更新图表时出错:', error);\r\n        }\r\n      });\r\n    }, 1000);\r\n  }\r\n\r\n  /**\r\n   * 停止数据采集并释放资源\r\n   */\r\n  stop() {\r\n    if (!this.isRunning) return;\r\n    \r\n    clearInterval(this.timer);\r\n    this.timer = null;\r\n    this.isRunning = false;\r\n    console.log('[DataCollector] 已停止数据采集');\r\n  }\r\n\r\n  /**\r\n   * 从图表节点获取指定属性值并确保为数值类型\r\n   * @param {object} chart - 图表配置\r\n   * @param {string} propName - 属性名称\r\n   * @returns {number} - 转换后的数值类型，无效值返回0\r\n   */\r\n  fetchDiamValue(chart, propName) {\r\n    const chartNode = chart.getNode();\r\n    if (!chartNode) {\r\n      console.warn(`[DataCollector] 找不到图表节点: ${chart.chartTag}`);\r\n      return 0;\r\n    }\r\n    \r\n    const rawValue = chartNode.a(propName);\r\n    \r\n    // 处理特殊值\r\n    if (rawValue === null || rawValue === undefined || rawValue === '') {\r\n      return 0;\r\n    }\r\n    \r\n    // 处理布尔值\r\n    if (typeof rawValue === 'boolean') {\r\n      return rawValue ? 1 : 0;\r\n    }\r\n    \r\n    // 处理字符串\r\n    if (typeof rawValue === 'string') {\r\n      const parsed = parseFloat(rawValue);\r\n      if (!isNaN(parsed)) {\r\n        return rawValue.endsWith('%') ? parsed / 100 : parsed;\r\n      }\r\n      console.warn(`[DataCollector] 无法解析属性 ${propName} 的值: \"${rawValue}\"`);\r\n      return 0;\r\n    }\r\n    \r\n    // 处理数值类型\r\n    if (typeof rawValue === 'number') {\r\n      return isFinite(rawValue) ? rawValue : 0;\r\n    }\r\n    \r\n    // 处理对象类型\r\n    if (typeof rawValue === 'object' && rawValue !== null) {\r\n      if (rawValue.value !== undefined) {\r\n        return this.fetchDiamValue(chart, rawValue.value);\r\n      }\r\n      console.warn(`[DataCollector] 不支持的对象类型属性 ${propName}:`, rawValue);\r\n      return 0;\r\n    }\r\n    \r\n    console.warn(`[DataCollector] 未知类型的属性 ${propName}: ${typeof rawValue}`);\r\n    return 0;\r\n  }\r\n\r\n  /**\r\n   * 更新所有图表的数据\r\n   */\r\n  updateAllCharts() {\r\n    const timestamp = this.currentTimestamp;\r\n    \r\n    Object.values(this.chartConfig).forEach(chart => {\r\n      const chartNode = chart.getNode();\r\n      if (!chartNode) return;\r\n      \r\n      const series = chartNode.a('ht.series');\r\n      if (!series || !Array.isArray(series)) {\r\n        console.error(`[DataCollector] 图表 ${chart.chartTag} 系列数据异常`);\r\n        return;\r\n      }\r\n      \r\n      // 批量更新数据（使用统一时间戳）\r\n      Object.entries(chart.propertyMap).forEach(([propName, propConfig]) => {\r\n        const newValue = this.fetchDiamValue(chart, propName);\r\n        \r\n        // 使用共享时间戳更新数据\r\n        propConfig.dataArray = this.updateTimeSeriesWithSharedTimestamp(\r\n          propConfig.dataArray,\r\n          timestamp,\r\n          newValue\r\n        );\r\n        \r\n        // 检查系列索引有效性\r\n        if (propConfig.seriesIndex >= series.length) {\r\n          console.error(`[DataCollector] 系列索引越界: ${propConfig.seriesIndex} (最大值: ${series.length-1})`);\r\n          return;\r\n        }\r\n        \r\n        // 更新图表数据（创建新数组确保引用变化）\r\n        series[propConfig.seriesIndex].data = [...propConfig.dataArray];\r\n      });\r\n      \r\n      // 强制触发图表重绘\r\n      chartNode.invalidate();\r\n    });\r\n  }\r\n\r\n  /**\r\n   * 使用共享时间戳更新时间序列数据\r\n   * @param {Array} seriesData - 数据数组 [ [时间戳1, 值1], [时间戳2, 值2], ... ]\r\n   * @param {number} timestamp - 共享时间戳\r\n   * @param {number} value - 数据值\r\n   * @param {number} timeWindowMs - 时间窗口大小（毫秒）\r\n   * @param {number} maxPoints - 最大数据点数\r\n   * @returns {Array} 更新后的数据数组\r\n   */\r\n  updateTimeSeriesWithSharedTimestamp(seriesData, timestamp, value, timeWindowMs = 5 * 60 * 1000, maxPoints = 300) {\r\n    // 添加新数据点（使用统一时间戳）\r\n    seriesData.push([timestamp, value]);\r\n    \r\n    // 清理过期数据\r\n    const cutoff = timestamp - timeWindowMs;\r\n    let i = 0;\r\n    \r\n    while (i < seriesData.length && seriesData[i][0] < cutoff) {\r\n      i++;\r\n    }\r\n    \r\n    if (i > 0) {\r\n      seriesData.splice(0, i); // 删除过期数据\r\n    }\r\n    \r\n    // 限制最大数据点数\r\n    if (seriesData.length > maxPoints) {\r\n      seriesData.splice(0, seriesData.length - maxPoints);\r\n    }\r\n    \r\n    return seriesData;\r\n  }\r\n}\r\n\r\n// 使用示例\r\nconst dataCollector = new DataCollector(graphView);\r\ndataCollector.start(); // 启动数据采集\r\n\r\n// 当不再需要时停止\r\n// dataCollector.stop();}"
+  },
+  "d": [
+    {
+      "c": "ht.Node",
+      "i": 9867,
+      "p": {
+        "position": {
+          "x": 960,
+          "y": 540
+        },
+        "width": 1920,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "shape": "rect",
+        "shape.background": "rgb(31,93,156)",
+        "shape.border.color": "#979797",
+        "fullscreen.lock": "h",
+        "fullscreen.gap": 0,
+        "2d.editable": false,
+        "2d.movable": false,
+        "fullscreen": "fill",
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 9868,
+      "p": {
+        "displayName": "整体",
+        "parent": {
+          "__i": 9867
+        },
+        "host": {
+          "__i": 9867
+        },
+        "position": {
+          "x": 960,
+          "y": 540.25
+        },
+        "width": 1920,
+        "height": 1080.5
+      },
+      "s": {
+        "layout.h": "leftright",
+        "layout.v": "topbottom",
+        "2d.selectable": false,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 9869,
+      "p": {
+        "displayName": "背景",
+        "parent": {
+          "__i": 9868
+        },
+        "position": {
+          "x": 960,
+          "y": 540.25
+        },
+        "width": 1920,
+        "height": 1080.5
+      },
+      "s": {
+        "2d.selectable": false,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9870,
+      "p": {
+        "displayName": "bg",
+        "parent": {
+          "__i": 9869
+        },
+        "image": "symbols/tenant/zwsm-dpymsj/参考/设计稿/bg.json",
+        "position": {
+          "x": 960,
+          "y": 540
+        },
+        "width": 1920,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "leftright",
+        "layout.v": "topbottom",
+        "fullscreen.lock": "v",
+        "fullscreen.gap": 0,
+        "opacity": 0.5,
+        "2d.movable": false,
+        "2d.selectable": false
+      },
+      "a": {
+        "ht.blueprintId": "173708666751425871",
+        "ht.blueprint": {
+          "p": [
+            321.16251,
+            174
+          ],
+          "c": [
+            {
+              "i": "event$init",
+              "p": [
+                453.16251,
+                163
+              ],
+              "c": [
+                {
+                  "i": "action$playSymbol",
+                  "p": [
+                    640.16251,
+                    163
+                  ],
+                  "c": [
+                    {
+                      "i": "result$input",
+                      "p": [
+                        781.16251,
+                        179
+                      ],
+                      "c": [],
+                      "v": null
+                    }
+                  ]
+                },
+                {
+                  "i": "action$playAnimation",
+                  "p": [
+                    603.16251,
+                    257
+                  ],
+                  "c": [
+                    {
+                      "i": "fileName$未命名_0",
+                      "p": [
+                        744.16251,
+                        258
+                      ],
+                      "c": [
+                        {
+                          "i": "result$input",
+                          "p": [
+                            904.16251,
+                            251
+                          ],
+                          "c": [],
+                          "v": null
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "a": []
+        }
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9871,
+      "p": {
+        "displayName": "左竖",
+        "parent": {
+          "__i": 9869
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": 0,
+          "y": 540
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "width": 800,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "left",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9872,
+      "p": {
+        "displayName": "左景",
+        "parent": {
+          "__i": 9869
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": 0,
+          "y": 540
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "width": 320,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "left",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9873,
+      "p": {
+        "displayName": "右竖",
+        "parent": {
+          "__i": 9869
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": 1920,
+          "y": 540
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "scale": {
+          "x": -1,
+          "y": 1
+        },
+        "width": 800,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "right",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9874,
+      "p": {
+        "displayName": "右景",
+        "parent": {
+          "__i": 9869
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
+        "position": {
+          "x": 1920,
+          "y": 540
+        },
+        "anchor": {
+          "x": 0,
+          "y": 0.5
+        },
+        "scale": {
+          "x": -1,
+          "y": 1
+        },
+        "width": 320,
+        "height": 1080,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "right",
+        "layout.v": "topbottom",
+        "pixelPerfect": false,
+        "body.color": "rgb(5,33,71)",
+        "opacity": 0.6,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9875,
+      "p": {
+        "displayName": "左右",
+        "parent": {
+          "__i": 9869
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/左右.json",
+        "position": {
+          "x": 1913,
+          "y": 573
+        },
+        "scale": {
+          "x": -1,
+          "y": 1
+        },
+        "width": 14,
+        "height": 1015,
+        "tall": 20
+      },
+      "s": {
+        "2d.editable": false,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9876,
+      "p": {
+        "displayName": "左右",
+        "parent": {
+          "__i": 9869
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/左右.json",
+        "position": {
+          "x": 7,
+          "y": 573
+        },
+        "width": 14,
+        "height": 1015,
+        "tall": 20
+      },
+      "s": {
+        "2d.editable": false,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9877,
+      "p": {
+        "displayName": "下方装饰",
+        "parent": {
+          "__i": 9869
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/底部装饰.json",
+        "position": {
+          "x": 960,
+          "y": 1080
+        },
+        "anchor": {
+          "x": 0.5,
+          "y": 1
+        },
+        "width": 1920,
+        "height": 400,
+        "tall": 20
+      },
+      "s": {
+        "layout.h": "leftright",
+        "layout.v": "bottom",
+        "pixelPerfect": false,
+        "2d.editable": false,
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 9878,
+      "p": {
+        "displayName": "顶部框",
+        "parent": {
+          "__i": 9868
+        },
+        "position": {
+          "x": 960,
+          "y": 33
+        },
+        "width": 1920,
+        "height": 66
+      },
+      "s": {
+        "2d.selectable": false,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9879,
+      "p": {
+        "displayName": "标题2 2",
+        "parent": {
+          "__i": 9878
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/标题2 2.json",
+        "position": {
+          "x": 960,
+          "y": 33
+        },
+        "width": 1920,
+        "height": 66,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9880,
+      "p": {
+        "parent": {
+          "__i": 9878
+        },
+        "dataBindings": {
+          "s": {
+            "text": {
+              "id": "TextTag/AriEplat/Common/DatetimeStrss"
+            }
+          }
+        },
+        "position": {
+          "x": 1565,
+          "y": 32
+        },
+        "width": 0.01,
+        "height": 0.01,
+        "tall": 20
+      },
+      "s": {
+        "text": "2025-06-13 15:03:49",
+        "text.color": "rgb(255,255,255)",
+        "text.font": "18px arial, sans-serif",
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9881,
+      "p": {
+        "displayName": "班组:",
+        "parent": {
+          "__i": 9878
+        },
+        "position": {
+          "x": 1455,
+          "y": 32
+        },
+        "width": 0.01,
+        "height": 0.01,
+        "tall": 20
+      },
+      "s": {
+        "text": "班组:",
+        "text.color": "rgb(255,255,255)",
+        "text.font": "18px arial, sans-serif",
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9882,
+      "p": {
+        "displayName": "信息化综合应用",
+        "parent": {
+          "__i": 9878
+        },
+        "position": {
+          "x": 961,
+          "y": 36
+        },
+        "width": 0.09998,
+        "height": 0.09976,
+        "tall": 20
+      },
+      "s": {
+        "text": "大棒数字产线",
+        "type": "text",
+        "text.align": "center",
+        "text.color": "rgb(0,0,0)",
+        "text.font": "bold 28px Arial",
+        "opacity": 1,
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "select.padding": 0
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9883,
+      "p": {
+        "displayName": "信息化综合应用",
+        "parent": {
+          "__i": 9878
+        },
+        "position": {
+          "x": 960,
+          "y": 35
+        },
+        "width": 180,
+        "tall": 20
+      },
+      "s": {
+        "text": "大棒数字产线",
+        "type": "text",
+        "text.align": "center",
+        "text.color": "rgb(247,247,247)",
+        "text.font": "bold 28px Arial",
+        "opacity": 1,
+        "text.gradient.pack": [
+          "linear",
+          0.5,
+          1.30958,
+          0.5,
+          0,
+          0,
+          "#45C4F9",
+          1,
+          "white"
+        ],
+        "2d.movable": false,
+        "interactive": true,
+        "onDoubleClick": "__ht__function(event, data, view) {// 检查是否全屏\r\n  const isFullScreen =\r\n    document.fullscreenElement ||\r\n    document.webkitFullscreenElement ||\r\n    document.mozFullScreenElement ||\r\n    document.msFullscreenElement;\r\n\r\n  if (isFullScreen) {\r\n    // 退出全屏\r\n    if (document.exitFullscreen) {\r\n      document.exitFullscreen();\r\n    } else if (document.webkitExitFullscreen) {\r\n      document.webkitExitFullscreen();\r\n    } else if (document.mozCancelFullScreen) {\r\n      document.mozCancelFullScreen();\r\n    } else if (document.msExitFullscreen) {\r\n      document.msExitFullscreen();\r\n    }\r\n  } else {\r\n    // 进入全屏\r\n    const el = document.documentElement;\r\n    if (el.requestFullscreen) {\r\n      el.requestFullscreen();\r\n    } else if (el.webkitRequestFullscreen) {\r\n      el.webkitRequestFullscreen();\r\n    } else if (el.mozRequestFullScreen) {\r\n      el.mozRequestFullScreen();\r\n    } else if (el.msRequestFullscreen) {\r\n      el.msRequestFullscreen();\r\n    }\r\n  }}",
+        "select.width": 0,
+        "select.padding": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9884,
+      "p": {
+        "displayName": "logo_jztz_白",
+        "parent": {
+          "__i": 9878
+        },
+        "image": "assets/AriIconLib/logo/logo_jztz_白.svg",
+        "position": {
+          "x": 1850,
+          "y": 30
+        },
+        "width": 100,
+        "height": 30,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Shape",
+      "i": 9885,
+      "p": {
+        "parent": {
+          "__i": 9878
+        },
+        "position": {
+          "x": 1780,
+          "y": 30
+        },
+        "width": 0.5,
+        "height": 25,
+        "tall": 20,
+        "segments": {
+          "__a": [
+            1,
+            2
+          ]
+        },
+        "points": {
+          "__a": [
+            {
+              "x": 1780,
+              "y": 17.50001
+            },
+            {
+              "x": 1780,
+              "y": 42.50001
+            }
+          ]
+        }
+      },
+      "s": {
+        "shape.background": null,
+        "shape.border.color": "rgb(156,225,255)",
+        "shape.border.width": 1,
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Text",
+      "i": 9886,
+      "p": {
+        "displayName": "班组",
+        "parent": {
+          "__i": 9878
+        },
+        "tag": "班组",
+        "position": {
+          "x": 1505,
+          "y": 32
+        },
+        "width": 0.01,
+        "height": 0.01,
+        "tall": 20
+      },
+      "s": {
+        "text": "甲班",
+        "text.color": "rgb(255,255,255)",
+        "text.font": "18px arial, sans-serif",
+        "2d.movable": false,
+        "select.width": 0,
+        "interactive": true,
+        "2d.selectable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9887,
+      "p": {
+        "displayName": "DYTG_LOGO",
+        "parent": {
+          "__i": 9878
+        },
+        "image": "assets/冶钢看板/DYTG_LOGO.png",
+        "position": {
+          "x": 200,
+          "y": 30
+        },
+        "width": 375,
+        "height": 35,
+        "tall": 20
+      },
+      "s": {
+        "2d.selectable": false,
+        "2d.movable": false,
+        "pixelPerfect": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 9888,
+      "p": {
+        "displayName": "roll-y1",
+        "parent": {
+          "__i": 9868
+        },
+        "position": {
+          "x": 960,
+          "y": 286
+        },
+        "width": 1800,
+        "height": 7
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9889,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "tag": "roll-y1",
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 101.58259,
+          "y": 286
+        },
+        "width": 83.16519,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9890,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 183.96767,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9891,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 265.4309,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9892,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 345.26134,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9893,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 426.67885,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9894,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 508.09637,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9895,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 589.7239,
+          "y": 286
+        },
+        "width": 81.74615,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9896,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 671.30574,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9897,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 752.72326,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9898,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 834.14077,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9899,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 915.60398,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9900,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 996.39229,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9901,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 1077.80979,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9902,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 1159.22732,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9903,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 1240.69054,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9904,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 1321.47884,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9905,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 1402.89635,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9906,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 1484.31386,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9907,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 1565.77709,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9908,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 1646.5654,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9909,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 1727.9829,
+          "y": 286
+        },
+        "width": 81.41751,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9910,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9888
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 1814.03122,
+          "y": 286
+        },
+        "width": 91.93754,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 9911,
+      "p": {
+        "displayName": "异常信息",
+        "parent": {
+          "__i": 9868
+        },
+        "tag": "errormes",
+        "position": {
+          "x": 967.98124,
+          "y": 856.7147
+        },
+        "anchor": {
+          "x": 0.50312,
+          "y": 0.75097
+        },
+        "width": 1835.16811,
+        "height": 639.4898
+      },
+      "s": {
+        "2d.selectable": false,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9912,
+      "p": {
+        "parent": {
+          "__i": 9911
+        },
+        "image": "symbols/大冶特钢中棒/框体.json",
+        "position": {
+          "x": 1579.78745,
+          "y": 865.96412
+        },
+        "width": 600.11208,
+        "height": 300,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true,
+        "select.width": 0,
+        "2d.movable": false,
+        "select.padding": 0
+      },
+      "a": {
+        "name": "轮廓曲线",
+        "显示": false,
+        "dataModel": {
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":10004,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":10005,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":10006,\"p\":{\"displayName\":\"年\"}}]}"
+        },
+        "visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9913,
+      "p": {
+        "parent": {
+          "__i": 9911
+        },
+        "image": "symbols/大冶特钢中棒/框体.json",
+        "position": {
+          "x": 962.25944,
+          "y": 865.96412
+        },
+        "width": 600.11208,
+        "height": 300,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true,
+        "select.width": 0,
+        "2d.movable": false,
+        "select.padding": 0
+      },
+      "a": {
+        "name": "测径曲线",
+        "显示": false,
+        "dataModel": {
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":10007,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":10008,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":10009,\"p\":{\"displayName\":\"年\"}}]}"
+        },
+        "visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9914,
+      "p": {
+        "displayName": "timeAxisChart",
+        "parent": {
+          "__i": 9911
+        },
+        "tag": "date",
+        "dataBindings": {
+          "a": {
+            "tip1": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0040_copied"
+            },
+            "tip2": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0088_copied"
+            },
+            "tip3": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0090_copied"
+            },
+            "tip4": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0131_copied"
+            },
+            "tip5": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0181_copied"
+            },
+            "tip6": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0197_copied"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/timeAxisChart.json",
+        "position": {
+          "x": 961.41768,
+          "y": 878.69254
+        },
+        "width": 550.10274,
+        "height": 265.71429,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "2d.movable": false,
+        "select.padding": 0
+      },
+      "a": {
+        "ht.series": [
+          {
+            "type": "line",
+            "name": "曲线1",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          },
+          {
+            "type": "line",
+            "name": "曲线2",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          },
+          {
+            "type": "line",
+            "name": "曲线3",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          }
+        ],
+        "ht.xAxis": [
+          {
+            "axisLabel": {
+              "visible": true,
+              "avoidLabelOverlap": true,
+              "font": "12px D-DIN-PRO-Medium,D-DIN-PRO-500-Medium",
+              "color": "rgba(255,255,255,0.9)",
+              "axisGap": 4,
+              "offsetX": 0,
+              "offsetY": 0,
+              "lineHeight": 0,
+              "shadowBlur": 6,
+              "shadowOffsetX": 3,
+              "shadowOffsetY": 3
+            },
+            "axisTick": {
+              "show": true,
+              "color": "rgba(255,255,255,0.9)"
+            },
+            "axisLine": {
+              "show": true,
+              "color": "rgba(255,255,255,0.9)"
+            }
+          }
+        ],
+        "ht.yAxis": [
+          {
+            "axisLabel": {
+              "visible": true,
+              "avoidLabelOverlap": true,
+              "font": "12px Arial",
+              "color": "rgba(255,255,255,0.9)",
+              "angle": 0,
+              "axisGap": 6,
+              "offsetX": 0,
+              "offsetY": 0,
+              "shadowBlur": 6,
+              "shadowOffsetX": 3,
+              "shadowOffsetY": 3
+            },
+            "axisTick": {
+              "visible": true,
+              "inside": true,
+              "color": "rgb(255,255,255)",
+              "interval": 0,
+              "length": 3,
+              "width": 1,
+              "dashOffset": 0
+            },
+            "axisLine": {
+              "visible": true,
+              "color": "rgba(255, 255, 255, 1)",
+              "width": 1,
+              "dashOffset": 0,
+              "onZero": true
+            },
+            "splitLine": {
+              "show": true,
+              "color": "rgba(145,168,191,0.2)",
+              "width": 1,
+              "pattern": [
+                2,
+                2
+              ]
+            },
+            "unitLabelStyle": {
+              "label": "t",
+              "align": "left",
+              "vAlign": "top",
+              "offsetX": 11,
+              "offsetY": -8,
+              "color": "rgb(134,162,198)",
+              "shadowBlur": 6,
+              "shadowOffsetX": 3,
+              "shadowOffsetY": 3
+            },
+            "max": 1200,
+            "min": 500
+          }
+        ],
+        "ht.backgroundIncludeAxis": true
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9915,
+      "p": {
+        "displayName": "timeAxisChart",
+        "parent": {
+          "__i": 9911
+        },
+        "tag": "line",
+        "dataBindings": {
+          "a": {
+            "tip1": {
+              "id": "NumTag/CaliperFlat/扁钢测径仪/CaliperFlat_WidthAct_copied"
+            },
+            "tip2": {
+              "id": "NumTag/CaliperFlat/扁钢测径仪/CaliperFlat_HeightAct_copied"
+            },
+            "tip3": {
+              "id": "NumTag/CaliperFlat/扁钢测径仪/CaliperFlat_AreaAct_copied"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/timeAxisChart.json",
+        "position": {
+          "x": 1579.78744,
+          "y": 878.69254
+        },
+        "width": 540.10087,
+        "height": 265.71429,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "2d.movable": false,
+        "select.padding": 0
+      },
+      "a": {
+        "ht.series": [
+          {
+            "yAxisIndex": 0,
+            "type": "line",
+            "name": "宽度实绩",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          },
+          {
+            "yAxisIndex": 1,
+            "type": "line",
+            "name": "厚度实绩",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          },
+          {
+            "yAxisIndex": 2,
+            "type": "line",
+            "name": "面积实绩",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          }
+        ],
+        "ht.xAxis": [
+          {
+            "axisLabel": {
+              "visible": true,
+              "avoidLabelOverlap": true,
+              "font": "12px D-DIN-PRO-Medium,D-DIN-PRO-500-Medium",
+              "color": "rgba(255,255,255,0.9)",
+              "axisGap": 4,
+              "offsetX": 0,
+              "offsetY": 0,
+              "lineHeight": 0,
+              "shadowBlur": 6,
+              "shadowOffsetX": 3,
+              "shadowOffsetY": 3
+            },
+            "axisTick": {
+              "show": true,
+              "color": "rgba(255,255,255,0.9)"
+            },
+            "axisLine": {
+              "show": true,
+              "color": "rgba(255,255,255,0.9)"
+            }
+          }
+        ],
+        "ht.yAxis": [
+          {
+            "axisLabel": {
+              "rotate": 0,
+              "show": true,
+              "font": "12px arial, sans-serif",
+              "color": "rgb(83,136,185)",
+              "offsetX": 0,
+              "offsetY": 0
+            },
+            "axisTick": {
+              "show": false
+            },
+            "axisLine": {
+              "show": false,
+              "color": "rgba(0,128,255,0.50)"
+            },
+            "splitLine": {
+              "show": true,
+              "color": "rgba(255,255,255,0.10)",
+              "pattern": [
+                4,
+                4
+              ]
+            }
+          },
+          {
+            "axisLabel": {
+              "rotate": 0,
+              "show": true,
+              "font": "12px arial, sans-serif",
+              "color": "rgb(83,136,185)",
+              "offsetX": 0,
+              "offsetY": 0
+            },
+            "axisTick": {
+              "show": false
+            },
+            "axisLine": {
+              "show": false,
+              "color": "rgba(0,128,255,0.50)"
+            },
+            "splitLine": {
+              "show": true,
+              "color": "rgba(255,255,255,0.10)",
+              "pattern": [
+                4,
+                4
+              ]
+            }
+          },
+          {
+            "axisLabel": {
+              "rotate": 0,
+              "show": true,
+              "font": "12px arial, sans-serif",
+              "color": "rgb(83,136,185)",
+              "offsetX": 0,
+              "offsetY": 0
+            },
+            "axisTick": {
+              "show": false
+            },
+            "axisLine": {
+              "show": false,
+              "color": "rgba(0,128,255,0.50)"
+            },
+            "splitLine": {
+              "show": true,
+              "color": "rgba(255,255,255,0.10)",
+              "pattern": [
+                4,
+                4
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9916,
+      "p": {
+        "parent": {
+          "__i": 9911
+        },
+        "image": "symbols/大冶特钢中棒/框体.json",
+        "position": {
+          "x": 344.73142,
+          "y": 865.96412
+        },
+        "width": 600.11208,
+        "height": 300,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true,
+        "select.width": 0,
+        "2d.movable": false,
+        "select.padding": 0
+      },
+      "a": {
+        "name": "温度趋势",
+        "显示": false,
+        "dataModel": {
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":10010,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":10011,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":10012,\"p\":{\"displayName\":\"年\"}}]}"
+        },
+        "visible": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9917,
+      "p": {
+        "displayName": "timeAxisChart",
+        "parent": {
+          "__i": 9911
+        },
+        "dataBindings": {
+          "a": {
+            "tip1": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0040_copied_copied"
+            },
+            "tip2": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0088_copied_copied"
+            },
+            "tip3": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0090_copied_copied"
+            },
+            "tip4": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0131_copied_copied"
+            },
+            "tip5": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0181_copied_copied"
+            },
+            "tip6": {
+              "id": "NumTag/KepServerFlat/扁钢轧线/CS_03_01_AI0197_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/timeAxisChart.json",
+        "position": {
+          "x": 344.73142,
+          "y": 878.69254
+        },
+        "width": 550.10274,
+        "height": 265.71429,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "2d.movable": false,
+        "select.padding": 0
+      },
+      "a": {
+        "ht.series": [
+          {
+            "type": "line",
+            "name": "H1架轧机前温度",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          },
+          {
+            "type": "line",
+            "name": "H6架轧机前温度",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          },
+          {
+            "type": "line",
+            "name": "RTWZ1辊道后温度",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          },
+          {
+            "type": "line",
+            "name": "SH3飞剪前温度",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          },
+          {
+            "type": "line",
+            "name": "V21架轧机后温度",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          },
+          {
+            "type": "line",
+            "name": "RTWZ3辊道出口温度",
+            "itemStyle": {
+              "size": 0
+            },
+            "smooth": true,
+            "data": []
+          }
+        ],
+        "ht.xAxis": [
+          {
+            "axisLabel": {
+              "visible": true,
+              "avoidLabelOverlap": true,
+              "font": "12px D-DIN-PRO-Medium,D-DIN-PRO-500-Medium",
+              "color": "rgba(255,255,255,0.9)",
+              "axisGap": 4,
+              "offsetX": 0,
+              "offsetY": 0,
+              "lineHeight": 0,
+              "shadowBlur": 6,
+              "shadowOffsetX": 3,
+              "shadowOffsetY": 3
+            },
+            "axisTick": {
+              "show": true,
+              "color": "rgba(255,255,255,0.9)"
+            },
+            "axisLine": {
+              "show": true,
+              "color": "rgba(255,255,255,0.9)"
+            }
+          }
+        ],
+        "ht.yAxis": [
+          {
+            "axisLabel": {
+              "visible": true,
+              "avoidLabelOverlap": true,
+              "font": "12px Arial",
+              "color": "rgba(255,255,255,0.9)",
+              "angle": 0,
+              "axisGap": 6,
+              "offsetX": 0,
+              "offsetY": 0,
+              "shadowBlur": 6,
+              "shadowOffsetX": 3,
+              "shadowOffsetY": 3
+            },
+            "axisTick": {
+              "visible": true,
+              "inside": true,
+              "color": "rgb(255,255,255)",
+              "interval": 0,
+              "length": 3,
+              "width": 1,
+              "dashOffset": 0
+            },
+            "axisLine": {
+              "visible": true,
+              "color": "rgba(255, 255, 255, 1)",
+              "width": 1,
+              "dashOffset": 0,
+              "onZero": true
+            },
+            "splitLine": {
+              "show": true,
+              "color": "rgba(145,168,191,0.2)",
+              "width": 1,
+              "pattern": [
+                2,
+                2
+              ]
+            },
+            "unitLabelStyle": {
+              "label": "t",
+              "align": "left",
+              "vAlign": "top",
+              "offsetX": 11,
+              "offsetY": -8,
+              "color": "rgb(134,162,198)",
+              "shadowBlur": 6,
+              "shadowOffsetX": 3,
+              "shadowOffsetY": 3
+            },
+            "max": 1200,
+            "min": 500
+          }
+        ],
+        "ht.backgroundIncludeAxis": true
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9918,
+      "p": {
+        "displayName": "出钢间隔",
+        "parent": {
+          "__i": 9911
+        },
+        "dataBindings": {
+          "a": {
+            "num": {
+              "id": "NumTag/TRACK_FLAT/ROLLLINE/TimeInter_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/煤炭.json",
+        "position": {
+          "x": 487.11691,
+          "y": 401.47432
+        },
+        "width": 220.04109,
+        "height": 50,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true,
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.visible": false
+      },
+      "a": {
+        "1166.color": "#5fffe0",
+        "color": "#5fffe0",
+        "num": "100",
+        "name": "出钢间隔",
+        "unit": "s",
+        "font": "bold 28px D-DIN-PRO",
+        "text": "min",
+        "单位": "S"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9919,
+      "p": {
+        "displayName": "运行时间",
+        "parent": {
+          "__i": 9911
+        },
+        "dataBindings": {
+          "a": {
+            "num": {
+              "id": "NumTag/TRACK_FLAT/ROLLLINE/TimeRun_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/煤炭.json",
+        "position": {
+          "x": 733.27554,
+          "y": 401.47432
+        },
+        "width": 220.04109,
+        "height": 50,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true,
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.visible": false
+      },
+      "a": {
+        "name": "运行时间",
+        "1166.color": "#66afff",
+        "color": "#66afff",
+        "unit": "min",
+        "font": "bold 28px D-DIN-PRO",
+        "text": "min",
+        "单位": "min"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9920,
+      "p": {
+        "displayName": "批次总支数",
+        "parent": {
+          "__i": 9911
+        },
+        "dataBindings": {
+          "a": {
+            "num": {
+              "id": "NumTag/TRACK_FLAT/ROLLLINE/TotalNum_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/煤炭.json",
+        "position": {
+          "x": 979.43417,
+          "y": 401.47432
+        },
+        "width": 220.04109,
+        "height": 50,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true,
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.visible": false
+      },
+      "a": {
+        "name": "批次总支数",
+        "1166.color": "#ff8fea",
+        "color": "#ff8fea",
+        "unit": "支",
+        "font": "bold 28px D-DIN-PRO",
+        "text": "支",
+        "单位": "支"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9921,
+      "p": {
+        "displayName": "批次已轧",
+        "parent": {
+          "__i": 9911
+        },
+        "dataBindings": {
+          "a": {
+            "num": {
+              "id": "NumTag/TRACK_FLAT/ROLLLINE/FinshNum_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/tenant/shjz-gczndpsj/煤炭.json",
+        "position": {
+          "x": 1225.5928,
+          "y": 401.47432
+        },
+        "width": 220.04109,
+        "height": 50,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true,
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.visible": false
+      },
+      "a": {
+        "name": "批次已轧",
+        "1166.color": "rgb(158,143,255)",
+        "color": "rgb(158,143,255)",
+        "unit": "支",
+        "font": "bold 28px D-DIN-PRO",
+        "text": "支",
+        "单位": "支"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9922,
+      "p": {
+        "displayName": "当班已轧",
+        "parent": {
+          "__i": 9911
+        },
+        "dataBindings": {
+          "a": {
+            "num": {
+              "id": "NumTag/TRACK_FLAT/ROLLLINE/Shift_RollNum_copied_copied"
+            },
+            "num1": {
+              "id": "NumTag/TRACK_FLAT/ROLLLINE/Shift_RollWeight_copied_copied",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(2);\r\n}"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/信号 2.json",
+        "position": {
+          "x": 1516.75983,
+          "y": 401.47432
+        },
+        "width": 310.05791,
+        "height": 50,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.visible": false
+      },
+      "a": {
+        "单位": "支",
+        "num": "1111",
+        "color": "rgb(93,217,174)",
+        "name": "当班已轧：",
+        "单位1": "t",
+        "num1": "2000.00"
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 9923,
+      "p": {
+        "displayName": "roll-y2",
+        "parent": {
+          "__i": 9868
+        },
+        "position": {
+          "x": 419.93508,
+          "y": 620
+        },
+        "width": 720,
+        "height": 7
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9924,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 76.56811,
+          "y": 620
+        },
+        "width": 33.26608,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9925,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 109.52214,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9926,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 142.10744,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9927,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 174.03961,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9928,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 206.60662,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9929,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 239.17362,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9930,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 271.82463,
+          "y": 620
+        },
+        "width": 32.69846,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9931,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 304.45737,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9932,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 337.02438,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9933,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 369.59139,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9934,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 402.17668,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9935,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 434.492,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9936,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 467.05899,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9937,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 499.626,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9938,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 532.21129,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9939,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 564.52661,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9940,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 597.09362,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9941,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 629.66062,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9942,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 662.24591,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9943,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 694.56123,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9944,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 727.12824,
+          "y": 620
+        },
+        "width": 32.567,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9945,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9923
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "position": {
+          "x": 761.54756,
+          "y": 620
+        },
+        "width": 36.77501,
+        "height": 7,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 9946,
+      "p": {
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "position": {
+          "x": 122,
+          "y": 259
+        },
+        "width": 120,
+        "height": 50
+      },
+      "s": {
+        "2d.movable": false,
+        "label": "除鳞箱",
+        "label.color": "rgb(255,255,255)",
+        "label.position": 3,
+        "select.width": 0,
+        "interactive": true,
+        "select.padding": 0
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 9947,
+      "p": {
+        "parent": {
+          "__i": 9946
+        },
+        "position": {
+          "x": 122,
+          "y": 259
+        },
+        "width": 120,
+        "height": 50
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9948,
+      "p": {
+        "displayName": "喷水",
+        "parent": {
+          "__i": 9947
+        },
+        "dataBindings": {
+          "s": {
+            "2d.visible": {
+              "id": "NumTag/KepServerFlat/扁钢水除鳞/CS_02_01_AI0004_copied",
+              "func": "__ht__function(value){\r\n    if(value >3){\r\n    return true;\r\n    }else{\r\n    return false;    \r\n    }\r\n}"
+            }
+          }
+        },
+        "image": "assets/Ariimg/青岛特钢图片/喷水.png",
+        "rotation": 3.14159,
+        "position": {
+          "x": 100.91223,
+          "y": 256.6778
+        },
+        "width": 69.39376,
+        "height": 45.35543,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9949,
+      "p": {
+        "displayName": "喷水",
+        "parent": {
+          "__i": 9947
+        },
+        "dataBindings": {
+          "s": {
+            "2d.visible": {
+              "id": "NumTag/KepServerFlat/扁钢水除鳞/CS_02_01_AI0004_copied",
+              "func": "__ht__function(value){\r\n    if(value >3){\r\n    return true;\r\n    }else{\r\n    return false;    \r\n    }\r\n}"
+            }
+          }
+        },
+        "image": "assets/Ariimg/青岛特钢图片/喷水.png",
+        "rotation": 3.14159,
+        "position": {
+          "x": 124.01121,
+          "y": 256.6778
+        },
+        "width": 69.39376,
+        "height": 45.35543,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9950,
+      "p": {
+        "displayName": "喷水",
+        "parent": {
+          "__i": 9947
+        },
+        "dataBindings": {
+          "s": {
+            "2d.visible": {
+              "id": "NumTag/KepServerFlat/扁钢水除鳞/CS_02_01_AI0004_copied",
+              "func": "__ht__function(value){\r\n    if(value >3){\r\n    return true;\r\n    }else{\r\n    return false;    \r\n    }\r\n}"
+            }
+          }
+        },
+        "image": "assets/Ariimg/青岛特钢图片/喷水.png",
+        "rotation": 3.14159,
+        "position": {
+          "x": 147.30305,
+          "y": 256.6778
+        },
+        "width": 69.39376,
+        "height": 45.35543,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9951,
+      "p": {
+        "displayName": "喷水",
+        "parent": {
+          "__i": 9947
+        },
+        "dataBindings": {
+          "s": {
+            "2d.visible": {
+              "id": "NumTag/KepServerFlat/扁钢水除鳞/CS_02_01_AI0004_copied",
+              "func": "__ht__function(value){\r\n    if(value >3){\r\n    return true;\r\n    }else{\r\n    return false;    \r\n    }\r\n}"
+            }
+          }
+        },
+        "image": "assets/Ariimg/青岛特钢图片/喷水.png",
+        "rotation": 3.14159,
+        "position": {
+          "x": 96.69693,
+          "y": 261.32219
+        },
+        "width": 69.39376,
+        "height": 45.35543,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9952,
+      "p": {
+        "displayName": "喷水",
+        "parent": {
+          "__i": 9947
+        },
+        "dataBindings": {
+          "s": {
+            "2d.visible": {
+              "id": "NumTag/KepServerFlat/扁钢水除鳞/CS_02_01_AI0004_copied",
+              "func": "__ht__function(value){\r\n    if(value >3){\r\n    return true;\r\n    }else{\r\n    return false;    \r\n    }\r\n}"
+            }
+          }
+        },
+        "image": "assets/Ariimg/青岛特钢图片/喷水.png",
+        "rotation": 3.14159,
+        "position": {
+          "x": 119.73256,
+          "y": 261.32219
+        },
+        "width": 69.39376,
+        "height": 45.35543,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9953,
+      "p": {
+        "displayName": "喷水",
+        "parent": {
+          "__i": 9947
+        },
+        "dataBindings": {
+          "s": {
+            "2d.visible": {
+              "id": "NumTag/KepServerFlat/扁钢水除鳞/CS_02_01_AI0004_copied",
+              "func": "__ht__function(value){\r\n    if(value >3){\r\n    return true;\r\n    }else{\r\n    return false;    \r\n    }\r\n}"
+            }
+          }
+        },
+        "image": "assets/Ariimg/青岛特钢图片/喷水.png",
+        "rotation": 3.14159,
+        "position": {
+          "x": 142.46937,
+          "y": 261.32219
+        },
+        "width": 69.39376,
+        "height": 45.35543,
+        "tall": 20
+      },
+      "s": {
+        "interactive": true
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9954,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9946
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "rotation": 3.14159,
+        "position": {
+          "x": 121.82116,
+          "y": 237.96899
+        },
+        "width": 50.96378,
+        "height": 1.35084,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9955,
+      "p": {
+        "displayName": "棍道",
+        "parent": {
+          "__i": 9946
+        },
+        "image": "assets/Ariimg/青岛特钢图片/棍道.png",
+        "rotation": 3.14159,
+        "position": {
+          "x": 118.05509,
+          "y": 242.54812
+        },
+        "width": 50.96378,
+        "height": 1.35084,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9956,
+      "p": {
+        "displayName": "辊道标识",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/辊道标识.json",
+        "position": {
+          "x": 398.96767,
+          "y": 298.82105
+        },
+        "width": 430,
+        "height": 15,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "textcolor": "rgb(255,255,255)",
+        "text": "RT1A"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9957,
+      "p": {
+        "displayName": "出料炉门热金属检测信号",
+        "parent": {
+          "__i": 9868
+        },
+        "dataBindings": {
+          "a": {
+            "massage": {
+              "id": "NumTag/KepServerFlat/扁钢加热炉电控/CS_01_03_DI0808_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/开闭.json",
+        "position": {
+          "x": 47.03764,
+          "y": 276
+        },
+        "scale": {
+          "x": -1,
+          "y": 1
+        },
+        "width": 25.92471,
+        "height": 45.6421,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "2d.movable": false,
+        "select.padding": 0
+      },
+      "a": {
+        "massage": "False"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9958,
+      "p": {
+        "displayName": "采煤机截割部",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢大棒/采煤机截割部.json",
+        "position": {
+          "x": 1134.05311,
+          "y": 538.31149
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 1
+        },
+        "width": 105.6981,
+        "height": 105.6981
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0,
+        "select.padding": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9959,
+      "p": {
+        "displayName": "1350开坯机",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "assets/Ariimg/青岛特钢图片/微信图片_20260608104828_230_400.png",
+        "position": {
+          "x": 713.26653,
+          "y": 261.32219
+        },
+        "width": 122.12626,
+        "height": 137.23436
+      },
+      "s": {
+        "label": "1350开坯机",
+        "label.color": "rgb(255,255,255)",
+        "label.font": "20px arial, sans-serif",
+        "2d.movable": false,
+        "select.width": 0,
+        "select.padding": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9960,
+      "p": {
+        "displayName": "V1",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "tag": "V1",
+        "dataBindings": {
+          "a": {}
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/立轧.json",
+        "position": {
+          "x": 88.27243,
+          "y": 600
+        },
+        "width": 55,
+        "height": 120,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "opacity": 0.9,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "isvisible": "True",
+        "name": "V1",
+        "color": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9961,
+      "p": {
+        "displayName": "V3",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "tag": "V3",
+        "dataBindings": {
+          "a": {}
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/立轧.json",
+        "position": {
+          "x": 174.27243,
+          "y": 600
+        },
+        "width": 55,
+        "height": 120,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "opacity": 0.9,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "isvisible": "True",
+        "name": "V3",
+        "color": "rgb(0,0,0)",
+        "rolledState": "轧制状态"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9962,
+      "p": {
+        "displayName": "V5",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "tag": "V5",
+        "dataBindings": {
+          "a": {}
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/立轧.json",
+        "position": {
+          "x": 258.27243,
+          "y": 600
+        },
+        "width": 55,
+        "height": 120,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "opacity": 0.9,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "isvisible": "True",
+        "name": "V5"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9963,
+      "p": {
+        "displayName": "H2",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "tag": "H2",
+        "dataBindings": {
+          "a": {}
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/平轧.json",
+        "position": {
+          "x": 129.27243,
+          "y": 632
+        },
+        "width": 40,
+        "height": 90,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "opacity": 0.9,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "name": "H2",
+        "color": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9964,
+      "p": {
+        "displayName": "H4",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "tag": "H4",
+        "dataBindings": {
+          "a": {}
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/平轧.json",
+        "position": {
+          "x": 215.27243,
+          "y": 632
+        },
+        "width": 40,
+        "height": 90,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "opacity": 0.9,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "name": "H4",
+        "color": "rgb(0,0,0)"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9965,
+      "p": {
+        "displayName": "H6",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "tag": "H6",
+        "dataBindings": {
+          "a": {}
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/平轧.json",
+        "position": {
+          "x": 299.27243,
+          "y": 632
+        },
+        "width": 40,
+        "height": 90,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "opacity": 0.9,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "name": "H6",
+        "color": null
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9966,
+      "p": {
+        "displayName": "1500T剪",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "image": "assets/Ariimg/青岛特钢图片/夹送棍.png",
+        "position": {
+          "x": 1240,
+          "y": 286
+        },
+        "width": 50,
+        "height": 80,
+        "tall": 20
+      },
+      "s": {
+        "label": "1500T剪",
+        "label.color": "rgb(255,255,255)",
+        "label.font": "20px arial, sans-serif",
+        "select.width": 0,
+        "interactive": true,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9967,
+      "p": {
+        "displayName": "辊道标识",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/辊道标识.json",
+        "position": {
+          "x": 1000.06019,
+          "y": 298.82105
+        },
+        "width": 339.87963,
+        "height": 15,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "textcolor": "rgb(255,255,255)",
+        "text": "RT1A"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9968,
+      "p": {
+        "displayName": "中轧后温度计",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "dataBindings": {
+          "a": {
+            "name": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_30877",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢扁棒/名称标注.json",
+        "position": {
+          "x": 185.5898,
+          "y": 207.5
+        },
+        "width": 100,
+        "height": 150,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "select.padding": 0,
+        "2d.movable": false,
+        "label.font": "12px arial, sans-serif"
+      },
+      "a": {
+        "name": "1000",
+        "visibleType": "1"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9969,
+      "p": {
+        "displayName": "辊道标识",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/辊道标识.json",
+        "position": {
+          "x": 1584.8685,
+          "y": 298.82105
+        },
+        "width": 550,
+        "height": 15,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "textcolor": "rgb(255,255,255)",
+        "text": "RT1A"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9970,
+      "p": {
+        "displayName": "中轧后温度计",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "dataBindings": {
+          "a": {
+            "name": {
+              "id": "NumTag/Bar4Heat/扁棒/H9004_30877_copied_copied",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢扁棒/名称标注.json",
+        "position": {
+          "x": 327.09637,
+          "y": 541.5
+        },
+        "width": 100,
+        "height": 150,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "select.padding": 0,
+        "label.font": "12px arial, sans-serif",
+        "2d.movable": false
+      },
+      "a": {
+        "name": "1000",
+        "visibleType": "1"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9971,
+      "p": {
+        "displayName": "中轧后温度计",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "dataBindings": {
+          "a": {
+            "name": {
+              "id": "NumTag/Bar4Heat/扁棒/H9004_30877_copied_copied_copied",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢扁棒/名称标注.json",
+        "position": {
+          "x": 1310,
+          "y": 207.5
+        },
+        "width": 100,
+        "height": 150,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "select.padding": 0,
+        "2d.movable": false,
+        "label.font": "12px arial, sans-serif"
+      },
+      "a": {
+        "name": "1000",
+        "visibleType": "1"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9972,
+      "p": {
+        "displayName": "辊道标识",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/辊道标识.json",
+        "position": {
+          "x": 553.43474,
+          "y": 632.82105
+        },
+        "width": 453.00067,
+        "height": 15,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "textcolor": "rgb(255,255,255)",
+        "text": "RT1A"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9974,
+      "p": {
+        "displayName": "辊道标识",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/辊道标识.json",
+        "position": {
+          "x": 1782.49999,
+          "y": 582.82105
+        },
+        "width": 155,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "textcolor": "rgb(255,255,255)",
+        "text": "冷床区域"
+      }
+    },
+    {
+      "c": "ht.Block",
+      "i": 17218,
+      "p": {
+        "parent": {
+          "__i": 9868
+        },
+        "position": {
+          "x": 1445.87907,
+          "y": 587.99079
+        },
+        "width": 262,
+        "height": 30.33949
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9973,
+      "p": {
+        "displayName": "辊道标识",
+        "parent": {
+          "__i": 17218
+        },
+        "image": "symbols/大冶特钢中棒/辊道标识.json",
+        "position": {
+          "x": 1445.87907,
+          "y": 582.82105
+        },
+        "width": 250,
+        "height": 20,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      },
+      "a": {
+        "textcolor": "rgb(255,255,255)",
+        "text": "RT1A"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9975,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 17218
+        },
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 1320.87907,
+          "y": 597.16054
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9976,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 17218
+        },
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied_copied_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 1570.87907,
+          "y": 597.16054
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9977,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 9868
+        },
+        "tag": "track-1-DescalerBeforeHmd",
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 183.96767,
+          "y": 311
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9978,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 9868
+        },
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 66,
+          "y": 311
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9979,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 9868
+        },
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 613.78279,
+          "y": 311
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9980,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 9868
+        },
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 1310,
+          "y": 312.32105
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9981,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 9868
+        },
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 1170,
+          "y": 312.32105
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9982,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 9868
+        },
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied_copied_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 779.93507,
+          "y": 647.16054
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9983,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 9868
+        },
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied_copied_copied_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 156.27243,
+          "y": 635.16054
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9984,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 9868
+        },
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied_copied_copied_copied_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 241.27243,
+          "y": 635.16054
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9985,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 9868
+        },
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied_copied_copied_copied_copied_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 275.63479,
+          "y": 635.16054
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9986,
+      "p": {
+        "displayName": "除磷机前热检",
+        "parent": {
+          "__i": 9868
+        },
+        "dataBindings": {
+          "a": {
+            "有钢信号": {
+              "id": "NumTag/Bar2ABB/中棒1Bar/B1_053_30070_copied_copied_copied_copied_copied_copied_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢中棒/有钢信号 2.json",
+        "position": {
+          "x": 326.67885,
+          "y": 635.16054
+        },
+        "width": 12,
+        "height": 12,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9987,
+      "p": {
+        "displayName": "AI报警记录",
+        "parent": {
+          "__i": 9868
+        },
+        "tag": "stay-4",
+        "image": "symbols/青岛特钢/中棒剪切线/AI报警记录.json",
+        "position": {
+          "x": 609.02065,
+          "y": 591.92895
+        },
+        "width": 341.82884,
+        "height": 39.5,
+        "tall": 20
+      },
+      "s": {
+        "label.color": "rgb(255,255,255)",
+        "select.width": 0,
+        "interactive": true,
+        "select.padding": 0,
+        "label.position": 20,
+        "label.font": "bold 18px sans-serif, Arial",
+        "label.offset.y": 0,
+        "label": "横移台架",
+        "2d.movable": false
+      },
+      "a": {
+        "text": "A1234",
+        "rollPieceID": " "
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9989,
+      "p": {
+        "displayName": "组合辊道",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/组合辊道.json",
+        "position": {
+          "x": 1026.10079,
+          "y": 547
+        },
+        "width": 155,
+        "height": 47.98147,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9990,
+      "p": {
+        "displayName": "组合辊道",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/组合辊道.json",
+        "position": {
+          "x": 875.72715,
+          "y": 547
+        },
+        "width": 155,
+        "height": 47.98147,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9991,
+      "p": {
+        "displayName": "组合辊道",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/组合辊道.json",
+        "position": {
+          "x": 725.35351,
+          "y": 547
+        },
+        "width": 155,
+        "height": 47.98147,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9992,
+      "p": {
+        "displayName": "组合辊道",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/组合辊道.json",
+        "position": {
+          "x": 515.60623,
+          "y": 547
+        },
+        "width": 155,
+        "height": 47.98147,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9993,
+      "p": {
+        "displayName": "组合辊道",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/组合辊道.json",
+        "position": {
+          "x": 574.97987,
+          "y": 547
+        },
+        "width": 155,
+        "height": 47.98147,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9988,
+      "p": {
+        "displayName": "组合辊道",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/组合辊道.json",
+        "position": {
+          "x": 1392.37907,
+          "y": 547
+        },
+        "width": 155,
+        "height": 47.98147
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9994,
+      "p": {
+        "displayName": "组合辊道",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/组合辊道.json",
+        "position": {
+          "x": 1782.49999,
+          "y": 547
+        },
+        "width": 155,
+        "height": 47.98147,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9995,
+      "p": {
+        "displayName": "组合辊道",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/组合辊道.json",
+        "position": {
+          "x": 1632.12635,
+          "y": 547
+        },
+        "width": 155,
+        "height": 47.98147,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9996,
+      "p": {
+        "displayName": "组合辊道",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/组合辊道.json",
+        "position": {
+          "x": 1481.75271,
+          "y": 547
+        },
+        "width": 155,
+        "height": 47.98147,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9998,
+      "p": {
+        "displayName": "millstate1",
+        "parent": {
+          "__i": 9868
+        },
+        "tag": "millstate1",
+        "dataBindings": {
+          "a": {
+            "rolledState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10129_copied"
+            },
+            "runningState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10727_copied"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/开关状态-方.json",
+        "position": {
+          "x": 88.27243,
+          "y": 510.36932
+        },
+        "width": 20,
+        "height": 5,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0,
+        "select.padding": 0
+      },
+      "a": {
+        "run": "1"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 9999,
+      "p": {
+        "displayName": "millstate2",
+        "parent": {
+          "__i": 9868
+        },
+        "tag": "millstate2",
+        "dataBindings": {
+          "a": {
+            "rolledState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10129_copied_copied"
+            },
+            "runningState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10727_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/开关状态-方.json",
+        "position": {
+          "x": 129.27243,
+          "y": 510.36932
+        },
+        "width": 20,
+        "height": 5,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0,
+        "select.padding": 0
+      },
+      "a": {
+        "run": "1"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 10000,
+      "p": {
+        "displayName": "millstate3",
+        "parent": {
+          "__i": 9868
+        },
+        "tag": "millstate3",
+        "dataBindings": {
+          "a": {
+            "rolledState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10129_copied_copied_copied"
+            },
+            "runningState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10727_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/开关状态-方.json",
+        "position": {
+          "x": 174.27243,
+          "y": 510.36932
+        },
+        "width": 20,
+        "height": 5,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0,
+        "select.padding": 0
+      },
+      "a": {
+        "run": "1"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 10001,
+      "p": {
+        "displayName": "millstate4",
+        "parent": {
+          "__i": 9868
+        },
+        "tag": "millstate4",
+        "dataBindings": {
+          "a": {
+            "rolledState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10129_copied_copied_copied_copied"
+            },
+            "runningState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10727_copied_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/开关状态-方.json",
+        "position": {
+          "x": 215.27243,
+          "y": 510.36932
+        },
+        "width": 20,
+        "height": 5,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0,
+        "select.padding": 0
+      },
+      "a": {
+        "run": "1"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 10002,
+      "p": {
+        "displayName": "millstate5",
+        "parent": {
+          "__i": 9868
+        },
+        "tag": "millstate5",
+        "dataBindings": {
+          "a": {
+            "rolledState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10129_copied_copied_copied_copied_copied"
+            },
+            "runningState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10727_copied_copied_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/开关状态-方.json",
+        "position": {
+          "x": 258.27243,
+          "y": 510.36932
+        },
+        "width": 20,
+        "height": 5,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0,
+        "select.padding": 0
+      },
+      "a": {
+        "run": "1"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 10003,
+      "p": {
+        "displayName": "millstate6",
+        "parent": {
+          "__i": 9868
+        },
+        "tag": "millstate6",
+        "dataBindings": {
+          "a": {
+            "rolledState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10129_copied_copied_copied_copied_copied_copied"
+            },
+            "runningState": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_10727_copied_copied_copied_copied_copied_copied"
+            }
+          }
+        },
+        "image": "symbols/青岛特钢/扁钢线轧机跟踪/开关状态-方.json",
+        "position": {
+          "x": 299.27243,
+          "y": 510.36932
+        },
+        "width": 20,
+        "height": 5,
+        "tall": 20
+      },
+      "s": {
+        "2d.movable": false,
+        "select.width": 0,
+        "select.padding": 0
+      },
+      "a": {
+        "run": "1"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 11522,
+      "p": {
+        "displayName": "中轧后温度计",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "dataBindings": {
+          "a": {
+            "name": {
+              "id": "NumTag/Bar4Heat/扁棒/H9004_30877_copied_copied_copied_copied",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢扁棒/名称标注.json",
+        "position": {
+          "x": 1170,
+          "y": 207.5
+        },
+        "width": 100,
+        "height": 150,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "select.padding": 0,
+        "2d.movable": false,
+        "label.font": "12px arial, sans-serif"
+      },
+      "a": {
+        "name": "1000",
+        "visibleType": "1"
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 17756,
+      "p": {
+        "displayName": "采煤机截割部",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢大棒/采煤机截割部.json",
+        "position": {
+          "x": 1233.81429,
+          "y": 538.31149
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 1
+        },
+        "width": 105.6981,
+        "height": 105.6981,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 17757,
+      "p": {
+        "displayName": "采煤机截割部",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢大棒/采煤机截割部.json",
+        "position": {
+          "x": 1289.57548,
+          "y": 538.31149
+        },
+        "scale": {
+          "x": 0.5,
+          "y": 1
+        },
+        "width": 105.6981,
+        "height": 105.6981,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 18688,
+      "p": {
+        "displayName": "组合辊道",
+        "parent": {
+          "__i": 9868
+        },
+        "image": "symbols/大冶特钢中棒/组合辊道.json",
+        "position": {
+          "x": 1026.10079,
+          "y": 547
+        },
+        "width": 155,
+        "height": 47.98147,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "select.padding": 0,
+        "2d.movable": false
+      }
+    },
+    {
+      "c": "ht.Node",
+      "i": 20623,
+      "p": {
+        "displayName": "中轧后温度计",
+        "parent": {
+          "__i": 9868
+        },
+        "layer": "1",
+        "dataBindings": {
+          "a": {
+            "name": {
+              "id": "NumTag/Bar4term1/扁棒/H9004_30877_copied",
+              "func": "__ht__function(value){\r\n return (parseFloat(value)).toFixed(1);\r\n}"
+            }
+          }
+        },
+        "image": "symbols/大冶特钢扁棒/名称标注.json",
+        "position": {
+          "x": 613,
+          "y": 207.5
+        },
+        "width": 100,
+        "height": 150,
+        "tall": 20
+      },
+      "s": {
+        "select.width": 0,
+        "interactive": true,
+        "select.padding": 0,
+        "2d.movable": false,
+        "label.font": "12px arial, sans-serif"
+      },
+      "a": {
+        "name": "1000",
+        "visibleType": "1"
+      }
+    }
+  ],
+  "modified": "Mon Aug 31 2026 14:37:36 GMT+0800 (中国标准时间)",
+  "contentRect": {
+    "x": 0,
+    "y": 0,
+    "width": 1920,
+    "height": 1080.5
+  }
+}

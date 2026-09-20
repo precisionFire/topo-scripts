@@ -18,7 +18,7 @@
         <script src='../custom/configs/htconfig.js'></script>
         <script src='../custom/libs/echarts.js'></script>
         <script src='../libs/core/opKY8JbGNLng.js'></script>
-        <script src='../libs/core/GFG7aBsW4scc.js'></script>
+        <script src='../libs/core/eCTP6EBBtjcC.js'></script>
         <script src='../libs/core/ht.js'></script>
         <script src='../libs/core/buckle.js'></script>
         <script src='../libs/plugin/ht-edgetype.js'></script>
@@ -40,13 +40,12 @@
         <script src='../libs/jquery.min.js'></script>
         <script src='../libs/mqttws31.min.js'></script>
         <script src='../libs/sbind.js'></script>
-		<script src='../libs/通用组件/弹窗组件/DialogView.js'></script>
-		<script src='../libs/通用组件/弹窗组件/ConflictDialog.js'></script>
-		<script type="module" src='../libs/通用组件/弹窗组件/DialogMain.js'></script>
-<script src='../libs/通用组件/弹窗组件/PopupManager.js'></script>
-<script src='../libs/通用组件/弹窗组件/WillInOutPopup.js'></script>
-<script src='../libs/通用组件/弹窗组件/RecognitionDialog.js'></script>
-<script src='../libs/通用组件/弹窗组件/OverlengthDialog.js'></script>
+		<script src='../libs/DialogView.js'></script>
+		<script src='../libs/ConflictDialog.js'></script>
+		<script type="module" src='../libs/DialogMain.js'></script>
+<script src='../libs/PopupManager.js'></script>
+<script src='../libs/WillInOutPopup.js'></script>
+<script src='../libs/RecognitionDialog.js'></script>
         <script src='js/bootstrap.bundle.min.js'></script>
     	<script src='js/dialog_.js'></script>
 	
@@ -468,9 +467,21 @@
 	
 	console.log(tagCode)
 	
-    {
+    if (false) {
+        // 不启用，但保留 以防后续需求变更
+        window.open(
+            'HistoricalDataDialog/DataDialog.html?tag=' + encodeURI(encodeURI(tagCode)) + '&name=' + encodeURI(encodeURI(name)) + '&tagid=' + encodeURI(encodeURI(tagid)),
+            'theDialog',
+            'height=600,width=1200,top=80,toolbar=no,menubar=no, scrollbars=no,resizable=no,location=no, status=no'
+        )
+    } else {
         // 设计路径
           let url = window.location.origin + '/static/AriView/custom/HistoricalDataDialog/newDataDialog.html?tag=' + encodeURI(encodeURI(tagCode)) + '&name=' + encodeURI(encodeURI(name)) + '&tagid=' + encodeURI(encodeURI(tagid));
+        /* const modal = new window.Modal({ title: name, pageUrl: url, tag: tag })
+        modal.init()
+        modal.registerEvent()
+		*/
+		// let url = `${window.location.origin}` + '/static/AriView/custom/HistoricalDataDialog/test.html'
 		console.log(url)
 		 const dialogTitle = name || "历史趋势";
         //let tag_ = "NumTag/WeightInFurFlat/扁钢称重/Flat_ Furnace_Weight1"

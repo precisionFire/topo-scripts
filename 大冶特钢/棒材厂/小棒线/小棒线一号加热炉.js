@@ -346,7 +346,7 @@ function mapColorToRGB(color) {
     const map = {
         red: 'rgb(255,0,0)',
         blue: 'rgb(51,153,255)',
-        green: 'rgb(0,255,0)',
+        green: 'rgb(240,225,19)',
         yellow: 'rgb(255,255,0)',
         orange: 'rgb(255,165,0)'
     };

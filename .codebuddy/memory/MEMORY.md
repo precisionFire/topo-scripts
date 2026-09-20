@@ -3,6 +3,10 @@
 ## 项目概述
 冶钢棒材轧线跟踪系统，包含四条产线：大棒线、中棒线、小棒线、扁棒线，以及通用弹窗组件。
 
+## 记忆分卷索引（长段已整段搬迁到子文件，原文未删改）
+- 产线脚本（大棒/中棒/扁棒轧机：复制历程、插件清理、【中棒独有】标注、三线头部对齐、轨道 3→2 不等长、扁棒设计要点、大棒「中棒残留」审计）→ 见 `.codebuddy/memory/MEMORY-产线脚本.md`
+- 本机网络环境 / 工具脚本（双出口、路由开关、Windows/ps1 踩坑）→ 见 `.codebuddy/memory/MEMORY-环境工具.md`
+
 ## 文件定位索引（先查这里，避免全库搜索）
 - 扁棒线加热炉 → 大冶特钢/棒材厂/扁棒线/扁棒线加热炉.js
 - 扁棒线轧机 → 大冶特钢/棒材厂/扁棒线/扁棒线轧机.js（设计文档：同目录 扁棒线轧机.md）
@@ -35,31 +39,18 @@
 - 「最近十卡」接口 `bptdatrollopact/list` 的 `FilterFields.ProductLine` 同样填产线编码（扁棒 H9、大棒 H8）
 - 注意：产线脚本内另有 `Line` 参数（如中棒 `B101`），与产线编码不是同一个值；大棒线轧机.js 中该值出现在已注释代码里，尚未确认大棒取值
 
-## 大棒线轧机.js 状态（2026-09-12）
-- 由 中棒线轧机.js **首次复制**而来，两者**结构完全一致**（顶层声明逐一对应，行号 = 中棒 + 1），实质差异仅两处：
-  1. 仓库 key 前缀与最近十卡 `ProductLine` 已改为大棒值（H8_ / H8）
-  2. 初始化段多一行生效的 `dm.getDatas().each(node => trySetDoubleClickHandlerForNode(node));`（中棒同名调用只在文件末尾注释块内；该函数两文件均未定义，属外部全局函数）
-- 文件头已重写（标题/@file = 大棒线轧机.js），新增【产线信息】【大棒线适配说明（后续开发必读）】【外部依赖】【版本记录】（v1.0 2026-09-12 首次复制生成）
-- 遗留：已注释的「右键菜单逻辑」「左键弹窗逻辑」两段内仍写死中棒的 `"B101"`（Line 参数），待确认大棒取值后替换；常量沿用中棒，需按大棒现场图纸核对
-- AriView/ → 图扑（TopoSoft/HT for Web）部署包。2026-09-02 起用户确认「AriView 是最后要发布的」，弹窗组件以 AriView/libs 为唯一维护源（原"本地主版本/图扑副本"约定对弹窗组件废止）；大冶特钢/ 产线脚本定位是否同样迁移待用户确认
+## 接口地址形式与画面 JSON 内嵌结构（2026-09-15）
+- 接口主机两种写法：**公网网关**`https://bar.dayesteel.com.cn/...`（新，各产线统一目标）与**内网直连**`http://172.15.88.243:900X / :808X`（旧，逐步淘汰）
+- 网关门牌映射（产线 → apiNNN）：大棒 `api124/BarHeatFurnaceg/TRACK_BIG`、中棒 `api125/.../TRACK_MIDDLE`、小棒 `api126/.../TRACK_SMALL`、扁棒 `api127/.../TRACK_FLAT`；`bdy` 类业务接口统一 `bar.dayesteel.com.cn/api/api/bdy/...`
+- 内网端口映射：`:9003` = bdy 业务接口、`:8081` = 扁棒加热炉(TRACK_FLAT)、`:8082` = 小棒加热炉(TRACK_SMALL)
+- 画面 JSON 的脚本存放形态：`a.onPostDeserialize` 存 `__ht__function(json, dm, view, datas) { ... }`，去掉包装头尾即等于本地 js 全文（据此可做双向对账）
+- 加热炉画面 JSON 除主脚本外，还有**按钮节点 `a.onClick` 内写死的 4 条完整 URL**（`/SLAB/IN` 手动入炉、`/SLAB/OUT` 手动出炉、`/WALKINGBEAM/FORWARD` 步进正、`/WALKINGBEAM/BACKWARD` 步进反）；这 4 条在本地 js 中不存在，改接口时只能改 JSON
+- 对账工具（仅本地辅助，非交付物）：`tools/_jsonmap3.ps1`（比对映射+结构）、`tools/_jsondiff.ps1`（逐行差异）、`tools/_apilist.ps1`（接口清单）；均需注意含中文字面量的 .ps1 要带 UTF-8 BOM
 
-## 本机网络环境 / 工具脚本（2026-09-11，同日按实测更新）
-- 双出口：WiFi `WLAN`(Intel Wi-Fi 6E) = 内网 192.168.1.102/24（网关 192.168.1.1，DNS 172.15.88.1/88.2）；USB `以太网 2`(Remote NDIS 共享) = 外网 10.247.27.31/24（网关 10.247.27.133，度量 25）
-- 内网为 172 开头（实测 172.15.x）：`bar.dayesteel.com.cn` → 172.15.115.121
-- 路由开关工具 → `tools/net-route-switch.ps1`（双击 `tools/net-route-switch.bat` 进菜单：1 开 / 2 关 / 3 状态；改路由需 UAC）：on = 内网 172.0.0.0/8 走 WiFi 网关 + 外网固定走 USB（接口度量 10/60 + 静态路由），off = 按记录精确还原；状态文件 `%LOCALAPPDATA%\net-route-switch\state.json`，运行日志同目录 `last-run.log`
-- 工具当前只认「WiFi = 内网 / USB 类网卡 = 外网」这一组合：`Get-Adapters` 硬性排除 InterfaceDescription 含 `Bluetooth` 的网卡，且候选取 `Get-NetAdapter -Physical`。改成「蓝牙 + WiFi」双出口需改配置区排除项/匹配词与网卡角色指定（2026-09-15 评估，未实施）
-- **`Set-NetIPInterface -InterfaceMetric` 会同时写进注册表持久存储**（`HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{GUID}\InterfaceMetric`）：只做 `-AutomaticMetric Enabled` 不够，USB/NDIS 网卡一重连旧度量又生效；脚本恢复时活动存储与注册表一起处理
-- **.ps1 必须带 UTF-8 BOM**：`write_to_file` 写出的 ps1 无 BOM，PowerShell 5.1 按 ANSI 解码中文会撑破字符串引号、报大量假语法错；补 BOM 后再用 Parser 校验
-- Windows shell 内联 PowerShell 传参：外层用单引号包裹、内层单引号写成 `''`，否则引号被吞；脚本路径用相对 ASCII 路径（如 `tools/xxx.ps1`）避开中文路径
-- PowerShell 正则**嵌套捕获组会占用组号**（`(\d+(\.\d+){3})` 里内层组是 2 号），取 `$Matches[n]` 一律改用命名组
 
-## 扁棒线轧机.js 设计要点
-- 两条轨道（track-1/roll-y1, track-2/roll-y2），每段 1800
-- 逻辑坐标空间 0~3600，钢坯从右→左运动（headX/tailX 递减）
-- 画布映射统一公式 `canvasX = logicX - trackStart`，两条轨道视觉方向一致
-- 下线条件：`headX <= 0` 或 tailPosition 为 'BslHmd'
-- 设计文档：`大冶特钢/棒材厂/扁棒线/扁棒线轧机.md`
-- 重影防护（2026-09-15 修复）：数据监听器整体用 `window.__trackingListenerInstalled` 全局标记包裹，防脚本被页面/图纸重复加载导致监听器注册多份（做法对齐中棒线轧机.js）；另扁棒文件顶部有「启动时清理 dm 中残留 steel-* Shape」（中棒无此段），两层互补
-- 主循环防重复启动（2026-09-15 修复，扁棒+中棒）：`startSteelSimulator()` 用 `window.__steelSimulatorTimer` 存句柄，「先 clearInterval 旧的，再起新的」，保证同页面只有一个 100ms 推演+渲染循环（重复加载会让两个循环互相覆盖 animationFrames 句柄 → cancel 失效 → 钢坯抖动/重影）。注意推演本身按真实 dt 算，速度不会翻倍，问题只在渲染/动画层
-- DataCollector 防重复实例化（2026-09-15 修复，扁棒+中棒）：顶层改用 `if (window.__dataCollector) { window.__dataCollector.stop(); } const dataCollector = window.__dataCollector = new DataCollector(graphView);`（`start()` 内的 `this.isRunning` 守卫只管同一实例重复启动，管不了脚本重复加载产生的跨实例）
-- ⚠️ 待确认隐患：大棒线轧机.js 主循环仍是裸 setInterval（约 2752 行），DataCollector 实例化处（约 3584 行）也未加 window 兜底
+
+## 协作偏好（2026-09-17 用户明确）
+- 用户用 `@文件` 指定目标文件时，**只在该文件内做检查/修改**，不要去读同名/相关但未被指定的其它文件（当时我跑去翻 AriView 的画面 JSON，被用户直接质问"Why are you reading other files"）。需要跨文件信息时先说明理由并征得同意。
+- **记忆文件不得"为压缩体量而删改"**（2026-09-17 用户明确）：MEMORY.md/日志超限时，禁止合并、删除或改写已有条目；减体量只能走「整段原文搬迁到子文件 / 下沉到日志」的方式，且必须先经用户确认。
+
+

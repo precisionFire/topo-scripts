@@ -38,7 +38,7 @@
   "d": [
     {
       "c": "ht.Node",
-      "i": 22304,
+      "i": 138271,
       "p": {
         "position": {
           "x": 900,
@@ -62,15 +62,15 @@
     },
     {
       "c": "ht.Block",
-      "i": 22305,
+      "i": 138272,
       "p": {
         "displayName": "main",
         "parent": {
-          "__i": 22304
+          "__i": 138271
         },
         "tag": "main",
         "host": {
-          "__i": 22304
+          "__i": 138271
         },
         "position": {
           "x": 900,
@@ -92,11 +92,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 22306,
+      "i": 138273,
       "p": {
         "displayName": "背景",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "position": {
           "x": 899.64141,
@@ -115,11 +115,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22307,
+      "i": 138274,
       "p": {
         "displayName": "bg",
         "parent": {
-          "__i": 22306
+          "__i": 138273
         },
         "image": "symbols/tenant/zwsm-dpymsj/参考/设计稿/bg.json",
         "position": {
@@ -208,11 +208,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22308,
+      "i": 138275,
       "p": {
         "displayName": "左右背景",
         "parent": {
-          "__i": 22306
+          "__i": 138273
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -239,11 +239,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22309,
+      "i": 138276,
       "p": {
         "displayName": "左右背景",
         "parent": {
-          "__i": 22306
+          "__i": 138273
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -270,11 +270,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22310,
+      "i": 138277,
       "p": {
         "displayName": "左右背景",
         "parent": {
-          "__i": 22306
+          "__i": 138273
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -305,11 +305,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22311,
+      "i": 138278,
       "p": {
         "displayName": "左右背景",
         "parent": {
-          "__i": 22306
+          "__i": 138273
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/左右背景.json",
         "position": {
@@ -340,11 +340,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22312,
+      "i": 138279,
       "p": {
         "displayName": "左右",
         "parent": {
-          "__i": 22306
+          "__i": 138273
         },
         "image": "symbols/tenant/shjz-gczndpsj/左右.json",
         "position": {
@@ -367,11 +367,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22313,
+      "i": 138280,
       "p": {
         "displayName": "左右",
         "parent": {
-          "__i": 22306
+          "__i": 138273
         },
         "image": "symbols/tenant/shjz-gczndpsj/左右.json",
         "position": {
@@ -390,11 +390,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22314,
+      "i": 138281,
       "p": {
         "displayName": "下方装饰",
         "parent": {
-          "__i": 22306
+          "__i": 138273
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/底部装饰.json",
         "position": {
@@ -419,11 +419,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 22315,
+      "i": 138282,
       "p": {
         "displayName": "背景及顶部栏",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "position": {
           "x": 899.64141,
@@ -439,11 +439,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22316,
+      "i": 138283,
       "p": {
         "displayName": "标题2 2",
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "image": "symbols/tenant/shjz-gczndpsj/预置模板/蓝色/蓝色3/标题2 2.json",
         "position": {
@@ -461,11 +461,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 22317,
+      "i": 138284,
       "p": {
         "displayName": "信息化综合应用",
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "position": {
           "x": 899.64141,
@@ -490,11 +490,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 22318,
+      "i": 138285,
       "p": {
         "displayName": "信息化综合应用",
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "position": {
           "x": 900,
@@ -530,11 +530,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22319,
+      "i": 138286,
       "p": {
         "displayName": "logo_jztz_白",
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "image": "assets/AriIconLib/logo/logo_jztz_白.svg",
         "position": {
@@ -554,10 +554,10 @@
     },
     {
       "c": "ht.Shape",
-      "i": 22320,
+      "i": 138287,
       "p": {
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "position": {
           "x": 1722.19391,
@@ -597,11 +597,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22321,
+      "i": 138288,
       "p": {
         "displayName": "ByData",
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "tag": "ByData",
         "dataBindings": {
@@ -631,11 +631,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22322,
+      "i": 138289,
       "p": {
         "displayName": "DYTG_LOGO",
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "image": "assets/冶钢看板/DYTG_LOGO.png",
         "position": {
@@ -653,11 +653,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22323,
+      "i": 138290,
       "p": {
         "displayName": "时间",
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "image": "ht.drawing.time",
         "position": {
@@ -688,10 +688,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 22324,
+      "i": 138291,
       "p": {
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "tag": "Team",
         "dataBindings": {
@@ -715,11 +715,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 22325,
+      "i": 138292,
       "p": {
         "displayName": "班组",
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "position": {
           "x": 1305,
@@ -739,10 +739,10 @@
     },
     {
       "c": "ht.Text",
-      "i": 22326,
+      "i": 138293,
       "p": {
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "tag": "Shift",
         "dataBindings": {
@@ -766,11 +766,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 22327,
+      "i": 138294,
       "p": {
         "displayName": "班次",
         "parent": {
-          "__i": 22315
+          "__i": 138282
         },
         "position": {
           "x": 1415,
@@ -790,10 +790,10 @@
     },
     {
       "c": "ht.Block",
-      "i": 22328,
+      "i": 138295,
       "p": {
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "position": {
           "x": 900,
@@ -810,11 +810,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22329,
+      "i": 138296,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "tag": "roll-y3",
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
@@ -833,11 +833,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22330,
+      "i": 138297,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -855,11 +855,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22331,
+      "i": 138298,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -877,11 +877,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22332,
+      "i": 138299,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -899,11 +899,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22333,
+      "i": 138300,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -921,11 +921,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22334,
+      "i": 138301,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -943,11 +943,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22335,
+      "i": 138302,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -965,11 +965,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22336,
+      "i": 138303,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -987,11 +987,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22337,
+      "i": 138304,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1009,11 +1009,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22338,
+      "i": 138305,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1031,11 +1031,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22339,
+      "i": 138306,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1053,11 +1053,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22340,
+      "i": 138307,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1075,11 +1075,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22341,
+      "i": 138308,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1097,11 +1097,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22342,
+      "i": 138309,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1119,11 +1119,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22343,
+      "i": 138310,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1141,11 +1141,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22344,
+      "i": 138311,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1163,11 +1163,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22345,
+      "i": 138312,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1185,11 +1185,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22346,
+      "i": 138313,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1207,11 +1207,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22347,
+      "i": 138314,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1229,11 +1229,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22348,
+      "i": 138315,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1251,11 +1251,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22349,
+      "i": 138316,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1273,11 +1273,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22350,
+      "i": 138317,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22328
+          "__i": 138295
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1295,10 +1295,10 @@
     },
     {
       "c": "ht.Block",
-      "i": 22351,
+      "i": 138318,
       "p": {
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "position": {
           "x": 900,
@@ -1315,11 +1315,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22352,
+      "i": 138319,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "tag": "roll-y1",
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
@@ -1338,11 +1338,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22353,
+      "i": 138320,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1360,11 +1360,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22354,
+      "i": 138321,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1382,11 +1382,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22355,
+      "i": 138322,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1404,11 +1404,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22356,
+      "i": 138323,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1426,11 +1426,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22357,
+      "i": 138324,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1448,11 +1448,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22358,
+      "i": 138325,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1470,11 +1470,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22359,
+      "i": 138326,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1492,11 +1492,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22360,
+      "i": 138327,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1514,11 +1514,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22361,
+      "i": 138328,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1536,11 +1536,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22362,
+      "i": 138329,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1558,11 +1558,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22363,
+      "i": 138330,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1580,11 +1580,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22364,
+      "i": 138331,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1602,11 +1602,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22365,
+      "i": 138332,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1624,11 +1624,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22366,
+      "i": 138333,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1646,11 +1646,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22367,
+      "i": 138334,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1668,11 +1668,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22368,
+      "i": 138335,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1690,11 +1690,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22369,
+      "i": 138336,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1712,11 +1712,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22370,
+      "i": 138337,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1734,11 +1734,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22371,
+      "i": 138338,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1756,11 +1756,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22372,
+      "i": 138339,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1778,11 +1778,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22373,
+      "i": 138340,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22351
+          "__i": 138318
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -1800,11 +1800,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22374,
+      "i": 138341,
       "p": {
         "displayName": "检测辊道",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "tag": "检测辊道",
         "image": "symbols/大冶特钢中棒/辊道标识.json",
@@ -1828,11 +1828,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22375,
+      "i": 138342,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -1864,11 +1864,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22376,
+      "i": 138343,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -1900,11 +1900,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22377,
+      "i": 138344,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -1936,11 +1936,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22378,
+      "i": 138345,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -1972,11 +1972,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 22379,
+      "i": 138346,
       "p": {
         "displayName": "识别结果",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {}
@@ -2002,11 +2002,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22380,
+      "i": 138347,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -2029,11 +2029,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22381,
+      "i": 138348,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -2056,11 +2056,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22382,
+      "i": 138349,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -2083,11 +2083,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22383,
+      "i": 138350,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -2110,11 +2110,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22384,
+      "i": 138351,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -2137,11 +2137,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22385,
+      "i": 138352,
       "p": {
         "displayName": "辊道标识",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -2164,11 +2164,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22386,
+      "i": 138353,
       "p": {
         "displayName": "ST23",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST23",
@@ -2200,11 +2200,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22387,
+      "i": 138354,
       "p": {
         "displayName": "ST24",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST24",
@@ -2236,11 +2236,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22388,
+      "i": 138355,
       "p": {
         "displayName": "ST25",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST25",
@@ -2272,11 +2272,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22389,
+      "i": 138356,
       "p": {
         "displayName": "ST26",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST26",
@@ -2308,11 +2308,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22390,
+      "i": 138357,
       "p": {
         "displayName": "4#水箱",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "4#水箱",
@@ -2336,11 +2336,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22391,
+      "i": 138358,
       "p": {
         "displayName": "5#飞剪",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "5#飞剪",
@@ -2365,11 +2365,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22392,
+      "i": 138359,
       "p": {
         "displayName": "5#水箱",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/水箱.png",
@@ -2392,12 +2392,12 @@
     },
     {
       "c": "ht.Node",
-      "i": 22393,
+      "i": 138360,
       "p": {
         "displayName": "小棒轧线二期-P4高温计",
         "toolTip": "小棒轧线二期-P4高温计",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -2430,12 +2430,12 @@
     },
     {
       "c": "ht.Node",
-      "i": 22394,
+      "i": 138361,
       "p": {
         "displayName": "小棒轧线二期-P6高温计",
         "toolTip": "小棒轧线二期-P6高温计",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -2468,11 +2468,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22395,
+      "i": 138362,
       "p": {
         "displayName": "测径仪",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/测径仪.png",
@@ -2495,10 +2495,10 @@
     },
     {
       "c": "ht.Block",
-      "i": 22396,
+      "i": 138363,
       "p": {
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "position": {
           "x": 900,
@@ -2515,11 +2515,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22397,
+      "i": 138364,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "tag": "roll-y2",
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
@@ -2538,11 +2538,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22398,
+      "i": 138365,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2560,11 +2560,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22399,
+      "i": 138366,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2582,11 +2582,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22400,
+      "i": 138367,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2604,11 +2604,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22401,
+      "i": 138368,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2626,11 +2626,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22402,
+      "i": 138369,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2648,11 +2648,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22403,
+      "i": 138370,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2670,11 +2670,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22404,
+      "i": 138371,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2692,11 +2692,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22405,
+      "i": 138372,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2714,11 +2714,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22406,
+      "i": 138373,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2736,11 +2736,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22407,
+      "i": 138374,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2758,11 +2758,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22408,
+      "i": 138375,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2780,11 +2780,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22409,
+      "i": 138376,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2802,11 +2802,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22410,
+      "i": 138377,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2824,11 +2824,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22411,
+      "i": 138378,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2846,11 +2846,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22412,
+      "i": 138379,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2868,11 +2868,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22413,
+      "i": 138380,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2890,11 +2890,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22414,
+      "i": 138381,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2912,11 +2912,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22415,
+      "i": 138382,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2934,11 +2934,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22416,
+      "i": 138383,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2956,11 +2956,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22417,
+      "i": 138384,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -2978,11 +2978,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22418,
+      "i": 138385,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22396
+          "__i": 138363
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "position": {
@@ -3000,11 +3000,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22419,
+      "i": 138386,
       "p": {
         "displayName": "1#辊道",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "tag": "1#辊道",
         "image": "symbols/大冶特钢中棒/辊道标识.json",
@@ -3028,11 +3028,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22420,
+      "i": 138387,
       "p": {
         "displayName": "2#辊道",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "tag": "2#辊道",
         "image": "symbols/大冶特钢中棒/辊道标识.json",
@@ -3056,11 +3056,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22421,
+      "i": 138388,
       "p": {
         "displayName": "3#辊道",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "tag": "3#辊道",
         "image": "symbols/大冶特钢中棒/辊道标识.json",
@@ -3084,11 +3084,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22422,
+      "i": 138389,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -3120,11 +3120,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22423,
+      "i": 138390,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -3156,11 +3156,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22424,
+      "i": 138391,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -3192,11 +3192,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22425,
+      "i": 138392,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -3228,11 +3228,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22426,
+      "i": 138393,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -3264,11 +3264,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22427,
+      "i": 138394,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -3300,11 +3300,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 22428,
+      "i": 138395,
       "p": {
         "displayName": "350机组",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {}
@@ -3330,11 +3330,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 22429,
+      "i": 138396,
       "p": {
         "displayName": "350机组",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {}
@@ -3360,11 +3360,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22430,
+      "i": 138397,
       "p": {
         "displayName": "1#水箱",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "1#水箱",
@@ -3388,11 +3388,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22431,
+      "i": 138398,
       "p": {
         "displayName": "3#飞剪",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "3#飞剪",
@@ -3417,11 +3417,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22432,
+      "i": 138399,
       "p": {
         "displayName": "ST17",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST17",
@@ -3453,11 +3453,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22433,
+      "i": 138400,
       "p": {
         "displayName": "ST18",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST18",
@@ -3489,11 +3489,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22434,
+      "i": 138401,
       "p": {
         "displayName": "ST19",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST19",
@@ -3525,11 +3525,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22435,
+      "i": 138402,
       "p": {
         "displayName": "ST20",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST20",
@@ -3561,11 +3561,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22436,
+      "i": 138403,
       "p": {
         "displayName": "2#水箱",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "2#水箱",
@@ -3589,11 +3589,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22437,
+      "i": 138404,
       "p": {
         "displayName": "ST21",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST21",
@@ -3625,11 +3625,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22438,
+      "i": 138405,
       "p": {
         "displayName": "ST22",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST22",
@@ -3661,11 +3661,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22439,
+      "i": 138406,
       "p": {
         "displayName": "3#水箱",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "3#水箱",
@@ -3689,11 +3689,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22440,
+      "i": 138407,
       "p": {
         "displayName": "4#飞剪",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "4#飞剪",
@@ -3718,11 +3718,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22441,
+      "i": 138408,
       "p": {
         "displayName": "活套",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -3750,11 +3750,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22442,
+      "i": 138409,
       "p": {
         "displayName": "测径仪",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/测径仪.png",
@@ -3777,11 +3777,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22443,
+      "i": 138410,
       "p": {
         "displayName": "活套",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -3809,11 +3809,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22444,
+      "i": 138411,
       "p": {
         "displayName": "活套",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -3841,11 +3841,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22445,
+      "i": 138412,
       "p": {
         "displayName": "活套",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -3873,11 +3873,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22446,
+      "i": 138413,
       "p": {
         "displayName": "活套",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -3905,11 +3905,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22447,
+      "i": 138414,
       "p": {
         "displayName": "活套",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -3937,11 +3937,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22448,
+      "i": 138415,
       "p": {
         "displayName": "活套",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -3969,11 +3969,11 @@
     },
     {
       "c": "ht.Block",
-      "i": 22449,
+      "i": 138416,
       "p": {
         "displayName": "异常信息",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "tag": "errormes",
         "position": {
@@ -3991,10 +3991,10 @@
     },
     {
       "c": "ht.Node",
-      "i": 22450,
+      "i": 138417,
       "p": {
         "parent": {
-          "__i": 22449
+          "__i": 138416
         },
         "image": "symbols/tenant/shjz-gczndpsj/标题_02.json",
         "position": {
@@ -4018,17 +4018,17 @@
         "name": "测径仪趋势",
         "显示": false,
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":22600,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":22601,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":22602,\"p\":{\"displayName\":\"年\"}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":138567,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":138568,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":138569,\"p\":{\"displayName\":\"年\"}}]}"
         },
         "visible": false
       }
     },
     {
       "c": "ht.Node",
-      "i": 22451,
+      "i": 138418,
       "p": {
         "parent": {
-          "__i": 22449
+          "__i": 138416
         },
         "image": "symbols/tenant/shjz-gczndpsj/标题_02.json",
         "position": {
@@ -4052,17 +4052,17 @@
         "name": "温度趋势",
         "显示": false,
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":22603,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":22604,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":22605,\"p\":{\"displayName\":\"年\"}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":138570,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":138571,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":138572,\"p\":{\"displayName\":\"年\"}}]}"
         },
         "visible": false
       }
     },
     {
       "c": "ht.Node",
-      "i": 22452,
+      "i": 138419,
       "p": {
         "parent": {
-          "__i": 22449
+          "__i": 138416
         },
         "image": "symbols/tenant/shjz-gczndpsj/标题_02.json",
         "position": {
@@ -4086,18 +4086,18 @@
         "name": "异常信息",
         "显示": false,
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":22606,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":22607,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":22608,\"p\":{\"displayName\":\"年\"}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":138573,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":138574,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":138575,\"p\":{\"displayName\":\"年\"}}]}"
         },
         "visible": false
       }
     },
     {
       "c": "ht.Node",
-      "i": 22453,
+      "i": 138420,
       "p": {
         "displayName": "table",
         "parent": {
-          "__i": 22449
+          "__i": 138416
         },
         "dataBindings": {
           "a": {
@@ -4232,11 +4232,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22454,
+      "i": 138421,
       "p": {
         "displayName": "下图标",
         "parent": {
-          "__i": 22449
+          "__i": 138416
         },
         "image": "symbols/tenant/shjz-gczndpsj/下图标.json",
         "position": {
@@ -4261,11 +4261,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22455,
+      "i": 138422,
       "p": {
         "displayName": "下图标",
         "parent": {
-          "__i": 22449
+          "__i": 138416
         },
         "image": "symbols/tenant/shjz-gczndpsj/下图标.json",
         "position": {
@@ -4291,11 +4291,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22456,
+      "i": 138423,
       "p": {
         "displayName": "timeAxisChart",
         "parent": {
-          "__i": 22449
+          "__i": 138416
         },
         "tag": "line",
         "dataBindings": {
@@ -4466,11 +4466,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22457,
+      "i": 138424,
       "p": {
         "displayName": "timeAxisChart",
         "parent": {
-          "__i": 22449
+          "__i": 138416
         },
         "tag": "date",
         "dataBindings": {
@@ -4651,11 +4651,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22458,
+      "i": 138425,
       "p": {
         "displayName": "加热炉出口辊道热检有钢信号",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "track-1-Stand1EntryHmd",
@@ -4687,11 +4687,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22459,
+      "i": 138426,
       "p": {
         "displayName": "ST1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST1",
@@ -4723,11 +4723,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22460,
+      "i": 138427,
       "p": {
         "displayName": "ST2",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST2",
@@ -4759,11 +4759,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22461,
+      "i": 138428,
       "p": {
         "displayName": "线轧机悬浮跟踪",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "tag": "set",
         "dataBindings": {
@@ -4795,11 +4795,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22462,
+      "i": 138429,
       "p": {
         "displayName": "1#夹送辊",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "1#夹送辊",
@@ -4825,10 +4825,10 @@
     },
     {
       "c": "ht.Node",
-      "i": 22463,
+      "i": 138430,
       "p": {
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "image": "symbols/大冶特钢中棒/框体.json",
         "position": {
@@ -4853,17 +4853,17 @@
         "name": "温度曲线",
         "显示": false,
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":22609,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":22610,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":22611,\"p\":{\"displayName\":\"年\"}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":138576,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":138577,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":138578,\"p\":{\"displayName\":\"年\"}}]}"
         },
         "visible": false
       }
     },
     {
       "c": "ht.Node",
-      "i": 22464,
+      "i": 138431,
       "p": {
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "image": "symbols/大冶特钢中棒/框体.json",
         "position": {
@@ -4888,18 +4888,18 @@
         "name": "测径曲线",
         "显示": false,
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":22612,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":22613,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":22614,\"p\":{\"displayName\":\"年\"}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":138579,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":138580,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":138581,\"p\":{\"displayName\":\"年\"}}]}"
         },
         "visible": false
       }
     },
     {
       "c": "ht.Node",
-      "i": 22465,
+      "i": 138432,
       "p": {
         "displayName": "timeAxisChart",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -5065,11 +5065,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22466,
+      "i": 138433,
       "p": {
         "displayName": "timeAxisChart",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "tag": "temperature",
         "dataBindings": {
@@ -5290,10 +5290,10 @@
     },
     {
       "c": "ht.Node",
-      "i": 22467,
+      "i": 138434,
       "p": {
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "image": "symbols/大冶特钢中棒/框体.json",
         "position": {
@@ -5318,17 +5318,17 @@
         "name": "轧机电流",
         "显示": false,
         "dataModel": {
-          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":22615,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":22616,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":22617,\"p\":{\"displayName\":\"年\"}}]}"
+          "__dm": "{\"v\":\"8.1.3\",\"p\":{\"autoAdjustIndex\":true,\"hierarchicalRendering\":false},\"d\":[{\"c\":\"ht.Data\",\"i\":138582,\"p\":{\"displayName\":\"日\"},\"s\":{\"checked\":true}},{\"c\":\"ht.Data\",\"i\":138583,\"p\":{\"displayName\":\"月\"}},{\"c\":\"ht.Data\",\"i\":138584,\"p\":{\"displayName\":\"年\"}}]}"
         },
         "visible": false
       }
     },
     {
       "c": "ht.Block",
-      "i": 22468,
+      "i": 138435,
       "p": {
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "position": {
           "x": 814.67646,
@@ -5343,11 +5343,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22469,
+      "i": 138436,
       "p": {
         "displayName": "出钢间隔",
         "parent": {
-          "__i": 22468
+          "__i": 138435
         },
         "dataBindings": {
           "a": {
@@ -5384,11 +5384,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22470,
+      "i": 138437,
       "p": {
         "displayName": "运行时间",
         "parent": {
-          "__i": 22468
+          "__i": 138435
         },
         "dataBindings": {
           "a": {
@@ -5424,11 +5424,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22471,
+      "i": 138438,
       "p": {
         "displayName": "批次总支数",
         "parent": {
-          "__i": 22468
+          "__i": 138435
         },
         "dataBindings": {
           "a": {
@@ -5464,11 +5464,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22472,
+      "i": 138439,
       "p": {
         "displayName": "批次已轧",
         "parent": {
-          "__i": 22468
+          "__i": 138435
         },
         "dataBindings": {
           "a": {
@@ -5504,11 +5504,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22473,
+      "i": 138440,
       "p": {
         "displayName": "当班已轧",
         "parent": {
-          "__i": 22468
+          "__i": 138435
         },
         "dataBindings": {
           "a": {
@@ -5546,11 +5546,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22474,
+      "i": 138441,
       "p": {
         "displayName": "异常录入",
         "parent": {
-          "__i": 22468
+          "__i": 138435
         },
         "image": "symbols/tenant/shjz-gczndpsj/下图标.json",
         "position": {
@@ -5577,11 +5577,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22475,
+      "i": 138442,
       "p": {
         "displayName": "异常查询",
         "parent": {
-          "__i": 22468
+          "__i": 138435
         },
         "image": "symbols/大冶特钢中棒/下图标.json",
         "position": {
@@ -5608,11 +5608,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22476,
+      "i": 138443,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "tag": "millstate1",
         "dataBindings": {
@@ -5645,11 +5645,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22477,
+      "i": 138444,
       "p": {
         "displayName": "ST3",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST3",
@@ -5681,11 +5681,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22478,
+      "i": 138445,
       "p": {
         "displayName": "ST4",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST4",
@@ -5717,11 +5717,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22479,
+      "i": 138446,
       "p": {
         "displayName": "ST5",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST5",
@@ -5753,11 +5753,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22480,
+      "i": 138447,
       "p": {
         "displayName": "ST6",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST6",
@@ -5789,11 +5789,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22481,
+      "i": 138448,
       "p": {
         "displayName": "加热炉出口辊道热检有钢信号",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -5825,11 +5825,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22482,
+      "i": 138449,
       "p": {
         "displayName": "加热炉出口辊道热检有钢信号",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -5861,11 +5861,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22483,
+      "i": 138450,
       "p": {
         "displayName": "加热炉出口辊道热检有钢信号",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -5897,11 +5897,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22484,
+      "i": 138451,
       "p": {
         "displayName": "加热炉出口辊道热检有钢信号",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -5933,11 +5933,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22485,
+      "i": 138452,
       "p": {
         "displayName": "ST7",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST7",
@@ -5969,11 +5969,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22486,
+      "i": 138453,
       "p": {
         "displayName": "ST8",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST8",
@@ -6005,11 +6005,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22487,
+      "i": 138454,
       "p": {
         "displayName": "ST9",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST9",
@@ -6041,11 +6041,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22488,
+      "i": 138455,
       "p": {
         "displayName": "ST10",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST10",
@@ -6077,11 +6077,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22489,
+      "i": 138456,
       "p": {
         "displayName": "ST11",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST11",
@@ -6113,11 +6113,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22490,
+      "i": 138457,
       "p": {
         "displayName": "ST12",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST12",
@@ -6149,11 +6149,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22491,
+      "i": 138458,
       "p": {
         "displayName": "ST13",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST13",
@@ -6185,11 +6185,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22492,
+      "i": 138459,
       "p": {
         "displayName": "ST14",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST14",
@@ -6221,11 +6221,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22493,
+      "i": 138460,
       "p": {
         "displayName": "ST15",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST15",
@@ -6257,11 +6257,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22494,
+      "i": 138461,
       "p": {
         "displayName": "ST16",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "ST16",
@@ -6293,11 +6293,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22495,
+      "i": 138462,
       "p": {
         "displayName": "2#夹送辊",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/夹送棍.png",
@@ -6322,11 +6322,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22496,
+      "i": 138463,
       "p": {
         "displayName": "加热炉出口辊道热检有钢信号",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -6358,11 +6358,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22497,
+      "i": 138464,
       "p": {
         "displayName": "加热炉出口辊道热检有钢信号",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -6394,11 +6394,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22498,
+      "i": 138465,
       "p": {
         "displayName": "摆剪",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "tag": "摆剪",
@@ -6423,11 +6423,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22499,
+      "i": 138466,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -6459,11 +6459,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22500,
+      "i": 138467,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -6495,11 +6495,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22501,
+      "i": 138468,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -6531,11 +6531,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22502,
+      "i": 138469,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -6567,11 +6567,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22503,
+      "i": 138470,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -6603,11 +6603,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22504,
+      "i": 138471,
       "p": {
         "displayName": "出料炉门信号",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -6641,11 +6641,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22505,
+      "i": 138472,
       "p": {
         "displayName": "自由辊道区1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "tag": "自由辊道区1",
         "image": "symbols/大冶特钢中棒/辊道标识.json",
@@ -6669,11 +6669,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22506,
+      "i": 138473,
       "p": {
         "displayName": "自由辊道区2",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "tag": "自由辊道区2",
         "image": "symbols/大冶特钢中棒/辊道标识.json",
@@ -6697,11 +6697,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22507,
+      "i": 138474,
       "p": {
         "displayName": "保温辊道",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "image": "symbols/大冶特钢中棒/辊道标识.json",
         "position": {
@@ -6724,10 +6724,10 @@
     },
     {
       "c": "ht.Block",
-      "i": 22508,
+      "i": 138475,
       "p": {
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "position": {
@@ -6748,10 +6748,10 @@
     },
     {
       "c": "ht.Block",
-      "i": 22509,
+      "i": 138476,
       "p": {
         "parent": {
-          "__i": 22508
+          "__i": 138475
         },
         "position": {
           "x": 80.34066,
@@ -6763,11 +6763,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22510,
+      "i": 138477,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 22509
+          "__i": 138476
         },
         "dataBindings": {
           "s": {
@@ -6793,11 +6793,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22511,
+      "i": 138478,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 22509
+          "__i": 138476
         },
         "dataBindings": {
           "s": {
@@ -6823,11 +6823,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22512,
+      "i": 138479,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 22509
+          "__i": 138476
         },
         "dataBindings": {
           "s": {
@@ -6853,11 +6853,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22513,
+      "i": 138480,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 22509
+          "__i": 138476
         },
         "dataBindings": {
           "s": {
@@ -6883,11 +6883,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22514,
+      "i": 138481,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 22509
+          "__i": 138476
         },
         "dataBindings": {
           "s": {
@@ -6913,11 +6913,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22515,
+      "i": 138482,
       "p": {
         "displayName": "喷水",
         "parent": {
-          "__i": 22509
+          "__i": 138476
         },
         "dataBindings": {
           "s": {
@@ -6943,11 +6943,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22516,
+      "i": 138483,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22508
+          "__i": 138475
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "rotation": 3.14159,
@@ -6965,11 +6965,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22517,
+      "i": 138484,
       "p": {
         "displayName": "棍道",
         "parent": {
-          "__i": 22508
+          "__i": 138475
         },
         "image": "assets/Ariimg/青岛特钢图片/棍道.png",
         "rotation": 3.14159,
@@ -6987,11 +6987,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22518,
+      "i": 138485,
       "p": {
         "displayName": "水箱",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/水箱.png",
@@ -7016,11 +7016,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22519,
+      "i": 138486,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -7052,11 +7052,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22520,
+      "i": 138487,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -7088,11 +7088,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22521,
+      "i": 138488,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -7124,11 +7124,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22522,
+      "i": 138489,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -7160,11 +7160,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22523,
+      "i": 138490,
       "p": {
         "displayName": "2#飞剪",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "image": "assets/Ariimg/青岛特钢图片/飞剪.png",
@@ -7188,11 +7188,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22524,
+      "i": 138491,
       "p": {
         "displayName": "timeAxisChart",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "tag": "current",
         "dataBindings": {
@@ -7371,11 +7371,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22525,
+      "i": 138492,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -7407,11 +7407,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22526,
+      "i": 138493,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -7443,11 +7443,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22527,
+      "i": 138494,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -7479,11 +7479,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22528,
+      "i": 138495,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -7515,11 +7515,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22529,
+      "i": 138496,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -7551,11 +7551,11 @@
     },
     {
       "c": "ht.Node",
-      "i": 22530,
+      "i": 138497,
       "p": {
         "displayName": "millstate1",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "a": {
@@ -7587,12 +7587,12 @@
     },
     {
       "c": "ht.Node",
-      "i": 22531,
+      "i": 138498,
       "p": {
         "displayName": "P1",
         "toolTip": "夹送辊处（粗轧入口1#机架前）高温计温度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -7625,12 +7625,12 @@
     },
     {
       "c": "ht.Node",
-      "i": 22532,
+      "i": 138499,
       "p": {
         "displayName": "P2",
         "toolTip": "中轧前(中轧入口7#机架前)高温计温度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -7663,11 +7663,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 22533,
+      "i": 138500,
       "p": {
         "displayName": "480机组",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {}
@@ -7693,11 +7693,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 22534,
+      "i": 138501,
       "p": {
         "displayName": "464机组",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {}
@@ -7723,11 +7723,11 @@
     },
     {
       "c": "ht.Text",
-      "i": 22535,
+      "i": 138502,
       "p": {
         "displayName": "450机组",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {}
@@ -7753,12 +7753,12 @@
     },
     {
       "c": "ht.Node",
-      "i": 22536,
+      "i": 138503,
       "p": {
         "displayName": "P3",
         "toolTip": "小棒轧线二期-保温辊道前高温计P0（PIW568）",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "layer": "1",
         "dataBindings": {
@@ -7791,12 +7791,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22537,
+      "i": 138504,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "2#水箱流量",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -7834,12 +7834,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22538,
+      "i": 138505,
       "p": {
         "displayName": "3#水箱流量",
         "toolTip": "3#水箱流量",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -7871,12 +7871,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22539,
+      "i": 138506,
       "p": {
         "displayName": "1#水箱流量",
         "toolTip": "1#水箱流量",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -7908,12 +7908,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22540,
+      "i": 138507,
       "p": {
         "displayName": "4#水箱流量",
         "toolTip": "4#水箱流量",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -7945,12 +7945,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22541,
+      "i": 138508,
       "p": {
         "displayName": "5#水箱流量",
         "toolTip": "5#水箱流量",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -7982,12 +7982,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22542,
+      "i": 138509,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "4#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8025,12 +8025,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22543,
+      "i": 138510,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "3#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8068,12 +8068,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22544,
+      "i": 138511,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "2#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8111,12 +8111,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22545,
+      "i": 138512,
       "p": {
         "displayName": "1#轧机速度",
         "toolTip": "1#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8154,12 +8154,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22546,
+      "i": 138513,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "5#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8197,12 +8197,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22547,
+      "i": 138514,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "6#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8240,12 +8240,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22548,
+      "i": 138515,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "4#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8283,12 +8283,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22549,
+      "i": 138516,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "3#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8326,12 +8326,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22550,
+      "i": 138517,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "2#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8369,12 +8369,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22551,
+      "i": 138518,
       "p": {
         "displayName": "1#轧机电流",
         "toolTip": "1#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8412,12 +8412,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22552,
+      "i": 138519,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "5#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8455,12 +8455,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22553,
+      "i": 138520,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "6#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8498,12 +8498,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22554,
+      "i": 138521,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "7#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8541,12 +8541,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22555,
+      "i": 138522,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "7#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8584,12 +8584,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22556,
+      "i": 138523,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "8#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8627,12 +8627,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22557,
+      "i": 138524,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "8#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8670,12 +8670,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22558,
+      "i": 138525,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "9#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8713,12 +8713,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22559,
+      "i": 138526,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "9#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8756,12 +8756,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22560,
+      "i": 138527,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "10#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8799,12 +8799,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22561,
+      "i": 138528,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "10#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8842,12 +8842,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22562,
+      "i": 138529,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "11#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8885,12 +8885,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22563,
+      "i": 138530,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "11#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8928,12 +8928,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22564,
+      "i": 138531,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "12#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -8971,12 +8971,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22565,
+      "i": 138532,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "12#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9014,12 +9014,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22566,
+      "i": 138533,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "13#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9057,12 +9057,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22567,
+      "i": 138534,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "13#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9100,12 +9100,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22568,
+      "i": 138535,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "14#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9143,12 +9143,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22569,
+      "i": 138536,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "14#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9186,12 +9186,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22570,
+      "i": 138537,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "15#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9229,12 +9229,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22571,
+      "i": 138538,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "15#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9272,12 +9272,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22572,
+      "i": 138539,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "16#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9315,12 +9315,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22573,
+      "i": 138540,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "16#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9358,12 +9358,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22574,
+      "i": 138541,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "17#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9401,12 +9401,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22575,
+      "i": 138542,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "17#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9444,12 +9444,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22576,
+      "i": 138543,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "18#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9487,12 +9487,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22577,
+      "i": 138544,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "18#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9530,12 +9530,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22578,
+      "i": 138545,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "19#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9573,12 +9573,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22579,
+      "i": 138546,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "19#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9616,12 +9616,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22580,
+      "i": 138547,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "20#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9659,12 +9659,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22581,
+      "i": 138548,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "20#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9702,12 +9702,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22582,
+      "i": 138549,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "21#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9745,12 +9745,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22583,
+      "i": 138550,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "21#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9788,12 +9788,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22584,
+      "i": 138551,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "22#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9831,12 +9831,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22585,
+      "i": 138552,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "22#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9874,12 +9874,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22586,
+      "i": 138553,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "23#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9917,12 +9917,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22587,
+      "i": 138554,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "23#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -9960,12 +9960,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22588,
+      "i": 138555,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "24#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10003,12 +10003,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22589,
+      "i": 138556,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "24#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10046,12 +10046,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22590,
+      "i": 138557,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "25#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10089,12 +10089,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22591,
+      "i": 138558,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "25#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10132,12 +10132,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22592,
+      "i": 138559,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "26#轧机速度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10175,12 +10175,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22593,
+      "i": 138560,
       "p": {
         "displayName": "2#水箱流量",
         "toolTip": "26#轧机电流",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10218,12 +10218,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22594,
+      "i": 138561,
       "p": {
         "displayName": "2#活套高度",
         "toolTip": "2#活套高度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10261,12 +10261,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22595,
+      "i": 138562,
       "p": {
         "displayName": "3#活套高度",
         "toolTip": "3#活套高度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10304,12 +10304,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22596,
+      "i": 138563,
       "p": {
         "displayName": "4#活套高度",
         "toolTip": "4#活套高度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10347,12 +10347,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22597,
+      "i": 138564,
       "p": {
         "displayName": "5#活套高度",
         "toolTip": "5#活套高度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10390,12 +10390,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22598,
+      "i": 138565,
       "p": {
         "displayName": "6#活套高度",
         "toolTip": "6#活套高度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10433,12 +10433,12 @@
     },
     {
       "c": "ht.Text",
-      "i": 22599,
+      "i": 138566,
       "p": {
         "displayName": "7#活套高度",
         "toolTip": "7#活套高度",
         "parent": {
-          "__i": 22305
+          "__i": 138272
         },
         "dataBindings": {
           "s": {
@@ -10475,7 +10475,7 @@
       }
     }
   ],
-  "modified": "Wed Aug 26 2026 10:55:59 GMT+0800 (中国标准时间)",
+  "modified": "Fri Sep 11 2026 17:29:07 GMT+0800 (中国标准时间)",
   "contentRect": {
     "x": -60.00608,
     "y": 0,

@@ -40,6 +40,31 @@
  *   - 每次循环：运动推演 → 数据同步 → 渲染更新
  *   - 后端数据到达时触发校正，修正推演累积误差
  *
+ * 【产线信息】
+ *   - 产线：扁棒线（产线编码 H9）
+ *   - 缓存仓库 key 前缀：H9_（localStorage，详见「数据仓库层」）
+ *   - 本文件独立编写（两轨结构，与中棒/大棒三轨结构不同）
+ *
+ * 【扁棒线适配说明（后续开发必读）】
+ *   1. 轨道/分区/热检坐标、速度、集合点等常量按扁棒现场图纸核对
+ *      （getYTrack / MILL_ZONES / SPEED_CONFIG / PHYSICAL_ORDER /
+ *        applyProcessConstraints 内的热检位置等）。
+ *   2. 仍留有源产线（中棒）专有字面量，待确认扁棒真实取值后替换：
+ *        - 「右键菜单逻辑」段：const line = data.getAttr("Line") || "B101";
+ *        - 「左键弹窗逻辑」段：const Line = "B101";（该段当前整体被注释）
+ *   3. 初始化段中 trySetDoubleClickHandlerForNode 为外部全局函数，本文件未定义；
+ *      中棒版本里该调用位于文件末尾的注释块内；如启用双击弹窗需确认是否提前到初始化段生效。
+ *   4. 「右键菜单逻辑」「左键弹窗逻辑」两段代码当前整体注释未启用。
+ *
+ * 【外部依赖】
+ *   - graphView : HT for Web 图形视图实例（全局注入）
+ *   - dm        : graphView.dm() 数据模型
+ *   - request / requestGet : 全局 HTTP 请求函数
+ *
+ * 【版本记录】
+ *   v1.0  2026-09-15  头部注释补充【产线信息】【外部依赖】【版本记录】3 块
+ *                     （参考大棒线轧机.js 头部结构对齐）
+ *
  * @file       扁棒线轧机.js
  * @requires   graphView (HT GraphView 全局对象)
  * @requires   dataModel (HT DataModel 全局对象)

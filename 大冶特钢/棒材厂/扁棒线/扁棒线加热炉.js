@@ -190,7 +190,7 @@ function mapColorToRGB(color) {
     const map = {
         red: 'rgb(255,0,0)',
         blue: 'rgb(51,153,255)',
-        green: 'rgb(0,255,0)',
+        green: 'rgb(240,225,19)',
         yellow: 'rgb(255,255,0)',
         orange: 'rgb(255,165,0)'
     };
@@ -468,7 +468,7 @@ function fetchPlanData(furnace) {
     // 获取班组班次信息
     var shiftGroupMap = { A: '一', B: '二', C: '三', D: '四' };
     var shiftNoMap = { '1': '夜', '2': '白' };
-    request("http://172.15.88.243:9003/api/bdy/bptbuscommon/getcurrentshiftinfo", {}, 'POST')
+    request("https://bar.dayesteel.com.cn/api/api/bdy/bptbuscommon/getcurrentshiftinfo", {}, 'POST')
         .then(data => {
             var teamNode = graphView.dm().getDataByTag('Team');
             var shiftNode = graphView.dm().getDataByTag('Shift');
@@ -479,7 +479,7 @@ function fetchPlanData(furnace) {
         });
 
     if (!furnace || furnace === 'A1') {
-        requestGet(`http://172.15.88.243:9003/api/bdy/bptbusrollingplan/getreadyplans?wholeBacklogCode=H9&furNo=A1`)
+        requestGet(`https://bar.dayesteel.com.cn/api/api/bdy/bptbusrollingplan/getreadyplans?wholeBacklogCode=H9&furNo=A1`)
             .then(data => {
                 tableData1 = data.Data;
                 let table1 = graphView.dm().getDataByTag('1#plan');
@@ -920,8 +920,10 @@ view.addEventListener('click', function (e) {
 const menuItems = [
     { label: "入炉退回", action: () => handleMenuClick("入炉退回") },
     { label: "出炉撤回", action: () => handleMenuClick("出炉撤回") },
-    { label: "前移", multi: true, action: () => handleMenuClick("部分前移") },
-    { label: "后移", multi: true, action: () => handleMenuClick("部分后移") },
+    { label: "单支前移", action: () => handleMenuClick("单支前移") },
+    { label: "单支后移", action: () => handleMenuClick("单支后移") },
+    { label: "部分前移", multi: true, action: () => handleMenuClick("部分前移") },
+    { label: "部分后移", multi: true, action: () => handleMenuClick("部分后移") },
 ];
 
 const contextmenu = new ht.widget.ContextMenu(menuItems);
@@ -932,7 +934,9 @@ contextmenu.setVisibleFunc(function (item) {
     if (!rightClickNode || !rightClickNode.furnaceKey) return false;
 
     var datas = graphView.sm().toSelection();
-    var count = datas.size();
+    // 只统计炉内钢坯节点，过滤框选时混入的轨道/标记等非炉内图元
+    var furnaceNodes = datas.toArray().filter(isFurnaceSteelNode);
+    var count = furnaceNodes.length;
     if (count === 0) return false;
 
     // 多选：仅显示 multi=true 的条目（前移/后移）
@@ -949,6 +953,16 @@ contextmenu.addTo(view);
 // ── 10.6 多选节点数组 ──
 // 确认多选后，将所有选中的钢坯节点存入此数组
 // 一个钢坯节点 = 实物的一根钢坯，没有道次概念
+
+/**
+ * 判断节点是否为炉内钢坯节点（tag 形如 One-数字 / Two-数字）
+ * 用于过滤选择集中混入的非炉内图元（轨道 Shape、标记节点等 tag 为空的节点）
+ */
+function isFurnaceSteelNode(node) {
+    var t = node && node.getTag ? node.getTag() : '';
+    return /^(One|Two)-\d+$/.test(t || '');
+}
+
 var selectedSteelNodes = [];
 
 /**
@@ -962,7 +976,7 @@ function confirmMultiSelect() {
         return selectedSteelNodes;
     }
 
-    selectedSteelNodes = datas.toArray().map(function (node) {
+    selectedSteelNodes = datas.toArray().filter(isFurnaceSteelNode).map(function (node) {
         return {
             node: node,                          // HT 节点对象
             inMatNo: node.a('inMatNo') || '',    // 钢坯号
@@ -994,7 +1008,10 @@ function extractSelectedRange() {
 
     var ctx = graphView._ctx;
     var furnaceKey = ctx ? (ctx.furnaceKey || ctx.a('furnace')) : undefined;
-    var nodes = datas.toArray();
+    // 只保留炉内钢坯节点，过滤框选时混入的非炉内图元
+    // （否则按 pos 排序时，pos=undefined 的杂项会排最前，导致 first/last 取到 undefined，无法发请求）
+    var nodes = datas.toArray().filter(isFurnaceSteelNode);
+    if (nodes.length === 0) return null;
 
     // 按 pos 排序
     nodes.sort(function (a, b) {
@@ -1050,6 +1067,16 @@ function handleMenuClick(type) {
             }
             break;
         }
+        case "单支前移":
+        case "单支后移": {
+            // 单支移动与部分移动一致，发送炉内位置（pos），不是钢坯号
+            var singlePos = ctx.a('pos');
+            if (singlePos !== undefined && singlePos !== null) {
+                var direction = type === "单支前移" ? "forward" : "backward";
+                requestSingleMove(furnaceKey, direction, singlePos);
+            }
+            break;
+        }
     }
 }
 
@@ -1059,7 +1086,7 @@ function handleMenuClick(type) {
 //  十一、业务接口
 // ================================================================
 
-const API_BASE = "http://172.15.88.243:8081/api/BarHeatFurnaceg/TRACK_FLAT/FURNACE";
+const API_BASE = "https://bar.dayesteel.com.cn/api127/BarHeatFurnaceg/TRACK_FLAT/FURNACE";
 
 /**
  * 入炉退回（单支）
@@ -1098,6 +1125,22 @@ function requestPartialMove(furnaceCode, direction, fromPosition, toPosition) {
         direction: direction,
         fromPosition: fromPosition,
         toPosition: toPosition
+    });
+}
+
+/**
+ * 单支前移/后移（单支）
+ * 复用 /WALKINGBEAM/PARTIAL 接口，fromPosition 与 toPosition 发同一个炉内位置（pos）
+ * @param {string} furnaceCode  - 炉号 'A1'
+ * @param {string} direction    - 'forward' | 'backward'
+ * @param {number} position     - 炉内位置（pos）
+ */
+function requestSingleMove(furnaceCode, direction, position) {
+    requestGet(API_BASE + "/WALKINGBEAM/PARTIAL", {
+        furnaceCode: furnaceCode,
+        direction: direction,
+        fromPosition: position,
+        toPosition: position
     });
 }
 
