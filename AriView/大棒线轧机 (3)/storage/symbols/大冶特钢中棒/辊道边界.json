@@ -1,0 +1,81 @@
+{
+  "modified": "Tue Apr 14 2026 17:36:55 GMT+0800 (GMT+08:00)",
+  "width": 5,
+  "height": 10,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@lineColor",
+        "value": "rgb(51,153,255)"
+      },
+      "visible": {
+        "func": "attr@state"
+      },
+      "displayName": "1",
+      "points": [
+        0.26579,
+        10,
+        0.26579,
+        0
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@lineColor",
+        "value": "rgb(51,153,255)"
+      },
+      "visible": {
+        "func": "attr@state"
+      },
+      "displayName": "1",
+      "points": [
+        5,
+        5,
+        0.5,
+        5
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@lineColor",
+        "value": "rgb(51,153,255)"
+      },
+      "borderCap": "round",
+      "visible": {
+        "func": "attr@state"
+      },
+      "displayName": "1",
+      "points": [
+        0.2658,
+        5,
+        2.2658,
+        3
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 0.5,
+      "borderColor": {
+        "func": "attr@lineColor",
+        "value": "rgb(51,153,255)"
+      },
+      "borderCap": "round",
+      "visible": {
+        "func": "attr@state"
+      },
+      "displayName": "1",
+      "points": [
+        0.26579,
+        5,
+        2.26579,
+        7
+      ]
+    }
+  ]
+}

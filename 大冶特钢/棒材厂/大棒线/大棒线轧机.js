@@ -115,6 +115,15 @@
  *   v1.4  2026-09-17  仅注释：文件头【大棒线适配说明】补充第 6、7 条已知问题
  *                     （MILL_ZONES 边界越界、工艺约束与离线点仍是中棒点位），
  *                     代码逻辑未改动
+ *   v1.5  2026-09-22  新增可逆轧机（大棒1350轧机 H1~H8）往复轧制建模：
+ *                     新增 REVERSING_HMD_LIST / reversingZoneMin/Max / isReversingHmd
+ *                     / isInReversingZone / inferDirection 配置与工具函数；
+ *                     钢坯状态新增 direction(±1) 与 _lastHeadHmdX；
+ *                     updateSteelPosition / forwardSimulatePosition 支持反向（direction）；
+ *                     applyPositionCorrection 由 headPosition x 变化推断方向并双向校正；
+ *                     往复区内跳过集合点控制（applyCollectionPointControl /
+ *                     clipHeadBySignals / clipTailBySignals）；
+ *                     往复区位置回退不再报警（recordPass）、反向走平滑动画（drawSteel）
  *
  * @file       大棒线轧机.js
  * @requires   graphView (HT GraphView 全局对象)
@@ -253,6 +262,49 @@ PHYSICAL_ORDER.forEach(tag => {
 
 console.log('TRACK_POSITION_MAP:', TRACK_POSITION_MAP);
 console.log('All_POSITION_MAP:', All_POSITION_MAP);
+
+// ===== 往复区（可逆轧机）配置 =====
+// 大棒线 H8 是可逆式初轧机（大棒1350轧机），钢坯在 H1~H8 热检之间往复轧制多个道次：
+//   正向（X 增大）: H1 → H2 → ... → H8
+//   反向（X 减小）: H8 → H7 → ... → H1
+// 热检之间钢坯做连续往复运动，方向由后端 headPosition 的 x 坐标变化推断。
+var REVERSING_HMD_LIST = [
+    'H1HotDet', 'H2HotDet', 'H3HotDet', 'H4HotDet',
+    'HotDet5A', 'HotDet5B', 'HotDet6A', 'HotDet6B',
+    'H7HotDet', 'H8HotDet'
+];
+
+// 往复区边界：运行时从 TRACK_POSITION_MAP 动态计算，图纸补节点后自动生效
+var reversingZoneMin = Infinity;
+var reversingZoneMax = -Infinity;
+REVERSING_HMD_LIST.forEach(function (name) {
+    var x = TRACK_POSITION_MAP.get(name);
+    if (x !== undefined) {
+        if (x < reversingZoneMin) reversingZoneMin = x;
+        if (x > reversingZoneMax) reversingZoneMax = x;
+    }
+});
+
+// 判断某个热检名称是否属于往复区（用于回退报警豁免等）
+function isReversingHmd(position) {
+    return REVERSING_HMD_LIST.indexOf(position) !== -1;
+}
+
+// 判断钢坯头位置是否落在往复区（H1~H8 之间）
+function isInReversingZone(headX) {
+    return reversingZoneMin !== Infinity &&
+           headX >= reversingZoneMin &&
+           headX <= reversingZoneMax;
+}
+
+// 根据前后两次头经过的 x 坐标推断运动方向：
+//   +1 正向（X 增大）、-1 反向（X 减小）、0 无法判断（同一点）
+function inferDirection(newX, oldX) {
+    if (oldX === null || oldX === undefined) return 0;
+    if (newX > oldX) return 1;
+    if (newX < oldX) return -1;
+    return 0;
+}
 
 /**
  * ===== 轨道配置与渲染状态 =====
@@ -499,9 +551,11 @@ function drawSteel(
         ];
 
     // 分支2：尾位置回退（钢坯被裁切），直接跳变
+    // 例外：往复区反向运动（direction=-1）时尾回退是整体平移，应走平滑动画
     if (
         steel.tailX <
-        last.tailX
+        last.tailX &&
+        (steel.direction || 1) > 0
     ) {
 
         updateSteelLines(
@@ -882,9 +936,11 @@ const HmdPassStore = {
         });
 
         // 数据校验：检测同类型位置回退（如头的第二个HMD比第一个更靠左）
+        // 但往复区（可逆轧机 H1~H8）内正反向来回，位置回退是正常现象，不报警
         if (passes.length >= 2) {
             const prev = passes[passes.length - 2];
-            if (prev.type === type && prev.x > passes[passes.length - 1].x) {
+            if (prev.type === type && prev.x > passes[passes.length - 1].x &&
+                !(isReversingHmd(prev.position) && isReversingHmd(position))) {
                 console.warn(
                     '[HmdPassStore 异常] 位置回退!',
                     '钢坯:', inMatNo,
@@ -1012,7 +1068,9 @@ if (Object.keys(RenderCacheStore.data).length > 0 && _cacheFresh) {
                 createTime: now,
                 updateTime: now,
                 _lastHeadHmdTime: '',   // 留空，让 applyPositionCorrection 首次触发校正
-                _lastTailHmdTime: ''    // 留空，让 applyPositionCorrection 首次触发校正
+                _lastTailHmdTime: '',   // 留空，让 applyPositionCorrection 首次触发校正
+                direction: 1,
+                _lastHeadHmdX: null
             };
         }
     });
@@ -1260,7 +1318,10 @@ function addSteelToState(item) {
         updateTime: getServerNow(),
 
         _lastHeadHmdTime: lastHeadHmdTime,
-        _lastTailHmdTime: lastTailHmdTime
+        _lastTailHmdTime: lastTailHmdTime,
+
+        direction: 1,
+        _lastHeadHmdX: null
     };
 
     console.log(
@@ -1873,6 +1934,12 @@ function getTailReleasePoint(steel) {
 function applyCollectionPointControl(steel) {
     var key = steel.inMatNo;
 
+    // 往复区（可逆轧机 H1~H8）内：跳过集合点信号控制
+    // 往复轧制由方向推断 + 速度驱动，热检"有钢信号"单向控制机制不适用
+    if (isInReversingZone(steel.headX)) {
+        return;
+    }
+
     // steelCollectionTracker LRU 容量控制：最多保留10条
     // （已下线钢坯的清理已统一移至 cleanupSteelTrackers，在 removeSteelFromState 中触发）
     trimCollectionTracker();
@@ -1958,6 +2025,10 @@ function applyCollectionPointControl(steel) {
  * @returns {number} 受约束后的头位置
  */
 function clipHeadBySignals(steel, proposedHeadX) {
+    // 往复区（可逆轧机 H1~H8）内不裁切：往复运动由方向推断驱动，集合点信号约束不适用
+    if (isInReversingZone(steel.headX) || isInReversingZone(proposedHeadX)) {
+        return proposedHeadX;
+    }
     if (proposedHeadX <= steel.headX) return proposedHeadX;
 
     var clippedX = proposedHeadX;
@@ -2006,6 +2077,10 @@ function clipHeadBySignals(steel, proposedHeadX) {
  * @returns {number} 受约束后的尾位置
  */
 function clipTailBySignals(steel, proposedTailX) {
+    // 往复区（可逆轧机 H1~H8）内不裁切：往复运动由方向推断驱动，集合点信号约束不适用
+    if (isInReversingZone(steel.tailX) || isInReversingZone(proposedTailX)) {
+        return proposedTailX;
+    }
     if (proposedTailX <= steel.tailX) return proposedTailX;
 
     var clippedX = proposedTailX;
@@ -2058,12 +2133,14 @@ function updateSteelPosition(
     dt
 ) {
 
+    var dir = steel.direction || 1;
+
     steel.headX +=
-        steel.headSpeed * dt;
+        steel.headSpeed * dir * dt;
 
     var oldTailX = steel.tailX;
     steel.tailX +=
-        steel.tailSpeed * dt;
+        steel.tailSpeed * dir * dt;
 
     if (steel.tailX < 0) {
 
@@ -2105,9 +2182,11 @@ function updateSteelPosition(
  * @param {string} speedType    - 'head' | 'tail'（决定用headSpeed还是tailSpeed）
  * @returns {number} 推算后的当前位置
  */
-function forwardSimulatePosition(startX, startTimeStr, speedType) {
+function forwardSimulatePosition(startX, startTimeStr, speedType, direction) {
     if (!startTimeStr) return startX;
     if (startX === undefined || startX === null) return 0;
+
+    var dir = direction || 1;
 
     var startTime = new Date(startTimeStr.replace(' ', 'T')).getTime();
     if (isNaN(startTime)) return startX;
@@ -2120,38 +2199,66 @@ function forwardSimulatePosition(startX, startTimeStr, speedType) {
     var currentX = startX;
     var speedKey = speedType + 'Speed';  // 'headSpeed' or 'tailSpeed'
 
-    // 按顺序遍历所有分区
-    for (var i = 0; i < MILL_ZONES.length; i++) {
-        var zone = MILL_ZONES[i];
+    if (dir > 0) {
+        // 正向：按分区顺序（X 增大方向）消耗剩余时间
+        for (var i = 0; i < MILL_ZONES.length; i++) {
+            var zone = MILL_ZONES[i];
 
-        if (zone.end <= currentX) continue;  // 已走过此分区
+            if (zone.end <= currentX) continue;  // 已走过此分区
 
-        var zoneStart = Math.max(currentX, zone.start);
-        var speed = SPEED_CONFIG[zone.name] ? SPEED_CONFIG[zone.name][speedKey] : 0;
+            var zoneStart = Math.max(currentX, zone.start);
+            var fSpeed = SPEED_CONFIG[zone.name] ? SPEED_CONFIG[zone.name][speedKey] : 0;
 
-        if (speed <= 0) {
-            // 此分区速度为0，钢坯无法穿过（如tail在ENTRY阶段），终止推算
-            break;
+            if (fSpeed <= 0) {
+                // 此分区速度为0，钢坯无法穿过（如tail在ENTRY阶段），终止推算
+                break;
+            }
+
+            var fDistance = zone.end - zoneStart;
+            var fTime = fDistance / fSpeed;
+
+            if (remainingSec >= fTime) {
+                currentX = zone.end;
+                remainingSec -= fTime;
+            } else {
+                currentX += remainingSec * fSpeed;
+                remainingSec = 0;
+                break;
+            }
         }
+    } else {
+        // 反向：按分区逆序（X 减小方向）消耗剩余时间
+        for (var j = MILL_ZONES.length - 1; j >= 0; j--) {
+            var rZone = MILL_ZONES[j];
 
-        var zoneDistance = zone.end - zoneStart;
-        var timeInZone = zoneDistance / speed;
+            if (rZone.start >= currentX) continue;  // 反向已走过此分区
 
-        if (remainingSec >= timeInZone) {
-            currentX = zone.end;
-            remainingSec -= timeInZone;
-        } else {
-            currentX += remainingSec * speed;
-            remainingSec = 0;
-            break;
+            var rZoneEnd = Math.min(currentX, rZone.end);
+            var rSpeed = SPEED_CONFIG[rZone.name] ? SPEED_CONFIG[rZone.name][speedKey] : 0;
+
+            if (rSpeed <= 0) {
+                break;
+            }
+
+            var rDistance = rZoneEnd - rZone.start;
+            var rTime = rDistance / rSpeed;
+
+            if (remainingSec >= rTime) {
+                currentX = rZone.start;
+                remainingSec -= rTime;
+            } else {
+                currentX -= remainingSec * rSpeed;
+                remainingSec = 0;
+                break;
+            }
         }
     }
 
-    // 超出所有分区，以最后一个分区的速度继续前进
+    // 超出所有分区后，以边界分区速度继续移动
     if (remainingSec > 0) {
-        var lastZone = MILL_ZONES[MILL_ZONES.length - 1];
-        var lastSpeed = SPEED_CONFIG[lastZone.name] ? SPEED_CONFIG[lastZone.name][speedKey] : 5;
-        currentX += remainingSec * lastSpeed;
+        var edgeZone = dir > 0 ? MILL_ZONES[MILL_ZONES.length - 1] : MILL_ZONES[0];
+        var edgeSpeed = SPEED_CONFIG[edgeZone.name] ? SPEED_CONFIG[edgeZone.name][speedKey] : 5;
+        currentX += dir * remainingSec * edgeSpeed;
     }
 
     return currentX;
@@ -2681,8 +2788,15 @@ function applyPositionCorrection(
                 fact.headTime
             );
 
-            // 从HMD位置正向推算钢坯当前头位置
-            var newHeadX = forwardSimulatePosition(hmdX, fact.headTime, 'head');
+            // 方向推断：对比本次头经过的 x 与上次头经过的 x（往复区可正可反）
+            var inferredDir = inferDirection(hmdX, steel._lastHeadHmdX);
+            if (inferredDir !== 0) {
+                steel.direction = inferredDir;
+            }
+            steel._lastHeadHmdX = hmdX;
+
+            // 从HMD位置按当前方向推算钢坯当前头位置
+            var newHeadX = forwardSimulatePosition(hmdX, fact.headTime, 'head', steel.direction || 1);
 
             // 集合点信号约束：头位置不能越过信号≠1的集合点
             newHeadX = clipHeadBySignals(steel, newHeadX);
@@ -2716,8 +2830,8 @@ function applyPositionCorrection(
                 fact.tailTime
             );
 
-            // 从HMD位置正向推算钢坯当前尾位置
-            var newTailX = forwardSimulatePosition(hmdX, fact.tailTime, 'tail');
+            // 从HMD位置按当前方向推算钢坯当前尾位置
+            var newTailX = forwardSimulatePosition(hmdX, fact.tailTime, 'tail', steel.direction || 1);
 
             // 集合点信号约束：尾位置只能释放到信号1→0的集合点，且必须按顺序
             newTailX = clipTailBySignals(steel, newTailX);

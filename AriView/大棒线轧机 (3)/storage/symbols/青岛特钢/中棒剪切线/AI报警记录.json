@@ -1,0 +1,109 @@
+{
+  "modified": "Thu Jul 10 2025 15:11:07 GMT+0800 (GMT+08:00)",
+  "dataBindings": [
+    {
+      "attr": "rollPieceID",
+      "valueType": "String"
+    }
+  ],
+  "width": 100,
+  "height": 28,
+  "fitSize": true,
+  "comps": [
+    {
+      "type": "rect",
+      "background": "rgb(0,82,145)",
+      "repeatImage": "assets/Ariimg/青岛特钢图片/金属材质.jpg",
+      "repeatImageStretch": "fill",
+      "repeatImageRotation": 1.5708,
+      "pixelPerfect": true,
+      "rotation": 4.71239,
+      "rect": [
+        37.50001,
+        -36.04565,
+        25,
+        100
+      ]
+    },
+    {
+      "type": "rect",
+      "borderColor": "#979797",
+      "gradientPack": [
+        "radial",
+        1,
+        -0.12016,
+        0.5,
+        0,
+        "rgb(0,187,255)",
+        0.27072,
+        "rgb(0,73,163)",
+        0.8854,
+        "rgb(145,215,255)",
+        1,
+        "rgb(5,155,255)",
+        1,
+        "rgb(0,129,235)"
+      ],
+      "pixelPerfect": true,
+      "rotation": 4.71239,
+      "rect": [
+        49.40678,
+        -49.40672,
+        1.18645,
+        100
+      ]
+    },
+    {
+      "type": "rect",
+      "borderColor": "#979797",
+      "gradientPack": [
+        "radial",
+        1,
+        -0.12016,
+        0.5,
+        0,
+        "rgb(0,187,255)",
+        0.27072,
+        "rgb(0,73,163)",
+        0.8854,
+        "rgb(145,215,255)",
+        1,
+        "rgb(5,155,255)",
+        1,
+        "rgb(0,129,235)"
+      ],
+      "pixelPerfect": true,
+      "rotation": 4.71239,
+      "rect": [
+        49.40678,
+        -22.68458,
+        1.18645,
+        100
+      ]
+    },
+    {
+      "type": "text",
+      "text": {
+        "func": "attr@rollPieceID",
+        "value": "AA00001"
+      },
+      "align": "center",
+      "color": "rgb(0,0,0)",
+      "font": "14px sans-serif, Arial",
+      "pixelPerfect": true,
+      "opacity": 0.8,
+      "shadowColor": "rgba(12,50,89,0.8)",
+      "shadowBlur": 3,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 1,
+      "anchorX": 0.47991,
+      "anchorY": 0.38921,
+      "rect": [
+        49.99,
+        14,
+        0.01,
+        0.01
+      ]
+    }
+  ]
+}
