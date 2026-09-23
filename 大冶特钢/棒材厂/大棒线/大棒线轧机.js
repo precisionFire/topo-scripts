@@ -200,8 +200,8 @@ TRACK_LENGTHS.forEach(function (len) {
 
 // ===== 辊道物理摆放顺序（完整序列） =====
 var PHYSICAL_ORDER = [
-    'track-1-aaa',
-    'track-1-bbb',
+    'track-1-EastHotDetect',
+    'track-1-BridgeDownHotDetect',
     'track-1-H1HotDet',
     'track-1-H2HotDet',
     'track-1-H3HotDet',
@@ -212,6 +212,8 @@ var PHYSICAL_ORDER = [
     'track-1-HotDet6B',
     'track-1-H7HotDet',
     'track-1-H8HotDet',
+    'track-1-ShearPre6_5mHotDet',
+    'track-1-ShearPre15_4mHotDet',
     'track-1-ShearPre6_1mHotDet',
     'track-1-ShearAfterRollerDetect'
 ];

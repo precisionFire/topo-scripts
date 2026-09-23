@@ -53,6 +53,9 @@
  *                       模式一恢复 v1.0 自动识别原行为（WiFi=内网、USB 类=外网）；
  *                    ③ 内网角色匹配到「未连通」网卡时等 2 秒重查一次，规避链路刚 Up 的状态抖动；
  *                    ④ 状态文件记录 mode，status/off 按当时开启的模式展示与还原。
+ *  v1.3.1  2026-09-22  修 off 漏删路由：off 删路由那一刻网卡若在重连换 IP，路由瞬时不可见、
+ *                    按记录删会漏（度量恢复了、路由却残留）。现在 off 最后对两张原始网卡做一次
+ *                    「残留清扫」：凡是 Protocol=NetMgmt 的手工路由（非默认/广播/组播）全部清掉。
  #>
 
 [CmdletBinding()]
@@ -707,6 +710,27 @@ function Invoke-On {
     Show-Status
 }
 
+# 残留清扫：删掉一张网卡上所有「本工具加的手工路由」
+#   判据：Protocol=NetMgmt 且不是默认/广播/组播路由（DHCP/系统自动路由的 Protocol 不是 NetMgmt，不受影响）
+#   场景：off 删路由那一刻网卡正好在重连换 IP，路由在系统里瞬时不可见 → 按记录删会漏；下次 off 兜底清掉
+function Remove-StrayRoutes([int]$ifIndex, [string]$name) {
+    if (-not $ifIndex) { return }
+    $stray = @(Get-NetRoute -InterfaceIndex $ifIndex -AddressFamily IPv4 -ErrorAction SilentlyContinue |
+        Where-Object {
+            $_.Protocol -eq 'NetMgmt' -and
+            $ProtectedPrefixes -notcontains $_.DestinationPrefix
+        })
+    foreach ($r in $stray) {
+        try {
+            $r | Remove-NetRoute -Confirm:$false -ErrorAction Stop
+            Write-Ok ("已清理残留手工路由 {0} → {1}（{2}）" -f $r.DestinationPrefix, $r.NextHop, $name)
+        }
+        catch {
+            Write-Fail ("清理残留路由 {0} 失败：{1}" -f $r.DestinationPrefix, $_.Exception.Message)
+        }
+    }
+}
+
 # ---------------------- 关闭 ----------------------
 function Invoke-Off {
     Write-Head '关闭：删除内网路由 / 恢复自动度量'
@@ -714,12 +738,13 @@ function Invoke-Off {
 
     $st = Read-State
     if (-not $st) {
-        Write-Note '没有找到开启记录：把网卡度量恢复为系统自动，并清理本工具可能留下的手工度量'
+        Write-Note '没有找到开启记录：把网卡度量恢复为系统自动，并清理本工具可能留下的手工路由'
         $ad = Get-Adapters -Mode $Mode -IntranetIf $IntranetIf -InternetIf $InternetIf
         foreach ($a in @($ad.Intranet, $ad.Internet)) {
             if (-not $a) { continue }
             $snap = [pscustomobject]@{ Index = $a.ifIndex; Automatic = 'Enabled'; Interface = $null }
             Restore-IfMetric $snap $a.Name @($Config.WifiInterfaceMetric, $Config.UsbInterfaceMetric)
+            Remove-StrayRoutes $a.ifIndex $a.Name
         }
         Show-Status
         return
@@ -735,12 +760,15 @@ function Invoke-Off {
         }
     }
 
+    # 兜底：按记录删完后，再扫一遍两张原始网卡，清掉可能残留的手工路由
     if ($st.snapshot) {
         $appliedInternet = if ($st.applied -and $st.applied.internet) { [int]$st.applied.internet } else { $Config.UsbInterfaceMetric }
         $appliedIntranet = if ($st.applied -and $st.applied.intranet) { [int]$st.applied.intranet } else { $Config.WifiInterfaceMetric }
         Restore-IfMetric $st.snapshot.internet ([string]$st.internetName) $appliedInternet
         Restore-IfMetric $st.snapshot.intranet ([string]$st.intranetName) $appliedIntranet
         Write-Ok '网卡度量已按原始记录恢复'
+        Remove-StrayRoutes ([int]$st.snapshot.internet.Index) $st.internetName
+        Remove-StrayRoutes ([int]$st.snapshot.intranet.Index) $st.intranetName
     }
 
     if (Test-Path $StatePath) { Remove-Item $StatePath -Force }
