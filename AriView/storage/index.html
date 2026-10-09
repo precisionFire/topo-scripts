@@ -43,9 +43,13 @@
 <script src='../libs/mqttws31.min.js'></script>
 <script src='../libs/sbind.js'></script>
 <script src='../libs/通用组件/弹窗组件/DialogView.js'></script>
-<script src='../libs/通用组件/弹窗组件/ConflictDialog.js'></script>
-<script type="module" src="../libs/通用组件/弹窗组件/DialogMain.js"></script>
-<script src='../libs/通用组件/弹窗组件/PopupManager.js'></script>
+	<!-- 2026-09-23 v1.0 弹窗组件加载顺序修复：PopupManager 必须在业务弹窗之前加载。
+	     业务弹窗（ConflictDialog / WillInOutPopup / RecognitionDialog / OverlengthDialog）用 setTimeout 100ms 延迟注册兜底，
+	     若 PopupManager 后加载，MQTT 100ms 内已推 ABNORMAL 会导致"类型未注册"报错（PopupManager.js:82）。
+	     WillInOutPopup 在 PopupManager 之后(原 50 行)不受影响。RecognitionDialog / OverlengthDialog 未在 index.html 引用，需单独排查其产线 HTML。 -->
+	<script src='../libs/通用组件/弹窗组件/PopupManager.js'></script>
+	<script src='../libs/通用组件/弹窗组件/ConflictDialog.js'></script>
+	<script type="module" src="../libs/通用组件/弹窗组件/DialogMain.js"></script>
 <script src='../libs/HistoricalTrendPopup.js'></script>
 <script src='../libs/通用组件/弹窗组件/WillInOutPopup.js'></script>
 <script src="../Scripts/bootstrap.bundle.min.js"></script>

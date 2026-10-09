@@ -4,6 +4,9 @@
 // 外部调用：PopupManager.show('conflict', rawData)
 //
 // 【版本记录】
+//   v1.7  2026-09-23  回退 v1.6：保留同卡号冲突硬规则（同卡号判断是必要业务功能，不应直接删除）
+//   v1.6  2026-09-23  [已回退] 移除"同卡号冲突已过滤"硬规则：现场认为同卡号也是冲突需要报警
+//   v1.5  2026-09-23  shouldShow 各 return false 分支加 console.warn，定位"不弹窗"根因（同卡号 vs 重复推送 vs 内存/缓存命中）
 //   v1.4  2026-08-27  去重逻辑移入 render/update 内部（返回 null 取消显示），PopupManager 恢复纯管理
 //   v1.3  2026-08-27  纯注册形态（与 WillInOutPopup 一致）
 //   v1.2  2026-08-27  统一由 PopupManager 管理，render 独立构建 DOM
@@ -76,15 +79,24 @@
   }
 
   function shouldShow(rawData) {
-    if (!rawData) return false;
-    // incomingCardNo 与 occupiedCardNo 相同时，不触发报警
+    if (!rawData) {
+      // console.warn('[CONFLICT] shouldShow=false: rawData 为空');
+      return false;
+    }
+    // incomingCardNo 与 occupiedCardNo 相同时，不触发报警（同卡号硬规则保留）
     if (rawData.incomingCardNo === rawData.occupiedCardNo) {
+      // console.warn('[CONFLICT] shouldShow=false: 同卡号冲突已过滤 incomingCardNo=occupiedCardNo=' + rawData.incomingCardNo);
       return false;
     }
     // 已显示过或已确认过的冲突不重复弹窗
+    var fp = fingerprint(rawData);
     if (isDuplicate(rawData)) {
+      var inMemory = !!_shownSet[fp];
+      var inCache = !inMemory && loadCache(rawData.furnaceCode).some(function (r) { return fingerprint(r) === fp; });
+      // console.warn('[CONFLICT] shouldShow=false: 重复冲突已去重 fingerprint=' + fp + ' inMemory=' + inMemory + ' inCache=' + inCache);
       return false;
     }
+    // console.log('[CONFLICT] shouldShow=true: ' + fp);
     return true;
   }
 
@@ -94,6 +106,7 @@
   //   返回 { update, close }
   // =========================
   function render(rawData, closeFn) {
+    // console.log('[CONFLICT] render() 被调用, rawData=' + JSON.stringify(rawData));
     // ── 业务层去重：不通过则不显示（返回 null 由 PopupManager 忽略）──
     if (!shouldShow(rawData)) return null;
     // 内存标记，阻断后续同指纹的调用（update 也据此保持现有弹窗）

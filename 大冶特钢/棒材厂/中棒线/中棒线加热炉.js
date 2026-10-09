@@ -25,6 +25,7 @@
  *   中棒加热炉逻辑 — 架构设计与数据流全文档
  *
  * 【版本记录】
+ *   v1.5  2026-09-23  A1/A2-ABNORMAL 链路过程加 console 日志（消息到达/解析 data/类型匹配/PopupManager 调用四节点），方便定位报警不显示
  *   v1.4  2026-09-05  计划表新增兜底定时刷新：炉内坯信息超 1 分钟无变化自动刷新计划
  *   v1.3  2026-09-03  炉内钢坯长度 > 10000mm 新增超长报警弹窗（OverlengthDialog）
  *   v1.2  2026-09-03  炉内钢坯输入长度 > 10000mm 时按 10000mm 处理
@@ -751,13 +752,22 @@ dataModel.addDataPropertyChangeListener(function (e) {
     }
 
     // ── 9.5 异常事件监听（A1/A2-ABNORMAL） ──
+    // [v1.5] 链路过程日志：消息到达 / 解析 data / 类型匹配 / PopupManager 调用 四节点都打 console（已注释，保留以便后续排查）
     if (e.property === 'a:A1-ABNORMAL' || e.property === 'a:A2-ABNORMAL') {
+        // console.log('[ABNORMAL] 收到消息 property=' + e.property + ' newValue=' + JSON.stringify(e.newValue));
         var abnormalData = e.newValue?.data;
+        // console.log('[ABNORMAL] abnormalData=' + JSON.stringify(abnormalData));
         if (abnormalData && abnormalData.abnormalType === 'SLAB_IN_POSITION_CARD_CONFLICT') {
             abnormalData.msgTime = e.newValue?.msgTime || '';
+            // console.log('[ABNORMAL] 类型匹配 SLAB_IN_POSITION_CARD_CONFLICT，准备 PopupManager.show("conflict") msgTime=' + abnormalData.msgTime);
             if (typeof PopupManager !== 'undefined' && PopupManager.show) {
                 PopupManager.show('conflict', abnormalData);
+                // console.log('[ABNORMAL] PopupManager.show("conflict") 已调用');
+            } else {
+                // console.warn('[ABNORMAL] PopupManager 未定义或缺少 show 方法, typeof PopupManager=' + typeof PopupManager);
             }
+        } else {
+            // console.warn('[ABNORMAL] 类型不匹配或 abnormalData 为空, abnormalType=' + (abnormalData && abnormalData.abnormalType));
         }
     }
 

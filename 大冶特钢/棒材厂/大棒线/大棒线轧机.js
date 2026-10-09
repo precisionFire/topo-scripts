@@ -212,9 +212,11 @@ var PHYSICAL_ORDER = [
     'track-1-HotDet6B',
     'track-1-H7HotDet',
     'track-1-H8HotDet',
-    'track-1-ShearPre6_5mHotDet',
+    'track-1-ShearPre22Point972MDetect',
     'track-1-ShearPre15_4mHotDet',
+    'track-1-ShearPre11_1mHotDet',
     'track-1-ShearPre6_1mHotDet',
+    'track-1ShearPre1_5mHotDet',
     'track-1-ShearAfterRollerDetect'
 ];
 
