@@ -124,6 +124,23 @@
  *                     往复区内跳过集合点控制（applyCollectionPointControl /
  *                     clipHeadBySignals / clipTailBySignals）；
  *                     往复区位置回退不再报警（recordPass）、反向走平滑动画（drawSteel）
+ *   v1.6  2026-10-09  新增特殊下线规则：卡号以 H7 开头的钢坯（如 H726202090），
+ *                     头部到达 1800（第 2 段轨道起点）时即下线：
+ *                     新增 H7_OFFLINE_HEAD_X 常量，isSteelFinished 增加条件3
+ *   v1.7  2026-10-09  新增横移台架钢坯显示：监听 a:rolltable1，
+ *                     收到消息即在 Transverse 节点区域居中显示 1 支钢坯
+ *                     （长度 300、宽度 10）：新增 showTransverseSteel 函数与监听分支
+ *   v1.8  2026-10-09  修复钢坯横坐标随界面尺寸漂移：图纸根容器 fullscreen=fill
+ *                     + fullscreen.lock=h 会水平缩放内容以适配界面宽度，
+ *                     钢坯 Shape 原挂在 dm 根不受缩放，现改为挂到"整体"块下，
+ *                     随界面尺寸变化同步缩放（新增 overallBlock，轧线/横移钢坯 setParent）
+ *   v1.9  2026-10-09  横移台架钢坯显示升级：后端下发钢坯数组（最多 9 支），
+ *                     position 0~2 固定显示在对应"动齿"节点（动齿1 最下、动齿3 最上），
+ *                     position 3~8 在 Transverse 节点区域纵向排列（3 最下、8 最上），
+ *                     动态支整体上下居中、间距随支数动态（上限 20）、上下各留 5px；
+ *                     钢坯长度 300、宽度 10，标签显示「卡号-钢坯号」（cardNo-slabNo，
+ *                     标签位置 label.position=17、图层 setLayer=1、字号 16px）；
+ *                     showTransverseSteel 改为接收数组参数，Shape 按 position 复用
  *
  * @file       大棒线轧机.js
  * @requires   graphView (HT GraphView 全局对象)
@@ -148,6 +165,17 @@ dm.getDatas().each(node => trySetDoubleClickHandlerForNode(node));
  */
 var rolly1 = dm.getDataByTag('roll-y1');
 var rolly2 = dm.getDataByTag('roll-y2');
+
+// "整体"块（图纸 11620）：产线所有内容（轨道、横移台架）的父节点。
+// 图纸根容器 fullscreen=fill + fullscreen.lock=h 会水平缩放"整体"块内容以适配界面宽度，
+// 钢坯 Shape 必须挂到该块下（而非 dm 根），才能随界面尺寸变化同步缩放、保持横坐标对齐。
+var overallBlock = (function () {
+    var t = dm.getDataByTag('Transverse');
+    if (t && t.getParent()) return t.getParent();
+    var r = dm.getDataByTag('roll-y1');
+    if (r && r.getParent() && r.getParent().getParent()) return r.getParent().getParent();
+    return null;
+})();
 
 // ✅ 使用函数动态获取 Y 坐标（而非缓存固定值，保证布局变更后同步）
 function getYTrack(index) {
@@ -211,13 +239,17 @@ var PHYSICAL_ORDER = [
     'track-1-HotDet6A',
     'track-1-HotDet6B',
     'track-1-H7HotDet',
-    'track-1-H8HotDet',
     'track-1-ShearPre22Point972MDetect',
     'track-1-ShearPre15_4mHotDet',
     'track-1-ShearPre11_1mHotDet',
     'track-1-ShearPre6_1mHotDet',
+    'track-1-H8HotDet',
     'track-1ShearPre1_5mHotDet',
-    'track-1-ShearAfterRollerDetect'
+    'track-1-ShearAfterRollerDetect',
+    'track-2-OilHydraulicFlatSupportWestDetect',
+    'track-2-OilHydraulicFlatSupportMiddleDetect',
+    'track-2-OilHydraulicFlatSupportEast1Detect',
+    'track-2-BilletTransferDetect'
 ];
 
 // 先收集所有相关节点坐标（不限顺序）
@@ -344,6 +376,9 @@ var OFFLINE_HMD_LIST = [
     'BslHmd'
 ];
 
+// 特殊下线规则：卡号以 H7 开头的钢坯（如 H726202090），头部到达 1800（第2段轨道起点）时下线
+var H7_OFFLINE_HEAD_X = 1800;
+
 /**
  * ===== 渲染层：钢坯 Shape 创建与显示 =====
  *
@@ -387,6 +422,7 @@ function createSteelLineShapes(steel) {
         line.setStyle('shape.repeat.image', 'symbols/青岛特钢/扁钢钢坯.json'); // 设置图像并平铺
         line.setLayer('0');
         line.setPoints([]);                       // 初始无坐标点
+        if (overallBlock) line.setParent(overallBlock);  // 挂到"整体"块下，随 fullscreen 水平缩放同步
         dm.add(line);
         lineShapes.push(line);
     }
@@ -2319,6 +2355,14 @@ function isSteelFinished(steel) {
         return true;
     }
 
+    // 条件3：特殊下线规则——卡号以 H7 开头的钢坯（如 H726202090），头部到达 1800 时下线
+    var cardNo = String(steel.cardNo || '');
+    if (cardNo.indexOf('H7') === 0 && steel.headX >= H7_OFFLINE_HEAD_X) {
+        finishedInMatNos[steel.inMatNo] = Date.now();
+        trimFinishedInMatNos();
+        return true;
+    }
+
     return false;
 
 }
@@ -2548,14 +2592,304 @@ let SpeedStore = {
 /**
  * ===== 数据源监听 =====
  *
- * 监听 dataModel 的 a:rolltable / a:coldTable 属性变化，
- * 后端分别推送钢坯热检数据与冷床齿槽快照。
+ * 监听 dataModel 的 a:rolltable / a:coldTable / a:rolltable1 属性变化，
+ * 后端分别推送钢坯热检数据、冷床齿槽快照、横移台架钢坯显示。
  *
  * 数据格式（rolltable）：
  *   msgTime 为服务器当前时间（格式 "YYYY-MM-DD HH:mm:ss.SSS"），
  *   data 数组的最后一组可能包含速度参数（dischargeSpeed等字段），
  *   其余项为钢坯热检数据，每项包含 inMatNo, headPosition, headTime, tailPosition, tailTime 等。
  */
+
+/**
+ * ===== 横移台架钢坯显示 =====
+ *
+ * 监听 a:rolltable1（后端 TRANSFER_STATE 横移区状态），收到的是钢坯数组（最多 9 支）。
+ * position 0~2 固定显示在对应"动齿"节点（动齿1 最下、动齿3 最上）；
+ * position 3~8 在 Transverse 节点区域纵向排列（3 最下、8 最上），
+ * 3~8 支整体上下居中、间距随支数动态（上限 20），上下各留 5px 不占用。
+ * 标签显示「卡号-钢坯号」（cardNo-slabNo），位置 label.position=17、图层 setLayer=1。
+ * 钢坯为水平多段线：长度 300、线宽 10，水平居中于对应节点。
+ * 定位方式与轧线钢坯一致：Shape 挂到"整体"块下（而非 dm 根），
+ * 用节点 getPosition() 的实际坐标定位，随 fullscreen 水平缩放同步对齐。
+ */
+var TRANSVERSE_STEEL_MAX = 9;        // 横移台架区域最大钢坯支数（position 0~8）
+var TRANSVERSE_STEEL_LEN = 300;      // 钢坯长度（水平方向）
+var TRANSVERSE_STEEL_GAP_MAX = 20;   // Transverse 内动态排布的纵向间隔上限
+var transverseSteelShapes = {};      // position -> ht.Shape（复用，避免重复 add）
+
+// position 0~2 对应的固定"动齿"节点 tag（position 0 最下、2 最上）
+var TRANSVERSE_TOOTH_TAGS = { 0: '动齿1', 1: '动齿2', 2: '动齿3' };
+
+// 创建（或复用）指定 tag 的钢坯 Shape，并设置外观
+function ensureTransverseSteelShape(tag) {
+    var line = transverseSteelShapes[tag];
+    if (line) return line;
+
+    line = new ht.Shape();
+    line.setTag(tag);
+    line.setStyle('shape.type', 'polyline');
+    line.setStyle('shape.border.width', 10);   // 钢坯宽度 10
+    line.setStyle('shape.border.color', '#ff0000');
+    line.setStyle('shape.repeat.image', 'symbols/青岛特钢/扁钢钢坯.json');
+    line.setStyle('2d.movable', false);
+    line.setLayer('1');
+    line.setStyle('label.position', 17);       // 标签位置 17
+    line.setStyle('label.font', '16px arial, sans-serif');
+    line.setStyle('label.color', 'rgb(255,255,255)');
+    if (overallBlock) line.setParent(overallBlock);  // 挂到"整体"块下，随 fullscreen 水平缩放同步
+    dm.add(line);
+    transverseSteelShapes[tag] = line;
+    return line;
+}
+
+function showTransverseSteel(data) {
+    // 后端下发的钢坯数组（最多 9 支）
+    var list = Array.isArray(data) ? data : [];
+    if (list.length > TRANSVERSE_STEEL_MAX) {
+        list = list.slice(0, TRANSVERSE_STEEL_MAX);
+    }
+
+    // 检测平托下线钢坯 → 上线到 roll-y3（对比上次快照，本次消失的钢坯视为下线）
+    detectTransverseOffline(list);
+
+    // 先隐藏所有已创建的钢坯 Shape，再按新数据逐支显示
+    Object.keys(transverseSteelShapes).forEach(function (tag) {
+        transverseSteelShapes[tag].s('2d.visible', false);
+    });
+
+    // 拆分：position 0~2 → 固定动齿；position 3~8 → 横移台架动态排布
+    var toothList = [];
+    var dynamicList = [];
+    list.forEach(function (item) {
+        var p = Number(item && item.position);
+        if (p >= 0 && p <= 2) toothList.push(item);
+        else if (p >= 3 && p <= TRANSVERSE_STEEL_MAX) dynamicList.push(item);
+    });
+
+    drawToothSteel(toothList);
+    drawDynamicSteel(dynamicList);
+}
+
+// position 0~2：固定显示在对应"动齿"节点（水平居中，长度 300）
+function drawToothSteel(list) {
+    var halfLen = TRANSVERSE_STEEL_LEN / 2;     // 钢坯半长 150
+    list.forEach(function (item) {
+        var p = Number(item.position);
+        var toothNode = dm.getDataByTag(TRANSVERSE_TOOTH_TAGS[p]);
+        if (!toothNode) return;
+
+        var line = ensureTransverseSteelShape('steel-transverse-' + p);
+        line.s('label', (item.cardNo || '') + '-' + (item.slabNo || ''));
+
+        var pos = toothNode.getPosition();
+        line.setPoints([
+            { x: pos.x - halfLen, y: pos.y },
+            { x: pos.x + halfLen, y: pos.y }
+        ]);
+        line.s('2d.visible', true);
+    });
+}
+
+// position 3~8：在 Transverse 节点区域纵向居中排布（3 最下、8 最上）
+function drawDynamicSteel(list) {
+    var transverseNode = dm.getDataByTag('Transverse');
+    if (!transverseNode) return;
+
+    // 过滤有效钢坯（position 3~8）并按 position 升序排序（3 最下、8 最上）
+    var valid = list.filter(function (item) {
+        var p = Number(item && item.position);
+        return p >= 3 && p <= TRANSVERSE_STEEL_MAX;
+    }).sort(function (a, b) {
+        return Number(a.position) - Number(b.position);
+    });
+    var n = valid.length;
+
+    var pos = transverseNode.getPosition();
+    var h = transverseNode.getHeight();
+    var centerX = pos.x;
+    var halfLen = TRANSVERSE_STEEL_LEN / 2;
+
+    // 可用纵向区间：上下各留 5px 不占用
+    var top = pos.y - h / 2 + 5;
+    var bottom = pos.y + h / 2 - 5;
+
+    // 动态间隔：按支数均分、但不超过上限，整体上下居中
+    var center = (top + bottom) / 2;
+    var step = n > 1 ? Math.min(TRANSVERSE_STEEL_GAP_MAX, (bottom - top) / (n - 1)) : 0;
+    var totalSpan = (n - 1) * step;
+
+    valid.forEach(function (item, i) {
+        var p = Number(item.position);
+        var line = ensureTransverseSteelShape('steel-transverse-' + p);
+        line.s('label', (item.cardNo || '') + '-' + (item.slabNo || ''));
+
+        // 整体居中排布：i=0（position 最小）在最下、i=n-1 在最上
+        var cy = center + totalSpan / 2 - i * step;
+        transverseSteelY[item.slabNo] = cy;      // 记录平托 y，供 roll-y3 下线平移用
+        line.setPoints([
+            { x: centerX - halfLen, y: cy },
+            { x: centerX + halfLen, y: cy }
+        ]);
+        line.s('2d.visible', true);
+    });
+}
+
+/**
+ * ===== roll-y3 离线辊道钢坯显示 =====
+ *
+ * 平托（Transverse）上的钢坯下线后（从 a:rolltable1 快照消失），
+ * 在 roll-y3 节点上线，保持平托上的纵向排布整体平移，并以每秒 ROLLY3_SPEED px 向右匀速前移；
+ * 钢坯头部横坐标到达 ROLLY3_OFF_X 时下线。
+ * 上线、下线均记录到 localStorage 仓库 H8_RollY3Store（每支钢坯一条记录）。
+ */
+var ROLLY3_STEEL_LEN = 300;      // roll-y3 钢坯长度（水平方向）
+var ROLLY3_SPEED = 10;           // 前移速度（px/秒）
+var ROLLY3_OFF_X = 1800;         // 钢坯头部下线横坐标
+var rollY3Steels = {};           // slabNo -> { slabNo, cardNo, headX, centerY, shape, onlineTime }
+var lastTransverseSlabs = {};    // 上次平托快照 slabNo -> item，用于检测下线钢坯
+var transverseSteelY = {};       // slabNo -> 该钢坯在平托上渲染的 y 坐标（下线时用于平移）
+
+// roll-y3 上下线仓库（localStorage）
+var RollY3Store = {
+    data: {},   // slabNo -> { slabNo, cardNo, onlineTime, onlineX, offlineTime, offlineX }
+
+    load: function () {
+        var cache = localStorage.getItem('H8_RollY3Store');
+        if (!cache) return;
+        try {
+            this.data = JSON.parse(cache) || {};
+            console.log('[RollY3Store] 恢复成功，记录数:', Object.keys(this.data).length);
+        } catch (e) {
+            console.warn('[RollY3Store] 恢复失败', e);
+        }
+    },
+
+    save: function () {
+        localStorage.setItem('H8_RollY3Store', JSON.stringify(this.data));
+    },
+
+    recordOnline: function (slabNo, cardNo, headX) {
+        this.data[slabNo] = {
+            slabNo: slabNo,
+            cardNo: cardNo || '',
+            onlineTime: Date.now(),
+            onlineX: headX,
+            offlineTime: null,
+            offlineX: null
+        };
+        this.save();
+    },
+
+    recordOffline: function (slabNo, offX) {
+        if (!this.data[slabNo]) {
+            this.data[slabNo] = { slabNo: slabNo, cardNo: '', onlineTime: null, onlineX: null, offlineTime: null, offlineX: null };
+        }
+        this.data[slabNo].offlineTime = Date.now();
+        this.data[slabNo].offlineX = offX;
+        this.save();
+    }
+};
+
+// 检测平托（Transverse，position 3~8）钢坯下线：对比上次快照，本次消失的钢坯 → 上线到 roll-y3
+function detectTransverseOffline(list) {
+    var currentSlabs = {};
+    list.forEach(function (item) {
+        var p = Number(item && item.position);
+        var slabNo = item && item.slabNo;
+        if (slabNo && p >= 3 && p <= TRANSVERSE_STEEL_MAX) {
+            currentSlabs[slabNo] = item;
+        }
+    });
+
+    Object.keys(lastTransverseSlabs).forEach(function (slabNo) {
+        if (!currentSlabs[slabNo]) {
+            addRollY3Steel(lastTransverseSlabs[slabNo]);  // 平托钢坯下线 → 上线 roll-y3
+        }
+    });
+
+    lastTransverseSlabs = currentSlabs;
+}
+
+// 钢坯上线到 roll-y3：创建 Shape，横坐标保持与平托（Transverse）一致
+function addRollY3Steel(item) {
+    var slabNo = item && item.slabNo;
+    if (!slabNo || rollY3Steels[slabNo]) return;
+
+    var rollY3Node = dm.getDataByTag('roll-y3');
+    if (!rollY3Node) return;
+
+    var pos = rollY3Node.getPosition();
+
+    // 平移上去：横坐标与平托一致（钢坯头部 x = Transverse.x + 半长），纵向整体平移到 roll-y3
+    var transverseNode = dm.getDataByTag('Transverse');
+    var headX = transverseNode ? (transverseNode.getPosition().x + ROLLY3_STEEL_LEN / 2) : pos.x;
+
+    var refY = transverseNode ? transverseNode.getPosition().y : pos.y;
+    var srcY = transverseSteelY[slabNo];
+    var centerY = (srcY !== undefined) ? (srcY + (pos.y - refY)) : pos.y;
+
+    var shape = new ht.Shape();
+    shape.setTag('steel-rolly3-' + slabNo);
+    shape.setStyle('shape.type', 'polyline');
+    shape.setStyle('shape.border.width', 10);   // 钢坯宽度 10
+    shape.setStyle('shape.border.color', '#ff0000');
+    shape.setStyle('shape.repeat.image', 'symbols/青岛特钢/扁钢钢坯.json');
+    shape.setStyle('2d.movable', false);
+    shape.setLayer('1');
+    shape.setStyle('label.position', 17);
+    shape.setStyle('label.font', '16px arial, sans-serif');
+    shape.setStyle('label.color', 'rgb(255,255,255)');
+    shape.s('label', (item.cardNo || '') + '-' + (item.slabNo || ''));
+    if (overallBlock) shape.setParent(overallBlock);  // 挂到"整体"块下，随 fullscreen 水平缩放同步
+    dm.add(shape);
+
+    rollY3Steels[slabNo] = {
+        slabNo: slabNo,
+        cardNo: item.cardNo || '',
+        headX: headX,
+        centerY: centerY,
+        shape: shape,
+        onlineTime: Date.now()
+    };
+
+    RollY3Store.recordOnline(slabNo, item.cardNo, headX);
+    console.log('[roll-y3 上线]', slabNo, 'headX=', headX.toFixed(1));
+}
+
+// roll-y3 钢坯前移动画：按实际时间差推进，每秒 ROLLY3_SPEED px
+var _rollY3LastTick = Date.now();
+function tickRollY3Steel() {
+    var now = Date.now();
+    var dt = (now - _rollY3LastTick) / 1000;   // 秒
+    _rollY3LastTick = now;
+
+    var offList = [];
+    Object.keys(rollY3Steels).forEach(function (slabNo) {
+        var s = rollY3Steels[slabNo];
+        s.headX += ROLLY3_SPEED * dt;
+
+        if (s.headX >= ROLLY3_OFF_X) {
+            offList.push(s);
+        } else {
+            s.shape.setPoints([
+                { x: s.headX - ROLLY3_STEEL_LEN, y: s.centerY },  // 尾
+                { x: s.headX, y: s.centerY }                       // 头
+            ]);
+        }
+    });
+
+    offList.forEach(function (s) {
+        RollY3Store.recordOffline(s.slabNo, s.headX);
+        try { dm.remove(s.shape); } catch (e) { console.warn('[roll-y3] 删除Shape失败', s.slabNo, e); }
+        delete rollY3Steels[s.slabNo];
+        console.log('[roll-y3 下线]', s.slabNo, 'headX=', s.headX.toFixed(1));
+    });
+}
+
+RollY3Store.load();
+setInterval(tickRollY3Steel, 100);
+
 // 防重复注册：脚本可能被页面/图纸重复加载导致监听器注册多次，
 // 同一消息会被多次触发（表现为 console 打印多次、节点反复刷新）。
 // 用 window 全局标记保证同一页面上下文内只注册一次。
@@ -2567,6 +2901,12 @@ if (!window.__trackingListenerInstalled) {
     // ===== 分支1：冷床齿槽数据（a:coldTable）=====
     if (e.property === 'a:coldTable') {
         handleColdTableSnapshot(e.newValue);
+        return;
+    }
+
+    // ===== 分支3：横移台架钢坯显示（a:rolltable1）=====
+    if (e.property === 'a:rolltable1') {
+        showTransverseSteel(e.newValue);
         return;
     }
 

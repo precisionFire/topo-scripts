@@ -25,6 +25,8 @@
  *   中棒加热炉逻辑 — 架构设计与数据流全文档
  *
  * 【版本记录】
+ *   v1.7  2026-10-10  A1/A2-ABNORMAL 增加超时处理：消息时间超过 1 小时则不报警，写入报警缓存仓库（复用 ConflictDialog 的 conflict_cache，记录写明"由于超过一小时，报警已失去时效"）
+ *   v1.6  2026-10-10  A1/A2-ABNORMAL 报警：①报警条件改为入炉位置校准前后卡号不同（previousCardNo !== calibratedCardNo），与 abnormalType 无关；②语音播报移入 ConflictDialog 弹窗组件（复用弹窗去重，弹一次=播一次），本文件不再持有语音逻辑
  *   v1.5  2026-09-23  A1/A2-ABNORMAL 链路过程加 console 日志（消息到达/解析 data/类型匹配/PopupManager 调用四节点），方便定位报警不显示
  *   v1.4  2026-09-05  计划表新增兜底定时刷新：炉内坯信息超 1 分钟无变化自动刷新计划
  *   v1.3  2026-09-03  炉内钢坯长度 > 10000mm 新增超长报警弹窗（OverlengthDialog）
@@ -586,6 +588,39 @@ function isMsgExpired(msgTime, maxAgeMinutes, propertyName) {
     return expired;
 }
 
+// ── 报警缓存仓库（复用 ConflictDialog 的 conflict_cache 前缀） ──
+var CONFLICT_CACHE_LINE_CODE = 'B1';   // 与 ConflictDialog.js 的 LINE_CODE 保持一致
+var CONFLICT_CACHE_MAX = 5;            // 与 ConflictDialog.js 的 MAX_CACHE 保持一致
+
+function getConflictCacheKey(furnaceCode) {
+    return 'conflict_cache_' + CONFLICT_CACHE_LINE_CODE + '_' + (furnaceCode || 'unknown');
+}
+
+/**
+ * 超时异常消息写入报警缓存仓库：写明"超过一小时报警已失去时效"
+ * 复用 ConflictDialog 的缓存 key 与数据结构（data + lineCode），保证同指纹之后不再报警
+ * @param {Object} data - 异常数据（含 furnaceCode/position/previousCardNo/previousSlabNo 等）
+ */
+function saveExpiredConflictToCache(data) {
+    try {
+        var key = getConflictCacheKey(data.furnaceCode);
+        var cache = [];
+        try {
+            var raw = localStorage.getItem(key);
+            cache = raw ? JSON.parse(raw) : [];
+        } catch (e) { cache = []; }
+        var record = Object.assign({}, data, {
+            lineCode: CONFLICT_CACHE_LINE_CODE,
+            expiredReason: '由于超过一小时，报警已失去时效'
+        });
+        cache.unshift(record);
+        if (cache.length > CONFLICT_CACHE_MAX) {
+            cache = cache.slice(0, CONFLICT_CACHE_MAX);
+        }
+        localStorage.setItem(key, JSON.stringify(cache));
+    } catch (e) {}
+}
+
 
 // ================================================================
 //  八、炉前识别逻辑
@@ -757,17 +792,23 @@ dataModel.addDataPropertyChangeListener(function (e) {
         // console.log('[ABNORMAL] 收到消息 property=' + e.property + ' newValue=' + JSON.stringify(e.newValue));
         var abnormalData = e.newValue?.data;
         // console.log('[ABNORMAL] abnormalData=' + JSON.stringify(abnormalData));
-        if (abnormalData && abnormalData.abnormalType === 'SLAB_IN_POSITION_CARD_CONFLICT') {
+        // 报警条件：入炉位置校准前后卡号不同（身份被替换）才报警，与 abnormalType 无关
+        if (abnormalData &&
+            abnormalData.previousCardNo != null &&
+            abnormalData.calibratedCardNo != null &&
+            abnormalData.previousCardNo !== abnormalData.calibratedCardNo) {
             abnormalData.msgTime = e.newValue?.msgTime || '';
-            // console.log('[ABNORMAL] 类型匹配 SLAB_IN_POSITION_CARD_CONFLICT，准备 PopupManager.show("conflict") msgTime=' + abnormalData.msgTime);
+            // [v1.7] 超时判断：消息时间超过 1 小时则不报警，写入报警缓存仓库并写明失效原因
+            if (isMsgExpired(abnormalData.msgTime, 60)) {
+                saveExpiredConflictToCache(abnormalData);
+                return;
+            }
+            // 语音报警已移入 ConflictDialog（复用弹窗 shouldShow 去重，弹一次 = 播一次）
             if (typeof PopupManager !== 'undefined' && PopupManager.show) {
                 PopupManager.show('conflict', abnormalData);
-                // console.log('[ABNORMAL] PopupManager.show("conflict") 已调用');
-            } else {
-                // console.warn('[ABNORMAL] PopupManager 未定义或缺少 show 方法, typeof PopupManager=' + typeof PopupManager);
             }
         } else {
-            // console.warn('[ABNORMAL] 类型不匹配或 abnormalData 为空, abnormalType=' + (abnormalData && abnormalData.abnormalType));
+            // 卡号相同或字段缺失：不报警
         }
     }
 
