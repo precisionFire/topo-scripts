@@ -4,6 +4,8 @@
 // 外部调用：PopupManager.show('conflict', rawData)
 //
 // 【版本记录】
+//   v1.12 2026-10-12  音频路径多级兜底：编辑器(ht-studio)预览脚本注入导致 document.currentScript 不可用，改为 currentScript → 脚本列表 → libs/ 反推 → 资源根 libs/ 回退
+//   v1.11 2026-10-12  语音报警由 TTS 改为预录音频 mp3（furnace1.mp3/furnace2.mp3，与本 JS 同目录），规避精简系统无语音引擎/离线联网失败问题
 //   v1.10 2026-10-10  语音报警（TTS）移入本组件：复用 shouldShow 去重（弹一次=播一次），文案带炉号/位置具体字段
 //   v1.9  2026-10-10  修复缓存写入时机：只有点「确认」才写缓存，遮罩点击/程序关闭不再写缓存（原先 close 无条件写，导致点遮罩也计入去重）
 //   v1.8  2026-10-10  报警字段切换为前后端协定新字段：previousCardNo/previousSlabNo（校准前）vs calibratedCardNo/calibratedSlabNo（校准后），移除旧字段 incoming/occupied，不兼容旧版本
@@ -104,49 +106,108 @@
   }
 
   // =========================
-  // 语音报警（TTS）：shouldShow 通过后触发，复用弹窗去重（弹一次 = 播一次）
+  // 语音报警（预录音频 mp3）：shouldShow 通过后触发，复用弹窗去重（弹一次 = 播一次）
+  // 音频文件与本 JS 同目录：furnace1.mp3（A1）、furnace2.mp3（A2），不依赖系统 TTS 语音引擎，也不需联网
   // =========================
-  var ABNORMAL_ALARM_REPEAT = 3;   // 报警语音重复朗读次数
+  var ABNORMAL_ALARM_REPEAT = 3;   // 报警语音重复播放次数
 
-  // 炉号显示名：A1 → "1号炉"，A2 → "2号炉"
-  function furnaceLabel(furnaceCode) {
+  // 音频基础路径：优先取当前脚本所在目录（音频与 ConflictDialog.js 放一起）。
+  // 注意：ht-studio 编辑器预览时脚本由内部机制注入，document.currentScript 往往不可用，
+  // 故补充多级兜底；最终回退到资源根下的 libs/（编辑器环境 libs 即在资源根下）。
+  var ALARM_AUDIO_BASE = '';
+  (function resolveAudioBase() {
+    function dirOf(url) { return url.substring(0, url.lastIndexOf('/') + 1); }
+    try {
+      // 1) 常规：本脚本由 <script src> 加载
+      var cs = document.currentScript;
+      if (cs && cs.src) { ALARM_AUDIO_BASE = dirOf(cs.src); return; }
+
+      var scripts = document.getElementsByTagName('script');
+      var i, src, m;
+      // 2) 兜底：脚本列表中已存在本文件
+      for (i = 0; i < scripts.length; i++) {
+        src = scripts[i] && scripts[i].src;
+        if (src && /(^|\/)ConflictDialog\.js(\?|#|$)/.test(src)) {
+          ALARM_AUDIO_BASE = dirOf(src); return;
+        }
+      }
+      // 3) 兜底：编辑器预览丢失 currentScript，从同批加载的 libs/ 脚本反推资源目录
+      for (i = 0; i < scripts.length; i++) {
+        src = scripts[i] && scripts[i].src;
+        m = src && src.match(/^(.*?\/libs\/)/);
+        if (m) { ALARM_AUDIO_BASE = m[1]; return; }
+      }
+    } catch (e) {}
+    // 4) 最终兜底：音频与本文件同在资源根下的 libs/
+    if (!ALARM_AUDIO_BASE) ALARM_AUDIO_BASE = 'libs/';
+  })();
+
+  // 炉号 → 音频文件：A1 → furnace1.mp3，A2 → furnace2.mp3，其余默认 furnace1.mp3
+  function alarmAudioUrl(furnaceCode) {
     var m = /(\d+)/.exec(String(furnaceCode || ''));
-    return (m ? m[1] : (furnaceCode || '')) + '号炉';
+    var file = (m && m[1] === '2') ? 'furnace2.mp3' : 'furnace1.mp3';
+    return ALARM_AUDIO_BASE + encodeURIComponent(file);
   }
 
-  // 语音文案：带炉号/位置具体字段，如「1号炉位置92，原计划卡号与手动录入卡号不一致」
-  function buildAlarmText(data) {
-    var position = (data.position != null && data.position !== '') ? String(data.position) : '';
-    return furnaceLabel(data.furnaceCode) + '位置' + position + '，原计划卡号与手动录入卡号不一致';
-  }
+  // 自动播放策略解锁：Chrome/WebView 要求页面有过用户交互后才能发声。
+  // 页面刷新后 user activation 归零；解锁前的报警挂起，等首次点击/按键/触摸后补播。
+  var _audioUnlocked = false;
+  var _pendingAlarm = null;
+  (function primeAudio() {
+    if (typeof document === 'undefined' || !document.addEventListener) return;
+    function unlock() {
+      _audioUnlocked = true;
+      document.removeEventListener('click', unlock);
+      document.removeEventListener('keydown', unlock);
+      document.removeEventListener('touchstart', unlock);
+      if (_pendingAlarm) {
+        var fn = _pendingAlarm;
+        _pendingAlarm = null;
+        try { fn(); } catch (e) {}
+      }
+    }
+    document.addEventListener('click', unlock);
+    document.addEventListener('keydown', unlock);
+    document.addEventListener('touchstart', unlock);
+  })();
 
   /**
-   * TTS 语音播报（浏览器 SpeechSynthesis）
-   * 逐次串联朗读 text 共 times 遍，避免一次性循环 speak 导致的排队/丢弃
+   * 语音报警（预录音频）：播放对应炉号的 mp3 共 times 遍
+   * @param {Object} data - 冲突数据（取其 furnaceCode 决定 1炉/2炉）
+   * @param {number} times - 重复遍数
    */
-  function speakAlarm(text, times) {
-    if (!text) return;
-    if (typeof window === 'undefined' ||
-        !window.speechSynthesis ||
-        typeof SpeechSynthesisUtterance === 'undefined') {
-      return; // 环境不支持 TTS，静默跳过
-    }
+  function speakAlarm(data, times) {
+    var src = alarmAudioUrl(data && data.furnaceCode);
+    if (!src) return;
     times = times || 1;
-    window.speechSynthesis.cancel(); // 打断上一次播报，避免堆积
 
-    var count = 0;
-    function speakOnce() {
-      if (count >= times) return;
-      count++;
-      var u = new SpeechSynthesisUtterance(text);
-      u.lang = 'zh-CN';
-      u.rate = 1;
-      u.pitch = 1;
-      u.onend = speakOnce;
-      u.onerror = speakOnce;
-      window.speechSynthesis.speak(u);
+    function doSpeak() {
+      var count = 0;
+      function playOnce() {
+        if (count >= times) return;
+        count++;
+        var a = new Audio(src);
+        a.preload = 'auto';
+        a.addEventListener('ended', playOnce);       // 播完一遍 → 重头播下一遍
+        a.addEventListener('error', function () {
+          // 音频加载失败：静默降级，不影响弹窗
+        });
+        var p;
+        try { p = a.play(); } catch (e) { p = null; }
+        if (p && typeof p.catch === 'function') {
+          p.catch(function () {
+            // 仍被自动播放策略拦截（正常已在 unlock 后）：丢弃本次，避免死循环
+          });
+        }
+      }
+      playOnce();
     }
-    speakOnce();
+
+    if (_audioUnlocked) {
+      doSpeak();
+    } else {
+      _pendingAlarm = doSpeak;   // 未解锁：挂起，首次交互后补播
+    }
   }
 
   // =========================
@@ -161,7 +222,7 @@
     // 内存标记，阻断后续同指纹的调用（update 也据此保持现有弹窗）
     _shownSet[fingerprint(rawData)] = true;
     // 语音报警：确定要弹窗才播（复用 shouldShow 去重，弹一次 = 播一次）
-    speakAlarm(buildAlarmText(rawData), ABNORMAL_ALARM_REPEAT);
+    speakAlarm(rawData, ABNORMAL_ALARM_REPEAT);
 
     var d = rawData || {};
 
@@ -340,7 +401,7 @@
         if (!shouldShow(newRawData)) return;
         _shownSet[fingerprint(newRawData)] = true;
         // 新指纹 = 新报警，同步播报
-        speakAlarm(buildAlarmText(newRawData), ABNORMAL_ALARM_REPEAT);
+        speakAlarm(newRawData, ABNORMAL_ALARM_REPEAT);
         refresh(newRawData);
       },
       close: function () {
