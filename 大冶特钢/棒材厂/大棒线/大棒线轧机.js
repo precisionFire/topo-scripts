@@ -5,146 +5,42 @@
  *
  * 【产线信息】
  *   - 产线：大棒线（产线编码 H8）
- *   - 缓存仓库 key 前缀：H8_（localStorage，详见「数据仓库层」）
+ *   - 缓存仓库 key 前缀：H8_（localStorage 共 5 个仓库：SteelFactStore /
+ *     SteelStateStore / RenderCacheStore / HmdPassStore / RollY3Store）
  *   - 本文件 2026-09-12 首次由 中棒线轧机.js 复制改造而来，
  *     复制后已改：仓库 key 前缀 B1_ → H8_、最近十卡接口 ProductLine B1 → H8
  *
- * 【功能概述】
- *   本脚本实现轧线钢坯的实时运动模拟，核心职责：
- *   1. 接收后端推送的钢坯热检（HMD）经过数据，推算钢坯头/尾位置
- *   2. 通过分区分速模型模拟钢坯在轧线上的连续运动
- *   3. 将运动状态渲染为两轨道的钢坯多段线（polyline）图形
- *   4. 管理钢坯生命周期：进入 → 运动 → 下线
+ * 【轧线分期命名（大棒线轧机画面专用）】
+ *   - H8 = 大棒【一期轧线】（轧线一期）
+ *   - H7 = 大棒【二期轧线】（轧线二期）
+ *   - 用途：仅作本画面钢坯卡号前缀的分期判断（见下方「特殊下线规则」）；
+ *     与上面的产线编码 H8、后端接口字段 wholeBacklogCode 不是同一概念，
+ *     也不要把 H7/H8 当成加热炉编号使用。
  *
- * 【架构分层】
- *   ┌─────────────────────────────────────────────┐
- *   │  数据源层：dataModel 属性监听 (a:rolltable)    │
- *   ├─────────────────────────────────────────────┤
- *   │  事实仓库：SteelFactStore (后端原始数据快照)     │
- *   ├─────────────────────────────────────────────┤
- *   │  状态仓库：SteelStateStore (推演运动状态)       │
- *   │     ├── 状态判定 → 速度求解 → 位置求解          │
- *   │     └── 热检位置校正 (applyPositionCorrection)  │
- *   ├─────────────────────────────────────────────┤
- *   │  历史仓库：HmdPassStore (热检经过历史记录)       │
- *   ├─────────────────────────────────────────────┤
- *   │  渲染层：buildRenderData → renderMultipleSteels│
- *   │     ├── createSteelLineShapes (创建图形)       │
- *   │     ├── updateSteelLines     (更新显示)       │
- *   │     └── animateSteelLine     (平滑动画)       │
- *   └─────────────────────────────────────────────┘
- *
- * 【关键概念】
- *   - inMatNo      : 钢坯唯一标识号
- *   - headX/tailX : 钢坯头/尾在轧线上的X坐标（连续值）
- *   - state       : 钢坯当前所处阶段（ENTRY/ROUGH/MIDDLE/...）
- *   - headSpeed/tailSpeed : 头/尾当前移动速度
- *   - 轨道分段     : 2条轨道（roll-y1 段 1800 + roll-y2 段 720，合计 2520），
- *                    两段长度不等，钢坯跨轨时按段裁剪显示
+ * 【当前版本】v1.10（2026-10-15）
+ *   - 特殊下线规则：卡号以 H8 开头（大棒一期轧线）的钢坯，头部到达 1800
+ *     （第 2 段轨道起点）即下线 → 常量 H8_OFFLINE_HEAD_X = 1800
+ *   - 轨道：2 段【不等长】1800 + 720（合计 2520），
+ *     画布映射统一公式 canvasX = logicX - TRACK_STARTS[i]
+ *   - 运动模型：MILL_ZONES + SPEED_CONFIG 分区变速 + 可逆往复轧制（direction）
+ *   - 完整设计（架构分层 / 关键概念 / 业务规则 / 数据仓库 / 接口 / 已知问题）
+ *     与 v1.0~v1.10 版本记录 → .codebuddy/memory/大棒轧线设计.md
  *
  * 【运行机制】
- *   - 定时器每100ms执行一次主循环（startSteelSimulator）
- *   - 每次循环：运动推演 → 数据同步 → 渲染更新
- *   - 后端数据到达时触发校正，修正推演累积误差
+ *   - 定时器每 100ms 一轮：updateSteelStates → buildRenderData → renderMultipleSteels
+ *   - 数据监听事件驱动（a:rolltable / a:coldTable / a:rolltable1）：
+ *     syncFactToState → applyFactCorrections（热检校正）→ cleanupFinishedSteels
  *
- * 【大棒线适配说明（后续开发必读）】
- *   1. 轨道/分区/热检坐标、速度、集合点等常量均原样沿用中棒线版本
- *      （getYTrack / MILL_ZONES / SPEED_CONFIG / PHYSICAL_ORDER /
- *        applyProcessConstraints 内的热检位置等），需按大棒现场图纸核对。
- *   2. 仍留有中棒专有字面量，待确认真实取值后替换：
- *        - 「右键菜单逻辑」段：const line = data.getAttr("Line") || "B101";
- *        - 「左键弹窗逻辑」段：const Line = "B101";（该段当前整体被注释）
- *   3. 初始化段中 trySetDoubleClickHandlerForNode 为外部全局函数，本文件未定义；
- *      中棒版本里该调用位于文件末尾的注释块内，此处已提前到初始化段生效。
- *   4. 「右键菜单逻辑」「左键弹窗逻辑」两段代码当前整体注释未启用。
- *   5. 【2026-09-17】现场图纸轨道数由 3 条改为 2 条（roll-y1 / roll-y2），
- *      且两段长度【不相等】：第 1 段 1800、第 2 段 720（合计 2520）：
- *      - 已移除 roll-y3 与三轨渲染逻辑（Shape 数 3 → 2）；
- *      - 取消「每段等长」的 segmentLength，改为 TRACK_LENGTHS + TRACK_STARTS，
- *        画布映射 canvasX = logicX - TRACK_STARTS[i]（第 2 段减 1800）；
- *      - 下线阈值由旧的三段合计 5400 改为 LINE_TOTAL_LENGTH（2520）；
- *      - MILL_ZONES 仍是中棒常量、边界越界，需按大棒工艺重定（见该处注释）。
- *   6. ⚠️【已知问题·待现场数据确认】MILL_ZONES 分区表边界越界：
- *      本表仍是中棒线沿用的常量，边界 3380 / 3550 / 5400 已越过大棒线
- *      逻辑全长（LINE_TOTAL_LENGTH = 1800 + 720 = 2520）：
- *        - FINISH (3380 ~ 3550)、ROLL5 (3550 ~ 5400) 在本线【不可达】；
- *        - 逻辑坐标 1800 ~ 2520（第 2 段轨道）会全部落入 ROLL4。
- *      影响：
- *        - updateSteelPhase 给出的 state 名称与现场工艺不符（ROLL5 / FINISH
- *          永远不会出现），而 state 又决定 updateSteelSpeed 查 SPEED_CONFIG，
- *          分区错 → 速度、颜色等阶段相关逻辑跟着错；
- *        - forwardSimulatePosition 按错误的分区边界切分时间片 → 推算位置有偏差。
- *      待现场提供大棒分段点后重定整张表，并同步 SPEED_CONFIG。
- *   7. ⚠️【已知问题·待现场数据确认】工艺约束与离线点仍是中棒线点位：
- *        - applyProcessConstraints：11 条规则的触发热检名（DescalerBeforeHmd /
- *          PinchRollBeforeHmd / Stand2EntryHmd / Stand4EntryHmd / Stand6EntryHmd /
- *          RollTable6AEntryHmd / RollTable6BEntryHmd / No1ShearBeforeHmd / ... /
- *          No4WaterTankEntryHmd）与固定尾位置（250 / 903 / 1100 / 2100 等）
- *          均来自中棒工艺；
- *        - OFFLINE_HMD_LIST：离线判定点（No4WaterTankEntryHmd / No4ShearBeforeHmd /
- *          No4ShearExitHmd / BslHmd）同样是中棒点位。
- *      影响：若大棒现场热检命名或分段点不同 —— 命中不到规则时入线初始位置会
- *            退回纯速度推算（偏差大）；离线判定点对不上则尾部经过也不下线
- *            （钢坯堆积）或误判提前消失。
- *      需核对大棒现场 HMD 命名与位置后逐条修正。
- *
- * 【外部依赖】
- *   - graphView : HT for Web 图形视图实例（全局注入）
- *   - dm        : graphView.dm() 数据模型
- *   - request / requestGet : 全局 HTTP 请求函数
- *
- * 【版本记录】
- *   v1.0  2026-09-12  首次由 中棒线轧机.js 复制生成大棒线版本：
- *                     缓存仓库 key 前缀 B1_ → H8_（4 个仓库共 8 处）、
- *                     最近十卡接口 ProductLine 由 B1 改为 H8、重写文件头注释
- *   v1.1  2026-09-15  删除 7 个独立插件函数（applyLengthLockAt620 / applyHeadBlockAt1000
- *                     / applyTailSpeedAtStand16ExitHmd / applyTailJumpAt1750
- *                     / applyTailJumpAt3100 / applyTailJumpAt3350 / applySteelPauseAt1100）
- *                     及其 tracker 声明、cleanupSteelTrackers 清理、主循环调用与 JSDoc
- *   v1.2  2026-09-17  现场图纸轨道数由 3 条改为 2 条（roll-y1 / roll-y2）：
- *                     移除 rolly3 声明与 getYTrack case 2、
- *                     渲染层 Shape 数 3 → 2（createSteelLineShapes /
- *                     updateSteelLines 两处 i < 3 改为 i < 2）、
- *                     文件内相关注释同步改为「两轨道」
- *   v1.3  2026-09-17  现场确认两段轨道【长度不等】（roll-y1 = 1800、roll-y2 = 720）：
- *                     新增 TRACK_LENGTHS / TRACK_STARTS / TRACK_COUNT / LINE_TOTAL_LENGTH，
- *                     删除等长的 segmentLength；createSteelLineShapes /
- *                     updateSteelLines 改为按段长与段起点裁剪；
- *                     track-* 节点坐标偏移改用 TRACK_STARTS（越界轨道编号直接忽略）；
- *                     下线阈值 5400 → LINE_TOTAL_LENGTH（2520）
- *   v1.4  2026-09-17  仅注释：文件头【大棒线适配说明】补充第 6、7 条已知问题
- *                     （MILL_ZONES 边界越界、工艺约束与离线点仍是中棒点位），
- *                     代码逻辑未改动
- *   v1.5  2026-09-22  新增可逆轧机（大棒1350轧机 H1~H8）往复轧制建模：
- *                     新增 REVERSING_HMD_LIST / reversingZoneMin/Max / isReversingHmd
- *                     / isInReversingZone / inferDirection 配置与工具函数；
- *                     钢坯状态新增 direction(±1) 与 _lastHeadHmdX；
- *                     updateSteelPosition / forwardSimulatePosition 支持反向（direction）；
- *                     applyPositionCorrection 由 headPosition x 变化推断方向并双向校正；
- *                     往复区内跳过集合点控制（applyCollectionPointControl /
- *                     clipHeadBySignals / clipTailBySignals）；
- *                     往复区位置回退不再报警（recordPass）、反向走平滑动画（drawSteel）
- *   v1.6  2026-10-09  新增特殊下线规则：卡号以 H7 开头的钢坯（如 H726202090），
- *                     头部到达 1800（第 2 段轨道起点）时即下线：
- *                     新增 H7_OFFLINE_HEAD_X 常量，isSteelFinished 增加条件3
- *   v1.7  2026-10-09  新增横移台架钢坯显示：监听 a:rolltable1，
- *                     收到消息即在 Transverse 节点区域居中显示 1 支钢坯
- *                     （长度 300、宽度 10）：新增 showTransverseSteel 函数与监听分支
- *   v1.8  2026-10-09  修复钢坯横坐标随界面尺寸漂移：图纸根容器 fullscreen=fill
- *                     + fullscreen.lock=h 会水平缩放内容以适配界面宽度，
- *                     钢坯 Shape 原挂在 dm 根不受缩放，现改为挂到"整体"块下，
- *                     随界面尺寸变化同步缩放（新增 overallBlock，轧线/横移钢坯 setParent）
- *   v1.9  2026-10-09  横移台架钢坯显示升级：后端下发钢坯数组（最多 9 支），
- *                     position 0~2 固定显示在对应"动齿"节点（动齿1 最下、动齿3 最上），
- *                     position 3~8 在 Transverse 节点区域纵向排列（3 最下、8 最上），
- *                     动态支整体上下居中、间距随支数动态（上限 20）、上下各留 5px；
- *                     钢坯长度 300、宽度 10，标签显示「卡号-钢坯号」（cardNo-slabNo，
- *                     标签位置 label.position=17、图层 setLayer=1、字号 16px）；
- *                     showTransverseSteel 改为接收数组参数，Shape 按 position 复用
+ * 【待现场核对（中棒残留，详见设计档案 §十一）】
+ *   - MILL_ZONES 边界 3380 / 3550 / 5400 越出本线全长 2520
+ *     （FINISH / ROLL5 不可达，1800~2520 全落 ROLL4）
+ *   - applyProcessConstraints 11 条规则、OFFLINE_HMD_LIST 四个离线点仍是中棒点位
+ *   - 「右键菜单逻辑」「左键弹窗逻辑」两段整体注释未启用（内含中棒 "B101" 字面量）
  *
  * @file       大棒线轧机.js
- * @requires   graphView (HT GraphView 全局对象)
- * @requires   dataModel (HT DataModel 全局对象)
+ * @requires   graphView (HT GraphView 全局对象) / dataModel (HT DataModel 全局对象)
+ * @requires   request / requestGet（全局 HTTP 请求函数）
+ * @requires   trySetDoubleClickHandlerForNode（外部全局函数，本文件未定义）
  * ============================================================
  */
 
@@ -376,8 +272,9 @@ var OFFLINE_HMD_LIST = [
     'BslHmd'
 ];
 
-// 特殊下线规则：卡号以 H7 开头的钢坯（如 H726202090），头部到达 1800（第2段轨道起点）时下线
-var H7_OFFLINE_HEAD_X = 1800;
+// 特殊下线规则：卡号以 H8 开头的钢坯（如 H826202090），头部到达 1800（第2段轨道起点）时下线
+// 卡号前缀分期（大棒线轧机画面）：H8 = 大棒一期轧线、H7 = 大棒二期轧线
+var H8_OFFLINE_HEAD_X = 1800;
 
 /**
  * ===== 渲染层：钢坯 Shape 创建与显示 =====
@@ -2355,9 +2252,10 @@ function isSteelFinished(steel) {
         return true;
     }
 
-    // 条件3：特殊下线规则——卡号以 H7 开头的钢坯（如 H726202090），头部到达 1800 时下线
+    // 条件3：特殊下线规则——卡号以 H8 开头的钢坯（如 H826202090），头部到达 1800 时下线
+    //        （H8 = 大棒一期轧线、H7 = 大棒二期轧线）
     var cardNo = String(steel.cardNo || '');
-    if (cardNo.indexOf('H7') === 0 && steel.headX >= H7_OFFLINE_HEAD_X) {
+    if (cardNo.indexOf('H8') === 0 && steel.headX >= H8_OFFLINE_HEAD_X) {
         finishedInMatNos[steel.inMatNo] = Date.now();
         trimFinishedInMatNos();
         return true;
