@@ -51,6 +51,7 @@ popup.innerHTML = `
     <div>卡号：${data.cardNo || '-'}</div>
     <div>当前道次：${pos || '-'}</div>
     <div>钢坯号：${inMatNo || '-'}</div>
+    <div>炉号：${data.heatNo || '-'}</div>
     <div>钢种：${data.steelGrade || '-'}</div>
     <div>厚度：${data.inMatThick || '-'}</div>
     <div>长度：${data.inMatLen || '-'}</div>
